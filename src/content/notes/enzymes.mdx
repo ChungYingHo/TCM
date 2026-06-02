@@ -1,0 +1,39 @@
+---
+title: 酵素：催化與抑制
+subject: biology
+tag: 酵素
+summary: 酵素降低活化能、有專一性，搞懂競爭性 vs 非競爭性抑制與影響因子。
+audio: >
+  酵素複習。酵素是催化劑，降低活化能、加快反應但本身不被消耗，有受質專一性。
+  影響活性的因素：溫度和酸鹼值都有最適值，過高會變性。
+  競爭性抑制劑長得像受質、搶活性位，可被高濃度受質克服。
+  非競爭性抑制劑結合在別處改變酵素形狀，加受質沒用。
+  記住最大速率 Vmax 和米氏常數 Km 的意義。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 本質
+
+<Memorize>
+酵素＝生物催化劑，<b>降低活化能</b>、加快正逆反應、<b>本身不被消耗</b>、有<b>受質專一性</b>，不改變平衡。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "影響活性：<b>溫度、pH 各有最適值</b>；過高溫或極端 pH → <b>變性</b>（失活，常不可逆）。",
+  "<b>競爭性抑制</b>：抑制劑像受質、搶活性位 → 加大受質濃度<b>可克服</b>（Vmax 不變、Km 變大）。",
+  "<b>非競爭性抑制</b>：結合別處改變形狀 → 加受質<b>無效</b>（Vmax 變小、Km 不變）。",
+  "受質濃度↑ → 速率上升直到酵素飽和（達 Vmax）。",
+  "輔因子/輔酶（如維生素）協助催化。"
+]} />
+
+<SolveApproach steps={[
+  "判抑制型：加受質能否回復 → 能=競爭性、不能=非競爭性。",
+  "看圖：Vmax/Km 變化（競爭 Km↑、非競爭 Vmax↓）。",
+  "溫度/pH 題：偏離最適值活性下降，過度→變性。",
+  "專一性題 → 鎖鑰/誘導契合模型。"
+]} />

@@ -1,0 +1,39 @@
+---
+title: 溶液：濃度與依數性質
+subject: chemistry
+tag: 溶液
+summary: 莫耳濃度/重量莫耳濃度換算，加上沸點上升、凝固點下降、滲透壓的依數性質。
+audio: >
+  溶液複習。莫耳濃度 M 是每公升溶液的莫耳數，重量莫耳濃度 m 是每公斤溶劑的莫耳數。
+  依數性質只看粒子數目，不看種類。
+  沸點上升和凝固點下降都正比於重量莫耳濃度乘上 i 凡特何夫因子。
+  滲透壓等於 MRT。
+  電解質會解離，i 大於一，效果加倍。
+draft: false
+---
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+
+## 兩種濃度別搞混
+
+<Memorize>
+<b>莫耳濃度 M</b> = mol / 公升<b>溶液</b>；<b>重量莫耳濃度 m</b> = mol / 公斤<b>溶劑</b>。依數性質用 m。
+</Memorize>
+
+## 依數性質（只看粒子數）
+
+<KeyPoints items={[
+  "沸點上升 $\\Delta T_b = i\\,K_b\\,m$；凝固點下降 $\\Delta T_f = i\\,K_f\\,m$。",
+  "滲透壓 $\\Pi = iMRT$。",
+  "<b>i（凡特何夫因子）</b>＝解離後粒子數：葡萄糖 i=1、NaCl i=2、CaCl₂ i=3。",
+  "依數性質<b>只看溶質粒子數目，不看種類</b>——同濃度電解質效應更大。",
+  "稀釋公式 M₁V₁ = M₂V₂。"
+]} />
+
+<SolveApproach steps={[
+  "先看要的是哪種濃度（依數性質→換成 m）。",
+  "判斷溶質是否電解質 → 定 i（解離粒子數）。",
+  "套對應公式（ΔTb、ΔTf、Π）算，記得乘 i。",
+  "反推題：由凝固點下降算 m → 算莫耳數 → 求分子量。"
+]} />

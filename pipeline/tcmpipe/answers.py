@@ -93,27 +93,38 @@ def _split_combined(text: str) -> dict[str, dict[int, str]]:
 
 
 def load_answers(school: str, year: int) -> dict[str, tuple[dict[int, str], str]]:
-    """Return {subject: (answers, source_pdf_rel)}."""
+    """Return {subject: (answers, source_pdf_rel)}.
+
+    Some per-subject `answer_<subject>.pdf` files are actually detailed solution
+    papers (not key grids) — e.g. CMU 107. So for each subject we parse every
+    candidate source and keep whichever yields the most complete key, rather than
+    blindly preferring the per-subject file.
+    """
     adir = C.answer_dir(school, year)
-    result: dict[str, tuple[dict[int, str], str]] = {}
     if not os.path.isdir(adir):
-        return result
+        return {}
     files = set(os.listdir(adir))
 
-    # 1) prefer per-subject files
+    # candidate maps per subject: list of (answers, source_rel)
+    candidates: dict[str, list[tuple[dict[int, str], str]]] = {s: [] for s in C.SUBJECTS}
+
     for subj in C.SUBJECTS:
         fn = f'answer_{subj}.pdf'
         if fn in files:
-            text = _full_text(os.path.join(adir, fn))
-            result[subj] = (parse_block(text), C.rel(os.path.join(adir, fn)))
+            amap = parse_block(_full_text(os.path.join(adir, fn)))
+            candidates[subj].append((amap, C.rel(os.path.join(adir, fn))))
 
-    # 2) fall back to combined answer_all.pdf for any missing subject
-    missing = [s for s in C.SUBJECTS if s not in result]
     for combined in ('answer_all.pdf', 'answer_all_v2.pdf'):
-        if missing and combined in files:
-            text = _full_text(os.path.join(adir, combined))
-            for subj, amap in _split_combined(text).items():
-                if subj in missing:
-                    result[subj] = (amap, C.rel(os.path.join(adir, combined)))
-            missing = [s for s in C.SUBJECTS if s not in result]
+        if combined in files:
+            split = _split_combined(_full_text(os.path.join(adir, combined)))
+            src = C.rel(os.path.join(adir, combined))
+            for subj, amap in split.items():
+                candidates[subj].append((amap, src))
+
+    # pick the source with the most answers for each subject
+    result: dict[str, tuple[dict[int, str], str]] = {}
+    for subj, opts in candidates.items():
+        best = max(opts, key=lambda o: len(o[0]), default=None)
+        if best and best[0]:
+            result[subj] = best
     return result

@@ -1,0 +1,38 @@
+---
+title: 細胞呼吸：糖解、克氏循環、電子傳遞
+subject: biology
+tag: 細胞呼吸
+summary: 三階段地點與 ATP 產量，記住有氧 vs 無氧差別，計算題穩拿。
+audio: >
+  細胞呼吸複習。三階段。糖解在細胞質，把葡萄糖變成丙酮酸，產生少量 ATP 和 NADH。
+  克氏循環在粒線體基質，產生 NADH、FADH2 和二氧化碳。
+  電子傳遞鏈在粒線體內膜，氧氣是最終電子受體，產生大量 ATP，這就是為什麼需要氧。
+  有氧呼吸一分子葡萄糖約產生三十多個 ATP，無氧發酵只有兩個。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 三階段地點
+
+<Memorize>
+<b>糖解</b>＝細胞質；<b>克氏循環</b>＝粒線體基質；<b>電子傳遞鏈</b>＝粒線體內膜（<b>O₂ 是最終電子受體</b>）。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "糖解：葡萄糖→2 丙酮酸，淨產 2 ATP + 2 NADH（不需氧）。",
+  "克氏循環：產 NADH、FADH₂、CO₂（CO₂ 主要在這裡釋出）。",
+  "<b>電子傳遞鏈</b>：NADH/FADH₂ 交電子、O₂ 接收成水，產生<b>大量 ATP</b>（氧化磷酸化）。",
+  "有氧每葡萄糖約 30–32 ATP；<b>無氧發酵僅 2 ATP</b>（再生 NAD⁺ 維持糖解）。",
+  "發酵產物：動物→乳酸；酵母→乙醇 + CO₂。"
+]} />
+
+<SolveApproach steps={[
+  "判題目問哪一階段 → 對應地點與產物（CO₂ 在克氏、H₂O 在 ETC）。",
+  "缺氧/氰化物抑制 ETC → ATP 驟減、改走發酵。",
+  "ATP 計算：分清有氧（~30）vs 無氧（2）。",
+  "與光合對照：呼吸是分解醣釋能、消耗 O₂、放 CO₂。"
+]} />

@@ -1,0 +1,40 @@
+---
+title: 演化：天擇與族群遺傳
+subject: biology
+tag: 演化
+summary: 天擇、變異來源、Hardy–Weinberg 平衡與物種形成，觀念題為主。
+audio: >
+  演化複習。達爾文天擇：個體有變異，環境篩選出適應者，適者生存、繁殖成功。
+  變異來源是突變和有性生殖的重組。
+  天擇作用在表現型、改變的是族群的基因頻率。
+  哈溫平衡描述沒有演化時基因頻率不變的理想狀態，p 加 q 等於一，基因型頻率是 p 平方加 2pq 加 q 平方。
+  地理隔離會造成物種形成。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 核心觀念
+
+<Memorize>
+天擇＝「<b>變異存在 → 環境篩選 → 適者繁殖</b>」。演化的單位是<b>族群</b>，改變的是<b>基因頻率</b>（不是個體）。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "變異來源：<b>突變</b>（根本來源）＋ 有性生殖的<b>重組</b>。",
+  "天擇作用在<b>表現型</b>，但改變的是族群基因頻率。",
+  "<b>Hardy–Weinberg</b>：p+q=1；基因型 p²+2pq+q²=1。平衡=不演化（無突變、無遷移、隨機交配、無天擇、族群大）。",
+  "違反任一 HW 條件 → 族群正在演化。",
+  "物種形成：<b>地理隔離</b>（異域）或生殖隔離（同域）→ 基因庫分開。",
+  "趨同演化（不同起源相似性狀）vs 趨異演化。"
+]} />
+
+<SolveApproach steps={[
+  "判斷敘述是否符合天擇（強調變異＋環境篩選，非『用進廢退』拉馬克）。",
+  "HW 計算：先由 q²（隱性表現型頻率）開方得 q，再 p=1−q，算各基因型。",
+  "問是否演化 → 檢查 HW 五條件有無被破壞。",
+  "物種形成題 → 找隔離機制（地理/生殖）。"
+]} />

@@ -1,0 +1,41 @@
+---
+title: 免疫：先天 vs 後天、體液 vs 細胞
+subject: biology
+tag: 免疫
+summary: 分清非專一/專一性、B 細胞抗體與 T 細胞、記憶細胞與疫苗原理。
+audio: >
+  免疫複習。先天免疫是非專一性的，包括皮膚、發炎、吞噬細胞，反應快。
+  後天免疫是專一性的，分體液免疫和細胞免疫。
+  體液免疫靠 B 細胞產生抗體對付細胞外病原。
+  細胞免疫靠 T 細胞，毒殺 T 細胞清除被感染的細胞。
+  記憶細胞讓二次反應又快又強，這就是疫苗的原理。
+  抗原抗體有專一性。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 兩層防線
+
+<Memorize>
+<b>先天（非專一）</b>：皮膚、發炎、吞噬細胞——反應快、無記憶。<br />
+<b>後天（專一）</b>：B 細胞（抗體＝體液免疫）＋ T 細胞（細胞免疫）——慢、<b>有記憶</b>。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "<b>體液免疫</b>：B 細胞→漿細胞分泌<b>抗體</b>，對付細胞<b>外</b>病原/毒素。",
+  "<b>細胞免疫</b>：<b>毒殺 T 細胞</b>清除被感染/癌細胞；輔助 T 細胞協調全局（HIV 攻擊它）。",
+  "<b>記憶細胞</b>→ 二次免疫反應又快又強（疫苗原理）。",
+  "抗原–抗體具<b>專一性</b>（一對一辨識）。",
+  "主動免疫（自己產生，如疫苗/感染）持久；被動免疫（直接給抗體，如母乳/血清）即時但短暫。"
+]} />
+
+<SolveApproach steps={[
+  "判先天/後天：有專一性與記憶＝後天。",
+  "病原在細胞外→體液（抗體）；在細胞內→細胞免疫（毒殺 T）。",
+  "二次反應曲線（更快更高）→ 記憶細胞。",
+  "主動 vs 被動：自己製造＝主動；外來抗體＝被動。"
+]} />

@@ -1,0 +1,39 @@
+---
+title: 神經系統：動作電位與突觸
+subject: biology
+tag: 神經系統
+summary: 靜止電位、去極化、動作電位全或無、突觸傳遞，順序與離子流向是考點。
+audio: >
+  神經系統複習。靜止電位約負七十毫伏，靠鈉鉀幫浦維持，鉀在內、鈉在外。
+  刺激達閾值時鈉離子通道打開、鈉流入造成去極化，產生動作電位，遵守全有全無律。
+  接著鉀流出再極化。
+  訊號在突觸靠神經傳遞物質傳遞，是單向的。
+  髓鞘讓訊號跳躍傳導變快。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 電位變化順序
+
+<Memorize>
+靜止電位（約 −70 mV，鈉鉀幫浦維持）→ 達閾值 <b>Na⁺ 流入去極化</b> → 達峰 <b>K⁺ 流出再極化</b> → 短暫過極化 → 回靜止。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "靜止電位：<b>鈉鉀幫浦</b>把 3Na⁺ 打出、2K⁺ 打入；膜內負、外正。",
+  "動作電位遵守<b>全有全無律</b>（達閾值才發生，強度不變、頻率變）。",
+  "去極化＝Na⁺ 內流；再極化＝K⁺ 外流。",
+  "突觸傳遞靠<b>神經傳遞物質</b>（如乙醯膽鹼），<b>單向</b>（突觸前→後）。",
+  "<b>髓鞘</b>→ 跳躍式傳導（節點間跳躍），速度更快。"
+]} />
+
+<SolveApproach steps={[
+  "判題目在問哪一段（靜止/去極化/再極化）→ 對應離子流向。",
+  "離子題：去極化想 Na⁺ 進、再極化想 K⁺ 出。",
+  "刺激強弱題 → 全有全無：改變的是頻率不是幅度。",
+  "傳導速度題 → 髓鞘、軸突直徑。"
+]} />

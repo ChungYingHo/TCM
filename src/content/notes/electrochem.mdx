@@ -1,0 +1,39 @@
+---
+title: 電化學：電池電位與電解
+subject: chemistry
+tag: 電化學
+summary: 標準電位算電動勢、判自發性，Nernst 修濃度，電解用法拉第算量。
+audio: >
+  電化學複習。電動勢等於陰極還原電位減去陽極還原電位。
+  電動勢大於零反應自發，可放電。
+  陽極氧化、陰極還原。原電池陽極是負極，電解槽陽極是正極。
+  Nernst 方程式修正非標準濃度下的電位。
+  電解計算用法拉第定律，電量等於電流乘時間，一莫耳電子是 96500 庫侖。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 核心關係
+
+<Memorize>
+<b>E°<sub>cell</sub> = E°(陰極) − E°(陽極)</b>；<b>E°<sub>cell</sub> &gt; 0 → 自發</b>（$\Delta G = -nFE$）。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "<b>陽氧陰還</b>：陽極氧化、陰極還原（任何電池都成立）。",
+  "原電池（放電）：陽極=負極、陰極=正極；電解槽：陽極=正極、陰極=負極。",
+  "還原電位越大 → 越易被還原（氧化力強）；越小 → 越易被氧化。",
+  "<b>Nernst</b>：$E = E^\\circ - \\frac{0.0592}{n}\\log Q$（25°C），濃度偏離標準時用。",
+  "<b>法拉第</b>：Q = It；1 mol e⁻ = 96500 C；析出量 ∝ 通過電子莫耳數。"
+]} />
+
+<SolveApproach steps={[
+  "查標準還原電位 → 大的當陰極（還原）、小的當陽極（氧化）。",
+  "E°cell = E°陰 − E°陽；>0 自發。",
+  "非標準濃度 → 用 Nernst 修正。",
+  "電解析出量：算電量 Q=It → 換電子莫耳 → 依半反應算質量/體積。"
+]} />

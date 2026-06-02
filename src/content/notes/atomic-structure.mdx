@@ -1,0 +1,32 @@
+---
+title: 原子結構與電子組態
+subject: chemistry
+tag: 原子結構
+summary: 量子數、軌域填充三原則、價電子，這些是週期性與鍵結的基礎。
+audio: >
+  原子結構複習。電子填軌域遵守三原則：包立不相容、能量最低的 Aufbau、洪德最大多重度。
+  填充順序 1s 2s 2p 3s 3p 4s 3d。
+  四個量子數：主量子數 n 是層、角量子數 l 是形狀、磁量子數 m 是方向、自旋。
+  價電子數等於主族族數，決定化性。
+  同位素是質子數相同、中子數不同。
+draft: false
+---
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 電子怎麼排
+
+<KeyPoints items={[
+  "三原則：<b>Aufbau</b>（先填低能）、<b>包立不相容</b>（每軌域最多 2 電子、自旋相反）、<b>洪德</b>（同能階先各佔一個再配對）。",
+  "填充順序：1s→2s→2p→3s→3p→<b>4s→3d</b>→4p…（4s 先於 3d）。",
+  "四量子數：n（層/能量）、l（形狀 s/p/d/f）、mₗ（方向）、mₛ（自旋 ±½）。",
+  "<b>價電子數 = 主族族數</b>，決定化學性質與離子電荷。",
+  "同位素：質子數同、中子數不同 → 質量數不同、化性相同。"
+]} />
+
+<SolveApproach steps={[
+  "由原子序寫電子組態（記得 4s 先填、Cr/Cu 半滿全滿例外）。",
+  "數最外層電子 = 價電子 → 判族與可能離子電荷。",
+  "問激發/離子組態：移除電子先從最外層（4s 先於 3d 失去）。",
+  "量子數題：檢查是否違反包立（同四量子數）或填充規則。"
+]} />

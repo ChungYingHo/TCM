@@ -1,0 +1,39 @@
+---
+title: 化學鍵與分子形狀（VSEPR）
+subject: chemistry
+tag: 化學鍵
+summary: 離子鍵/共價鍵/金屬鍵的差別，用 VSEPR 與混成判分子幾何與極性。
+audio: >
+  化學鍵複習。離子鍵是金屬加非金屬、電子轉移；共價鍵是非金屬之間、電子共用；金屬鍵是電子海。
+  畫路易斯結構先算價電子總數，滿足八隅體。
+  VSEPR 看中心原子的電子對數決定形狀：兩對直線、三對平面三角、四對四面體。
+  孤電子對會把鍵角壓小。有極性鍵又不對稱的分子才有極性。
+  混成：sp 直線、sp2 平面、sp3 四面體。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 三種鍵先分清
+
+<Memorize>
+<b>離子鍵</b>＝金屬＋非金屬（電子轉移）；<b>共價鍵</b>＝非金屬間（電子共用）；<b>金屬鍵</b>＝自由電子海。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "畫路易斯結構：價電子總數 → 排八隅體（H 例外 2、可有擴張八隅體）。",
+  "VSEPR：中心原子<b>電子對數</b>決定基本形狀——2 對直線、3 對平面三角、4 對四面體、5 對三角雙錐、6 對八面體。",
+  "<b>孤電子對</b>排斥力大，會壓小鍵角（如 H₂O 104.5° < 109.5°）。",
+  "混成：sp（直線）、sp²（平面三角）、sp³（四面體）；σ 鍵 + 孤對數 = 混成軌域數。",
+  "極性分子：有極性鍵<b>且</b>分子不對稱（CO₂ 直線對稱→無極性；H₂O 彎曲→有極性）。"
+]} />
+
+<SolveApproach steps={[
+  "判鍵型：看元素組成（金屬非金屬→離子；都非金屬→共價）。",
+  "畫路易斯 → 數中心原子的鍵對＋孤對 → 套 VSEPR 得形狀。",
+  "由形狀＋對稱性判<b>極性</b>（對稱抵消＝無極性）。",
+  "問沸點/溶解：比較分子間作用力（氫鍵 > 偶極 > 倫敦力；離子化合物更高）。"
+]} />

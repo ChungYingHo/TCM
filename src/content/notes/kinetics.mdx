@@ -1,0 +1,39 @@
+---
+title: 反應速率與速率定律
+subject: chemistry
+tag: 反應速率
+summary: 速率定律、反應級數、半生期與活化能，看數據判級數是核心考點。
+audio: >
+  反應速率複習。速率定律 rate 等於 k 乘以反應物濃度的某次方，那個次方就是反應級數。
+  零級反應速率固定，一級反應半生期固定，二級反應半生期和初濃度成反比。
+  一級反應的濃度對時間取自然對數會是直線。
+  溫度升高速率變快，因為更多分子超過活化能；催化劑降低活化能但不改變平衡。
+  Arrhenius 方程式描述 k 和溫度與活化能的關係。
+draft: false
+---
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+
+## 核心式子
+
+<Memorize>
+速率定律：$\text{rate} = k[A]^m[B]^n$，指數 $m,n$ 就是<b>反應級數</b>（由實驗決定，不是係數）。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "<b>零級</b>：rate = k（與濃度無關）；[A] 對 t 為直線。",
+  "<b>一級</b>：半生期 $t_{1/2}=\\frac{0.693}{k}$（<b>與初濃度無關</b>）；ln[A] 對 t 為直線。",
+  "<b>二級</b>：$t_{1/2}=\\frac{1}{k[A]_0}$（與初濃度成反比）；1/[A] 對 t 為直線。",
+  "溫度↑→速率↑（更多分子超過<b>活化能</b>）；Arrhenius：$k=Ae^{-E_a/RT}$。",
+  "<b>催化劑</b>降低 Eₐ、加快正逆反應，但<b>不改變平衡位置與 ΔH</b>。"
+]} />
+
+<SolveApproach steps={[
+  "判級數：比較不同實驗的「初濃度 vs 初速率」——濃度加倍速率不變→0 級、加倍→1 級、變 4 倍→2 級。",
+  "用對應半生期公式算時間/濃度。",
+  "看哪個圖是直線（[A]、ln[A]、1/[A]）反推級數。",
+  "問溫度/催化劑效應 → 連到活化能：催化劑只降 Eₐ，不動平衡。"
+]} />

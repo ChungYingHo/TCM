@@ -1,0 +1,39 @@
+---
+title: 熱力學：焓、熵、自由能
+subject: chemistry
+tag: 熱力學
+summary: ΔG 判自發、ΔH 看吸放熱、ΔS 看亂度，Hess 定律算反應熱。
+audio: >
+  熱力學複習。吉布斯自由能 ΔG 等於 ΔH 減 T 乘 ΔS。
+  ΔG 小於零反應自發。ΔH 小於零放熱、大於零吸熱。ΔS 大於零亂度增加。
+  ΔG 等於負的 RT ln K，也等於負 nFE。
+  Hess 定律：反應熱只看起點和終點，可以把反應式相加減。
+  溫度高低會決定 ΔG 正負，由 ΔH 和 ΔS 的正負組合判斷。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 主方程式
+
+<Memorize>
+$\Delta G = \Delta H - T\Delta S$。<b>$\Delta G < 0$ → 自發</b>。也有 $\Delta G^\circ = -RT\ln K = -nFE^\circ$。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "ΔH<0 放熱、>0 吸熱；ΔS>0 亂度增（氣體增、溶解、升溫）。",
+  "自發性看 ΔG：四種組合——ΔH<0,ΔS>0 永遠自發；ΔH>0,ΔS<0 永遠不自發；其餘<b>看溫度</b>。",
+  "ΔG° 與 K 關係：K>1 → ΔG°<0；K<1 → ΔG°>0。",
+  "<b>Hess 定律</b>：反應熱與路徑無關，可把已知反應式加減得目標 ΔH。",
+  "標準生成熱 ΔHf：元素穩定態 = 0；ΔH反應 = Σ生成物 − Σ反應物。"
+]} />
+
+<SolveApproach steps={[
+  "判自發：算 ΔG=ΔH−TΔS（注意 ΔS 單位常是 J、ΔH 是 kJ，要換算）。",
+  "只給 ΔH、ΔS 問「何溫度才自發」→ 解 ΔG=0 求 T 臨界。",
+  "求反應熱：用 Hess（疊加反應式）或生成熱差。",
+  "連結平衡/電化學：ΔG°=−RT ln K 或 −nFE°。"
+]} />

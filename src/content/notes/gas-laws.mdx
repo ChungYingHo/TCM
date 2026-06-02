@@ -1,0 +1,39 @@
+---
+title: 氣體：理想氣體與分壓
+subject: chemistry
+tag: 氣體
+summary: PV=nRT 一式通吃，配合道耳頓分壓與收集氣體扣水汽，計算題穩拿。
+audio: >
+  氣體複習。理想氣體方程式 PV 等於 nRT，R 是 0.082。
+  記得溫度一定要用凱氏，攝氏加 273。
+  道耳頓分壓定律：總壓等於各氣體分壓總和，分壓比等於莫耳數比。
+  排水集氣時，收集到的氣體壓力要扣掉水的蒸氣壓。
+  標準狀況一莫耳氣體佔 22.4 公升。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 一條主式
+
+<Memorize>
+$PV = nRT$（$R=0.0821\,\text{L·atm/mol·K}$）。<b>溫度一律用 K（°C + 273）</b>。STP 下 1 mol 氣體 ≈ 22.4 L。
+</Memorize>
+
+## 必背重點
+
+<KeyPoints items={[
+  "波以耳：T 定，PV 定；查理：P 定，V∝T；亞佛加厥：同 T、P，V∝n。",
+  "<b>道耳頓分壓</b>：P總 = ΣPᵢ；分壓比 = 莫耳比 = 體積比。",
+  "<b>排水集氣</b>：P(氣) = P(大氣) − P(水蒸氣)（要扣水汽壓！）。",
+  "氣體密度：$d=\\frac{PM}{RT}$，可由密度反推分子量 M。",
+  "真實氣體在<b>高壓、低溫</b>偏離理想（分子體積與引力不可忽略）。"
+]} />
+
+<SolveApproach steps={[
+  "先把溫度換成 K、壓力單位統一（atm 或 mmHg，760 mmHg = 1 atm）。",
+  "單一狀態用 PV=nRT；狀態變化用 P₁V₁/T₁ = P₂V₂/T₂。",
+  "混合氣體先算各別莫耳數 → 分壓或總壓。",
+  "排水集氣題：先扣水蒸氣壓，再用 PV=nRT 算氣體莫耳或質量。"
+]} />

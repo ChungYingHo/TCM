@@ -1,0 +1,31 @@
+---
+title: 光譜分析：IR、NMR、質譜怎麼看
+subject: chemistry
+tag: 光譜
+summary: IR 看官能基、NMR 看氫的環境、MS 看分子量與碎片，三種互補定結構。
+audio: >
+  光譜複習。紅外線光譜 IR 用來判官能基，例如約三千四百看到寬峰是氫氧基，約一千七百是羰基。
+  核磁共振 NMR 看氫原子的化學環境，訊號數目代表幾種不同的氫，積分面積代表氫的數目，
+  分裂遵守 n 加一規則。質譜 MS 看分子量，最右邊的分子離子峰代表分子量，碎片差距可推官能基。
+  三種合起來就能拼出結構。
+draft: false
+---
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 三種光譜各看什麼
+
+<KeyPoints items={[
+  "<b>IR（紅外線）</b>＝看官能基。~3300 寬峰 O–H/N–H；~1700 強峰 C=O（羰基）；~2200 C≡。",
+  "<b>¹H NMR</b>＝看氫的環境。訊號數 = 幾種不同的氫；積分面積 ∝ 氫數；化學位移看鄰近電負度。",
+  "NMR 分裂遵守 <b>n+1 規則</b>（鄰近 n 個等價氫 → 裂成 n+1 重峰）。",
+  "<b>質譜 MS</b>＝看分子量。最右的<b>分子離子峰 (M⁺)</b> = 分子量；碎片質量差推官能基（loss 15=CH₃、17=OH、29=CHO）。",
+  "解析順序常是：MS 定分子量/式 → IR 定官能基 → NMR 定骨架。"
+]} />
+
+<SolveApproach steps={[
+  "先看 MS 的 M⁺ → 推分子量，配合元素推分子式與不飽和度。",
+  "看 IR 有無 C=O（1700）、O–H（3300 寬）→ 鎖定官能基類別。",
+  "數 NMR 訊號數 → 幾種氫；用積分比 → 各種氫的個數；用裂峰（n+1）→ 鄰接關係。",
+  "把碎片/官能基拼成結構，再回頭驗證每個光譜都吻合。"
+]} />

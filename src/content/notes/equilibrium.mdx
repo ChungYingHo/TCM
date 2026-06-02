@@ -1,0 +1,39 @@
+---
+title: 化學平衡與勒沙特列
+subject: chemistry
+tag: 化學平衡
+summary: 寫平衡常數 K、用 Q 比 K 判方向、用勒沙特列預測擾動後移動方向。
+audio: >
+  化學平衡複習。平衡常數 K 等於生成物濃度連乘除以反應物濃度連乘，純固體和純液體不列入。
+  反應商 Q 和 K 比較：Q 小於 K 正向、Q 大於 K 逆向。
+  勒沙特列原理：系統受擾動會往抵消擾動的方向移動。
+  加反應物往正向、加壓往氣體莫耳數少的一邊、放熱反應升溫往逆向。
+  催化劑不改變平衡位置。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+
+## 兩個工具
+
+<Memorize>
+<b>K = [生成物]<sup>係數</sup> ÷ [反應物]<sup>係數</sup></b>（純固/純液<b>不列入</b>）。比較 <b>Q 與 K</b>：Q&lt;K 往正向、Q&gt;K 往逆向。
+</Memorize>
+
+## 勒沙特列：擾動 → 反應抵消
+
+<KeyPoints items={[
+  "加<b>反應物</b>/移除生成物 → 往<b>正</b>向；反之往逆向。",
+  "<b>加壓（縮體積）</b>→ 往氣體<b>莫耳數少</b>的一邊；減壓相反。",
+  "<b>升溫</b>：放熱反應（ΔH<0）往<b>逆</b>向、吸熱反應往正向（把熱當反應物/生成物想）。",
+  "加入<b>惰性氣體</b>（定體積）不影響平衡；<b>催化劑</b>只加快達平衡、不移動位置。",
+  "只有<b>溫度</b>會改變 K 值；濃度/壓力改變只是移動位置、K 不變。"
+]} />
+
+<SolveApproach steps={[
+  "寫出 K 表達式（去掉純固/純液）。",
+  "判方向：算 Q 與 K 比；或用勒沙特列看擾動。",
+  "升溫題先把反應的吸放熱（ΔH 符號）想成熱在哪邊，再判移動。",
+  "求平衡濃度：用 ICE 表（初始–變化–平衡）代入 K 解。"
+]} />
