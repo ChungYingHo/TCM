@@ -10,12 +10,12 @@
 ## 本機開發
 ```bash
 npm install
-SITE_PASSWORD=jeremy850916 AUTH_SECRET=<隨機字串> npm start   # http://localhost:4321
+npm start         # http://localhost:4321（密碼預設 jeremy850916，免設定）
 npm test          # 單元測試 (Vitest)
 npm run test:e2e  # E2E (Playwright)
 npm run build     # 正式建置 (Vercel)
 ```
-部署到 Vercel 時，在環境變數設定 `SITE_PASSWORD`、`AUTH_SECRET`。
+密碼預設寫在 `src/utils/authToken.ts`（僅伺服器端，不進前端 bundle）。如需更換，設環境變數 `SITE_PASSWORD`（並建議設 `AUTH_SECRET`）覆蓋即可；Vercel 上於專案環境變數設定。
 
 ---
 

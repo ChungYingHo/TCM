@@ -3,8 +3,12 @@ import { createHmac, timingSafeEqual } from 'node:crypto'
 
 export const AUTH_COOKIE = 'tcm_auth'
 
+// Hardcoded default so `npm start` / a plain Vercel deploy works with no env setup.
+// Server-only file (never shipped to the client). Override via SITE_PASSWORD if desired.
+const DEFAULT_PASSWORD = 'jeremy850916'
+
 function secret(): string {
-  return import.meta.env.SITE_PASSWORD || process.env.SITE_PASSWORD || ''
+  return import.meta.env.SITE_PASSWORD || process.env.SITE_PASSWORD || DEFAULT_PASSWORD
 }
 
 function signingKey(): string {
