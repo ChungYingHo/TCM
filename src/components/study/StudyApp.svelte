@@ -46,6 +46,19 @@
   })
 
   const facets = $derived(deriveFacets(questions))
+  const tagsBySubject = $derived.by(() => {
+    const m = new Map<Subject, Set<string>>()
+    for (const q of questions) {
+      if (!q.concept_tags.length) continue
+      const set = m.get(q.subject) ?? new Set<string>()
+      q.concept_tags.forEach((t) => set.add(t))
+      m.set(q.subject, set)
+    }
+    return SUBJECTS.map((s) => ({
+      subject: s,
+      tags: [...(m.get(s) ?? [])].sort((a, b) => a.localeCompare(b, 'zh-Hant')),
+    })).filter((g) => g.tags.length)
+  })
   const filtered = $derived(
     searchQuestions(filterQuestions(questions, { schools, years, subjects, tags }), term),
   )
@@ -73,10 +86,12 @@
         <MultiSelect label="科目" options={SUBJECTS} bind:selected={subjects} format={(s) => SUBJECT_LABEL[s]} />
         <MultiSelect label="年份（民國）" options={facets.years} bind:selected={years} />
         {#if facets.tags.length}
-          <details class="collapse-arrow collapse border border-base-300 bg-base-200/40">
+          <details class="collapse-arrow collapse border border-base-300 bg-base-200/40" open={tags.length > 0}>
             <summary class="collapse-title text-sm font-semibold">趨勢標籤（{facets.tags.length}）</summary>
-            <div class="collapse-content">
-              <MultiSelect label="" options={facets.tags} bind:selected={tags} />
+            <div class="collapse-content flex flex-col gap-3">
+              {#each tagsBySubject as group (group.subject)}
+                <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} />
+              {/each}
             </div>
           </details>
         {/if}

@@ -41,10 +41,10 @@ WEB_ERRATA_DIR = os.path.join(ROOT, 'public', 'errata')       # errata region cr
 OUT_DIR = os.path.join(ROOT, 'pipeline', 'out')               # intermediate (gitignored)
 OVERRIDES_DIR = os.path.join(ROOT, 'pipeline', 'overrides')   # human QA (committed)
 
-# Rendering
-RENDER_DPI = 150          # crop image resolution
+# Rendering — higher DPI so the zoom/lightbox stays crisp (source PDF is vector).
+RENDER_DPI = 220          # crop image resolution (~1820px wide for A4)
 IMAGE_FORMAT = 'webp'
-WEBP_QUALITY = 82
+WEBP_QUALITY = 85
 LEFT_MARGIN_MAX = 80      # question-number anchors sit near the left margin (x0 < this)
 FOOTER_TRIM_PT = 28       # trim page-number footer when a question runs to page bottom
 TOP_PAD_PT = 3

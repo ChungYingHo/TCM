@@ -115,53 +115,79 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
 
 MAX_SPAN_PAGES = 3          # cap a single question crop's page span
 MAX_IMAGE_PX = 16000        # WebP hard limit is 16383
+# repeated page-header markers (exam title / 考試科目 / 頁碼 …) — excluded from crops
+HEADER_RE = re.compile(r'學年度|考試科目|頁碼|總頁數|本試題|招生考試|考試日期|含封面')
+# footer page numbers like 5/8
+FOOTER_RE = re.compile(r'^\d{1,3}/\d{1,3}$')
 
 
-def _end_page(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> int:
-    """Last page a question occupies. Open-ended questions stay on their own page;
-    multi-page spans are capped to avoid runaway crops."""
-    ep = nxt.page if nxt else a.page
-    return min(ep, a.page + MAX_SPAN_PAGES)
+def _is_chrome(text: str) -> bool:
+    return bool(HEADER_RE.search(text) or FOOTER_RE.match(text))
 
 
-def _question_tokens(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> list[str]:
-    end_page = _end_page(doc, a, nxt)
-    toks = []
+def _header_bottom(words: list) -> float:
+    hb = 0.0
+    for w in words:
+        if HEADER_RE.search(w[4]):
+            hb = max(hb, w[3])  # y1 of last header word
+    return hb
+
+
+def _page_bands(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> list[tuple[int, float, float]]:
+    """Per-page (page, top, bottom) bounds tightly fit to the question's real content.
+    Excludes the repeated exam header + footer page numbers, trims trailing whitespace,
+    and drops continuation pages that hold only header chrome (the next-page-header bleed)."""
+    end_page = min(nxt.page if nxt else a.page, a.page + MAX_SPAN_PAGES)
+    bands: list[tuple[int, float, float]] = []
     for pno in range(a.page, end_page + 1):
+        page = doc[pno]
+        ph = page.rect.height
+        words = page.get_text('words')
+        hb = _header_bottom(words)
+        raw_top = (a.y - C.TOP_PAD_PT) if pno == a.page else (hb + 4 if hb else C.TOP_PAD_PT)
+        raw_top = max(0.0, raw_top)
+        raw_bottom = (nxt.y - C.BOTTOM_PAD_PT) if (nxt and nxt.page == pno) else (ph - C.FOOTER_TRIM_PT)
+        # real content = words in the raw band that aren't header/footer chrome
+        ys = [(w[1], w[3]) for w in words
+              if w[3] > raw_top + 0.5 and w[1] < raw_bottom - 0.5 and not _is_chrome(w[4])]
+        if not ys:
+            if pno == a.page:
+                bands.append((pno, raw_top, min(raw_bottom, raw_top + 24)))
+            continue  # continuation page with only chrome -> skip (fixes header bleed)
+        top = raw_top if pno == a.page else max(raw_top, min(y for y, _ in ys) - C.TOP_PAD_PT)
+        bottom = min(raw_bottom, max(y for _, y in ys) + C.BOTTOM_PAD_PT)
+        if bottom > top + 4:
+            bands.append((pno, top, bottom))
+    if not bands:
+        bands = [(a.page, max(0.0, a.y - C.TOP_PAD_PT), a.y + 40)]
+    return bands
+
+
+def _question_tokens(doc: fitz.Document, bands: list[tuple[int, float, float]]) -> list[str]:
+    toks = []
+    for (pno, top, bottom) in bands:
         for w in doc[pno].get_text('words'):
-            x0, y0, t = w[0], w[1], w[4]
-            after = (pno > a.page) or (y0 >= a.y - 0.5)
-            before = nxt is None or (pno < nxt.page) or (y0 < nxt.y - 0.5)
-            if after and before:
-                toks.append((pno, y0, x0, C.nfkc(t)))
+            if w[1] >= top - 0.5 and w[3] <= bottom + 0.5 and not _is_chrome(w[4]):
+                toks.append((pno, w[1], w[0], C.nfkc(w[4])))
     toks.sort(key=lambda r: (r[0], round(r[1], 1), r[2]))
     return [r[3] for r in toks]
 
 
-def _render_crop(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> tuple[bytes, int, int, bool]:
-    end_page = _end_page(doc, a, nxt)
+def _render_crop(doc: fitz.Document, bands: list[tuple[int, float, float]]) -> tuple[bytes, int, int, bool]:
     slices: list[Image.Image] = []
-    for pno in range(a.page, end_page + 1):
+    for (pno, top, bottom) in bands:
         page = doc[pno]
-        top = (a.y - C.TOP_PAD_PT) if pno == a.page else 0
-        top = max(0, top)
-        if nxt and nxt.page == pno:
-            bottom = nxt.y - C.BOTTOM_PAD_PT
-        else:
-            bottom = page.rect.height - C.FOOTER_TRIM_PT
-        if bottom <= top + 2:
+        clip = fitz.Rect(0, max(0.0, top), page.rect.width, min(page.rect.height, bottom))
+        if clip.height <= 2:
             continue
-        clip = fitz.Rect(0, top, page.rect.width, bottom)
         pix = page.get_pixmap(dpi=C.RENDER_DPI, clip=clip)
-        img = Image.frombytes('RGB', (pix.width, pix.height), pix.samples)
-        slices.append(img)
+        slices.append(Image.frombytes('RGB', (pix.width, pix.height), pix.samples))
     if not slices:
         slices = [Image.new('RGB', (10, 10), 'white')]
     spans = len(slices) > 1
     if spans:
         w = max(s.width for s in slices)
-        h = sum(s.height for s in slices)
-        canvas = Image.new('RGB', (w, h), 'white')
+        canvas = Image.new('RGB', (w, sum(s.height for s in slices)), 'white')
         y = 0
         for s in slices:
             canvas.paste(s, (0, y))
@@ -181,8 +207,8 @@ def extract_section(doc: fitz.Document, anchors: list[Anchor]) -> list[Extracted
     out = []
     for i, a in enumerate(anchors):
         nxt = anchors[i + 1] if i + 1 < len(anchors) else None
-        toks = _question_tokens(doc, a, nxt)
-        stem, opts = parse_stem_options(toks)
-        img_bytes, w, h, spans = _render_crop(doc, a, nxt)
+        bands = _page_bands(doc, a, nxt)
+        stem, opts = parse_stem_options(_question_tokens(doc, bands))
+        img_bytes, w, h, spans = _render_crop(doc, bands)
         out.append(Extracted(a.num, stem, opts, w, h, img_bytes, spans))
     return out

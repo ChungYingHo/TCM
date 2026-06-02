@@ -33,13 +33,13 @@
   {#each letters as letter (letter)}
     <button
       type="button"
-      class={`btn min-h-11 justify-start text-left ${stateClass(letter)}`}
+      class={`btn h-auto min-h-11 items-start justify-start gap-1 whitespace-normal py-2 text-left leading-snug ${stateClass(letter)}`}
       aria-pressed={selected === letter}
       onclick={() => onselect?.(letter)}
     >
       <span class="font-bold">{letter}</span>
       {#if question.options.find((o) => o.letter === letter)?.text}
-        <span class="ml-1 truncate font-normal">
+        <span class="font-normal break-words">
           {question.options.find((o) => o.letter === letter)?.text}
         </span>
       {/if}
