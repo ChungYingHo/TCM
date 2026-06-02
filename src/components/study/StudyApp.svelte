@@ -64,10 +64,39 @@
   )
   const visible = $derived(filtered.slice(0, limit))
 
-  // reset paging when the result set changes
+  // reset paging + cursor when the result set changes
   $effect(() => {
     void (filtered.length, term)
     limit = PAGE
+    current = 0
+  })
+
+  // keyboard drilling: J/K (or ↑/↓) move cursor, 1–5 answer, Enter reveal
+  let current = $state(0)
+  let cards = $state<ReturnType<typeof Object>[]>([])
+
+  function focusCurrent() {
+    if (typeof document !== 'undefined')
+      document.getElementById(`sq-${current}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }
+
+  function onKey(e: KeyboardEvent) {
+    const tag = (e.target as HTMLElement)?.tagName
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+    if (e.key === 'j' || e.key === 'ArrowDown') {
+      current = Math.min(current + 1, visible.length - 1); focusCurrent(); e.preventDefault()
+    } else if (e.key === 'k' || e.key === 'ArrowUp') {
+      current = Math.max(0, current - 1); focusCurrent(); e.preventDefault()
+    } else if (/^[1-5]$/.test(e.key)) {
+      cards[current]?.selectByIndex?.(Number(e.key) - 1)
+    } else if (e.key === 'Enter') {
+      cards[current]?.reveal?.()
+    }
+  }
+
+  $effect(() => {
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
   })
 </script>
 
@@ -104,12 +133,14 @@
 
   <!-- Results -->
   <section class="flex flex-col gap-3">
-    <div class="flex items-center justify-between text-sm opacity-80">
+    <div class="flex flex-wrap items-center justify-between gap-2 text-sm opacity-80">
       <span>
         {#if loading}載入中…{:else}共 <b>{filtered.length}</b> 題{/if}
       </span>
       {#if schools.length === 0}
         <span class="text-warning">請至少選一間學校</span>
+      {:else}
+        <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答 · Enter 看答案</span>
       {/if}
     </div>
 
@@ -117,8 +148,10 @@
       <div class="alert alert-error">{error}</div>
     {/if}
 
-    {#each visible as q (q.id)}
-      <QuestionCard question={q} mode="study" />
+    {#each visible as q, i (q.id)}
+      <div id={`sq-${i}`}>
+        <QuestionCard bind:this={cards[i]} question={q} mode="study" active={i === current} />
+      </div>
     {/each}
 
     {#if visible.length < filtered.length}

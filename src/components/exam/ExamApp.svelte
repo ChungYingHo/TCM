@@ -46,6 +46,34 @@
     stage = 'done'
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // keyboard drilling during the exam: J/K move, 1–5 answer current
+  let current = $state(0)
+  function letterAt(q: QuestionRecord, i: number): OptionLetter | null {
+    const ls = q.options.length ? q.options.map((o) => o.letter) : (['A', 'B', 'C', 'D'] as OptionLetter[])
+    return i >= 0 && i < ls.length ? ls[i] : null
+  }
+  function onKey(e: KeyboardEvent) {
+    if (stage !== 'running') return
+    const tag = (e.target as HTMLElement)?.tagName
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return
+    if (e.key === 'j' || e.key === 'ArrowDown') {
+      current = Math.min(current + 1, paper.length - 1); e.preventDefault()
+    } else if (e.key === 'k' || e.key === 'ArrowUp') {
+      current = Math.max(0, current - 1); e.preventDefault()
+    } else if (/^[1-5]$/.test(e.key)) {
+      const l = letterAt(paper[current], Number(e.key) - 1)
+      if (l) answers = { ...answers, [paper[current].id]: l }
+    } else {
+      return
+    }
+    if (typeof document !== 'undefined')
+      document.getElementById(`eq-${current}`)?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+  }
+  $effect(() => {
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  })
 </script>
 
 {#if stage === 'setup'}
@@ -76,18 +104,22 @@
   </div>
 {:else if stage === 'running'}
   <div class="flex flex-col gap-3">
-    <div class="sticky top-0 z-10 flex items-center justify-between rounded-b-lg bg-base-100/90 p-2 backdrop-blur">
+    <div class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-lg bg-base-100/90 p-2 backdrop-blur">
       <span class="text-sm opacity-80">已作答 {Object.values(answers).filter(Boolean).length} / {paper.length}</span>
+      <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答</span>
       <button class="btn btn-sm btn-primary" onclick={submit}>交卷計分</button>
     </div>
-    {#each paper as q (q.id)}
-      <QuestionCard
-        question={q}
-        mode="exam"
-        selected={answers[q.id] ?? null}
-        revealed={false}
-        onselect={(l) => (answers = { ...answers, [q.id]: l })}
-      />
+    {#each paper as q, i (q.id)}
+      <div id={`eq-${i}`}>
+        <QuestionCard
+          question={q}
+          mode="exam"
+          selected={answers[q.id] ?? null}
+          revealed={false}
+          active={i === current}
+          onselect={(l) => (answers = { ...answers, [q.id]: l })}
+        />
+      </div>
     {/each}
     <button class="btn btn-primary" onclick={submit}>交卷計分</button>
   </div>

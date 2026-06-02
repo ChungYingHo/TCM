@@ -12,7 +12,9 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
 
 <header class="sticky top-0 z-30 border-b border-base-300 bg-base-100/85 backdrop-blur">
   <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-2 py-2 sm:px-4">
-    <a href="/study" class="mr-2 shrink-0 font-black tracking-tight">後中醫<span class="text-primary">題庫</span></a>
+    <a href="/study" class="mr-2 shrink-0 font-display text-lg font-bold tracking-tight">
+      後中醫<span class="text-primary">題庫</span>
+    </a>
     <div class="flex flex-1 items-center gap-1">
       {
         links.map((l) => (
@@ -25,5 +27,20 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
         ))
       }
     </div>
+    <button id="reading-toggle" class="btn btn-ghost btn-sm shrink-0" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">☾</button>
   </nav>
 </header>
+
+<script is:inline>
+  document.getElementById('reading-toggle')?.addEventListener('click', () => {
+    const el = document.documentElement
+    const dim = el.dataset.reading === 'dim'
+    if (dim) {
+      delete el.dataset.reading
+      localStorage.removeItem('tcm-reading')
+    } else {
+      el.dataset.reading = 'dim'
+      localStorage.setItem('tcm-reading', 'dim')
+    }
+  })
+</script>

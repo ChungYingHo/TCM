@@ -13,14 +13,30 @@
     mode = 'study',
     selected = null,
     revealed = false,
+    active = false,
     onselect,
   }: {
     question: QuestionRecord
     mode?: 'study' | 'exam'
     selected?: OptionLetter | null
     revealed?: boolean
+    active?: boolean
     onselect?: (letter: OptionLetter) => void
   } = $props()
+
+  const letters = $derived(
+    question.options.length
+      ? question.options.map((o) => o.letter)
+      : (['A', 'B', 'C', 'D'] as OptionLetter[]),
+  )
+
+  // keyboard-driven actions (called by the parent list when this card is active)
+  export function selectByIndex(i: number) {
+    if (i >= 0 && i < letters.length) handleSelect(letters[i])
+  }
+  export function reveal() {
+    if (mode === 'study') localRevealed = true
+  }
 
   // study mode keeps its own selection + reveal; exam mode is parent-controlled.
   let localSelected = $state<OptionLetter | null>(null)
@@ -60,7 +76,7 @@
   }
 </script>
 
-<article class="card border border-base-300 bg-base-100 shadow-sm">
+<article class={`card border bg-base-100 transition-shadow ${active ? 'border-primary shadow-md ring-1 ring-primary/40' : 'border-base-300 shadow-sm'}`}>
   <div class="card-body gap-3 p-4 sm:p-5">
     <header class="flex flex-wrap items-center gap-2 text-xs">
       <span class="badge badge-neutral">{SCHOOL_LABEL[question.school]}</span>

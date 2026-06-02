@@ -1,9 +1,77 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: light --default;
+  themes: false;
 }
 
-/* Respect reduced-motion globally */
+/* ── 沉穩專業：黛青／藥草 OKLCH 主題 ─────────────────────────────
+   中性向品牌 hue(~178 teal-green)微染;主色為沉穩黛青,赭色作稀有暖調強調。 */
+@plugin "daisyui/theme" {
+  name: "tcm";
+  default: true;
+  color-scheme: light;
+
+  --color-base-100: oklch(0.992 0.004 150);   /* 暖白紙面 */
+  --color-base-200: oklch(0.969 0.006 152);
+  --color-base-300: oklch(0.928 0.008 155);
+  --color-base-content: oklch(0.30 0.022 185); /* 墨青,非純黑 */
+
+  --color-primary: oklch(0.50 0.075 178);      /* 黛青 */
+  --color-primary-content: oklch(0.98 0.012 178);
+  --color-secondary: oklch(0.55 0.058 150);    /* 藥草綠 */
+  --color-secondary-content: oklch(0.98 0.01 150);
+  --color-accent: oklch(0.60 0.105 52);        /* 赭(稀有暖調) */
+  --color-accent-content: oklch(0.99 0.012 52);
+  --color-neutral: oklch(0.34 0.02 188);
+  --color-neutral-content: oklch(0.96 0.005 150);
+
+  --color-info: oklch(0.58 0.065 232);
+  --color-info-content: oklch(0.98 0.01 232);
+  --color-success: oklch(0.56 0.082 152);
+  --color-success-content: oklch(0.99 0.01 152);
+  --color-warning: oklch(0.68 0.10 72);
+  --color-warning-content: oklch(0.28 0.03 72);
+  --color-error: oklch(0.56 0.135 25);
+  --color-error-content: oklch(0.99 0.01 25);
+
+  --radius-selector: 0.375rem;
+  --radius-field: 0.375rem;
+  --radius-box: 0.625rem;
+  --border: 1px;
+  --depth: 0;
+}
+
+/* ── 字體:宋體標題給「典籍/參考書」權威感,系統黑體作介面內文 ── */
+:root {
+  --font-display: "Noto Serif TC", "Songti TC", "Source Han Serif TC", serif;
+  --font-body: "Noto Sans TC", system-ui, -apple-system, "PingFang TC",
+    "Microsoft JhengHei", "Segoe UI", sans-serif;
+}
+
+html, body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* 讓筆記正文標題也走宋體 */
+.prose :is(h1, h2, h3, h4) {
+  font-family: var(--font-display);
+}
+
+/* ── 夜讀(暖白低亮)模式:不是深色,而是降亮護眼,適合睡前手機 ── */
+[data-reading="dim"] {
+  --color-base-100: oklch(0.95 0.01 80);
+  --color-base-200: oklch(0.915 0.014 78);
+  --color-base-300: oklch(0.86 0.018 76);
+  --color-base-content: oklch(0.34 0.02 70);
+  filter: saturate(0.96);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -13,11 +81,10 @@
 }
 
 @keyframes fade-in-up {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-in-up { animation: fade-in-up 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.animate-fade-in-up { animation: fade-in-up 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 
-/* slim scrollbar for panels */
 .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
-.custom-scrollbar::-webkit-scrollbar-thumb { background: color-mix(in oklab, currentColor 20%, transparent); border-radius: 6px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: color-mix(in oklab, currentColor 18%, transparent); border-radius: 6px; }
