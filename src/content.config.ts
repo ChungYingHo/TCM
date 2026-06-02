@@ -8,6 +8,7 @@ const notes = defineCollection({
     subject: z.enum(['chemistry', 'chinese', 'biology', 'english']),
     tag: z.string(), // links to a concept_tag in the question bank
     summary: z.string().default(''),
+    audio: z.string().default(''), // spoken key-points for the TTS player (drive-time review)
     draft: z.boolean().default(false),
   }),
 })

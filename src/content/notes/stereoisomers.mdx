@@ -1,0 +1,49 @@
+---
+title: 鏡像 vs 非鏡像異構物：立體化學怎麼判別
+subject: chemistry
+tag: 立體化學
+summary: 對掌中心、鏡像/非鏡像異構物、內消旋一次搞懂，看到 Fischer 投影圖就能判關係。
+audio: >
+  立體化學判別重點。第一，先數對掌中心，就是接了四個不同基團的碳。
+  第二，兩個分子如果是照鏡子、而且無法重疊，就是鏡像異構物 enantiomer，旋光方向相反、其他性質都一樣。
+  第三，如果只有部分對掌中心相反，不是完整鏡像，就是非鏡像異構物 diastereomer，物理性質不同，可以分離。
+  第四，分子內部有對稱面、上下互為鏡像，整個分子不旋光，叫內消旋 meso。
+  判別口訣：完整鏡像不能疊是 enantiomer，部分相反是 diastereomer，有對稱面是 meso。
+draft: false
+---
+import StereoTypes from '@/components/notes/StereoTypes.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+
+## 先建立直覺
+
+很多立體化學的題目會給你**幾組 Fischer 投影圖**（就是那種一條直線、左右掛 H 和 OH 的圖），問你哪些是「鏡像異構物」、哪些是「非鏡像異構物」。其實只要照固定步驟判斷，不用背。
+
+<Memorize>
+<b>對掌中心 (chiral center)</b>＝接了<b>四個都不一樣</b>基團的碳。判別關係前，先把每個對掌中心找出來。
+</Memorize>
+
+## 動手玩：三種關係長什麼樣
+
+切換看看「完整相反 / 部分相反 / 有對稱面」分別對應什麼：
+
+<StereoTypes client:visible />
+
+## 怎麼分辨（這就是考點）
+
+<KeyPoints items={[
+  "<b>鏡像異構物 (enantiomers)</b>：兩分子像照鏡子，<b>每一個</b>對掌中心都相反，且<b>無法重疊</b>。旋光度大小相同、方向相反，其餘物理性質相同。",
+  "<b>非鏡像異構物 (diastereomers)</b>：<b>只有部分</b>對掌中心相反（不是完整鏡像）。物理性質<b>不同</b>，可用蒸餾/結晶分離。",
+  "<b>內消旋 (meso)</b>：分子內有<b>對稱面</b>，本身就和自己的鏡像可重疊 → <b>不旋光</b>。",
+  "n 個對掌中心 → 最多 <b>2ⁿ</b> 個立體異構物（有 meso 時會更少）。"
+]} />
+
+<SolveApproach steps={[
+  "第一步：數每個結構的<b>對掌中心</b>（四個不同基團的碳）。",
+  "第二步：兩兩比較對掌中心的構型（左右 H/OH 的方向）。",
+  "<b>全部相反 + 不能重疊</b> → 鏡像異構物 (enantiomer)。",
+  "<b>部分相反</b> → 非鏡像異構物 (diastereomer)。",
+  "出現<b>內部對稱面</b>（上下互為鏡像）→ 該分子是 meso，不旋光，別把它算成一對鏡像。",
+  "題目問「互為非鏡像」就挑『部分相反』的那幾組；問「旋光」就先排除 meso。"
+]} />
