@@ -1,0 +1,45 @@
+---
+title: 酸鹼與緩衝：pH 計算一條龍
+subject: chemistry
+tag: 酸鹼平衡
+summary: 強酸鹼直接算、弱酸鹼用 Ka、緩衝用 Henderson–Hasselbalch，看數字就知道套哪招。
+audio: >
+  酸鹼平衡重點複習。第一，pH 等於負 log 氫離子濃度，pH 加 pOH 等於十四。
+  第二，強酸強鹼完全解離，氫離子濃度就是濃度，直接取 log。
+  第三，弱酸用 Ka，氫離子濃度約等於根號 Ka 乘以濃度。
+  第四，緩衝溶液用 Henderson Hasselbalch 公式，pH 等於 pKa 加 log 鹽除以酸。
+  第五，當鹽和酸濃度相等時，pH 就等於 pKa，這是緩衝能力最強的點。
+  判題口訣：看到弱酸加它的鹽，就是緩衝，套 pKa 加 log。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+
+## 先抓大方向
+
+酸鹼題 99% 在問 **pH**。先判斷是「強的、弱的、還是緩衝」，再套對應公式就好，不用硬背一堆。
+
+<Memorize>
+$\text{pH} = -\log[\text{H}^+]$，且 <b>pH + pOH = 14</b>（25°C）。記住 $-\log(10^{-n}) = n$。
+</Memorize>
+
+## 三種情況、三招公式
+
+<KeyPoints items={[
+  "<b>強酸／強鹼</b>（HCl、NaOH…）：完全解離，<b>[H⁺] = 濃度</b>，直接取 log。",
+  "<b>弱酸</b>（CH₃COOH…）：用 Ka，<b>[H⁺] ≈ √(Ka·C)</b>；弱鹼同理用 Kb 算 [OH⁻]。",
+  "<b>緩衝溶液</b>（弱酸＋其鹽）：<b>pH = pKa + log([鹽]/[酸])</b>（Henderson–Hasselbalch）。",
+  "當 <b>[鹽] = [酸]</b> 時 <b>pH = pKa</b>，緩衝能力最強。",
+  "中和到當量點：強酸強鹼 pH=7；弱酸強鹼 > 7；強酸弱鹼 < 7。"
+]} />
+
+## 解題方向
+
+<SolveApproach steps={[
+  "先看成分：只有酸或只有鹼 → 強的直接取 log、弱的用 Ka/Kb。",
+  "看到「弱酸 + 該酸的鈉鹽」或「弱鹼 + 其鹽」→ 一定是<b>緩衝</b>，套 Henderson–Hasselbalch。",
+  "題目給 pKa 又給鹽/酸比例 → 幾乎都是要你算緩衝 pH。",
+  "滴定/中和題：先算誰過量，過量強酸鹼決定 pH；剛好當量點看鹽的水解。",
+  "別忘了單位與稀釋：混合後體積變大，濃度要重算。"
+]} />

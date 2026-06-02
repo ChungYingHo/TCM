@@ -73,7 +73,7 @@
 
 <div class="grid gap-4 lg:grid-cols-[20rem_1fr]">
   <!-- Filters -->
-  <aside class="lg:sticky lg:top-4 lg:self-start">
+  <aside class="lg:sticky lg:top-4 lg:max-h-[calc(100vh-2rem)] lg:self-start lg:overflow-y-auto custom-scrollbar">
     <div class="card border border-base-300 bg-base-100">
       <div class="card-body gap-4 p-4">
         <input
@@ -86,9 +86,12 @@
         <MultiSelect label="科目" options={SUBJECTS} bind:selected={subjects} format={(s) => SUBJECT_LABEL[s]} />
         <MultiSelect label="年份（民國）" options={facets.years} bind:selected={years} />
         {#if facets.tags.length}
-          <details class="collapse-arrow collapse border border-base-300 bg-base-200/40" open={tags.length > 0}>
-            <summary class="collapse-title text-sm font-semibold">趨勢標籤（{facets.tags.length}）</summary>
-            <div class="collapse-content flex flex-col gap-3">
+          <details class="rounded-lg border border-base-300 bg-base-200/40" open={tags.length > 0}>
+            <summary class="cursor-pointer list-none px-3 py-2 text-sm font-semibold">
+              趨勢標籤（{facets.tags.length}）
+              {#if tags.length}<span class="badge badge-primary badge-sm ml-1">{tags.length}</span>{/if}
+            </summary>
+            <div class="flex max-h-[50vh] flex-col gap-3 overflow-y-auto border-t border-base-300 p-3 custom-scrollbar">
               {#each tagsBySubject as group (group.subject)}
                 <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} />
               {/each}

@@ -1,41 +1,55 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-import { SUBJECT_LABEL } from '@/models/question'
+import { SUBJECTS, SUBJECT_LABEL } from '@/models/question'
 import type { Subject } from '@/models/question'
 
 export const prerender = false
 
 const notes = (await getCollection('notes')).filter((n) => !n.data.draft)
+const bySubject = SUBJECTS.map((s) => ({
+  subject: s,
+  notes: notes.filter((n) => n.data.subject === s),
+}))
 ---
 
 <Layout title="考點筆記 · 後中醫題庫">
   <h1 class="mb-1 text-2xl font-bold">考點知識筆記</h1>
-  <p class="mb-4 text-sm opacity-70">把高頻考點用白話講清楚，搭配互動小元件邊讀邊懂。</p>
+  <p class="mb-4 text-sm opacity-70">把高頻考點用白話＋條列講清楚，搭配必背重點、解題方向、語音複習與互動小元件。依科目分類。</p>
 
-  {
-    notes.length === 0 ? (
-      <div class="rounded-lg border border-dashed border-base-300 p-8 text-center opacity-70">
-        筆記陸續撰寫中…
-      </div>
-    ) : (
-      <div class="grid gap-3 sm:grid-cols-2">
-        {notes.map((n) => (
-          <a
-            href={`/notes/${n.id}`}
-            class="card border border-base-300 bg-base-100 transition hover:border-primary hover:shadow-md"
-          >
-            <div class="card-body gap-2 p-4">
-              <div class="flex items-center gap-2">
-                <span class="badge badge-primary badge-sm">{SUBJECT_LABEL[n.data.subject as Subject]}</span>
-                <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
-              </div>
-              <h2 class="card-title text-base">{n.data.title}</h2>
-              <p class="text-sm opacity-70">{n.data.summary}</p>
+  <div class="flex flex-col gap-6">
+    {
+      bySubject.map((group) => (
+        <section>
+          <h2 class="mb-2 flex items-center gap-2 text-lg font-bold">
+            <span class="badge badge-primary">{SUBJECT_LABEL[group.subject as Subject]}</span>
+            <span class="text-sm font-normal opacity-50">{group.notes.length} 篇</span>
+          </h2>
+          {group.notes.length === 0 ? (
+            <p class="rounded-lg border border-dashed border-base-300 p-4 text-sm opacity-60">
+              這科的筆記陸續撰寫中…
+            </p>
+          ) : (
+            <div class="grid gap-3 sm:grid-cols-2">
+              {group.notes.map((n) => (
+                <a
+                  href={`/notes/${n.id}`}
+                  class="card border border-base-300 bg-base-100 transition hover:border-primary hover:shadow-md"
+                >
+                  <div class="card-body gap-2 p-4">
+                    <div class="flex items-center gap-2">
+                      <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
+                      {n.data.audio && <span class="badge badge-ghost badge-sm">🎧 語音</span>}
+                    </div>
+                    <h3 class="card-title text-base">{n.data.title}</h3>
+                    <p class="text-sm opacity-70">{n.data.summary}</p>
+                  </div>
+                </a>
+              ))}
             </div>
-          </a>
-        ))}
-      </div>
-    )
-  }
+          )}
+        </section>
+      ))
+    }
+  </div>
 </Layout>

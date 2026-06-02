@@ -1,0 +1,44 @@
+---
+title: 孟德爾遺傳：比例怎麼算
+subject: biology
+tag: 遺傳學
+summary: 顯隱性、分離與自由組合律，單基因 3:1、雙基因 9:3:3:1，用棋盤格穩穩拿分。
+audio: >
+  孟德爾遺傳複習。第一，分離律：一對對偶基因在形成配子時會分開。
+  第二，自由組合律：不同對的基因獨立分配。
+  單基因雜交，雜合子自交後代表現型比例是三比一，基因型比例是一比二比一。
+  雙基因雜交，後代表現型比例是九比三比三比一。
+  測交是和隱性純合子交配，用來判斷顯性個體的基因型。
+  解題就畫棋盤格 Punnett square，把配子列出來組合。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+
+## 兩條定律先記牢
+
+<Memorize>
+<b>分離律</b>：成對的對偶基因在減數分裂形成配子時<b>彼此分開</b>。<br />
+<b>自由組合律</b>：不同對的基因<b>獨立</b>分配（前提是不連鎖）。
+</Memorize>
+
+## 必背比例
+
+<KeyPoints items={[
+  "單基因 Aa × Aa → 表現型 <b>3:1</b>、基因型 <b>1:2:1</b>。",
+  "雙基因 AaBb × AaBb → 表現型 <b>9:3:3:1</b>。",
+  "測交（× aabb）：後代比例直接反映被測個體產生的<b>配子比例</b>。",
+  "不完全顯性 → 出現中間型（如紅×白=粉），表現型比 = 基因型比 1:2:1。",
+  "共顯性 → 兩性狀同時表現（如 AB 血型）。"
+]} />
+
+## 解題方向
+
+<SolveApproach steps={[
+  "先定顯隱性與親代基因型（純合 AA/aa 或雜合 Aa）。",
+  "寫出每個親代能產生的<b>配子</b>種類與比例。",
+  "畫 <b>Punnett 棋盤格</b>組合，數出基因型，再對應表現型。",
+  "多基因獨立時，可用<b>機率相乘</b>取代大棋盤格（各基因分開算再乘）。",
+  "出現非 9:3:3:1 的怪比例 → 想到連鎖、上位、致死基因或不完全顯性。"
+]} />

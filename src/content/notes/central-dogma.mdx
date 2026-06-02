@@ -1,0 +1,46 @@
+---
+title: 中心法則：複製、轉錄、轉譯
+subject: biology
+tag: 分子遺傳
+summary: DNA→RNA→蛋白質三步驟，搞懂發生地點、酵素與方向，相關題就能秒答。
+audio: >
+  分子遺傳中心法則複習。資訊流向是 DNA 到 RNA 到蛋白質。
+  第一，複製：DNA 複製成 DNA，靠 DNA 聚合酶，是半保留複製。
+  第二，轉錄：DNA 轉成 mRNA，靠 RNA 聚合酶，發生在細胞核。
+  第三，轉譯：mRNA 轉成蛋白質，發生在核糖體，tRNA 帶胺基酸來對密碼子。
+  必記：合成方向都是五prime 到 three prime。RNA 用尿嘧啶 U 取代胸腺嘧啶 T。
+  三個鹼基一組叫密碼子，起始密碼子是 AUG，對應甲硫胺酸。
+draft: false
+---
+import Memorize from '@/components/notes/Memorize.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+
+## 大圖：資訊怎麼流
+
+$$\text{DNA} \xrightarrow{\text{轉錄}} \text{mRNA} \xrightarrow{\text{轉譯}} \text{蛋白質}$$
+
+考點幾乎都圍繞「每一步在哪裡發生、用什麼酵素、方向為何」。
+
+<Memorize>
+合成方向一律 <b>5′ → 3′</b>。RNA 以 <b>U（尿嘧啶）</b>取代 DNA 的 T。密碼子三個一組，起始 <b>AUG</b>（甲硫胺酸）。
+</Memorize>
+
+## 三步驟對照表
+
+<KeyPoints items={[
+  "<b>複製 (Replication)</b>：DNA→DNA，<b>DNA 聚合酶</b>，<b>半保留</b>複製；需引子，有領先/延遲股與岡崎片段。",
+  "<b>轉錄 (Transcription)</b>：DNA→mRNA，<b>RNA 聚合酶</b>，真核發生在<b>細胞核</b>；之後加 5′ 帽、poly-A 尾、剪接去除內含子。",
+  "<b>轉譯 (Translation)</b>：mRNA→蛋白質，發生在<b>核糖體</b>；<b>tRNA</b> 用反密碼子配對、帶來對應胺基酸。",
+  "鹼基配對：A–T(U)、G–C；模板股與產物互補且反平行。"
+]} />
+
+## 解題方向
+
+<SolveApproach steps={[
+  "先確認題目問哪一步（複製/轉錄/轉譯）→ 對應酵素與地點立刻定位。",
+  "給序列題：先看是 DNA 還是 RNA（有 U 就是 RNA），再依互補＋反平行寫出對股。",
+  "由 mRNA 推胺基酸：三個一組查密碼表，從 AUG 起算到終止密碼子（UAA/UAG/UGA）。",
+  "突變題：點突變看是否改密碼子（沉默/誤義/無義）；插入或刪除非 3 倍數 → 框移突變影響最大。",
+  "真核 vs 原核：真核有核膜、轉錄轉譯分開且有剪接；原核同時進行、無內含子。"
+]} />
