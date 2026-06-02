@@ -1,0 +1,45 @@
+---
+import '@/styles/tailwind.css'
+import NavBar from '@/components/common/NavBar.astro'
+
+interface Props {
+  title?: string
+  gated?: boolean
+}
+const { title = '後中醫考古題', gated = true } = Astro.props
+---
+
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title}</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+      integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+"
+      crossorigin="anonymous"
+    />
+    <script is:inline>
+      // theme: respect saved choice, else system
+      const saved = localStorage.getItem('tcm-theme')
+      if (saved) document.documentElement.dataset.theme = saved
+    </script>
+  </head>
+  <body class="min-h-screen bg-base-200 text-base-content">
+    {
+      gated ? (
+        <>
+          <NavBar />
+          <main class="mx-auto w-full max-w-5xl px-3 py-4 sm:px-4 sm:py-6">
+            <slot />
+          </main>
+        </>
+      ) : (
+        <slot />
+      )
+    }
+  </body>
+</html>

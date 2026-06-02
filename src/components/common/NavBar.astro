@@ -1,0 +1,39 @@
+---
+const path = Astro.url.pathname
+const links = [
+  { href: '/study', label: '刷題' },
+  { href: '/exam', label: '模擬考' },
+  { href: '/wrongbook', label: '錯題本' },
+  { href: '/notes', label: '考點筆記' },
+  { href: '/analytics', label: '分析' },
+]
+const isActive = (href: string) => path === href || path.startsWith(href + '/')
+---
+
+<header class="sticky top-0 z-30 border-b border-base-300 bg-base-100/85 backdrop-blur">
+  <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-2 py-2 sm:px-4">
+    <a href="/study" class="mr-2 shrink-0 font-black tracking-tight">後中醫<span class="text-primary">題庫</span></a>
+    <div class="flex flex-1 items-center gap-1">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class={`btn btn-sm shrink-0 ${isActive(l.href) ? 'btn-primary' : 'btn-ghost'}`}
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+    <button id="theme-toggle" class="btn btn-ghost btn-sm shrink-0" aria-label="切換深淺色">🌓</button>
+  </nav>
+</header>
+
+<script is:inline>
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const el = document.documentElement
+    const next = el.dataset.theme === 'dark' ? 'light' : 'dark'
+    el.dataset.theme = next
+    localStorage.setItem('tcm-theme', next)
+  })
+</script>

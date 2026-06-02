@@ -1,6 +1,27 @@
-# 學士後中醫考古題（中國醫 / 義守 / 慈濟）
+# 學士後中醫考古題系統（中國醫 / 義守 / 慈濟）
 
-三校學士後中醫入學考試的歷年試題、參考答案與釋疑公告，已整理為統一結構（全英文檔名，相容 iOS GitHub App）。
+三校學士後中醫入學考試的歷年（104–115）試題、參考答案與釋疑，整理成一個可針對性複習的網站：依學校/年份/科目/考點標籤刷題、模擬考計分、錯題本、考點趨勢與白話知識筆記。
+
+## 系統組成
+- **資料 pipeline**（[`pipeline/`](pipeline/README.md)）：PDF → `src/data/<school>.json` + `public/q/**` 題目截圖。正確答案只由答案卡 + 釋疑決定，不依賴 LLM。
+- **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門，無資料庫（資料為靜態 JSON）。
+- 詳細實作見 plan 檔與 [CLAUDE.md](CLAUDE.md)。
+
+## 本機開發
+```bash
+npm install
+SITE_PASSWORD=jeremy850916 AUTH_SECRET=<隨機字串> npm start   # http://localhost:4321
+npm test          # 單元測試 (Vitest)
+npm run test:e2e  # E2E (Playwright)
+npm run build     # 正式建置 (Vercel)
+```
+部署到 Vercel 時，在環境變數設定 `SITE_PASSWORD`、`AUTH_SECRET`。
+
+---
+
+## 原始資料整理
+
+三校歷年試題、參考答案與釋疑公告，已整理為統一結構（全英文檔名，相容 iOS GitHub App）。
 
 ## 資料夾結構
 

@@ -1,0 +1,41 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getCollection } from 'astro:content'
+import { SUBJECT_LABEL } from '@/models/question'
+import type { Subject } from '@/models/question'
+
+export const prerender = false
+
+const notes = (await getCollection('notes')).filter((n) => !n.data.draft)
+---
+
+<Layout title="考點筆記 · 後中醫題庫">
+  <h1 class="mb-1 text-2xl font-bold">考點知識筆記</h1>
+  <p class="mb-4 text-sm opacity-70">把高頻考點用白話講清楚，搭配互動小元件邊讀邊懂。</p>
+
+  {
+    notes.length === 0 ? (
+      <div class="rounded-lg border border-dashed border-base-300 p-8 text-center opacity-70">
+        筆記陸續撰寫中…
+      </div>
+    ) : (
+      <div class="grid gap-3 sm:grid-cols-2">
+        {notes.map((n) => (
+          <a
+            href={`/notes/${n.id}`}
+            class="card border border-base-300 bg-base-100 transition hover:border-primary hover:shadow-md"
+          >
+            <div class="card-body gap-2 p-4">
+              <div class="flex items-center gap-2">
+                <span class="badge badge-primary badge-sm">{SUBJECT_LABEL[n.data.subject as Subject]}</span>
+                <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
+              </div>
+              <h2 class="card-title text-base">{n.data.title}</h2>
+              <p class="text-sm opacity-70">{n.data.summary}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    )
+  }
+</Layout>

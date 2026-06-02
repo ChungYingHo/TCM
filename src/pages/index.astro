@@ -1,0 +1,16 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import NonsenseLanding from '@/components/auth/NonsenseLanding.astro'
+import { AUTH_COOKIE, verifyToken } from '@/utils/authToken'
+
+export const prerender = false
+
+// Already unlocked? skip the gate.
+if (verifyToken(Astro.cookies.get(AUTH_COOKIE)?.value)) {
+  return Astro.redirect('/study')
+}
+---
+
+<Layout title="進入" gated={false}>
+  <NonsenseLanding />
+</Layout>

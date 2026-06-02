@@ -1,0 +1,11 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import StudyApp from '@/components/study/StudyApp.svelte'
+
+export const prerender = false
+---
+
+<Layout title="刷題 · 後中醫題庫">
+  <h1 class="mb-4 text-2xl font-bold">學習模式</h1>
+  <StudyApp client:load />
+</Layout>

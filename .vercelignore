@@ -1,0 +1,12 @@
+# Source data & tooling are not needed for the deployed site
+# (the site consumes src/data/*.json and public/q/** which ARE included).
+CMU/
+ISU/
+TCU/
+_archive/
+pipeline/
+e2e/
+test-results/
+playwright-report/
+*.md
+debug_*.mjs

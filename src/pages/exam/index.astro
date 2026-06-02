@@ -1,0 +1,11 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ExamApp from '@/components/exam/ExamApp.svelte'
+
+export const prerender = false
+---
+
+<Layout title="模擬考 · 後中醫題庫">
+  <h1 class="mb-4 text-2xl font-bold">模擬考模式</h1>
+  <ExamApp client:load />
+</Layout>

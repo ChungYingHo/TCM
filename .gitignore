@@ -1,9 +1,27 @@
-# OS / editor cruft
+# dependencies
+node_modules/
+
+# build output
+dist/
+.astro/
+.vercel/
+
+# env (never commit the real password/secret)
+.env
+.env.local
+
+# test artifacts
+test-results/
+playwright-report/
+.playwright/
+
+# OS / editor
 Thumbs.db
 .DS_Store
 desktop.ini
-*~
 
-# Python
-__pycache__/
-*.pyc
+# pipeline intermediates (committed outputs are src/data + public/q only)
+pipeline/out/
+pipeline/out_spike/
+pipeline/__pycache__/
+**/__pycache__/

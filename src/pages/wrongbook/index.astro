@@ -1,0 +1,11 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import WrongBookApp from '@/components/wrongbook/WrongBookApp.svelte'
+
+export const prerender = false
+---
+
+<Layout title="錯題本 · 後中醫題庫">
+  <h1 class="mb-4 text-2xl font-bold">錯題本</h1>
+  <WrongBookApp client:load />
+</Layout>

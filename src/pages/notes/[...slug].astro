@@ -1,0 +1,25 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { getCollection, render } from 'astro:content'
+
+export const prerender = false
+
+const { slug } = Astro.params
+const notes = await getCollection('notes')
+const entry = notes.find((n) => n.id === slug)
+if (!entry) return Astro.redirect('/notes')
+
+const { Content } = await render(entry)
+const studyHref = `/study?tag=${encodeURIComponent(entry.data.tag)}`
+---
+
+<Layout title={`${entry.data.title} · 考點筆記`}>
+  <a href="/notes" class="btn btn-ghost btn-sm mb-3">← 所有筆記</a>
+  <article class="prose prose-sm max-w-none sm:prose-base prose-headings:scroll-mt-20">
+    <h1>{entry.data.title}</h1>
+    <Content />
+  </article>
+  <div class="mt-6 flex flex-wrap gap-2">
+    <a href={studyHref} class="btn btn-primary btn-sm">看「{entry.data.tag}」的所有考古題 →</a>
+  </div>
+</Layout>
