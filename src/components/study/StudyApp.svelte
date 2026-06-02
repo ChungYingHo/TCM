@@ -24,6 +24,7 @@
   let tags = $state<string[]>(initTag ? [initTag] : [])
   let term = $state('')
   let limit = $state(PAGE)
+  let compact = $state(false)
 
   let questions = $state<QuestionRecord[]>([])
   let loading = $state(false)
@@ -137,12 +138,19 @@
       <span>
         {#if loading}載入中…{:else}共 <b>{filtered.length}</b> 題{/if}
       </span>
-      {#if schools.length === 0}
-        <span class="text-warning">請至少選一間學校</span>
-      {:else}
-        <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答 · Enter 看答案</span>
-      {/if}
+      <div class="flex items-center gap-3">
+        {#if schools.length > 0}
+          <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答 · Enter 看答案</span>
+          <label class="flex cursor-pointer items-center gap-1.5 text-xs">
+            <input type="checkbox" class="toggle toggle-xs toggle-primary" bind:checked={compact} />
+            精簡
+          </label>
+        {/if}
+      </div>
     </div>
+    {#if schools.length === 0}
+      <div class="text-sm text-warning">請至少選一間學校</div>
+    {/if}
 
     {#if error}
       <div class="alert alert-error">{error}</div>
@@ -150,7 +158,7 @@
 
     {#each visible as q, i (q.id)}
       <div id={`sq-${i}`}>
-        <QuestionCard bind:this={cards[i]} question={q} mode="study" active={i === current} />
+        <QuestionCard bind:this={cards[i]} question={q} mode="study" active={i === current} {compact} />
       </div>
     {/each}
 

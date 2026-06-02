@@ -25,8 +25,11 @@
   const weak = $derived(weaknessClusters(byId, listWrong()).slice(0, 8))
   const cover = $derived(coverage(all, getAttempts()))
 
-  const TREND_MARK: Record<string, string> = { up: '▲ 升', down: '▼ 降', stable: '— 穩' }
-  const TREND_CLS: Record<string, string> = { up: 'text-error', down: 'text-success', stable: 'opacity-50' }
+  // 升 = 出題變多 → 該主攻(用品牌赭強調,非「壞」的紅);降/穩較淡
+  const TREND_MARK: Record<string, string> = { up: '▲ 升溫', down: '▼ 降溫', stable: '— 持平' }
+  const TREND_CLS: Record<string, string> = {
+    up: 'text-accent font-semibold', down: 'opacity-45', stable: 'opacity-40',
+  }
   const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0)
 </script>
 
@@ -43,6 +46,7 @@
   <section class="card border border-base-300 bg-base-100">
     <div class="card-body gap-3 p-4">
       <h2 class="text-lg font-bold">① 考點趨勢 <span class="text-sm font-normal opacity-60">歷年出題次數</span></h2>
+      <p class="text-xs opacity-60"><span class="font-semibold text-accent">升溫</span>＝近年出題變多，建議優先主攻。</p>
       <div class="grid gap-2">
         {#each trends as t (t.tag)}
           <div class="grid grid-cols-[1fr_auto_auto_auto] items-center gap-3 border-b border-base-200 py-1 text-sm last:border-0">

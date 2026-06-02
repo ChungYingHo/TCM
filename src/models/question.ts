@@ -25,11 +25,14 @@ export interface QuestionRecord {
   award_all: boolean
   concept_tags: string[]
   explanation: string | null
-  source_pdf: string
-  source_answer_pdf: string
   needs_review: boolean
   image_w: number
   image_h: number
+  // provenance / search-only — stripped from the API payload to keep it lean
+  ocr_text?: string | null
+  source_pdf?: string
+  source_answer_pdf?: string
+  errata_reason_image_url?: string | null
 }
 
 export interface SchoolShard {

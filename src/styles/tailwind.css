@@ -19,7 +19,7 @@
   --color-primary-content: oklch(0.98 0.012 178);
   --color-secondary: oklch(0.55 0.058 150);    /* 藥草綠 */
   --color-secondary-content: oklch(0.98 0.01 150);
-  --color-accent: oklch(0.60 0.105 52);        /* 赭(稀有暖調) */
+  --color-accent: oklch(0.55 0.11 50);         /* 赭(稍深以利文字對比 AA) */
   --color-accent-content: oklch(0.99 0.012 52);
   --color-neutral: oklch(0.34 0.02 188);
   --color-neutral-content: oklch(0.96 0.005 150);

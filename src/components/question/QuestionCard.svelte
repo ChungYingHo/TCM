@@ -14,6 +14,7 @@
     selected = null,
     revealed = false,
     active = false,
+    compact = false,
     onselect,
   }: {
     question: QuestionRecord
@@ -21,8 +22,12 @@
     selected?: OptionLetter | null
     revealed?: boolean
     active?: boolean
+    compact?: boolean
     onselect?: (letter: OptionLetter) => void
   } = $props()
+
+  let showImg = $state(false)
+  const imgVisible = $derived(!compact || showImg)
 
   const letters = $derived(
     question.options.length
@@ -85,7 +90,13 @@
       <span class="badge badge-outline">第 {question.question_number} 題</span>
     </header>
 
-    <QuestionImage {question} />
+    {#if imgVisible}
+      <QuestionImage {question} />
+    {:else}
+      <button type="button" class="btn btn-ghost btn-sm self-start" onclick={() => (showImg = true)}>
+        ▸ 看題目圖
+      </button>
+    {/if}
 
     <OptionButtons {question} selected={shownSelected} revealed={shownRevealed} onselect={handleSelect} />
 

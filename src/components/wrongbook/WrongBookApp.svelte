@@ -37,8 +37,9 @@
   </div>
 
   {#if !loading && items.length === 0}
-    <div class="rounded-lg border border-dashed border-base-300 p-8 text-center opacity-70">
-      錯題本還是空的。去刷題吧！答錯的題目會自動收進來。
+    <div class="flex flex-col items-center gap-3 rounded-box border border-dashed border-base-300 p-8 text-center">
+      <p class="opacity-70">錯題本還是空的。答錯的題目會自動收進來。</p>
+      <a href="/study" class="btn btn-primary btn-sm">去刷題 →</a>
     </div>
   {/if}
 
