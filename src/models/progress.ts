@@ -15,10 +15,20 @@ export interface ExamResult {
   perQuestion: Record<string, boolean> // question id -> correct?
 }
 
+/** A free-text personal note, filed under a concept tag, optionally tied to a question. */
+export interface PersonalNote {
+  id: string
+  tag: string          // concept tag → shows in that note's 我的筆記 section
+  questionId: string   // source question ('' if written elsewhere)
+  text: string
+  ts: number
+}
+
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
   wrongbook: Record<string, WrongEntry>
   progress: Record<string, Attempt>
+  notes: PersonalNote[]
   updatedAt: number
 }
 

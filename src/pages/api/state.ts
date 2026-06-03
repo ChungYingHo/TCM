@@ -6,7 +6,7 @@ export const prerender = false
 
 // Single-user personal tool → one key holds the whole (tiny) state document.
 const KEY = 'tcm:state:v1'
-const EMPTY: SyncState = { wrongbook: {}, progress: {}, updatedAt: 0 }
+const EMPTY: SyncState = { wrongbook: {}, progress: {}, notes: [], updatedAt: 0 }
 
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
@@ -31,6 +31,7 @@ export const PUT: APIRoute = async ({ request }) => {
       state = {
         wrongbook: st.wrongbook ?? {},
         progress: st.progress ?? {},
+        notes: Array.isArray(st.notes) ? st.notes : [],
         updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
       }
     }

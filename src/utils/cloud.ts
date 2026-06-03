@@ -7,14 +7,16 @@
 import type { SyncState } from '@/models/progress'
 import { dumpWrong, replaceWrong } from '@/utils/wrongBook'
 import { getAttempts, replaceProgress } from '@/utils/progress'
+import { dumpNotes, replaceNotes } from '@/utils/notes'
 
 export function localSnapshot(): SyncState {
-  return { wrongbook: dumpWrong(), progress: getAttempts(), updatedAt: Date.now() }
+  return { wrongbook: dumpWrong(), progress: getAttempts(), notes: dumpNotes(), updatedAt: Date.now() }
 }
 
 function applyServer(s: SyncState): void {
   replaceWrong(s.wrongbook ?? {})
   replaceProgress(s.progress ?? {})
+  replaceNotes(s.notes ?? [])
   if (typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:cloudloaded'))
 }
 

@@ -5,6 +5,7 @@ import { SUBJECT_LABEL } from '@/models/question'
 import type { Subject } from '@/models/question'
 import AudioReader from '@/components/notes/AudioReader.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import PersonalNotes from '@/components/notes/PersonalNotes.svelte'
 
 export const prerender = false
 
@@ -30,6 +31,9 @@ const { Content } = await render(entry)
   <article class="prose prose-sm mt-2 max-w-none sm:prose-base prose-headings:scroll-mt-20">
     <Content />
   </article>
+
+  <hr class="my-6 border-base-300" />
+  <PersonalNotes tag={entry.data.tag} client:load />
 
   <hr class="my-6 border-base-300" />
   <h2 class="mb-1 text-lg font-bold">經典考古題</h2>
