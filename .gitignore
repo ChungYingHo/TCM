@@ -20,6 +20,9 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
+# local agent / editor session files — never commit
+.claude/
+
 # pipeline intermediates (committed outputs are src/data + public/q only)
 pipeline/out/
 pipeline/out_spike/

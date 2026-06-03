@@ -8,6 +8,13 @@ export const prerender = false
 const KEY = 'tcm:state:v1'
 const EMPTY: SyncState = { wrongbook: {}, progress: {}, notes: [], updatedAt: 0 }
 
+const cleanStreak = (s: unknown): SyncState['streak'] => {
+  if (!s || typeof s !== 'object') return undefined
+  const { lastDay, count, best } = s as Record<string, unknown>
+  if (typeof lastDay !== 'string') return undefined
+  return { lastDay, count: Number(count) || 0, best: Number(best) || 0 }
+}
+
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
 
@@ -32,6 +39,7 @@ export const PUT: APIRoute = async ({ request }) => {
         wrongbook: st.wrongbook ?? {},
         progress: st.progress ?? {},
         notes: Array.isArray(st.notes) ? st.notes : [],
+        streak: cleanStreak(st.streak),
         updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
       }
     }

@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ReviewApp from '@/components/review/ReviewApp.svelte'
+
+export const prerender = false
+---
+
+<Layout title="今日複習 · 後中醫題庫">
+  <ReviewApp client:load />
+</Layout>

@@ -85,6 +85,18 @@ a.card:hover, .card-hover:hover {
 /* 所有 base-300 框線一律改為更柔的髮絲色，硬框感消失 */
 .border-base-300 { border-color: var(--hairline) !important; }
 
+/* 面板（非 daisyUI .card 的自訂卡片，如儀表板格）共用同一套柔陰影語彙 */
+.shadow-soft { box-shadow: var(--shadow-soft); }
+.panel-hover {
+  transition: box-shadow 0.28s var(--ease-out), transform 0.28s var(--ease-out),
+    border-color 0.28s var(--ease-out);
+}
+.panel-hover:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--color-primary) 30%, var(--hairline));
+}
+
 /* 徽章：低彩度、無重框，當標籤而非按鈕 */
 .badge { border: none; font-weight: 600; letter-spacing: 0.02em; }
 .badge-ghost {

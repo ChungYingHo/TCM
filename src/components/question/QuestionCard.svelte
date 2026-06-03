@@ -19,6 +19,7 @@
     active = false,
     compact = false,
     onselect,
+    onanswer,
   }: {
     question: QuestionRecord
     mode?: 'study' | 'exam'
@@ -27,6 +28,7 @@
     active?: boolean
     compact?: boolean
     onselect?: (letter: OptionLetter) => void
+    onanswer?: (correct: boolean) => void
   } = $props()
 
   let showImg = $state(false)
@@ -75,6 +77,7 @@
       recordWrong(question.id, [letter], Date.now())
       inBook = true
     }
+    onanswer?.(ok)
   }
 
   function toggleBook() {

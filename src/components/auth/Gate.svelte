@@ -15,7 +15,7 @@
         body: JSON.stringify({ password }),
       })
       if (res.ok) {
-        window.location.href = '/study'
+        window.location.href = '/home'
       } else {
         error = true
       }

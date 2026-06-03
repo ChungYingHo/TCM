@@ -5,37 +5,75 @@
   import { scoreExam, isChoiceCorrect } from '@/utils/score'
   import { recordWrong } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
+  import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
 
   let school = $state<School>('ISU')
   let year = $state<number | null>(null)
   let subject = $state<Subject>('chemistry')
+  let minutes = $state(0) // 0 = 不限時
   let pool = $state<QuestionRecord[]>([])
   let loading = $state(true)
+
+  const TIME_PRESETS = [0, 50, 60, 80, 90, 100, 120]
 
   let stage = $state<'setup' | 'running' | 'done'>('setup')
   let paper = $state<QuestionRecord[]>([])
   let answers = $state<Record<string, OptionLetter | null>>({})
+  let timedOut = $state(false)
+
+  // countdown — only armed when minutes > 0
+  let endAt = $state(0)
+  let nowTs = $state(0)
+  let ticker: ReturnType<typeof setInterval> | null = null
+
+  function stopTicker() {
+    if (ticker) { clearInterval(ticker); ticker = null }
+  }
+  function startTicker() {
+    stopTicker()
+    nowTs = Date.now()
+    ticker = setInterval(() => {
+      nowTs = Date.now()
+      if (nowTs >= endAt) submit(true)
+    }, 1000)
+  }
 
   $effect(() => {
     const s = school
     loading = true
     loadSchool(s).then((qs) => { pool = qs }).finally(() => { loading = false })
   })
+  $effect(() => () => stopTicker()) // clear timer on unmount
 
   const facets = $derived(deriveFacets(pool))
+
+  const secondsLeft = $derived(
+    minutes > 0 && stage === 'running' ? Math.max(0, Math.round((endAt - nowTs) / 1000)) : null,
+  )
+  const timeLabel = $derived(
+    secondsLeft == null
+      ? null
+      : `${String(Math.floor(secondsLeft / 60)).padStart(2, '0')}:${String(secondsLeft % 60).padStart(2, '0')}`,
+  )
 
   function start() {
     paper = pool
       .filter((q) => (year ? q.year === year : true) && q.subject === subject)
       .sort((a, b) => a.question_number - b.question_number)
     answers = {}
-    stage = paper.length ? 'running' : 'setup'
+    timedOut = false
+    current = 0
+    if (!paper.length) { stage = 'setup'; return }
+    stage = 'running'
+    if (minutes > 0) { endAt = Date.now() + minutes * 60_000; startTicker() }
   }
 
   const result = $derived(scoreExam(paper, answers))
 
-  function submit() {
+  function submit(auto = false) {
+    stopTicker()
+    timedOut = auto === true
     const now = Date.now()
     for (const q of paper) {
       const c = answers[q.id] ?? null
@@ -46,6 +84,19 @@
     stage = 'done'
     if (typeof window !== 'undefined') window.scrollTo({ top: 0, behavior: 'smooth' })
   }
+
+  // wrong questions → weak concepts, to steer the review after submit
+  const wrongQs = $derived(
+    stage === 'done' ? paper.filter((q) => !isChoiceCorrect(q, answers[q.id] ?? null)) : [],
+  )
+  const weakTags = $derived.by(() => {
+    const m = new Map<string, number>()
+    for (const q of wrongQs) {
+      const t = primaryTag(q.concept_tags)
+      if (t) m.set(t, (m.get(t) ?? 0) + 1)
+    }
+    return [...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8)
+  })
 
   // keyboard drilling during the exam: J/K move, 1–5 answer current
   let current = $state(0)
@@ -99,6 +150,13 @@
           {#each SUBJECTS as s (s)}<option value={s}>{SUBJECT_LABEL[s]}</option>{/each}
         </select>
       </label>
+      <label class="form-control">
+        <span class="label-text mb-1">作答時間</span>
+        <select class="select select-bordered" bind:value={minutes}>
+          {#each TIME_PRESETS as m (m)}<option value={m}>{m === 0 ? '不限時' : `${m} 分鐘`}</option>{/each}
+        </select>
+        <span class="mt-1 text-xs text-base-content/45">時間到會自動交卷計分。</span>
+      </label>
       <button class="btn btn-primary" disabled={loading} onclick={start}>開始作答</button>
     </div>
   </div>
@@ -107,7 +165,16 @@
     <div class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-lg bg-base-100/90 p-2 backdrop-blur">
       <span class="text-sm opacity-80">已作答 {Object.values(answers).filter(Boolean).length} / {paper.length}</span>
       <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答</span>
-      <button class="btn btn-sm btn-primary" onclick={submit}>交卷計分</button>
+      <div class="flex items-center gap-2">
+        {#if timeLabel}
+          <span
+            class={`badge badge-lg font-bold tabular-nums ${secondsLeft != null && secondsLeft <= 60 ? 'badge-error' : secondsLeft != null && secondsLeft <= 300 ? 'badge-warning' : 'badge-ghost'}`}
+            role="timer"
+            aria-live="off"
+          >⏱ {timeLabel}</span>
+        {/if}
+        <button class="btn btn-sm btn-primary" onclick={() => submit()}>交卷計分</button>
+      </div>
     </div>
     {#each paper as q, i (q.id)}
       <div id={`eq-${i}`}>
@@ -121,18 +188,50 @@
         />
       </div>
     {/each}
-    <button class="btn btn-primary" onclick={submit}>交卷計分</button>
+    <button class="btn btn-primary" onclick={() => submit()}>交卷計分</button>
   </div>
 {:else}
   <div class="flex flex-col gap-4">
     <div class="card border border-base-300 bg-base-100">
       <div class="card-body items-center text-center">
         <h2 class="card-title">成績</h2>
+        {#if timedOut}
+          <span class="badge badge-warning badge-sm">時間到・自動交卷</span>
+        {/if}
         <div class="text-5xl font-black text-primary">{result.correct} / {result.total}</div>
         <p class="opacity-70">作答 {result.answered} 題・正確率 {Math.round((result.correct / Math.max(1, result.total)) * 100)}%</p>
         <button class="btn btn-outline btn-sm" onclick={() => (stage = 'setup')}>再考一次</button>
       </div>
     </div>
+
+    {#if wrongQs.length}
+      <div class="rounded-box border border-warning/30 bg-warning/10 p-5">
+        <p class="font-bold">交卷後的複習建議</p>
+        <p class="mt-1 text-sm text-base-content/70">
+          這次有 <span class="font-semibold">{wrongQs.length}</span> 題答錯，已自動收進錯題本並排入「今日複習」。建議先讀以下考點筆記，再到複習佇列重練。
+        </p>
+        {#if weakTags.length}
+          <div class="mt-3 flex flex-wrap gap-2">
+            {#each weakTags as [tag, n] (tag)}
+              {@const slug = tagSlug(tag)}
+              <a
+                href={slug ? `/notes/${slug}` : '/notes'}
+                class="inline-flex items-center gap-1.5 rounded-full border border-warning/30 bg-base-100 px-3 py-1.5 text-sm font-medium transition-colors hover:bg-warning/15"
+              >
+                {tagShort(tag)}
+                <span class="rounded-full bg-warning/20 px-1.5 text-xs tabular-nums text-warning-content/80">{n}</span>
+              </a>
+            {/each}
+          </div>
+        {/if}
+        <a href="/review" class="btn btn-primary btn-sm mt-4">前往今日複習 →</a>
+      </div>
+    {:else}
+      <div class="rounded-box border border-success/30 bg-success/10 p-5 text-center">
+        <p class="font-bold text-success">🎉 全部答對，這份考卷已完全掌握！</p>
+      </div>
+    {/if}
+
     {#each paper as q (q.id)}
       <QuestionCard question={q} mode="exam" selected={answers[q.id] ?? null} revealed={true} />
     {/each}

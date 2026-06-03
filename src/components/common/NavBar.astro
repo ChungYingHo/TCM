@@ -1,6 +1,8 @@
 ---
 const path = Astro.url.pathname
 const links = [
+  { href: '/home', label: '首頁' },
+  { href: '/review', label: '今日複習' },
   { href: '/study', label: '刷題' },
   { href: '/exam', label: '模擬考' },
   { href: '/wrongbook', label: '錯題本' },
@@ -13,7 +15,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
 
 <header class="sticky top-0 z-30 border-b border-base-300/70 bg-base-100/75 backdrop-blur-xl">
   <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-3 py-3 sm:px-5 custom-scrollbar">
-    <a href="/study" class="mr-3 flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight">
+    <a href="/home" class="mr-3 flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight">
       <span class="grid h-7 w-7 place-items-center rounded-xl bg-primary/12 text-sm text-primary">醫</span>
       後中醫<span class="text-primary">題庫</span>
     </a>

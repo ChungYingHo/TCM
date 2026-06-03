@@ -7,7 +7,7 @@ export const prerender = false
 
 // Already unlocked? skip the gate.
 if (verifyToken(Astro.cookies.get(AUTH_COOKIE)?.value)) {
-  return Astro.redirect('/study')
+  return Astro.redirect('/home')
 }
 ---
 

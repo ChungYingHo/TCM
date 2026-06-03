@@ -1,11 +1,14 @@
 import type { OptionLetter } from '@/models/question'
 
-/** A wrong-answer-book entry, persisted in localStorage. */
+/** A wrong-answer-book entry, persisted in localStorage. Doubles as the spaced-
+ *  repetition card: `due` is when it should next be reviewed, `box` the Leitner level. */
 export interface WrongEntry {
   id: string                 // question id
   wrongCount: number
   lastWrongAt: number        // epoch ms
   lastChoice: OptionLetter[] // most recent wrong choice
+  due?: number               // epoch ms — next review due (defaults to lastWrongAt)
+  box?: number               // Leitner box (1 = soonest)
 }
 
 export interface ExamResult {
@@ -24,11 +27,19 @@ export interface PersonalNote {
   ts: number
 }
 
+/** Daily study streak (consecutive active days). */
+export interface Streak {
+  lastDay: string // 'YYYY-MM-DD' (local)
+  count: number
+  best: number
+}
+
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
   wrongbook: Record<string, WrongEntry>
   progress: Record<string, Attempt>
   notes: PersonalNote[]
+  streak?: Streak
   updatedAt: number
 }
 
