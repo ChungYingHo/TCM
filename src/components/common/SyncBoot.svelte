@@ -1,6 +1,7 @@
 <script lang="ts">
-  // Headless: starts local-first cloud sync on every gated page load.
+  // Headless: load the cloud-stored wrong-book/progress on every gated page,
+  // then save changes back. localStorage is the local cache; the DB is durable.
   import { onMount } from 'svelte'
-  import { initSync } from '@/utils/sync'
-  onMount(() => initSync())
+  import { bootCloud } from '@/utils/cloud'
+  onMount(() => bootCloud())
 </script>

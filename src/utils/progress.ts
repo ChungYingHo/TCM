@@ -2,11 +2,8 @@
 // Powers coverage + mastery analytics. Separate from the wrong-book (which is
 // the user's curated review list).
 
-export interface Attempt {
-  attempts: number
-  correct: number // times answered correctly
-  lastTs: number
-}
+import type { Attempt } from '@/models/progress'
+export type { Attempt }
 
 type Store = Record<string, Attempt>
 

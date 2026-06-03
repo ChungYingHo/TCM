@@ -1,7 +1,28 @@
 import type { APIRoute } from 'astro'
+import { timingSafeEqual } from 'node:crypto'
 import { AUTH_COOKIE, makeToken, passwordMatches } from '@/utils/authToken'
+import { kvGet } from '@/utils/kv'
 
 export const prerender = false
+
+function eq(a: string, b: string): boolean {
+  const x = Buffer.from(a)
+  const y = Buffer.from(b)
+  return x.length === y.length && timingSafeEqual(x, y)
+}
+
+// Password lives in the DB if set (change it without redeploying); otherwise
+// fall back to the SITE_PASSWORD env / built-in default.
+async function checkPassword(password: string): Promise<boolean> {
+  if (!password) return false
+  try {
+    const dbPw = await kvGet('tcm:password')
+    if (dbPw) return eq(password, dbPw)
+  } catch {
+    /* store unavailable → fall through to env/default */
+  }
+  return passwordMatches(password)
+}
 
 export const POST: APIRoute = async ({ request, cookies }) => {
   let password = ''
@@ -12,7 +33,7 @@ export const POST: APIRoute = async ({ request, cookies }) => {
     password = ''
   }
 
-  if (!passwordMatches(password)) {
+  if (!(await checkPassword(password))) {
     return new Response(JSON.stringify({ ok: false }), {
       status: 401,
       headers: { 'content-type': 'application/json' },

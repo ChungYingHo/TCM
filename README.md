@@ -4,7 +4,7 @@
 
 ## 系統組成
 - **資料 pipeline**（[`pipeline/`](pipeline/README.md)）：PDF → `src/data/<school>.json` + `public/q/**` 題目截圖。正確答案只由答案卡 + 釋疑決定，不依賴 LLM。
-- **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門。**題庫為靜態 JSON、無資料庫**；使用者狀態（錯題本／作答紀錄）以 localStorage 為主（local-first），並可**選用** Vercel KV／Upstash Redis 做跨裝置自動同步＋雲端備份（見 `.env.example`，未設定時自動降級為純本機；錯題本頁另有手動匯出／匯入備份）。
+- **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門。**題庫為靜態 JSON**；使用者狀態（錯題本／作答紀錄）存在 **Vercel 上的資料庫（Upstash Redis）**，localStorage 僅作本機快取（載入時讀 DB、變動時寫回，last-write-wins）。未設定 DB 時自動降級為純本機。進站密碼可存在 DB 的 `tcm:password`（改密碼免重新部署），詳見 `.env.example`。
 - 詳細實作見 plan 檔與 [CLAUDE.md](CLAUDE.md)。
 
 ## 本機開發

@@ -14,3 +14,16 @@ export interface ExamResult {
   answered: number
   perQuestion: Record<string, boolean> // question id -> correct?
 }
+
+/** The whole persisted user document (stored in the Vercel DB). */
+export interface SyncState {
+  wrongbook: Record<string, WrongEntry>
+  progress: Record<string, Attempt>
+  updatedAt: number
+}
+
+export interface Attempt {
+  attempts: number
+  correct: number
+  lastTs: number
+}
