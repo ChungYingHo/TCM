@@ -3,67 +3,131 @@
   themes: false;
 }
 
-/* ── 沉穩專業：黛青／藥草 OKLCH 主題 ─────────────────────────────
-   中性向品牌 hue(~178 teal-green)微染;主色為沉穩黛青,赭色作稀有暖調強調。 */
+/* ── 黛青／藥草 OKLCH 主題（精煉版：保留中醫氣質，提升呼吸感與當代感）──────── */
 @plugin "daisyui/theme" {
   name: "tcm";
   default: true;
   color-scheme: light;
 
-  --color-base-100: oklch(0.992 0.004 150);   /* 暖白紙面 */
-  --color-base-200: oklch(0.969 0.006 152);
-  --color-base-300: oklch(0.928 0.008 155);
-  --color-base-content: oklch(0.30 0.022 185); /* 墨青,非純黑 */
+  --color-base-100: oklch(0.994 0.003 150);   /* 紙白（卡片面） */
+  --color-base-200: oklch(0.975 0.005 152);   /* 頁面底 */
+  --color-base-300: oklch(0.945 0.006 155);   /* 柔和分隔線（已調亮，框線不再搶眼） */
+  --color-base-content: oklch(0.30 0.022 188); /* 墨青，非純黑 */
 
-  --color-primary: oklch(0.50 0.075 178);      /* 黛青 */
-  --color-primary-content: oklch(0.98 0.012 178);
-  --color-secondary: oklch(0.55 0.058 150);    /* 藥草綠 */
-  --color-secondary-content: oklch(0.98 0.01 150);
-  --color-accent: oklch(0.55 0.11 50);         /* 赭(稍深以利文字對比 AA) */
+  --color-primary: oklch(0.49 0.085 184);      /* 黛青（略深、略增彩度，更有意圖） */
+  --color-primary-content: oklch(0.99 0.01 184);
+  --color-secondary: oklch(0.56 0.062 150);    /* 藥草綠 */
+  --color-secondary-content: oklch(0.99 0.01 150);
+  --color-accent: oklch(0.58 0.115 52);        /* 赭（稀有暖調強調） */
   --color-accent-content: oklch(0.99 0.012 52);
-  --color-neutral: oklch(0.34 0.02 188);
-  --color-neutral-content: oklch(0.96 0.005 150);
+  --color-neutral: oklch(0.32 0.02 190);
+  --color-neutral-content: oklch(0.97 0.005 150);
 
-  --color-info: oklch(0.58 0.065 232);
-  --color-info-content: oklch(0.98 0.01 232);
-  --color-success: oklch(0.56 0.082 152);
+  --color-info: oklch(0.60 0.07 232);
+  --color-info-content: oklch(0.99 0.01 232);
+  --color-success: oklch(0.57 0.085 152);
   --color-success-content: oklch(0.99 0.01 152);
-  --color-warning: oklch(0.68 0.10 72);
+  --color-warning: oklch(0.70 0.105 72);
   --color-warning-content: oklch(0.28 0.03 72);
-  --color-error: oklch(0.56 0.135 25);
+  --color-error: oklch(0.57 0.14 25);
   --color-error-content: oklch(0.99 0.01 25);
 
-  --radius-selector: 0.375rem;
-  --radius-field: 0.375rem;
-  --radius-box: 0.625rem;
+  /* 較大圓角＝當代感；扁平 depth，陰影改用下方自訂柔陰影 */
+  --radius-selector: 0.75rem;
+  --radius-field: 0.7rem;
+  --radius-box: 1.1rem;
   --border: 1px;
   --depth: 0;
 }
 
-/* ── 字體:宋體標題給「典籍/參考書」權威感,系統黑體作介面內文 ── */
+/* 柔陰影（取代硬框線，給層次與呼吸感）+ 統一過場曲線 */
 :root {
   --font-display: "Noto Serif TC", "Songti TC", "Source Han Serif TC", serif;
   --font-body: "Noto Sans TC", system-ui, -apple-system, "PingFang TC",
     "Microsoft JhengHei", "Segoe UI", sans-serif;
+  --shadow-soft: 0 1px 2px color-mix(in oklab, var(--color-base-content) 5%, transparent),
+                 0 10px 24px -16px color-mix(in oklab, var(--color-base-content) 20%, transparent);
+  --shadow-lift: 0 2px 6px color-mix(in oklab, var(--color-base-content) 7%, transparent),
+                 0 18px 40px -20px color-mix(in oklab, var(--color-base-content) 30%, transparent);
+  --hairline: color-mix(in oklab, var(--color-base-content) 9%, transparent);
+  --ease-out: cubic-bezier(0.22, 0.8, 0.28, 1);
 }
 
 html, body {
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  letter-spacing: 0.005em;
 }
+body { line-height: 1.7; }
 
+/* 標題走宋體，字距與行高更舒展 */
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
-  letter-spacing: 0.01em;
+  letter-spacing: 0.015em;
+  line-height: 1.35;
 }
 
-/* 讓筆記正文標題也走宋體 */
-.prose :is(h1, h2, h3, h4) {
-  font-family: var(--font-display);
+/* ── 設計系統：卡片/分隔/徽章/輸入/焦點，整體更柔、更有留白 ───────────── */
+/* 卡片：淡髮絲框 + 柔陰影 + 大圓角；hover 微浮起 */
+.card {
+  border-color: var(--hairline);
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.28s var(--ease-out), transform 0.28s var(--ease-out),
+    border-color 0.28s var(--ease-out);
+}
+a.card:hover, .card-hover:hover {
+  box-shadow: var(--shadow-lift);
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--color-primary) 30%, var(--hairline));
 }
 
-/* ── 夜讀(暖白低亮)模式:不是深色,而是降亮護眼,適合睡前手機 ── */
+/* 所有 base-300 框線一律改為更柔的髮絲色，硬框感消失 */
+.border-base-300 { border-color: var(--hairline) !important; }
+
+/* 徽章：低彩度、無重框，當標籤而非按鈕 */
+.badge { border: none; font-weight: 600; letter-spacing: 0.02em; }
+.badge-ghost {
+  background: color-mix(in oklab, var(--color-base-content) 6%, transparent);
+  color: color-mix(in oklab, var(--color-base-content) 78%, transparent);
+}
+.badge-outline {
+  background: color-mix(in oklab, var(--color-base-content) 5%, transparent);
+  color: color-mix(in oklab, var(--color-base-content) 70%, transparent);
+}
+.badge-neutral { background: color-mix(in oklab, var(--color-primary) 14%, transparent); color: var(--color-primary); }
+
+/* 按鈕：去重邊、柔過場 */
+.btn { font-weight: 600; letter-spacing: 0.02em; transition: all 0.2s var(--ease-out); }
+.btn-ghost:hover { background: color-mix(in oklab, var(--color-base-content) 6%, transparent); }
+.btn-outline { border-color: var(--hairline); }
+
+/* 輸入框：柔底色取代硬框，聚焦才現主色環 */
+.input, .select, .textarea {
+  border-color: var(--hairline);
+  background: color-mix(in oklab, var(--color-base-content) 3%, var(--color-base-100));
+}
+.input:focus, .select:focus, .textarea:focus,
+.input:focus-within, .select:focus-within {
+  outline: none;
+  border-color: color-mix(in oklab, var(--color-primary) 55%, transparent);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 16%, transparent);
+}
+
+/* 文字選取色 */
+::selection { background: color-mix(in oklab, var(--color-primary) 22%, transparent); }
+
+/* 筆記正文：標題宋體、行距舒展、區塊間留白 */
+.prose { line-height: 1.8; }
+.prose :is(h1, h2, h3, h4) { font-family: var(--font-display); }
+.prose h2 { margin-top: 2em; margin-bottom: 0.7em; letter-spacing: 0.02em; }
+.prose table { font-size: 0.92em; border-collapse: separate; border-spacing: 0; overflow: hidden;
+  border-radius: 0.85rem; box-shadow: 0 0 0 1px var(--hairline); }
+.prose thead th { background: color-mix(in oklab, var(--color-primary) 8%, var(--color-base-100));
+  font-weight: 700; }
+.prose :is(th, td) { border-color: var(--hairline); padding: 0.5rem 0.75rem; }
+
+/* ── 夜讀（暖白低亮）模式：降亮護眼，適合睡前手機 ─────────────────────── */
 [data-reading="dim"] {
   --color-base-100: oklch(0.95 0.01 80);
   --color-base-200: oklch(0.915 0.014 78);
@@ -84,25 +148,23 @@ h1, h2, h3, h4, .font-display {
   from { opacity: 0; transform: translateY(12px); }
   to { opacity: 1; transform: translateY(0); }
 }
-.animate-fade-in-up { animation: fade-in-up 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.animate-fade-in-up { animation: fade-in-up 0.45s var(--ease-out) both; }
 
 .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
 .custom-scrollbar::-webkit-scrollbar-thumb { background: color-mix(in oklab, currentColor 18%, transparent); border-radius: 6px; }
 
-/* ── 公式高識別度:讓數學式從中文內文中「跳出來」,且手機可橫向捲動 ── */
-/* 區塊公式 $$…$$ → 框線＋淡青底色的卡片,絕不與旁邊的字混淆 */
+/* ── 公式高識別度：數學式從中文內文「跳出來」，手機可橫向捲動 ─────────── */
 .prose .katex-display {
-  margin: 1rem 0;
-  padding: 0.75rem 1rem;
-  border: 1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-base-300));
+  margin: 1.1rem 0;
+  padding: 0.85rem 1.1rem;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 22%, transparent);
   border-left: 3px solid var(--color-primary);
   border-radius: var(--radius-box);
-  background: color-mix(in oklab, var(--color-primary) 7%, var(--color-base-100));
+  background: color-mix(in oklab, var(--color-primary) 6%, var(--color-base-100));
   overflow-x: auto;
   overflow-y: hidden;
 }
 .prose .katex-display > .katex { font-size: 1.18em; }
-/* 行內公式 $…$ → 微染主色、稍重,和中文字區隔 */
 .prose .katex {
   font-size: 1.05em;
   color: color-mix(in oklab, var(--color-primary) 60%, var(--color-base-content));

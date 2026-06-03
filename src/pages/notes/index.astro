@@ -18,36 +18,36 @@ const bySubject = SUBJECTS.map((s) => ({
 ---
 
 <Layout title="考點筆記 · 後中醫題庫">
-  <h1 class="mb-1 text-2xl font-bold">考點知識筆記</h1>
-  <p class="mb-4 text-sm opacity-70">把每個考點當「久沒碰的初學者」從頭講清楚：觀念速複習＋必背＋解題方向＋例題詳解＋互動元件。每科<b>依知識先後順序</b>排列，照著編號讀就是一條學習路徑。</p>
+  <h1 class="mb-2 text-3xl font-bold tracking-tight">考點知識筆記</h1>
+  <p class="mb-8 max-w-2xl text-sm leading-relaxed text-base-content/60">把每個考點當「久沒碰的初學者」從頭講清楚：觀念速複習＋必背＋解題方向＋例題詳解＋互動元件。每科<b class="font-semibold text-base-content/80">依知識先後順序</b>排列，照著編號讀就是一條學習路徑。</p>
 
-  <div class="flex flex-col gap-6">
+  <div class="flex flex-col gap-12">
     {
       bySubject.map((group) => (
         <section>
-          <h2 class="mb-2 flex items-center gap-2 text-lg font-bold">
-            <span class="badge badge-primary">{SUBJECT_LABEL[group.subject as Subject]}</span>
-            <span class="text-sm font-normal opacity-50">{group.notes.length} 篇</span>
+          <h2 class="mb-4 flex items-baseline gap-2.5">
+            <span class="text-xl font-bold tracking-tight">{SUBJECT_LABEL[group.subject as Subject]}</span>
+            <span class="h-1.5 w-1.5 rounded-full bg-primary/40" />
+            <span class="text-sm font-normal text-base-content/45">{group.notes.length} 篇</span>
           </h2>
           {group.notes.length === 0 ? (
-            <p class="rounded-lg border border-dashed border-base-300 p-4 text-sm opacity-60">
+            <p class="rounded-box border border-dashed border-base-300 p-5 text-sm text-base-content/50">
               這科的筆記陸續撰寫中…
             </p>
           ) : (
-            <div class="grid gap-3 sm:grid-cols-2">
+            <div class="grid gap-4 sm:grid-cols-2">
               {group.notes.map((n, i) => (
-                <a
-                  href={`/notes/${n.id}`}
-                  class="card border border-base-300 bg-base-100 transition hover:border-primary hover:shadow-md"
-                >
-                  <div class="card-body gap-2 p-4">
-                    <div class="flex items-center gap-2">
-                      <span class="badge badge-primary badge-sm font-bold tabular-nums">{i + 1}</span>
+                <a href={`/notes/${n.id}`} class="card bg-base-100">
+                  <div class="card-body gap-2.5 p-5">
+                    <div class="flex items-center gap-2.5">
+                      <span class="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-primary/12 text-xs font-bold tabular-nums text-primary">
+                        {i + 1}
+                      </span>
                       <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
-                      {n.data.audio && <span class="badge badge-ghost badge-sm">🎧 語音</span>}
+                      {n.data.audio && <span class="text-xs text-base-content/40">🎧</span>}
                     </div>
-                    <h3 class="card-title text-base">{n.data.title}</h3>
-                    <p class="text-sm opacity-70">{n.data.summary}</p>
+                    <h3 class="font-display text-lg font-bold leading-snug">{n.data.title}</h3>
+                    <p class="text-sm leading-relaxed text-base-content/55">{n.data.summary}</p>
                   </div>
                 </a>
               ))}

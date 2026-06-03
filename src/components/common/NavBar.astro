@@ -11,24 +11,29 @@ const links = [
 const isActive = (href: string) => path === href || path.startsWith(href + '/')
 ---
 
-<header class="sticky top-0 z-30 border-b border-base-300 bg-base-100/85 backdrop-blur">
-  <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-2 py-2 sm:px-4">
-    <a href="/study" class="mr-2 shrink-0 font-display text-lg font-bold tracking-tight">
+<header class="sticky top-0 z-30 border-b border-base-300/70 bg-base-100/75 backdrop-blur-xl">
+  <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-3 py-3 sm:px-5 custom-scrollbar">
+    <a href="/study" class="mr-3 flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight">
+      <span class="grid h-7 w-7 place-items-center rounded-xl bg-primary/12 text-sm text-primary">醫</span>
       後中醫<span class="text-primary">題庫</span>
     </a>
-    <div class="flex flex-1 items-center gap-1">
+    <div class="flex flex-1 items-center gap-0.5">
       {
         links.map((l) => (
           <a
             href={l.href}
-            class={`btn btn-sm shrink-0 ${isActive(l.href) ? 'btn-primary' : 'btn-ghost'}`}
+            class={`shrink-0 rounded-full px-3.5 py-1.5 text-sm transition-colors ${
+              isActive(l.href)
+                ? 'bg-primary/12 font-semibold text-primary'
+                : 'font-medium text-base-content/65 hover:bg-base-content/5 hover:text-base-content'
+            }`}
           >
             {l.label}
           </a>
         ))
       }
     </div>
-    <button id="reading-toggle" class="btn btn-ghost btn-sm shrink-0" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">☾</button>
+    <button id="reading-toggle" class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">☾</button>
   </nav>
 </header>
 
