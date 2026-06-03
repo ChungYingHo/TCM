@@ -17,7 +17,8 @@ export default defineConfig({
     url: `http://localhost:${PORT}`,
     timeout: 180000,
     reuseExistingServer: !process.env.CI,
-    env: { SITE_PASSWORD: 'jeremy850916', AUTH_SECRET: 'test-secret-e2e' },
+    // overrides any local .env (process.env wins) so the specs' password is deterministic
+    env: { SITE_PASSWORD: 'test-password', AUTH_SECRET: 'test-secret-e2e' },
   },
   projects: [
     { name: 'chromium', use: { ...devices['Desktop Chrome'] } },

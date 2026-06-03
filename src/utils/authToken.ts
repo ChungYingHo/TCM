@@ -3,16 +3,28 @@ import { createHmac, timingSafeEqual } from 'node:crypto'
 
 export const AUTH_COOKIE = 'tcm_auth'
 
-// Hardcoded default so `npm start` / a plain Vercel deploy works with no env setup.
-// Server-only file (never shipped to the client). Override via SITE_PASSWORD if desired.
-const DEFAULT_PASSWORD = 'jeremy850916'
+// Gate password + cookie-signing secret come from env only — no hardcoded
+// default. process.env first so Vercel / Playwright injection overrides a local
+// .env; static property access keeps Vite happy.
+const sitePassword = () => process.env.SITE_PASSWORD || import.meta.env.SITE_PASSWORD || ''
+const authSecret = () => process.env.AUTH_SECRET || import.meta.env.AUTH_SECRET || ''
 
-function secret(): string {
-  return import.meta.env.SITE_PASSWORD || process.env.SITE_PASSWORD || DEFAULT_PASSWORD
+function eq(a: string, b: string): boolean {
+  const x = Buffer.from(a)
+  const y = Buffer.from(b)
+  return x.length === y.length && timingSafeEqual(x, y)
 }
 
+/** Verify the gate password against the SITE_PASSWORD env (plaintext). */
+export function checkPassword(input: string): boolean {
+  const want = sitePassword()
+  return !!input && !!want && eq(input, want)
+}
+
+// HMAC key for the gate cookie. MUST be set (AUTH_SECRET) in any public deploy —
+// otherwise the cookie is forgeable. The dev fallback is intentionally weak.
 function signingKey(): string {
-  return import.meta.env.AUTH_SECRET || process.env.AUTH_SECRET || secret() || 'dev-secret'
+  return authSecret() || sitePassword() || 'dev-only-insecure'
 }
 
 /** Token proves "unlocked" without storing the password itself. */
@@ -25,15 +37,6 @@ export function verifyToken(token: string | undefined | null): boolean {
   const expected = makeToken()
   const a = Buffer.from(token)
   const b = Buffer.from(expected)
-  if (a.length !== b.length) return false
-  return timingSafeEqual(a, b)
-}
-
-export function passwordMatches(input: string): boolean {
-  const want = secret()
-  if (!want) return false
-  const a = Buffer.from(input)
-  const b = Buffer.from(want)
   if (a.length !== b.length) return false
   return timingSafeEqual(a, b)
 }

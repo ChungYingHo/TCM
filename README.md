@@ -4,18 +4,21 @@
 
 ## 系統組成
 - **資料 pipeline**（[`pipeline/`](pipeline/README.md)）：PDF → `src/data/<school>.json` + `public/q/**` 題目截圖。正確答案只由答案卡 + 釋疑決定，不依賴 LLM。
-- **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門。**題庫為靜態 JSON**；使用者狀態（錯題本／作答紀錄）存在 **Vercel 上的資料庫（Upstash Redis）**，localStorage 僅作本機快取（載入時讀 DB、變動時寫回，last-write-wins）。未設定 DB 時自動降級為純本機。進站密碼可存在 DB 的 `tcm:password`（改密碼免重新部署），詳見 `.env.example`。
+- **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門。**題庫為靜態 JSON**；使用者狀態（錯題本／作答紀錄）存在 **Vercel 上的資料庫（Upstash Redis）**，localStorage 僅作本機快取（載入時讀 DB、變動時寫回，last-write-wins）。未設定 DB 時自動降級為純本機。進站密碼放在環境變數 `SITE_PASSWORD`（本機 `.env`／Vercel 環境變數，不進 repo、不進資料庫），詳見 `.env.example`。
 - 詳細實作見 plan 檔與 [CLAUDE.md](CLAUDE.md)。
 
 ## 本機開發
 ```bash
 npm install
-npm start         # http://localhost:4321（密碼預設 jeremy850916，免設定）
+cp .env.example .env   # 設 SITE_PASSWORD（本機密碼）與 AUTH_SECRET
+npm start         # http://localhost:4321
 npm test          # 單元測試 (Vitest)
 npm run test:e2e  # E2E (Playwright)
 npm run build     # 正式建置 (Vercel)
 ```
-密碼預設寫在 `src/utils/authToken.ts`（僅伺服器端，不進前端 bundle）。如需更換，設環境變數 `SITE_PASSWORD`（並建議設 `AUTH_SECRET`）覆蓋即可；Vercel 上於專案環境變數設定。
+進站密碼**不寫死在程式裡**，放在環境變數（`.env` 本機、Vercel 環境變數正式）：
+- `SITE_PASSWORD`：進站密碼（明文）。
+- `AUTH_SECRET`：簽 cookie 用的長隨機字串，**公開部署務必設**，否則閘門 cookie 可被偽造。
 
 ---
 

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
   // unlock: shares the browser context cookie jar with page navigations
-  const res = await page.request.post('/api/unlock', { data: { password: 'jeremy850916' } })
+  const res = await page.request.post('/api/unlock', { data: { password: 'test-password' } })
   expect(res.ok()).toBeTruthy()
 })
 

@@ -20,7 +20,7 @@
 
 ## 進站密碼
 
-伺服器端 cookie 閘門，密碼 `jeremy850916`（存於環境變數 `SITE_PASSWORD`，不進前端 bundle）。未驗證者只看到展示用 landing 頁。
+伺服器端 cookie 閘門，密碼**不寫死在程式裡**：放在環境變數 `SITE_PASSWORD`（明文；本機 `.env`／Vercel 環境變數，不進 repo、不進資料庫）。另須設 `AUTH_SECRET` 簽 cookie（公開部署必設，否則可偽造）。未驗證者只看到展示用 landing 頁。
 
 ## 重要技術事實（Phase 0 實測修正）
 
