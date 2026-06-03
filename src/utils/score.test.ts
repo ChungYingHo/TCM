@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { QuestionRecord } from '@/models/question'
-import { isChoiceCorrect, scoreExam, answerLabel } from '@/utils/score'
+import { isChoiceCorrect, scoreExam, scoreExamPoints, examScoring, answerLabel } from '@/utils/score'
 
 function q(partial: Partial<QuestionRecord>): QuestionRecord {
   return {
@@ -50,6 +50,56 @@ describe('scoreExam', () => {
     expect(res.correct).toBe(2) // q1 right, q2 wrong, q3 award_all
     expect(res.answered).toBe(2)
     expect(res.perQuestion).toEqual({ '1': true, '2': false, '3': true })
+  })
+})
+
+describe('examScoring (real 倒扣 rules, transcribed from the papers)', () => {
+  it('ISU always deducts 0.5 per wrong', () => {
+    expect(examScoring('ISU', 104)).toEqual({ perQuestion: 2, wrongPenalty: 0.5, floorZero: true })
+    expect(examScoring('ISU', 115).wrongPenalty).toBe(0.5)
+  })
+
+  it('CMU/TCU do not deduct before 110, deduct 0.7 from 110', () => {
+    expect(examScoring('CMU', 109).wrongPenalty).toBe(0)
+    expect(examScoring('CMU', 110).wrongPenalty).toBe(0.7)
+    expect(examScoring('TCU', 108).wrongPenalty).toBe(0)
+    expect(examScoring('TCU', 113).wrongPenalty).toBe(0.7)
+  })
+})
+
+describe('scoreExamPoints (倒扣 applied to answered-wrong only)', () => {
+  const paper = [
+    q({ id: '1', correct_answer: ['A'] }),
+    q({ id: '2', correct_answer: ['B'] }),
+    q({ id: '3', correct_answer: ['C'] }),
+    q({ id: '4', correct_answer: ['D'] }),
+  ]
+
+  it('ISU: 2 correct, 1 wrong, 1 blank → 4 − 0.5 = 3.5 (blank not penalized)', () => {
+    const s = scoreExamPoints(paper, { '1': 'A', '2': 'B', '3': 'A', '4': null }, examScoring('ISU', 115))
+    expect(s.correct).toBe(2)
+    expect(s.wrong).toBe(1)
+    expect(s.blank).toBe(1)
+    expect(s.points).toBe(3.5)
+    expect(s.maxPoints).toBe(8)
+  })
+
+  it('no-倒扣 paper (CMU 108): wrong answers cost nothing', () => {
+    const s = scoreExamPoints(paper, { '1': 'A', '2': 'X' as never, '3': null, '4': null }, examScoring('CMU', 108))
+    expect(s.points).toBe(2) // only the 1 correct counts; wrong/blank = 0
+  })
+
+  it('floors at zero (cannot go negative)', () => {
+    const allWrong = scoreExamPoints(paper, { '1': 'B', '2': 'A', '3': 'A', '4': 'A' }, examScoring('CMU', 113))
+    expect(allWrong.wrong).toBe(4)
+    expect(allWrong.points).toBe(0) // 0 correct − 4×0.7 = −2.8 → floored to 0
+  })
+
+  it('award_all (送分) counts correct regardless of choice', () => {
+    const withBonus = [...paper, q({ id: '5', award_all: true })]
+    const s = scoreExamPoints(withBonus, { '1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': null }, examScoring('ISU', 115))
+    expect(s.correct).toBe(5)
+    expect(s.points).toBe(10)
   })
 })
 
