@@ -83,10 +83,36 @@ def detect_subject(doc: fitz.Document, page_from: int, page_to: int) -> str | No
     return None
 
 
+def _need_space(prev: str, nxt: str) -> bool:
+    """Space between two reading-order tokens only at a Latin word boundary.
+    PyMuPDF yields real space-delimited tokens, so two ASCII alphanumerics across
+    a token boundary were separated by a space in the PDF (e.g. "Population"+
+    "ecology"). CJK needs no spaces, so never insert one next to a CJK char."""
+    if not prev or not nxt:
+        return False
+    a, b = prev[-1], nxt[0]
+    return a.isascii() and a.isalnum() and b.isascii() and b.isalnum()
+
+
+def _smart_join(parts: list[str]) -> str:
+    out = ''
+    for p in parts:
+        if not p:
+            continue
+        if out and _need_space(out, p):
+            out += ' '
+        out += p
+    # space out fill-in blanks stuck to adjacent Latin text (e.g. "with_____evidence")
+    out = re.sub(r'([A-Za-z0-9])(_{2,})', r'\1 \2', out)
+    out = re.sub(r'(_{2,})([A-Za-z0-9])', r'\1 \2', out)
+    return out
+
+
 def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
     """Reading-order tokens of one question -> (stem, options).
     Stem = text before the first option marker. Each `(X)` starts a new option;
-    following non-marker tokens append to its text."""
+    following non-marker tokens append to its text. Tokens are joined with
+    `_smart_join` so embedded English keeps its spaces while CJK stays unspaced."""
     stem_parts: list[str] = []
     options: list[dict] = []
     cur: dict | None = None
@@ -95,10 +121,10 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
             continue
         m = OPT_RE.match(t)
         if m:
-            cur = {'letter': m.group(1), 'text': m.group(2)}
+            cur = {'letter': m.group(1), 'parts': [m.group(2)]}
             options.append(cur)
         elif cur is not None:
-            cur['text'] += t
+            cur['parts'].append(t)
         else:
             stem_parts.append(t)
     # de-dupe accidental repeated option letters, keep first occurrence order
@@ -108,9 +134,8 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
         if o['letter'] in seen:
             continue
         seen.add(o['letter'])
-        o['text'] = o['text'].strip()
-        uniq.append(o)
-    return ''.join(stem_parts).strip(), uniq
+        uniq.append({'letter': o['letter'], 'text': _smart_join(o['parts']).strip()})
+    return _smart_join(stem_parts).strip(), uniq
 
 
 MAX_SPAN_PAGES = 3          # cap a single question crop's page span
