@@ -42,13 +42,25 @@
     />
     <button
       type="button"
-      class="absolute right-1 top-1/2 -translate-y-1/2 rounded-md px-2 py-1 text-lg leading-none text-base-content/70 hover:bg-base-200"
+      class="absolute right-1.5 top-1/2 grid h-8 w-8 -translate-y-1/2 place-items-center rounded-md text-base-content/45 transition-colors hover:bg-base-200 hover:text-base-content/70"
       onclick={() => (show = !show)}
       aria-label={show ? '隱藏密碼' : '顯示密碼'}
       aria-pressed={show}
       tabindex="-1"
     >
-      {show ? '🙈' : '👁️'}
+      {#if show}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]" aria-hidden="true">
+          <path d="M3 3l18 18" />
+          <path d="M10.6 5.1A10.9 10.9 0 0 1 12 5c7 0 10.5 7 10.5 7a18.4 18.4 0 0 1-3.2 4.1" />
+          <path d="M6.2 6.2A18.3 18.3 0 0 0 1.5 12S5 19 12 19a10.8 10.8 0 0 0 4.3-.9" />
+          <path d="M9.9 9.9a3 3 0 1 0 4.2 4.2" />
+        </svg>
+      {:else}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" class="h-[18px] w-[18px]" aria-hidden="true">
+          <path d="M1.5 12S5 5 12 5s10.5 7 10.5 7-3.5 7-10.5 7S1.5 12 1.5 12Z" />
+          <circle cx="12" cy="12" r="3" />
+        </svg>
+      {/if}
     </button>
   </div>
   <button type="submit" class="btn btn-primary" disabled={busy || !password}>
