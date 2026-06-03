@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { OptionLetter, QuestionRecord, School, Subject } from '@/models/question'
   import { SCHOOLS, SUBJECTS, SCHOOL_LABEL, SUBJECT_LABEL } from '@/models/question'
-  import { loadSchool, deriveFacets } from '@/utils/dataset'
+  import { loadSchool, loadSchools, deriveFacets } from '@/utils/dataset'
   import { examScoring, scoreExamPoints, isChoiceCorrect } from '@/utils/score'
   import { recordWrong } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
@@ -14,6 +14,7 @@
   let year = $state<number | null>(null)
   let subject = $state<Subject>('chemistry')
   let count = $state(50) // 隨機模式題數
+  let mixSchools = $state(false) // 隨機模式：三校混合抽題
   let minutes = $state(0) // 0 = 不限時
   let pool = $state<QuestionRecord[]>([])
   let loading = $state(true)
@@ -44,9 +45,11 @@
   }
 
   $effect(() => {
-    const s = school
+    // 三校混合（僅隨機模式）載入全部題庫；否則只載入選定學校
+    const useAll = mode === 'random' && mixSchools
+    const load = useAll ? loadSchools([...SCHOOLS]) : loadSchool(school)
     loading = true
-    loadSchool(s).then((qs) => { pool = qs }).finally(() => { loading = false })
+    load.then((qs) => { pool = qs }).finally(() => { loading = false })
   })
   $effect(() => () => stopTicker()) // clear timer on unmount
 
@@ -193,9 +196,15 @@
 
       <label class="form-control">
         <span class="label-text mb-1">學校</span>
-        <select class="select select-bordered" bind:value={school}>
+        <select class="select select-bordered" bind:value={school} disabled={mode === 'random' && mixSchools}>
           {#each SCHOOLS as s (s)}<option value={s}>{SCHOOL_LABEL[s]}</option>{/each}
         </select>
+        {#if mode === 'random'}
+          <label class="mt-2 flex cursor-pointer items-center gap-2 text-sm text-base-content/75">
+            <input type="checkbox" class="checkbox checkbox-sm checkbox-primary" bind:checked={mixSchools} />
+            三校混合抽題（中國醫＋義守＋慈濟）
+          </label>
+        {/if}
       </label>
 
       {#if mode === 'past'}
@@ -274,7 +283,7 @@
   <div class="flex flex-col gap-4">
     <div class="card border border-base-300 bg-base-100">
       <div class="card-body items-center gap-2 text-center">
-        <h2 class="card-title">{mode === 'past' ? `${SCHOOL_LABEL[school]} ${year} 年 ${SUBJECT_LABEL[subject]}` : '隨機練習'} 成績</h2>
+        <h2 class="card-title">{mode === 'past' ? `${SCHOOL_LABEL[school]} ${year} 年 ${SUBJECT_LABEL[subject]}` : `隨機練習${mixSchools ? '・三校混合' : ''}`} 成績</h2>
         {#if timedOut}
           <span class="badge badge-warning badge-sm">時間到・自動交卷</span>
         {/if}
