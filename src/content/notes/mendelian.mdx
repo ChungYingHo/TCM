@@ -73,7 +73,7 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 - 男性只有一個 X，只要帶隱性就表現（**半合子**）。
 - 常見 X 聯隱性遺傳：色盲、血友病。
 
-| 情況 | 女性 X^A X^a | 男性 X^a Y |
+| 情況 | 女性 X<sup>A</sup> X<sup>a</sup> | 男性 X<sup>a</sup> Y |
 |---|---|---|
 | 表現型 | 表現型正常（帶因者） | 表現出隱性性狀 |
 
@@ -169,13 +169,13 @@ X 聯隱性：男性只要 X 帶隱性就發病；重組率＝重組子代÷總�
 
 <ExampleQuestion client:visible
   n={2}
-  q="某家族中，一位表現型正常的女性（X^A X^a）與表現型正常的男性（X^A Y）婚配。其兒子患色盲的機率為何？"
+  q="某家族中，一位表現型正常的女性（X<sup>A</sup> X<sup>a</sup>）與表現型正常的男性（X<sup>A</sup> Y）婚配。其兒子患色盲的機率為何？"
   options={["0%", "25%", "50%", "100%"]}
   answer="(C) 50%"
   steps={[
-    "母親基因型 X^A X^a（帶因者），配子為 X^A 或 X^a，各 50%。",
-    "父親基因型 X^A Y，配子為 X^A 或 Y，各 50%。",
-    "兒子基因型只看 X 來自母親：X^A Y（正常）或 X^a Y（色盲）。",
+    "母親基因型 X<sup>A</sup> X<sup>a</sup>（帶因者），配子為 X<sup>A</sup> 或 X<sup>a</sup>，各 50%。",
+    "父親基因型 X<sup>A</sup> Y，配子為 X<sup>A</sup> 或 Y，各 50%。",
+    "兒子基因型只看 X 來自母親：X<sup>A</sup> Y（正常）或 X<sup>a</sup> Y（色盲）。",
     "→ 兒子患色盲機率 = <b>50%</b>。"
   ]}
 />
