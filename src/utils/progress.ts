@@ -21,9 +21,15 @@ function read(): Store {
   }
 }
 
-function write(store: Store): void {
+function write(store: Store, silent = false): void {
   if (typeof localStorage === 'undefined') return
   localStorage.setItem(KEY, JSON.stringify(store))
+  if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
+}
+
+/** Raw restore — used by the sync + backup layer (getAttempts() is the snapshot). */
+export function replaceProgress(store: Store): void {
+  write(store, true)
 }
 
 export function recordAttempt(id: string, wasCorrect: boolean, now: number): void {

@@ -14,9 +14,18 @@ function read(): Store {
   }
 }
 
-function write(store: Store): void {
+function write(store: Store, silent = false): void {
   if (typeof localStorage === 'undefined') return
   localStorage.setItem(KEY, JSON.stringify(store))
+  if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
+}
+
+/** Raw snapshot / restore — used by the sync + backup layer. */
+export function dumpWrong(): Store {
+  return read()
+}
+export function replaceWrong(store: Store): void {
+  write(store, true)
 }
 
 /** Record (or increment) a wrong answer. Returns the updated entry. */
