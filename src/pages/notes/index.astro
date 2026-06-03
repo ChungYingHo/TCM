@@ -3,19 +3,23 @@ import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
 import { SUBJECTS, SUBJECT_LABEL } from '@/models/question'
 import type { Subject } from '@/models/question'
+import { byTaxonomyOrder } from '@/models/taxonomy'
 
 export const prerender = false
 
 const notes = (await getCollection('notes')).filter((n) => !n.data.draft)
 const bySubject = SUBJECTS.map((s) => ({
   subject: s,
-  notes: notes.filter((n) => n.data.subject === s),
+  // pedagogical "learning path" order, not alphabetical
+  notes: notes
+    .filter((n) => n.data.subject === s)
+    .sort((a, b) => byTaxonomyOrder(a.data.tag, b.data.tag)),
 }))
 ---
 
 <Layout title="考點筆記 · 後中醫題庫">
   <h1 class="mb-1 text-2xl font-bold">考點知識筆記</h1>
-  <p class="mb-4 text-sm opacity-70">把高頻考點用白話＋條列講清楚，搭配必背重點、解題方向、語音複習與互動小元件。依科目分類。</p>
+  <p class="mb-4 text-sm opacity-70">把每個考點當「久沒碰的初學者」從頭講清楚：觀念速複習＋必背＋解題方向＋例題詳解＋互動元件。每科<b>依知識先後順序</b>排列，照著編號讀就是一條學習路徑。</p>
 
   <div class="flex flex-col gap-6">
     {
@@ -31,13 +35,14 @@ const bySubject = SUBJECTS.map((s) => ({
             </p>
           ) : (
             <div class="grid gap-3 sm:grid-cols-2">
-              {group.notes.map((n) => (
+              {group.notes.map((n, i) => (
                 <a
                   href={`/notes/${n.id}`}
                   class="card border border-base-300 bg-base-100 transition hover:border-primary hover:shadow-md"
                 >
                   <div class="card-body gap-2 p-4">
                     <div class="flex items-center gap-2">
+                      <span class="badge badge-primary badge-sm font-bold tabular-nums">{i + 1}</span>
                       <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
                       {n.data.audio && <span class="badge badge-ghost badge-sm">🎧 語音</span>}
                     </div>

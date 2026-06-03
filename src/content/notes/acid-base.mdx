@@ -1,45 +1,183 @@
 ---
-title: 酸鹼與緩衝：pH 計算一條龍
+title: 酸鹼與 pH：從「log 是什麼」開始一條龍
 subject: chemistry
 tag: 酸鹼平衡
-summary: 強酸鹼直接算、弱酸鹼用 Ka、緩衝用 Henderson–Hasselbalch，看數字就知道套哪招。
+summary: 假設你連莫耳濃度、log 都忘了也沒關係——先補基礎，再用「強的、弱的、緩衝」三招把 pH 算出來。
 audio: >
-  酸鹼平衡重點複習。第一，pH 等於負 log 氫離子濃度，pH 加 pOH 等於十四。
-  第二，強酸強鹼完全解離，氫離子濃度就是濃度，直接取 log。
-  第三，弱酸用 Ka，氫離子濃度約等於根號 Ka 乘以濃度。
-  第四，緩衝溶液用 Henderson Hasselbalch 公式，pH 等於 pKa 加 log 鹽除以酸。
-  第五，當鹽和酸濃度相等時，pH 就等於 pKa，這是緩衝能力最強的點。
-  判題口訣：看到弱酸加它的鹽，就是緩衝，套 pKa 加 log。
+  酸鹼平衡複習。pH 等於負 log 氫離子濃度，pH 加 pOH 等於十四。
+  強酸強鹼完全解離，氫離子濃度就是濃度，直接取 log。
+  弱酸用 Ka，氫離子濃度約等於根號 Ka 乘以濃度。
+  判題口訣：先看是強的、弱的、還是緩衝，再套對應公式。
 draft: false
 ---
+import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PhScale from '@/components/notes/PhScale.svelte'
 
-## 先抓大方向
+<NoteStats tag="酸鹼平衡" client:load />
 
-酸鹼題 99% 在問 **pH**。先判斷是「強的、弱的、還是緩衝」，再套對應公式就好，不用硬背一堆。
+## 觀念速複習（先把忘掉的補回來）
+
+別急著算 pH，先確定這三個地基是穩的：
+
+**① 莫耳濃度 M 是什麼？**
+就是「<b>每公升溶液有幾莫耳溶質</b>」。
+
+$$
+\text{莫耳濃度 } M = \frac{\text{溶質莫耳數 (mol)}}{\text{溶液體積 (L)}}
+$$
+
+例：把 0.5 mol 的鹽溶成 2 L，濃度就是 0.5 ÷ 2 = 0.25 M。
+
+**② log（對數）是什麼？**
+$\log x$ 在問：「10 要 <b>幾次方</b> 才會等於 $x$」。所以只要數字寫成 10 的次方，log 一眼就看得出來：
+
+| 數字 | 寫成 10 的次方 | log 是多少 |
+|---|---|---|
+| 1000 | $10^{3}$ | 3 |
+| 1 | $10^{0}$ | 0 |
+| 0.01 | $10^{-2}$ | −2 |
+| 0.001 | $10^{-3}$ | −3 |
+
+關鍵一句：$\log(10^{-n}) = -n$，所以 $-\log(10^{-n}) = n$。
+
+**③ pH 與 pOH 怎麼定義？**
+水裡有氫離子 $\text{H}^+$ 和氫氧根 $\text{OH}^-$。pH 就是把 $[\text{H}^+]$ 取負 log：
+
+$$
+\text{pH} = -\log[\text{H}^+] \qquad \text{pOH} = -\log[\text{OH}^-]
+$$
+
+（$[\text{H}^+]$ 是氫離子的莫耳濃度，單位 M；數字越小、pH 越大、越偏鹼。）
+
+在 25°C 的水裡，這兩個永遠互補：
+
+$$
+\text{pH} + \text{pOH} = 14
+$$
+
+**④ 解離百分比（解離度 α）是什麼？**
+弱酸只解離一點點，「解離了多少比例」就是解離百分比：
+
+$$
+\alpha = \frac{\text{已解離的酸}}{\text{原本的酸}} = \frac{[\text{H}^+]}{C} \times 100\%
+$$
+
+弱酸算出 $[\text{H}^+] \approx \sqrt{K_a \cdot C}$ 後，再除以原濃度 $C$ 就是 α。
+
+**⑤ 多質子酸（如 H₃A）的「兩性中間物」pH**
+三質子酸一次脫一個 H⁺，有 $K_{a1} > K_{a2} > K_{a3}$。當溶液主成分是中間的兩性物種（如 H₂A⁻、HA²⁻，它既能放 H⁺ 又能收 H⁺）時，pH 可用夾住它的那兩個 pKa 取平均：
+
+$$
+\text{pH} \approx \tfrac{1}{2}(\text{p}K_{a1} + \text{p}K_{a2})
+$$
+
+（H₂A⁻ 由 Ka1、Ka2 夾住；HA²⁻ 由 Ka2、Ka3 夾住。）
 
 <Memorize>
-$\text{pH} = -\log[\text{H}^+]$，且 <b>pH + pOH = 14</b>（25°C）。記住 $-\log(10^{-n}) = n$。
+pH ＝ −log[H⁺]、pH ＋ pOH ＝ 14（25°C）。<br />
+記住 <b>−log(10⁻ⁿ) ＝ n</b>，大部分 pH 題不用按計算機就能心算。
 </Memorize>
+
+## 動手玩：拉一下看 pH 怎麼動
+
+<PhScale client:visible />
 
 ## 三種情況、三招公式
 
+酸鹼題九成在問 **pH**。先判斷是「強的、弱的、還是緩衝」，再套公式：
+
 <KeyPoints items={[
-  "<b>強酸／強鹼</b>（HCl、NaOH…）：完全解離，<b>[H⁺] = 濃度</b>，直接取 log。",
-  "<b>弱酸</b>（CH₃COOH…）：用 Ka，<b>[H⁺] ≈ √(Ka·C)</b>；弱鹼同理用 Kb 算 [OH⁻]。",
-  "<b>緩衝溶液</b>（弱酸＋其鹽）：<b>pH = pKa + log([鹽]/[酸])</b>（Henderson–Hasselbalch）。",
-  "當 <b>[鹽] = [酸]</b> 時 <b>pH = pKa</b>，緩衝能力最強。",
-  "中和到當量點：強酸強鹼 pH=7；弱酸強鹼 > 7；強酸弱鹼 < 7。"
+  "<b>強酸／強鹼</b>（HCl、NaOH…）：完全解離，<b>[H⁺] = 酸的濃度</b>，直接取 −log。",
+  "<b>弱酸</b>（CH₃COOH…）：只解離一點點，<b>[H⁺] ≈ √(Ka·C)</b>；弱鹼同理用 Kb 算 [OH⁻]。",
+  "<b>緩衝溶液</b>（弱酸＋其鹽）：<b>pH = pKa + log([鹽]/[酸])</b>（這招在『水溶液離子平衡』詳談）。",
+  "Ka 越大＝酸越強；pKa = −log Ka，<b>pKa 越小酸越強</b>。",
+  "<b>解離百分比</b> α = [H⁺]/C ×100%；弱酸先求 [H⁺]≈√(Ka·C)，再除以原濃度。",
+  "<b>多質子酸兩性中間物</b>（H₂A⁻ 等）pH ≈ ½(pKa1+pKa2)。",
+  "中和到當量點：強酸強鹼 pH=7；弱酸＋強鹼 > 7；強酸＋弱鹼 < 7。"
 ]} />
 
 ## 解題方向
 
-<SolveApproach steps={[
-  "先看成分：只有酸或只有鹼 → 強的直接取 log、弱的用 Ka/Kb。",
-  "看到「弱酸 + 該酸的鈉鹽」或「弱鹼 + 其鹽」→ 一定是<b>緩衝</b>，套 Henderson–Hasselbalch。",
-  "題目給 pKa 又給鹽/酸比例 → 幾乎都是要你算緩衝 pH。",
-  "滴定/中和題：先算誰過量，過量強酸鹼決定 pH；剛好當量點看鹽的水解。",
-  "別忘了單位與稀釋：混合後體積變大，濃度要重算。"
-]} />
+<SolveApproach tag="酸鹼平衡" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="0.01 M 的鹽酸（HCl）水溶液，pH 是多少？"
+  options={["1", "2", "7", "12"]}
+  answer="(B) 2"
+  steps={[
+    "判斷：HCl 是<b>強酸</b>，在水中完全解離 → [H⁺] 就等於濃度。",
+    "[H⁺] = 0.01 M = 10⁻² M。",
+    "pH = −log(10⁻²) = <b>2</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="0.1 M 的醋酸（CH₃COOH，Ka = 1.8×10⁻⁵），pH 約為多少？"
+  options={["1.0", "2.9", "4.7", "5.3"]}
+  answer="(B) 約 2.9"
+  steps={[
+    "判斷：醋酸是<b>弱酸</b>，只解離一點點 → 用 [H⁺] ≈ √(Ka·C)。",
+    "[H⁺] ≈ √(1.8×10⁻⁵ × 0.1) = √(1.8×10⁻⁶) ≈ 1.34×10⁻³ M。",
+    "pH = −log(1.34×10⁻³) ≈ <b>2.87</b>，最接近 2.9。",
+    "小提醒：弱酸 pH 一定比同濃度強酸大（解離得少、H⁺ 較少）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="0.001 M 的氫氧化鈉（NaOH）水溶液，pH 是多少？"
+  options={["3", "7", "11", "14"]}
+  answer="(C) 11"
+  steps={[
+    "判斷：NaOH 是<b>強鹼</b>，完全解離 → [OH⁻] = 0.001 M = 10⁻³ M。",
+    "先算 pOH = −log(10⁻³) = 3。",
+    "再用 pH + pOH = 14 → pH = 14 − 3 = <b>11</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="下列四種 0.1 M 溶液，何者酸性最強（pH 最小）？"
+  options={["HCl（強酸）", "CH₃COOH（Ka=1.8×10⁻⁵）", "HF（Ka=6.8×10⁻⁴）", "NaCl（中性鹽）"]}
+  answer="(A) HCl"
+  steps={[
+    "同濃度下，<b>解離越完全 → H⁺ 越多 → pH 越小</b>。",
+    "HCl 是強酸、完全解離，H⁺ 最多 → 酸性最強。",
+    "弱酸間比 Ka：HF（6.8×10⁻⁴）> 醋酸（1.8×10⁻⁵），所以 HF 比醋酸酸。",
+    "NaCl 是強酸強鹼鹽，水溶液中性（pH≈7）。排序：HCl < HF < 醋酸 < NaCl（pH 由小到大）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="0.1 M 的弱酸 HA，Ka = 4×10⁻⁵，其解離百分比（α）約為多少？"
+  options={["0.2%", "2%", "4%", "8%"]}
+  answer="(B) 2%"
+  steps={[
+    "弱酸先求 [H⁺] ≈ √(Ka·C) = √(4×10⁻⁵ × 0.1) = √(4×10⁻⁶) = 2×10⁻³ M。",
+    "解離百分比 α = [H⁺]/C × 100% = (2×10⁻³ / 0.1) × 100%。",
+    "= 0.02 × 100% = <b>2%</b>。",
+    "口訣：濃度越稀，弱酸的解離百分比反而越大（但 [H⁺] 仍變小）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="三質子酸 H₃A 的 Ka1=1.0×10⁻², Ka2=1.0×10⁻⁶, Ka3=1.0×10⁻¹⁰。當溶液主成分為 H₂A⁻ 時，pH 範圍約為何？"
+  options={["1~3", "3~5", "5~7", "9~11"]}
+  answer="(B) 3~5"
+  steps={[
+    "H₂A⁻ 是<b>兩性中間物</b>（可放也可收 H⁺），由 Ka1、Ka2 夾住。",
+    "pH ≈ ½(pKa1 + pKa2)。pKa1 = −log(10⁻²) = 2，pKa2 = −log(10⁻⁶) = 6。",
+    "pH ≈ ½(2 + 6) = <b>4</b>，落在 3~5 之間。",
+    "注意：與初濃度幾乎無關，只看夾住它的兩個 pKa。"
+  ]}
+/>

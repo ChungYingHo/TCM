@@ -1,9 +1,19 @@
 <script lang="ts">
   import type { QuestionRecord } from '@/models/question'
   import { answerLabel } from '@/utils/score'
+  import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
+  import { solveSteps } from '@/models/solveTemplates'
   import Tag from '@/components/common/Tag.svelte'
 
   let { question }: { question: QuestionRecord } = $props()
+
+  // 解題方向 comes from the same source the matching concept note uses, so the
+  // method shown here is identical to the note for this question's category.
+  const ptag = $derived(primaryTag(question.concept_tags))
+  const steps = $derived(ptag ? solveSteps(ptag) : [])
+  const slug = $derived(ptag ? tagSlug(ptag) : null)
+  // errata reason is only worth showing when the answer was actually changed
+  const showReason = $derived(question.errata_applied && !!question.explanation)
 </script>
 
 <div class="mt-3 rounded-lg border border-base-300 bg-base-200/60 p-3 text-sm animate-fade-in-up">
@@ -21,8 +31,31 @@
     {/if}
   </div>
 
-  {#if question.explanation}
+  {#if showReason}
     <p class="mt-2 whitespace-pre-wrap leading-relaxed opacity-90">{question.explanation}</p>
+  {/if}
+
+  {#if steps.length}
+    <details class="mt-3 rounded-lg border border-primary/25 bg-primary/5" open>
+      <summary class="cursor-pointer list-none px-3 py-2 font-semibold text-primary">
+        🧭 這類題的解法{#if ptag}<span class="ml-1 text-xs font-normal opacity-70">（{tagShort(ptag)}）</span>{/if}
+      </summary>
+      <div class="border-t border-primary/15 px-3 py-2.5">
+        <ol class="flex flex-col gap-1.5 leading-relaxed">
+          {#each steps as step, i (i)}
+            <li class="grid grid-cols-[1.3rem_1fr] items-start gap-1.5">
+              <span class="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-content">{i + 1}</span>
+              <span class="pt-0.5">{@html step}</span>
+            </li>
+          {/each}
+        </ol>
+        {#if slug}
+          <a class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline" href={`/notes/${slug}`}>
+            看完整考點筆記與例題詳解 →
+          </a>
+        {/if}
+      </div>
+    </details>
   {/if}
 
   {#if question.concept_tags.length}

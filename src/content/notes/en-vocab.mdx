@@ -1,0 +1,164 @@
+---
+title: 英文字彙：字根字首拆解推義、語氣判斷、刪去法一次通
+subject: english
+tag: 字彙
+summary: 看不懂的字不用硬背——先拆字根字首判語氣，再用刪去法鎖定答案。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="字彙" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+字彙題不是在考「有沒有背過這個字」，而是考**在句子中選最貼切的字**。三個核心技巧：
+
+**① 語氣判斷（正面 / 負面 / 中性）**
+
+先讀整句，判斷空格需要正面、負面還是中性的字。  
+例：*"The doctor gave us _____ evidence that the treatment was safe."*  
+→ 句意正面（安全的治療），空格需要「有力的、令人信服的」之類的**正面**形容詞。
+
+**② 字根字首拆解推義**
+
+認識常見字首字根，陌生單字也能縮小範圍：
+
+| 字首 / 字根 | 意義 | 例字 |
+|---|---|---|
+| un- / in- / im- / ir- | 否定 | unhappy, incomplete, impossible |
+| re- | 再次 | review, rebuild, reconsider |
+| pre- | 之前 | predict, prevent, precaution |
+| mis- | 錯誤 | misunderstand, misjudge |
+| over- | 過度 | overestimate, overload |
+| sub- | 在下 / 次要 | submarine, substandard |
+| -tion / -sion | 名詞化 | action, decision, invasion |
+| -ous / -ful / -ive | 形容詞化 | dangerous, careful, effective |
+| -ize / -ify | 動詞化 | realize, simplify |
+| bene- | 好的 | benefit, beneficial |
+| mal- | 壞的 | malfunction, malnutrition |
+| -cide | 殺 | homicide, pesticide |
+| -port | 攜帶 | transport, import, export |
+| -dict | 說 | predict, contradict, dictate |
+| -vis / -vid | 看 | visible, evidence, supervise |
+| -mit / -miss | 送 | transmit, mission, submit |
+
+想看完整高頻單字表，請前往 [高頻單字表](/vocab)。
+
+**③ 刪去法**
+
+選項四個，先刪掉詞性不對、語氣相反的，通常能縮到一兩個再決定。
+
+<Memorize>
+遇到不會的字：<b>①判語氣正負 → ②拆字根字首推義 → ③刪去詞性/語氣不符的選項</b>。<br />
+時間不夠時，光靠語氣（正/負）刪去法就能把勝率拉到 50% 以上。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "先讀完整句，確認空格需要<b>正面、負面還是中性</b>的字。",
+  "看空格在句中位置（名詞、動詞、形容詞、副詞）——詞性不對直接刪。",
+  "用<b>字首字根</b>推陌生字：un-/in-/im- 否定、bene- 好、mal- 壞、re- 再次……",
+  "注意搭配詞（collocation）：evidence 通常配 compelling / convincing，不配 telling（日常以外的語境）。",
+  "四個選項語氣相似時，找「語意最貼句子邏輯」的那個，而非「看起來最難」的字。",
+  "考古題醫學高頻字：<b>mitigate 減輕、alleviate 緩解、exacerbate/aggravate 惡化、stabilize 穩定、benign 良性、malignant 惡性</b>。",
+  "考古題通用高頻字：<b>feasible 可行的、amass 累積、stimulate 促進/刺激、compelling/telling 有力的、omit 省略、imperative 必要的</b>——直接背意思最快。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="字彙" />
+
+## 例題（先自己想，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="The new medication was found to _____ the symptoms of the disease, providing much-needed relief to patients."
+  options={["aggravate", "alleviate", "eliminate", "provoke"]}
+  answer="(B) alleviate"
+  steps={[
+    "讀句意：新藥讓症狀「___」，提供了急需的緩解（relief）。→ 需要<b>正面、減輕症狀</b>的字。",
+    "刪去法：A. aggravate（惡化）負面❌；D. provoke（激起）負面❌；C. eliminate（消除）語氣過強，與 relief 並存語感稍奇。",
+    "B. alleviate（緩解）＝正面、程度適中，與 relief 語意一致。答案 (B)。",
+    "字根提示：al-levi-ate → levi 來自拉丁 levis（輕），使變輕 = 緩解。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="It is quite clear that the electric car is technically _____."
+  options={["negotiable", "feasible", "impassible", "bearable"]}
+  answer="(B) feasible"
+  steps={[
+    "句意：電動車在技術上是「___」的。→ 描述技術上「做得到、可行」的<b>中性偏正面</b>形容詞。",
+    "A. negotiable（可協商的）、C. impassible（無法通行的）、D. bearable（可忍受的）語意都不符。",
+    "B. <b>feasible</b>（可行的、行得通的）完全符合。答案 (B)。字根 fea-（= do, 做）→ 做得到的。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="Peter presented us with _____ evidence that convinced us he was right."
+  options={["indecisive", "feeble", "telling", "dreary"]}
+  answer="(C) telling"
+  steps={[
+    "句意：Peter 提出「___」的證據讓我們信服。→ 需要「有力、令人信服」的<b>正面形容詞</b>。",
+    "A. indecisive（猶豫不決）❌；B. feeble（軟弱）負面❌；D. dreary（沉悶）❌。",
+    "C. telling 在這裡作形容詞，意思是「有力的、具決定性的」（telling evidence = compelling evidence）。答案 (C)。",
+    "注意：telling 常見意思是「說」（動詞），但作形容詞時意思完全不同——遇到熟字意思卻不對，考慮它的另一詞性或詞義。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="The doctor warned that ignoring the early signs could _____ the patient's condition significantly."
+  options={["mitigate", "exacerbate", "stabilize", "alleviate"]}
+  answer="(B) exacerbate"
+  steps={[
+    "句意：忽視早期徵兆會「___」病況。→ 忽視症狀的後果是負面的，需要<b>負面、使惡化</b>的字。",
+    "A. mitigate（減輕）正面❌；C. stabilize（穩定）中性但與忽視後果不符❌；D. alleviate（緩解）正面❌。",
+    "B. exacerbate（使惡化）語氣負面，符合「忽視→惡化」的邏輯。答案 (B)。",
+    "字首提示：ex- 往外加強 + acer（尖、苦）→ 使情況更尖銳/苦 = 惡化。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="The committee decided to _____ the controversial clause from the final report to avoid further dispute."
+  options={["incorporate", "fabricate", "omit", "endorse"]}
+  answer="(C) omit"
+  steps={[
+    "句意：委員會決定把有爭議的條款「___」於最終報告，以避免糾紛。→ 刪掉爭議條款才能避免糾紛，需要「移除/省略」的字。",
+    "A. incorporate（納入）與目的相反❌；B. fabricate（捏造）❌；D. endorse（背書）❌。",
+    "C. omit（省略、刪去）符合語意。答案 (C)。",
+    "字根：o-mit → mit 來自 mittere（送走），omit = 送走/排除。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="By the time he was 21 years old, he had already _____ a great fortune."
+  options={["deplored", "repaired", "amassed", "neutralized"]}
+  answer="(C) amassed"
+  steps={[
+    "句意：他 21 歲前就已經「___」一大筆財富（fortune）。→ 與財富搭配，需要「累積、聚集」的字。",
+    "A. deplored（譴責）、B. repaired（修理）、D. neutralized（中和）都不與 fortune 搭配。",
+    "C. <b>amassed</b>（累積、聚斂）＝ a-（朝向）+ mass（一大堆）→ 聚成一大堆。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="Research into alternative energy sources has been _____ by this funding increase."
+  options={["embellished", "disfigured", "avenged", "stimulated"]}
+  answer="(D) stimulated"
+  steps={[
+    "句意：替代能源研究因為這筆增加的經費而被「___」。→ 經費增加是好事，需要<b>正面、促進</b>的字。",
+    "A. embellished（美化）、B. disfigured（毀容、損壞）負面、C. avenged（報仇）都不符。",
+    "D. <b>stimulated</b>（刺激、促進）＝正面，符合「經費 → 推動研究」。答案 (D)。"
+  ]}
+/>

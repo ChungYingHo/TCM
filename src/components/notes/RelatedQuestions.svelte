@@ -19,15 +19,12 @@
 </script>
 
 <section class="my-4">
-  <h3 class="mb-2 flex items-center gap-1.5 text-base font-bold">
-    <span aria-hidden="true">📝</span>相關例題
-    {#if !loading}<span class="text-sm font-normal opacity-60">（共 {matches.length} 題）</span>{/if}
-  </h3>
   {#if loading}
-    <p class="text-sm opacity-60">載入例題中…</p>
+    <p class="text-sm opacity-60">載入考古題中…</p>
   {:else if shown.length === 0}
     <p class="text-sm opacity-60">目前題庫沒有標到「{tag}」的題目。</p>
   {:else}
+    <p class="mb-2 text-sm opacity-60">題庫中共 {matches.length} 題標到本考點，挑出 {shown.length} 題：</p>
     <div class="flex flex-col gap-3">
       {#each shown as q (q.id)}
         <QuestionCard question={q} mode="study" />

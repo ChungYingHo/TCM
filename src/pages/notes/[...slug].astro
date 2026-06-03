@@ -32,5 +32,7 @@ const { Content } = await render(entry)
   </article>
 
   <hr class="my-6 border-base-300" />
-  <RelatedQuestions tag={entry.data.tag} limit={3} client:visible />
+  <h2 class="mb-1 text-lg font-bold">經典考古題</h2>
+  <p class="mb-2 text-sm opacity-60">這些是題庫中標到本考點的真實考題；看答案時會帶出與本筆記一致的解題方向。</p>
+  <RelatedQuestions tag={entry.data.tag} limit={4} client:visible />
 </Layout>

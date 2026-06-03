@@ -1,39 +1,245 @@
 ---
-title: 溶液：濃度與依數性質
+title: 溶液濃度與依數性質：沸點升、凝固點降、滲透壓一條線
 subject: chemistry
-tag: 溶液
-summary: 莫耳濃度/重量莫耳濃度換算，加上沸點上升、凝固點下降、滲透壓的依數性質。
-audio: >
-  溶液複習。莫耳濃度 M 是每公升溶液的莫耳數，重量莫耳濃度 m 是每公斤溶劑的莫耳數。
-  依數性質只看粒子數目，不看種類。
-  沸點上升和凝固點下降都正比於重量莫耳濃度乘上 i 凡特何夫因子。
-  滲透壓等於 i 乘以 MRT，電解質一樣要乘 i。
-  電解質會解離，i 大於一，依數性質效應加大，氯化鈉約兩倍、氯化鈣約三倍。
+tag: 溶液與依數性質
+summary: 從莫耳濃度、重量莫耳濃度的差異說起，再把沸點升高、凝固點下降、滲透壓三個依數性質串在一起——關鍵是 i 因子。
 draft: false
 ---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
-import Memorize from '@/components/notes/Memorize.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
-## 兩種濃度別搞混
+<NoteStats tag="溶液與依數性質" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+### 兩種濃度，千萬別搞混
+
+| 名稱 | 符號 | 分母 | 公式 | 單位 | 特性 |
+|---|---|---|---|---|---|
+| **莫耳濃度** | M | 溶液體積 (L) | n / V(溶液) | mol/L | 隨溫度變；配製稀釋常用 |
+| **重量莫耳濃度** | m | 溶劑質量 (kg) | n / kg(溶劑) | mol/kg | 不隨溫度變；依數性質專用 |
+
+重點：依數性質（沸點上升、凝固點下降、滲透壓）的計算**一律用重量莫耳濃度 m**，不用 M。
+
+**換算範例**：把 9 g 葡萄糖（M = 180 g/mol）溶在 0.5 kg 水中。  
+$n = 9/180 = 0.05\ \text{mol}$，$m = 0.05/0.5 = \textbf{0.1 mol/kg}$。
+
+---
+
+### 稀釋定律 M₁V₁ = M₂V₂
+
+稀釋前後**溶質莫耳數不變**：
+
+$$
+M_1 V_1 = M_2 V_2
+$$
+
+例：把 100 mL 的 6 M HCl 用水稀釋至 300 mL，$M_2 = 6 \times 100/300 = \textbf{2 M}$。
+
+---
+
+### 依數性質基礎：只看粒子數，不看種類
+
+「依數」的意思是「只依賴粒子數（莫耳數），不管溶質是什麼種類」。  
+溶質粒子越多，效果越強——這就是為什麼電解質（會解離）影響更大。
+
+**i 因子（van't Hoff factor）**：溶質解離後粒子數的倍數。
+
+| 溶質 | 解離方式 | i（理想值） |
+|---|---|---|
+| 蔗糖（非電解質） | 不解離 | 1 |
+| NaCl | Na⁺ + Cl⁻ | 2 |
+| CaCl₂ | Ca²⁺ + 2 Cl⁻ | 3 |
+| Na₂SO₄ | 2 Na⁺ + SO₄²⁻ | 3 |
+| 弱電解質（如 CH₃COOH） | 部分解離 | 1 < i < 2 |
+
+---
+
+### 三大依數性質公式
+
+**① 沸點上升（ΔTb）**
+
+$$
+\Delta T_b = K_b \cdot m \cdot i
+$$
+
+$K_b$ 是溶劑的沸點上升常數（水：0.512 °C·kg/mol）。溶質讓沸點**升高**。
+
+**② 凝固點下降（ΔTf）**
+
+$$
+\Delta T_f = K_f \cdot m \cdot i
+$$
+
+$K_f$ 是溶劑的凝固點下降常數（水：1.86 °C·kg/mol）。溶質讓凝固點（冰點）**降低**。
+
+**③ 滲透壓（π）**
+
+$$
+\pi = MRT \cdot i
+$$
+
+注意：**這裡的 M 用莫耳濃度**（不是 m）；$R = 0.082\ \text{L·atm/(mol·K)}$，$T$ 用 K。
+
+---
+
+### 蒸氣壓下降（拉午耳定律）
+
+溶液的蒸氣壓比純溶劑**低**：
+
+$$
+P_{\text{溶液}} = \chi_{\text{溶劑}} \times P°_{\text{溶劑}}
+$$
+
+其中 $\chi_{\text{溶劑}}$ 是溶劑的莫耳分率。溶質越多，蒸氣壓越低。
+
+---
+
+### 蒸氣壓 vs 溫度：克勞修斯-克拉佩龍
+
+純液體的**蒸氣壓會隨溫度升高而變大**，兩者的關係是：
+
+$$
+\ln P_{\text{vap}} = -\frac{\Delta H_{\text{vap}}}{R} \cdot \frac{1}{T} + C
+$$
+
+考試考法：**以 $\ln P_{\text{vap}}$ 對 $\dfrac{1}{T}$ 作圖，會得到一條直線**，斜率 $= -\dfrac{\Delta H_{\text{vap}}}{R}$。
+
+- 汽化熱 $\Delta H_{\text{vap}}$ 恆為正（吸熱）→ 斜率 **必為負（< 0）**。
+- 重點只要記：**ln P 對 1/T 是直線、斜率小於 0**，就能答對這類圖形題。
 
 <Memorize>
-<b>莫耳濃度 M</b> = mol / 公升<b>溶液</b>；<b>重量莫耳濃度 m</b> = mol / 公斤<b>溶劑</b>。依數性質用 m。
+依數性質只看粒子數，用<b>重量莫耳濃度 m</b>（滲透壓除外，用 M）。<br />
+一定要乘上 <b>i 因子</b>——NaCl 的 i = 2，CaCl₂ 的 i = 3。<br />
+沸點升高 ΔTb = Kb·m·i；凝固點下降 ΔTf = Kf·m·i；滲透壓 π = MRTi。<br />
+滲透壓問 <b>torr</b> 時：算完 atm 再 <b>×760</b>（1 atm = 760 torr）。<br />
+蒸氣壓對溫度：<b>ln P 對 1/T 作圖為直線，斜率 < 0</b>。
 </Memorize>
 
-## 依數性質（只看粒子數）
+## 重點整理
 
 <KeyPoints items={[
-  "沸點上升 $\\Delta T_b = i\\,K_b\\,m$；凝固點下降 $\\Delta T_f = i\\,K_f\\,m$。",
-  "滲透壓 $\\Pi = iMRT$。",
-  "<b>i（凡特何夫因子）</b>＝解離後粒子數：葡萄糖 i=1、NaCl i=2、CaCl₂ i=3。",
-  "依數性質<b>只看溶質粒子數目，不看種類</b>——同濃度電解質效應更大。",
-  "稀釋公式 M₁V₁ = M₂V₂。"
+  "<b>莫耳濃度 M</b>（mol/L）vs <b>重量莫耳濃度 m</b>（mol/kg 溶劑）：依數性質用 m，稀釋公式用 M。",
+  "<b>稀釋定律 M₁V₁ = M₂V₂</b>：只需要前後濃度和體積，溶質莫耳數不變。",
+  "<b>i 因子</b>：解離後粒子數倍數——非電解質 i=1；強電解質看解離成幾個離子（NaCl→2，CaCl₂→3）。",
+  "<b>ΔTb = Kb·m·i</b>（沸點升高）；水的 Kb = 0.512。粒子越多，沸點越高。",
+  "<b>ΔTf = Kf·m·i</b>（凝固點下降）；水的 Kf = 1.86。汽車防凍液正是利用此原理。",
+  "<b>滲透壓 π = MRTi</b>：注意用莫耳濃度 M 和絕對溫度 T(K)。",
+  "比較不同溶液效果：<b>相同 m 下，i 越大效果越強</b>（CaCl₂ > NaCl > 蔗糖）。",
+  "<b>滲透壓單位陷阱</b>：題目問 torr 就把 atm 的答案 × 760（1 atm = 760 torr）。",
+  "<b>體積百分率 v/v → M</b>：取 1 L 溶液，溶質體積 = 1000 mL × v% → ×密度得質量 → ÷分子量得 mol。",
+  "<b>克勞修斯-克拉佩龍</b>：ln P_vap 對 1/T 作圖為直線、斜率 = −ΔHvap/R < 0。"
 ]} />
 
-<SolveApproach steps={[
-  "先看要的是哪種濃度（依數性質→換成 m）。",
-  "判斷溶質是否電解質 → 定 i（解離粒子數）。",
-  "套對應公式（ΔTb、ΔTf、Π）算，記得乘 i。",
-  "反推題：由凝固點下降算 m → 算莫耳數 → 求分子量。"
-]} />
+## 解題方向
+
+<SolveApproach tag="溶液與依數性質" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="把 HBr 水溶液（重量百分率 48%、密度 1.05 g/cm³，Br 原子量 80）配製，求體積莫耳濃度 M？"
+  options={["18.0 M", "11.6 M", "6.22 M", "5.12 M"]}
+  answer="(C) 6.22 M"
+  steps={[
+    "取 1000 mL（= 1 L）溶液作為計算基準。",
+    "溶液質量 = 1000 mL × 1.05 g/mL = <b>1050 g</b>。",
+    "HBr 質量 = 1050 × 48% = 504 g。",
+    "HBr 莫耳質量 = 1 + 80 = 81 g/mol，n(HBr) = 504/81 ≈ <b>6.22 mol</b>。",
+    "M = 6.22 mol / 1 L = <b>6.22 M</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="將 0.5 mol 非揮發性不解離溶質溶於 3 mol 水中，溶液蒸氣壓與純水蒸氣壓之比為？"
+  options={["1:3", "5:6", "6:7", "3:4"]}
+  answer="(C) 6:7"
+  steps={[
+    "拉午耳定律：P_溶液 = χ_水 × P°_水。",
+    "χ_水 = n_水 / (n_水 + n_溶質) = 3 / (3 + 0.5) = 3/3.5 = <b>6/7</b>。",
+    "P_溶液 / P°_水 = 6/7，比值即 <b>6:7</b>。",
+    "溶質不解離（i=1），不須乘 i 因子。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="在相同重量莫耳濃度 0.01 m 下，下列哪種溶液沸點最高？"
+  options={["蔗糖（非電解質）", "NaCl", "CaCl₂", "醋酸（弱電解質，部分解離）"]}
+  answer="(C) CaCl₂"
+  steps={[
+    "ΔTb = Kb·m·i，m 相同，<b>i 越大沸點升越多</b>。",
+    "蔗糖 i = 1；醋酸 1 < i < 2；NaCl i ≈ 2；CaCl₂ i ≈ 3。",
+    "CaCl₂ 的 i 最大 → 沸點升幅最大 → <b>沸點最高</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="0.1 mol/kg NaCl 水溶液（i = 2）的凝固點下降量 ΔTf 為多少？（Kf = 1.86 °C·kg/mol）"
+  options={["0.093°C", "0.186°C", "0.372°C", "0.744°C"]}
+  answer="(C) 0.372°C"
+  steps={[
+    "ΔTf = Kf × m × i = 1.86 × 0.1 × 2。",
+    "= 1.86 × 0.2 = <b>0.372°C</b>。",
+    "凝固點下降 0.372°C → 實際凝固點 = 0 − 0.372 = −0.372°C。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="25°C 時，0.2 M Na₂SO₄ 溶液（i = 3）的滲透壓為多少 atm？（R = 0.082）"
+  options={["1.48 atm", "4.92 atm", "9.84 atm", "14.76 atm"]}
+  answer="(D) 14.76 atm"
+  steps={[
+    "T = 25 + 273 = 298 K。",
+    "π = M × R × T × i = 0.2 × 0.082 × 298 × 3。",
+    "先算 0.2 × 0.082 × 298 = 0.2 × 24.436 = 4.887。",
+    "再乘 i = 3：4.887 × 3 ≈ <b>14.66 atm</b>，最接近 14.76 atm。",
+    "Na₂SO₄ 解離成 2 Na⁺ + SO₄²⁻ → 3 個粒子 → i = 3。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="27°C 下，0.01 M 氯化鈉（NaCl，i = 2）水溶液的滲透壓約為多少 torr？（R = 0.082；1 atm = 760 torr）"
+  options={["0.49 torr", "15.6 torr", "374 torr", "748 torr"]}
+  answer="(C) 374 torr"
+  steps={[
+    "T = 27 + 273 = 300 K。",
+    "π = M·R·T·i = 0.01 × 0.082 × 300 × 2 = <b>0.492 atm</b>。",
+    "<b>題目要 torr</b> → 換算：0.492 × 760 ≈ <b>374 torr</b>。",
+    "陷阱提醒：算出 atm 後別忘了 ×760；漏換單位會選到完全不同的答案。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="某酒中乙醇的體積百分率為 23%（v/v）。已知乙醇密度 0.80 g/cm³、分子量 46 g/mol。乙醇的體積莫耳濃度（M）約為多少？"
+  options={["0.4 M", "4.0 M", "8.0 M", "12.0 M"]}
+  answer="(B) 4.0 M"
+  steps={[
+    "取 1 L（1000 mL）酒作基準。乙醇體積 = 1000 × 23% = <b>230 mL</b>。",
+    "乙醇質量 = 體積 × 密度 = 230 × 0.80 = 184 g。",
+    "乙醇莫耳數 = 184 / 46 = <b>4.0 mol</b>。",
+    "M = 4.0 mol / 1 L = <b>4.0 M</b>。（v/v 題：先用密度把體積換成質量，再換 mol）"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="關於純水蒸氣壓 P_vap 與絕對溫度 T 的關係，下列敘述何者正確？"
+  options={["ln(P_vap) 對 (1/T) 作圖為直線，斜率 < 0", "ln(P_vap) 對 (1/T) 作圖為直線，斜率 > 0", "P_vap 對 T 作圖為直線，斜率 < 0", "P_vap 對 T 作圖為直線，斜率 > 0"]}
+  answer="(A) ln(P_vap) 對 (1/T) 作圖為直線，斜率 < 0"
+  steps={[
+    "克勞修斯-克拉佩龍：ln P_vap = −(ΔHvap/R)·(1/T) + C。",
+    "這是 y = (斜率)·x + 截距 的形式：y = ln P_vap、x = 1/T。",
+    "斜率 = −ΔHvap/R；汽化熱 ΔHvap > 0 → <b>斜率必為負（< 0）</b>。",
+    "所以「ln P 對 1/T 為直線且斜率 < 0」正確；P 對 T 不是直線（是指數上升）。"
+  ]}
+/>

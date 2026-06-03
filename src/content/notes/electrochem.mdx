@@ -1,39 +1,253 @@
 ---
-title: 電化學：電池電位與電解
+title: 電化學：原電池 vs 電解、Nernst、法拉第一次通透
 subject: chemistry
 tag: 電化學
-summary: 標準電位算電動勢、判自發性，Nernst 修濃度，電解用法拉第算量。
-audio: >
-  電化學複習。電動勢等於陰極還原電位減去陽極還原電位。
-  電動勢大於零反應自發，可放電。
-  陽極氧化、陰極還原。原電池陽極是負極，電解槽陽極是正極。
-  Nernst 方程式修正非標準濃度下的電位。
-  電解計算用法拉第定律，電量等於電流乘時間，一莫耳電子是 96500 庫侖。
+summary: 搞懂陽極氧化陰極還原，用 E°cell = E°陰 − E°陽 判斷自發，再掌握 Nernst 方程式與法拉第計算，電化學全題型制霸。
 draft: false
 ---
+import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Chem from '@/components/notes/Chem.svelte'
 
-## 核心關係
+<NoteStats tag="電化學" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+**① 原電池 vs 電解池：核心差異**
+
+| 特性 | 原電池（Galvanic Cell） | 電解池（Electrolytic Cell） |
+|---|---|---|
+| 能量轉換 | 化學能 → 電能 | 電能 → 化學能 |
+| 反應 | 自發（ΔG < 0） | 非自發（需外加電源） |
+| 陽極（anode） | 負極，發生氧化 | 正極，發生氧化 |
+| 陰極（cathode） | 正極，發生還原 | 負極，發生還原 |
+| 例子 | 電池（Zn-Cu 電池） | 電鍍、電解水 |
+
+**不管哪種**：**陽極一定氧化、陰極一定還原**（OAR CAR：Oxidation At anode, Reduction At Cathode）。
+
+**② 標準電極電位 E° 與電池電位**
+
+$$
+E°_{\text{cell}} = E°_{\text{陰（cathode）}} - E°_{\text{陽（anode）}}
+$$
+
+- $E°_{\text{cell}} > 0$ → 反應自發
+- $E°_{\text{cell}} < 0$ → 反應非自發（需電解）
+- $E°_{\text{cell}}$ 與 ΔG 的關係：
+
+$$
+\Delta G° = -nFE°_{\text{cell}}
+$$
+
+其中 $n$ = 轉移電子莫耳數，$F$ = 法拉第常數 ≈ 96500 C/mol（約 96500 庫倫每莫耳電子）。
+
+**這條超常考**：給你 E°cell（或一堆半反應 E°）和 n，要你算 ΔG°。算出來單位是焦耳（J），題目選項常用 kJ，**記得 ÷1000**。  
+判斷自發三件套是等價的：
+
+$$
+E°_{\text{cell}} > 0 \iff \Delta G° < 0 \iff K > 1 \quad(\text{反應自發})
+$$
+
+**常用 E° 標準值（25°C，vs SHE）：**
+
+| 半反應（還原方向） | E°（V） |
+|---|---|
+| F₂ + 2e⁻ → 2F⁻ | +2.87 |
+| MnO₄⁻ + 8H⁺ + 5e⁻ → Mn²⁺ + 4H₂O | +1.51 |
+| Cl₂ + 2e⁻ → 2Cl⁻ | +1.36 |
+| O₂ + 4H⁺ + 4e⁻ → 2H₂O | +1.23 |
+| Cu²⁺ + 2e⁻ → Cu | +0.34 |
+| 2H⁺ + 2e⁻ → H₂ | 0.00（定義） |
+| Zn²⁺ + 2e⁻ → Zn | −0.76 |
+
+E° 越大 → 越容易被還原 → 越強的氧化劑。
+
+**③ Nernst 方程式（非標準條件）**
+
+當溫度或濃度偏離標準狀態時：
+
+$$
+E = E° - \frac{RT}{nF}\ln Q \approx E° - \frac{0.0592}{n}\log Q \quad \text{（25°C）}
+$$
+
+- $Q$ = 反應商（與計算 K 的方式相同，用當前濃度）
+- 若 $Q < 1$，$\log Q < 0$，$E > E°$（電池電位更大）
+- 平衡時 $E = 0$，此時 $Q = K$
+
+$$
+E° = \frac{0.0592}{n}\log K \quad \text{（25°C）}
+$$
+
+**④ 法拉第電解計算**
+
+$$
+\text{沉積質量} = \frac{I \times t}{n \times F} \times M
+$$
+
+其中：
+- $I$ = 電流（安培 A）
+- $t$ = 時間（秒 s）
+- $I \times t$ = 電量（庫倫 C）
+- $n$ = 每個原子沉積需要的電子數
+- $F$ ≈ 96500 C/mol
+- $M$ = 莫耳質量（g/mol）
+
+步驟：電量（C）→ 電子莫耳數 → 沉積物莫耳數 → 質量（g）
 
 <Memorize>
-<b>E°<sub>cell</sub> = E°(陰極) − E°(陽極)</b>；<b>E°<sub>cell</sub> &gt; 0 → 自發</b>（$\Delta G = -nFE$）。
+原電池：化學能→電能（自發）；電解池：電能→化學能（非自發）。<br />
+<b>陽極氧化、陰極還原</b>（不管原電池還是電解池都一樣）。<br />
+E°cell = E°陰 − E°陽；E°cell &gt; 0 表示自發；ΔG° = −nFE°cell。
 </Memorize>
 
-## 必背重點
+## 重點整理
 
 <KeyPoints items={[
-  "<b>陽氧陰還</b>：陽極氧化、陰極還原（任何電池都成立）。",
-  "原電池（放電）：陽極=負極、陰極=正極；電解槽：陽極=正極、陰極=負極。",
-  "還原電位越大 → 越易被還原（氧化力強）；越小 → 越易被氧化。",
-  "<b>Nernst</b>：$E = E^\\circ - \\frac{0.0592}{n}\\log Q$（25°C），濃度偏離標準時用。",
-  "<b>法拉第</b>：Q = It；1 mol e⁻ = 96500 C；析出量 ∝ 通過電子莫耳數。"
+  "<b>陽極氧化、陰極還原（OAR CAR）</b>：不管原電池或電解池，此規律不變。",
+  "<b>E°cell = E°陰 − E°陽</b>：E° 大的當陰極（被還原）；E° 小的當陽極（被氧化）。",
+  "<b>自發判斷</b>：E°cell &gt; 0 ↔ ΔG° &lt; 0 ↔ K &gt; 1，三者等價。",
+  "<b>ΔG° = −nFE°cell</b>：算出來是焦耳，題目給 kJ 要 ÷1000；放電中的電池 ΔG &lt; 0、E &gt; 0。",
+  "<b>Nernst 方程式</b>（25°C）：E = E° − (0.0592/n)×log Q；Q 增大 E 減小。",
+  "<b>法拉第計算</b>：電量（C）= I × t；電子莫耳 = C / 96500；質量 = 莫耳 × M / n（n為電荷數）。",
+  "<b>電解水</b>：陰極產生 H₂（2H⁺ + 2e⁻ → H₂）；陽極產生 O₂（2H₂O → O₂ + 4H⁺ + 4e⁻）。",
+  "<b>鉛蓄電池</b>（汽車電池）放電：陽極 Pb、陰極 PbO₂；全反應 Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O，E°≈+2.04 V，可充電。"
 ]} />
 
-<SolveApproach steps={[
-  "查標準還原電位 → 大的當陰極（還原）、小的當陽極（氧化）。",
-  "E°cell = E°陰 − E°陽；>0 自發。",
-  "非標準濃度 → 用 Nernst 修正。",
-  "電解析出量：算電量 Q=It → 換電子莫耳 → 依半反應算質量/體積。"
-]} />
+## 解題方向
+
+<SolveApproach tag="電化學" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="下列電化學電池：Zn(s) | Zn²⁺(aq) ‖ Cu²⁺(aq) | Cu(s)，已知 E°(Cu²⁺/Cu) = +0.34 V，E°(Zn²⁺/Zn) = −0.76 V。標準電池電位 E°cell 為多少？"
+  options={[
+    "−1.10 V",
+    "−0.42 V",
+    "+0.42 V",
+    "+1.10 V"
+  ]}
+  answer="(D) +1.10 V"
+  steps={[
+    "判斷陰陽極：E° 較大的作陰極（被還原），E° 較小的作陽極（被氧化）。",
+    "Cu²⁺/Cu 的 E° = +0.34 V（較大）→ <b>陰極</b>：Cu²⁺ + 2e⁻ → Cu。",
+    "Zn²⁺/Zn 的 E° = −0.76 V（較小）→ <b>陽極</b>：Zn → Zn²⁺ + 2e⁻。",
+    "E°cell = E°陰 − E°陽 = 0.34 − (−0.76) = 0.34 + 0.76 = <b>+1.10 V</b>。",
+    "E°cell > 0 → 反應自發 → 這是原電池（鋅銅電池）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="在 Zn-Cu 電池中（E°cell = +1.10 V，n = 2），若 [Zn²⁺] = 0.10 M、[Cu²⁺] = 1.0 M，25°C 時實際電池電位 E 為多少？"
+  options={[
+    "1.07 V",
+    "1.10 V",
+    "1.13 V",
+    "1.16 V"
+  ]}
+  answer="(C) 約 1.13 V"
+  steps={[
+    "整體反應：Zn + Cu²⁺ → Zn²⁺ + Cu，Q = [Zn²⁺]/[Cu²⁺] = 0.10/1.0 = 0.10。",
+    "Nernst 方程式（25°C）：E = E° − (0.0592/n) × log Q。",
+    "E = 1.10 − (0.0592/2) × log(0.10) = 1.10 − 0.0296 × (−1)。",
+    "E = 1.10 + 0.0296 ≈ <b>1.13 V</b>。",
+    "直覺：Cu²⁺ 濃度高、Zn²⁺ 濃度低（Q < 1），反應傾向更大 → E > E°，合理。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="電解 CuSO₄ 水溶液，以 2.0 A 電流通電 965 秒，陰極沉積多少克的銅？（Cu 原子量 = 63.5 g/mol，F = 96500 C/mol）"
+  options={[
+    "0.318 g",
+    "0.635 g",
+    "1.27 g",
+    "2.54 g"
+  ]}
+  answer="(B) 0.635 g"
+  steps={[
+    "計算總電量：Q = I × t = 2.0 A × 965 s = 1930 C。",
+    "電子莫耳數：n(e⁻) = 1930 C / 96500 C/mol = 0.0200 mol。",
+    "Cu²⁺ + 2e⁻ → Cu，每沉積 1 mol Cu 需要 2 mol e⁻。",
+    "沉積 Cu 的莫耳數 = 0.0200 / 2 = 0.0100 mol。",
+    "質量 = 0.0100 mol × 63.5 g/mol = <b>0.635 g</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="關於原電池與電解池的比較，下列何者<b>正確</b>？"
+  options={[
+    "原電池的陽極是正極，電解池的陽極也是正極",
+    "原電池的陰極發生還原反應，電解池的陰極發生氧化反應",
+    "兩種電池的陽極都發生氧化反應",
+    "電解池可用於自發的氧化還原反應"
+  ]}
+  answer="(C) 兩種電池的陽極都發生氧化反應"
+  steps={[
+    "A 錯：原電池陽極是<b>負極</b>（電子流出），電解池陽極是<b>正極</b>（接電源正端）。",
+    "B 錯：兩種電池的陰極都發生<b>還原</b>反應（陰極一定還原，不變）。",
+    "C 正確：<b>陽極一定氧化</b>（OAR），不管是原電池或電解池都成立。",
+    "D 錯：電解池用於<b>非自發</b>的反應，需要外加電源驅動。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="若某電化學反應 E°cell = +0.592 V，轉移電子數 n = 2，在 25°C 下，平衡常數 K 為何？（0.0592 V 的常用對數關係：E° = 0.0592/n × log K）"
+  options={[
+    "K = 10",
+    "K = 100",
+    "K = 10²⁰",
+    "K = 10⁻²⁰"
+  ]}
+  answer="(C) K = 10²⁰"
+  steps={[
+    "由 Nernst 推導：在平衡時 E = 0，可得 E° = (0.0592/n) × log K。",
+    "代入：0.592 = (0.0592/2) × log K = 0.0296 × log K。",
+    "log K = 0.592 / 0.0296 = 20。",
+    "K = 10²⁰。",
+    "直覺：E°cell 越大 → K 越大 → 反應越傾向完全進行。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="汽車鉛蓄電池放電的全反應為 Pb + PbO₂ + 2H₂SO₄ → 2PbSO₄ + 2H₂O，E° = +2.04 V（轉移 n = 2 個電子）。25°C 時此反應的 ΔG° 約為多少？（F = 96500 C/mol）"
+  options={[
+    "−98 kJ",
+    "−197 kJ",
+    "−394 kJ",
+    "−591 kJ"
+  ]}
+  answer="(C) −394 kJ"
+  steps={[
+    "套公式：ΔG° = −nFE°cell。",
+    "代入：ΔG° = −(2)(96500 C/mol)(2.04 V) = −393720 J。",
+    "換算成 kJ：÷1000 → <b>−394 kJ</b>。",
+    "ΔG° &lt; 0 → 放電是自發反應（化學能變電能），符合電池會自己供電。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="關於正在「放電（供電）」中的伏打電池（原電池），下列何者正確？"
+  options={[
+    "ΔG > 0、E < 0",
+    "ΔG = 0、E = 0",
+    "ΔG < 0、E > 0",
+    "ΔG > 0、E > 0"
+  ]}
+  answer="(C) ΔG < 0、E > 0"
+  steps={[
+    "原電池放電 = 自發反應，把化學能變電能。",
+    "自發 → <b>ΔG &lt; 0</b>；同時電池對外有電壓推電流 → <b>E &gt; 0</b>。",
+    "（ΔG = 0、E = 0 是「電池用完、達平衡」的狀態，那時就不再供電。）",
+    "由 ΔG = −nFE 也看得出：E &gt; 0 必然 ΔG &lt; 0，兩者同號相反、永遠一致。"
+  ]}
+/>

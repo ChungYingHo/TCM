@@ -1,0 +1,260 @@
+---
+title: 有機反應與機構：SN1/SN2/E1/E2 判斷 + Markovnikov + 聚合
+subject: chemistry
+tag: 有機反應與機構
+summary: 看清楚「取代/加成/消去」再問「親核還是親電」——機構題不再憑感覺。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Chem from '@/components/notes/Chem.svelte'
+
+<NoteStats tag="有機反應與機構" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+### ① 三大有機反應類型
+
+| 反應類型 | 發生了什麼 | 典型例子 |
+|---|---|---|
+| **取代（Substitution）** | 一個原子/基被另一個取代，碳骨架不變 | 鹵烷 + NaOH → 醇 |
+| **加成（Addition）** | 雙鍵/三鍵打開，兩側各加一個基 | 乙烯 + HBr → 溴乙烷 |
+| **消去（Elimination）** | 相鄰兩碳各少一個原子/基，形成雙鍵 | 鹵烷 + KOH（醇性）→ 烯 |
+
+### ② 親核試劑 vs 親電試劑
+
+| 角色 | 特徵 | 例子 |
+|---|---|---|
+| **親核試劑（Nu）** | 帶負電或有孤電子對，**給電子** | OH⁻、CN⁻、NH₃、H₂O、I⁻ |
+| **親電試劑（E⁺）** | 缺電子，**搶電子** | H⁺、Br⁺（Br₂/光）、NO₂⁺、碳正離子 |
+
+### ③ SN1 / SN2 / E1 / E2 比較表
+
+| | **SN2** | **SN1** | **E2** | **E1** |
+|---|---|---|---|---|
+| **步驟** | 一步（協同） | 兩步（先離，再進） | 一步 | 兩步 |
+| **速率決定步** | 底物＋親核劑 | 僅底物（碳正離子生成） | 底物＋鹼 | 僅底物 |
+| **立體化學** | 構型**反轉**（Walden 翻轉） | **外消旋化** | 反式消去（anti） | 無特定 |
+| **碳級偏好** | **1° 最佳**（空間阻礙小） | **3° 最佳**（碳正離子穩定） | **3° 或強鹼** | 3°（弱鹼） |
+| **促進條件** | 強親核劑、非質子極性溶劑 | 弱親核劑、質子極性溶劑 | 強鹼（t-BuO⁻） | 熱、弱鹼 |
+
+**快速判斷口訣**：
+
+1. 看**碳的級數**（1°/2°/3°）
+2. 看**親核劑強弱**（強 → S N2 或 E2；弱 → SN1 或 E1）
+3. 看**鹼的大小**（體積大強鹼 → E2；小強鹼 → SN2）
+4. 看**溶劑**（質子性 → SN1/E1；非質子性 → SN2/E2）
+
+### ④ Markovnikov 加成規則
+
+$$
+\text{烯烴} + \text{HX} \rightarrow \text{H 加到含 H 較多的碳，X 加到含 H 較少的碳}
+$$
+
+**記法**：「H 跟 H 在一起（rich gets richer）」；或說：**X 加到比較穩定的碳正離子位置**（碳正離子越穩定越好 → 3° > 2° > 1°）。
+
+反 Markovnikov（過氧化物條件，自由基機構）：Br 加到 H 多的碳。
+
+### ⑤ 加成反應速覽
+
+| 試劑 | 反應 | 產物 |
+|---|---|---|
+| HX | 親電加成 | 鹵烷（Markovnikov） |
+| Br₂/CCl₄ | 親電加成（溴化） | 鄰二溴烷（trans） |
+| H₂O / H⁺ | 親電加成（水合） | 醇（Markovnikov） |
+| H₂ / Ni | 催化氫化 | 烷烴（syn 加成） |
+| mCPBA | 環氧化 | 環氧化物（epoxide） |
+| KMnO₄（冷稀） | 鄰二醇化 | 鄰二醇（syn） |
+| O₃ / Zn | 臭氧分解 | 兩個羰基化合物 |
+
+### ⑥ 聚合反應（高分子）
+
+| 類型 | 機構 | 例子 |
+|---|---|---|
+| **加成聚合** | 雙鍵打開，單體直接鏈接，無副產物 | 乙烯 → 聚乙烯（PE）、苯乙烯 → PS |
+| **縮合聚合** | 兩官能基反應，**脫去小分子**（H₂O、HCl 等） | 二胺＋二酸 → 耐綸（nylon）；二醇＋二酸 → 聚酯（PET） |
+
+### ⑦ 親核性強弱（考很愛考「順序」）
+
+「親核性」＝給電子搶碳的能力，跟溶劑有關，這是判斷反應快慢與選 SN1/SN2 的關鍵：
+
+- **質子性溶劑（水、醇）中**：陰離子會被溶劑用氫鍵包住。越小越被包緊、越難出手；**越大越自由 → 親核性越強**。所以鹵素：**I⁻ ＞ Br⁻ ＞ Cl⁻ ＞ F⁻**。
+- **非質子極性溶劑（丙酮、DMSO）中**：沒有氫鍵束縛，回歸「鹼性大者親核性強」→ 順序**反過來**：F⁻ ＞ Cl⁻ ＞ Br⁻ ＞ I⁻。
+- 同一週期比較：帶負電 ＞ 中性（OH⁻ ＞ H₂O）；越偏左、電負度越小越親核（往往）。
+
+### ⑧ 烯烴氧化／裂解（一張表記產物）
+
+| 試劑 | 對 C=C 做什麼 | 產物（關鍵） |
+|---|---|---|
+| **mCPBA** | 環氧化（不切斷） | 環氧化物（epoxide）；再加 **H₃O⁺/酸水** → 開環成 **反式鄰二醇（anti-diol）** |
+| **冷稀 KMnO₄ / OsO₄** | 不切斷 | **順式鄰二醇（syn-diol）** |
+| **熱濃 KMnO₄（過量、鹼性）** | **切斷 C=C** | 端點 =CH₂ → CO₂；=CHR → 羧酸 RCOOH；=CR₂ → 酮 R₂C=O |
+| **O₃ / Zn（或 Me₂S）** | **切斷 C=C** | 還原性處理 → 兩個醛/酮（不再氧化成酸） |
+
+> mCPBA → 開環得 **anti**（反式）；KMnO₄/OsO₄ 直接得 **syn**（順式）——同一條雙鍵兩條路、立體相反，是常考對比。
+
+### ⑨ 形成 C–C 鍵 / 環的「名反應」速辨
+
+機構題常問「下列何者**能/不能**形成六員環、何者形成 C–C 鍵」：
+
+| 名反應 | 做什麼 | 產物 |
+|---|---|---|
+| **羥醛縮合 Aldol** | 兩個羰基化合物（α-H）接起來 | β-羥基醛/酮 → 脫水成烯醛/烯酮 |
+| **Claisen / Dieckmann** | 兩個酯（Dieckmann ＝分子內）接起來 | β-酮酯（可成環） |
+| **Diels–Alder** | 雙烯 ＋ 親雙烯體 [4+2] | **六員環**（一步成環，立體專一） |
+| **Robinson 環化** | Michael 加成 ＋ 分子內 aldol | **六員環**酮 |
+| **Sandmeyer** | 重氮鹽（Ar–N₂⁺）換成 –Cl/–Br/–CN | 取代苯，**不形成環、不接 C–C 骨架成環** |
+
+> 口訣：Aldol / Claisen / Diels–Alder / Robinson 都在「接碳成環」；**Sandmeyer 只是把重氮基換掉**，不是用來建環的。
+
+<Memorize>
+SN2：<b>1° 碳 ＋ 強親核劑 ＋ 非質子溶劑</b> → 構型反轉。<br />
+SN1：<b>3° 碳 ＋ 弱親核劑 ＋ 質子溶劑</b> → 外消旋化。<br />
+Markovnikov：<b>H 加到 H 多的碳；X 加到 H 少的碳</b>。<br />
+質子溶劑親核性：<b>I⁻ ＞ Br⁻ ＞ Cl⁻ ＞ F⁻</b>（大者強）；非質子溶劑反過來。<br />
+切雙鍵：<b>熱濃 KMnO₄ →羧酸/酮/CO₂；O₃/Zn →醛+酮</b>。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "SN2 是<b>一步反應</b>，速率 = k[底物][Nu]；碳構型反轉（Walden inversion）。",
+  "SN1 是<b>兩步反應</b>，速率 = k[底物]；碳正離子中間體 → 外消旋（racemization）。",
+  "E2 需要<b>強鹼、反式氫（anti periplanar）</b>；E1 只要形成碳正離子，熱即可。",
+  "Zaitsev 規則：E 反應主要消去 H<b>最少的相鄰碳上的 H</b>（生成取代最多的烯）；Hofmann 規則相反（用於胺的四級鹽）。",
+  "Markovnikov 加成中，過氧化物（ROOR）存在時 Br 自由基機構發生，Br <b>反 Markovnikov</b> 加到末端碳。",
+  "加成聚合無副產物；縮合聚合脫去 H₂O 或 HCl，需<b>兩端各有官能基</b>的單體。",
+  "碳正離子穩定性：3° > 2° > 1° > CH₃⁺；烯丙型/苯甲型（allylic/benzylic）因共振特別穩定。",
+  "<b>親核性</b>：質子溶劑中 I⁻>Br⁻>Cl⁻>F⁻（大者外層鬆、易出手）；非質子溶劑中順序<b>反過來</b>（回歸鹼性）。",
+  "<b>mCPBA</b> →環氧化物，再酸水開環得<b>反式鄰二醇</b>；<b>冷稀 KMnO₄/OsO₄</b> 直接得<b>順式鄰二醇</b>。",
+  "<b>熱濃 KMnO₄（過量）切斷 C=C</b>：=CH₂→CO₂、=CHR→RCOOH、=CR₂→R₂C=O；O₃/Zn 則只到醛/酮。",
+  "成 C–C 鍵/環的名反應：Aldol、Claisen/Dieckmann、Diels–Alder（[4+2] 六員環）、Robinson；<b>Sandmeyer 不建環</b>（只換重氮基）。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="有機反應與機構" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="(CH₃)₃CBr 與 NaOH 在乙醇水溶液（質子溶劑）中反應，最可能的機構為何？"
+  options={["SN2，構型反轉", "SN1，外消旋化", "E2，主要生成烯", "E1，生成碳正離子再消去"]}
+  answer="(B) SN1，外消旋化"
+  steps={[
+    "(CH₃)₃CBr 是<b>3° 鹵烷</b>，空間阻礙大，不利 SN2 的背面攻擊。",
+    "質子溶劑（乙醇水溶液）穩定碳正離子（(CH₃)₃C⁺），有利<b>SN1</b>。",
+    "SN1：先慢步離去 Br⁻ 形成 3° 碳正離子（速率決定步），再由 OH⁻ 從兩面進攻 → <b>外消旋化</b>（若原來是手性中心）。",
+    "NaOH 雖是強鹼，但 3° 碳的空間阻礙使 E2 不是主要路徑；在此條件下 SN1 優先。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="丙烯（CH₂=CHCH₃）與 HBr 在無過氧化物條件下反應，主要產物為何？"
+  options={["1-溴丙烷 CH₃CH₂CH₂Br", "2-溴丙烷 CH₃CHBrCH₃", "等量 1-溴丙烷和 2-溴丙烷", "1,2-二溴丙烷"]}
+  answer="(B) 2-溴丙烷 CH₃CHBrCH₃"
+  steps={[
+    "無過氧化物 → 離子機構（親電加成），遵循 <b>Markovnikov 規則</b>。",
+    "H⁺ 先加到含 H 較多的碳（C1，有兩個 H）→ 中間體為 <b>2° 碳正離子</b> CH₃C⁺HCH₃（比 1° 穩定）。",
+    "Br⁻ 再攻擊 2° 碳正離子 → 主產物 CH₃CHBrCH₃（2-溴丙烷）。",
+    "若有過氧化物則為自由基機構，Br 加到 C1 → 1-溴丙烷（反 Markovnikov）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="下列何者在 SN2 反應中速率最快（以 NaI/丙酮為試劑）？"
+  options={["(CH₃)₃CCl（3° 鹵烷）", "(CH₃)₂CHCl（2° 鹵烷）", "CH₃CH₂Cl（1° 鹵烷）", "CH₃Cl（methyl）"]}
+  answer="(D) CH₃Cl（methyl）"
+  steps={[
+    "SN2 速率受<b>空間阻礙</b>影響最大：親核劑需從背面直線進攻。",
+    "空間阻礙由小到大：CH₃X（methyl）< 1°（一個取代基）< 2° < 3°。",
+    "所以 SN2 速率：methyl > 1° > 2° >> 3°（幾乎不反應）。",
+    "答案 D（CH₃Cl）空間阻礙最小 → SN2 最快。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="下列哪一對單體（monomer）可透過縮合聚合（condensation polymerization）生成耐綸（nylon）？"
+  options={["CH₂=CH₂ 與 CH₂=CH₂", "H₂N(CH₂)₆NH₂ 與 HOOC(CH₂)₄COOH", "CH₂=CHCN 單一單體", "HOCH₂CH₂OH 單一單體"]}
+  answer="(B) H₂N(CH₂)₆NH₂ 與 HOOC(CH₂)₄COOH"
+  steps={[
+    "耐綸（nylon-6,6）是<b>縮合聚合</b>：二胺（兩端有 –NH₂）與二羧酸（兩端有 –COOH）反應，脫去 H₂O，形成醯胺鍵（–CO–NH–）。",
+    "H₂N(CH₂)₆NH₂（己二胺，6 個 C）+ HOOC(CH₂)₄COOH（己二酸，6 個 C）→ <b>nylon-6,6</b>。",
+    "A 是加成聚合（乙烯 → 聚乙烯）；C 是加成聚合（丙烯腈 → 腈綸）；D 單一單體且只有一個 OH，無法縮合聚合。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="E2 消去反應的最佳條件是？"
+  options={["弱鹼、質子溶劑、室溫", "強鹼（如 t-BuO⁻）、1° 鹵烷", "強鹼、3° 鹵烷、高溫", "強親核劑、非質子溶劑"]}
+  answer="(C) 強鹼、3° 鹵烷、高溫"
+  steps={[
+    "E2 是<b>二分子消去</b>，一步反應，速率 = k[底物][鹼]。",
+    "需要<b>強鹼</b>（如 KOH/醇性、NaOEt、t-BuO⁻）拔取 β-H，同時 X⁻ 離去。",
+    "3° 鹵烷 + 強鹼有利 E2（空間阻礙使取代反應受阻，消去更有利）。",
+    "高溫有利消去（熵增大，生成烯）；室溫低溫有利取代（SN）。",
+    "D 描述的是 SN2 的條件，不是 E2。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="四種鹵素陰離子在質子性溶劑（如水/醇）中，親核性（nucleophilicity）由強到弱的順序為何？"
+  options={[
+    "F⁻ ＞ Cl⁻ ＞ Br⁻ ＞ I⁻",
+    "I⁻ ＞ Br⁻ ＞ Cl⁻ ＞ F⁻",
+    "Cl⁻ ＞ Br⁻ ＞ F⁻ ＞ I⁻",
+    "F⁻ ＞ I⁻ ＞ Br⁻ ＞ Cl⁻"
+  ]}
+  answer="(B) I⁻ ＞ Br⁻ ＞ Cl⁻ ＞ F⁻"
+  steps={[
+    "質子性溶劑會用<b>氫鍵把陰離子包住（溶劑化）</b>，被包越緊越難出手攻擊。",
+    "離子越小、電荷越集中 → 被包越緊：F⁻ 最小被包最緊、最不親核；I⁻ 最大最鬆、最自由。",
+    "所以質子溶劑中：<b>I⁻ ＞ Br⁻ ＞ Cl⁻ ＞ F⁻</b>（與鹼性順序相反）。",
+    "提醒：若改成<b>非質子極性溶劑</b>（丙酮、DMSO），沒有氫鍵束縛，順序<b>反過來</b> F⁻ ＞ Cl⁻ ＞ Br⁻ ＞ I⁻。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="2-甲基-2-丁烯（(CH₃)₂C=CHCH₃）以過量的熱濃鹼性 KMnO₄ 氧化，C=C 被切斷，主要產物為何？"
+  options={[
+    "一個環氧化物（epoxide）",
+    "一個順式鄰二醇",
+    "丙酮（(CH₃)₂C=O）＋ 乙酸（CH₃COOH）",
+    "兩個醛"
+  ]}
+  answer="(C) 丙酮 ＋ 乙酸"
+  steps={[
+    "<b>熱濃過量 KMnO₄ 會切斷 C=C</b>，並把碎片氧化到最高（酸/酮/CO₂）。",
+    "雙鍵左側 =C(CH₃)₂（兩個烷基、無 H）→ 切斷後成<b>酮</b>：(CH₃)₂C=O（丙酮）。",
+    "雙鍵右側 =CH(CH₃)（有一個 H）→ 切斷後氧化成<b>羧酸</b>：CH₃COOH（乙酸）。",
+    "對比：若用 mCPBA 只會環氧化（A）、冷稀 KMnO₄ 得順式鄰二醇（B）、O₃/Zn 則停在醛酮不會把含 H 端氧化成酸（D 形式但本題含烷基端是酮）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="下列名反應中，何者『不是』用來形成碳—碳鍵或建立新環的反應？"
+  options={[
+    "羥醛縮合（Aldol condensation）",
+    "Diels–Alder 反應",
+    "Dieckmann 縮合",
+    "Sandmeyer 反應"
+  ]}
+  answer="(D) Sandmeyer 反應"
+  steps={[
+    "Aldol：兩個含 α-H 的羰基化合物接成 C–C 鍵（β-羥基醛酮）。",
+    "Diels–Alder：雙烯＋親雙烯體 [4+2]，一步形成<b>六員環</b>（最常考的成環法）。",
+    "Dieckmann：分子內 Claisen，兩個酯接起來成環（β-酮酯）。",
+    "<b>Sandmeyer</b>：把芳香重氮鹽 Ar–N₂⁺ 換成 –Cl/–Br/–CN，只是<b>取代官能基</b>，不建立新環或新 C–C 骨架。答案 D。"
+  ]}
+/>

@@ -1,0 +1,176 @@
+---
+title: 關係代名詞與子句：who/whom/whose/which/that 選對不再猜
+subject: english
+tag: 文法：子句與關係代名詞
+summary: 搞清楚主格/受格/所有格的選用邏輯，再分清楚名詞子句和副詞子句，填空再也不憑感覺。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="文法：子句與關係代名詞" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+**① 關係代名詞：五個一次看清楚**
+
+關係代名詞的功能是「把兩個句子合併」，同時取代先行詞（antecedent）。選哪一個，看兩件事：**先行詞是人還是物**、**在子句中是主格/受格/所有格**。
+
+| 關代 | 先行詞 | 在子句中的格 | 例句 |
+|---|---|---|---|
+| **who** | 人 | 主格（做主詞） | the doctor **who** treated me |
+| **whom** | 人 | 受格（做受詞） | the doctor **whom** I saw |
+| **whose** | 人或物 | 所有格 | a student **whose** notes are clear |
+| **which** | 物/動物 | 主格或受格 | the drug **which** was approved |
+| **that** | 人或物 | 主格或受格（不能用於非限定子句） | the first study **that** confirmed this |
+
+> 判斷格位的方法：把關係子句單獨拿出來，看空格位置是不是**缺主詞**（→主格）還是**缺受詞**（→受格）。
+
+**② 限定 vs 非限定關係子句**
+
+| | 特徵 | 是否可用 that |
+|---|---|---|
+| **限定（defining）** | 無逗號，界定是哪一個 | 可用 |
+| **非限定（non-defining）** | 有逗號，補充說明 | **不可用 that** |
+
+例：The researchers, **whom** we admire, published the paper.（非限定，有逗號，且 whom 在子句中作受詞）
+
+**③ 名詞子句 vs 副詞子句**
+
+| 類型 | 功能 | 引導詞 |
+|---|---|---|
+| **名詞子句** | 做主詞、受詞、補語 | that, whether, wh- 疑問詞（what/why/how…） |
+| **副詞子句** | 修飾動詞，表時間/原因/條件等 | when, because, although, if, unless… |
+
+常考陷阱：
+- "I don't know **why** …"（名詞子句，why 帶出間接問句）
+- "Even professionals are never sure **why** some products succeed"（sure 後接 why 名詞子句）
+- **what 可當「限定詞」**：what 後面直接接名詞，意思是「什麼樣的／哪些」。例：scientists learn **what forms of life** thrived（學到「哪些」生命形態曾繁盛）——what 同時引導名詞子句又當該名詞的限定詞。
+
+**④ 介系詞 + 關係代名詞（in which / at which / of which…）**
+
+當關係子句裡的動詞或片語需要一個介系詞時，介系詞要連同關代一起搬到先行詞後面，且**介系詞後只能接 which（物）或 whom（人）**：
+
+- a task **in which** they were required to add phonemes（＝ a task they were required to add phonemes **in**）
+- the building **in which** he lives／the manner **in which** it works
+
+> 判斷哪個介系詞：把子句還原成完整句，看原本動詞搭配哪個介系詞（work **in** a manner → in which；rely **on** it → on which）。「the way / the manner / a situation + in which」是高頻組合。
+
+**⑤ 省略關係子句（Reduced Relative Clause）——關代＋be 一起省略**
+
+「關係代名詞＋be 動詞」常被一起省略，只留下分詞，當形容詞修飾前面的名詞：
+
+| 完整 | 省略後 |
+|---|---|
+| the methods **that are used** in research | the methods **used** in research（被動 → p.p.） |
+| the man **who is standing** there | the man **standing** there（主動 → V-ing） |
+
+所以看到名詞後面直接接 **p.p.**（被動意味）或 **V-ing**（主動意味），多半是省略關係子句。
+
+**⑥ which 指代「整個前句」**
+
+非限定的 which 不一定指單一名詞，可指**前面整件事**，再對它補充說明：
+
+- Unemployment rose, **which** in turn acted as a brake on wage growth.（which＝失業上升這整件事）
+
+<Memorize>
+關係代名詞選用口訣：<b>先行詞是人用 who/whom/whose；是物用 which/whose；that 人物皆可但非限定子句不用。</b><br />
+格位判斷：子句缺主詞 → <b>主格（who/which/that）</b>；子句缺受詞 → <b>受格（whom/which/that）</b>；修飾名詞 → <b>所有格（whose）</b>。<br />
+介系詞後的關係代名詞<b>只能用 whom 或 which</b>（of whom / of which / in which），不能用 that 或 who。<br />
+名詞後直接接 <b>p.p.（被動）或 V-ing（主動）</b> = <b>省略關係子句</b>（the methods used = the methods that are used）。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>of whom / of which</b>：前面接數量詞時（many of whom, most of which），一定用 whom（人）或 which（物），不能用 that。",
+  "<b>whose</b>：後面接名詞（whose + N），表所有。先行詞可以是人或事物（a building whose walls are thick）。",
+  "<b>名詞子句引導詞</b>：that（不問問題）/ whether（是否）/ wh- 詞（問內容）；that 引導名詞子句時不能省略於句首。",
+  "<b>間接問句語序</b>：疑問詞引導的名詞子句用<b>直述語序（S + V）</b>，不倒裝——I wonder <b>where he is</b>.（不是 where is he）。",
+  "<b>副詞子句</b>：when/while/after/before（時間）、because/since/as（原因）、although/even though（讓步）、if/unless（條件）。",
+  "<b>複合關係代名詞</b> what = the thing(s) that，做名詞子句（<b>What</b> he said was wrong.）；what 也可當限定詞接名詞（learn <b>what forms</b> of life thrived）；注意 what 不能用 that 代替。",
+  "<b>介系詞 + which/whom</b>：the way / the manner / a task <b>in which</b>；rely on → <b>on which</b>；介系詞後不可接 that/who。",
+  "<b>省略關係子句</b>：名詞後直接接 p.p.（被動，methods <b>used</b> in…）或 V-ing（主動，the man <b>standing</b>…）= 省略了「關代 + be」。",
+  "<b>省略 that</b>：名詞子句的 that 可省（I think [that] he is right.）；限定關係子句中受格 that 也可省（the book [that] I read）。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="文法：子句與關係代名詞" />
+
+## 例題（先自己做，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="This prominent scholar trained a great number of clinical psychologists, many of ____ established their own clinics or laboratories."
+  options={["which", "that", "who", "whom"]}
+  answer="(D) whom"
+  steps={[
+    "先行詞是 clinical psychologists（人），排除 which（A）。",
+    "關係子句前有介系詞 <b>of</b>，介系詞後只能用 <b>whom</b>（受格）或 which，不能用 who 或 that。",
+    "先行詞是人 → 用 <b>whom</b>。答案：<b>whom</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="Even professional marketers are never sure ____ some new products are runaway successes while others fail miserably."
+  options={["for", "why", "since", "that"]}
+  answer="(B) why"
+  steps={[
+    "空格前 sure 是形容詞，後面接<b>名詞子句</b>補充「確定的內容」。",
+    "語意：「永遠不確定<b>為什麼</b>有些新產品爆紅……」→ 需要 why（原因）引導名詞子句。",
+    "A (for) 是介系詞，不引導子句。C (since) 引導副詞子句，D (that) 無法帶出「原因」語意。答案：<b>why</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="The hospital ____ director resigned last month has been struggling to find a replacement."
+  options={["who", "whom", "whose", "which"]}
+  answer="(C) whose"
+  steps={[
+    "空格後面緊接 <b>director</b>（名詞），表示「醫院的院長」→ 所有格關係。",
+    "先行詞是 the hospital（物）→ 用 <b>whose</b>（人物皆可）。",
+    "答案：<b>whose</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="By studying fossils, paleontologists learn ____ forms of life thrived during various periods of the Earth's history."
+  options={["from", "its", "whose", "what"]}
+  answer="(D) what"
+  steps={[
+    "動詞 learn 後面需要一個<b>名詞子句</b>當受詞，且空格後緊接名詞 <b>forms of life</b>。",
+    "<b>what</b> 可當限定詞接名詞（what forms = 哪些形態），同時引導名詞子句 → 「學到<b>哪些</b>生命形態曾繁盛」。",
+    "from 是介系詞、its 是代名詞不引導子句；whose 表所有格，語意不符。答案：<b>what</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="The researcher designed a task ____ the subjects were required to add or delete single phonemes at the beginning of a spoken word."
+  options={["in which", "at which", "as if", "but that"]}
+  answer="(A) in which"
+  steps={[
+    "先行詞是 a task（物），關係子句本身是完整句（the subjects were required to add…），缺的是一個<b>地點/情境介系詞</b>。",
+    "還原：they were required to add phonemes <b>in</b> the task → 介系詞 in 連同關代搬到前面 = <b>in which</b>。",
+    "「the task / the way / the manner + in which」是高頻組合。答案：<b>in which</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="This edited book offers up-to-date overviews of research methods ____ linguistic research."
+  options={["used in", "using with", "being used to", "in use"]}
+  answer="(A) used in"
+  steps={[
+    "research methods 後面要修飾「用於語言學研究的方法」→ 完整是 methods <b>that are used in</b> linguistic research。",
+    "<b>省略關係子句</b>：that are used → 直接留下過去分詞 <b>used</b>（被動，方法是被使用的），後接介系詞 in。",
+    "using with 是主動且搭配錯；being used to 語意/結構不合；in use（使用中）後不接 research。答案：<b>used in</b>。"
+  ]}
+/>

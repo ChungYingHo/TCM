@@ -2,6 +2,7 @@
   import type { QuestionRecord, School, Subject } from '@/models/question'
   import { SCHOOLS, SUBJECTS, SCHOOL_LABEL, SUBJECT_LABEL } from '@/models/question'
   import { loadSchools, deriveFacets } from '@/utils/dataset'
+  import { byTaxonomyOrder, tagShort } from '@/models/taxonomy'
   import { filterQuestions, searchQuestions } from '@/utils/query'
   import MultiSelect from '@/components/common/MultiSelect.svelte'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
@@ -14,15 +15,16 @@
   }
   const initSchools = (urlParam('school')?.split(',').filter(Boolean) as School[]) || null
   const initTag = urlParam('tag')
+  const initTerm = urlParam('q') // e.g. from the 高頻單字表 ("看考過這個字的題目")
 
-  // tag deep-link with no school -> search all schools; otherwise default to ISU
+  // tag/word deep-link with no school -> search all schools; otherwise default to ISU
   let schools = $state<School[]>(
-    initSchools?.length ? initSchools : initTag ? [...SCHOOLS] : ['ISU'],
+    initSchools?.length ? initSchools : initTag || initTerm ? [...SCHOOLS] : ['ISU'],
   )
   let years = $state<number[]>([])
   let subjects = $state<Subject[]>([])
   let tags = $state<string[]>(initTag ? [initTag] : [])
-  let term = $state('')
+  let term = $state(initTerm ?? '')
   let limit = $state(PAGE)
   let compact = $state(false)
 
@@ -57,7 +59,7 @@
     }
     return SUBJECTS.map((s) => ({
       subject: s,
-      tags: [...(m.get(s) ?? [])].sort((a, b) => a.localeCompare(b, 'zh-Hant')),
+      tags: [...(m.get(s) ?? [])].sort(byTaxonomyOrder),
     })).filter((g) => g.tags.length)
   })
   const filtered = $derived(
@@ -123,7 +125,7 @@
             </summary>
             <div class="flex max-h-[50vh] flex-col gap-3 overflow-y-auto border-t border-base-300 p-3 custom-scrollbar">
               {#each tagsBySubject as group (group.subject)}
-                <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} />
+                <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} format={tagShort} />
               {/each}
             </div>
           </details>

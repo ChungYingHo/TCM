@@ -86,7 +86,7 @@ def _merge_one(school, year, subject, ex, amap, answer_src, e):
         options=[Option(letter=o['letter'], text=o['text']) for o in ex.options],
         correct_answer=correct, original_answer=original,
         errata_applied=errata_applied, award_all=award_all,
-        concept_tags=tg.assign_tags(subject, ex.stem + ' ' + ' '.join(o['text'] for o in ex.options)),
+        concept_tags=tg.assign_tags(subject, ex.stem, [o['text'] for o in ex.options]),
         explanation=explanation,
         source_pdf=ex.__dict__.get('source_pdf', '') or '',
         source_answer_pdf=answer_src,
@@ -149,6 +149,23 @@ def run_school(school):
             r.needs_review = True
         else:
             seen[r.id] = 0
+
+    # english cloze: needs neighbour context, so run once over the full set
+    cloze = tg.cloze_ids([{'id': r.id, 'school': r.school, 'year': r.year,
+                           'subject': r.subject, 'question_number': r.question_number,
+                           'question_text': r.question_text} for r in records])
+    for r in records:
+        if r.id in cloze:
+            r.concept_tags = ['克漏字'] + [t for t in r.concept_tags if t != '克漏字']
+
+    # curated concept_tag overrides (move catch-all questions to specific categories)
+    ctp = os.path.join(C.OVERRIDES_DIR, 'concept_tags.json')
+    if os.path.isfile(ctp):
+        with open(ctp, encoding='utf-8') as f:
+            tag_ov = json.load(f)
+        for r in records:
+            if r.id in tag_ov:
+                r.concept_tags = tag_ov[r.id]
 
     # apply human overrides (sacred, last)
     overrides = _load_overrides(school)

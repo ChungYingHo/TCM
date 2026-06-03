@@ -1,0 +1,167 @@
+---
+title: 克漏字：先通讀抓主題時態，逐空判詞性與邏輯
+subject: english
+tag: 克漏字
+summary: 克漏字不是猜字謎——先讀懂全文再逐空分析，連接詞與詞性是最快的破題線索。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="克漏字" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+克漏字（Cloze Test）是一段文章挖掉幾個字，每格給四個選項。**每個空格都有線索**，只要知道從哪裡找。
+
+---
+
+**① 通讀全文：先抓主題與時態**
+
+不要一上來就看第一個空格！先花 30 秒**通讀全段**（跳過空格也沒關係），確認：
+
+- **主題是什麼**（醫療、環境、科學？）
+- **時態是什麼**（全文用過去式？現在式？完成式？）
+
+時態確定後，很多空格直接鎖定：
+- 全文用過去式 → 空格多半也填過去式動詞
+- 出現 since、for + 一段時間 → 完成式（has/have + p.p.）
+
+---
+
+**② 逐空判詞性**
+
+每個空格先判斷**需要什麼詞性**：
+
+| 空格前後線索 | 需要的詞性 |
+|---|---|
+| 冠詞（a/an/the）+ _____ | 名詞 |
+| be 動詞 + _____ | 形容詞 or 現在分詞（-ing）or 過去分詞 |
+| _____ + 名詞 | 形容詞 or 冠詞 |
+| 主詞 + _____ + 受詞 | 動詞 |
+| 動詞 + _____ | 副詞 or 受詞（名詞/代名詞） |
+| _____ ，後接完整句子 | 連接詞 or 副詞連接語 |
+
+詞性不對 → 直接刪去，不用考慮語意。
+
+---
+
+**③ 連接詞看前後邏輯關係**
+
+連接詞是克漏字的高頻考點！
+
+| 邏輯關係 | 常見連接詞 |
+|---|---|
+| **因果**（前因後果） | because, since, as, therefore, thus, consequently |
+| **轉折**（前後相反） | but, however, although, though, even though, whereas |
+| **讓步**（儘管…仍…） | despite, in spite of, although, even if |
+| **附加**（加上） | moreover, furthermore, in addition, besides |
+| **對比**（A 是…B 是…） | while, whereas, on the other hand |
+| **條件** | if, unless, provided that, as long as |
+
+**判斷邏輯的技巧**：讀連接詞前一句和後一句，如果兩句「意思相反」→ 選轉折詞；「意思延伸」→ 選附加詞；「前面是原因後面是結果」→ 選因果詞。
+
+---
+
+**④ 兩種空格：文法空格 vs. 字彙空格**
+
+克漏字選項常見兩種：
+
+| 空格種類 | 特徵 | 怎麼解 |
+|---|---|---|
+| **文法空格** | 四選項是<b>同一字的不同形式</b>（trigger / triggered / triggering / to trigger） | 純看詞性與時態，語意幾乎不用想 |
+| **字彙空格** | 四選項是<b>不同的字</b>（alleviate / escalate / restore / detect） | 詞性多半都對，要靠<b>上下文語意</b>選（用同義字/情境判斷） |
+
+看到四個選項長得很像 → 文法空格，先刪詞性錯的；四個是不同的字 → 字彙空格，回到上下文判斷語意。
+
+---
+
+**⑤ 填完代回檢查**
+
+每格填完後，把答案代入句子**完整讀一遍**，確認：
+- 語意是否通順
+- 時態是否一致
+- 有沒有前後矛盾
+
+<Memorize>
+克漏字四步：<b>①通讀抓主題時態 → ②每空判詞性 → ③連接詞看前後邏輯 → ④代回驗證</b>。<br />
+時態不一致、詞性不對 = 直接刪去，不用多想。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "做克漏字前先花 30 秒<b>通讀全段</b>，確認主題與全文時態。",
+  "每個空格先判斷詞性——冠詞後接名詞、be 動詞後接形容詞或分詞。",
+  "連接詞空格：讀前後兩句判邏輯（相反→轉折；延伸→附加；前因後果→因果）。",
+  "代名詞空格：找前文<b>先行詞</b>，單複數、人/物要一致。",
+  "<b>全文時態統一</b>：若文章用現在式，空格幾乎不會填過去式動詞。",
+  "填完後把答案代回讀一遍——語意不通順就重選，這步驟常救回一兩分。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="克漏字" />
+
+## 例題（先自己想，再看步驟）
+
+以下例題為模擬短文克漏字，每空獨立一題說明。
+
+---
+
+**模擬短文**（請先通讀）：
+
+*Acupuncture, a key component of traditional Chinese medicine, has been practiced for thousands of years. __(1)__ many Western doctors were skeptical at first, recent clinical trials have shown that acupuncture can effectively __(2)__ chronic pain in some patients. The treatment involves inserting thin needles into specific points on the body __(3)__ stimulate the nervous system. Researchers believe that this process may __(4)__ the release of natural pain-relieving chemicals.*
+
+<ExampleQuestion client:visible
+  n={1}
+  q="__(1)__ many Western doctors were skeptical at first, recent clinical trials have shown that acupuncture can effectively reduce chronic pain."
+  options={["Because", "Although", "Therefore", "Moreover"]}
+  answer="(B) Although"
+  steps={[
+    "讀前後句邏輯：前句「西方醫生起初持懷疑態度」，後句「臨床試驗顯示有效」—— 兩句<b>意思相反/對比</b>。",
+    "需要<b>讓步/轉折</b>連接詞。",
+    "A. Because（因為）→ 因果關係❌；C. Therefore（因此）→ 因果❌；D. Moreover（此外）→ 附加❌。",
+    "B. Although（儘管）= 讓步，符合「儘管懷疑，結果卻有效」。答案 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="recent clinical trials have shown that acupuncture can effectively __(2)__ chronic pain in some patients."
+  options={["alleviate", "escalate", "alleviation", "alleviating"]}
+  answer="(A) alleviate"
+  steps={[
+    "詞性分析：can + 副詞 effectively + _____ → 情態動詞後接<b>原形動詞</b>。",
+    "C. alleviation（名詞）❌；D. alleviating（現在分詞）❌——詞性不對直接刪。",
+    "語意判斷：B. escalate（升級、惡化）與 clinical trials 顯示有效的語氣矛盾❌。",
+    "A. alleviate（緩解）= 詞性正確（原形動詞）且語意符合。答案 (A)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="The treatment involves inserting thin needles into specific points on the body __(3)__ stimulate the nervous system."
+  options={["instead of", "as a result", "in order to", "regardless of"]}
+  answer="(C) in order to"
+  steps={[
+    "讀前後句：「插針」→「刺激神經系統」，兩個動作之間是<b>目的</b>關係（插針是為了刺激）。",
+    "A. instead of（而不是）= 替代關係❌；B. as a result（因此）= 因果，但後面要接完整子句❌；D. regardless of（不管）= 讓步❌。",
+    "C. in order to（為了）+ 原形動詞，表目的，後接 stimulate（原形動詞）。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="Researchers believe that this process may __(4)__ the release of natural pain-relieving chemicals."
+  options={["trigger", "triggered", "triggering", "to trigger"]}
+  answer="(A) trigger"
+  steps={[
+    "時態與詞性：may 是情態動詞，情態動詞後必接<b>原形動詞</b>。",
+    "B. triggered（過去式/過去分詞）❌；C. triggering（現在分詞）❌；D. to trigger（不定詞）情態動詞後不用 to❌。",
+    "A. trigger（原形動詞）= 詞性正確；語意「可能觸發天然止痛化學物質釋放」也合理。答案 (A)。"
+  ]}
+/>

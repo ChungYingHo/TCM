@@ -1,0 +1,189 @@
+---
+title: 同義反義與字根字首：先想中文再配對，別被語感騙
+subject: english
+tag: 同義反義與字根字首
+summary: closest in meaning / opposite in meaning 題型的破題口訣：鎖定字、想中文、配對、注意反向提示詞。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="同義反義與字根字首" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+這類題有兩種問法：
+
+| 題型 | 關鍵提示詞 | 要找什麼 |
+|---|---|---|
+| **同義** | closest in meaning to / most nearly means / synonymous | 和被問的字**意思最接近**的選項 |
+| **反義** | opposite in meaning to / antonym of / NOT synonymously | 和被問的字**意思相反**的選項 |
+
+**最常犯的錯**：看到 opposite 還是去選「看起來很像」的字！先確認題目問的方向。
+
+---
+
+**實際考法（必看）**
+
+後中醫最常見的同義題長這樣：**一整個英文句子，其中一個字被劃線（或粗體）**，要你選「和那個字意思最接近」的選項，**通常有 A–E 五個選項**。例如：
+
+> We traced the bad smell to a dead skunk **putrefying** under the house.
+> (A) resting　(B) decaying　(C) nestling　(D) cuddling　(E) scattering　→ **(B)**
+
+重點觀念：
+- 被考的字常是**難字**，但句子本身會給你大量線索（這裡 bad smell + dead skunk → putrefy 一定是「腐爛」decaying）。
+- 被考的不一定是名詞，**動詞、形容詞、副詞都會考**：perpetual（永久的）、significantly（重要地）都考過。
+- **就算完全不認識那個字，也能靠句子情境刪到答案。** 不要因為不認識就放棄。
+
+---
+
+**字根字首快查表（推義用）**
+
+| 字首 | 意義 | 常見例字 |
+|---|---|---|
+| bene- | 好 | benefit, benevolent, benign |
+| mal- | 壞 | malicious, malnutrition, malfunction |
+| omni- | 全部 | omnivore, omnipotent |
+| pseudo- | 假 | pseudoscience, pseudonym |
+| retro- | 向後 | retrograde, retrospect |
+| circum- | 環繞 | circumstance, circumvent |
+| inter- | 之間 | interact, interrupt, interval |
+| intra- | 內部 | intravenous, intramural |
+| extra- | 外部 | extraordinary, extract |
+| trans- | 穿越 / 轉換 | transmit, transform, transplant |
+| contra- / counter- | 相對 / 反 | contradict, counteract |
+| -logy | 學科 | biology, psychology, cardiology |
+| -phobia | 恐懼 | arachnophobia, claustrophobia |
+| -mania | 狂熱 | kleptomania |
+| -cracy | 政治體制 | democracy, bureaucracy |
+
+---
+
+**從文章中找同義詞的技巧**
+
+有時題目引用原文某個字（"The word X in line 3 is closest in meaning to…"），這時要：
+
+1. 回到原文找那個字的**上下文**
+2. 用自己的話想它在那個句子裡的意思（**先想中文**）
+3. 再去選項找最接近的英文
+
+**陷阱**：一個英文字可能有多個意思。例如 *saddle* 一般是「馬鞍」，但在文中可能意思是「使某人承擔（負擔）」→ 同義是 *burden*，而非 *mount*（騎乘）。永遠依**上下文**，不是背的第一個意思。
+
+<Memorize>
+同義題：先把被問的字<b>「翻成中文」</b>，再去選項（常 A–E 五個）找意思最近的。<br />
+不認識那個字？<b>用整句情境猜</b>（bad smell + dead → 一定是腐爛），再刪不合的選項。<br />
+反義題：先確認方向（找相反），再翻中文配對。注意一字多義，<b>上下文決定意思</b>。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "第一步：<b>鎖定被問的字</b>，回原文找它所在句子的上下文。",
+  "第二步：用自己的話（可以是中文）說出那個字在句中的意思。",
+  "第三步：用<b>字根字首</b>輔助推義（bene-好、mal-壞、contra-相反……）。",
+  "第四步：逐一比對選項，找語意最接近（同義）或相反（反義）的字。",
+  "反向提示詞（opposite / NOT / antonym）出現時，答案是<b>語意相反</b>的——別選最像的！",
+  "實際題型多是<b>句中劃線字 + 五選項</b>；不認識劃線字時，靠整句情境刪題（如 putrefying 在 bad smell/dead skunk 句中 = decaying）。",
+  "考過的難字熟一下：putrefy=decay（腐爛）、dispute=quarrel（爭吵）、recount=narrate（敘述）、perpetual=everlasting（永久）、significantly=importantly（重要地）。",
+  "常考陷阱：一字多義。affordable=inexpensive（不是 useful）；literal=word-for-word（不是 literary）。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="同義反義與字根字首" />
+
+## 例題（先自己想，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q='The word "saddle" in the sentence "The new regulation saddled the hospital with enormous paperwork" is closest in meaning to _____.'
+  options={["discharge", "endanger", "burden", "mount"]}
+  answer="(C) burden"
+  steps={[
+    "回上下文：新規定把醫院「saddled with enormous paperwork」→ 使醫院承擔大量文書工作。",
+    "先想中文：saddle 在這裡 = 「使承擔（負擔）」。",
+    "D. mount（騎上）是 saddle 的常見意思，但不符合此句邏輯❌；A. discharge（卸除）反向❌；B. endanger（使危及）語意不符❌。",
+    "C. burden（使承擔負擔）= 語意完全吻合。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q='Which of the following is the OPPOSITE in meaning to "benevolent"?'
+  options={["generous", "malicious", "charitable", "compassionate"]}
+  answer="(B) malicious"
+  steps={[
+    "題目問<b>反義</b>（OPPOSITE）—— 先確認方向，要找意思相反的字。",
+    "benevolent = bene-（好）+ volent（願望）→ 善意的、慈善的。",
+    "反義 = 惡意的、壞的。",
+    "A. generous（慷慨）、C. charitable（慈善）、D. compassionate（同情）都與 benevolent 同方向❌。",
+    "B. malicious = mal-（壞）→ 惡意的，與 benevolent 相反。答案 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q='The word "affordable" is closest in meaning to _____.'
+  options={["useful", "attempt", "influential", "inexpensive"]}
+  answer="(D) inexpensive"
+  steps={[
+    "affordable = afford（負擔得起）+ -able → 負擔得起的、價格合理的。",
+    "A. useful（有用）❌；B. attempt（嘗試）❌；C. influential（有影響力）❌。",
+    "D. inexpensive（便宜的、不昂貴）= 意思最接近。答案 (D)。",
+    "字首提示：in-（否定）+ expensive（昂貴）= 不昂貴 = 負擔得起。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="Which of the following terms is NOT used synonymously with the others in a medical context?"
+  options={["malignant", "cancerous", "benign", "metastatic"]}
+  answer="(C) benign"
+  steps={[
+    "題目問：哪一個和其他三個<b>不同義</b>？先判斷各字的語意方向。",
+    "A. malignant（惡性）、B. cancerous（癌性）、D. metastatic（轉移性的）→ 三者都指危險/惡性腫瘤，語意同方向。",
+    "C. benign = bene-（好）→ 良性的，與其他三者語意<b>相反</b>。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q='The word "exacerbate" is closest in meaning to _____.'
+  options={["alleviate", "aggravate", "neutralize", "assess"]}
+  answer="(B) aggravate"
+  steps={[
+    "exacerbate = ex-（加強）+ acer（尖、苦）→ 使惡化、加劇。",
+    "先想中文：使情況更糟。",
+    "A. alleviate（緩解）反義❌；C. neutralize（中和）❌；D. assess（評估）❌。",
+    "B. aggravate（加重、惡化）語意完全吻合。答案 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q='Closest in meaning to the underlined word: "We traced the bad smell to a dead skunk putrefying under the house."'
+  options={["resting", "decaying", "nestling", "cuddling", "scattering"]}
+  answer="(B) decaying"
+  steps={[
+    "這是<b>真實考法</b>：句中劃線字（putrefying）+ 五選項。就算不認識 putrefy 也別放棄。",
+    "用整句情境猜：bad smell（惡臭）+ a dead skunk（死臭鼬）→ 死掉的東西在發臭 = <b>腐爛</b>。",
+    "A. resting（休息）、C. nestling（依偎）、D. cuddling（擁抱）、E. scattering（散開）都與「發臭腐爛」不合❌。",
+    "B. decaying（腐爛）= 完全吻合情境。答案 (B)。putrefy = decay 是醫學常見字（屍體腐敗）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q='Closest in meaning to the underlined word: "The police released him but, significantly, they did not give him back his passport."'
+  options={["randomly", "rarely", "importantly", "increasingly", "nearly"]}
+  answer="(C) importantly"
+  steps={[
+    "被考的是<b>副詞</b> significantly——同義題不只考名詞，動詞副詞都會考。",
+    "significant = 重要的、有意義的；加 -ly 變副詞 → <b>重要地、值得注意地</b>。",
+    "A. randomly（隨機地）、B. rarely（很少）、D. increasingly（漸增地）、E. nearly（幾乎）語意都不符❌。",
+    "C. importantly（重要地）= 同義。答案 (C)。提醒：significant 在數據題還有『顯著的』意思，但這裡依句意取『重要』。"
+  ]}
+/>

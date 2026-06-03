@@ -88,3 +88,23 @@ h1, h2, h3, h4, .font-display {
 
 .custom-scrollbar::-webkit-scrollbar { width: 6px; height: 6px; }
 .custom-scrollbar::-webkit-scrollbar-thumb { background: color-mix(in oklab, currentColor 18%, transparent); border-radius: 6px; }
+
+/* ── 公式高識別度:讓數學式從中文內文中「跳出來」,且手機可橫向捲動 ── */
+/* 區塊公式 $$…$$ → 框線＋淡青底色的卡片,絕不與旁邊的字混淆 */
+.prose .katex-display {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--color-primary) 35%, var(--color-base-300));
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-box);
+  background: color-mix(in oklab, var(--color-primary) 7%, var(--color-base-100));
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.prose .katex-display > .katex { font-size: 1.18em; }
+/* 行內公式 $…$ → 微染主色、稍重,和中文字區隔 */
+.prose .katex {
+  font-size: 1.05em;
+  color: color-mix(in oklab, var(--color-primary) 60%, var(--color-base-content));
+}
+.prose .katex-display .katex { color: var(--color-base-content); }

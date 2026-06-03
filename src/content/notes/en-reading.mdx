@@ -1,0 +1,196 @@
+---
+title: 閱讀測驗：帶問題找答案、回原文定位、推論不超出原文
+subject: english
+tag: 閱讀測驗
+summary: 閱讀題的答案都在文章裡——先看題目類型，再用對策定位，推論不要自己加料。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="閱讀測驗" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+閱讀測驗最大的錯誤是「先把文章讀完才看題目」——這樣等於浪費時間，而且容易記不住細節。正確的策略是**帶著問題去讀文章**。
+
+---
+
+**① 三大題型與對策**
+
+| 題型 | 常見題幹格式 | 解題對策 |
+|---|---|---|
+| **主旨題** | What is the main idea? / The passage mainly discusses… / The best title is… | 看**首段**與**末段**；每段第一句通常是主題句 |
+| **細節題** | According to the passage… / The author states that… / Which of the following is true/NOT true? | 找**關鍵字**回原文定位，逐選項比對 |
+| **推論題** | It can be inferred that… / The author implies that… / What can we conclude from…? | 選項必須有原文根據，**不能超出原文**加入自己的知識 |
+
+---
+
+**② 先看題目，再讀文章**
+
+正確流程：
+
+1. **快速掃題目**（不用讀選項），圈出關鍵字（人名、數字、時間、專有名詞）
+2. **讀文章時遇到這些關鍵字就放慢速度**，其他段落快速掃過
+3. **回原文找答案句**，不靠印象選
+
+---
+
+**③ 細節題：定位技巧**
+
+- 題目裡有**專有名詞、數字、年份**：直接在文章裡找它們
+- 題目說 "according to paragraph 2"：只看那一段
+- NOT true / EXCEPT 題：四個選項都要逐一確認，三個在文中有根據、一個沒有或相反 → 選那個「沒有/相反」的
+- 後中醫常見變體：**"Which is NOT true nor implied?"**（哪個既非事實、也無法推論）。這題把細節與推論合一：三個選項在文中有明說或可推出，剩下那個「文中沒講、也推不出（或相反）」就是答案。
+
+---
+
+**④ 推論題：不超出原文**
+
+推論題最常見的陷阱：選項「聽起來很合理、符合常識」，但**原文完全沒有提到**。
+
+規則：
+- 選項的意思必須能從原文**直接推出**（不需要額外知識）
+- 「可能（likely）」「可以（can）」的選項，有時比「一定（must）」更容易是正確答案
+- 「太絕對」的選項（always, never, all, none）通常是錯的
+
+---
+
+**⑤ 字義題（line X 的某字意思）**
+
+等同字彙題，依上下文判斷，不用死背的第一意思。
+
+<Memorize>
+<b>先看題目，帶著問題讀文章，回原文定位，不靠印象。</b><br />
+推論題：選項必須有原文根據，加入自己常識的選項幾乎都是陷阱。<br />
+NOT true 題：要找文章裡「沒有說到或說法相反」的那個。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "做題順序：<b>先看題目圈關鍵字 → 帶問題讀文章 → 回原文定位 → 比對選項</b>。",
+  "主旨題：看首段與末段，段落主題句通常在每段的第一句或最後一句。",
+  "細節題：用關鍵字（人名、數字、專有名詞）快速定位原文，逐字比對選項。",
+  "推論題：選項必須能從原文<b>直接推出</b>，原文沒提到的常識不算根據。",
+  "NOT true / EXCEPT 題：三個選項有根據，找那個<b>沒根據或與原文矛盾</b>的。",
+  "太絕對的選項（always / never / all / completely）通常是錯的，除非原文也這樣說。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="閱讀測驗" />
+
+## 例題（先自己想，再看步驟）
+
+以下例題基於一段模擬閱讀短文，各題獨立說明。
+
+---
+
+**模擬短文**（請先快速掃題目，再閱讀）：
+
+*Traditional Chinese medicine (TCM) has been used for over two thousand years to treat a wide range of ailments. Unlike Western medicine, which often focuses on treating specific symptoms with targeted drugs, TCM takes a holistic approach — viewing the body as an integrated system where balance is essential for health. Herbal remedies, acupuncture, and dietary therapy are among the most commonly used TCM treatments. In recent decades, interest in TCM has grown globally, partly because some patients seek alternatives when conventional treatments fail to provide relief. However, critics point out that many TCM practices lack the rigorous clinical trials required to confirm their effectiveness and safety by modern scientific standards.*
+
+<ExampleQuestion client:visible
+  n={1}
+  q="What is the main idea of the passage?"
+  options={[
+    "TCM is superior to Western medicine in treating all diseases.",
+    "TCM is an ancient holistic medical system that is gaining global attention but also faces scientific scrutiny.",
+    "Western medicine should adopt TCM methods to improve patient outcomes.",
+    "Clinical trials have proven that TCM is both effective and safe."
+  ]}
+  answer="(B) TCM is an ancient holistic medical system that is gaining global attention but also faces scientific scrutiny."
+  steps={[
+    "主旨題：讀首句和末句來判斷全段核心。",
+    "首句提到 TCM 有兩千多年歷史；末句說批評者指出缺乏臨床試驗。中間說到整體療法和全球興趣增長。",
+    "A. 「優於一切西方醫學」原文沒說❌；C. 說西方醫學應採用TCM，原文沒說❌；D. 說臨床試驗已證實，與末句相反❌。",
+    "B. 概括了整段：古老整體醫學 + 全球關注 + 科學審視。答案 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="According to the passage, which of the following is NOT mentioned as a common TCM treatment?"
+  options={["Herbal remedies", "Acupuncture", "Surgical procedures", "Dietary therapy"]}
+  answer="(C) Surgical procedures"
+  steps={[
+    "NOT 題：找四個選項哪個原文沒有提到。",
+    "原文第三句：'Herbal remedies, acupuncture, and dietary therapy are among the most commonly used TCM treatments.'",
+    "A. Herbal remedies ✓ 有提到；B. Acupuncture ✓；D. Dietary therapy ✓。",
+    "C. Surgical procedures（外科手術）原文完全沒有提到。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="It can be inferred from the passage that some patients turn to TCM because _____."
+  options={[
+    "TCM treatments are always cheaper than Western medicine.",
+    "Western medicine has been proven completely ineffective.",
+    "they have not found sufficient relief from conventional treatments.",
+    "TCM has passed all required clinical trials."
+  ]}
+  answer="(C) they have not found sufficient relief from conventional treatments."
+  steps={[
+    "推論題：找原文根據，不能加入自己的想法。",
+    "原文：'partly because some patients seek alternatives when conventional treatments fail to provide relief.'",
+    "A. 「always cheaper」原文沒說，too absolute❌；B. 「completely ineffective」原文也沒說❌；D. 和末句相反（lacks rigorous trials）❌。",
+    "C. 直接對應原文「當傳統治療無法提供緩解時尋求替代方案」。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="Which of the following best describes the tone of the passage?"
+  options={[
+    "Strongly critical of TCM",
+    "Enthusiastically promotional of TCM",
+    "Balanced, presenting both positive aspects and concerns",
+    "Indifferent and unrelated to any medical practice"
+  ]}
+  answer="(C) Balanced, presenting both positive aspects and concerns"
+  steps={[
+    "語氣/態度題：看全段有沒有偏向一方。",
+    "正面：說 TCM 有兩千年歷史、整體觀、全球關注增長。",
+    "負面/中立：最後一句說批評者指出缺乏嚴格臨床試驗。",
+    "A. 「Strongly critical」文章也給了正面描述❌；B. 「enthusiastically promotional」最後還有批評❌；D. 明顯有立場❌。",
+    "C. 平衡呈現優點與疑慮，符合全段語氣。答案 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q='The word "holistic" in the passage most likely means _____.'
+  options={["ancient and traditional", "considering the whole body as a connected system", "based on surgical intervention", "focused on a single symptom"]}
+  answer="(B) considering the whole body as a connected system"
+  steps={[
+    "字義題：回原文找 holistic 所在句子。",
+    "原文：'TCM takes a holistic approach — viewing the body as an integrated system where balance is essential'",
+    "破折號後的解釋直接給了意思：「viewing the body as an integrated system」。",
+    "A. ancient（古老）是 TCM 的描述，不是 holistic 的意思❌；C. surgical（外科）與原文完全相反❌；D. single symptom（單一症狀）是 Western medicine 的描述❌。",
+    "B. 整體考慮身體為連結系統，完全對應原文解釋。答案 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="Which of the following is NOT true NOR implied according to the passage?"
+  options={[
+    "TCM treats a wide range of ailments and has a long history.",
+    "Some patients try TCM when conventional treatment does not relieve them.",
+    "TCM uses herbal remedies, acupuncture, and dietary therapy.",
+    "Modern clinical trials have already confirmed that TCM is safe and effective."
+  ]}
+  answer="(D) Modern clinical trials have already confirmed that TCM is safe and effective."
+  steps={[
+    "這是後中醫高頻變體：<b>NOT true NOR implied</b>。三個選項在文中有明說或可推出，找那個『沒講、也推不出（或相反）』的。",
+    "A. 對應首句『over two thousand years … a wide range of ailments』✓ 有根據；",
+    "B. 對應『seek alternatives when conventional treatments fail to provide relief』✓ 有根據；",
+    "C. 對應『Herbal remedies, acupuncture, and dietary therapy』✓ 有根據。",
+    "D. 末句明說『many TCM practices LACK the rigorous clinical trials …』——與選項<b>相反</b>，既非事實也無法推論。答案 (D)。"
+  ]}
+/>

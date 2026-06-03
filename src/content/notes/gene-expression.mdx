@@ -1,0 +1,256 @@
+---
+title: 基因表現：中心法則到 operon，一次搞懂轉錄、轉譯與調控
+subject: biology
+tag: 基因表現：轉錄轉譯與調控
+summary: 從 DNA → mRNA → 蛋白質的每一步都拆開來說，再加上原核 operon 與真核表觀遺傳調控。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="基因表現：轉錄轉譯與調控" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+### ① 中心法則（Central Dogma）
+
+```
+DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
+         ↑
+     (DNA複製)
+```
+
+| 步驟 | 發生場所 | 催化酵素 | 產物 |
+|---|---|---|---|
+| **複製** | 原核：細胞質；真核：細胞核 | DNA 聚合酶 | DNA |
+| **轉錄（transcription）** | 原核：細胞質；真核：細胞核 | **RNA 聚合酶** | mRNA（也有 tRNA、rRNA） |
+| **轉譯（translation）** | 核糖體（細胞質或 ER 表面） | 核糖體（功能性 rRNA） | 蛋白質（多胜肽） |
+
+**補充：** 反轉錄病毒（如 HIV）帶有**反轉錄酶**，可以 RNA → DNA，是中心法則的例外。
+
+### ② 轉錄（Transcription）
+
+**轉錄基本流程：**
+1. RNA 聚合酶辨認並結合**啟動子（promoter）**。
+2. 局部解開雙股 DNA，以**模板股（template strand）**合成 mRNA。
+3. mRNA 序列與**非模板股（coding strand）**相同，差別只在 T 換成 U。
+4. 遇到**終止信號（terminator）**，RNA 聚合酶脫落，mRNA 完成。
+
+**真核 mRNA 加工（原核沒有！）：**
+
+| 加工步驟 | 功能 |
+|---|---|
+| **5' 帽（7-methylguanosine cap）** | 以特殊 5'-5' 鍵加上 G，保護 mRNA 不被 5' 端外切酶降解、幫助核糖體識別 |
+| **3' poly(A) 尾** | 在 **AAUAAA** 訊號序列下游加上一長串 A，穩定 mRNA、延長半衰期 |
+| **剪接（splicing）** | 切除**內含子（intron）**，保留**外顯子（exon）**，由剪接體（spliceosome）完成 |
+
+→ 一個真核基因可透過**選擇性剪接（alternative splicing）**產生多種蛋白質。
+
+### ③ 轉譯（Translation）
+
+**密碼子（codon）**：mRNA 上每 3 個核苷酸對應一個胺基酸。
+- 起始密碼子：**AUG**（甲硫胺酸 Met）
+- 終止密碼子：**UAA、UAG、UGA**（不編碼任何胺基酸）
+- 遺傳密碼具**縮合性（degeneracy）**：多組密碼子對應同一胺基酸。
+
+**tRNA 的反密碼子（anticodon）**：與 mRNA 密碼子互補配對，攜帶對應胺基酸。
+
+| mRNA 密碼子 | tRNA 反密碼子 | 胺基酸 |
+|---|---|---|
+| 5'-AUG-3' | 3'-UAC-5' | Met（起始） |
+| 5'-UUU-3' | 3'-AAA-5' | Phe（苯丙胺酸） |
+
+**轉譯步驟：**
+1. **起始**：小次單元與 mRNA 結合，tRNA(Met) 進入 P 位，大次單元加入。
+2. **延長**：新 tRNA 進入 A 位，胜肽鍵形成，核糖體沿 5'→3' 移動（轉位）。
+3. **終止**：終止密碼子進入 A 位，釋放因子使多胜肽脫落。
+
+**關鍵考點：胜肽鍵是誰催化的？**
+- 催化胜肽鍵（peptide bond）形成的是**大次單元上的 rRNA**，本身就是一種 **ribozyme（具催化能力的 RNA）**，這個活性又叫**胜肽轉移酶（peptidyl transferase）**。
+- 換句話說，轉譯時「把胺基酸接成胜肽鏈」的酵素不是蛋白質，而是 **RNA**——這是 ribozyme 最常被考的例子。
+
+### ③-2 轉譯後修飾（Post-translational modification）
+
+多胜肽合成完不一定能馬上工作，常需再加工：
+- 接上**糖類（糖基化）**、**脂質**、**磷酸基（磷酸化）**等基團，或被蛋白酶切割。
+- 這些「轉譯之後」改變蛋白質活性/定位的步驟，統稱**轉譯後修飾**。
+- 別和「轉錄後加工」（5' 帽、poly(A)、剪接，作用在 mRNA）混淆：轉譯後修飾作用在**蛋白質**上。
+
+### ④ 原核基因調控：Operon 模型
+
+原核生物基因調控主要在**轉錄層次**，透過 operon 系統。
+
+**lac operon（乳糖誘導型：有乳糖才開啟）**
+
+| 情況 | 乳糖 | 葡萄糖 | 結果 |
+|---|---|---|---|
+| 無乳糖 | ✗ | 任意 | 阻遏蛋白結合操縱基因 → **基因關閉** |
+| 有乳糖，有葡萄糖 | ✓ | ✓ | 阻遏蛋白被移除，但 cAMP 低 → **低度表現** |
+| 有乳糖，無葡萄糖 | ✓ | ✗ | 阻遏蛋白移除 + cAMP 高 → CAP 活化 → **高度表現** |
+
+**trp operon（色胺酸抑制型：有色胺酸就關閉）**
+- 色胺酸（最終產物）作為**輔阻蛋白**，與阻遏蛋白結合後，才能封閉 operon。
+- 稱為**輔阻蛋白調控**（corepressor regulation）。
+
+| Operon | 型態 | 調控物 | 有調控物時 |
+|---|---|---|---|
+| lac | 誘導型 | 乳糖（異乳糖） | 開啟基因 |
+| trp | 阻抑型 | 色胺酸 | 關閉基因 |
+
+### ⑤ 真核基因調控
+
+真核調控比原核複雜，涉及多個層次：
+
+| 調控層次 | 機制 |
+|---|---|
+| 表觀遺傳 | **DNA 甲基化**（關閉基因）、**組蛋白乙醯化**（開啟基因） |
+| 轉錄層次 | **轉錄因子（TF）**結合啟動子／增強子，招募 RNA 聚合酶 |
+| RNA 加工 | **選擇性剪接**讓一個基因產生多種蛋白質 |
+| 轉譯後 | 磷酸化、糖基化、蛋白酶切割等修飾改變蛋白質功能 |
+| RNA 干擾 | **miRNA / siRNA** 降解 mRNA 或抑制轉譯 |
+
+<Memorize>
+中心法則：<b>DNA → RNA → 蛋白質</b>；起始密碼子 <b>AUG</b>，終止密碼子 UAA/UAG/UGA。<br />
+真核 mRNA 加工：5' 帽 ＋ 剪接內含子 ＋ 3' poly(A) 尾（訊號 <b>AAUAAA</b>），原核沒有！<br />
+胜肽鍵由 <b>rRNA（ribozyme，胜肽轉移酶）</b>催化；轉譯後修飾＝加糖/磷酸等改變蛋白質。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>轉錄</b>在核內；<b>轉譯</b>在核糖體——真核生物這兩個步驟時空分離，原核同時進行（偶合轉錄轉譯）。",
+  "<b>密碼子在 mRNA</b>，反密碼子在 tRNA；密碼子 AUG 是起始點，也編碼 Met。",
+  "<b>胜肽鍵由 rRNA 催化</b>（ribozyme＝有催化力的 RNA，活性稱胜肽轉移酶 peptidyl transferase）——常考「RNA 也能當酵素」。",
+  "<b>轉譯後修飾</b>（加糖、磷酸、脂質或被切割）作用在<b>蛋白質</b>上；別跟轉錄後加工（作用在 mRNA）搞混。",
+  "<b>選擇性剪接</b>讓真核生物「一基因多蛋白」，是真核基因體複雜性的重要來源。",
+  "<b>lac operon</b>：沒乳糖就關；有乳糖 + 沒葡萄糖開最大——葡萄糖透過 cAMP / CAP 機制調控。",
+  "<b>trp operon</b>：色胺酸多就關閉（終產物抑制），是典型輔阻蛋白調控。",
+  "<b>組蛋白乙醯化</b>鬆開染色質 → 利於轉錄；<b>DNA 甲基化</b>通常抑制基因表現。",
+  "遺傳密碼具有<b>縮合性（degeneracy）</b>：一個胺基酸可對應多個密碼子（第三個鹼基最自由）。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="基因表現：轉錄轉譯與調控" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="下列關於真核生物 mRNA 加工的敘述，何者正確？"
+  options={[
+    "真核 mRNA 在細胞質中被剪接",
+    "外顯子被切除，內含子被保留拼接",
+    "mRNA 在 5' 端加上 7-甲基鳥苷帽，在 3' 端加上 poly(A) 尾",
+    "原核生物也有相同的 mRNA 加工過程"
+  ]}
+  answer="(C) mRNA 在 5' 端加上 7-甲基鳥苷帽，在 3' 端加上 poly(A) 尾"
+  steps={[
+    "真核 mRNA 加工發生在<b>細胞核</b>內（排除選項 A）。",
+    "剪接是切除<b>內含子（intron）</b>、保留<b>外顯子（exon）</b>（排除選項 B，它說反了）。",
+    "原核生物沒有核膜，轉錄與轉譯同時進行，不需要 mRNA 加工（排除選項 D）。",
+    "選項 C 正確：5' 帽保護 mRNA 並幫助核糖體辨識；poly(A) 尾穩定 mRNA。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="一段 mRNA 序列為 5'-AUG-UUU-GAA-UAA-3'，此多胜肽的胺基酸數目為幾個？"
+  options={["2個", "3個", "4個", "5個"]}
+  answer="(B) 3個"
+  steps={[
+    "讀碼：AUG（起始/Met）、UUU（Phe）、GAA（Glu）、UAA（終止，不編碼胺基酸）。",
+    "有效密碼子 = AUG、UUU、GAA，共 3 個胺基酸。",
+    "終止密碼子 UAA 不對應任何胺基酸，故多胜肽含 <b>3 個胺基酸</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="大腸桿菌（原核）中，lac operon 在下列哪種條件下表現量最高？"
+  options={[
+    "無乳糖、有葡萄糖",
+    "有乳糖、有葡萄糖",
+    "有乳糖、無葡萄糖",
+    "無乳糖、無葡萄糖"
+  ]}
+  answer="(C) 有乳糖、無葡萄糖"
+  steps={[
+    "lac operon 受兩層調控：①阻遏蛋白（負調控）②CAP-cAMP（正調控）。",
+    "有乳糖 → 異乳糖移除阻遏蛋白 → 第一層關卡解除。",
+    "無葡萄糖 → cAMP 濃度上升 → CAP 與 cAMP 結合後活化啟動子 → 第二層正調控啟動。",
+    "兩層都開啟 → lac operon <b>最高表現量</b>，選 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="下列關於轉錄的敘述，何者錯誤？"
+  options={[
+    "RNA 聚合酶以 DNA 模板股為模板，合成 mRNA",
+    "合成方向為 5'→3'",
+    "轉錄產物中，T 鹼基被 U 取代",
+    "真核生物轉錄與轉譯同時在核糖體上進行"
+  ]}
+  answer="(D) 真核生物轉錄與轉譯同時在核糖體上進行"
+  steps={[
+    "選項 A：正確，RNA 聚合酶讀取模板股（3'→5' 方向），合成互補 mRNA。",
+    "選項 B：正確，mRNA 合成方向為 5'→3'。",
+    "選項 C：正確，RNA 使用尿嘧啶（U）而非胸腺嘧啶（T）。",
+    "選項 D：<b>錯誤</b>。真核生物轉錄在<b>細胞核</b>、轉譯在<b>細胞質核糖體</b>；兩步驟時空分離。原核才是偶合轉錄轉譯。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="下列哪種機制屬於「表觀遺傳（epigenetic）」調控？"
+  options={[
+    "點突變改變密碼子",
+    "DNA 甲基化使基因沉默",
+    "啟動子序列缺失",
+    "終止密碼子提前出現"
+  ]}
+  answer="(B) DNA 甲基化使基因沉默"
+  steps={[
+    "表觀遺傳是指<b>不改變 DNA 序列</b>、但改變基因表現的機制。",
+    "選項 A、C、D 都涉及 DNA 序列的改變，屬於遺傳突變，不是表觀遺傳。",
+    "<b>DNA 甲基化</b>（在胞嘧啶上加甲基）不改變核苷酸序列，但能使染色質凝縮、抑制轉錄，是典型的表觀遺傳機制，選 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="下列哪一個反應是由 RNA 作為酵素（ribozyme）所催化？"
+  options={[
+    "以 RNA 為模板合成 DNA",
+    "以 DNA 為模板合成 mRNA",
+    "DNA 雙股的解旋",
+    "轉譯過程中胺基酸間形成胜肽鍵"
+  ]}
+  answer="(D) 轉譯過程中胺基酸間形成胜肽鍵"
+  steps={[
+    "ribozyme＝<b>具催化活性的 RNA</b>。",
+    "轉譯時連接胺基酸的胜肽鍵，由核糖體大次單元上的 <b>rRNA</b> 催化（活性稱胜肽轉移酶 peptidyl transferase），而非蛋白質酵素。",
+    "選項 A 由反轉錄酶（蛋白質）催化；選項 B 由 RNA 聚合酶（蛋白質）催化；選項 C 由解旋酶（蛋白質）催化。皆非 ribozyme，故選 (D)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="多胜肽合成後，再接上糖類、脂質或磷酸基等物質以改變其活性的過程，稱為什麼？"
+  options={[
+    "轉錄（transcription）",
+    "RNA 剪接（RNA splicing）",
+    "點突變（point mutation）",
+    "轉譯後修飾（post-translational modification）"
+  ]}
+  answer="(D) 轉譯後修飾（post-translational modification）"
+  steps={[
+    "關鍵字「多胜肽（蛋白質）合成<b>後</b>」「改變其活性」→ 作用在<b>蛋白質</b>、發生在轉譯之後。",
+    "轉錄與剪接作用在 RNA、點突變改變 DNA 序列，皆不符。",
+    "加糖（糖基化）、加磷酸（磷酸化）、加脂質等修飾蛋白質，屬<b>轉譯後修飾</b>，選 (D)。"
+  ]}
+/>

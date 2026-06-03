@@ -1,0 +1,262 @@
+---
+title: 水溶液離子平衡：緩衝、滴定、Ksp 一次看懂
+subject: chemistry
+tag: 水溶液離子平衡
+summary: 從 Henderson-Hasselbalch 算緩衝 pH，到滴定曲線判斷當量點，再到 Ksp 預測沉澱——三大題型一氣呵成。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PhScale from '@/components/notes/PhScale.svelte'
+
+<NoteStats tag="水溶液離子平衡" client:load />
+
+## 觀念速複習（先把忘掉的補回來）
+
+**① 緩衝溶液是什麼？**
+
+由**弱酸＋其共軛鹼（鹽）**，或**弱鹼＋其共軛酸**組成。能抵抗外加少量強酸或強鹼，讓 pH 變化很小。
+
+常見例子：CH₃COOH（醋酸）+ CH₃COONa（醋酸鈉）
+
+**怎麼認出「緩衝」與「酸性緩衝」？**
+
+| 看到什麼 | 是不是緩衝 |
+|---|---|
+| 弱酸 + 它的鹽（共軛鹼） | ✅ 酸性緩衝（pH < 7，如 HCO₂H + NaHCO₂） |
+| 弱鹼 + 它的鹽（共軛酸） | ✅ 鹼性緩衝（pH > 7，如 NH₃ + NH₄Cl） |
+| 強酸 + 強鹼（等量） | ❌ 互相中和成中性鹽，沒有緩衝對 |
+| 強酸 + 它的鹽（如 HCl + NaCl） | ❌ 強酸完全解離，不是共軛對 |
+
+判斷三步：① 是不是「弱」的酸/鹼？② 有沒有配上它的共軛物？③ 弱酸系 → 酸性緩衝，弱鹼系 → 鹼性緩衝。
+
+**② Henderson-Hasselbalch 公式**
+
+$$
+\text{pH} = \text{pK}_a + \log\frac{[\text{鹽（共軛鹼）}]}{[\text{弱酸}]}
+$$
+
+- 當 [鹽] = [酸]，log 1 = 0，所以 **pH = pKa**（最佳緩衝點）
+- 緩衝有效範圍：$\text{pH} = \text{pK}_a \pm 1$
+- 加入少量強酸：鹽（共軛鹼）消耗，酸增加，pH 微降
+- 加入少量強鹼：酸消耗，鹽增加，pH 微升
+
+**③ 滴定曲線重點**
+
+| 滴定類型 | 當量點 pH | 指示劑選擇 |
+|---|---|---|
+| 強酸 + 強鹼 | pH = 7（中性） | 酚酞（8.2–10）或甲基橙（3.1–4.4）均可 |
+| 弱酸 + 強鹼 | pH > 7（鹼性，因共軛鹼水解） | 酚酞較佳 |
+| 強酸 + 弱鹼 | pH < 7（酸性，因共軛酸水解） | 甲基橙較佳 |
+
+**「半當量點」**：加入一半當量鹼時，[弱酸] = [鹽]，此時 **pH = pKa**。
+
+**④ 溶度積 Ksp**
+
+難溶鹽在水中的溶解平衡，例如 AgCl：
+
+$$
+\text{AgCl}(s) \rightleftharpoons \text{Ag}^+(aq) + \text{Cl}^-(aq)
+$$
+
+$$
+K_{sp} = [\text{Ag}^+][\text{Cl}^-]
+$$
+
+- $K_{sp}$ 越小 → 溶解度越小 → 越難溶
+- 用離子積 $Q_{sp}$ 判斷：若 $Q_{sp} > K_{sp}$ 則會沉澱
+
+**⑤ 同離子效應（Common-Ion Effect）**
+
+在含 AgCl 的飽和溶液中加入 NaCl（含 Cl⁻），相當於增加 [Cl⁻]，平衡左移，使 AgCl **溶解度降低**。
+
+$$
+\text{AgCl 的溶解度} \downarrow \quad \text{（因為 Cl⁻ 多了）}
+$$
+
+**⑥ 什麼會「增加」難溶鹽的溶解度？**
+
+凡是能把溶解平衡的某個離子「移走」的，都讓平衡右移、溶解度上升：
+
+| 操作 | 對溶解度 | 原因 |
+|---|---|---|
+| 加同名離子 | 降低 | 同離子效應（平衡左移） |
+| 加酸（H⁺）到含 OH⁻ 或弱酸根的難溶鹽 | 升高 | H⁺ 消耗 OH⁻／酸根，平衡右移 |
+| 加錯合劑（如 NH₃ 與 Ag⁺ 形成錯離子） | 升高 | 錯合把 Ag⁺ 移走，平衡右移 |
+
+例：醋酸銀 CH₃COOAg 中，加 NH₃ 會錯合 Ag⁺、加 HNO₃ 會把 CH₃COO⁻ 變成醋酸——**兩者都讓溶解度增加**。
+
+**⑦ 在「固定 pH 緩衝液」中的氫氧化物溶解度**
+
+氫氧化物如 Mg(OH)₂：$K_{sp} = [\text{Mg}^{2+}][\text{OH}^-]^2$。若放在緩衝能力極大的溶液裡，pH（即 [OH⁻]）**被固定住**，這時溶解度直接由 Ksp 解出：
+
+$$
+s = [\text{Mg}^{2+}] = \frac{K_{sp}}{[\text{OH}^-]^2}
+$$
+
+先由 pH 求 [OH⁻]（[OH⁻] = 10^(−pOH) = 10^(pH−14)），再代入。
+
+## 動手玩：拉一下看 pH 如何移動
+
+<PhScale client:visible />
+
+<Memorize>
+緩衝 pH = pKa + log([鹽]/[酸])；<b>鹽酸比等量時 pH = pKa</b>。<br />
+Ksp = [陽離子]^m [陰離子]^n；Q &gt; Ksp → 沉澱；同離子降低溶解度。<br />
+弱酸 + 強鹼滴定，當量點 pH &gt; 7；半當量點 pH = pKa。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>Henderson-Hasselbalch</b>：pH = pKa + log([A⁻]/[HA])；鹽/酸比越大，pH 越高。",
+  "<b>緩衝容量</b>：鹽與酸濃度越高，緩衝容量越大；有效緩衝範圍 pKa ± 1。",
+  "<b>滴定當量點</b>：強酸強鹼 pH=7；弱酸+強鹼 pH>7；強酸+弱鹼 pH&lt;7。",
+  "<b>半當量點</b>：加入一半當量滴定劑時，[弱酸]=[共軛鹼]，pH = pKa（可從此求 pKa）。",
+  "<b>Ksp 與溶解度換算</b>：設溶解度為 s，代入 Ksp 表達式求解（注意係數）。",
+  "<b>同離子效應</b>：加入與難溶鹽共有的離子，溶解度降低；酸鹼效應（加 H⁺ 溶解 OH⁻ 型難溶鹽）使溶解度升高。",
+  "<b>認緩衝</b>：弱酸+其鹽=酸性緩衝、弱鹼+其鹽=鹼性緩衝；強酸強鹼等量中和不是緩衝。",
+  "<b>提高溶解度</b>：加酸（消耗 OH⁻/酸根）或加錯合劑（移走金屬離子）→ 平衡右移、溶解度上升。",
+  "<b>固定 pH 求氫氧化物溶解度</b>：先由 pH 算 [OH⁻]=10^(pH−14)，再 s = Ksp/[OH⁻]²。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="水溶液離子平衡" />
+
+## 例題（先自己算，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="由 0.10 M 醋酸（CH₃COOH）和 0.20 M 醋酸鈉（CH₃COONa）組成的緩衝溶液，已知醋酸 pKa = 4.74，pH 是多少？"
+  options={[
+    "4.44",
+    "4.74",
+    "5.04",
+    "5.34"
+  ]}
+  answer="(C) 5.04"
+  steps={[
+    "辨認：弱酸（醋酸）+ 其鹽（醋酸鈉）→ 緩衝溶液，用 Henderson-Hasselbalch。",
+    "pH = pKa + log([鹽]/[酸]) = 4.74 + log(0.20/0.10)。",
+    "log(0.20/0.10) = log(2) ≈ 0.30。",
+    "pH = 4.74 + 0.30 = <b>5.04</b>。",
+    "直覺確認：鹽 > 酸，所以 pH > pKa，答案 5.04 合理。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="將 25.0 mL 的 0.10 M CH₃COOH（pKa=4.74）用 0.10 M NaOH 滴定，加入 12.5 mL NaOH 時，溶液 pH 為何？"
+  options={[
+    "3.74",
+    "4.74",
+    "7.00",
+    "8.72"
+  ]}
+  answer="(B) 4.74"
+  steps={[
+    "當量點需要加入 25.0 mL NaOH（等莫耳）；12.5 mL 是<b>半當量點</b>。",
+    "加入 12.5 mL NaOH：mol NaOH = 0.0125 L × 0.10 M = 0.00125 mol。",
+    "初始 mol CH₃COOH = 0.025 L × 0.10 M = 0.0025 mol。",
+    "中和後：剩餘 CH₃COOH = 0.0025 − 0.00125 = 0.00125 mol；生成 CH₃COO⁻ = 0.00125 mol。",
+    "[鹽]/[酸] = 0.00125/0.00125 = 1，log(1) = 0。",
+    "pH = pKa + 0 = <b>4.74</b>。（半當量點特徵：pH = pKa）"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="AgCl 的 Ksp = 1.8×10⁻¹⁰，在純水中 AgCl 的溶解度（mol/L）約為多少？"
+  options={[
+    "1.8×10⁻¹⁰ M",
+    "1.3×10⁻⁵ M",
+    "9.0×10⁻¹¹ M",
+    "3.6×10⁻¹⁰ M"
+  ]}
+  answer="(B) 約 1.3×10⁻⁵ M"
+  steps={[
+    "AgCl(s) ⇌ Ag⁺(aq) + Cl⁻(aq)，設溶解度為 s。",
+    "溶解後：[Ag⁺] = s，[Cl⁻] = s。",
+    "Ksp = [Ag⁺][Cl⁻] = s × s = s²。",
+    "s² = 1.8×10⁻¹⁰ → s = √(1.8×10⁻¹⁰) ≈ 1.34×10⁻⁵ M。",
+    "≈ <b>1.3×10⁻⁵ M</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="在 AgCl 飽和溶液中加入 NaCl 使 [Cl⁻] 增加到 0.10 M，此時 [Ag⁺] 約為多少？（Ksp(AgCl) = 1.8×10⁻¹⁰）"
+  options={[
+    "1.3×10⁻⁵ M",
+    "1.8×10⁻⁹ M",
+    "1.8×10⁻¹⁰ M",
+    "1.3×10⁻⁴ M"
+  ]}
+  answer="(B) 1.8×10⁻⁹ M"
+  steps={[
+    "同離子效應：加入 NaCl 使 [Cl⁻] = 0.10 M，AgCl 溶解度大幅降低。",
+    "利用 Ksp = [Ag⁺][Cl⁻]，[Cl⁻] 已知為 0.10 M（NaCl 提供，遠大於 AgCl 自行溶解貢獻）。",
+    "[Ag⁺] = Ksp / [Cl⁻] = 1.8×10⁻¹⁰ / 0.10 = <b>1.8×10⁻⁹ M</b>。",
+    "比純水中少了約 10000 倍（1.3×10⁻⁵ → 1.8×10⁻⁹），同離子效應顯著。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="混合等體積的 2×10⁻⁴ M AgNO₃ 與 2×10⁻⁴ M NaCl，是否會產生 AgCl 沉澱？（Ksp(AgCl) = 1.8×10⁻¹⁰）"
+  options={[
+    "不會，因為濃度太低",
+    "會，因為 Qsp &gt; Ksp",
+    "不會，因為 Qsp &lt; Ksp",
+    "無法判斷"
+  ]}
+  answer="(B) 會，因為 Qsp > Ksp"
+  steps={[
+    "等體積混合後，各離子濃度減半：[Ag⁺] = 1×10⁻⁴ M，[Cl⁻] = 1×10⁻⁴ M。",
+    "計算離子積：Qsp = [Ag⁺][Cl⁻] = (1×10⁻⁴)(1×10⁻⁴) = 1×10⁻⁸。",
+    "比較：Qsp = 1×10⁻⁸ > Ksp = 1.8×10⁻¹⁰。",
+    "Qsp > Ksp → <b>會產生沉澱</b>，直到離子積降至 Ksp 為止。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="下列等體積混合的溶液中，何者為<b>酸性緩衝</b>溶液？"
+  options={[
+    "0.10 M HCl + 0.10 M NaOH",
+    "0.10 M HCl + 0.10 M NaCl",
+    "0.10 M HCO₂H + 0.10 M NaHCO₂",
+    "0.10 M NH₃ + 0.10 M NH₄Cl"
+  ]}
+  answer="(C) HCO₂H + NaHCO₂"
+  steps={[
+    "緩衝 = 弱酸+其共軛鹼（或弱鹼+其共軛酸）。",
+    "(A) 強酸+強鹼等量 → 互相中和成 NaCl，中性，<b>非緩衝</b>。",
+    "(B) HCl 是強酸，NaCl 不是它的共軛鹼，<b>非緩衝</b>。",
+    "(C) HCO₂H 是<b>弱酸</b>，NaHCO₂ 是它的鹽（共軛鹼 HCO₂⁻）→ 酸性緩衝 ✓。",
+    "(D) NH₃+NH₄Cl 也是緩衝，但屬<b>鹼性</b>緩衝（pH>7），題目要酸性，故選 (C)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="Mg(OH)₂ 的 Ksp = 8.9×10⁻¹²。在 pH = 10.0、緩衝能力極大的溶液中，Mg(OH)₂ 的溶解度約為多少 mol/L？"
+  options={[
+    "8.9×10⁻⁸",
+    "8.9×10⁻⁴",
+    "8.9×10⁻²",
+    "8.9×10⁻¹²"
+  ]}
+  answer="(B) 8.9×10⁻⁴ mol/L"
+  steps={[
+    "Mg(OH)₂(s) ⇌ Mg²⁺ + 2OH⁻，Ksp = [Mg²⁺][OH⁻]²。",
+    "緩衝固定 pH=10 → pOH=4 → [OH⁻] = 10⁻⁴ M（被固定，不隨溶解改變）。",
+    "溶解度 s = [Mg²⁺] = Ksp / [OH⁻]² = 8.9×10⁻¹² / (10⁻⁴)²。",
+    "(10⁻⁴)² = 10⁻⁸，s = 8.9×10⁻¹² / 10⁻⁸ = <b>8.9×10⁻⁴ mol/L</b>。",
+    "注意：因 pH 被緩衝鎖死，不能用純水的 s=∛(Ksp/4)，要用固定 [OH⁻] 直接除。"
+  ]}
+/>
