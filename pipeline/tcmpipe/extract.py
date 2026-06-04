@@ -17,7 +17,11 @@ from PIL import Image
 
 from tcmpipe import config as C
 
-QNUM_RE = re.compile(r'^(\d{1,3})\.$')
+QNUM_RE = re.compile(r'^(\d{1,3})\.$')                  # standalone "12." token
+# question number at the START of a token — the dot must NOT be followed by a digit
+# (so decimals like "1.5" never match) but MAY be followed by glued stem text, e.g.
+# "10.假設在動物胚胎…" which single-token QNUM_RE misses entirely (whole question lost).
+QNUM_PREFIX_RE = re.compile(r'^(\d{1,3})\.(?=\D|$)')
 OPT_RE = re.compile(r'^\(([A-E])\)(.*)$')
 
 
@@ -51,11 +55,39 @@ def load_words(doc: fitz.Document) -> list[tuple]:
 def find_anchors(words: list[tuple]) -> list[Anchor]:
     anchors = []
     for (pno, x0, y0, x1, y1, t) in words:
-        m = QNUM_RE.match(t)
+        m = QNUM_PREFIX_RE.match(t)
         if m and x0 < C.LEFT_MARGIN_MAX:
             anchors.append(Anchor(pno, y0, x0, int(m.group(1))))
     anchors.sort(key=lambda a: (a.page, a.y))
-    return anchors
+    return _drop_spurious_anchors(anchors)
+
+
+def _drop_spurious_anchors(anchors: list[Anchor]) -> list[Anchor]:
+    """Reject anchors that aren't at a question left margin. Real question numbers
+    line up at a margin; an in-content numbered list (`1. 2. 3.` inside a question)
+    sits indented and would otherwise become phantom questions.
+
+    A combined exam (ISU `exam_all.pdf`) holds several subjects whose margins can
+    differ (English is indented ~10pt from the CJK subjects), so keep EVERY sizable
+    x-cluster — not just the dominant one — and drop only the small outlier clusters
+    (a stray list is a handful of anchors; a subject is 35–50)."""
+    if len(anchors) < 8:
+        return anchors
+    # group xs into margin clusters, splitting only on a wide gap. Single-digit
+    # numbers are right-aligned ~6pt past the two-digit column ("9." vs "10."), so
+    # they must stay in their subject's cluster; an in-content list is indented far
+    # more (~14pt) and stays a separate, small cluster.
+    xs = sorted(a.x for a in anchors)
+    clusters: list[list[float]] = []
+    for x in xs:
+        if clusters and x - clusters[-1][-1] <= 9.0:
+            clusters[-1].append(x)
+        else:
+            clusters.append([x])
+    keep = [(cl[0], cl[-1]) for cl in clusters if len(cl) >= 10]  # sizable margins only
+    if not keep:
+        return anchors                       # tiny file — don't over-filter
+    return [a for a in anchors if any(lo - 3.0 <= a.x <= hi + 3.0 for lo, hi in keep)]
 
 
 def split_sections(anchors: list[Anchor]) -> list[list[Anchor]]:
@@ -116,9 +148,15 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
     stem_parts: list[str] = []
     options: list[dict] = []
     cur: dict | None = None
-    for t in tokens:
+    for i, t in enumerate(tokens):
         if QNUM_RE.match(t):
-            continue
+            continue                       # standalone "12." number token -> drop
+        if cur is None and not stem_parts:
+            pm = QNUM_PREFIX_RE.match(t)    # leading number glued to the stem text
+            if pm:                         # ("10.假設…") -> keep only the stem part
+                t = t[pm.end():]
+                if not t:
+                    continue
         m = OPT_RE.match(t)
         if m:
             cur = {'letter': m.group(1), 'parts': [m.group(2)]}
@@ -127,7 +165,9 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
             cur['parts'].append(t)
         else:
             stem_parts.append(t)
-    # de-dupe accidental repeated option letters, keep first occurrence order
+    # de-dupe accidental repeated option letters (keep the first), then sort by
+    # letter so display order is always A,B,C,D,E — a two-column layout can yield
+    # the markers in reading order A,B,D,C, but the letter↔text pairing is exact.
     seen = set()
     uniq = []
     for o in options:
@@ -135,6 +175,7 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
             continue
         seen.add(o['letter'])
         uniq.append({'letter': o['letter'], 'text': _smart_join(o['parts']).strip()})
+    uniq.sort(key=lambda o: o['letter'])
     return _smart_join(stem_parts).strip(), uniq
 
 
@@ -189,13 +230,43 @@ def _page_bands(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> list[tuple
 
 
 def _question_tokens(doc: fitz.Document, bands: list[tuple[int, float, float]]) -> list[str]:
+    """Reading-order tokens for a question. Words are grouped into visual lines
+    and sorted left-to-right WITHIN each line, then lines run top-to-bottom.
+    This fixes two-column option layouts (A/B side by side, C/D below): a plain
+    `(round(y,1), x)` sort mis-orders them because an option's value text often
+    sits ~1pt off its marker's baseline, dropping it past the next column's
+    marker and gluing it onto the wrong option."""
     toks = []
     for (pno, top, bottom) in bands:
         for w in doc[pno].get_text('words'):
-            if w[1] >= top - 0.5 and w[3] <= bottom + 0.5 and not _is_chrome(w[4]):
-                toks.append((pno, w[1], w[0], C.nfkc(w[4])))
-    toks.sort(key=lambda r: (r[0], round(r[1], 1), r[2]))
-    return [r[3] for r in toks]
+            yc = (w[1] + w[3]) / 2  # a word belongs to the band if its vertical CENTRE is
+            if top - 0.5 <= yc <= bottom + 0.5 and not _is_chrome(w[4]):  # inside — matches the
+                toks.append((pno, w[0], w[1], w[3], C.nfkc(w[4])))  # rendered crop and never drops
+                # a last line that straddles the band's bottom edge (tightly-packed cloze option
+                # rows otherwise vanished: the whole `(A)..(D)` row sits ~1pt past `nxt.y - pad`).
+                # page, x0, y0, y1, text
+    toks.sort(key=lambda r: (r[0], r[2], r[1]))  # page, y0, x0
+    ordered: list[tuple] = []
+    line: list[tuple] = []
+    ref_y = ref_h = 0.0
+    cur_page = -1
+    for tok in toks:
+        pno, _x0, y0, y1 = tok[0], tok[1], tok[2], tok[3]
+        h = max(1.0, y1 - y0)
+        # new visual line when the page changes or this token drops clearly below
+        # the current line's baseline (tolerance = 0.6× the line's text height)
+        if line and (pno != cur_page or (y0 - ref_y) > 0.6 * ref_h):
+            line.sort(key=lambda r: r[1])  # left-to-right within the line
+            ordered.extend(line)
+            line = []
+        if not line:
+            ref_y, ref_h = y0, h
+        line.append(tok)
+        cur_page = pno
+    if line:
+        line.sort(key=lambda r: r[1])
+        ordered.extend(line)
+    return [r[4] for r in ordered]
 
 
 def _render_crop(doc: fitz.Document, bands: list[tuple[int, float, float]]) -> tuple[bytes, int, int, bool]:
