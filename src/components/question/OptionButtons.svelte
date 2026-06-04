@@ -33,7 +33,7 @@
   {#each letters as letter (letter)}
     <button
       type="button"
-      class={`btn h-auto min-h-11 items-start justify-start gap-1 whitespace-normal py-2 text-left leading-snug ${stateClass(letter)}`}
+      class={`btn h-auto min-h-11 select-text items-start justify-start gap-1 whitespace-normal py-2 text-left leading-snug ${stateClass(letter)}`}
       aria-pressed={selected === letter}
       onclick={() => onselect?.(letter)}
     >
