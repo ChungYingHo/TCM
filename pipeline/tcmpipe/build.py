@@ -95,12 +95,65 @@ def _merge_one(school, year, subject, ex, amap, answer_src, e):
     )
 
 
+def _ensure_answer_selectable(rec: QuestionRecord) -> None:
+    """Pad option letters in-place so every correct-answer letter is selectable.
+    Effective letters = the question's own option letters, or the UI's A–D fallback
+    when it has none. If an answer falls outside that (e.g. an E answer on a
+    structure-only question), extend the options to A..<max needed> with empty
+    text. No-op for the common case where options already cover the answer."""
+    if rec.award_all or not rec.correct_answer:
+        return
+    have = [o.letter for o in rec.options]
+    effective = set(have) if have else set('ABCD')
+    if set(rec.correct_answer) <= effective:
+        return
+    top = max(effective | set(rec.correct_answer) | set(have or ['D']))
+    by = {o.letter: o for o in rec.options}
+    rec.options = [by.get(L, Option(letter=L, text=''))
+                   for L in (chr(c) for c in range(ord('A'), ord(top) + 1))]
+
+
 def _load_overrides(school):
     p = os.path.join(C.OVERRIDES_DIR, f'{school}.json')
     if os.path.isfile(p):
         with open(p, encoding='utf-8') as f:
             return json.load(f)
     return {}
+
+
+def _load_segments():
+    if os.path.isfile(C.SEGMENTS_FILE):
+        with open(C.SEGMENTS_FILE, encoding='utf-8') as f:
+            return json.load(f)
+    return {}
+
+
+_SEGMENTS = _load_segments()
+
+
+def _segment_records(school, year, subject, doc, amap, answer_src, e_subj, existing: set, src):
+    """Image-only records for questions normal extraction can't reach (scanned /
+    doubled / inline-numbered cloze). Each segment item renders one crop shared by
+    its `nums`; text/options are left empty (the image is authoritative) and the
+    answer still flows from the card + errata via `_merge_one`. Options are seeded
+    as empty A–E so any A–E answer stays clickable."""
+    spec = _SEGMENTS.get(f'{school}-{year}-{subject}')
+    if not spec:
+        return []
+    out = []
+    for item in spec.get('items', []):
+        bands = [(int(p), float(t), float(b)) for (p, t, b) in item['bands']]
+        img_bytes, w, h, spans = extract._render_crop(doc, bands)
+        for num in item['nums']:
+            if num in existing:
+                continue
+            ex = extract.Extracted(num=num, stem='',
+                                   options=[{'letter': L, 'text': ''} for L in ALL_LETTERS],
+                                   image_w=w, image_h=h, image_bytes=img_bytes, spans_pages=spans)
+            ex.source_pdf = src
+            out.append(_merge_one(school, year, subject, ex, amap, answer_src, e_subj.get(num)))
+            existing.add(num)
+    return out
 
 
 def run_school(school):
@@ -123,7 +176,11 @@ def run_school(school):
                 continue
             amap, answer_src = answers_by_subj.get(subject, ({}, ''))
             e_subj = errata_by_subj.get(subject) or errata_by_subj.get('?') or {}
-            extracted = extract.extract_section(doc, anchors)
+            # a `replace` segment spec means normal extraction is unreliable for this
+            # subject (scanned / doubled-glyph PDF) — use ONLY the image-only segments
+            seg_spec = _SEGMENTS.get(f'{school}-{year}-{subject}')
+            replace = bool(seg_spec and seg_spec.get('replace'))
+            extracted = [] if replace else extract.extract_section(doc, anchors)
             nums = [x.num for x in extracted]
             # QA: contiguity / answer coverage
             if nums:
@@ -138,6 +195,9 @@ def run_school(school):
                 ex.source_pdf = src
                 rec = _merge_one(school, year, subject, ex, amap, answer_src, e_subj.get(ex.num))
                 records.append(rec)
+            # image-only segments fill in questions normal extraction can't reach
+            records.extend(_segment_records(school, year, subject, doc, amap, answer_src,
+                                            e_subj, set(nums), src))
 
     # guarantee unique ids (a spurious anchor can duplicate a question_number);
     # suffix duplicates and flag them for review so the UI never sees a dup key.
@@ -166,6 +226,13 @@ def run_school(school):
         for r in records:
             if r.id in tag_ov:
                 r.concept_tags = tag_ov[r.id]
+
+    # every correct-answer letter must be clickable: some chemistry options render
+    # only as structures (no text) or a 5th option E isn't in the text layer, so the
+    # UI's A–D fallback can't select an E answer. Pad missing letters (empty text;
+    # the image stays the source of truth).
+    for r in records:
+        _ensure_answer_selectable(r)
 
     # apply human overrides (sacred, last)
     overrides = _load_overrides(school)

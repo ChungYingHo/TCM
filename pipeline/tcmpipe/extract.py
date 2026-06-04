@@ -3,9 +3,16 @@
 """Render + segment exam PDFs into per-question (text, options, crop image).
 
 All three schools are single-column. Question-number tokens `N.` near the left
-margin are the segmentation anchors. Option markers are `(A)`..`(E)` — sometimes a
-standalone token (CMU/TCU), sometimes glued to the option text (ISU text subjects);
-both are handled by `parse_stem_options`.
+margin are the segmentation anchors — matched as a prefix so a number glued to the
+stem (`10.假設…`) still anchors, and in-content numbered lists are dropped by left-x
+clustering (`_drop_spurious_anchors`). Words are assigned to a question by their
+vertical centre, and grouped into visual lines so two-column option blocks read in
+order (`_question_tokens`). Option markers are `(A)`..`(E)` — standalone (CMU/TCU)
+or glued to the option text (ISU); both handled by `parse_stem_options`.
+
+PDFs that defeat text extraction (scanned with no text layer, doubled-glyph layers,
+inline-numbered cloze blocks) are covered by image-only crops in
+`pipeline/overrides/segments.json`, consumed in `build._segment_records`.
 """
 from __future__ import annotations
 import re

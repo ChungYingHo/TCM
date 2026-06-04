@@ -40,6 +40,10 @@ WEB_IMAGE_DIR = os.path.join(ROOT, 'public', 'q')             # question crops
 WEB_ERRATA_DIR = os.path.join(ROOT, 'public', 'errata')       # errata region crops
 OUT_DIR = os.path.join(ROOT, 'pipeline', 'out')               # intermediate (gitignored)
 OVERRIDES_DIR = os.path.join(ROOT, 'pipeline', 'overrides')   # human QA (committed)
+# explicit image-only crops for questions normal anchor extraction can't reach
+# (scanned PDFs with no text layer, doubled-glyph PDFs, inline-numbered cloze
+# blocks). Maps `<SCHOOL>-<YEAR>-<subject>` -> {items:[{nums, bands}]}.
+SEGMENTS_FILE = os.path.join(OVERRIDES_DIR, 'segments.json')
 
 # Rendering — higher DPI so the zoom/lightbox stays crisp (source PDF is vector).
 RENDER_DPI = 220          # crop image resolution (~1820px wide for A4)
