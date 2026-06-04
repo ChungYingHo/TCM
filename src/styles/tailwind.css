@@ -129,23 +129,73 @@ a.card:hover, .card-hover:hover {
 /* 文字選取色 */
 ::selection { background: color-mix(in oklab, var(--color-primary) 22%, transparent); }
 
-/* 筆記正文：標題宋體、行距舒展、區塊間留白 */
-.prose { line-height: 1.8; }
+/* 筆記正文：標題宋體、行距舒展、區塊間留白（呼吸感優先，避免擁擠）
+   註：本專案未裝 @tailwindcss/typography，prose 全靠這段自訂樣式，prose-sm/lg 等修飾類無效。 */
+.prose { line-height: 1.85; font-size: 1rem; }
+@media (min-width: 640px) { .prose { font-size: 1.0625rem; } } /* 桌機略放大，更好讀 */
 .prose :is(h1, h2, h3, h4) { font-family: var(--font-display); }
-.prose h2 { margin-top: 2em; margin-bottom: 0.7em; letter-spacing: 0.02em; }
+/* 大段落（## ）之間用較大留白＋左側主色標記，分區一眼可辨 */
+.prose h2 {
+  margin-top: 2.4em; margin-bottom: 0.8em; letter-spacing: 0.02em;
+  padding-left: 0.7rem; border-left: 4px solid color-mix(in oklab, var(--color-primary) 70%, transparent);
+}
+.prose > :first-child { margin-top: 0; }
+.prose h3 { margin-top: 1.8em; margin-bottom: 0.6em; }
+.prose p { margin-top: 0.9em; margin-bottom: 0.9em; }
+.prose :is(ul, ol) { margin-top: 0.7em; margin-bottom: 1em; padding-left: 1.4em; }
+.prose li { margin-top: 0.35em; margin-bottom: 0.35em; padding-left: 0.15em; }
+.prose li::marker { color: color-mix(in oklab, var(--color-primary) 55%, transparent); }
 .prose table { font-size: 0.92em; border-collapse: separate; border-spacing: 0; overflow: hidden;
+  margin-top: 1.2em; margin-bottom: 1.5em;
   border-radius: 0.85rem; box-shadow: 0 0 0 1px var(--hairline); }
 .prose thead th { background: color-mix(in oklab, var(--color-primary) 8%, var(--color-base-100));
   font-weight: 700; }
-.prose :is(th, td) { border-color: var(--hairline); padding: 0.5rem 0.75rem; }
+.prose :is(th, td) { border-color: var(--hairline); padding: 0.6rem 0.85rem; }
+.prose tbody tr:nth-child(even) td { background: color-mix(in oklab, var(--color-base-content) 2.5%, transparent); }
+/* 引用塊在筆記裡是「小提示／例」，不是引言：去斜體、改柔色提示卡（中文斜體很醜） */
+.prose blockquote {
+  font-style: normal; font-weight: 400; quotes: none;
+  margin: 1.2em 0; padding: 0.7rem 1rem;
+  border-left: 3px solid color-mix(in oklab, var(--color-accent) 55%, transparent);
+  border-radius: 0 var(--radius-field) var(--radius-field) 0;
+  background: color-mix(in oklab, var(--color-accent) 7%, var(--color-base-100));
+  color: color-mix(in oklab, var(--color-base-content) 90%, transparent);
+}
+.prose blockquote p { margin: 0; }
+.prose blockquote p::before, .prose blockquote p::after { content: none; }
 
-/* ── 夜讀（暖白低亮）模式：降亮護眼，適合睡前手機 ─────────────────────── */
+/* ── 夜讀（深色護眼）模式：墨黛深底＋柔白字，睡前在暗處手機刷題不刺眼。
+   沿用黛青／藥草色系（冷調），不用暖黃；強調色在暗底上提亮以保清晰。 ─────── */
 [data-reading="dim"] {
-  --color-base-100: oklch(0.95 0.01 80);
-  --color-base-200: oklch(0.915 0.014 78);
-  --color-base-300: oklch(0.86 0.018 76);
-  --color-base-content: oklch(0.34 0.02 70);
-  filter: saturate(0.96);
+  color-scheme: dark;
+
+  --color-base-100: oklch(0.255 0.013 199);     /* 卡片面：深墨青 */
+  --color-base-200: oklch(0.205 0.012 203);     /* 頁面底：更深 */
+  --color-base-300: oklch(0.345 0.014 199);     /* 分隔／框線 */
+  --color-base-content: oklch(0.905 0.012 186); /* 柔白（微涼，不刺眼） */
+
+  --color-primary: oklch(0.74 0.095 184);       /* 黛青提亮 */
+  --color-primary-content: oklch(0.20 0.02 199);
+  --color-secondary: oklch(0.75 0.075 150);     /* 藥草綠提亮 */
+  --color-secondary-content: oklch(0.20 0.02 150);
+  --color-accent: oklch(0.76 0.105 58);         /* 赭：暖調強調（點綴用） */
+  --color-accent-content: oklch(0.20 0.025 58);
+  --color-neutral: oklch(0.33 0.015 199);
+  --color-neutral-content: oklch(0.92 0.01 186);
+
+  --color-info: oklch(0.75 0.085 232);
+  --color-info-content: oklch(0.18 0.02 232);
+  --color-success: oklch(0.75 0.095 152);
+  --color-success-content: oklch(0.18 0.02 152);
+  --color-warning: oklch(0.81 0.105 80);
+  --color-warning-content: oklch(0.24 0.03 80);
+  --color-error: oklch(0.71 0.13 25);
+  --color-error-content: oklch(0.18 0.02 25);
+
+  /* 暗底上：框線用柔白低透；陰影改深黑（避免淺色光暈） */
+  --hairline: color-mix(in oklab, var(--color-base-content) 15%, transparent);
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.42), 0 10px 24px -16px rgba(0, 0, 0, 0.62);
+  --shadow-lift: 0 2px 6px rgba(0, 0, 0, 0.46), 0 18px 40px -20px rgba(0, 0, 0, 0.72);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -14,12 +14,14 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
 ---
 
 <header class="sticky top-0 z-30 border-b border-base-300/70 bg-base-100/75 backdrop-blur-xl">
-  <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 overflow-x-auto px-3 py-3 sm:px-5 custom-scrollbar">
-    <a href="/home" class="mr-3 flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight">
+  <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 px-3 py-3 sm:px-5">
+    <a href="/home" class="mr-auto flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight lg:mr-3">
       <span class="grid h-7 w-7 place-items-center rounded-xl bg-primary/12 text-sm text-primary">醫</span>
       後中醫<span class="text-primary">題庫</span>
     </a>
-    <div class="flex flex-1 items-center gap-0.5">
+
+    <!-- 桌機：橫排連結（lg 以下隱藏） -->
+    <div class="hidden flex-1 items-center gap-0.5 lg:flex">
       {
         links.map((l) => (
           <a
@@ -35,8 +37,45 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
         ))
       }
     </div>
+
     <button id="reading-toggle" class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">☾</button>
+
+    <!-- 手機：漢堡選單按鈕（lg 以上隱藏） -->
+    <button
+      id="nav-toggle"
+      class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-base-content/65 transition-colors hover:bg-base-content/5 hover:text-base-content lg:hidden"
+      aria-label="開啟選單"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+    >
+      <svg data-icon="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+      <svg data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden h-5 w-5">
+        <path d="M6 6l12 12M18 6 6 18"></path>
+      </svg>
+    </button>
   </nav>
+
+  <!-- 手機：下拉選單面板 -->
+  <div id="mobile-menu" class="hidden border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl lg:hidden">
+    <div class="mx-auto flex w-full max-w-5xl flex-col gap-0.5 px-3 py-2 sm:px-5">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class={`rounded-xl px-3.5 py-2.5 text-sm transition-colors ${
+              isActive(l.href)
+                ? 'bg-primary/12 font-semibold text-primary'
+                : 'font-medium text-base-content/75 hover:bg-base-content/5 hover:text-base-content'
+            }`}
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </div>
+  </div>
 </header>
 
 <script is:inline>
@@ -50,5 +89,15 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/')
       el.dataset.reading = 'dim'
       localStorage.setItem('tcm-reading', 'dim')
     }
+  })
+
+  const navToggle = document.getElementById('nav-toggle')
+  const mobileMenu = document.getElementById('mobile-menu')
+  navToggle?.addEventListener('click', () => {
+    const open = !mobileMenu.classList.toggle('hidden')
+    navToggle.setAttribute('aria-expanded', String(open))
+    navToggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單')
+    navToggle.querySelector('[data-icon="menu"]')?.classList.toggle('hidden', open)
+    navToggle.querySelector('[data-icon="close"]')?.classList.toggle('hidden', !open)
   })
 </script>
