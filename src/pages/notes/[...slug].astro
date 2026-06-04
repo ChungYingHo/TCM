@@ -13,7 +13,8 @@ export const prerender = false
 const { slug } = Astro.params
 const notes = await getCollection('notes')
 const entry = notes.find((n) => n.id === slug)
-if (!entry) return Astro.redirect('/notes')
+// Unknown slug or a draft note -> back to the index (drafts are unpublished).
+if (!entry || entry.data.draft) return Astro.redirect('/notes')
 
 const { Content } = await render(entry)
 const subject = entry.data.subject as Subject

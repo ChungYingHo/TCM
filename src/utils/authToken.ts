@@ -22,9 +22,16 @@ export function checkPassword(input: string): boolean {
 }
 
 // HMAC key for the gate cookie. MUST be set (AUTH_SECRET) in any public deploy —
-// otherwise the cookie is forgeable. The dev fallback is intentionally weak.
+// otherwise the cookie is forgeable.
 function signingKey(): string {
-  return authSecret() || sitePassword() || 'dev-only-insecure'
+  const secret = authSecret()
+  if (secret) return secret
+  // Fail loud in production rather than silently signing with a guessable key.
+  // The weak fallback below is for local dev / e2e only (never reached in prod).
+  if (import.meta.env.PROD) {
+    throw new Error('AUTH_SECRET is required in production: the gate cookie would otherwise be forgeable.')
+  }
+  return sitePassword() || 'dev-only-insecure'
 }
 
 /** Token proves "unlocked" without storing the password itself. */

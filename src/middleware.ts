@@ -1,14 +1,14 @@
 import { defineMiddleware } from 'astro:middleware'
 import { AUTH_COOKIE, verifyToken } from '@/utils/authToken'
-
-// Routes reachable without the gate: the landing page itself and the unlock API.
-const PUBLIC_PATHS = new Set(['/', '/api/unlock'])
+import { isPublicPath } from '@/utils/publicPaths'
 
 export const onRequest = defineMiddleware(async (context, next) => {
   const { pathname } = context.url
 
-  // Static assets (incl. question images in /q) and the public landing are open.
-  if (PUBLIC_PATHS.has(pathname) || isAsset(pathname)) {
+  // Landing gate, unlock API, and static assets are open. The allowlist is an
+  // explicit prefix/file set (see publicPaths.ts) — NOT "anything with a file
+  // extension", which would silently expose gated routes ending in .ext.
+  if (isPublicPath(pathname)) {
     return next()
   }
 
@@ -26,12 +26,3 @@ export const onRequest = defineMiddleware(async (context, next) => {
   }
   return context.redirect('/')
 })
-
-function isAsset(pathname: string): boolean {
-  return (
-    pathname.startsWith('/q/') ||
-    pathname.startsWith('/_astro/') ||
-    pathname.startsWith('/_image') ||
-    /\.[a-z0-9]+$/i.test(pathname)
-  )
-}
