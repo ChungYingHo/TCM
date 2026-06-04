@@ -1,8 +1,8 @@
 ---
-title: 時態語態全攻略：用副詞秒判、主動被動不混淆
+title: 時態與語態：時間副詞定時態、被動與假設語氣
 subject: english
 tag: 文法：時態與語態
-summary: 從時間副詞辨認十二時態，到 be+p.p. 被動句型與非限定動詞，一篇搞定填空必考句型。
+summary: 六大核心時態與時間副詞線索、被動語態、非限定動詞、假設語氣與倒裝、used to 與感官使役動詞，附時態判斷與假設語氣工具。
 audio: >
   文法：時態與語態，重點複習。
   時間副詞是判斷時態的最快線索：since/for/already/yet ，得到 現在完成；yesterday/ago ，得到 簡單過去。
@@ -26,14 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import TenseFinder from '@/components/notes/TenseFinder.svelte'
+import Subjunctive from '@/components/notes/Subjunctive.svelte'
 
 <NoteStats tag="文法：時態與語態" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+英文動詞的時態由**時間**（過去／現在／未來）和**樣貌**（簡單／進行／完成）組合出 12 種，考試最常考 6 種。本篇從六大時態談起，帶到被動、非限定動詞、假設語氣與易混淆句型。
 
-英文動詞的「時態」包含**時間**（過去/現在/未來）和**樣貌**（簡單/進行/完成/完成進行），組合出 12 種。考試最常考的只有 6 種，先抓住以下表格：
-
-**① 六大核心時態一覽**
+## 一、六大核心時態一覽
 
 | 時態 | 結構 | 常見時間副詞 |
 |---|---|---|
@@ -46,7 +46,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 口訣：**看到副詞，就能定時態**。題目有 "since 2010" → 現在完成；有 "yesterday" → 簡單過去。
 
-**② 主動 vs 被動（Passive Voice）**
+<TenseFinder client:visible />
+
+## 二、主動 vs 被動（Passive Voice）
 
 被動式公式：**be 動詞 + 過去分詞（p.p.）**
 
@@ -59,7 +61,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 判斷技巧：主詞是「動作的承受者」→ 用被動；主詞是「動作的執行者」→ 用主動。
 
-**③ 非限定動詞（Verbals）：to V、V-ing、p.p.**
+## 三、非限定動詞（Verbals）：to V、V-ing、p.p.
 
 非限定動詞不當主要動詞，而是扮演**名詞、形容詞或副詞**角色：
 
@@ -69,7 +71,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | V-ing | 動名詞/現在分詞 | 當主詞（**Studying** is fun）、介系詞後（good at **swimming**） |
 | p.p. | 過去分詞 | 被動形容詞（a **broken** window）、完成時態輔助 |
 
-**④ 假設語氣（Subjunctive）——考古題最愛考的兩大型**
+## 四、假設語氣（Subjunctive）——考古題最愛考的兩大型
+
+<Subjunctive client:visible />
 
 「假設語氣」＝講「不是真的／與事實相反／要求別人做」的特殊動詞變化。要分兩類：
 
@@ -97,14 +101,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 所以看到句首是 **Had / Were / Should + 主詞**，就是「省略 If 的倒裝假設句」。
 
-**⑤ used to V vs be used to V-ing（極易混淆）**
+## 五、used to V vs be used to V-ing（極易混淆）
 
 | 片語 | 意思 | 後面接 |
 |---|---|---|
 | **used to + 原形 V** | 過去常常（現在不再） | 原形動詞：I **used to smoke**. |
 | **be used to + V-ing** | 習慣於（to 是介系詞） | V-ing：I **am used to getting up** early. |
 
-**⑥ 感官／使役動詞 + 受詞 + 原形 V**
+## 六、感官／使役動詞 + 受詞 + 原形 V
 
 see / hear / feel / watch / notice 及 make / let / have 後面，接受詞再接**原形動詞（bare infinitive，無 to）**：
 

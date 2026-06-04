@@ -1,8 +1,8 @@
 ---
-title: 字音字形：破音字、形近字、常見錯別字一次搞定
+title: 字音字形：破音字、形近字與常見錯別字
 subject: chinese
 tag: 字音字形
-summary: 把最容易在考場「一時失憶」的字音字形整理成表，幫你快速辨正、不再失分。
+summary: 破音字的判讀、讀音異同題、注音對應字形、形近字與高頻錯別字的辨正方法，附破音字探索與錯別字自測工具。
 audio: >
   字音字形，重點複習。
   破音字：先判詞義，再定讀音，不要死背音。
@@ -24,12 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PolyphoneExplorer from '@/components/notes/PolyphoneExplorer.svelte'
+import TypoSpotter from '@/components/notes/TypoSpotter.svelte'
 
 <NoteStats tag="字音字形" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+字音字形題考的是辨正：破音字看詞義定讀音，形近字看部首分意義，錯別字把詞還原成本義。本篇整理高頻題型與辨別方法。
 
-### ① 破音字是什麼？
+## 一、破音字是什麼？
 
 同一個字，因詞義不同而有兩種（甚至更多）讀音，叫做**破音字**（又稱多音字）。
 考試最愛出「哪個讀法最正確」，關鍵在**先判斷詞義，再選讀音**。
@@ -45,7 +47,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 好 | ㄏㄠˇ (hǎo) | 好人、好看 | ㄏㄠˋ (hào) | 好學、嗜好 |
 | 長 | ㄔㄤˊ (cháng) | 長短、漫長 | ㄓㄤˇ (zhǎng) | 成長、師長 |
 
-### ② 讀音是否相同（考最兇的題型）
+<PolyphoneExplorer client:visible />
+
+## 二、讀音是否相同（考最兇的題型）
 
 考試很愛問「下列各組『』內的字，讀音兩兩相同的是哪一組？」。
 做法很簡單：**把每個字的注音默念出來，逐組比對，完全一樣（含聲調）才算相同。**
@@ -61,7 +65,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 口訣：**先標注音再比，聲、韻、調三者全同才算同音。**
 
-### ③ 注音對應到哪個字（字音→字形）
+## 三、注音對應到哪個字（字音→字形）
 
 另一種變化題：題目給注音，問「兩個空格寫出來是不是同一個字」。
 做法：**先想注音對應哪個常用字，再看兩個詞各該填哪個字，字形一樣才算對。**
@@ -74,7 +78,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 提醒：同一個注音常對應好幾個字（磨/摩、碧/壁/璧、遐/瑕/暇），**要靠詞義決定到底是哪個字**。
 
-### ④ 形近字辨正
+## 四、形近字辨正
 
 字形相近、極易混淆，靠**部首意義**來辨別：
 
@@ -87,9 +91,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 侯／候 | 「候」多一豎（「矢」中） | 王侯；等候 |
 | 即／既 | 「即」是人就食；「既」是人食已離 | 即將；既然 |
 
-### ⑤ 常見錯別字辨正
+## 五、常見錯別字辨正
 
 這些是考古題中最高頻的易錯字，請花幾分鐘記一遍：
+
+<TypoSpotter client:visible />
 
 | 錯誤寫法 | 正確寫法 | 記憶線索 |
 |---|---|---|

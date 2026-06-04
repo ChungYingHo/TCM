@@ -1,8 +1,8 @@
 ---
-title: 水溶液離子平衡：緩衝、滴定、Ksp 一次看懂
+title: 水溶液離子平衡：緩衝、滴定與 Ksp
 subject: chemistry
 tag: 水溶液離子平衡
-summary: 從 Henderson-Hasselbalch 算緩衝 pH，到滴定曲線判斷當量點，再到 Ksp 預測沉澱——三大題型一氣呵成。
+summary: 用 Henderson-Hasselbalch 算緩衝 pH、看滴定曲線判斷當量點、用 Ksp 預測沉澱，逐一定義並附互動圖。
 audio: >
   水溶液離子平衡，重點複習。
   緩衝 pH 等於 pKa + log(鹽/酸)；鹽酸比等量時 pH 等於 pKa。
@@ -25,14 +25,16 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import PhScale from '@/components/notes/PhScale.svelte'
+import BufferPh from '@/components/notes/BufferPh.svelte'
+import TitrationCurve from '@/components/notes/TitrationCurve.svelte'
 
 <NoteStats tag="水溶液離子平衡" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+這是酸鹼平衡的進階：緩衝、滴定、溶度積（Ksp）三大題型。本篇逐一定義並附互動圖。
 
-**① 緩衝溶液是什麼？**
+## 一、緩衝溶液是什麼
 
-由**弱酸＋其共軛鹼（鹽）**，或**弱鹼＋其共軛酸**組成。能抵抗外加少量強酸或強鹼，讓 pH 變化很小。
+由**弱酸＋其共軛鹼**（共軛鹼＝弱酸丟掉一個 H⁺ 後的離子，通常以鹽的形式加入），或**弱鹼＋其共軛酸**組成。能抵抗外加少量強酸或強鹼，讓 pH 變化很小。
 
 常見例子：CH₃COOH（醋酸）+ CH₃COONa（醋酸鈉）
 
@@ -47,7 +49,11 @@ import PhScale from '@/components/notes/PhScale.svelte'
 
 判斷三步：① 是不是「弱」的酸/鹼？② 有沒有配上它的共軛物？③ 弱酸系 → 酸性緩衝，弱鹼系 → 鹼性緩衝。
 
-**② Henderson-Hasselbalch 公式**
+## 二、Henderson-Hasselbalch 公式
+
+緩衝溶液的 pH 由這條公式算（動手調調看）：
+
+<BufferPh client:visible />
 
 $$
 \text{pH} = \text{pK}_a + \log\frac{[\text{鹽（共軛鹼）}]}{[\text{弱酸}]}
@@ -58,7 +64,11 @@ $$
 - 加入少量強酸：鹽（共軛鹼）消耗，酸增加，pH 微降
 - 加入少量強鹼：酸消耗，鹽增加，pH 微升
 
-**③ 滴定曲線重點**
+## 三、滴定曲線
+
+滴定＝用已知濃度的鹼（或酸）逐滴加入待測的酸（或鹼），到**當量點**（酸鹼恰好等莫耳中和的那一點）。切換強酸／弱酸看曲線：
+
+<TitrationCurve client:visible />
 
 | 滴定類型 | 當量點 pH | 指示劑選擇 |
 |---|---|---|
@@ -68,9 +78,9 @@ $$
 
 **「半當量點」**：加入一半當量鹼時，[弱酸] = [鹽]，此時 **pH = pKa**。
 
-**④ 溶度積 Ksp**
+## 四、溶度積 Ksp
 
-難溶鹽在水中的溶解平衡，例如 AgCl：
+**溶度積（Ksp）**是難溶鹽在水中的溶解平衡常數。例如 AgCl：
 
 $$
 \text{AgCl}(s) \rightleftharpoons \text{Ag}^+(aq) + \text{Cl}^-(aq)
@@ -83,7 +93,7 @@ $$
 - $K_{sp}$ 越小 → 溶解度越小 → 越難溶
 - 用離子積 $Q_{sp}$ 判斷：若 $Q_{sp} > K_{sp}$ 則會沉澱
 
-**⑤ 同離子效應（Common-Ion Effect）**
+## 五、同離子效應（Common-Ion Effect）
 
 在含 AgCl 的飽和溶液中加入 NaCl（含 Cl⁻），相當於增加 [Cl⁻]，平衡左移，使 AgCl **溶解度降低**。
 
@@ -91,7 +101,7 @@ $$
 \text{AgCl 的溶解度} \downarrow \quad \text{（因為 Cl⁻ 多了）}
 $$
 
-**⑥ 什麼會「增加」難溶鹽的溶解度？**
+## 六、什麼會增加難溶鹽的溶解度
 
 凡是能把溶解平衡的某個離子「移走」的，都讓平衡右移、溶解度上升：
 
@@ -103,7 +113,7 @@ $$
 
 例：醋酸銀 CH₃COOAg 中，加 NH₃ 會錯合 Ag⁺、加 HNO₃ 會把 CH₃COO⁻ 變成醋酸——**兩者都讓溶解度增加**。
 
-**⑦ 在「固定 pH 緩衝液」中的氫氧化物溶解度**
+## 七、固定 pH 下氫氧化物的溶解度
 
 氫氧化物如 Mg(OH)₂：$K_{sp} = [\text{Mg}^{2+}][\text{OH}^-]^2$。若放在緩衝能力極大的溶液裡，pH（即 [OH⁻]）**被固定住**，這時溶解度直接由 Ksp 解出：
 
@@ -113,7 +123,7 @@ $$
 
 先由 pH 求 [OH⁻]（[OH⁻] = 10<sup>−pOH</sup> = 10<sup>pH−14</sup>），再代入。
 
-## 動手玩：拉一下看 pH 如何移動
+## 八、pH 互動尺
 
 <PhScale client:visible />
 

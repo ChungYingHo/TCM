@@ -1,8 +1,8 @@
 ---
-title: 有機反應與機構：SN1/SN2/E1/E2 判斷 + Markovnikov + 聚合
+title: 有機反應與機構：取代、加成、消去與 SN/E 機構
 subject: chemistry
 tag: 有機反應與機構
-summary: 看清楚「取代/加成/消去」再問「親核還是親電」——機構題不再憑感覺。
+summary: 取代/加成/消去三大類、SN1-SN2-E1-E2 的判斷、Markovnikov 規則、親核性順序與烯烴氧化裂解，逐一定義並附判斷工具。
 audio: >
   有機反應與機構，重點複習。
   SN2：1° 碳 ＋ 強親核劑 ＋ 非質子溶劑 ，得到 構型反轉。
@@ -29,12 +29,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import SubMechanism from '@/components/notes/SubMechanism.svelte'
+import CarbocationStability from '@/components/notes/CarbocationStability.svelte'
 
 <NoteStats tag="有機反應與機構" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+有機機構題的關鍵：先分清反應屬於取代、加成還是消去，再判斷走 SN1／SN2／E1／E2 哪條路。本篇逐一定義並附判斷工具。
 
-### ① 三大有機反應類型
+## 一、三大有機反應類型
 
 | 反應類型 | 發生了什麼 | 典型例子 |
 |---|---|---|
@@ -42,14 +44,14 @@ import Chem from '@/components/notes/Chem.svelte'
 | **加成（Addition）** | 雙鍵/三鍵打開，兩側各加一個基 | 乙烯 + HBr → 溴乙烷 |
 | **消去（Elimination）** | 相鄰兩碳各少一個原子/基，形成雙鍵 | 鹵烷 + KOH（醇性）→ 烯 |
 
-### ② 親核試劑 vs 親電試劑
+## 二、親核試劑 vs 親電試劑
 
 | 角色 | 特徵 | 例子 |
 |---|---|---|
 | **親核試劑（Nu）** | 帶負電或有孤電子對，**給電子** | OH⁻、CN⁻、NH₃、H₂O、I⁻ |
 | **親電試劑（E⁺）** | 缺電子，**搶電子** | H⁺、Br⁺（Br₂/光）、NO₂⁺、碳正離子 |
 
-### ③ SN1 / SN2 / E1 / E2 比較表
+## 三、SN1 / SN2 / E1 / E2 比較表
 
 | | **SN2** | **SN1** | **E2** | **E1** |
 |---|---|---|---|---|
@@ -66,7 +68,11 @@ import Chem from '@/components/notes/Chem.svelte'
 3. 看**鹼的大小**（體積大強鹼 → E2；小強鹼 → SN2）
 4. 看**溶劑**（質子性 → SN1/E1；非質子性 → SN2/E2）
 
-### ④ Markovnikov 加成規則
+選碳級與試劑，看會走哪條機構：
+
+<SubMechanism client:visible />
+
+## 四、Markovnikov 加成規則
 
 $$
 \text{烯烴} + \text{HX} \rightarrow \text{H 加到含 H 較多的碳，X 加到含 H 較少的碳}
@@ -76,7 +82,9 @@ $$
 
 反 Markovnikov（過氧化物條件，自由基機構）：Br 加到 H 多的碳。
 
-### ⑤ 加成反應速覽
+<CarbocationStability client:visible />
+
+## 五、加成反應速覽
 
 | 試劑 | 反應 | 產物 |
 |---|---|---|
@@ -88,14 +96,14 @@ $$
 | KMnO₄（冷稀） | 鄰二醇化 | 鄰二醇（syn） |
 | O₃ / Zn | 臭氧分解 | 兩個羰基化合物 |
 
-### ⑥ 聚合反應（高分子）
+## 六、聚合反應（高分子）
 
 | 類型 | 機構 | 例子 |
 |---|---|---|
 | **加成聚合** | 雙鍵打開，單體直接鏈接，無副產物 | 乙烯 → 聚乙烯（PE）、苯乙烯 → PS |
 | **縮合聚合** | 兩官能基反應，**脫去小分子**（H₂O、HCl 等） | 二胺＋二酸 → 耐綸（nylon）；二醇＋二酸 → 聚酯（PET） |
 
-### ⑦ 親核性強弱（考很愛考「順序」）
+## 七、親核性強弱（質子 vs 非質子溶劑）
 
 「親核性」＝給電子搶碳的能力，跟溶劑有關，這是判斷反應快慢與選 SN1/SN2 的關鍵：
 
@@ -103,7 +111,7 @@ $$
 - **非質子極性溶劑（丙酮、DMSO）中**：沒有氫鍵束縛，回歸「鹼性大者親核性強」→ 順序**反過來**：F⁻ ＞ Cl⁻ ＞ Br⁻ ＞ I⁻。
 - 同一週期比較：帶負電 ＞ 中性（OH⁻ ＞ H₂O）；越偏左、電負度越小越親核（往往）。
 
-### ⑧ 烯烴氧化／裂解（一張表記產物）
+## 八、烯烴氧化／裂解（一張表記產物）
 
 | 試劑 | 對 C=C 做什麼 | 產物（關鍵） |
 |---|---|---|
@@ -114,7 +122,7 @@ $$
 
 > mCPBA → 開環得 **anti**（反式）；KMnO₄/OsO₄ 直接得 **syn**（順式）——同一條雙鍵兩條路、立體相反，是常考對比。
 
-### ⑨ 形成 C–C 鍵 / 環的「名反應」速辨
+## 九、形成 C–C 鍵／環的名反應
 
 機構題常問「下列何者**能/不能**形成六員環、何者形成 C–C 鍵」：
 

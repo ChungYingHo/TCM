@@ -1,8 +1,8 @@
 ---
-title: 閱讀理解綜合：五招解題策略讓你不再「感覺對但選錯」
+title: 閱讀理解綜合：五招解題策略與答題紀律
 subject: chinese
 tag: 閱讀理解綜合
-summary: 主旨題抓首尾、細節題逐項比對、推論不超出文本——五招答題SOP，白話文言都適用。
+summary: 主旨、細節、推論、詞義、排序五種題型的對策，填空語感與詞性比對題的技巧，以及文言閱讀的注意事項，附閱讀五招與疊字語感工具。
 audio: >
   閱讀理解綜合，重點複習。
   主旨題看首尾；細節題帶關鍵詞回原文逐字比對；推論題不超出文本。
@@ -25,16 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ReadingStrategy from '@/components/notes/ReadingStrategy.svelte'
+import Reduplication from '@/components/notes/Reduplication.svelte'
 
 <NoteStats tag="閱讀理解綜合" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+閱讀理解不是考「你對這段文章有什麼感想」，而是考**「文章裡有沒有說」**。選錯的主因不是看不懂，而是「憑感覺選了文章沒說的」。先認識題型，再用對應策略。
 
-閱讀理解不是考「你對這段文章有什麼感想」，而是考**「文章裡有沒有說」**。選錯的主因不是看不懂，而是「憑感覺選了文章沒說的」。
-
-先認識題型，再用對應策略：
-
-### 閱讀題型分類
+## 一、閱讀題型分類
 
 | 題型 | 在問什麼 | 陷阱在哪裡 |
 |---|---|---|
@@ -44,7 +42,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **詞義題** | 某個詞在此處是什麼意思 | 帶入平常用法，忽略上下文語境 |
 | **句子排序** | 打亂的句子如何重組 | 看不出「邏輯連接詞」或「代名詞指涉」 |
 
-### 五招解題 SOP
+<ReadingStrategy client:visible />
+
+## 二、五招解題 SOP
 
 **第一招：主旨題→看首尾**
 
@@ -96,7 +96,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 2. **找連接詞**：「此外」「因此」「然而」「由此可見」→確定前後邏輯
 3. **找代名詞**：「他/她/它/這/那」→必須有前文交代對象
 
-### 加考招：填空語感題（填疊字／連接詞）
+## 三、加考招：填空語感題（填疊字／連接詞）
 
 考題常挖空要你「依文意填入最適合的詞」（常是疊字，如杳杳、寂寂、蕭蕭）。沒有公式，靠**語感＋排除法**：
 
@@ -112,7 +112,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **杳杳** | 深遠、幽暗、看不清 | 深山遠路、幽寂（杳杳鐘聲晚） |
 | **寂寂** | 安靜、冷清、無人 | 空寂、寂寥（寂寂江山搖落處） |
 
-### 加考招：「兩字意義詞性是否相同」比對題
+<Reduplication client:visible />
+
+## 四、加考招：「兩字意義詞性是否相同」比對題
 
 題目給甲乙兩句、各有一個相同的字，問「意義與詞性是否相同」。步驟：
 
@@ -122,7 +124,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 例：「悉解**衣**投于地」的「衣」被「解」支配，是**名詞**（衣服）；「卿**衣**矣」主語是卿、其後無賓語，是**動詞**（穿衣）——詞性與意義都不同。
 
-### 文言文閱讀特別注意
+## 五、文言文閱讀特別注意
 
 文言文比白話文多了一層「文字障礙」，策略是：
 
@@ -133,7 +135,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 虛字（之乎者也） | 「之」可能是助詞（無義）、動詞（去）、代名詞（他/她）；看前後文判斷 |
 | 同字異義 | 用「代入法」把每個選項的意思代入原文，看哪個語意通順 |
 
-### 常見虛字整理
+## 六、常見虛字整理
 
 | 虛字 | 可能的意思 |
 |---|---|

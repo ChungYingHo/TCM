@@ -1,8 +1,8 @@
 ---
-title: 詞性、倒裝、語病：句子骨架一次搞定
+title: 詞性、倒裝與語病：句子骨架的辨識
 subject: chinese
 tag: 詞性語法句構
-summary: 從辨詞性到還原倒裝句、揪出語病，三個招式讓語法題不再送分。
+summary: 詞性辨識與兼類、倒裝／省略／被動等特殊句式、錯綜句法，以及成分殘缺等三大語病的辨正，附詞性探索與特殊句式工具。
 audio: >
   詞性語法句構，重點複習。
   中文詞性隨語境變化，看「它在句中做什麼」再判斷，別死記字典詞性。
@@ -24,14 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WordClassExplorer from '@/components/notes/WordClassExplorer.svelte'
+import SentencePatterns from '@/components/notes/SentencePatterns.svelte'
 
 <NoteStats tag="詞性語法句構" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
-
 語法題考四大核心：**詞性辨識**、**特殊句式（倒裝／省略／被動）**、**錯綜等句法修辭**、**語病找錯**。題目常用「何者**未使用**……」的排除問法，把每個選項逐一檢查、找出唯一不符的那個。
 
-### ① 常見詞性與功能
+## 一、常見詞性與功能
 
 | 詞性 | 定義 | 在句中的位置 | 例 |
 |------|------|-------------|-----|
@@ -44,7 +44,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **重點：中文詞性不固定！** 同一個字在不同句子中詞性可能不同（兼類詞），例：「忠肝義**膽**」的「膽」是名詞；「**膽**敢如此」的「膽」是副詞（引申）。
 
-### ② 三種特殊句式
+<WordClassExplorer client:visible />
+
+## 二、三種特殊句式
+
+<SentencePatterns client:visible />
 
 **倒裝句**（語序顛倒，強調某成分）
 
@@ -72,7 +76,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 考法常是「**何者並未使用被動句法**」——把每句套上面標誌檢查，找不到被動的那句就是答案。
 
-### ④ 錯綜（交蹉語次）：把對稱句故意打散
+## 三、錯綜（交蹉語次）：把對稱句故意打散
 
 **錯綜**是修辭，把本來工整對稱的句子「交叉換位」，使句式錯落不呆板。文言名句常用，考題會問「何者**使用／未使用**相同句法」。
 
@@ -84,7 +88,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 判斷要訣：句中是否出現**兩組（以上）結構相同、但成分位置互相交錯**的句子。若四句中三句都是這種交錯對偶、只有一句是單純並列或鋪排，那一句就是答案。
 
-### ③ 語病的三大類
+## 四、語病的三大類
 
 | 語病類型 | 說明 | 錯誤例 | 修正 |
 |----------|------|--------|------|

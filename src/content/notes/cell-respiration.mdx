@@ -1,8 +1,8 @@
 ---
-title: 細胞呼吸四階段：從葡萄糖到 38 ATP 一條龍
+title: 細胞呼吸：糖解、克氏循環、電子傳遞鏈與 ATP
 subject: biology
 tag: 細胞呼吸與能量代謝
-summary: 從「ATP 是什麼」開始，帶你搞懂糖解→丙酮酸氧化→克氏循環→電子傳遞鏈的位置、產物與總帳。
+summary: 糖解、丙酮酸氧化、克氏循環、電子傳遞鏈四階段的位置與產物、ATP 總帳、發酵與糖質新生，逐一定義並附互動工具。
 audio: >
   細胞呼吸與能量代謝，重點複習。
   有氧呼吸 4 階段地點：糖解，得到 細胞質；後三段，得到 粒線體（丙酮酸氧化、克氏循環在基質；ETC 在內膜）。
@@ -25,16 +25,18 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RespirationStages from '@/components/notes/RespirationStages.svelte'
+import AtpYield from '@/components/notes/AtpYield.svelte'
 
 <NoteStats tag="細胞呼吸與能量代謝" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+細胞呼吸把葡萄糖的能量轉成 ATP，分糖解、丙酮酸氧化、克氏循環、電子傳遞鏈四階段。本篇講每階段的地點、產物與總帳。
 
-### ① ATP 是什麼？
+## 一、ATP 是什麼
 
 **ATP（腺苷三磷酸）** 是細胞的「能量貨幣」。水解一個 ATP → ADP + Pi，釋放約 7.3 kcal/mol 的能量，驅動肌肉收縮、合成代謝、主動運輸等一切需能反應。
 
-### ② 電子攜帶者 NADH / FADH₂
+## 二、電子攜帶者 NADH / FADH₂
 
 細胞呼吸中大量能量不是直接做成 ATP，而是先「暫存」在電子攜帶者中：
 
@@ -45,7 +47,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 每個 NADH 在電子傳遞鏈大約產生 **2.5 ATP**；每個 FADH₂ 大約產生 **1.5 ATP**。
 
-### ③ 四個階段在哪裡發生？
+## 三、四階段總覽
+
+點各階段看地點與產物：
+
+<RespirationStages client:visible />
 
 | 階段 | 位置 | 一句話 |
 |---|---|---|
@@ -142,6 +148,8 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **合計** | **~30–32** | 10 | 2 | **6** |
 
 > 教科書常見數字：**有氧呼吸每葡萄糖約 30–38 ATP**（舊版說 36–38，現代估算 30–32）。考題若出「最多」就答 38，出「大約」就答 30–32。
+
+<AtpYield client:visible />
 
 ---
 

@@ -1,8 +1,8 @@
 ---
-title: 句構與語意連貫：連接詞選對、主謂一致、平行結構不出錯
+title: 句構與語意連貫：連接詞、主謂一致與平行結構
 subject: english
 tag: 句構與語意連貫
-summary: 掌握因果/轉折/並列連接詞的邏輯選用、主詞與動詞一致的常見陷阱，以及平行結構的配對原則。
+summary: 連接詞的邏輯選用、連接副詞與從屬連接詞的差別、主謂一致、平行結構、分詞構句與垂懸修飾語、倒裝與 Given 句型，附連接詞與分詞構句工具。
 audio: >
   句構與語意連貫，重點複習。
   連接詞判斷口訣：前後句同方向（因，得到 果）用 therefore/because；反方向用 although/however。
@@ -27,12 +27,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ConnectorLogic from '@/components/notes/ConnectorLogic.svelte'
+import ParticipialPhrase from '@/components/notes/ParticipialPhrase.svelte'
 
 <NoteStats tag="句構與語意連貫" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+句構題考的是邏輯與結構：連接詞要選對前後句的關係、主謂要一致、並列成分要平行、句首分詞的主詞要對。本篇逐一說明這些常考重點。
 
-**① 連接詞邏輯分類**
+## 一、連接詞邏輯分類
 
 連接詞填空題的關鍵是「看前後句的**邏輯關係**」，而不是憑感覺。先判斷是以下哪一種：
 
@@ -50,7 +52,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 > - 前後**因果**（沒有車→騎腳踏車）→ because/since（原因副詞子句，後半解釋原因）
 > - 前後**相反**（雖然如此…但是…）→ although/however（轉折）
 
-**② 連接副詞 vs 從屬連接詞**
+<ConnectorLogic client:visible />
+
+## 二、連接副詞 vs 從屬連接詞
 
 這是最容易混淆的地方：
 
@@ -61,7 +65,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 注意：therefore/however **不能**直接用逗號連接兩個句子（comma splice 錯誤）。
 
-**③ 主謂一致（Subject-Verb Agreement）常見陷阱**
+## 三、主謂一致（Subject-Verb Agreement）常見陷阱
 
 | 情況 | 規則 | 例子 |
 |---|---|---|
@@ -71,7 +75,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **不定代名詞**（everyone, each, nobody） | 當單數 | Everyone **has** a role to play. |
 | **what 子句** | 當主詞時視內容定單複數 | What he said **was** surprising. |
 
-**④ 平行結構（Parallelism）**
+## 四、平行結構（Parallelism）
 
 並列成分（and, or, but, not only…but also, both…and…）連接的元素**詞性必須一致**：
 
@@ -85,7 +89,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | either A **or** B | A 和 B 詞性一致 |
 | neither A **nor** B | A 和 B 詞性一致 |
 
-**⑤ 分詞構句與垂懸修飾語（Participial Phrase / Dangling Modifier）——考古題大宗**
+## 五、分詞構句與垂懸修飾語（Participial Phrase / Dangling Modifier）——考古題大宗
+
+<ParticipialPhrase client:visible />
 
 句首一個逗號隔開的分詞片語（Having seen…, Studying…, Positioned…），其**隱藏主詞必須等於後面主句的主詞**。選答案時：先看主句主詞是誰，分詞動作必須是「那個主詞」做的。
 
@@ -102,7 +108,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 省略主詞的時間/條件子句也同理：**When taking** drugs, follow the directions.（吃藥的人＝你，主句祈使句主詞是 you → 對）。
 
-**⑥ 倒裝句（Inversion）——否定副詞 / Only 置句首**
+## 六、倒裝句（Inversion）——否定副詞 / Only 置句首
 
 把「否定副詞」或「Only + 片語」放到句首強調時，主句要**主詞與助動詞倒裝**（像問句語序）：
 
@@ -114,7 +120,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 看到句首是 Only by + V-ing / 否定副詞，主句就要倒裝（can we / did he / have I），不能用正常語序。
 
-**⑦ Given（鑑於、考慮到）置句首**
+## 七、Given（鑑於、考慮到）置句首
 
 `Given + 名詞片語` 是固定用法，意思是「考慮到、鑑於」，當作對整句的條件背景：
 

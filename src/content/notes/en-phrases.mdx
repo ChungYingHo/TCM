@@ -1,8 +1,8 @@
 ---
-title: 片語動詞與慣用語：整組記、不照字面拆，看上下文猜意思
+title: 片語動詞與慣用語：整組記、依上下文推義
 subject: english
 tag: 片語動詞與慣用語
-summary: look up ≠ 向上看——片語動詞意思常和字面無關，整組記憶才有效，搭配上下文動作推義。
+summary: 片語動詞為何不能照字面拆、依主題分類記慣用語、遇到陌生片語靠上下文推義，以及考古題高頻片語，附片語動詞與慣用語工具。
 audio: >
   片語動詞與慣用語，重點複習。
   片語動詞不能照字面拆——carry out 不是「帶出去」，是「執行」。
@@ -23,12 +23,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PhrasalVerbs from '@/components/notes/PhrasalVerbs.svelte'
+import IdiomCategories from '@/components/notes/IdiomCategories.svelte'
 
 <NoteStats tag="片語動詞與慣用語" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+片語動詞與慣用語的意思常和字面無關，要<b>整組記</b>，並靠上下文的動作推義。本篇整理高頻片語動詞與慣用語的分類記憶。
 
-**① 什麼是片語動詞（Phrasal Verb）？**
+## 一、什麼是片語動詞（Phrasal Verb）？
 
 片語動詞 = 動詞 + 介副詞（介系詞 or 副詞），組合後意思**往往和字面完全不同**。
 
@@ -55,9 +57,13 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | bring about | 帶到周圍 | **導致、引起** |
 | figure out | 找出形狀 | **弄清楚、想出** |
 
-**② 常考慣用語分類記憶**
+<PhrasalVerbs client:visible />
+
+## 二、常考慣用語分類記憶
 
 依情境分類，一次記一組比較有效：
+
+<IdiomCategories client:visible />
 
 **時間類**
 - on time（準時）/ in time（及時，還來得及）
@@ -86,7 +92,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - by no means（絕非）
 - to a large degree（在很大程度上）
 
-**③ 考試遇到不認識的片語動詞怎麼辦？**
+## 三、考試遇到不認識的片語動詞怎麼辦？
 
 1. 讀上下文，找「**句子裡在做什麼動作**」
 2. 看動詞本身的基本意思（look = 看/查；give = 給）

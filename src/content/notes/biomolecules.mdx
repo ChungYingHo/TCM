@@ -1,8 +1,8 @@
 ---
-title: 四大生命分子：從單體到功能一次搞定
+title: 生命分子與生物化學：四大分子、水的特性與代謝
 subject: biology
 tag: 生命分子與生物化學
-summary: 醣、脂質、蛋白質、核酸的單體與鍵結你都分得清楚嗎？加上水的特性與代謝分類，這篇讓你從零開始打穩地基。
+summary: 醣、脂、蛋白質、核酸的單體與鍵結，加上水的特性與同化/異化代謝，逐一定義並附互動工具。
 audio: >
   生命分子與生物化學，重點複習。
   四大生命分子的單體與鍵結：醣，得到 醣苷鍵、蛋白質，得到 胜肽鍵、核酸，得到 磷酸二酯鍵、脂質，得到 酯鍵。
@@ -24,16 +24,22 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Biomolecules from '@/components/notes/Biomolecules.svelte'
+import MetabolismType from '@/components/notes/MetabolismType.svelte'
 
 <NoteStats tag="生命分子與生物化學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+生命由四大類分子組成。本篇講它們的單體與鍵結、水的獨特性質，以及代謝的兩大方向（同化／異化）。
 
-### 什麼是「單體」與「聚合物」？
+## 一、單體與聚合物
 
 生物體裡的大分子（聚合物）都是由許多**小單元（單體）**串連而成，就像串珠子——單體是珠子，連結的線就是**脫水縮合（condensation）**，每連一個就釋放一分子水；反過來拆開叫**水解（hydrolysis）**，每斷一個鍵就消耗一分子水。
 
-### 四大生命分子一覽
+## 二、四大生命分子
+
+選一類，看單體、鍵結與功能：
+
+<Biomolecules client:visible />
 
 | 分子類型 | 單體 | 連結鍵 | 主要功能 |
 |---|---|---|---|
@@ -42,7 +48,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **蛋白質** | 胺基酸（amino acid） | 胜肽鍵（peptide bond） | 酵素、結構、運輸、免疫（抗體）、訊號 |
 | **核酸** | 核苷酸（鹼基＋五碳糖＋磷酸） | 磷酸二酯鍵 | DNA 儲存遺傳資訊；RNA 傳遞與表現 |
 
-### 醣類細分
+## 三、醣類細分
 
 | 類別 | 例子 | 特點 |
 |---|---|---|
@@ -52,7 +58,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 澱粉與肝醣都是葡萄糖組成，差別在**分支程度**：肝醣分支更多，能快速動員葡萄糖。
 
-### 蛋白質四級結構
+## 四、蛋白質四級結構
 
 | 層次 | 說明 |
 |---|---|
@@ -61,7 +67,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 三級（tertiary） | 整體立體折疊（疏水交互作用、雙硫鍵等） |
 | 四級（quaternary） | 多條多肽鏈組合（例：血紅素） |
 
-### 核酸：DNA vs RNA
+## 五、核酸：DNA vs RNA
 
 | 特徵 | DNA | RNA |
 |---|---|---|
@@ -70,7 +76,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 鏈數 | 雙股（雙螺旋） | 通常單股 |
 | 功能 | 遺傳資訊儲存 | 轉錄（mRNA）、轉譯（tRNA、rRNA） |
 
-### 蛋白質做出來之後：轉譯後修飾（考點）
+## 六、轉譯後修飾（PTM）
 
 蛋白質剛轉譯出來（一串胺基酸）常常還不能用，要再「裝飾」一下才有活性，這叫**轉譯後修飾（post-translational modification, PTM）**。先釐清三個會混淆的詞：
 
@@ -82,7 +88,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 重點：PTM 發生在「轉譯之後」，動作是在多肽上**接上額外的化學基團**（醣化、磷酸化、加脂質…），用來開關或調節蛋白質活性——不是在製造新的胺基酸序列。
 
-### 水的特性——高頻考點！
+## 七、水的特性
 
 水（H₂O）的獨特性質全來自**氫鍵（hydrogen bond）**：
 
@@ -95,7 +101,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **高表面張力** | 表面氫鍵緊密 | 水黽可在水面行走 |
 | **冰的密度＜液態水** | 氫鍵讓冰晶疏鬆 | 冰浮於水上，水底生物得以越冬 |
 
-### 同化 vs 異化
+## 八、同化 vs 異化
+
+選一個過程，看它是同化還是異化：
+
+<MetabolismType client:visible />
 
 | 名稱 | 方向 | 能量 | 例子 |
 |---|---|---|---|

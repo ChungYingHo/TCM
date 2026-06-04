@@ -1,8 +1,8 @@
 ---
-title: 神經系統與行為：從靜止電位到突觸，初學者也能懂
+title: 神經系統與行為：靜止電位、動作電位與突觸傳遞
 subject: biology
 tag: 神經系統與行為
-summary: 靜止電位、動作電位、跳躍傳導、突觸傳遞，加上中樞/周邊神經劃分與先天/後天行為——一篇搞定神經系統核心。
+summary: 神經元結構、靜止電位與鈉鉀幫浦、動作電位與全或無、跳躍傳導與突觸傳遞、中樞與周邊神經、大腦皮質分區、感覺器官與行為類型，逐一定義並附互動工具。
 audio: >
   神經系統與行為，重點複習。
   靜止電位 −70 mV 靠鈉鉀幫浦（3Na⁺ 出 / 2K⁺ 入）維持，數值最接近 K⁺ 平衡電位。
@@ -27,12 +27,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ActionPotential from '@/components/notes/ActionPotential.svelte'
+import NaKPump from '@/components/notes/NaKPump.svelte'
 
 <NoteStats tag="神經系統與行為" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+神經系統靠神經元上的電位變化傳遞訊息，再由突觸把訊號交給下一個細胞。本篇從神經元結構與靜止電位談起，帶到動作電位、突觸傳遞、神經系統的劃分與行為類型。
 
-### 神經元的基本結構
+## 一、神經元的基本結構
 
 神經元（neuron）是神經系統的功能單位：
 
@@ -44,7 +46,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **髓鞘（myelin sheath）** | 絕緣層，由許旺細胞（PNS）或寡樹突細胞（CNS）包覆 |
 | **蘭氏節（Nodes of Ranvier）** | 髓鞘間的裸露節點，動作電位在此「跳」 |
 
-### 靜止電位（Resting Membrane Potential）
+## 二、靜止電位（Resting Membrane Potential）
 
 靜止電位大約 **−70 mV**（細胞內相對細胞外為負）。
 
@@ -66,7 +68,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 靜止時膜對 **K⁺ 通透性最高**，所以靜止電位（−70 mV）**最靠近 K⁺ 的平衡電位**（但因為仍有一點 Na⁺ 漏入，比 E_K（−90）稍微偏正一點）。
 - 一句話：靜止膜電位 ≈ K⁺ 平衡電位（接近但不完全相等，且比 E_K 偏正）。動作電位高峰則趨近 Na⁺ 平衡電位。
 
-### 動作電位（Action Potential）
+<NaKPump client:visible />
+
+## 三、動作電位（Action Potential）
 
 動作電位是「全或無（all-or-none）」反應：達到閾值（−55 mV）才觸發，一觸發就走完完整波形，無法「半觸發」。
 
@@ -79,13 +83,15 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | ③ **再極化（Repolarization）** | Na⁺ 通道關閉，K⁺ 通道**開啟**，K⁺ 外流 | +30 → −70 mV |
 | ④ **不反應期（Refractory period）** | Na⁺ 通道暫時無法再開（絕對不反應期） | 確保訊號單向傳導 |
 
-### 跳躍傳導（Saltatory Conduction）
+<ActionPotential client:visible />
+
+## 四、跳躍傳導（Saltatory Conduction）
 
 - 有髓鞘的軸突：動作電位只在**蘭氏節**（髓鞘間的裸露段）發生，從節跳到節。
 - 優點：**速度快**（可達 120 m/s）、**耗能少**。
 - 無髓鞘神經：依序連續去極化，速度較慢（約 0.5–2 m/s）。
 
-### 突觸（Synapse）與神經傳遞物
+## 五、突觸（Synapse）與神經傳遞物
 
 突觸是神經元之間的訊號傳遞接合點，多數為**化學突觸**：
 
@@ -102,7 +108,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **麩胺酸（Glutamate）** | 主要<b>興奮性</b>傳遞物 | 學習與記憶 |
 | **正腎上腺素（NE）** | 「戰或逃」反應 | 交感神經末梢釋放 |
 
-### 中樞與周邊神經系統
+## 六、中樞與周邊神經系統
 
 | 系統 | 組成 | 功能 |
 |---|---|---|
@@ -113,7 +119,7 @@ PNS 傳出分兩支：
 - **軀體神經**：隨意控制骨骼肌。
 - **自律神經**：不隨意控制內臟，分交感（「戰或逃」）與副交感（「休息消化」）。
 
-### 大腦皮質的功能分區（會考「某迴管什麼」）
+## 七、大腦皮質的功能分區（會考「某迴管什麼」）
 
 大腦皮質分四葉。考試最常考**中央溝兩側的兩條迴**：
 
@@ -127,7 +133,7 @@ PNS 傳出分兩支：
 
 口訣：**前迴管「動」（運動）、後迴管「感」（感覺）**。中央前迴位於額葉、負責運動與發聲/表情，但**不負責內臟疼痛**（內臟感覺主要在後迴/島葉）。
 
-### 感覺器官重點（送分題常考）
+## 八、感覺器官重點（送分題常考）
 
 | 器官 | 重點 | 易錯 |
 |---|---|---|
@@ -137,7 +143,7 @@ PNS 傳出分兩支：
 | **內耳——前庭（球狀囊 saccule＋橢圓囊 utricle）** | 偵測**直線**加速度與頭部位置（平衡覺）；內含毛細胞與**耳石（otolith）** | 耳石是**碳酸鈣（CaCO₃）結晶**，不是磷酸鎂 |
 | **內耳——半規管** | 偵測**旋轉**加速度 | — |
 
-### 行為類型
+## 九、行為類型
 
 | 類型 | 說明 | 例子 |
 |---|---|---|

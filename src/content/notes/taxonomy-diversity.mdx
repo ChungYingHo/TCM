@@ -1,8 +1,8 @@
 ---
-title: 分類與生物多樣性：從界到種、三域系統、親緣樹一次搞懂
+title: 分類與生物多樣性：分類階層、三域系統與親緣樹
 subject: biology
 tag: 分類與生物多樣性
-summary: 記不住分類階層？三域搞混？用表格＋口訣幫你把界門綱目科屬種、原口後口全部釘牢。
+summary: 分類階層與二名法、三域系統、親緣樹與共衍徵、原口與後口動物、各動物門的特徵、循環系統，以及最大簡約建樹法，逐一定義並附互動工具。
 audio: >
   分類與生物多樣性，重點複習。
   分類口訣：界門綱目，科屬種（Domain 在界之上）。
@@ -28,12 +28,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import TaxonomyRank from '@/components/notes/TaxonomyRank.svelte'
+import AnimalPhyla from '@/components/notes/AnimalPhyla.svelte'
 
 <NoteStats tag="分類與生物多樣性" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+分類學把生物依親緣關係由大到小編進階層，再用親緣樹呈現演化關係。本篇從分類階層與命名規則談起，帶到三域系統、原口與後口動物、各動物門的特徵，最後到怎麼用最大簡約法建樹。
 
-### ① 分類階層：界門綱目科屬種
+## 一、分類階層：界門綱目科屬種
 
 由大到小記口訣：**「界門綱目，科屬種」**（Domain 在界之上另加）。
 
@@ -50,9 +52,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **階層越低，共同特徵越多，親緣越近。**
 
----
+<TaxonomyRank client:visible />
 
-### ② 二名法（Binomial Nomenclature）
+## 二、二名法（Binomial Nomenclature）
 
 林奈（Linnaeus）發明，全球通用：
 
@@ -62,7 +64,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### ③ 三域系統（Three Domains）
+## 三、三域系統（Three Domains）
 
 Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說：
 
@@ -76,7 +78,7 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 ---
 
-### ④ 親緣關係樹（Phylogenetic Tree）
+## 四、親緣關係樹（Phylogenetic Tree）
 
 讀懂親緣樹要認識兩個名詞：
 
@@ -90,7 +92,7 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 ---
 
-### ⑤ 原口動物 vs. 後口動物
+## 五、原口動物 vs. 後口動物
 
 **原腸胚時囊胚孔（blastopore）的命運**是關鍵：
 
@@ -105,7 +107,7 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 ---
 
-### ⑥ 動物主要門的特徵（高頻考點）
+## 六、動物主要門的特徵（高頻考點）
 
 考試最愛考「某門動物有什麼特徵」。由簡單到複雜記：
 
@@ -121,7 +123,9 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 > **神經網**只出現在刺胞動物（最原始、無中樞）；越高等神經越集中（頭化 cephalization）。
 
-### ⑦ 脊索動物四大共同特徵
+<AnimalPhyla client:visible />
+
+## 七、脊索動物四大共同特徵
 
 脊索動物（含人類）在「生活史某階段」都具備這四項（成體可能消失）：
 
@@ -132,7 +136,7 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 > 易錯：脊索/神經索是「某階段」具備，不是「終生」。尾索動物（海鞘）幼體有脊索、成體消失。
 
-### ⑧ 循環系統：開放式 vs 閉鎖式、單循環 vs 雙循環
+## 八、循環系統：開放式 vs 閉鎖式、單循環 vs 雙循環
 
 | 類型 | 說明 | 代表 |
 |---|---|---|
@@ -145,7 +149,7 @@ Woese 根據核糖體 RNA（16S/18S rRNA）序列提出，取代傳統五界說�
 
 ---
 
-### ⑨ 親緣樹建構：最大簡約法（Maximum Parsimony）
+## 九、親緣樹建構：最大簡約法（Maximum Parsimony）
 
 考題會給「物種 × 特徵」的 0/1 表，要你算建樹**最少需要幾步**。
 

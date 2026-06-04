@@ -1,8 +1,8 @@
 ---
-title: 英文字彙：字根字首拆解推義、語氣判斷、刪去法一次通
+title: 英文字彙：語氣判斷、字根字首與刪去法
 subject: english
 tag: 字彙
-summary: 看不懂的字不用硬背——先拆字根字首判語氣，再用刪去法鎖定答案。
+summary: 字彙題的三大技巧——先判語氣（正／負／中）、拆字根字首推義、再用刪去法鎖定答案，以及考古題高頻字，附字根字首與高頻字工具。
 audio: >
   字彙，重點複習。
   遇到不會的字：①判語氣正負 ，得到 ②拆字根字首推義 ，得到 ③刪去詞性/語氣不符的選項。
@@ -21,20 +21,22 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WordRoots from '@/components/notes/WordRoots.svelte'
+import ToneVocab from '@/components/notes/ToneVocab.svelte'
 
 <NoteStats tag="字彙" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+字彙題不是考「有沒有背過這個字」，而是考**在句子中選最貼切的字**。三個核心技巧：判語氣、拆字根、用刪去法。
 
-字彙題不是在考「有沒有背過這個字」，而是考**在句子中選最貼切的字**。三個核心技巧：
-
-**① 語氣判斷（正面 / 負面 / 中性）**
+## 一、語氣判斷（正面 / 負面 / 中性）
 
 先讀整句，判斷空格需要正面、負面還是中性的字。  
 例：*"The doctor gave us _____ evidence that the treatment was safe."*  
 → 句意正面（安全的治療），空格需要「有力的、令人信服的」之類的**正面**形容詞。
 
-**② 字根字首拆解推義**
+<ToneVocab client:visible />
+
+## 二、字根字首拆解推義
 
 認識常見字首字根，陌生單字也能縮小範圍：
 
@@ -59,7 +61,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 想看完整高頻單字表，請前往 [高頻單字表](/vocab)。
 
-**③ 刪去法**
+<WordRoots client:visible />
+
+## 三、刪去法
 
 選項四個，先刪掉詞性不對、語氣相反的，通常能縮到一兩個再決定。
 

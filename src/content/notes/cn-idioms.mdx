@@ -1,8 +1,8 @@
 ---
-title: 成語熟語：褒貶不分、望文生義、錯別字，考場三大陷阱全破解
+title: 成語熟語：褒貶辨識、望文生義與錯別字
 subject: chinese
 tag: 成語熟語
-summary: 把成語題最常踩的坑列成表，讓你看到「治絲益棼」就知道那是貶義——不再被選項騙走分數。
+summary: 成語的三種考法、易誤用成語的褒貶與望文生義、近義成語的配對、依釋義選成語，以及成語錯別字的辨正，附易誤用成語與近義成語工具。
 audio: >
   成語熟語，重點複習。
   看到成語題，先想本義與褒貶，再核對語境。
@@ -24,12 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import IdiomTrap from '@/components/notes/IdiomTrap.svelte'
+import IdiomSynonyms from '@/components/notes/IdiomSynonyms.svelte'
 
 <NoteStats tag="成語熟語" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+成語題的三大陷阱：褒貶用錯、望文生義、字形寫錯。破解的關鍵都一樣——先確認成語的本義與褒貶，再核對語境。本篇整理高頻易誤用成語與辨識方法。
 
-### ① 成語的三種考法
+## 一、成語的三種考法
 
 | 考法 | 核心問題 | 常見陷阱 |
 |---|---|---|
@@ -37,9 +39,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **字形辨正** | 有無錯別字 | 把近音字或習慣寫錯的字混入 |
 | **意義配對** | 成語釋義是否正確 | 只看表面字義、不知出處典故 |
 
-### ② 最常考：易誤用的成語
+## 二、最常考：易誤用的成語
 
 這些成語外表「看起來」是褒義或中性，但其實是**貶義或有限定對象**，最易被錯用：
+
+<IdiomTrap client:visible />
 
 | 成語 | 實際意思 | 常見錯誤用法 |
 |---|---|---|
@@ -54,10 +58,12 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **多財善賈** | 本錢多才容易做生意，本意是「工具充足則事半功倍」| 直接理解即可，一般不誤用 |
 | **牛驥同皁** | 賢愚混雜、不分優劣，貶義（表感嘆懷才不遇）| 有時誤解方向 |
 
-### ③ 喻意相同（近義成語配對）
+## 三、喻意相同（近義成語配對）
 
 考試會問「下列各組成語，何者喻意兩兩相同？」。
 做法：**先把每個成語翻成白話意思，再看一組兩個是不是在講同一件事。** 常考的近義群先記熟：
+
+<IdiomSynonyms client:visible />
 
 | 意思 | 同義成語群 |
 |---|---|
@@ -71,7 +77,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 陷阱：兩個成語「看起來都很文言」不代表同義。例如「揚湯止沸」（治標）≠「成竹在胸」（有把握）；「言簡意賅」（話精簡）≠「意在言外」（有弦外之音）——意思根本不同。
 
-### ④ 依釋義選成語（給意思找成語）
+## 四、依釋義選成語（給意思找成語）
 
 另一種題：「下列哪一句成語用來形容○○？」先把題目要的意思抓準，再從選項挑對應的。高頻釋義先背：
 
@@ -85,7 +91,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 注意「文不加點」的「點」是**塗改**，意思是「文章寫得好到不用塗改」，**不是**「不加標點」——這是最常被望文生義的一個。
 
-### ⑤ 成語中的錯別字
+## 五、成語中的錯別字
 
 | 常見錯誤 | 正確寫法 | 辨別方式 |
 |---|---|---|

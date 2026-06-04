@@ -1,8 +1,8 @@
 ---
-title: 循環與呼吸：心臟、血液、氣體交換一條龍
+title: 循環與呼吸：心臟、雙循環、血液與氣體交換
 subject: biology
 tag: 循環與呼吸
-summary: 搞清楚體循環/肺循環的血流方向、血液成分、波耳效應——這些是考試最愛出的送分題。
+summary: 心臟構造與瓣膜、各類動物的循環、體循環與肺循環、血管與血液成分、血紅素與波耳效應、氣體交換與呼吸機制，以及 LDL／HDL，逐一定義並附互動工具。
 audio: >
   循環與呼吸，重點複習。
   肺動脈流缺氧血、肺靜脈流充氧血——方向和含氧量「反直覺」，必考！。
@@ -26,12 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import DoubleCirculation from '@/components/notes/DoubleCirculation.svelte'
+import OxygenDissociation from '@/components/notes/OxygenDissociation.svelte'
 
 <NoteStats tag="循環與呼吸" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+循環系統把血液送到全身交換氣體與物質，呼吸系統負責讓血液在肺部換氣。本篇從心臟構造談起，帶到雙循環、血液成分、血紅素與氣體交換。
 
-### ① 心臟構造快速定位
+## 一、心臟構造快速定位
 
 人類心臟有**四個腔室**，分成左右兩幫浦：
 
@@ -46,7 +48,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 房室瓣（二尖瓣在左、三尖瓣在右）：心室收縮時關閉，防血液回流心房。
 - 半月瓣（主動脈瓣、肺動脈瓣）：心室舒張時關閉，防血液流回心室。
 
-### ② 各類動物的循環系統（比較題常考）
+## 二、各類動物的循環系統（比較題常考）
 
 **開放式 vs. 閉鎖式：**
 
@@ -65,7 +67,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **陸生動物循環演化的「目的」**：克服重力、提高供氧效率——心臟動力加大、四腔分隔（動靜脈血分開）、分出肺循環與體循環。注意：**靜脈血壓接近零**是現象，**不是**用來克服重力的「演化優勢」（靠靜脈瓣膜＋骨骼肌擠壓才把血推回心臟）。
 
-### ③ 體循環 vs. 肺循環
+## 三、體循環 vs. 肺循環
 
 ```
 【肺循環（小循環）】
@@ -77,7 +79,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **易錯點**：「肺動脈」流的是**缺氧血**；「肺靜脈」流的是**充氧血**——動脈/靜脈是依血管從心臟出或回心臟定義，與含氧量無關。
 
-### ④ 血管比較
+<DoubleCirculation client:visible />
+
+## 四、血管比較
 
 | 類型 | 壁厚 | 瓣膜 | 功能 |
 |---|---|---|---|
@@ -85,7 +89,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 靜脈 | 薄 | **有**（防逆流） | 回心臟，壓力低 |
 | 微血管 | 僅一層上皮細胞 | 無 | 物質交換（氣體、養分、廢物） |
 
-### ⑤ 血液成分
+## 五、血液成分
 
 | 成分 | 比例 | 功能 |
 |---|---|---|
@@ -94,7 +98,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **白血球（WBC）** | 少量 | 免疫防禦 |
 | **血小板** | 少量 | 凝血 |
 
-### ⑥ 血紅素（Hemoglobin）與氧解離曲線
+## 六、血紅素（Hemoglobin）與氧解離曲線
 
 - 血紅素（Hb）含**血基質（heme）**，每個 Hb 可結合 **4 個 O₂**。
 - 氧合血紅素（HbO₂）= 充氧血（鮮紅）；脫氧血紅素 = 缺氧血（暗紅）。
@@ -109,7 +113,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **左移**（Hb 對 O₂ 親和力增加）→ 肺部：CO₂ 低、pH 高、溫度低 → 有利 O₂ 結合上 Hb。
 
-### ⑦ 氣體交換靠擴散
+<OxygenDissociation client:visible />
+
+## 七、氣體交換靠擴散
 
 肺泡、微血管、組織間的 O₂/CO₂ 交換**全靠擴散**（由高分壓往低分壓）：
 
@@ -118,7 +124,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 肺部（肺泡 ↔ 微血管） | 肺泡 → 血液 | 血液 → 肺泡 |
 | 組織（微血管 ↔ 細胞） | 血液 → 細胞 | 細胞 → 血液 |
 
-### ⑧ 呼吸機制（負壓呼吸）
+## 八、呼吸機制（負壓呼吸）
 
 | 動作 | 橫隔膜 | 肋間肌 | 胸腔體積 | 肺內氣壓 | 結果 |
 |---|---|---|---|---|---|
@@ -127,7 +133,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 關鍵：呼吸靠**壓力差**，不是肌肉把空氣「推」出去。
 
-### ⑨ 血脂運輸：膽固醇、LDL 與 HDL（進階送分／陷阱題）
+## 九、血脂運輸：膽固醇、LDL 與 HDL（進階送分／陷阱題）
 
 膽固醇不溶於水，需要靠「脂蛋白」這種運輸船在血液中搬運：
 

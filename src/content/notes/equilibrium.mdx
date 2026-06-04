@@ -1,8 +1,8 @@
 ---
-title: 化學平衡：K、Q、勒沙特列，三招判斷平衡怎麼跑
+title: 化學平衡：平衡常數 K、反應商 Q 與勒沙特列原理
 subject: chemistry
 tag: 化學平衡
-summary: 搞清楚 K 怎麼寫（純固液不列入）、Q 和 K 比大小判方向，再用勒沙特列原理決定平衡移動，考題無難事。
+summary: 平衡常數 K 怎麼寫（純固液不列入）、用反應商 Q 比大小判方向，再用勒沙特列原理決定平衡移動，逐一定義並附互動工具。
 audio: >
   化學平衡，重點複習。
   K 的分子放產物、分母放反應物，指數用係數；純固體與純液體不列入。
@@ -23,19 +23,21 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import QvsK from '@/components/notes/QvsK.svelte'
+import LeChatelier from '@/components/notes/LeChatelier.svelte'
 
 <NoteStats tag="化學平衡" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+可逆反應會走到一個「表面看似靜止」的狀態——化學平衡。本篇講平衡常數 K 怎麼寫、用反應商 Q 判方向，以及外界擾動下平衡怎麼移（勒沙特列）。
 
-**① 什麼是化學平衡？**
+## 一、什麼是化學平衡
 
-當正反應速率 = 逆反應速率，各物質濃度**不再改變**，就稱為達到**動態平衡**。  
+當正反應速率 = 逆反應速率，各物質濃度**不再改變**，就稱為達到**動態平衡（dynamic equilibrium）**。  
 注意：「不再改變」不代表濃度相等，而是各自維持在一個固定值。
 
-**② 平衡常數 K 怎麼寫？**
+## 二、平衡常數 K 怎麼寫
 
-對反應 $a\text{A} + b\text{B} \rightleftharpoons c\text{C} + d\text{D}$：
+**平衡常數 K**＝平衡時「產物濃度連乘 ÷ 反應物濃度連乘」（各以係數為次方）。對反應 $a\text{A} + b\text{B} \rightleftharpoons c\text{C} + d\text{D}$：
 
 $$
 K_c = \frac{[\text{C}]^c[\text{D}]^d}{[\text{A}]^a[\text{B}]^b}
@@ -51,7 +53,7 @@ $$
 
 只有**氣體**和**溶液中的溶質**才寫進去。
 
-**③ Kp 與 Kc 的關係**
+## 三、Kp 與 Kc 的關係
 
 氣相反應可用分壓表示：
 
@@ -63,7 +65,7 @@ $$
 
 提醒：$R = 0.0821\ \text{L·atm/(mol·K)}$；$\Delta n_g$ 算的是**氣態**物種，固液不算。
 
-**④ 亨利定律（氣體溶解平衡）**
+## 四、亨利定律（氣體溶解平衡）
 
 氣體溶於液體的量，與它在液面上方的**分壓**成正比：
 
@@ -73,9 +75,9 @@ $$
 
 $k_H$ 是亨利常數。汽水開瓶後，上方 CO₂ 從高壓降到大氣中的 CO₂ 分壓，溶解量隨之大減——所以汽水會「跑氣」。算平衡濃度時，$P$ 要用**當下接觸的分壓**。
 
-**⑤ 反應商 Q 判斷方向**
+## 五、反應商 Q 判斷方向
 
-Q 的計算式和 K 完全一樣，但用的是**當前（非平衡）濃度**：
+**反應商（reaction quotient，Q）**的算式和 K 完全一樣，但用的是**當前（還沒平衡）的濃度**。比 Q 和 K 的大小，就能判斷反應往哪邊走：
 
 | 比較 | 意義 | 反應方向 |
 |---|---|---|
@@ -83,11 +85,17 @@ Q 的計算式和 K 完全一樣，但用的是**當前（非平衡）濃度**�
 | Q = K | 已達平衡 | 不移動 |
 | Q > K | 產物太多 | 逆反應方向（←） |
 
-記憶口訣：**「Q 小向右、Q 大向左」**
+記憶口訣：**「Q 小向右、Q 大向左」**。動手調 Q 與 K：
 
-**⑥ 勒沙特列原理**
+<QvsK client:visible />
 
-系統受到擾動時，平衡會往**減弱該擾動**的方向移動：
+## 六、勒沙特列原理
+
+**勒沙特列原理（Le Chatelier's principle）**：系統受到外界擾動時，平衡會往**減弱該擾動**的方向移動。選一個擾動看平衡怎麼移：
+
+<LeChatelier client:visible />
+
+各種擾動整理如下：
 
 | 擾動 | 平衡移動方向 |
 |---|---|
@@ -101,7 +109,7 @@ Q 的計算式和 K 完全一樣，但用的是**當前（非平衡）濃度**�
 
 注意：溫度改變會使 K 值改變；其他擾動不改變 K，只改變 Q。
 
-**⑦ 溫度與 K 的關係（Van't Hoff 作圖）**
+## 七、溫度與 K：Van't Hoff 作圖
 
 K 怎麼隨溫度變，可線性化後作圖：
 

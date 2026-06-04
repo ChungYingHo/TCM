@@ -1,8 +1,8 @@
 ---
-title: 文言閱讀：斷句、語譯、虛詞三步驟全攻略
+title: 文言閱讀：斷句、虛詞、句子重組與主旨判讀
 subject: chinese
 tag: 古典散文文言閱讀
-summary: 從看不懂到能答題，靠斷句→虛詞→語譯的三步閱讀法，快速掌握文言散文。
+summary: 文言閱讀的斷句五招、常見虛詞、句子重組（排序）、古今異義與主旨／作者態度的判讀步驟，附斷句示範與句子重組工具。
 audio: >
   古典散文文言閱讀，重點複習。
   文言閱讀先斷句再語譯，不要看一個字翻一個字。
@@ -24,14 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PunctuationDemo from '@/components/notes/PunctuationDemo.svelte'
+import SentenceReorder from '@/components/notes/SentenceReorder.svelte'
 
 <NoteStats tag="古典散文文言閱讀" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+文言文閱讀題的命題方向大致分五類：**斷句**、**字詞語譯**（虛詞用法）、**句子重組（排序）**、**主旨歸納**、**作者態度判讀**。本篇逐一講解方法。
 
-文言文閱讀題的命題方向大致分五類：**斷句**、**字詞語譯**（虛詞用法）、**句子重組（排序）**、**主旨歸納**、**作者態度判讀**。
-
-### ① 斷句的步驟
+## 一、斷句的步驟
 
 斷句就是為文言文「加標點」，找出句子結束的地方。
 
@@ -50,7 +50,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 >
 > 斷句後：孔子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？」
 
-### ② 常見文言虛詞
+<PunctuationDemo client:visible />
+
+## 二、常見文言虛詞
 
 | 虛詞 | 主要用法 | 例句 | 翻譯 |
 |------|----------|------|------|
@@ -64,7 +66,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **虛詞題解題法：把各選項的字代回原句，判斷語意，找用法相同者。**
 
-### ③ 句子重組（排序）的步驟
+## 三、句子重組（排序）的步驟
 
 題目給打散的甲、乙、丙、丁幾個分句，要排出正確順序。這是文言閱讀的高頻題型。
 
@@ -79,7 +81,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 例（《左傳》晉文公）：題幹「文公在狄十二年」後接——乙「將適齊」（起念要走）→ 丙「行過五鹿」（路上）→ 丁「野人舉塊以與之」（路人給土塊）→ 甲「公子怒（欲鞭之）」（反應）。順序＝乙丙丁甲。
 
-### ④ 古今異義常考字
+<SentenceReorder client:visible />
+
+## 四、古今異義常考字
 
 | 古義 | 今義 | 例 |
 |------|------|-----|
@@ -88,7 +92,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 可以（古：可以用、憑） | 可以（今：表允許） | 可以一戰 |
 | 然後（古：這樣之後） | 然後（今：接著） | 然後知生於憂患 |
 
-### ⑤ 主旨與作者態度的判讀步驟
+## 五、主旨與作者態度的判讀步驟
 
 1. **讀首段、尾段**：主旨常在開頭拋出、結尾總結。
 2. **找重複概念**：文章反覆出現的詞語就是核心主題。

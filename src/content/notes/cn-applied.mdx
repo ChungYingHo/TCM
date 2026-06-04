@@ -1,8 +1,8 @@
 ---
-title: 應用文書信：稱謂、敬謙辭、題辭對聯一張表搞定
+title: 應用文書信：稱謂、敬謙辭、題辭與對聯
 subject: chinese
 tag: 應用文書信
-summary: 書信格式從稱謂、提稱語到署名敬辭，加上壽誕喜慶輓聯的場合選用，完整對照表一次記清楚。
+summary: 書信格式與提稱語、稱人稱己的敬謙辭、結尾敬辭與啟封詞、抬頭、便條，以及壽誕喜慶輓聯等題辭的場合選用，附書信用語與題辭工具。
 audio: >
   應用文書信，重點複習。
   書信對象決定用語：膝下（父母）、函丈（師長）、台鑒（平輩）、知悉（晚輩）。
@@ -27,14 +27,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import LetterSalutations from '@/components/notes/LetterSalutations.svelte'
+import CongratPhrases from '@/components/notes/CongratPhrases.svelte'
 
 <NoteStats tag="應用文書信" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
-
 應用文考的是「**場合配對**」——不是考你背定義，而是考你在哪個場合用哪個詞、哪個格式。先把書信結構看一遍，再把各種場合的詞彙對應記起來。
 
-### 書信格式五大部分
+## 一、書信格式五大部分
 
 ```
 ① 稱謂（對方的稱呼）      如：父親大人、老師尊鑒
@@ -46,9 +46,13 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
    署名：自稱（謙稱）+ 姓名 + 敬上
 ```
 
-### 提稱語對照表
+## 二、提稱語與書信用語對照
 
-提稱語接在稱謂後，表示「呈上此信」。**依對象不同，用語也不同**，這是考試最常問的地方：
+提稱語接在稱謂後，表示「呈上此信」。**依對象不同，用語也不同**，這是考試最常問的地方。下面的工具一次列出各對象的提稱語、自稱、結尾敬辭與啟封詞：
+
+<LetterSalutations client:visible />
+
+提稱語整理如下：
 
 | 對象 | 提稱語 | 例 |
 |---|---|---|
@@ -59,7 +63,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 晚輩（寫給學生） | **知悉**、**覽** | 學生 某某 知悉 |
 | 政府機關 | **鈞鑒** | 局長鈞鑒 |
 
-### 稱人／稱己：家族與親屬稱謂對照表
+## 三、稱人／稱己：家族與親屬稱謂對照表
 
 「稱呼別人的家人」用敬辭，「稱呼自己的家人」用謙辭——這組最容易考錯：
 
@@ -76,7 +80,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 >
 > 陷阱：「賢昆仲」是**敬稱對方的兄弟**，不能拿來稱自己的兄弟。
 
-### 自稱（謙稱）對照表
+## 四、自稱（謙稱）對照表
 
 寫信時對不同對象的自稱：
 
@@ -88,7 +92,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 平輩 | **弟**（男）、**妹**（女）| 同輩之間 |
 | 晚輩（對方） | 餘、愚 | 長輩寫給晚輩 |
 
-### 結尾敬辭（祝頌語）
+## 五、結尾敬辭（祝頌語）
 
 書信末尾的祝福，依**對象身份**選用：
 
@@ -99,7 +103,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 平輩 | 敬請 **台安**、即請 **大安** |
 | 晚輩 | 即詢 **近安**、順詢 **近好** |
 
-### 信封啟封詞（別跟「提稱語」搞混）
+## 六、信封啟封詞（別跟「提稱語」搞混）
 
 **提稱語**寫在「信紙裡」稱謂後（膝下、函丈…）；**啟封詞**寫在「信封上」收信人名字後，請對方拆信。兩者位置與用詞都不同：
 
@@ -111,7 +115,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > **大陷阱**：「**敬啟**」是「**恭敬地（替您）開啟**」，主詞是收信人——叫長輩「恭敬地拆信」於理不合，所以**信封上對長輩不可寫「敬啟」**，要用「安啟／福啟」。「敬啟」只能用在署名後表「敬告」（如公告「○○謹啟」）。
 
-### 抬頭（書信中的敬意符號）
+## 七、抬頭（書信中的敬意符號）
 
 信中**提到對方或對方尊長**時，要表示尊敬：
 
@@ -121,7 +125,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 一句話：抬高別人（空格／另行），縮小自己（略小偏右）。
 
-### 便條／柬帖常見類型（看內容判用途）
+## 八、便條／柬帖常見類型（看內容判用途）
 
 便條是簡短的應酬文字，考題給一段便條問「這是做什麼用的」，看關鍵動詞就懂：
 
@@ -133,9 +137,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **謝慰問** | 自己生病／有事，對方來問候 |
 | **借物／還物** | 「謹借」「奉還」 |
 
-### 題辭（賀辭）場合對照表
+## 九、題辭（賀辭）場合對照表
 
 題辭依**場合**選用，選錯就鬧笑話——這是考試很愛考的坑：
+
+<CongratPhrases client:visible />
 
 **壽誕（祝壽）用語**：
 
@@ -186,7 +192,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **生意興隆** | 商業祝賀 |
 | **鴻圖大展** | 事業開展 |
 
-### 節日對聯
+## 十、節日對聯
 
 | 節日 | 代表對聯／句子 |
 |---|---|

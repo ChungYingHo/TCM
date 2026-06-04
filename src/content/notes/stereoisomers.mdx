@@ -1,8 +1,8 @@
 ---
-title: 立體化學：R/S、對映體、非對映體一次搞懂
+title: 立體化學：掌性、R/S 與對映/非對映異構物
 subject: chemistry
 tag: 立體化學
-summary: 從「掌性中心怎麼判」到 R/S 命名、對映/非對映/內消旋的分類，用清楚的表格讓你在考場上不再亂。
+summary: 掌性中心判定、R/S 命名、對映/非對映/內消旋的分類、E/Z 與環己烷椅式，逐一定義並附互動工具。
 audio: >
   立體化學，重點複習。
   掌性中心 等於 接四個完全不同基團的 sp³ 碳（CH₂、CH₃、sp² 碳都不算）。
@@ -27,14 +27,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import IsomerType from '@/components/notes/IsomerType.svelte'
+import StereoCount from '@/components/notes/StereoCount.svelte'
 
 <NoteStats tag="立體化學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+立體化學的核心：一個碳有沒有「掌性」、它的空間排列是 R 還是 S，以及不同分子之間是對映還是非對映關係。本篇逐一定義並附互動工具。
 
-立體化學聽起來難，其實核心只有兩件事：**①這個碳有沒有「掌性」** 和 **②它的空間排列是 R 還是 S**。
-
-### ① 什麼是掌性中心？
+## 一、什麼是掌性中心
 
 一個碳接了 **四個完全不同的基團**，就是掌性中心（chiral center），又叫**不對稱碳**（標 \*C）。
 
@@ -54,7 +54,11 @@ import Chem from '@/components/notes/Chem.svelte'
 4. 環上的碳也算：只要兩側沿環走出去的路徑不同、再加上環外兩個基不同就算。
 5. 把符合的逐一圈出來數總數即可。
 
-### ② R/S 命名規則（四步走）
+n 個掌性中心最多有 2ⁿ 種立體異構物：
+
+<StereoCount client:visible />
+
+## 二、R/S 命名規則（四步走）
 
 1. **標優先序**：依照 CIP 規則，原子序大的優先序高（Br > Cl > O > N > C > H）。
 2. **排順序**：把四個基團從高到低排成 1、2、3、4。
@@ -63,7 +67,11 @@ import Chem from '@/components/notes/Chem.svelte'
 
 > 小技巧：如果 #4 原來是指向你（楔形鍵），轉向後要**反轉** R/S 結論。
 
-### ③ 各種立體異構物比較
+## 三、各種立體異構物比較
+
+設兩個分子各掌性中心的構型，看它們是對映還是非對映：
+
+<IsomerType client:visible />
 
 | 類型 | 定義 | 旋光性 | 物理性質 |
 |---|---|---|---|
@@ -74,7 +82,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 > 分辨對映 vs 非對映的快速法：看 **所有**掌性中心的構型——全部相反 → 對映；只有部分相反 → 非對映。
 
-### ④ 順反（cis/trans）與 E,Z
+## 四、順反（cis/trans）與 E,Z
 
 **雙鍵或環**上的原子無法自由旋轉，造成**幾何異構物**（順反異構物）：
 
@@ -85,7 +93,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 > cis 通常對應 Z，但不是必然——遇到複雜取代基一定要用 CIP 判 E/Z。
 
-### ⑤ 看投影式判 R/S（Fischer／Newman）
+## 五、看投影式判 R/S（Fischer／Newman）
 
 考題常用投影式問構型，先換算成「最小基朝後」再判轉向：
 
@@ -94,7 +102,7 @@ import Chem from '@/components/notes/Chem.svelte'
   - 若**最小基在橫線（朝前）** → 先正常判，再**把結論反轉**（因為 H 朝向你）。
 - **Newman 投影**：找出最小基的位置，把它轉到背面，再看 1→2→3 轉向（同樣「最小基在前就反轉」）。
 
-### ⑥ 環己烷椅式：哪個構型最穩定？
+## 六、環己烷椅式：哪個構型最穩定
 
 環己烷以**椅式（chair）**最穩；每個碳有一個**直立鍵（axial，上下）**與一個**平伏鍵（equatorial，向外）**。
 

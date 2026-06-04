@@ -1,8 +1,8 @@
 ---
-title: 植物生理：五大激素、光週期、蒸散與雙重受精全攻略
+title: 植物生理：植物激素、光週期、蒸散與雙重受精
 subject: biology
 tag: 植物生理
-summary: 從激素功能到光敏素、蒸散動力到雙重受精，把植物生理的高頻考點一次串起來。
+summary: 五大植物激素與向性、礦物質營養、光週期與光敏素、蒸散的內聚-張力學說，以及花的性別與雙重受精，逐一定義並附互動工具。
 audio: >
   植物生理，重點複習。
   生長素：促莖伸長、頂端優勢、向光性（移往背光側）。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PlantHormones from '@/components/notes/PlantHormones.svelte'
+import Photoperiod from '@/components/notes/Photoperiod.svelte'
 
 <NoteStats tag="植物生理" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+植物沒有神經系統，靠激素與光感受器協調生長、開花與防禦。本篇從五大激素談起，帶到礦物質、光週期、蒸散與生殖。
 
-### 五大植物激素
+## 一、五大植物激素
 
 植物沒有神經系統，靠**化學信號（激素）**協調生長。五大激素請先熟記：
 
@@ -44,12 +46,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 記憶口訣：**生（長素）吉（貝素）細（胞分裂素）離（層酸）乙（烯）**
 
-#### 向性（Tropism）
+<PlantHormones client:visible />
+
+### 向性（Tropism）
 
 - **向光性**：單側光照 → 生長素從受光側移往背光側 → 背光側細胞伸長較多 → 莖彎向光源。
 - **向地性（重力性）**：根尖感受重力 → 生長素積聚在下方 → **根細胞對高濃度生長素敏感（抑制）**，下方不伸長 → 根向下彎；莖相反，下方受促進 → 莖向上彎。
 
-#### 其他防禦／訊號物質：茉莉酸（Jasmonic acid, JA）
+### 其他防禦／訊號物質：茉莉酸（Jasmonic acid, JA）
 
 除了五大激素，植物受傷或被蟲咬時會用**茉莉酸**啟動防禦：
 
@@ -58,7 +62,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 考點口訣：**茉莉酸 = 抗蟲基因的「開關」**（調控基因表現），不是接觸性毒劑。
 
-### 礦物質營養（無機營養元素）
+## 二、礦物質營養（無機營養元素）
 
 植物除了 C、H、O，還需從土壤吸收礦物質。依需求量分兩類：
 
@@ -78,7 +82,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 易錯：鈣是**巨量**元素（非微量）；缺鎂（不是缺鈣）才造成葉片黃化；核酸主要成分是 N、P（不是 Ca）。
 
-### 光週期與光敏素（Phytochrome）
+## 三、光週期與光敏素（Phytochrome）
 
 **光週期（Photoperiodism）**：植物用**黑暗期長度（臨界夜長）**，而非光照長度，來判斷季節。
 
@@ -94,7 +98,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 夜晚 → Pfr 緩慢轉回 Pr；若夜間插入一次紅光照射 → Pr→Pfr → 相當於「打斷夜長」 → 短日植物不開花。
 - 若短暫遠紅光（far-red）照射緊接在紅光後 → 效果被逆轉（Pfr→Pr）→ 短日植物恢復開花。
 
-### 蒸散作用（Transpiration）
+<Photoperiod client:visible />
+
+## 四、蒸散作用（Transpiration）
 
 水分從葉片氣孔散失的過程，靠**內聚-附著-張力學說（Cohesion-Tension Theory）**解釋水如何「被拉上去」：
 
@@ -105,7 +111,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 驅動力是**蒸散**（不是幫浦），能量來源是**太陽能**使水蒸發。
 
-### 花的構造與性別
+## 五、花的構造與性別
 
 一朵完整花有四輪：**萼片、花瓣、雄蕊（含花藥）、雌蕊（含子房）**。依雄雌蕊是否齊全分：
 
@@ -116,7 +122,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 高頻考點：**玉米是單性花**（雌雄花分開），常被拿來和兩性花（百合、水稻、豌豆）對比。
 
-### 植物生殖——雙重受精（Double Fertilization）
+## 六、植物生殖——雙重受精（Double Fertilization）
 
 被子植物（開花植物）特有：
 

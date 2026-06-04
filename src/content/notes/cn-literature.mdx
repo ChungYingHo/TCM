@@ -1,8 +1,8 @@
 ---
-title: 文學史常識：作者—作品—時代—流派一張表搞定
+title: 文學史常識：作者、作品、時代與流派
 subject: chinese
 tag: 文學史常識
-summary: 用「作者、作品、時代、流派」四欄框架，從先秦到明清一路串起，配對題再也不怕。
+summary: 從先秦到明清及現當代台灣文學的代表作者、作品、時代與流派，字號別稱與配對題技巧，附時代探索與字號自測工具。
 audio: >
   文學史常識，重點複習。
   唐詩、宋詞、元曲、明清小說是各時代文學代表。
@@ -26,14 +26,16 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import LiteraryEras from '@/components/notes/LiteraryEras.svelte'
+import PenNameQuiz from '@/components/notes/PenNameQuiz.svelte'
 
 <NoteStats tag="文學史常識" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
-
 文學史題多半是**配對題**（作者 vs 作品、作品 vs 時代）或是「下列何者不屬於同一時代/流派？」的排除題。只要把「作者—作品—時代—流派」四欄串起來，就能快速作答。
 
-### ① 各時代文學一覽
+## 一、各時代文學一覽
+
+<LiteraryEras client:visible />
 
 **先秦（西元前）**
 
@@ -124,9 +126,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 提醒：朱西甯是「軍中／外省作家」，**不以日治台灣人生活**為主要題材，這類「誰不屬於同一群」的排除題常拿他當答案。
 
-### ② 字號與別稱對照（填空、稱呼題常考）
+## 二、字號與別稱對照（填空、稱呼題常考）
 
 古人除本名外有「字」與「號」，詩文常以字號稱人。填空題愛用別稱（如「少陵詩、右軍帖」）。
+
+<PenNameQuiz client:visible />
 
 | 別稱／字號 | 本人 | 由來 |
 |-----------|------|------|
@@ -141,7 +145,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 解題：把別稱換回本名，再判斷該人擅長的領域是否與句中搭配（「少陵詩、摩詰畫、右軍帖、相如賦」＝杜甫的詩、王維的畫、王羲之的字、司馬相如的賦，各得其所）。
 
-### ③ 配對題技巧
+## 三、配對題技巧
 
 1. **從熟悉的作品反推作者**：題目常給作品問作者，或給作者問作品。
 2. **用時代排除**：詞人是宋代的，不可能是元代的。

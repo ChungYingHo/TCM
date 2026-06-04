@@ -1,8 +1,8 @@
 ---
-title: 基因表現：中心法則到 operon，一次搞懂轉錄、轉譯與調控
+title: 基因表現：轉錄、轉譯與基因調控
 subject: biology
 tag: 基因表現：轉錄轉譯與調控
-summary: 從 DNA → mRNA → 蛋白質的每一步都拆開來說，再加上原核 operon 與真核表觀遺傳調控。
+summary: 中心法則、轉錄與真核 mRNA 加工、轉譯與密碼子、轉譯後修飾，以及原核 operon 與真核表觀遺傳調控，逐一定義並附互動工具。
 audio: >
   基因表現：轉錄轉譯與調控，重點複習。
   中心法則：DNA ，得到 RNA ，得到 蛋白質；起始密碼子 AUG，終止密碼子 UAA/UAG/UGA。
@@ -24,12 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import CodonTranslator from '@/components/notes/CodonTranslator.svelte'
+import LacOperon from '@/components/notes/LacOperon.svelte'
 
 <NoteStats tag="基因表現：轉錄轉譯與調控" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+基因表現就是把 DNA 的訊息「讀出來、做成蛋白質」，再決定何時做、做多少。本篇依中心法則的順序拆解轉錄、轉譯，再講原核與真核的調控機制。
 
-### ① 中心法則（Central Dogma）
+## 一、中心法則（Central Dogma）
 
 ```
 DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
@@ -45,7 +47,7 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 
 **補充：** 反轉錄病毒（如 HIV）帶有**反轉錄酶**，可以 RNA → DNA，是中心法則的例外。
 
-### ② 轉錄（Transcription）
+## 二、轉錄（Transcription）
 
 **轉錄基本流程：**
 1. RNA 聚合酶辨認並結合**啟動子（promoter）**。
@@ -63,7 +65,7 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 
 → 一個真核基因可透過**選擇性剪接（alternative splicing）**產生多種蛋白質。
 
-### ③ 轉譯（Translation）
+## 三、轉譯（Translation）
 
 **密碼子（codon）**：mRNA 上每 3 個核苷酸對應一個胺基酸。
 - 起始密碼子：**AUG**（甲硫胺酸 Met）
@@ -77,6 +79,8 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 | 5'-AUG-3' | 3'-UAC-5' | Met（起始） |
 | 5'-UUU-3' | 3'-AAA-5' | Phe（苯丙胺酸） |
 
+<CodonTranslator client:visible />
+
 **轉譯步驟：**
 1. **起始**：小次單元與 mRNA 結合，tRNA(Met) 進入 P 位，大次單元加入。
 2. **延長**：新 tRNA 進入 A 位，胜肽鍵形成，核糖體沿 5'→3' 移動（轉位）。
@@ -86,14 +90,14 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 - 催化胜肽鍵（peptide bond）形成的是**大次單元上的 rRNA**，本身就是一種 **ribozyme（具催化能力的 RNA）**，這個活性又叫**胜肽轉移酶（peptidyl transferase）**。
 - 換句話說，轉譯時「把胺基酸接成胜肽鏈」的酵素不是蛋白質，而是 **RNA**——這是 ribozyme 最常被考的例子。
 
-### ③-2 轉譯後修飾（Post-translational modification）
+## 四、轉譯後修飾（Post-translational modification）
 
 多胜肽合成完不一定能馬上工作，常需再加工：
 - 接上**糖類（糖基化）**、**脂質**、**磷酸基（磷酸化）**等基團，或被蛋白酶切割。
 - 這些「轉譯之後」改變蛋白質活性/定位的步驟，統稱**轉譯後修飾**。
 - 別和「轉錄後加工」（5' 帽、poly(A)、剪接，作用在 mRNA）混淆：轉譯後修飾作用在**蛋白質**上。
 
-### ④ 原核基因調控：Operon 模型
+## 五、原核基因調控：Operon 模型
 
 原核生物基因調控主要在**轉錄層次**，透過 operon 系統。
 
@@ -105,6 +109,8 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 | 有乳糖，有葡萄糖 | ✓ | ✓ | 阻遏蛋白被移除，但 cAMP 低 → **低度表現** |
 | 有乳糖，無葡萄糖 | ✓ | ✗ | 阻遏蛋白移除 + cAMP 高 → CAP 活化 → **高度表現** |
 
+<LacOperon client:visible />
+
 **trp operon（色胺酸抑制型：有色胺酸就關閉）**
 - 色胺酸（最終產物）作為**輔阻蛋白**，與阻遏蛋白結合後，才能封閉 operon。
 - 稱為**輔阻蛋白調控**（corepressor regulation）。
@@ -114,7 +120,7 @@ DNA ──(轉錄)──▶ RNA ──(轉譯)──▶ 蛋白質
 | lac | 誘導型 | 乳糖（異乳糖） | 開啟基因 |
 | trp | 阻抑型 | 色胺酸 | 關閉基因 |
 
-### ⑤ 真核基因調控
+## 六、真核基因調控
 
 真核調控比原核複雜，涉及多個層次：
 

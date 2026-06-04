@@ -1,8 +1,8 @@
 ---
-title: 細胞膜與物質運輸：順流還是逆流？耗不耗能？
+title: 細胞膜與物質運輸：被動/主動運輸與滲透
 subject: biology
 tag: 細胞膜與物質運輸
-summary: 流體鑲嵌模型、被動 vs 主動運輸、滲透方向——抓住「順/逆濃度差」這條主線，所有運輸題都迎刃而解。
+summary: 流體鑲嵌模型、被動 vs 主動運輸、滲透方向與水勢、鈉鉀幫浦與訊息傳遞，逐一定義並附互動工具。
 audio: >
   細胞膜與物質運輸，重點複習。
   判斷運輸種類口訣：順濃度差，得到 被動（不耗能）；逆濃度差，得到 主動（耗 ATP）。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import TransportType from '@/components/notes/TransportType.svelte'
+import Tonicity from '@/components/notes/Tonicity.svelte'
 
 <NoteStats tag="細胞膜與物質運輸" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+細胞膜控制物質進出。主線只有一條：順濃度梯度（被動、不耗能）還是逆濃度梯度（主動、耗 ATP）。本篇逐一定義並附互動工具。
 
-### 一、流體鑲嵌模型（Fluid Mosaic Model）
+## 一、流體鑲嵌模型（Fluid Mosaic Model）
 
 細胞膜的基本架構（Singer & Nicolson，1972）：
 
@@ -45,7 +47,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 二、物質運輸分類——主線：順流 vs 逆流
+## 二、物質運輸分類：順流 vs 逆流
 
 ```
 物質運輸
@@ -58,9 +60,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
     └── 胞吞（Endocytosis）與胞吐（Exocytosis）（大分子）
 ```
 
----
+選一個情境，看它屬於哪種運輸：
 
-### 三、被動運輸細節
+<TransportType client:visible />
+
+## 三、被動運輸細節
 
 | 類型 | 需要蛋白質？ | 速度飽和？ | 例子 |
 |---|---|---|---|
@@ -72,9 +76,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 四、滲透方向怎麼判？
+## 四、滲透方向怎麼判
 
-**水往溶質濃度高（水勢低）的一側移動。**
+**水往溶質濃度高（水勢低）的一側移動。** 選溶液與細胞類型看結果：
+
+<Tonicity client:visible />
 
 | 情境 | 判斷 | 細胞變化 |
 |---|---|---|
@@ -106,7 +112,7 @@ $$
 
 ---
 
-### 五、主動運輸：鈉鉀幫浦
+## 五、主動運輸：鈉鉀幫浦
 
 鈉鉀幫浦（Na⁺/K⁺-ATPase）是最經典的主動運輸範例：
 
@@ -120,7 +126,7 @@ $$
 
 ---
 
-### 六、胞吞與胞吐——大分子的出入
+## 六、胞吞與胞吐：大分子的出入
 
 | 類型 | 方向 | 能量 | 例子 |
 |---|---|---|---|
@@ -130,7 +136,7 @@ $$
 
 ---
 
-### 七、次級主動運輸：葡萄糖搭 Na⁺ 的便車（SGLT）
+## 七、次級主動運輸：葡萄糖搭 Na⁺ 的便車（SGLT）
 
 小腸絨毛細胞要把葡萄糖「逆濃度」吸進來，但它不直接燒 ATP，而是：
 
@@ -141,7 +147,7 @@ $$
 
 ---
 
-### 八、細胞膜上的訊息接收：受體與第二傳訊者（考點）
+## 八、訊息接收：受體與第二傳訊者
 
 有些訊息分子（如腎上腺素）太大或太極性，進不了細胞，只能在膜上「按門鈴」：
 

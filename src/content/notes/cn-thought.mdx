@@ -1,8 +1,8 @@
 ---
-title: 四書諸子思想：論孟學庸與儒道墨法核心主張一次掌握
+title: 四書諸子思想：論孟學庸與儒道墨法
 subject: chinese
 tag: 文化教材思想
-summary: 把四書重要章句與諸子百家核心主張整理成對照表，讀一遍就能判讀引文出處與涵義。
+summary: 四書的內容與重要章句、大學三綱八目、中庸與孟子核心主張、儒道墨法諸子的對照與名句歸屬，附諸子百家探索與名句自測工具。
 audio: >
   文化教材思想，重點複習。
   四書順序：論孟學庸（論語，得到 孟子，得到 大學，得到 中庸），朱熹選定。
@@ -25,14 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PhilosophySchools from '@/components/notes/PhilosophySchools.svelte'
+import QuoteAttribution from '@/components/notes/QuoteAttribution.svelte'
 
 <NoteStats tag="文化教材思想" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+這個考點要你能「看到句子就知道是誰說的、在講什麼道理」。先把四書與諸子的架構記住，再背代表句子。
 
-這個考點要你能「看到句子就知道是誰說的、在講什麼道理」。先把架構記住，再背代表句子。
-
-### 四書是哪四本？
+## 一、四書是哪四本？
 
 | 書名 | 作者／記錄者 | 核心一句話 |
 |---|---|---|
@@ -43,7 +43,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 「四書」由**朱熹**在宋代選定，成為科舉考試核心，地位高於其他儒家典籍。
 
-### 論語高頻章句（看到句子要認得是孔子的話）
+## 二、論語高頻章句（看到句子要認得是孔子的話）
 
 考題常給一句《論語》要你判讀涵義，先把這些核心句記熟：
 
@@ -57,7 +57,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 小技巧：判讀《論語》題，先抓句中關鍵字（韶＝樂、束脩＝教、義之與比＝守義不偏），再對到「仁／禮／教／義」哪一個主題。
 
-### 大學「三綱八目」
+## 三、大學「三綱八目」
 
 **三綱**：明明德 → 親民（新民）→ 止於至善
 
@@ -67,7 +67,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 口訣：**格致誠正修、齊治平**（「格致」是知識，「誠正修」是個人，「齊治平」是社會）
 
-### 中庸關鍵語句
+## 四、中庸關鍵語句
 
 | 句子 | 意思 |
 |---|---|
@@ -75,7 +75,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 喜怒哀樂之未發謂之**中**，發而皆中節謂之**和** | 「中和」：情緒未動是中，表達恰當是和 |
 | 至誠之道，可以前知 | 誠是中庸思想的核心 |
 
-### 孟子核心主張
+## 五、孟子核心主張
 
 | 主張 | 代表句 |
 |---|---|
@@ -85,7 +85,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **民貴君輕** | 民為貴，社稷次之，君為輕 |
 | **浩然之氣** | 我善養吾浩然之氣——集義所生，不可強求 |
 
-### 諸子百家對照表
+## 六、諸子百家對照表
+
+<PhilosophySchools client:visible />
 
 | 學派 | 代表人 | 核心主張 | 代表句 |
 |---|---|---|---|
@@ -96,7 +98,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > **儒墨對比**：儒家「仁愛」有差等（親疏遠近），墨家「兼愛」無差等——這是兩家的根本分歧。
 
-### 荀子（也是儒家，但常被當陷阱）
+## 七、荀子（也是儒家，但常被當陷阱）
 
 荀子是儒家，卻和孟子唱反調，考題很愛拿來混淆：
 
@@ -106,9 +108,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **天行有常** | 「天行有常，不為堯存，不為桀亡」——**自然有其規律，不因人事而改變**（不是孟子說的！這是常見誤植陷阱） |
 | **化性起偽** | 用禮義法度改造本性、引導向善 |
 
-### 經典名句「一句配一人」速記表
+## 八、經典名句「一句配一人」速記表
 
 判讀「這句話是誰說的」是最高頻題型。把這張表記熟，看到引文就能對上人：
+
+<QuoteAttribution client:visible />
 
 | 名句 | 出處／作者 | 學派 |
 |---|---|---|
@@ -120,7 +124,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 民為貴，社稷次之，君為輕 | **孟子** | 儒家 |
 | 兼相愛，交相利 | **墨子** | 墨家 |
 
-### 老莊核心概念
+## 九、老莊核心概念
 
 - **老子**：「道可道，非常道」——道不可言說；水善利萬物而不爭；知足者富
 - **莊子**：「天地與我並生，萬物與我為一」；「朝菌不知晦朔，蟪蛄不知春秋」（小知不及大知）；「魚相忘乎江湖，人相忘乎道術」

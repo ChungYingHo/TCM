@@ -2,7 +2,7 @@
 title: 閱讀測驗：帶問題找答案、回原文定位、推論不超出原文
 subject: english
 tag: 閱讀測驗
-summary: 閱讀題的答案都在文章裡——先看題目類型，再用對策定位，推論不要自己加料。
+summary: 英文閱讀的做題順序與三大題型對策、細節題定位、推論題不超出原文與 NOT true 變體，附閱讀題型與推論陷阱工具。
 audio: >
   閱讀測驗，重點複習。
   先看題目，帶著問題讀文章，回原文定位，不靠印象。
@@ -21,16 +21,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import EngReadingTypes from '@/components/notes/EngReadingTypes.svelte'
+import InferenceTraps from '@/components/notes/InferenceTraps.svelte'
 
 <NoteStats tag="閱讀測驗" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+閱讀測驗最大的錯誤是「先把文章讀完才看題目」——既浪費時間又記不住細節。正確策略是**帶著問題去讀文章**，答案都在原文裡。
 
-閱讀測驗最大的錯誤是「先把文章讀完才看題目」——這樣等於浪費時間，而且容易記不住細節。正確的策略是**帶著問題去讀文章**。
-
----
-
-**① 三大題型與對策**
+## 一、三大題型與對策
 
 | 題型 | 常見題幹格式 | 解題對策 |
 |---|---|---|
@@ -38,9 +36,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **細節題** | According to the passage… / The author states that… / Which of the following is true/NOT true? | 找**關鍵字**回原文定位，逐選項比對 |
 | **推論題** | It can be inferred that… / The author implies that… / What can we conclude from…? | 選項必須有原文根據，**不能超出原文**加入自己的知識 |
 
----
+<EngReadingTypes client:visible />
 
-**② 先看題目，再讀文章**
+## 二、先看題目，再讀文章
 
 正確流程：
 
@@ -48,18 +46,16 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 2. **讀文章時遇到這些關鍵字就放慢速度**，其他段落快速掃過
 3. **回原文找答案句**，不靠印象選
 
----
-
-**③ 細節題：定位技巧**
+## 三、細節題：定位技巧
 
 - 題目裡有**專有名詞、數字、年份**：直接在文章裡找它們
 - 題目說 "according to paragraph 2"：只看那一段
 - NOT true / EXCEPT 題：四個選項都要逐一確認，三個在文中有根據、一個沒有或相反 → 選那個「沒有/相反」的
 - 後中醫常見變體：**"Which is NOT true nor implied?"**（哪個既非事實、也無法推論）。這題把細節與推論合一：三個選項在文中有明說或可推出，剩下那個「文中沒講、也推不出（或相反）」就是答案。
 
----
+## 四、推論題：不超出原文
 
-**④ 推論題：不超出原文**
+<InferenceTraps client:visible />
 
 推論題最常見的陷阱：選項「聽起來很合理、符合常識」，但**原文完全沒有提到**。
 
@@ -68,9 +64,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 「可能（likely）」「可以（can）」的選項，有時比「一定（must）」更容易是正確答案
 - 「太絕對」的選項（always, never, all, none）通常是錯的
 
----
-
-**⑤ 字義題（line X 的某字意思）**
+## 五、字義題（line X 的某字意思）
 
 等同字彙題，依上下文判斷，不用死背的第一意思。
 

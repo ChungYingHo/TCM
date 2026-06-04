@@ -1,8 +1,8 @@
 ---
-title: 反應速率：從實驗數據看出速率定律，一步不漏
+title: 反應速率：速率定律、半衰期、Arrhenius 與催化劑
 subject: chemistry
 tag: 反應速率
-summary: 速率定律只能靠實驗求，不能看係數猜——學會比較法求級數，再掌握 Arrhenius 與催化劑，反應速率題全部搞定。
+summary: 速率定律只能由實驗求（比較法求級數）、各級半衰期、Arrhenius 與活化能、催化劑與反應機構，逐一定義並附互動圖。
 audio: >
   反應速率，重點複習。
   速率定律 rate 等於 kAᵐBⁿ，m、n 只能由實驗求，不可用方程式係數代入。
@@ -21,12 +21,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RateOrder from '@/components/notes/RateOrder.svelte'
+import EnergyProfile from '@/components/notes/EnergyProfile.svelte'
 
 <NoteStats tag="反應速率" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+反應速率研究「反應有多快、受什麼影響」。核心是速率定律（只能由實驗求），再加上半衰期、活化能與催化劑。
 
-**① 反應速率是什麼？**
+## 一、反應速率是什麼
 
 就是「某物質濃度每單位時間的變化量」。以反應 $\text{A} \to \text{B}$ 為例：
 
@@ -36,7 +38,7 @@ $$
 
 反應物減少（加負號讓速率為正），產物增加。
 
-**② 速率定律（Rate Law）長什麼樣？**
+## 二、速率定律（Rate Law）
 
 $$
 \text{rate} = k[\text{A}]^m[\text{B}]^n
@@ -50,9 +52,9 @@ $$
 
 **關鍵**：$m$、$n$ 的數值**只能由實驗數據求**，**不能**直接用化學方程式的係數代入。
 
-**③ 怎麼從實驗數據求級數？（比較法）**
+## 三、從實驗求級數：比較法
 
-固定其他濃度不變，只改一個反應物的濃度，觀察速率的倍率變化：
+**反應級數（order）只能由實驗測得，不能看方程式係數。** 方法是固定其他濃度不變、只改一個反應物的濃度，觀察速率的倍率變化：
 
 $$
 \frac{\text{rate}_2}{\text{rate}_1} = \left(\frac{[\text{A}]_2}{[\text{A}]_1}\right)^m
@@ -62,7 +64,13 @@ $$
 - 濃度變 2 倍、速率變 4 倍 → $m = 2$（二級）
 - 濃度變 2 倍、速率不變 → $m = 0$（零級）
 
-**④ 各級數的積分速率定律與半衰期**
+選級數與濃度倍率，看速率怎麼變（反過來就是比較法）：
+
+<RateOrder client:visible />
+
+## 四、各級的積分速率定律與半衰期
+
+**半衰期（$t_{1/2}$）**＝反應物濃度掉到剩一半所需的時間。各級數的公式：
 
 | 級數 | 積分速率定律 | 半衰期 $t_{1/2}$ |
 |---|---|---|
@@ -72,9 +80,13 @@ $$
 
 一級反應的半衰期**不隨初濃度改變**，這是它的特徵。
 
-**⑤ 活化能與 Arrhenius 方程式**
+## 五、活化能與 Arrhenius 方程式
 
-反應要發生，粒子碰撞時需要超過**活化能 $E_a$** 的能障：
+反應要發生，粒子碰撞時必須超過一個能量門檻，叫**活化能（activation energy，$E_a$）**：反應物得先爬到能量最高的**過渡態（transition state）**，再下到產物。調 Ea、ΔH 並開關催化劑，看能量圖怎麼變：
+
+<EnergyProfile client:visible />
+
+反應速率由活化能決定，$E_a$ 越大、反應越慢。速率常數 $k$ 隨溫度的關係是 Arrhenius 方程式：
 
 $$
 k = A\,e^{-E_a/RT}
@@ -101,13 +113,17 @@ $$
 \ln\frac{k_2}{k_1} = -\frac{E_a}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)
 $$
 
-**⑥ 催化劑的作用**
+## 六、催化劑的作用
 
 催化劑提供**另一條活化能較低的反應路徑**：
 
 - 降低 $E_a$，讓更多分子有足夠能量反應 → 速率加快
 - **不改變**反應物或產物的種類、**不改變** $\Delta H$（反應熱）、**不改變**平衡位置
 - 反應後催化劑本身不被消耗
+
+## 七、反應機構與速率決定步驟
+
+複雜反應其實是好幾個基本步驟接力完成，這一連串步驟叫**反應機構（mechanism）**。其中最慢的那一步叫**速率決定步驟（rate-determining step，RDS）**——整個反應的速率定律由 RDS 決定。若 RDS 裡含**中間物**（前一步生成、後一步用掉的物種），要用前面的快平衡把中間物換算成反應物濃度。所以**速率定律反映的是 RDS，不是整體反應的係數**。
 
 <Memorize>
 速率定律 rate = k[A]ᵐ[B]ⁿ，<b>m、n 只能由實驗求，不可用方程式係數代入</b>。<br />

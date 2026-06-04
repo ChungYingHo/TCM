@@ -1,8 +1,8 @@
 ---
-title: 生物學綜合：跨章、實驗數據與敘述判斷題怎麼打
+title: 生物學綜合：跨章整合、實驗數據與敘述判斷題
 subject: biology
 tag: 生物學綜合
-summary: 這裡收錄跨章節、實驗設計與數據判讀、時事應用，以及「下列敘述何者正確」型的綜合題——教你怎麼辨認主題並逐項拆解。
+summary: 收錄跨章節、實驗設計與數據判讀、時事應用，以及「下列敘述何者正確」型的綜合題——辨認主題、逐項拆解，附互動工具。
 audio: >
   生物學綜合，重點複習。
   綜合題等於拆成你會的小題。
@@ -25,6 +25,8 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import QuestionStrategy from '@/components/notes/QuestionStrategy.svelte'
+import GermLayers from '@/components/notes/GermLayers.svelte'
 
 <NoteStats tag="生物學綜合" client:load />
 
@@ -38,6 +40,8 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 </Memorize>
 
 ## 常見型態與拆法
+
+<QuestionStrategy client:visible />
 
 <KeyPoints items={[
   "<b>敘述判斷題</b>（下列何者正確/錯誤）：逐個選項獨立驗證，<b>找反例</b>最快刪錯。",
@@ -60,6 +64,10 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | DNA 複製 | <b>半保留</b>：每子代雙股＝1 母股＋1 新股 |
 | 演化對象 | 作用在<b>族群</b>的基因頻率；變異隨機產生再被環境篩選（非個體主動改變） |
 | 相關 vs 因果 | 數據只顯示「一起變化」時，不能直接斷定誰造成誰 |
+
+跨章回憶題最常考「同源（同胚層）」，先判斷構造屬哪個胚層，再回想同類成員：
+
+<GermLayers client:visible />
 
 ## 解題方向
 

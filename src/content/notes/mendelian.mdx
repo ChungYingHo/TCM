@@ -1,8 +1,8 @@
 ---
-title: 孟德爾遺傳：從旁氏表到性聯與連鎖，一次搞懂比例
+title: 孟德爾遺傳：分離律、自由組合、旁氏表與性聯
 subject: biology
 tag: 孟德爾遺傳
-summary: 搞懂顯隱性、基因型/表現型、旁氏表、性聯遺傳和連鎖重組，讓遺傳題不再靠猜。
+summary: 顯隱性與基因型／表現型、兩大遺傳定律、旁氏表與乘法原理、性聯遺傳、連鎖重組、複等位基因、哈溫平衡與多倍體，逐一定義並附互動工具。
 audio: >
   孟德爾遺傳，重點複習。
   單性狀 Aa乘以Aa ，得到 表現型 3:1；雙性狀自由組合 ，得到 9:3:3:1。
@@ -30,12 +30,13 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
+import DihybridCalc from '@/components/notes/DihybridCalc.svelte'
 
 <NoteStats tag="孟德爾遺傳" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+孟德爾遺傳的核心是兩件事：等位基因如何分離與組合（決定配子），以及如何用旁氏表或機率算出後代比例。本篇從名詞定義開始，逐一帶到性聯、連鎖、ABO 血型與哈溫平衡。
 
-### ① 基本名詞一覽
+## 一、基本名詞一覽
 
 | 名詞 | 白話解釋 |
 |---|---|
@@ -47,7 +48,7 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 | **異型合子 (heterozygous)** | Aa，兩個等位基因不同 |
 | **等位基因 (allele)** | 同一個基因座上不同的版本 |
 
-### ② 兩大分離定律
+## 二、兩大分離定律
 
 **分離律（Mendel 第一定律）**
 - 親代配子形成時，一對等位基因**分開**進入不同配子。
@@ -57,7 +58,7 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 - **不同染色體**上的兩對基因，在形成配子時各自獨立組合。
 - 條件：兩對基因位於**非同源染色體**（否則就是連鎖）。
 
-### ③ 旁氏表（Punnett Square）怎麼填
+## 三、旁氏表（Punnett Square）怎麼填
 
 1. 父本配子寫**上排**，母本配子寫**左排**。
 2. 格格相乘填內部。
@@ -82,11 +83,15 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 > - 雙隱性 aabb ＝ 1/4 × 1/4 ＝ **1/16**
 > 例如「綠色(yy)圓形(R\_)」＝ 1/4 × 3/4 ＝ 3/16 ＝ **18.75%**。
 
-### ④ 動手玩旁氏表
+用乘法原理算雙性狀某一表現型：
+
+<DihybridCalc client:visible />
+
+互動旁氏表（自選親代基因型，自動算配子與後代比例）：
 
 <PunnettSquare client:visible />
 
-### ⑤ 性聯遺傳
+## 四、性聯遺傳
 
 - 性聯基因位於 **X 染色體**，Y 染色體上幾乎沒有對應的等位基因。
 - 男性只有一個 X，只要帶隱性就表現（**半合子**）。
@@ -106,14 +111,14 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 2. 看有無父→兒子傳遞：若有，可排除 X 聯隱性。
 3. 看有無性別偏向：多為男性患者 → X 聯隱性可能性高。
 
-### ⑥ 連鎖與重組率
+## 五、連鎖與重組率
 
 - 位於**同一條染色體**的兩對基因稱為**連鎖**，不符合自由組合。
 - 減數分裂時，同源染色體間可**互換（crossing over）**，產生**重組型配子**。
 - **重組率 (%) = 重組型子代數 ÷ 全部子代數 × 100%**
 - 重組率 ≈ 基因距離（cM，centimorgan）；越遠重組率越高（上限約 50%）。
 
-### ⑦ 複等位基因與 ABO 血型
+## 六、複等位基因與 ABO 血型
 
 - 一個基因有**三個以上**版本叫**複等位基因**；人類 ABO 血型有 **IᴬIᴮi 三個等位基因**。
 - **顯隱關係**：Iᴬ、Iᴮ 對 i 皆為顯性；Iᴬ 與 Iᴮ 之間是**共顯性（co-dominant）**。
@@ -125,7 +130,7 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 | AB 型 | IᴬIᴮ |
 | O 型 | ii |
 
-### ⑧ 哈溫平衡（Hardy–Weinberg）算族群基因型頻率
+## 七、哈溫平衡（Hardy–Weinberg）算族群基因型頻率
 
 當族群夠大且隨機交配，設各等位基因頻率為 p、q、r…，則**所有基因型頻率 ＝（p + q + r + …）² 展開**：
 
@@ -135,7 +140,7 @@ import PunnettSquare from '@/components/notes/PunnettSquare.svelte'
 
 > ABO 例：Iᴬ=0.08、Iᴮ=0.13、i=0.79。同型合子總和 ＝ 0.08² + 0.13² + 0.79² ＝ 0.0064 + 0.0169 + 0.6241 ＝ **0.6474**。
 
-### ⑨ 多倍體的染色體數怎麼數
+## 八、多倍體的染色體數怎麼數
 
 - 一套染色體（單倍體配子）的染色體數叫 **x**（基數）。
 - 個體**體細胞**染色體數 ＝ **（套數）× x**。

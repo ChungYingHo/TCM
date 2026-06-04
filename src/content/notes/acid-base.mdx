@@ -1,8 +1,8 @@
 ---
-title: 酸鹼與 pH：從「log 是什麼」開始一條龍
+title: 酸鹼與 pH：強酸、弱酸與緩衝的 pH 計算
 subject: chemistry
 tag: 酸鹼平衡
-summary: 假設你連莫耳濃度、log 都忘了也沒關係——先補基礎，再用「強的、弱的、緩衝」三招把 pH 算出來。
+summary: 從莫耳濃度、log、pH/pOH 的定義補起，再用「強的、弱的、緩衝」三招算 pH，逐一定義並附互動工具。
 audio: >
   酸鹼平衡複習。pH 等於負 log 氫離子濃度，pH 加 pOH 等於十四。
   強酸強鹼完全解離，氫離子濃度就是濃度，直接取 log。
@@ -16,14 +16,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import PhScale from '@/components/notes/PhScale.svelte'
+import AcidPhCalc from '@/components/notes/AcidPhCalc.svelte'
 
 <NoteStats tag="酸鹼平衡" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+酸鹼題九成在問 pH。算之前先補三個地基（莫耳濃度、log、pH/pOH 的定義），再用「強的、弱的、緩衝」三招算 pH。
 
-別急著算 pH，先確定這三個地基是穩的：
+## 一、莫耳濃度 M
 
-**① 莫耳濃度 M 是什麼？**
 就是「<b>每公升溶液有幾莫耳溶質</b>」。
 
 $$
@@ -32,7 +32,8 @@ $$
 
 例：把 0.5 mol 的鹽溶成 2 L，濃度就是 0.5 ÷ 2 = 0.25 M。
 
-**② log（對數）是什麼？**
+## 二、log（對數）
+
 $\log x$ 在問：「10 要 <b>幾次方</b> 才會等於 $x$」。所以只要數字寫成 10 的次方，log 一眼就看得出來：
 
 | 數字 | 寫成 10 的次方 | log 是多少 |
@@ -44,8 +45,9 @@ $\log x$ 在問：「10 要 <b>幾次方</b> 才會等於 $x$」。所以只要�
 
 關鍵一句：$\log(10^{-n}) = -n$，所以 $-\log(10^{-n}) = n$。
 
-**③ pH 與 pOH 怎麼定義？**
-水裡有氫離子 $\text{H}^+$ 和氫氧根 $\text{OH}^-$。pH 就是把 $[\text{H}^+]$ 取負 log：
+## 三、pH 與 pOH
+
+水裡有**氫離子 $\text{H}^+$**（讓溶液偏酸）和**氫氧根 $\text{OH}^-$**（讓溶液偏鹼）。pH 就是把 $[\text{H}^+]$ 取負 log：
 
 $$
 \text{pH} = -\log[\text{H}^+] \qquad \text{pOH} = -\log[\text{OH}^-]
@@ -59,7 +61,8 @@ $$
 \text{pH} + \text{pOH} = 14
 $$
 
-**④ 解離百分比（解離度 α）是什麼？**
+## 四、解離百分比（解離度 α）
+
 弱酸只解離一點點，「解離了多少比例」就是解離百分比：
 
 $$
@@ -68,7 +71,8 @@ $$
 
 弱酸算出 $[\text{H}^+] \approx \sqrt{K_a \cdot C}$ 後，再除以原濃度 $C$ 就是 α。
 
-**⑤ 多質子酸（如 H₃A）的「兩性中間物」pH**
+## 五、多質子酸的兩性中間物 pH
+
 三質子酸一次脫一個 H⁺，有 $K_{a1} > K_{a2} > K_{a3}$。當溶液主成分是中間的兩性物種（如 H₂A⁻、HA²⁻，它既能放 H⁺ 又能收 H⁺）時，pH 可用夾住它的那兩個 pKa 取平均：
 
 $$
@@ -82,13 +86,15 @@ pH ＝ −log[H⁺]、pH ＋ pOH ＝ 14（25°C）。<br />
 記住 <b>−log(10⁻ⁿ) ＝ n</b>，大部分 pH 題不用按計算機就能心算。
 </Memorize>
 
-## 動手玩：拉一下看 pH 怎麼動
+## 六、pH 互動尺
 
 <PhScale client:visible />
 
-## 三種情況、三招公式
+## 七、三招算 pH：強的、弱的、緩衝
 
-酸鹼題九成在問 **pH**。先判斷是「強的、弱的、還是緩衝」，再套公式：
+先判斷是「強的、弱的、還是緩衝」，再套對應公式。動手選類型算算看：
+
+<AcidPhCalc client:visible />
 
 <KeyPoints items={[
   "<b>強酸／強鹼</b>（HCl、NaOH…）：完全解離，<b>[H⁺] = 酸的濃度</b>，直接取 −log。",

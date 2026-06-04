@@ -2,7 +2,7 @@
 title: 芳香族化學：休克爾規則、苯的親電取代與定位效應
 subject: chemistry
 tag: 芳香族化學
-summary: 從芳香性判斷到硝化/鹵化反應機構，再學取代基怎麼指定「鄰對位」或「間位」。
+summary: 從休克爾規則判斷芳香性、苯的親電取代（硝化/鹵化）機構，到取代基的鄰/對位與間位定位效應，逐一定義並附互動工具。
 audio: >
   芳香族化學，重點複習。
   芳香性：環狀＋平面＋完全共軛＋π 電子數 等於 4n+2。
@@ -28,12 +28,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import HuckelRule from '@/components/notes/HuckelRule.svelte'
+import DirectingEffects from '@/components/notes/DirectingEffects.svelte'
 
 <NoteStats tag="芳香族化學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+芳香族化學三大塊：芳香性的判斷（休克爾規則）、苯的親電取代反應（EAS）、以及取代基的定位效應。本篇逐一定義並附互動工具。
 
-### ① 什麼是芳香性？
+## 一、什麼是芳香性
 
 苯（benzene）的穩定性遠超過預期——這種額外的穩定性叫**芳香性（aromaticity）**，來自 π 電子的**環狀離域（delocalization）**。
 
@@ -54,6 +56,8 @@ $$
 
 **反芳香性（antiaromatic）**：π 電子數 = 4n（4、8、12…），比無環烯烴更**不穩定**（如環丁二烯）。
 
+<HuckelRule client:visible />
+
 **雜環芳香族**：
 
 | 化合物 | π 電子來源 | 芳香性 |
@@ -62,7 +66,7 @@ $$
 | 吡咯（pyrrole） | 2 個雙鍵 × 2 = 4，加 N 的孤電子對**進入環**（貢獻 2 個）= 6 | 有（6 電子） |
 | 呋喃（furan） | O 的孤電子對進入環，類似吡咯 | 有 |
 
-### ② 苯的親電芳香取代（EAS）
+## 二、苯的親電芳香取代（EAS）
 
 苯的 π 電子豐富 → 攻擊**親電試劑（E⁺）**。
 
@@ -81,9 +85,11 @@ $$
 | **傅-克烷化** | R–Cl + AlCl₃ | R⁺（碳正離子） | 烷基苯 |
 | **傅-克醯化** | RCOX + AlCl₃ | RCO⁺（醯陽離子） | 芳基酮（無重排） |
 
-### ③ 取代基定位效應
+## 三、取代基定位效應
 
-苯環上已有取代基時，它決定下一個取代基**加在哪個位置**：
+苯環上已有取代基時，它決定下一個取代基**加在哪個位置**。選取代基看效果：
+
+<DirectingEffects client:visible />
 
 | 定位效應 | 取代基類型 | 例子 | 對反應速率 |
 |---|---|---|---|
@@ -97,7 +103,7 @@ $$
 - **拉電子（非鹵素）→ 間位鈍化**（鄰/對位缺電子特別嚴重，E⁺ 攻間位）
 - **鹵素是例外**：拉電子誘導（鈍化整體），但孤對電子共振稍微補回鄰/對位 → **o/p 鈍化劑**
 
-### ④ 酚的酸性比較（超高頻「排序」題）
+## 四、酚的酸性比較（排序題）
 
 酚（Ar–OH）會解離成酚氧陰離子（Ar–O⁻）。**負電荷越能被分散、酸性越強**。所以苯環上的取代基決定酸性高低：
 
@@ -111,7 +117,7 @@ $$
 
 > 同理也適用「苯甲酸取代基酸性比較」：拉電子基增酸、給電子基減酸。
 
-### ⑤ 兩個必記的特殊芳香反應
+## 五、兩個必記的特殊芳香反應
 
 **Birch 還原**（Na 或 Li / NH₃(l) / 醇）：把苯部分還原成**1,4-環己二烯**（非全部加氫）。取代基決定剩下的雙鍵位置：
 

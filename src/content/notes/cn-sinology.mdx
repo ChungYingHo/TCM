@@ -1,8 +1,8 @@
 ---
-title: 國學常識速查：四部分類、六書、第一部清單全收錄
+title: 國學常識：四部分類、四書五經、六書與第一部
 subject: chinese
 tag: 國學常識
-summary: 把「哪本書分在哪裡、哪個字是什麼六書、哪部典籍是第一部」整理成表格，一張圖記完所有考點。
+summary: 經史子集四部分類、四書五經、六書造字法、重要「第一部」清單、二十四史與正史辨別，以及工具書與史料查找，附四部分類與六書探索工具。
 audio: >
   國學常識，重點複習。
   六書中，形聲字最多（約80%）：形旁表義＋聲旁表音，如清（氵+青）。
@@ -26,14 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import FourBranches from '@/components/notes/FourBranches.svelte'
+import SixScripts from '@/components/notes/SixScripts.svelte'
 
 <NoteStats tag="國學常識" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
-
 國學常識靠的是「記憶清單」，不靠理解推導。先把架構看清楚，再把容易混淆的地方記牢。
 
-### 四部分類
+## 一、四部分類
 
 古代圖書目錄按「**經史子集**」四部排列，出自《隋書·經籍志》，至唐《四庫全書》成熟：
 
@@ -49,7 +49,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 老子、莊子 → **子部**（道家；不是集部）
 - 《楚辭》→ **集部**（文學總集）
 
-### 四書五經
+<FourBranches client:visible />
+
+## 二、四書五經
 
 **四書**：論語、孟子、大學、中庸（宋朱熹選定）
 
@@ -65,7 +67,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 原有「**六經**」，含**樂經**，但後來失傳，故稱五經。
 
-### 六書——漢字造字原則
+## 三、六書——漢字造字原則
 
 「六書」出自《說文解字》許慎，說明漢字如何造出來：
 
@@ -82,7 +84,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 轉注和假借是「用字法」，而非嚴格意義的「造字法」。
 
-### 重要「第一部」清單
+<SixScripts client:visible />
+
+## 四、重要「第一部」清單
 
 | 類型 | 第一部 | 作者 | 時代 |
 |---|---|---|---|
@@ -99,7 +103,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 史記是**紀傳體通史**（從黃帝到漢武帝，跨多朝代）
 - 漢書是**紀傳體斷代史**（只記西漢一朝）
 
-### 二十四史與「不在其中」的常考陷阱
+## 五、二十四史與「不在其中」的常考陷阱
 
 「二十四史」是歷代正史的合稱，**全部都是紀傳體**。考題愛問「下列何者不在二十四史中」：
 
@@ -111,7 +115,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 >
 > 記法：「正史＝紀傳體」，凡編年體（通鑑、左傳）、國別體（國語、戰國策）一律不算正史。
 
-### 工具書與史料查找（要找某資料該查哪本書）
+## 六、工具書與史料查找（要找某資料該查哪本書）
 
 考題會給情境「想查某人／某事的資料，該翻哪本書」，重點是**書的性質要對得上需求**：
 
@@ -124,7 +128,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 解題訣竅：先判斷需求是「**查人查事**（→史書）」還是「**查字查詞**（→字典／辭典）」，不要被《紅樓夢》《聊齋》等**小說**選項誤導——小說是文學創作，不是史料。
 
-### 文體與別稱
+## 七、文體與別稱
 
 | 稱呼 | 指的是 |
 |---|---|

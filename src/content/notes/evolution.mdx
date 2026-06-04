@@ -1,8 +1,8 @@
 ---
-title: 演化與生命起源：天擇、哈溫平衡、物種形成一網打盡
+title: 演化與生命起源：天擇、哈溫平衡與物種形成
 subject: biology
 tag: 演化與生命起源
-summary: 從「天擇三要素」到哈溫平衡的 p²+2pq+q² 計算，加上物種形成與生命起源，全部一張張表搞定。
+summary: 天擇三要素、哈溫平衡的 p²+2pq+q² 計算（含三等位基因）、基因頻率改變、物種形成與生殖隔離、演化證據與生命起源，逐一定義並附互動工具。
 audio: >
   演化與生命起源，重點複習。
   天擇三要素：變異 + 可遺傳 + 環境篩選，缺一不成立。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import HardyWeinberg from '@/components/notes/HardyWeinberg.svelte'
+import SelectionFactors from '@/components/notes/SelectionFactors.svelte'
 
 <NoteStats tag="演化與生命起源" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+演化講的是族群的基因組成隨世代改變。本篇從天擇的三個條件談起，帶到哈溫平衡的計算、改變基因頻率的各種力量，再到物種如何形成與生命如何起源。
 
-### ① 天擇（Natural Selection）三要素
+## 一、天擇（Natural Selection）三要素
 
 天擇不是「強者生存」那麼簡單，考試最愛考「缺少哪一要素就不成立」：
 
@@ -42,9 +44,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 三者缺一，天擇就停止運作。**後天獲得的性狀（如練出的肌肉）不可遺傳，不算演化材料。**
 
----
+<SelectionFactors client:visible />
 
-### ② 哈溫平衡（Hardy–Weinberg Equilibrium）
+## 二、哈溫平衡（Hardy–Weinberg Equilibrium）
 
 哈溫平衡是「族群遺傳不變」的基線。設一個體等位基因頻率為 **p（顯性 A）** 和 **q（隱性 a）**，則：
 
@@ -72,6 +74,8 @@ $$
 q = \sqrt{q^2}, \quad p = 1 - q, \quad 2pq = \text{雜合子頻率}
 $$
 
+<HardyWeinberg client:visible />
+
 **三等位基因（ABO 血型常考！）**：若一個基因有三個等位基因，頻率設為 p、q、r，仍然「全部加起來＝1」，平方展開即得所有基因型頻率：
 
 $$
@@ -90,7 +94,7 @@ $$
 
 ---
 
-### ③ 基因頻率改變的原因
+## 三、基因頻率改變的原因
 
 | 機制 | 說明 |
 |---|---|
@@ -102,7 +106,7 @@ $$
 
 ---
 
-### ④ 物種形成與生殖隔離
+## 四、物種形成與生殖隔離
 
 **異域物種形成（Allopatric）**：地理屏障 → 族群分隔 → 各自演化 → 出現生殖隔離。
 
@@ -117,7 +121,7 @@ $$
 
 ---
 
-### ⑤ 演化證據
+## 五、演化證據
 
 | 證據類型 | 舉例 |
 |---|---|
@@ -130,7 +134,7 @@ $$
 
 ---
 
-### ⑥ 生命起源
+## 六、生命起源
 
 | 里程碑 | 說明 |
 |---|---|

@@ -1,8 +1,8 @@
 ---
-title: 關係代名詞與子句：who/whom/whose/which/that 選對不再猜
+title: 關係代名詞與子句：who／whom／whose／which／that
 subject: english
 tag: 文法：子句與關係代名詞
-summary: 搞清楚主格/受格/所有格的選用邏輯，再分清楚名詞子句和副詞子句，填空再也不憑感覺。
+summary: 關係代名詞的選用（先行詞與格位）、限定與非限定子句、名詞與副詞子句、介系詞＋關代與省略關係子句，附關代決策與子句類型工具。
 audio: >
   文法：子句與關係代名詞，重點複習。
   關係代名詞選用口訣：先行詞是人用 who/whom/whose；是物用 which/whose；that 人物皆可但非限定子句不用。
@@ -26,12 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelativePronoun from '@/components/notes/RelativePronoun.svelte'
+import ClauseTypes from '@/components/notes/ClauseTypes.svelte'
 
 <NoteStats tag="文法：子句與關係代名詞" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+關係代名詞與子句的關鍵是：分清先行詞是人或物、在子句中的格位，以及子句的功能（名詞／副詞／形容詞）。本篇逐一說明選用邏輯。
 
-**① 關係代名詞：五個一次看清楚**
+## 一、關係代名詞：五個一次看清楚
 
 關係代名詞的功能是「把兩個句子合併」，同時取代先行詞（antecedent）。選哪一個，看兩件事：**先行詞是人還是物**、**在子句中是主格/受格/所有格**。
 
@@ -45,7 +47,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 判斷格位的方法：把關係子句單獨拿出來，看空格位置是不是**缺主詞**（→主格）還是**缺受詞**（→受格）。
 
-**② 限定 vs 非限定關係子句**
+<RelativePronoun client:visible />
+
+## 二、限定 vs 非限定關係子句
 
 | | 特徵 | 是否可用 that |
 |---|---|---|
@@ -54,7 +58,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 例：The researchers, **whom** we admire, published the paper.（非限定，有逗號，且 whom 在子句中作受詞）
 
-**③ 名詞子句 vs 副詞子句**
+## 三、名詞子句 vs 副詞子句
+
+<ClauseTypes client:visible />
 
 | 類型 | 功能 | 引導詞 |
 |---|---|---|
@@ -66,7 +72,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - "Even professionals are never sure **why** some products succeed"（sure 後接 why 名詞子句）
 - **what 可當「限定詞」**：what 後面直接接名詞，意思是「什麼樣的／哪些」。例：scientists learn **what forms of life** thrived（學到「哪些」生命形態曾繁盛）——what 同時引導名詞子句又當該名詞的限定詞。
 
-**④ 介系詞 + 關係代名詞（in which / at which / of which…）**
+## 四、介系詞 + 關係代名詞（in which / at which / of which…）
 
 當關係子句裡的動詞或片語需要一個介系詞時，介系詞要連同關代一起搬到先行詞後面，且**介系詞後只能接 which（物）或 whom（人）**：
 
@@ -75,7 +81,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 判斷哪個介系詞：把子句還原成完整句，看原本動詞搭配哪個介系詞（work **in** a manner → in which；rely **on** it → on which）。「the way / the manner / a situation + in which」是高頻組合。
 
-**⑤ 省略關係子句（Reduced Relative Clause）——關代＋be 一起省略**
+## 五、省略關係子句（Reduced Relative Clause）——關代＋be 一起省略
 
 「關係代名詞＋be 動詞」常被一起省略，只留下分詞，當形容詞修飾前面的名詞：
 
@@ -86,7 +92,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 所以看到名詞後面直接接 **p.p.**（被動意味）或 **V-ing**（主動意味），多半是省略關係子句。
 
-**⑥ which 指代「整個前句」**
+## 六、which 指代「整個前句」
 
 非限定的 which 不一定指單一名詞，可指**前面整件事**，再對它補充說明：
 

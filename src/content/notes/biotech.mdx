@@ -1,8 +1,8 @@
 ---
-title: 生物技術與分子工具：PCR、重組 DNA、電泳到 CRISPR 全整理
+title: 生物技術與分子工具：PCR、重組 DNA、電泳與 CRISPR
 subject: biology
 tag: 生物技術與分子工具
-summary: 把 PCR 三步驟、重組 DNA 製作流程、電泳判讀和 CRISPR 工具一次整理清楚，考試不再混淆。
+summary: PCR 三步驟、重組 DNA 製作流程、凝膠電泳判讀、DNA 定序、基因轉殖與 CRISPR-Cas9，以及基因標記等常考辨析，逐一定義並附互動工具。
 audio: >
   生物技術與分子工具，重點複習。
   PCR 三步驟：變性（高溫），得到 黏合（引子），得到 延長（Taq 聚合酶），n 輪後擴增 2ⁿ 倍。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PcrCycle from '@/components/notes/PcrCycle.svelte'
+import GelElectrophoresis from '@/components/notes/GelElectrophoresis.svelte'
 
 <NoteStats tag="生物技術與分子工具" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+分子生物學的工具大多圍繞一件事：複製、切接、分離或編輯 DNA。本篇從 PCR 出發，依序講重組 DNA、電泳、定序、轉殖與 CRISPR，並整理幾個常考的辨析陷阱。
 
-### ① PCR（聚合酶鏈鎖反應）
+## 一、PCR（聚合酶鏈鎖反應）
 
 PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模板就能擴增。
 
@@ -46,7 +48,9 @@ PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模�
 - **引子**：人工合成的短單股 DNA，左右各一個（正向/反向），夾住目標區段。
 - **Taq 聚合酶**來自嗜熱菌（*Thermus aquaticus*），在 94°C 不變性。
 
-### ② 重組 DNA 技術（Recombinant DNA）
+<PcrCycle client:visible />
+
+## 二、重組 DNA 技術（Recombinant DNA）
 
 **目標**：把某基因（如胰島素基因）插入細菌，讓細菌大量生產該蛋白質。
 
@@ -65,7 +69,7 @@ PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模�
 4. 轉染（transformation）進入宿主細菌。
 5. 篩選含重組質體的菌落（例如抗生素抗性篩選）。
 
-### ③ 凝膠電泳（Gel Electrophoresis）
+## 三、凝膠電泳（Gel Electrophoresis）
 
 **原理：**
 - DNA 帶**負電**（磷酸基），施加電場後往正極（+）移動。
@@ -83,7 +87,9 @@ PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模�
 - 同排跑越遠 = 分子量越**小**。
 - 與**分子量標準（ladder）**對照，估計片段大小。
 
-### ④ DNA 定序
+<GelElectrophoresis client:visible />
+
+## 四、DNA 定序
 
 **Sanger 定序（鏈終止法）：**
 - 加入**ddNTP（雙脫氧核苷酸）**，ddNTP 沒有 3'-OH，插入後鏈終止。
@@ -92,12 +98,12 @@ PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模�
 **次世代定序（NGS）：**
 - 大量平行定序，速度快、成本低，用於全基因體分析。
 
-### ⑤ 基因轉殖（Transgenic Technology）
+## 五、基因轉殖（Transgenic Technology）
 
 - 將外源基因插入生物基因體，使其穩定遺傳與表現。
 - 例：轉基因大豆（抗除草劑）、基因剔除小鼠（knock-out mouse，研究基因功能）。
 
-### ⑥ CRISPR-Cas9 基因編輯
+## 六、CRISPR-Cas9 基因編輯
 
 | 元件 | 角色 |
 |---|---|
@@ -113,7 +119,7 @@ PCR 目的：在**體外**大量複製指定的 DNA 片段，只要有微量模�
 2. sgRNA-Cas9 複合物切割目標 DNA 雙股。
 3. 細胞自行修復 → 可能引入缺失（基因剔除）或插入目標序列（精確編輯）。
 
-### ⑦ 其他常考工具與觀念辨析
+## 七、其他常考工具與觀念辨析
 
 **基因標記（genetic marker）：用來區分個體 DNA 的「記號」**
 

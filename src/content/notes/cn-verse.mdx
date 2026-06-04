@@ -2,7 +2,7 @@
 title: 古典韻文：詩詞曲賦的體裁、格律與賞析
 subject: chinese
 tag: 古典韻文
-summary: 一張表搞清楚詩詞曲賦的差別，再學近體詩平仄與對仗，賞析題也不怕。
+summary: 詩詞曲賦四大體裁的差別、近體詩的篇幅與平仄對仗押韻、詞曲賦的特徵、賞析的切入點與感官摹寫、用典辨識，附體裁與律詩四聯工具。
 audio: >
   古典韻文，重點複習。
   律詩 8 句、絕句 4 句；律詩的頷聯（3–4 句）與頸聯（5–6 句）必須對仗。
@@ -26,14 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import VerseGenres from '@/components/notes/VerseGenres.svelte'
+import RegulatedVerse from '@/components/notes/RegulatedVerse.svelte'
 
 <NoteStats tag="古典韻文" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+古典韻文考題最常問：**辨體裁、判格律（平仄對仗）、賞析意境**。本篇把各體裁的特徵、近體詩格律、詞曲賦差異與賞析方法整理清楚。
 
-古典韻文考題最常問：**辨體裁、判格律（平仄對仗）、賞析意境**。先把各體裁的基本特徵記清楚。
-
-### ① 四大韻文體裁總覽
+## 一、四大韻文體裁總覽
 
 | 體裁 | 主要時代 | 外觀特徵 | 關鍵詞 |
 |------|---------|---------|--------|
@@ -43,7 +43,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **曲** | 元代（元曲鼎盛） | 散曲＋雜劇；可加「襯字」，口語化 | 宮調、曲牌（如〈天淨沙〉） |
 | **賦** | 漢代最盛 | 散文與詩歌之間；鋪陳排比，多辭藻 | 漢大賦（班固、司馬相如）；魏晉抒情小賦 |
 
-### ② 近體詩格律（重點中的重點）
+<VerseGenres client:visible />
+
+## 二、近體詩格律（重點中的重點）
 
 **（一）篇幅**
 
@@ -62,6 +64,8 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 ```
 
 考試常問「哪兩聯對仗？」→ **頷聯＋頸聯**。
+
+<RegulatedVerse client:visible />
 
 **（三）平仄**
 
@@ -89,13 +93,13 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 「烽火」對「家書」（名詞對名詞），「連」對「抵」（動詞對動詞），「三月」對「萬金」（數詞＋名詞對數詞＋名詞）。
 
-### ③ 詞的特徵
+## 三、詞的特徵
 
 - **詞牌**決定長短句格式（每個詞牌都有固定的句數、字數、平仄）。
 - 詞分「**小令**」（短詞，如〈浣溪沙〉42 字）與「**長調**」（長詞，如〈滿江紅〉93 字）。
 - 宋詞兩大流派：**婉約派**（柳永、李清照，寫兒女情長）與**豪放派**（蘇軾、辛棄疾，寫壯志豪情）。
 
-### ④ 賞析的三個切入點
+## 四、賞析的三個切入點
 
 | 切入點 | 問什麼 | 例 |
 |--------|--------|-----|
@@ -103,7 +107,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **情感** | 作者的心情或態度是什麼？ | 思鄉、悲秋、報國 |
 | **用典** | 有沒有引用典故？典故的意思？ | 辛棄疾詞常引歷史人物 |
 
-### ⑤ 感官摹寫（描寫題的高頻考點）
+## 五、感官摹寫（描寫題的高頻考點）
 
 詩詞常同時調動多種感官。考題愛問「這句寫了**幾種感官**？」把句子裡的字逐一對到下表，數出種類：
 
@@ -119,7 +123,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 >
 > 解法：圈出每個寫景的詞，標上它屬於哪一感官，最後數「不同種類」的數目（同類別重複只算一種）。
 
-### ⑥ 用典（典故）辨識
+## 六、用典（典故）辨識
 
 **用典**＝借歷史人物或前人故事來抒情。考題會給一段詞句，問「典故寫的是誰／指什麼」。
 

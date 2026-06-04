@@ -1,8 +1,8 @@
 ---
-title: 克漏字：先通讀抓主題時態，逐空判詞性與邏輯
+title: 克漏字：通讀抓主題時態、逐空判詞性與邏輯
 subject: english
 tag: 克漏字
-summary: 克漏字不是猜字謎——先讀懂全文再逐空分析，連接詞與詞性是最快的破題線索。
+summary: 克漏字的四步驟解法——通讀抓主題時態、逐空判詞性、連接詞看邏輯、代回驗證，以及文法空格與字彙空格的區別，附詞性線索與空格類型工具。
 audio: >
   克漏字，重點複習。
   克漏字四步：①通讀抓主題時態 ，得到 ②每空判詞性 ，得到 ③連接詞看前後邏輯 ，得到 ④代回驗證。
@@ -20,16 +20,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import PosClues from '@/components/notes/PosClues.svelte'
+import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
 
 <NoteStats tag="克漏字" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+克漏字（Cloze Test）是一段文章挖掉幾個字，每格給四個選項。**每個空格都有線索**，只要知道從哪裡找。本篇拆解四步驟解法。
 
-克漏字（Cloze Test）是一段文章挖掉幾個字，每格給四個選項。**每個空格都有線索**，只要知道從哪裡找。
-
----
-
-**① 通讀全文：先抓主題與時態**
+## 一、通讀全文：先抓主題與時態
 
 不要一上來就看第一個空格！先花 30 秒**通讀全段**（跳過空格也沒關係），確認：
 
@@ -40,9 +38,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 全文用過去式 → 空格多半也填過去式動詞
 - 出現 since、for + 一段時間 → 完成式（has/have + p.p.）
 
----
+## 二、逐空判詞性
 
-**② 逐空判詞性**
+<PosClues client:visible />
 
 每個空格先判斷**需要什麼詞性**：
 
@@ -57,9 +55,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 詞性不對 → 直接刪去，不用考慮語意。
 
----
-
-**③ 連接詞看前後邏輯關係**
+## 三、連接詞看前後邏輯關係
 
 連接詞是克漏字的高頻考點！
 
@@ -74,9 +70,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **判斷邏輯的技巧**：讀連接詞前一句和後一句，如果兩句「意思相反」→ 選轉折詞；「意思延伸」→ 選附加詞；「前面是原因後面是結果」→ 選因果詞。
 
----
+## 四、兩種空格：文法空格 vs. 字彙空格
 
-**④ 兩種空格：文法空格 vs. 字彙空格**
+<ClozeBlankType client:visible />
 
 克漏字選項常見兩種：
 
@@ -87,9 +83,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 看到四個選項長得很像 → 文法空格，先刪詞性錯的；四個是不同的字 → 字彙空格，回到上下文判斷語意。
 
----
-
-**⑤ 填完代回檢查**
+## 五、填完代回檢查
 
 每格填完後，把答案代入句子**完整讀一遍**，確認：
 - 語意是否通順

@@ -1,8 +1,8 @@
 ---
-title: 光譜分析：用 IR、NMR、MS 三招快速辨別結構
+title: 光譜分析：IR、NMR、MS 與 UV-Vis 辨別結構
 subject: chemistry
 tag: 光譜分析
-summary: 看到光譜題不要慌——先認清是 IR、NMR 還是 MS，再套對應的判斷規則，就能快速鎖定答案。
+summary: IR 看官能基、NMR 看氫環境、MS 看分子量、UV-Vis 看共軛與顏色，逐一定義並附互動工具。
 audio: >
   光譜分析，重點複習。
   IR：3300 附近寬峰 ，得到 O–H 或 N–H；1700 附近強峰 ，得到 C等於O。
@@ -26,12 +26,12 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import NmrSplitting from '@/components/notes/NmrSplitting.svelte'
+import ComplementaryColor from '@/components/notes/ComplementaryColor.svelte'
 
 <NoteStats tag="光譜分析" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
-
-光譜題的邏輯是：**給你光譜資料 → 推結構**，或反過來，**給你結構 → 預測光譜**。關鍵是熟悉三種工具各管什麼：
+光譜題的邏輯：給光譜資料推結構、或給結構預測光譜。關鍵是熟悉每種工具各管什麼：
 
 | 光譜工具 | 問的問題 | 核心資訊 |
 |---|---|---|
@@ -44,7 +44,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 ---
 
-### ① IR 紅外光譜
+## 一、IR 紅外光譜
 
 IR 照射分子，不同鍵的振動頻率不同，會在特定波數吸收能量，留下「吸收峰」。
 
@@ -66,7 +66,7 @@ IR 照射分子，不同鍵的振動頻率不同，會在特定波數吸收能�
 
 ---
 
-### ② ¹H NMR 氫核磁共振
+## 二、¹H NMR 氫核磁共振
 
 NMR 偵測**同一個磁場環境下的氫核**。磁場環境不同 → 不同的**化學位移**（chemical shift, δ，單位 ppm）。
 
@@ -97,6 +97,8 @@ NMR 偵測**同一個磁場環境下的氫核**。磁場環境不同 → 不同�
 
 例：乙醇的 CH₃（鄰 CH₂ 有 2 個氫）→ 裂分成**三峰（triplet）**；CH₂（鄰 CH₃ 有 3 個氫）→ 裂分成**四峰（quartet）**。
 
+<NmrSplitting client:visible />
+
 **常見化學位移參考（δ ppm）：**
 
 | 化學位移（δ） | 對應氫環境 |
@@ -111,7 +113,7 @@ NMR 偵測**同一個磁場環境下的氫核**。磁場環境不同 → 不同�
 
 ---
 
-### ③ MS 質譜
+## 三、MS 質譜
 
 質譜儀將分子電離後加速，依 **m/z**（質荷比）分離。
 
@@ -123,11 +125,13 @@ NMR 偵測**同一個磁場環境下的氫核**。磁場環境不同 → 不同�
 
 ---
 
-### ④ UV-Vis 與顏色（互補色是關鍵）
+## 四、UV-Vis 與顏色（互補色是關鍵）
 
 有**共軛系統**（交替雙鍵、染料）的分子會吸收可見光，吸收越往長波長 → 共軛越長。看到「染料顏色 → 排吸收波長」的題，用**互補色**規則：
 
 > **你看到的顏色 ＝ 被吸收顏色的「互補色」**（吸收什麼，剩下的補色就是你看到的）。
+
+<ComplementaryColor client:visible />
 
 | 你看到（呈現）的顏色 | 它吸收的顏色 | 吸收波長 λ |
 |---|---|---|

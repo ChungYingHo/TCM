@@ -1,8 +1,8 @@
 ---
-title: 熱力學：ΔG、ΔH、ΔS 與自發性——一個公式統統搞定
+title: 熱力學：ΔH、ΔS、ΔG 與反應自發性
 subject: chemistry
 tag: 熱力學
-summary: 搞懂 ΔG = ΔH − TΔS 就掌握自發性；再加上赫斯定律算反應熱、生成熱定義，熱力學考題八成都能解。
+summary: 用 ΔG = ΔH − TΔS 判斷反應自發性，加上赫斯定律、標準生成熱算反應熱與第一定律，逐一定義並附互動工具。
 audio: >
   熱力學，重點複習。
   ΔG 等於 ΔH − TΔS：ΔG 小於 0 自發；ΔG 等於 0 平衡；ΔG 大於 0 不自發。
@@ -25,12 +25,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import GibbsSpontaneity from '@/components/notes/GibbsSpontaneity.svelte'
+import EntropySign from '@/components/notes/EntropySign.svelte'
 
 <NoteStats tag="熱力學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+熱力學在問一件事：一個反應會不會「自己發生」（自發）。答案由一個公式決定：ΔG = ΔH − TΔS。先認識三個核心量。
 
-### 三個核心量：ΔH、ΔS、ΔG
+## 一、三個核心量：ΔH、ΔS、ΔG
 
 | 符號 | 名稱 | 代表什麼 | 正值 | 負值 |
 |---|---|---|---|---|
@@ -38,18 +40,22 @@ import Chem from '@/components/notes/Chem.svelte'
 | **ΔS** | 熵變（entropy change） | 系統亂度變化 | 亂度增加 | 亂度減少 |
 | **ΔG** | 吉布斯自由能變化 | 決定自發與否 | 非自發 | **自發（spontaneous）** |
 
----
+## 二、自發性判斷公式
 
-### 自發性判斷公式
+**自發反應（spontaneous）**指不需外力持續推動、就能自己進行的反應。判斷公式：
 
 $$
 \Delta G = \Delta H - T\Delta S
 $$
 
 - $T$ 用絕對溫度（K）。
-- $\Delta G < 0$：反應**自發（spontaneous）**，可自行發生。
+- $\Delta G < 0$：反應**自發**，可自行發生。
 - $\Delta G = 0$：反應達**平衡**。
 - $\Delta G > 0$：反應**非自發**，需要外來能量驅動。
+
+調 ΔH、ΔS、T，看 ΔG 與自發性怎麼變、以及在哪個溫度翻轉：
+
+<GibbsSpontaneity client:visible />
 
 **四種 ΔH/ΔS 組合一覽**：
 
@@ -60,16 +66,18 @@ $$
 | + | + | 高溫時負，低溫時正 | **高溫自發** |
 | + | − | 永遠正 | **永遠不自發** |
 
----
+## 三、熵 ΔS：亂度
 
-### 熵 ΔS 的概念
-
-**熵 = 亂度**。以下情況 ΔS > 0（亂度增加）：
+**熵（entropy）＝系統的亂度**（ΔS 是它的變化量）。以下情況 ΔS > 0（亂度增加）：
 
 - 固 → 液 → 氣（相變，氣體自由度最大）
 - 溶解（晶體 → 溶液中的離子）
 - 反應後氣體莫耳數增加（例：1 mol → 2 mol 氣體）
 - 溫度升高
+
+選反應，用氣體莫耳數變化判斷 ΔS 符號：
+
+<EntropySign client:visible />
 
 **兩個常考的熵公式（觀念題用）**：
 
@@ -80,9 +88,7 @@ $$
 
 > 觀念陷阱：**熵變 ΔS 不能直接拿來算「系統做了多少功」**——功要由能量（ΔE、w）來算，ΔS 只描述亂度。考題常用這句當錯誤選項。
 
----
-
-### 反應熱 ΔH 的計算
+## 四、反應熱 ΔH 的計算
 
 **方法一：赫斯定律（Hess's Law）**
 
@@ -108,9 +114,7 @@ $$
 
 （生成物的生成熱之和）−（反應物的生成熱之和）
 
----
-
-### 熱力學第一定律（能量守恆）
+## 五、熱力學第一定律（能量守恆）
 
 $$
 \Delta E = q + w

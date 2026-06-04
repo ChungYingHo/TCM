@@ -1,8 +1,8 @@
 ---
-title: 氧化還原：氧化數判定、配平半反應，一次搞定
+title: 氧化還原：氧化數、半反應配平與電位比較
 subject: chemistry
 tag: 氧化還原
-summary: 學會 7 條氧化數規則，再用半反應法在酸性或鹼性條件下配平方程式，氧化還原考題不再怕。
+summary: 7 條氧化數規則（含 O、H 特例）、酸性與鹼性下的半反應配平、用標準電位 E° 比較氧化還原劑強弱，逐一定義並附互動工具。
 audio: >
   氧化還原，重點複習。
   氧化 等於 失電子 等於 氧化數升高；還原 等於 得電子 等於 氧化數降低。
@@ -23,12 +23,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import OxNumber from '@/components/notes/OxNumber.svelte'
+import RedoxLadder from '@/components/notes/RedoxLadder.svelte'
 
 <NoteStats tag="氧化還原" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+氧化還原就是電子的轉移。本篇講氧化數怎麼判定、半反應法怎麼配平方程式、以及用標準電位比較氧化還原劑的強弱。
 
-**① 氧化與還原的定義**
+## 一、氧化與還原的定義
 
 | 概念 | 氧化 | 還原 |
 |---|---|---|
@@ -39,7 +41,9 @@ import Chem from '@/components/notes/Chem.svelte'
 **氧化劑**：使別人氧化（自己被還原，氧化數降低）。  
 **還原劑**：使別人還原（自己被氧化，氧化數升高）。
 
-**② 氧化數判定 7 條規則（依優先序）**
+## 二、氧化數判定（7 條規則）
+
+**氧化數（oxidation number）**是假設化合物中的共用電子都歸給電負度較大的原子後，每個原子「帳面上」帶的電荷。判定規則（依優先序）：
 
 | 規則 | 說明 | 例子 |
 |---|---|---|
@@ -60,9 +64,11 @@ import Chem from '@/components/notes/Chem.svelte'
 | 超氧化物 superoxide（KO₂、NaO₂） | **−½** | 整個 O₂⁻ 帶 −1，2 個 O 平分 |
 | 與 F 結合（OF₂） | **+2** | F 更負（規則 3 凌駕規則 4）|
 
-口訣：看到 **O₂ 帶負電的鹽**（O₂²⁻ 過氧、O₂⁻ 超氧）就要警覺氧化數不是 −2。
+口訣：看到 **O₂ 帶負電的鹽**（O₂²⁻ 過氧、O₂⁻ 超氧）就要警覺氧化數不是 −2。動手選化合物練習：
 
-**③ 半反應法配平步驟（酸性）**
+<OxNumber client:visible />
+
+## 三、半反應法配平步驟（酸性）
 
 1. 分為氧化半反應和還原半反應
 2. 用 H₂O 補 O 原子
@@ -71,15 +77,19 @@ import Chem from '@/components/notes/Chem.svelte'
 5. 乘以係數使兩個半反應電子數相同
 6. 相加、消去重複項
 
-**④ 鹼性條件的額外步驟**
+## 四、鹼性條件的額外步驟
 
 配平好酸性方程式後：  
 → 兩側各加等量 OH⁻（抵消 H⁺），使 H⁺ + OH⁻ → H₂O  
 → 化簡重複的 H₂O
 
-**⑤ 用標準還原電位 E° 比較「誰是最強氧化劑／還原劑」**
+## 五、用標準還原電位 E° 比較強弱
 
-考題常給一張半反應 E°（還原方向）表，問誰最強。一招判斷：
+**標準還原電位（E°）**衡量一個半反應「往還原方向（得電子）」的傾向，數值越正、越想得電子。考題常給一張 E° 表問誰最強。動手切換看：
+
+<RedoxLadder client:visible />
+
+一招判斷：
 
 $$
 \text{E° 越大（越正）} \Rightarrow \text{越想搶電子} \Rightarrow \text{越強的氧化劑}
@@ -93,7 +103,7 @@ $$
 - 找「**最強還原劑**」→ 挑 E° **最小（最負）**那條，生成物（右側那個被氧化的還原態）就是答案。
 - 例：Mg²⁺ + 2e⁻ → Mg，E° = −2.37 V 最負 → **Mg 金屬是最強還原劑**。
 
-**⑥ 一個反應「轉移幾個電子」？**
+## 六、一個反應轉移幾個電子
 
 配平後，看氧化半反應與還原半反應乘上的係數後，**任一半反應放出（或得到）的電子總數**即為轉移電子數＝兩半反應電子數的**最小公倍數**。
 

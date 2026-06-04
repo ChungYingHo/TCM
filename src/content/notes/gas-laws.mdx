@@ -1,8 +1,8 @@
 ---
-title: 氣體定律：從 PV=nRT 到分壓、擴散一次搞定
+title: 氣體定律：理想氣體、分壓、擴散與速率分佈
 subject: chemistry
 tag: 氣體
-summary: 把理想氣體、混合氣體分壓、格雷姆擴散這三塊拼成一套解題邏輯——溫度記得換成 K，其餘就是代公式。
+summary: 理想氣體方程式、合併氣體定律、分壓、擴散、亨利定律與速率分佈，逐一定義並附互動工具；關鍵是溫度一定要用 K。
 audio: >
   氣體，重點複習。
   PV 等於 nRT，溫度一定用 K（等於 °C + 273）。
@@ -25,32 +25,32 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import IdealGasLaw from '@/components/notes/IdealGasLaw.svelte'
+import MaxwellBoltzmann from '@/components/notes/MaxwellBoltzmann.svelte'
 
 <NoteStats tag="氣體" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+氣體題幾乎都圍著一條公式 PV=nRT 打轉，再加上分壓、擴散、溶解度等延伸。本篇逐一定義並附互動工具。動手前先記兩個地基。
 
-氣體題的地基只有兩個：**莫耳數 n** 是什麼、**溫度一定要用 K**。
+## 一、兩個地基：莫耳數與溫度
 
-**① 莫耳數 n**
+**莫耳數 n**＝這團氣體有幾莫耳：
 
 $$
 n = \frac{\text{質量 (g)}}{\text{莫耳質量 (g/mol)}}
 $$
 
-例：44 g 的 CO₂（莫耳質量 = 44 g/mol），n = 44 ÷ 44 = **1 mol**。
+例：44 g 的 CO₂（莫耳質量 44 g/mol）→ n = 1 mol。
 
-**② 溫度：°C → K**
+**溫度換成 K（克耳文，絕對溫度，從 −273°C 起算）**：
 
 $$
 T(\text{K}) = T(°\text{C}) + 273
 $$
 
-這是氣體定律中最常失分的地方——題目給 27°C，你要代 300 K，絕對不能直接代 27。
+氣體定律裡的溫度一律用 K。題目給 27°C 就要代 300 K——這是最常失分的地方。
 
----
-
-## 四大定律
+## 二、理想氣體方程式與四大定律
 
 | 定律 | 公式 | 固定什麼 | 說的是什麼 |
 |---|---|---|---|
@@ -59,7 +59,7 @@ $$
 | 給呂薩克定律 | $\dfrac{P_1}{T_1} = \dfrac{P_2}{T_2}$ | $n, V$ | 溫度↑壓力↑ |
 | **合併氣體定律** | $\dfrac{P_1V_1}{T_1} = \dfrac{P_2V_2}{T_2}$ | $n$ | 三個都變時用這個 |
 
-**理想氣體方程式（終極公式）**
+**理想氣體（ideal gas）**是一個理想化的模型：假設氣體分子本身不佔體積、彼此間也沒有作用力（在**低壓、高溫**時最接近真實氣體）。它的壓力、體積、莫耳數、溫度滿足**理想氣體方程式**：
 
 $$
 PV = nRT
@@ -68,8 +68,12 @@ $$
 - $P$：壓力（atm）
 - $V$：體積（L）
 - $n$：莫耳數（mol）
-- $R = 0.082\ \text{L·atm/(mol·K)}$
+- $R = 0.082\ \text{L·atm/(mol·K)}$（氣體常數）
 - $T$：溫度（**K**，一定要是 K！）
+
+選一個要求的量、輸入另外三個，動手算算看：
+
+<IdealGasLaw client:visible />
 
 從 PV = nRT 推導出**氣體密度**公式（常考）：
 
@@ -101,7 +105,7 @@ $$
 
 ## 格雷姆擴散定律
 
-同溫同壓下，氣體擴散（或溢流）速率與莫耳質量的**平方根成反比**：
+同溫同壓下，氣體**擴散**（diffusion，分子自己散開、和別的氣體混合）或**溢流**（effusion，從小孔噴出）的速率，與莫耳質量的**平方根成反比**：
 
 $$
 \frac{r_A}{r_B} = \sqrt{\frac{M_B}{M_A}}
@@ -130,7 +134,9 @@ $$
 
 ## 馬克斯威爾-波茲曼速率分佈
 
-描述一群氣體分子的**速率不是固定值，而是一個分佈**（有的快、有的慢）。把「速率」當橫軸、「分子數比例」當縱軸畫出來：
+描述一群氣體分子的**速率不是固定值，而是一個分佈**（有的快、有的慢）。把「速率」當橫軸、「分子數比例」當縱軸畫出來，拖溫度與分子量看曲線怎麼變：
+
+<MaxwellBoltzmann client:visible />
 
 - **溫度↑** → 曲線變**矮且寬**，整體往右移（分子平均更快、分佈更散）。  
   反過來，溫度↓ → 曲線**高而窄**。

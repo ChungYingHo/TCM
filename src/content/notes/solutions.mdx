@@ -1,8 +1,8 @@
 ---
-title: 溶液濃度與依數性質：沸點升、凝固點降、滲透壓一條線
+title: 溶液濃度與依數性質：沸點、凝固點、滲透壓
 subject: chemistry
 tag: 溶液與依數性質
-summary: 從莫耳濃度、重量莫耳濃度的差異說起，再把沸點升高、凝固點下降、滲透壓三個依數性質串在一起——關鍵是 i 因子。
+summary: 兩種濃度的差別、稀釋定律，到沸點上升、凝固點下降、滲透壓三個依數性質（關鍵是 i 因子），逐一定義並附互動計算。
 audio: >
   溶液與依數性質，重點複習。
   依數性質只看粒子數，用重量莫耳濃度 m（滲透壓除外，用 M）。
@@ -29,12 +29,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Colligative from '@/components/notes/Colligative.svelte'
+import DilutionCalc from '@/components/notes/DilutionCalc.svelte'
 
 <NoteStats tag="溶液與依數性質" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+溶液題圍著兩件事：濃度怎麼算，以及溶質讓溶劑的沸點、凝固點、滲透壓怎麼變（依數性質）。先分清兩種濃度。
 
-### 兩種濃度，千萬別搞混
+## 一、兩種濃度，別搞混
 
 | 名稱 | 符號 | 分母 | 公式 | 單位 | 特性 |
 |---|---|---|---|---|---|
@@ -46,26 +48,23 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 **換算範例**：把 9 g 葡萄糖（M = 180 g/mol）溶在 0.5 kg 水中。  
 $n = 9/180 = 0.05\ \text{mol}$，$m = 0.05/0.5 = \textbf{0.1 mol/kg}$。
 
----
+## 二、稀釋定律 M₁V₁ = M₂V₂
 
-### 稀釋定律 M₁V₁ = M₂V₂
-
-稀釋前後**溶質莫耳數不變**：
+稀釋只是加水，**溶質的莫耳數不變**，所以稀釋前後「濃度 × 體積」相等：
 
 $$
 M_1 V_1 = M_2 V_2
 $$
 
-例：把 100 mL 的 6 M HCl 用水稀釋至 300 mL，$M_2 = 6 \times 100/300 = \textbf{2 M}$。
+<DilutionCalc client:visible />
 
----
+例：把 100 mL 的 6 M HCl 稀釋至 300 mL，$M_2 = 6 \times 100/300 = \textbf{2 M}$。
 
-### 依數性質基礎：只看粒子數，不看種類
+## 三、依數性質與 i 因子
 
-「依數」的意思是「只依賴粒子數（莫耳數），不管溶質是什麼種類」。  
-溶質粒子越多，效果越強——這就是為什麼電解質（會解離）影響更大。
+**依數性質（colligative properties）**指「只依賴溶質**粒子數**（莫耳數）、不管溶質種類」的性質——沸點上升、凝固點下降、滲透壓都是。溶質粒子越多，效果越強。
 
-**i 因子（van't Hoff factor）**：溶質解離後粒子數的倍數。
+這就牽涉**電解質**：溶在水裡會解離成離子的物質叫**電解質**（如 NaCl → Na⁺ + Cl⁻，1 個變 2 個粒子）；不解離的叫**非電解質**（如蔗糖）。解離後粒子數變成幾倍，就叫 **i 因子（van't Hoff factor）**：
 
 | 溶質 | 解離方式 | i（理想值） |
 |---|---|---|
@@ -75,9 +74,11 @@ $$
 | Na₂SO₄ | 2 Na⁺ + SO₄²⁻ | 3 |
 | 弱電解質（如 CH₃COOH） | 部分解離 | 1 < i < 2 |
 
----
+## 四、三大依數性質公式
 
-### 三大依數性質公式
+選溶質、調濃度，看水的沸點與凝固點怎麼移：
+
+<Colligative client:visible />
 
 **① 沸點上升（ΔTb）**
 
@@ -95,19 +96,17 @@ $$
 
 $K_f$ 是溶劑的凝固點下降常數（水：1.86 °C·kg/mol）。溶質讓凝固點（冰點）**降低**。
 
-**③ 滲透壓（π）**
+**③ 滲透壓（π）**：**滲透壓（osmotic pressure）**是為了擋住純溶劑透過半透膜（只讓溶劑通過、不讓溶質通過的膜）滲進溶液，需要施加在溶液上的壓力。
 
 $$
 \pi = MRT \cdot i
 $$
 
-注意：**這裡的 M 用莫耳濃度**（不是 m）；$R = 0.082\ \text{L·atm/(mol·K)}$，$T$ 用 K。
+注意：**這裡用莫耳濃度 M**（不是 m）；$R = 0.082\ \text{L·atm/(mol·K)}$，$T$ 用 K。
 
----
+## 五、蒸氣壓下降（拉午耳定律）
 
-### 蒸氣壓下降（拉午耳定律）
-
-溶液的蒸氣壓比純溶劑**低**：
+**蒸氣壓（vapor pressure）**是液體在密閉容器中與其蒸氣達平衡時、蒸氣施加的壓力（反映液體有多容易蒸發）。加入**非揮發性**（本身不會蒸發）的溶質後，溶液的蒸氣壓比純溶劑**低**：
 
 $$
 P_{\text{溶液}} = \chi_{\text{溶劑}} \times P°_{\text{溶劑}}
@@ -115,9 +114,7 @@ $$
 
 其中 $\chi_{\text{溶劑}}$ 是溶劑的莫耳分率。溶質越多，蒸氣壓越低。
 
----
-
-### 蒸氣壓 vs 溫度：克勞修斯-克拉佩龍
+## 六、蒸氣壓與溫度：克勞修斯-克拉佩龍
 
 純液體的**蒸氣壓會隨溫度升高而變大**，兩者的關係是：
 

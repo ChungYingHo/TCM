@@ -1,8 +1,8 @@
 ---
-title: 化學綜合：跨章、圖像反應與敘述判斷題怎麼打
+title: 化學綜合：綜合題拆解、實驗技術與通則
 subject: chemistry
 tag: 化學綜合
-summary: 這裡收錄跨章節、純圖像的反應/結構題、實驗與有效位數、以及「下列敘述何者正確」型的綜合題——教你怎麼拆解與作答。
+summary: 跨章綜合題、圖像反應/敘述判斷題的拆解策略，加上有效位數、分離純化等實驗通則，附互動工具。
 audio: >
   化學綜合，重點複習。
   看到落在這裡的題，先問自己：「它其實在考哪一個主題？」。
@@ -22,6 +22,8 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import SeparationPicker from '@/components/notes/SeparationPicker.svelte'
+import SigFig from '@/components/notes/SigFig.svelte'
 
 <NoteStats tag="化學綜合" client:load />
 
@@ -47,6 +49,10 @@ HF 腐蝕玻璃要裝塑膠瓶；兩性氧化物（PbO、Al₂O₃）<b>酸鹼�
   "<b>化學史/定義題</b>：純記憶，靠平時累積，不會就果斷猜並標記。"
 ]} />
 
+**有效位數**動手算算看（加減看小數位、乘除看有效位）：
+
+<SigFig client:visible />
+
 ## 高頻實驗技術速查（這一類最常出）
 
 <KeyPoints items={[
@@ -56,6 +62,10 @@ HF 腐蝕玻璃要裝塑膠瓶；兩性氧化物（PbO、Al₂O₃）<b>酸鹼�
   "<b>玻璃容器</b>主成分是 SiO₂，<b>HF 會腐蝕玻璃</b>（HF＋SiO₂→SiF₄），所以 HF 要裝塑膠瓶；HCl/HBr/HI 可裝玻璃。",
   "<b>兩性氧化物/氫氧化物</b>（PbO、Al₂O₃、ZnO、Al(OH)₃…）能溶於<b>強鹼也溶於強酸</b>；想把混在產物裡的 PbO 洗掉、又不溶掉主成分時，用<b>強鹼（KOH/NaOH）</b>把兩性的 PbO 溶走。"
 ]} />
+
+**分離純化**：依「要分開的東西差在哪」選方法：
+
+<SeparationPicker client:visible />
 
 ## 解題方向
 

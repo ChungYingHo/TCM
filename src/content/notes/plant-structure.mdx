@@ -1,8 +1,8 @@
 ---
-title: 植物構造與組織：從表皮到年輪，一次搞懂
+title: 植物構造與組織：組織系統、維管束運輸與次生生長
 subject: biology
 tag: 植物構造與組織
-summary: 三大組織系統、維管束運輸、分生組織與次生生長——把植物解剖學的核心脈絡串起來。
+summary: 三大組織系統與細胞壁、木質部與韌皮部的運輸、分生組織與年輪、根尖分區、單雙子葉差異與氣孔開關，逐一定義並附互動工具。
 audio: >
   植物構造與組織，重點複習。
   木質部運水（上行，死細胞）；韌皮部運糖（雙向，活細胞）。
@@ -26,12 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import XylemPhloem from '@/components/notes/XylemPhloem.svelte'
+import Stomata from '@/components/notes/Stomata.svelte'
 
 <NoteStats tag="植物構造與組織" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+植物體由三大組織系統構成，靠維管束（木質部、韌皮部）運輸水分與養分，靠分生組織不斷長大。本篇從組織分類談起，帶到運輸、生長與氣孔調節。
 
-### 植物體三大組織系統
+## 一、植物體三大組織系統
 
 維管束植物（蕨類、裸子、被子植物）的所有組織，依功能可分成三大系統：
 
@@ -41,7 +43,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **基本組織系統** | 薄壁組織、厚角組織、厚壁組織 | 皮層、髓 | 光合、儲存、支撐 |
 | **維管束組織系統** | 木質部、韌皮部 | 莖/根中央附近 | 水分與養分運輸 |
 
-### 基本組織的三種細胞與「次生細胞壁」
+## 二、基本組織的三種細胞與「次生細胞壁」
 
 基本組織系統由三種細胞組成，差別在**細胞壁**：
 
@@ -58,7 +60,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 易錯：厚「角」組織只是初生壁加厚，**沒有次生壁**；厚「壁」組織才有次生壁。
 
-### 木質部 vs 韌皮部
+## 三、木質部 vs 韌皮部
 
 這是考試最愛考的對比，請用表格記死：
 
@@ -71,7 +73,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 口訣：**木質部運「水往上」，韌皮部運「糖上下」。**
 
-### 分生組織（Meristem）
+<XylemPhloem client:visible />
+
+## 四、分生組織（Meristem）
 
 分生組織是持續保有分裂能力的細胞群，是植物「長大」的關鍵：
 
@@ -81,14 +85,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 側生分生組織（形成層） | 木質部與韌皮部之間 | **次生生長**（加粗） |
 | 居間分生組織 | 禾本科莖節基部 | 節間延伸 |
 
-### 次生生長與年輪
+## 五、次生生長與年輪
 
 - 維管形成層往外生出新韌皮部，往內生出新木質部。
 - 春天生長快 → **早材（春材）**，細胞大、顏色淺。
 - 秋天生長慢 → **晚材（秋材）**，細胞小、顏色深。
 - 每一道**深色環（晚材）+ 淺色環（早材）＝ 一年一輪**，年輪數 = 樹齡。
 
-### 根尖的分區（由尖端往上）
+## 六、根尖的分區（由尖端往上）
 
 考題會問「成熟區緊鄰誰」「根毛在哪」，順序記死：
 
@@ -101,7 +105,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 易錯：成熟區**緊鄰延長區**，不是緊鄰根尖分生組織（中間還隔著延長區）。根毛分布於**成熟區**。
 
-### 單子葉 vs 雙子葉植物
+## 七、單子葉 vs 雙子葉植物
 
 | 比較 | 單子葉（玉米、稻） | 雙子葉（豆、向日葵） |
 |---|---|---|
@@ -113,12 +117,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > 細胞延展方向由**細胞壁中纖維素微纖維（microfibril）的排列**決定（垂直於微纖維方向延長）。
 
-### 氣孔與保衛細胞
+## 八、氣孔與保衛細胞
 
 - 氣孔（stoma）由兩個**腎形保衛細胞**圍成。
 - 保衛細胞吸水膨脹（滲透壓上升）→ 細胞外側壁薄、內側壁厚，膨脹時開口**張開**。
 - 缺水、黑暗、高CO₂→ 保衛細胞失水 → 氣孔**關閉**。
 - 離層酸（ABA）是乾旱時的「關閉訊號」，促進K⁺流出保衛細胞。
+
+<Stomata client:visible />
 
 <Memorize>
 <b>木質部運水（上行，死細胞）；韌皮部運糖（雙向，活細胞）。</b><br />

@@ -1,8 +1,8 @@
 ---
-title: 消化與營養：從口腔到絨毛，一條龍搞懂酵素與吸收
+title: 消化與營養：消化道酵素、三大養分與吸收
 subject: biology
 tag: 消化與營養
-summary: 搞清楚每段消化道的酵素、三大養分怎麼分解再吸收，以及肝臟與胰臟的角色，考題就不怕了。
+summary: 食物處理的四步驟、機械與化學消化、各段消化道的酵素與 pH、三大養分的終產物與吸收路徑，以及肝臟與胰臟的角色，逐一定義並附互動工具。
 audio: >
   消化與營養，重點複習。
   食物處理四步：攝食，得到 消化，得到 吸收，得到 排遺（排遺不等於排泄）。
@@ -26,24 +26,28 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import DigestiveEnzymes from '@/components/notes/DigestiveEnzymes.svelte'
+import NutrientAbsorption from '@/components/notes/NutrientAbsorption.svelte'
 
 <NoteStats tag="消化與營養" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+消化把食物的大分子切成能被吸收的小分子，再由小腸吸收進血液或淋巴。本篇依消化道順序講各段的酵素，再談三大養分的終產物與吸收路徑。
 
-**動物處理食物的四個步驟**（考題愛考這個總框架）
+## 一、食物處理的四個步驟
 
 攝食（ingestion）→ 消化（digestion）→ 吸收（absorption）→ 排遺（elimination）。
 注意：「排遺」是排掉沒消化的食物殘渣（糞便），跟腎臟排掉代謝廢物的「排泄（excretion）」是兩回事。考題若把消化步驟寫成「攝食、消化、吸收、**排泄**」，那是把兩者混淆 → 錯。
 
-**消化分兩種：**
+## 二、機械消化與化學消化
 
 | 類型 | 意思 | 例子 |
 |---|---|---|
 | **機械消化** | 把食物物理性切碎磨細 | 咀嚼、胃的攪拌蠕動 |
 | **化學消化** | 酵素把大分子水解成小分子 | 澱粉 → 麥芽糖 → 葡萄糖 |
 
-**消化道各段重點酵素一覽**
+## 三、消化道各段的酵素
+
+<DigestiveEnzymes client:visible />
 
 | 部位 | 主要酵素 | 作用底物 | 最適 pH |
 |---|---|---|---|
@@ -58,7 +62,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **唾液澱粉酶可分解澱粉，也能分解肝醣（glycogen）**——兩者都是葡萄糖聚合物（α-1,4 鍵），所以同一個酶都吃得動。
 
-**三大養分終產物**
+## 四、三大養分的終產物與吸收
+
+<NutrientAbsorption client:visible />
 
 | 大分子 | 終產物 | 主要吸收位置 |
 |---|---|---|
@@ -66,14 +72,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 蛋白質 | 胺基酸（amino acids） | 小腸絨毛 |
 | 脂質（三酸甘油酯） | 脂肪酸 + 甘油 → 乳糜微粒 | 乳糜管（淋巴） |
 
-**肝臟與胰臟的角色**
+## 五、肝臟與胰臟的角色
 
 | 器官 | 功能 |
 |---|---|
 | **肝臟** | 分泌**膽汁**（儲存於膽囊）→ 乳化脂肪（機械，非酵素）；調節血糖（糖原合成/分解）；代謝毒素 |
 | **胰臟** | 分泌**胰液**（含碳酸氫鈉中和胃酸 + 三大酵素）；胰島分泌胰島素/升糖素 |
 
-**小腸絨毛吸收結構**
+## 六、小腸絨毛與吸收機制
 
 小腸有三層放大構造（絨毛→微絨毛→皺摺），大幅增加吸收表面積。
 - 葡萄糖、胺基酸 → 進入**血液**（門靜脈 → 肝臟）

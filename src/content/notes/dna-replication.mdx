@@ -1,8 +1,8 @@
 ---
-title: DNA 複製與染色體：半保留、岡崎片段，酵素都在這
+title: DNA 複製與染色體：半保留複製、岡崎片段與複製酵素
 subject: biology
 tag: 分子遺傳：DNA複製與染色體
-summary: 從 DNA 雙螺旋結構到複製酵素分工，理清「誰做什麼、在哪個方向做」。
+summary: DNA 雙螺旋與 Chargaff 法則、半保留複製、複製叉的方向性、各複製酵素的分工，以及染色體與核小體結構，逐一定義並附互動工具。
 audio: >
   分子遺傳：DNA複製與染色體，重點複習。
   Chargaff：A等於T、G等於C。
@@ -23,12 +23,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ChargaffCalc from '@/components/notes/ChargaffCalc.svelte'
+import ReplicationFork from '@/components/notes/ReplicationFork.svelte'
 
 <NoteStats tag="分子遺傳：DNA複製與染色體" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+DNA 複製要把一條雙股忠實地變成兩條一模一樣的雙股。本篇從雙螺旋結構與 Chargaff 法則出發，講半保留複製、複製叉的方向性、各酵素的分工，最後到染色體的壓縮方式。
 
-### ① DNA 雙螺旋結構
+## 一、DNA 雙螺旋結構
 
 DNA 是由**兩條多核苷酸鏈**纏繞而成的雙螺旋，重要結構特徵：
 
@@ -41,7 +43,9 @@ DNA 是由**兩條多核苷酸鏈**纏繞而成的雙螺旋，重要結構特徵
 
 **Chargaff 法則口訣：** AT 一對，GC 一對；某股 G 多，另股 C 就多。
 
-### ② 半保留複製
+<ChargaffCalc client:visible />
+
+## 二、半保留複製
 
 Meselson-Stahl 實驗（1958）證明：
 - 複製後，每個子代 DNA 含**一條親代鏈**＋**一條新合成鏈**。
@@ -53,7 +57,7 @@ Meselson-Stahl 實驗（1958）證明：
 | 1 輪 | 2 | 100%（每分子都有 1 條親代鏈） |
 | 2 輪 | 4 | 50%（4 分子中 2 個含親代鏈） |
 
-### ③ 複製叉與方向性
+## 三、複製叉與方向性
 
 - **複製起始點（origin of replication）**：複製由此展開，形成**複製叉**。
 - 原核生物（大腸桿菌）：1 個起始點；真核生物：多個起始點（染色體太長）。
@@ -65,7 +69,9 @@ Meselson-Stahl 實驗（1958）證明：
 | **領先股（leading strand）**| 與複製叉移動方向一致，連續合成 | 一長串連續的新鏈 |
 | **延遲股（lagging strand）**| 與複製叉移動方向相反，不連續合成 | 許多**岡崎片段（Okazaki fragments）** |
 
-### ④ 複製酵素分工表
+<ReplicationFork client:visible />
+
+## 四、複製酵素分工表
 
 | 酵素 | 功能 |
 |---|---|
@@ -77,7 +83,7 @@ Meselson-Stahl 實驗（1958）證明：
 | **連接酶（ligase）** | 連接岡崎片段（磷酸二酯鍵封口） |
 | **拓撲異構酶（topoisomerase）** | 鬆解解旋時前方產生的過度纏繞 |
 
-### ⑤ 染色體與組蛋白
+## 五、染色體與組蛋白
 
 - 真核生物 DNA 纏繞在**組蛋白（histone）**八聚體上，形成**核小體（nucleosome）**。
 - 核小體再進一步纏繞壓縮，最終形成可見的**染色體**。

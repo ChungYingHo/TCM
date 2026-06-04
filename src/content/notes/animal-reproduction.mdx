@@ -1,8 +1,8 @@
 ---
-title: 動物生殖與發育：受精到三胚層，每一步都搞清楚
+title: 動物生殖與發育：配子生成、胚胎發育與三胚層
 subject: biology
 tag: 動物生殖與發育
-summary: 把受精→卵裂→囊胚→原腸化→三胚層的完整路徑，以及各胚層分化去向一次背完，哺乳類胎盤特色順便搞定。
+summary: 精子與卵子的生成、月經週期與懷孕激素、受精到器官形成的五階段、三胚層的分化、哺乳類胎盤與原腸孔去向，逐一定義並附互動工具。
 audio: >
   動物生殖與發育，重點複習。
   三胚層：外，得到 神經表皮；中，得到 肌肉骨骼循環腎；內，得到 消化呼吸道。
@@ -26,12 +26,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import EmbryoStages from '@/components/notes/EmbryoStages.svelte'
+import GermLayers from '@/components/notes/GermLayers.svelte'
 
 <NoteStats tag="動物生殖與發育" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+動物生殖從配子生成開始，受精後經過卵裂、囊胚、原腸化等階段，最後分化成各器官。本篇依序講配子、懷孕激素、胚胎發育與三胚層的分化。
 
-**配子的生成（gametogenesis）——精子 vs 卵子**
+## 一、配子的生成（gametogenesis）——精子 vs 卵子
 
 精子和卵子都從二倍體（2n）的**原始生殖細胞**經減數分裂變成單倍體（n），但時程很不同：
 
@@ -44,7 +46,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 考點：人類卵母細胞**停在減數分裂 II 中期等待受精，精子進入後才完成整個減數分裂**。所以「卵子何時完成完整減數分裂」答案是**受精時（精子進入卵細胞後）**。
 
-**月經週期與懷孕關鍵激素**
+## 二、月經週期與懷孕關鍵激素
 
 | 激素 | 來源 | 作用 |
 |---|---|---|
@@ -55,7 +57,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 考點：懷孕時**抑制子宮收縮、防止早產**的是**黃體素（progesterone）**；雌激素反而會**增加**子宮對催產素的敏感性、促子宮肌生長——若題目說「雌激素降低對催產素敏感性以防早產」就是錯的。
 
-**早期胚胎發育的五大階段**
+## 三、早期胚胎發育的五大階段
+
+<EmbryoStages client:visible />
 
 | 階段 | 名稱 | 發生的事 |
 |---|---|---|
@@ -65,7 +69,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 4 | **原腸化（gastrulation）** | 細胞大規模遷移、內陷，形成**三胚層**及原腸腔（archenteron） |
 | 5 | **器官形成（organogenesis）** | 三胚層各自分化成不同器官、組織 |
 
-**原腸化產生三胚層（germ layers）**
+## 四、原腸化產生三胚層（germ layers）
+
+<GermLayers client:visible />
 
 | 胚層 | 位置 | 分化為… |
 |---|---|---|
@@ -75,7 +81,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 記憶口訣：**外（神經表皮）→ 中（肌骨循環腎）→ 內（消化呼吸）**
 
-**哺乳類胎盤（placenta）**
+## 五、哺乳類胎盤（placenta）
 
 | 特點 | 說明 |
 |---|---|
@@ -84,7 +90,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 特殊 | 胎兒與母體**血液不直接混合**（通過擴散/主動運輸跨越胎盤屏障） |
 | 相較卵生 | 胎生讓胚胎在子宮受保護，不受環境威脅，但母體負擔較大 |
 
-**原腸孔（blastopore）的去向**
+## 六、原腸孔（blastopore）的去向
 
 | 動物類群 | 原腸孔發育為 |
 |---|---|

@@ -1,8 +1,8 @@
 ---
-title: 微生物全覽：病毒、細菌、真菌、原生生物一張表比完
+title: 微生物：病毒、細菌、真菌與原生生物
 subject: biology
 tag: 微生物
-summary: 四大微生物族群的細胞類型、結構特徵、生殖方式全部表格化，溶裂/溶原/反轉錄病毒循環也一次講清楚。
+summary: 病毒、細菌、真菌、原生生物的細胞類型與結構、病毒三種感染循環、革蘭氏染色、細菌與古菌的對照，逐一定義並附互動工具。
 audio: >
   微生物，重點複習。
   病毒：非細胞，DNA 或 RNA 擇一；溶裂 等於 殺死宿主；溶原 等於 潛伏整合；反轉錄 等於 RNA ，得到 DNA（靠反轉錄酶）。
@@ -23,12 +23,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import GramStain from '@/components/notes/GramStain.svelte'
+import ViralCycles from '@/components/notes/ViralCycles.svelte'
 
 <NoteStats tag="微生物" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+微生物涵蓋差異極大的族群：病毒不是細胞，細菌是原核，真菌與原生生物是真核。本篇先把四大族群並排比較，再分別拆解病毒的感染循環、細菌的細胞壁與染色，以及真菌與原生生物的特徵。
 
-### ① 四大族群一覽比較
+## 一、四大族群一覽比較
 
 | 特徵 | 病毒 | 細菌 | 真菌 | 原生生物 |
 |---|---|---|---|---|
@@ -42,7 +44,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### ② 病毒（Virus）
+## 二、病毒（Virus）
 
 **病毒不是細胞**，由蛋白質外殼（**capsid**）+ 核酸組成，可另有脂質外套膜（envelope）。
 
@@ -72,9 +74,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > **記憶點**：一般流程是 DNA → RNA，反轉錄是 **RNA → DNA**，「反」就是倒轉。
 
----
+<ViralCycles client:visible />
 
-### ③ 細菌（Bacteria）
+## 三、細菌（Bacteria）
 
 | 特徵 | 說明 |
 |---|---|
@@ -92,6 +94,8 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **革蘭氏陰性（G−）**，染成**粉紅/紅色** | 薄肽聚糖層＋外膜（含 LPS） | 大腸桿菌、沙門氏菌 |
 
 > LPS（脂多醣）是 G− 菌的內毒素，會引起強烈免疫反應（敗血症）。
+
+<GramStain client:visible />
 
 **藍綠菌（Cyanobacteria）**：細菌域中的光合自營生物，可行固氮（特化細胞：**異細胞 heterocyst**）。
 
@@ -121,7 +125,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### ④ 真菌（Fungi）
+## 四、真菌（Fungi）
 
 | 特徵 | 說明 |
 |---|---|
@@ -136,7 +140,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### ⑤ 原生生物（Protists）
+## 五、原生生物（Protists）
 
 原生生物是個「雜物抽屜」：
 

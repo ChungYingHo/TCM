@@ -1,8 +1,8 @@
 ---
-title: 排泄與滲透調節：腎元四步 × ADH × 含氮廢物，一次搞定
+title: 排泄與滲透調節：腎元、ADH 與含氮廢物
 subject: biology
 tag: 排泄與滲透調節
-summary: 把腎元「過濾→再吸收→分泌→排出」四步驟、ADH 調尿量、三種含氮廢物的邏輯徹底弄清楚。
+summary: 腎元的過濾、再吸收、分泌、排出四步驟、亨耳氏套與髓質滲透梯度、ADH 調尿量、三種含氮廢物、滲透調節與醛固酮，逐一定義並附互動工具。
 audio: >
   排泄與滲透調節，重點複習。
   腎元四步：過濾，得到 再吸收，得到 分泌，得到 排出，葡萄糖幾乎全在近曲小管回收（正常尿液無葡萄糖）。
@@ -25,17 +25,20 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import NephronSteps from '@/components/notes/NephronSteps.svelte'
+import AdhRegulation from '@/components/notes/AdhRegulation.svelte'
 
 <NoteStats tag="排泄與滲透調節" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+排泄把細胞代謝產生的含氮廢物排出體外，並調節體內的水分與電解質。腎臟的功能單位是腎元，本篇從腎元的四個步驟談起，帶到尿液濃縮、ADH 調節與含氮廢物。
 
-**為什麼要排泄？**
-細胞代謝會產生**含氮廢物**（蛋白質分解產生的氨等），這些廢物有毒，必須排出體外。腎臟同時負責調節體內水分與電解質平衡（滲透調節）。
+## 一、為什麼要排泄
 
-**腎元（nephron）是腎臟的功能單位**，一顆腎有約 100 萬個腎元。
+細胞代謝會產生**含氮廢物**（蛋白質分解產生的氨等），這些廢物有毒，必須排出體外。腎臟同時負責調節體內水分與電解質平衡（滲透調節）。**腎元（nephron）是腎臟的功能單位**，一顆腎有約 100 萬個腎元。
 
-**腎元的四大步驟**
+## 二、腎元的四大步驟
+
+<NephronSteps client:visible />
 
 | 步驟 | 發生位置 | 發生了什麼 |
 |---|---|---|
@@ -46,7 +49,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **近曲小管是再吸收主力**：約 65% 的過濾液（含幾乎所有葡萄糖和胺基酸）在此被回收；HCO₃⁻ 也主要在近曲小管再吸收。
 
-**亨耳氏套（loop of Henle）與髓質滲透梯度**
+## 三、亨耳氏套與髓質滲透梯度
 
 亨耳氏套深入腎髓質，建立從皮質到髓質漸增的高滲透壓環境，讓集尿管能「被動」回收水分、濃縮尿液。
 
@@ -57,7 +60,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 考點：**粗升支（thick ascending limb）對水不通透**——它只送鹽出去、不放水，這是建立髓質高滲梯度的關鍵。考題若說「粗上升端的水可被動回收」就是錯的。
 
-**ADH（抗利尿激素）如何調尿量**
+## 四、ADH（抗利尿激素）如何調尿量
+
+<AdhRegulation client:visible />
 
 | 條件 | ADH 分泌 | 集尿管通透性 | 結果 |
 |---|---|---|---|
@@ -66,7 +71,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ADH 由**下視丘製造、腦垂體後葉釋放**，作用標靶為集尿管與遠曲小管的**水通道蛋白（aquaporin）**。
 
-**三種含氮廢物比較**
+## 五、三種含氮廢物比較
 
 | 廢物 | 溶解性 | 毒性 | 耗水量 | 出現動物 |
 |---|---|---|---|---|
@@ -76,7 +81,7 @@ ADH 由**下視丘製造、腦垂體後葉釋放**，作用標靶為集尿管與
 
 記憶口訣：**水多→氨；陸上哺乳→尿素；節水高手→尿酸**
 
-**滲透調節：淡水魚 vs 海水魚 vs 海鳥（鹽腺）**
+## 六、滲透調節：淡水魚、海水魚與鹽腺
 
 | 動物 | 環境挑戰 | 對策 |
 |---|---|---|
@@ -86,7 +91,7 @@ ADH 由**下視丘製造、腦垂體後葉釋放**，作用標靶為集尿管與
 
 考點：**直接喝海水、靠鹽腺排鹽的是海鳥（與海龜、海蛇）等**，不是哺乳類（鯨、海豚、海象靠腎臟濃縮尿液，沒有鹽腺）。
 
-**腎上腺皮質與醛固酮（aldosterone）——和排泄高度相關**
+## 七、腎上腺皮質與醛固酮（aldosterone）
 
 腎上腺皮質分泌**醛固酮**，作用在腎臟**遠曲小管/集尿管**：促進**回收 Na⁺、排出 K⁺**（同時帶回水分、升血壓）。
 

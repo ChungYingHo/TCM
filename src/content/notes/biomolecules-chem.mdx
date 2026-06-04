@@ -1,8 +1,8 @@
 ---
-title: 四大生物有機分子：單體、鍵結、結構一次記清楚
+title: 生物有機分子：醣、脂、蛋白質、核酸的單體與鍵結
 subject: chemistry
 tag: 生物有機分子
-summary: 醣苷鍵、胜肽鍵、酯鍵、磷酸二酯鍵——四大分子怎麼組裝、蛋白質四級結構怎麼區分，考場不再混。
+summary: 四大生物分子的單體與鍵結（醣苷/酯/胜肽/磷酸二酯）、蛋白質四級結構與 DNA 鹼基配對，逐一定義並附互動工具。
 audio: >
   生物有機分子，重點複習。
   四大分子鍵結口訣：醣苷 / 酯 / 胜肽 / 磷酸二酯（醣/脂/蛋/核）。
@@ -26,14 +26,18 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import Biomolecules from '@/components/notes/Biomolecules.svelte'
+import ProteinLevels from '@/components/notes/ProteinLevels.svelte'
 
 <NoteStats tag="生物有機分子" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+生物分子題大多考「這是什麼鍵結」「單體叫什麼」「水解產生什麼」。先把四大類整理清楚。
 
-生物分子題大多考**「這是什麼鍵結」「這個單體叫什麼」「反應會產生什麼」**。先把四大類整理清楚：
+## 一、四大生物分子總覽
 
-### 四大生物分子總覽
+選一類，看單體、鍵結與水解產物：
+
+<Biomolecules client:visible />
 
 | 類別 | 單體（monomer） | 聚合鍵結 | 聚合物例子 | 水解產物 |
 |---|---|---|---|---|
@@ -46,7 +50,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 ---
 
-### ① 醣類
+## 二、醣類
 
 **單醣**：葡萄糖（glucose）、果糖（fructose）、半乳糖（galactose）。分子式 C₆H₁₂O₆。
 
@@ -64,7 +68,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 ---
 
-### ② 脂質
+## 三、脂質
 
 三酸甘油酯（triglyceride）= 甘油（glycerol）的三個 –OH 各與一個脂肪酸形成**酯鍵**：
 
@@ -79,7 +83,7 @@ $$
 
 ---
 
-### ③ 蛋白質：胺基酸與胜肽鍵
+## 四、蛋白質：胺基酸與胜肽鍵
 
 胺基酸的通式：一個碳（α碳）接 –NH₂、–COOH、–H、–R（側鏈）。
 
@@ -102,9 +106,9 @@ n 個胺基酸 → n–1 條胜肽鍵，脫 (n–1) 個水。
 
 > 變性（denaturation）破壞**二、三、四級**結構（非共價鍵斷裂），但**一級**結構（胜肽鍵）不受影響。
 
----
+<ProteinLevels client:visible />
 
-### ④ 核酸：核苷酸與磷酸二酯鍵
+## 五、核酸：核苷酸與磷酸二酯鍵
 
 核苷酸 = 五碳糖 ＋ 含氮鹼基 ＋ 磷酸基。
 

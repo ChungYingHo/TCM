@@ -1,8 +1,8 @@
 ---
-title: 免疫系統：先天防線、抗體大軍、疫苗原理一次搞懂
+title: 免疫系統：先天與後天免疫、抗體與疫苗原理
 subject: biology
 tag: 免疫系統
-summary: 先天 vs. 後天、體液 vs. 細胞免疫、初次 vs. 二次免疫反應——考試愛出的免疫架構全在這。
+summary: 先天與後天免疫、抗原與抗原呈現、體液與細胞免疫、五類抗體、初次與二次免疫反應、過敏與自體免疫，以及 HIV 的病毒特性，逐一定義並附互動工具。
 audio: >
   免疫系統，重點複習。
   先天免疫：快但無記憶；後天免疫：慢但有專一性、有記憶。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ImmuneResponse from '@/components/notes/ImmuneResponse.svelte'
+import AntibodyClasses from '@/components/notes/AntibodyClasses.svelte'
 
 <NoteStats tag="免疫系統" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+免疫系統分兩層：先天免疫快速但無記憶，後天免疫慢但專一且有記憶。本篇從兩道防線談起，帶到抗原呈現、體液與細胞免疫、抗體分類與疫苗原理。
 
-### ① 免疫系統的兩道防線
+## 一、免疫系統的兩道防線
 
 | | 先天免疫（Innate Immunity） | 後天免疫（Adaptive Immunity） |
 |---|---|---|
@@ -45,13 +47,13 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - **巨噬細胞（macrophage）**由血液中的**單核細胞（monocyte）**離開血管、進入組織後分化而成 → 單核細胞是巨噬細胞的**先驅細胞**。
 - 巨噬細胞、嗜中性球（neutrophil）是主要的**吞噬細胞**，屬先天免疫；同時巨噬細胞也能當 APC 連接後天免疫。
 
-### ② 抗原（Antigen）是什麼？
+## 二、抗原（Antigen）是什麼？
 
 - 抗原（Antigen）= 能引發免疫反應的分子（通常是外來蛋白質、多醣或核酸）。
 - 抗原上的特定結構叫**抗原決定位（Epitope）**，是抗體或淋巴細胞辨識的「指紋」。
 - 自身細胞通常不引發免疫（有**自我耐受性 self-tolerance**）；若失控 → 自體免疫疾病。
 
-### ③ 後天免疫兩大分支
+## 三、後天免疫兩大分支
 
 **體液免疫（Humoral Immunity）**——靠抗體：
 
@@ -91,7 +93,7 @@ B 細胞辨識抗原 → 活化
 
 注意：這條「APC + MHC → 活化 T/B 細胞」的**後天免疫**級聯，主角是巨噬細胞、輔助 T 細胞、IL、記憶 B 細胞、胞殺 T 細胞。**發炎反應（inflammation）屬於先天免疫**的非專一性反應，不算在這條特異性級聯裡。
 
-### ④ 抗體（Antibody）結構與功能
+## 四、抗體（Antibody）結構與功能
 
 - 抗體是 Y 形糖蛋白（免疫球蛋白 Immunoglobulin, Ig）。
 - Y 形頂端 = **可變區（Variable region）**，辨識並結合特定抗原。
@@ -109,7 +111,9 @@ B 細胞辨識抗原 → 活化
 
 **做「抗體配功能」題的訣竅**：先把有特徵的四個（IgG 最多/過胎盤、IgM 最早、IgA 分泌液、IgE 過敏）對上，剩下「對不上任何描述」的那個通常就是 **IgD**。
 
-### ⑤ 初次 vs. 二次免疫反應
+<AntibodyClasses client:visible />
+
+## 五、初次 vs. 二次免疫反應
 
 | | 初次反應（Primary response） | 二次反應（Secondary response） |
 |---|---|---|
@@ -121,14 +125,16 @@ B 細胞辨識抗原 → 活化
 
 **疫苗（Vaccine）**的原理：用減毒/死的病原體或抗原片段刺激初次免疫反應 → 產生記憶細胞 → 真正感染時觸發強烈二次反應。
 
-### ⑥ 過敏與自體免疫
+<ImmuneResponse client:visible />
+
+## 六、過敏與自體免疫
 
 | 狀況 | 原因 | 例子 |
 |---|---|---|
 | **過敏（Allergy）** | 對無害抗原（過敏原）產生 IgE 過度反應 → 肥大細胞釋放組織胺 | 花粉症、氣喘 |
 | **自體免疫疾病** | 免疫系統錯誤攻擊自身組織 | 類風濕性關節炎、紅斑性狼瘡、第一型糖尿病 |
 
-### ⑦ 病毒與免疫（HIV 常考其病毒特性）
+## 七、病毒與免疫（HIV 常考其病毒特性）
 
 | 病毒 | 遺傳物質 | 有無套膜（envelope） | 重點 |
 |---|---|---|---|

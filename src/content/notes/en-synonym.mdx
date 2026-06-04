@@ -1,8 +1,8 @@
 ---
-title: 同義反義與字根字首：先想中文再配對，別被語感騙
+title: 同義反義與字根字首：鎖定字、想中文、配對
 subject: english
 tag: 同義反義與字根字首
-summary: closest in meaning / opposite in meaning 題型的破題口訣：鎖定字、想中文、配對、注意反向提示詞。
+summary: closest／opposite in meaning 題型的破題四步、靠句子情境刪題、字根字首推義與考古題高頻同義字，附字根字首與同義字工具。
 audio: >
   同義反義與字根字首，重點複習。
   同義題：先把被問的字「翻成中文」，再去選項（常 A–E 五個）找意思最近的。
@@ -25,10 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import SynonymRoots from '@/components/notes/SynonymRoots.svelte'
+import SynonymQuiz from '@/components/notes/SynonymQuiz.svelte'
 
 <NoteStats tag="同義反義與字根字首" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+同反義題考的是「在句中選意思最接近（或相反）的字」。破題口訣：鎖定字 → 想中文 → 配對，並注意反向提示詞。
+
+## 一、同義與反義兩種問法
 
 這類題有兩種問法：
 
@@ -39,9 +43,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **最常犯的錯**：看到 opposite 還是去選「看起來很像」的字！先確認題目問的方向。
 
----
-
-**實際考法（必看）**
+## 二、實際考法（必看）
 
 後中醫最常見的同義題長這樣：**一整個英文句子，其中一個字被劃線（或粗體）**，要你選「和那個字意思最接近」的選項，**通常有 A–E 五個選項**。例如：
 
@@ -53,9 +55,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 - 被考的不一定是名詞，**動詞、形容詞、副詞都會考**：perpetual（永久的）、significantly（重要地）都考過。
 - **就算完全不認識那個字，也能靠句子情境刪到答案。** 不要因為不認識就放棄。
 
----
+<SynonymQuiz client:visible />
 
-**字根字首快查表（推義用）**
+## 三、字根字首快查表（推義用）
+
+<SynonymRoots client:visible />
 
 | 字首 | 意義 | 常見例字 |
 |---|---|---|
@@ -75,9 +79,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | -mania | 狂熱 | kleptomania |
 | -cracy | 政治體制 | democracy, bureaucracy |
 
----
-
-**從文章中找同義詞的技巧**
+## 四、從文章中找同義詞的技巧
 
 有時題目引用原文某個字（"The word X in line 3 is closest in meaning to…"），這時要：
 

@@ -1,8 +1,8 @@
 ---
-title: 字詞義訓詁：一字多義、古今異義、文言虛詞全攻略
+title: 字詞義訓詁：一字多義、古今異義與文言虛詞
 subject: chinese
 tag: 字詞義訓詁
-summary: 掌握文言常見詞義轉變規律，搭配虛詞用法表，讓你秒解「下列『之』字用法相同的是」這類題目。
+summary: 詞義的四種類型、古今異義、文言虛詞（之乎者也而以）的用法、典故雅稱與一字多義的辨析方法，附虛詞探索與古今異義對照工具。
 audio: >
   字詞義訓詁，重點複習。
   碰到「下列哪個『之』字用法相同」：先判各句中的詞性/功能，再比對。
@@ -22,12 +22,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import FunctionWordExplorer from '@/components/notes/FunctionWordExplorer.svelte'
+import AncientModernMeaning from '@/components/notes/AncientModernMeaning.svelte'
 
 <NoteStats tag="字詞義訓詁" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+訓詁就是解釋字義。文言字詞會因引申、假借或時代而變義，虛詞更是一字多用。本篇整理詞義類型、古今異義、虛詞用法與辨析方法。
 
-### ① 詞義的四種類型
+## 一、詞義的四種類型
 
 訓詁就是「解釋字義」。文言字詞的意義分四類：
 
@@ -38,7 +40,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **假借義** | 借同音字記錄不同意思 | 「莫」本指傍晚，借作否定詞「沒有人」 |
 | **古今異義** | 古代與現代意思不同 | 「走」古指奔跑，今指步行 |
 
-### ② 常見古今異義對照
+## 二、常見古今異義對照
 
 | 字／詞 | 古義 | 今義 |
 |---|---|---|
@@ -51,7 +53,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 感激 | 感動激盪 | 感謝 |
 | 小生 | 年輕讀書人（謙稱） | 戲曲角色 |
 
-### ③ 文言虛詞速查表（最常考六字）
+<AncientModernMeaning client:visible />
+
+## 三、文言虛詞速查表（最常考六字）
 
 | 虛詞 | 主要用法 | 例句簡析 |
 |---|---|---|
@@ -62,7 +66,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **而** | ①並列（且）②遞進（而且、又）③轉折（但是）④修飾（地）⑤承接（然後） | 「人而無信」③轉折；「博學而篤志」②遞進 |
 | **以** | ①介詞（用、拿、憑）②連詞（因為、從而）③動詞（認為） | 「以石投水」①用；「以其境過清」②因為；「我以日始出時去人近」③認為 |
 
-### ④ 典故詞語（雅稱／別稱）釋義
+<FunctionWordExplorer client:visible />
+
+## 四、典故詞語（雅稱／別稱）釋義
 
 考試也會問「下列對詞語的解釋，錯誤的選項是？」，考的是古典文學裡的**雅稱、別稱、借代詞**。這類只能靠背，先記最高頻的：
 
@@ -81,7 +87,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 解法：**逐項把詞語的解釋代回，找出那個「被偷換」的錯誤解釋**（通常把雅稱硬解成字面意思）。
 
-### ⑤ 一字多義辨析法
+## 五、一字多義辨析法
 
 **步驟：把字代回句子，看它在句中扮演什麼角色（名詞/動詞/形容詞），再看語境。**
 

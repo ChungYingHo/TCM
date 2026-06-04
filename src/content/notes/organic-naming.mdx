@@ -1,8 +1,8 @@
 ---
-title: 有機命名與官能基：從官能基認識到 IUPAC 命名全流程
+title: 有機命名與官能基：官能基、IUPAC 命名與不飽和度
 subject: chemistry
 tag: 有機命名與官能基
-summary: 認不出官能基就無法命名——先學辨識，再學命名優先順序和主鏈選取步驟。
+summary: 官能基辨識與優先順序、IUPAC 命名四步驟、不飽和度與胺類鑑別，逐一定義並附互動工具。
 audio: >
   有機命名與官能基，重點複習。
   優先順序：羧酸 大於 酯 大於 醛 大於 酮 大於 醇 大於 胺（由高到低）。
@@ -25,12 +25,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
+import DoUCalc from '@/components/notes/DoUCalc.svelte'
 
 <NoteStats tag="有機命名與官能基" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+有機化合物的命名，第一步是認出官能基。本篇講官能基辨識與優先順序、IUPAC 命名四步驟、以及不飽和度的計算。
 
-### ① 最常考的官能基一覽
+## 一、最常考的官能基一覽
 
 | 官能基 | 結構特徵 | 類別名稱 | 例子 |
 |---|---|---|---|
@@ -46,7 +48,7 @@ import Chem from '@/components/notes/Chem.svelte'
 
 **記憶口訣**：「酸酯醛酮醇，醚胺鹵烴」——大致也是命名優先順序由高到低的方向。
 
-### ② 官能基命名優先順序（IUPAC 2013）
+## 二、官能基命名優先順序
 
 當分子同時含多種官能基，**優先順序高者當「主官能基」**（要加到主鏈末尾的編號端或當字尾）：
 
@@ -54,9 +56,11 @@ $$
 \text{羧酸} > \text{酯} > \text{醛} > \text{酮} > \text{醇} > \text{胺} > \text{烯/炔} > \text{烷}
 $$
 
-次要的官能基改成**字首**（如 oxo-、hydroxy-、amino-）。
+次要的官能基改成**字首**（如 oxo-、hydroxy-、amino-）。動手點階梯看每個官能基的字尾：
 
-### ③ IUPAC 命名四步驟
+<FunctionalGroups client:visible />
+
+## 三、IUPAC 命名四步驟
 
 **Step 1：找最長主鏈（含優先官能基的最長碳鏈）**
 
@@ -83,7 +87,7 @@ $$
 
 字尾例：醇 -ol，醛 -al，酮 -one，羧酸 -oic acid，烯 -ene，炔 -yne。
 
-### ④ 常見取代基名稱（含考古題愛考的支鏈烷基）
+## 四、常見取代基名稱（含支鏈烷基）
 
 | 取代基 | 名稱 | 取代基 | 名稱 |
 |---|---|---|---|
@@ -96,7 +100,7 @@ $$
 
 字母排序小提醒：sec-、tert- 的義大利斜體字首**不計入**字母序（看 b＝butyl）；iso-、neo- **計入**（看 i、n）。
 
-### ⑤ 不飽和度（degree of unsaturation, DoU）
+## 五、不飽和度（degree of unsaturation, DoU）
 
 「不飽和度」= 分子裡有幾個環 + 幾個 π 鍵（每個雙鍵算 1、三鍵算 2、每個環算 1）。公式：
 
@@ -107,7 +111,9 @@ $$
 - C＝碳數、H＝氫數、N＝氮數、X＝鹵素數；**氧（O）不影響、不列入公式**。
 - DoU = 0 → 全是單鍵、無環（飽和）；DoU = 4 常暗示有一個苯環。
 
-### ⑥ 辛士柏試驗（Hinsberg test）
+<DoUCalc client:visible />
+
+## 六、辛士柏試驗（Hinsberg test）
 
 Hinsberg 試驗用苯磺醯氯（PhSO₂Cl）來**區分一級、二級、三級胺**（amine）：
 

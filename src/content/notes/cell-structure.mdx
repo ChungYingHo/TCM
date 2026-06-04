@@ -1,8 +1,8 @@
 ---
-title: 細胞構造與胞器：把細胞當工廠記就對了
+title: 細胞構造與胞器：原核/真核、胞器功能與細胞骨架
 subject: biology
 tag: 細胞構造與胞器
-summary: 原核 vs 真核、各胞器功能、動植物細胞差異——這篇用「工廠部門比喻」讓你一次記清楚，不再搞混。
+summary: 原核 vs 真核的差別、各胞器功能（工廠部門比喻）、動植物細胞差異與細胞骨架，逐一定義並附互動工具。
 audio: >
   細胞構造與胞器，重點複習。
   原核細胞：無核膜、無膜狀胞器（藍綠菌也是原核！固氮靠厚壁的異型細胞）。
@@ -25,12 +25,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Organelle from '@/components/notes/Organelle.svelte'
+import SecretoryPathway from '@/components/notes/SecretoryPathway.svelte'
 
 <NoteStats tag="細胞構造與胞器" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+細胞分原核與真核兩大類，真核細胞裡有各種分工的胞器。本篇用「工廠部門」的比喻認識胞器，再比較動植物細胞與細胞骨架。
 
-### 一、原核細胞 vs 真核細胞——最基本的分法
+## 一、原核細胞 vs 真核細胞
 
 | 特徵 | 原核細胞（Prokaryote） | 真核細胞（Eukaryote） |
 |---|---|---|
@@ -47,9 +49,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 二、真核細胞胞器——工廠部門對照表
+## 二、真核細胞胞器（工廠部門對照）
 
-把細胞想成一間工廠，各胞器就是不同部門：
+把細胞想成一間工廠，各胞器就是不同部門。動手探索：
+
+<Organelle client:visible />
 
 | 胞器（工廠部門） | 構造特點 | 主要功能 |
 |---|---|---|
@@ -67,9 +71,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 > **溶體 vs 過氧化體（都會「解毒」但方式不同）**：溶體用**水解酶**（酸性 pH≈5）消化大分子與老舊胞器；過氧化體用**氧化酶**處理脂肪酸並把有毒的 H₂O₂ 用**過氧化氫酶（catalase）**分解成 H₂O。兩者都參與細胞內有害物質的處理。
 
----
+需要大量分泌蛋白質的細胞，會有特別多的粗糙內質網與高基氏體：
 
-### 三、細胞骨架（Cytoskeleton）——細胞的「鋼筋與軌道」
+<SecretoryPathway client:visible />
+
+## 三、細胞骨架（Cytoskeleton）：鋼筋與軌道
 
 細胞質裡有三種蛋白質纖維，撐起形狀、固定胞器、當運輸軌道：
 
@@ -85,7 +91,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 四、動物細胞 vs 植物細胞差異
+## 四、動物細胞 vs 植物細胞差異
 
 | 構造 | 動物細胞 | 植物細胞 |
 |---|---|---|
@@ -97,7 +103,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 五、粒線體與葉綠體——共生起源
+## 五、粒線體與葉綠體：內共生起源
 
 兩者都有**雙層膜**、自己的環狀 DNA（像細菌）、自己的 70S 核糖體——支持「內共生學說（Endosymbiotic Theory）」：粒線體源自好氧細菌、葉綠體源自藍綠菌，被早期真核細胞吞入後共生至今。
 

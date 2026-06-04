@@ -1,8 +1,8 @@
 ---
-title: 骨骼與肌肉運動：肌絲滑動學說 × 肌節變化 × 三種肌肉，全部打包
+title: 骨骼與肌肉運動：肌絲滑動學說、肌節與三種肌肉
 subject: biology
 tag: 骨骼與肌肉運動
-summary: 從「為什麼肌肉收縮需要 ATP 和鈣離子」出發，搞懂肌節哪裡縮短、三種肌肉有何不同，考題不再背混。
+summary: 肌絲滑動學說與收縮觸發流程、橫橋循環的 ATP 角色、肌節各帶的變化、三種肌肉的比較與拮抗肌，逐一定義並附互動工具。
 audio: >
   骨骼與肌肉運動，重點複習。
   收縮需要 Ca²⁺（觸發）+ ATP（動力＋回收），兩樣缺一不可。
@@ -28,16 +28,20 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Sarcomere from '@/components/notes/Sarcomere.svelte'
+import CrossBridge from '@/components/notes/CrossBridge.svelte'
 
 <NoteStats tag="骨骼與肌肉運動" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+肌肉收縮的核心是肌絲滑動：細肌絲滑入粗肌絲之間，使肌節縮短，而肌絲本身長度不變。本篇從滑動學說與收縮流程談起，帶到橫橋循環、肌節變化與三種肌肉的差異。
 
-**肌絲滑動學說（sliding filament theory）**
+## 一、肌絲滑動學說（sliding filament theory）
 
 骨骼肌收縮時，**肌絲本身長度不變**，而是細肌絲（actin，肌動蛋白）滑入粗肌絲（myosin，肌凝蛋白）之間，使肌節縮短。
 
-**收縮的觸發流程**
+<Sarcomere client:visible />
+
+## 二、收縮的觸發流程
 
 | 步驟 | 發生什麼 |
 |---|---|
@@ -50,7 +54,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 **記住：收縮和舒張都需要 ATP！**（橫橋拉動＋Ca²⁺ 回收各需 ATP）
 
-**橫橋循環的 ATP 細節（考題愛拆步驟）**
+## 三、橫橋循環的 ATP 細節（考題愛拆步驟）
+
+<CrossBridge client:visible />
 
 肌凝蛋白頭（myosin head）位於**粗肌絲**上，頭部有 **ATP 結合端**（不是在細肌絲上！）。一個循環是：
 
@@ -63,7 +69,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 關鍵小結：**ATP 結合 = 鬆手**；**ATP 水解 = 上膛（高能階）**；**釋放 ADP/Pi = 拉動**。沒有新的 ATP 來「鬆手」，頭部就卡死（見屍僵）。
 
-**肌節（sarcomere）各帶的變化**
+## 四、肌節（sarcomere）各帶的變化
 
 | 帶/區 | 組成 | 收縮時 | 舒張時 |
 |---|---|---|---|
@@ -74,7 +80,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 口訣：**收縮時 I 帶和 H 區縮短；A 帶長度不變。**
 
-**三種肌肉比較**
+## 五、三種肌肉比較
 
 | 類型 | 橫紋 | 受意識控制 | 收縮速度 | 位置 |
 |---|---|---|---|---|
@@ -84,14 +90,14 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 心肌特點：有**閏盤（intercalated discs）**，使電訊號在心肌細胞間快速傳遞，心臟才能同步收縮。
 
-**肌肉 ≠ 結締組織（易混淆考點）**
+## 六、肌肉 ≠ 結締組織（易混淆考點）
 
 動物四大基本組織：**上皮、結締、肌肉、神經**（沒有「內分泌組織」這一類）。
 - 骨骼肌、心肌、平滑肌屬於**肌肉組織**，不是結締組織。
 - 真正的**結締組織**：骨頭、軟骨、血液、脂肪組織、肌腱韌帶（共同點＝細胞少、細胞間質多）。
 - 考題常把「骨骼肌」混進結締組織選項，要能一眼挑掉。
 
-**拮抗肌（antagonistic muscles）**
+## 七、拮抗肌（antagonistic muscles）
 
 骨骼肌只能主動收縮、不能主動伸長，所以關節兩側有**成對拮抗肌**：
 - 收縮時一塊縮、對面一塊被動拉長

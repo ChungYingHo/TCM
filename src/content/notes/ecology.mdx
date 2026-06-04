@@ -1,8 +1,8 @@
 ---
-title: 生態學：從個體到生態系，能量、物質、族群、演替一條龍
+title: 生態學：能量流動、物質循環、族群與演替
 subject: biology
 tag: 生態學
-summary: 把生態系層次、能量流動 10% 定律、物質循環、族群 J/S 曲線、種間關係與演替全部打通，考題邏輯就通了。
+summary: 生態系的組織層次、能量流動的百分之十定律、碳氮循環、族群 J／S 成長、種間關係與演替，以及海洋酸化等時事考點，逐一定義並附互動工具。
 audio: >
   生態學，重點複習。
   能量流動：單向、不可逆、需持續輸入、每層僅約 10% 傳遞；物質（碳氮）可循環。
@@ -23,12 +23,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import EnergyPyramid from '@/components/notes/EnergyPyramid.svelte'
+import PopulationGrowth from '@/components/notes/PopulationGrowth.svelte'
 
 <NoteStats tag="生態學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+生態學研究生物與環境的互動。兩條主線要分清楚：能量在食物鏈中單向流失、物質則可循環。本篇從組織層次談起，帶到能量、物質、族群成長、種間關係與演替。
 
-**生態學組織層次（由小到大）**
+## 一、生態學組織層次（由小到大）
 
 | 層次 | 定義 | 舉例 |
 |---|---|---|
@@ -38,7 +40,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | 生態系（ecosystem） | 群落＋非生物環境 | 熱帶雨林、珊瑚礁 |
 | 生物圈（biosphere） | 地球全部生物圈 | — |
 
-**能量流動：單向、逐級遞減**
+## 二、能量流動：單向、逐級遞減
 
 能量在食物鏈中**只能往上傳、不能循環**，每個營養層級只有約 **10%** 的能量傳遞給下一層（其餘 90% 以熱散失或自身呼吸消耗）。
 
@@ -50,7 +52,9 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 意義：食物鏈越長、越難支持頂端捕食者；同等土地面積，草食比肉食能養活更多人口。
 
-**物質循環（可回收）**
+<EnergyPyramid client:visible />
+
+## 三、物質循環（可回收）
 
 與能量不同，**物質（碳、氮、磷等）可在生態系中循環**。
 
@@ -59,7 +63,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 | **碳** | CO₂（大氣）| 光合作用固定，呼吸/分解/燃燒釋回 |
 | **氮** | N₂（大氣 78%）| 固氮菌（根瘤菌）→ NH₄⁺ → NO₃⁻（硝化）→ N₂（去氮化）→ 回大氣 |
 
-**族群成長模型**
+## 四、族群成長模型
 
 | 模型 | 曲線形狀 | 條件 | 特點 |
 |---|---|---|---|
@@ -68,7 +72,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 K 值（carrying capacity）：特定環境能長期支持的最大族群量。當族群接近 K/2 時，成長速率最大。
 
-**兩個成長公式（會算就夠用）**
+### 兩個成長公式（會算就夠用）
 
 $$
 \text{J 型（指數）：} \frac{dN}{dt} = rN
@@ -84,7 +88,9 @@ $$
 - **N = K/2 時 $\frac{dN}{dt}$ 最大**（把 N=K/2 代入，$N(K-N)$ 達最大）。<br />
   快速算每年增量：先看 J 型增量 $rN$，S 型再乘上 $(K-N)/K$ 折扣。
 
-**種間關係一覽**
+<PopulationGrowth client:visible />
+
+## 五、種間關係一覽
 
 | 關係 | 物種 A | 物種 B | 例子 |
 |---|---|---|---|
@@ -94,7 +100,7 @@ $$
 | **片利共生（commensalism）** | + | 0 | 附生蘭花附在樹上（蘭花得益，樹不受影響）|
 | **寄生（parasitism）** | + | − | 蛔蟲寄生人體 |
 
-**演替（succession）**
+## 六、演替（succession）
 
 | 類型 | 起始條件 | 先驅物種 | 例子 |
 |---|---|---|---|
@@ -103,7 +109,7 @@ $$
 
 演替最終達到相對穩定的**頂極群落（climax community）**（如溫帶森林）。
 
-**高頻細節與時事考點**
+## 七、高頻細節與時事考點
 
 | 主題 | 必記重點 |
 |---|---|

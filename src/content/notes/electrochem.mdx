@@ -1,8 +1,8 @@
 ---
-title: 電化學：原電池 vs 電解、Nernst、法拉第一次通透
+title: 電化學：原電池與電解、Nernst 與法拉第
 subject: chemistry
 tag: 電化學
-summary: 搞懂陽極氧化陰極還原，用 E°cell = E°陰 − E°陽 判斷自發，再掌握 Nernst 方程式與法拉第計算，電化學全題型制霸。
+summary: 陽極氧化陰極還原、用 E°cell 與 ΔG° 判自發、Nernst 方程式與法拉第電解計算，逐一定義並附互動工具。
 audio: >
   電化學，重點複習。
   原電池：化學能，得到 電能（自發）；電解池：電能，得到 化學能（非自發）。
@@ -24,12 +24,14 @@ import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Chem from '@/components/notes/Chem.svelte'
+import CellPotential from '@/components/notes/CellPotential.svelte'
+import FaradayCalc from '@/components/notes/FaradayCalc.svelte'
 
 <NoteStats tag="電化學" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+電化學把氧化還原和電能連起來。本篇講原電池（自發發電）與電解池（外加電源）的差異、用 E°cell 判自發、Nernst 方程式與法拉第電解計算。
 
-**① 原電池 vs 電解池：核心差異**
+## 一、原電池 vs 電解池
 
 | 特性 | 原電池（Galvanic Cell） | 電解池（Electrolytic Cell） |
 |---|---|---|
@@ -41,7 +43,11 @@ import Chem from '@/components/notes/Chem.svelte'
 
 **不管哪種**：**陽極一定氧化、陰極一定還原**（OAR CAR：Oxidation At anode, Reduction At Cathode）。
 
-**② 標準電極電位 E° 與電池電位**
+## 二、標準電極電位 E° 與電池電位
+
+選兩個電極，看誰當陰極、E°cell 與 ΔG° 是多少：
+
+<CellPotential client:visible />
 
 $$
 E°_{\text{cell}} = E°_{\text{陰（cathode）}} - E°_{\text{陽（anode）}}
@@ -64,7 +70,7 @@ $$
 E°_{\text{cell}} > 0 \iff \Delta G° < 0 \iff K > 1 \quad(\text{反應自發})
 $$
 
-**常用 E° 標準值（25°C，vs SHE）：**
+**常用 E° 標準值（25°C，相對於標準氫電極 SHE，定為 0 V）：**
 
 | 半反應（還原方向） | E°（V） |
 |---|---|
@@ -78,7 +84,7 @@ $$
 
 E° 越大 → 越容易被還原 → 越強的氧化劑。
 
-**③ Nernst 方程式（非標準條件）**
+## 三、Nernst 方程式（非標準條件）
 
 當溫度或濃度偏離標準狀態時：
 
@@ -94,7 +100,9 @@ $$
 E° = \frac{0.0592}{n}\log K \quad \text{（25°C）}
 $$
 
-**④ 法拉第電解計算**
+## 四、法拉第電解計算
+
+<FaradayCalc client:visible />
 
 $$
 \text{沉積質量} = \frac{I \times t}{n \times F} \times M

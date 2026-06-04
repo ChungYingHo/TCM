@@ -1,8 +1,8 @@
 ---
-title: 酵素：降低活化能的超級催化劑，考點全攻略
+title: 酵素：催化機制、活性因素與抑制
 subject: biology
 tag: 酵素
-summary: 酵素怎麼運作、為什麼有最適溫度與 pH、競爭性 vs 非競爭性抑制差在哪——從零開始，一篇全掌握。
+summary: 酵素降低活化能的機制、溫度/pH/受質對活性的影響、競爭性 vs 非競爭性抑制與核糖酶，逐一定義並附互動工具。
 audio: >
   酵素，重點複習。
   酵素降低活化能，不改變 ΔG 也不改變平衡。
@@ -24,12 +24,14 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import EnzymeActivity from '@/components/notes/EnzymeActivity.svelte'
+import EnzymeInhibition from '@/components/notes/EnzymeInhibition.svelte'
 
 <NoteStats tag="酵素" client:load />
 
-## 觀念速複習（先把忘掉的補回來）
+酵素是生物催化劑：降低活化能、加快反應，但不改變反應的方向與平衡。本篇講它的機制、影響活性的因素，以及兩種抑制。
 
-### 一、什麼是活化能？為什麼需要酵素？
+## 一、什麼是活化能？為什麼需要酵素
 
 化學反應要發生，反應物分子必須先「爬過一座能量高山」，這座山的高度叫做**活化能（activation energy, Ea）**。
 
@@ -39,7 +41,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 二、酵素的基本特性
+## 二、酵素的基本特性
 
 | 特性 | 說明 |
 |---|---|
@@ -51,7 +53,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 三、酵素反應機制：鎖鑰模型 vs 誘導契合模型
+## 三、酵素反應機制：鎖鑰 vs 誘導契合
 
 | 模型 | 說明 |
 |---|---|
@@ -60,7 +62,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 四、影響酵素活性的因素
+## 四、影響酵素活性的因素
+
+切換因素看活性曲線：
+
+<EnzymeActivity client:visible />
 
 #### 溫度
 
@@ -88,9 +94,11 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 五、酵素抑制——競爭性 vs 非競爭性
+## 五、酵素抑制：競爭性 vs 非競爭性
 
-這是最常考的比較題！
+這是最常考的比較題。切換看曲線變化：
+
+<EnzymeInhibition client:visible />
 
 | 特性 | 競爭性抑制（Competitive） | 非競爭性抑制（Non-competitive） |
 |---|---|---|
@@ -104,7 +112,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 六、輔因子與輔酶
+## 六、輔因子與輔酶
 
 - **輔因子（cofactor）**：非蛋白質的小分子，幫助酵素運作。
   - 無機離子：如 Mg²⁺、Zn²⁺、Fe²⁺
@@ -113,7 +121,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 七、不是蛋白質的酵素：核糖酶（ribozyme）
+## 七、不是蛋白質的酵素：核糖酶
 
 絕大多數酵素是蛋白質，但**少數 RNA 也有催化能力**，稱為**核糖酶（ribozyme）**。最重要的例子：
 
@@ -126,7 +134,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-### 八、酵素也是「會做事的工具」：以消化酵素為例
+## 八、酵素失能題：以消化酵素為例
 
 酵素題不一定問機制，也常問「這個酵素壞掉會怎樣」。判斷方法：先想這個酵素**催化什麼反應**，再推它失能後**少了什麼產物**。
 
