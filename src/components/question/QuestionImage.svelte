@@ -5,6 +5,14 @@
   let zoomed = $state(false)
   let actualSize = $state(false) // false = fit-to-screen, true = 1:1 native (scrollable)
 
+  // Question images may be served from a CDN (PUBLIC_IMG_BASE) instead of the
+  // app deploy — e.g. jsDelivr over the public repo, so the ~300MB of images
+  // don't ship with every Vercel build. Empty locally → fall back to /q/.
+  const IMG_BASE = (import.meta.env.PUBLIC_IMG_BASE || '').replace(/\/$/, '')
+  const imgSrc = $derived(
+    question.question_image_url ? IMG_BASE + question.question_image_url : '',
+  )
+
   // Reserve aspect ratio to avoid layout shift (CLS).
   const ratio = $derived(
     question.image_w && question.image_h ? `${question.image_w} / ${question.image_h}` : 'auto',
@@ -26,7 +34,7 @@
   aria-label="放大題目圖片"
 >
   <img
-    src={question.question_image_url}
+    src={imgSrc}
     alt={`${question.subject} 第 ${question.question_number} 題`}
     class="w-full rounded-lg bg-white"
     style={`aspect-ratio: ${ratio}`}
@@ -51,7 +59,7 @@
     </div>
     <div class="flex min-h-full items-start justify-center">
       <img
-        src={question.question_image_url}
+        src={imgSrc}
         alt={`${question.subject} 第 ${question.question_number} 題（放大）`}
         class={`rounded-lg bg-white ${actualSize ? 'max-w-none cursor-zoom-out' : 'max-h-[92vh] max-w-full cursor-zoom-in'}`}
         style={actualSize && question.image_w ? `width:${question.image_w}px` : ''}
