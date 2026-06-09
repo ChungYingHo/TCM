@@ -7,8 +7,6 @@
   import { isChoiceCorrect } from '@/utils/score'
   import { recordWrong, removeWrong, isInWrongBook } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
-  import { primaryTag } from '@/models/taxonomy'
-  import { addNote, notesByQuestion } from '@/utils/notes'
   import { askGemini, buildQuestionPrompt } from '@/utils/askAI'
 
   let {
@@ -52,13 +50,9 @@
   let localSelected = $state<OptionLetter | null>(null)
   let localRevealed = $state(false)
   let inBook = $state(false)
-  let showNote = $state(false)
-  let noteText = $state('')
-  let myNotes = $state<ReturnType<typeof notesByQuestion>>([])
 
   $effect(() => {
     inBook = isInWrongBook(question.id)
-    myNotes = notesByQuestion(question.id)
   })
 
   const shownSelected = $derived(mode === 'exam' ? selected : localSelected)
@@ -91,14 +85,6 @@
   }
 
   function askThis() { void askGemini(buildQuestionPrompt(question)) }
-  function saveNote() {
-    const t = noteText.trim()
-    if (!t) return
-    addNote(primaryTag(question.concept_tags) ?? question.concept_tags[0] ?? '', question.id, t)
-    noteText = ''
-    showNote = false
-    myNotes = notesByQuestion(question.id)
-  }
 </script>
 
 <article class={`card border bg-base-100 transition-shadow ${active ? 'border-primary shadow-md ring-1 ring-primary/40' : 'border-base-300 shadow-sm'}`}>
@@ -133,36 +119,7 @@
         <button type="button" class="btn btn-sm btn-ghost" onclick={askThis} title="複製題目並開 Gemini 詢問">
           ✦ 問 AI
         </button>
-        <button type="button" class={`btn btn-sm btn-ghost ${myNotes.length ? 'text-primary' : ''}`} onclick={() => (showNote = !showNote)}>
-          ✎ 筆記{myNotes.length ? ` (${myNotes.length})` : ''}
-        </button>
       </div>
-
-      {#if showNote}
-        <div class="flex flex-col gap-2" data-no-ai>
-          <textarea
-            bind:value={noteText}
-            rows="2"
-            placeholder="寫一句筆記，會收進這個考點的「我的筆記」…"
-            class="textarea textarea-bordered w-full text-sm"
-          ></textarea>
-          <div class="flex gap-2">
-            <button type="button" class="btn btn-sm btn-primary" onclick={saveNote} disabled={!noteText.trim()}>儲存筆記</button>
-            <button type="button" class="btn btn-sm btn-ghost" onclick={() => { showNote = false; noteText = '' }}>取消</button>
-          </div>
-        </div>
-      {/if}
-
-      {#if myNotes.length}
-        <ul class="flex flex-col gap-1 rounded-lg border border-base-300 bg-base-200/40 p-2.5 text-sm" data-no-ai>
-          {#each myNotes as n (n.id)}
-            <li class="flex items-start gap-1.5">
-              <span aria-hidden="true" class="text-primary">✎</span>
-              <span class="whitespace-pre-wrap">{n.text}</span>
-            </li>
-          {/each}
-        </ul>
-      {/if}
     {/if}
 
     {#if shownRevealed}

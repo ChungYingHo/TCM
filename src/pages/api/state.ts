@@ -6,7 +6,7 @@ export const prerender = false
 
 // Single-user personal tool → one key holds the whole (tiny) state document.
 const KEY = 'tcm:state:v1'
-const EMPTY: SyncState = { wrongbook: {}, progress: {}, notes: [], updatedAt: 0 }
+const EMPTY: SyncState = { wrongbook: {}, progress: {}, updatedAt: 0 }
 
 const cleanStreak = (s: unknown): SyncState['streak'] => {
   if (!s || typeof s !== 'object') return undefined
@@ -38,8 +38,9 @@ export const PUT: APIRoute = async ({ request }) => {
       state = {
         wrongbook: st.wrongbook ?? {},
         progress: st.progress ?? {},
-        notes: Array.isArray(st.notes) ? st.notes : [],
         streak: cleanStreak(st.streak),
+        plan: st.plan && typeof st.plan === 'object' ? st.plan : {},
+        vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
         updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
       }
     }

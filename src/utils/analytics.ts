@@ -112,6 +112,27 @@ export function weaknessClusters(
     .sort((a, b) => b.wrongCount - a.wrongCount || b.questionCount - a.questionCount)
 }
 
+export interface EraCount {
+  era: string
+  count: number
+  pct: number // share of era-determined 國文 questions
+}
+
+/** 國文 questions grouped by detectable era/dynasty (era=null is left out — only the
+ *  determinable subset is reported). Sorted most-tested first → which era to focus on. */
+export function eraDistribution(questions: QuestionRecord[]): EraCount[] {
+  const counts = new Map<string, number>()
+  let determined = 0
+  for (const q of questions) {
+    if (q.subject !== 'chinese' || !q.era) continue
+    counts.set(q.era, (counts.get(q.era) ?? 0) + 1)
+    determined += 1
+  }
+  return [...counts.entries()]
+    .map(([era, count]) => ({ era, count, pct: determined ? Math.round((count / determined) * 100) : 0 }))
+    .sort((a, b) => b.count - a.count)
+}
+
 export interface SubjectCoverage {
   subject: Subject
   totalTags: number

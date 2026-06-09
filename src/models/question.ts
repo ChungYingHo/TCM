@@ -24,6 +24,7 @@ export interface QuestionRecord {
   errata_reason_image_url: string | null
   award_all: boolean
   concept_tags: string[]
+  era?: string | null // 朝代/時代（國文用，例：唐/宋；無法判定為 null）
   explanation: string | null
   needs_review: boolean
   image_w: number

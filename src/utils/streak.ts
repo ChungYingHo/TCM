@@ -1,14 +1,10 @@
 // Daily study streak — consecutive days with at least one answered question.
 // Touched on every recorded attempt; cached in localStorage, synced via cloud.ts.
 import type { Streak } from '@/models/progress'
+import { ymd } from '@/utils/date'
 
 const KEY = 'tcm.streak.v1'
 const EMPTY: Streak = { lastDay: '', count: 0, best: 0 }
-
-function ymd(ts: number): string {
-  const d = new Date(ts)
-  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
-}
 
 export function getStreak(): Streak {
   if (typeof localStorage === 'undefined') return { ...EMPTY }

@@ -7,6 +7,8 @@ const notes = defineCollection({
     title: z.string(),
     subject: z.enum(['chemistry', 'chinese', 'biology', 'english']),
     tag: z.string(), // links to a concept_tag in the question bank
+    kind: z.enum(['note', 'review']).default('note'), // 'review' = 跨考點複習摘要文章
+    covers: z.array(z.string()).default([]), // review digests: concept tags recapped
     summary: z.string().default(''),
     audio: z.string().default(''), // spoken key-points for the TTS player (drive-time review)
     draft: z.boolean().default(false),

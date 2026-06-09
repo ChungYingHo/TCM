@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import type { QuestionRecord, School } from '@/models/question'
 import type { WrongEntry } from '@/models/progress'
 import type { Attempt } from '@/utils/progress'
-import { tagTrends, crossSchoolWeights, weaknessClusters, coverage } from '@/utils/analytics'
+import { tagTrends, crossSchoolWeights, weaknessClusters, coverage, eraDistribution } from '@/utils/analytics'
 
 let n = 0
 function q(p: Partial<QuestionRecord>): QuestionRecord {
@@ -64,6 +64,26 @@ describe('weaknessClusters', () => {
     expect(clusters[0].tag).toBe('光合作用')
     expect(clusters[0].wrongCount).toBe(5)
     expect(clusters[0].questionCount).toBe(2)
+  })
+})
+
+describe('eraDistribution', () => {
+  it('counts 國文 questions by era, most-tested first, ignoring null/non-chinese', () => {
+    const data = [
+      q({ subject: 'chinese', era: '唐' }),
+      q({ subject: 'chinese', era: '唐' }),
+      q({ subject: 'chinese', era: '先秦' }),
+      q({ subject: 'chinese', era: null }), // undetermined — excluded
+      q({ subject: 'biology', era: '唐' }), // wrong subject — excluded
+    ]
+    const dist = eraDistribution(data)
+    expect(dist.map((e) => e.era)).toEqual(['唐', '先秦']) // sorted by count desc
+    expect(dist[0]).toMatchObject({ era: '唐', count: 2, pct: 67 }) // 2 of 3 determined
+    expect(dist[1]).toMatchObject({ era: '先秦', count: 1, pct: 33 })
+  })
+
+  it('returns empty when nothing is determinable', () => {
+    expect(eraDistribution([q({ subject: 'chinese', era: null })])).toEqual([])
   })
 })
 

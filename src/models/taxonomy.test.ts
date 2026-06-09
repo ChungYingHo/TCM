@@ -18,11 +18,12 @@ const DATA_DIR = path.resolve('./src/data')
 const allEntries = SUBJECTS.flatMap((s) => TAXONOMY[s])
 const allTags = allEntries.map((e) => e.tag)
 
-function noteFrontmatter(slug: string): { tag: string; subject: string } {
+function noteFrontmatter(slug: string): { tag: string; subject: string; kind: string } {
   const src = readFileSync(path.join(NOTES_DIR, `${slug}.mdx`), 'utf8')
   const tag = /\btag:\s*(.+)/.exec(src)?.[1].trim() ?? ''
   const subject = /\bsubject:\s*(.+)/.exec(src)?.[1].trim() ?? ''
-  return { tag, subject }
+  const kind = /\bkind:\s*(.+)/.exec(src)?.[1].trim() ?? 'note'
+  return { tag, subject, kind }
 }
 
 describe('taxonomy integrity', () => {
@@ -68,7 +69,11 @@ describe('taxonomy ⇄ concept notes', () => {
   it('has no orphan note files outside the taxonomy', () => {
     const slugs = new Set(allEntries.map((e) => e.slug))
     const files = readdirSync(NOTES_DIR).filter((f) => f.endsWith('.mdx'))
-    for (const f of files) expect(slugs.has(f.replace('.mdx', '')), `orphan note ${f}`).toBe(true)
+    for (const f of files) {
+      const slug = f.replace('.mdx', '')
+      if (noteFrontmatter(slug).kind === 'review') continue // review digests live outside the taxonomy
+      expect(slugs.has(slug), `orphan note ${f}`).toBe(true)
+    }
   })
 })
 
@@ -99,15 +104,17 @@ describe('question data ⇄ taxonomy', () => {
 })
 
 describe('vocab dataset', () => {
-  it('has the expected shape and sane values', () => {
+  it('has the enriched shape and sane values', () => {
     const vocab = JSON.parse(readFileSync(path.join(DATA_DIR, 'vocab.json'), 'utf8'))
     expect(Array.isArray(vocab.words)).toBe(true)
-    expect(vocab.words.length).toBeGreaterThan(50)
+    expect(vocab.words.length).toBeGreaterThan(1000)
     for (const w of vocab.words.slice(0, 30)) {
       expect(typeof w.word).toBe('string')
-      expect(w.count).toBeGreaterThanOrEqual(2)
-      expect(w.correct).toBeLessThanOrEqual(w.count)
-      expect(['medical', 'adjective', 'verb', 'general']).toContain(w.theme)
+      expect(w.id).toBe(w.word) // the word itself is the stable id
+      expect(typeof w.zh).toBe('string')
+      expect(w.zh.length).toBeGreaterThan(0)
+      expect(Array.isArray(w.tags)).toBe(true)
+      expect(w.examCorrect).toBeLessThanOrEqual(w.examCount)
     }
   })
 })

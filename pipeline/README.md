@@ -32,3 +32,51 @@ python -m tcmpipe.build ISU        # 單一學校
 ```json
 { "ISU-107-chemistry-1": { "correct_answer": ["B"], "needs_review": false } }
 ```
+
+---
+
+# 讀書系統資料（單字 / 古文 / 日程 / 時代）
+
+題庫之外，網站的「每日讀書計畫」「單字表」「古文選讀」「時代分析」也吃靜態資料，由下列腳本產生。**LLM 只做非關鍵輔助（例句、白話翻譯、概念標籤），正確答案永不依賴 LLM。**
+
+## 一次性下載（gitignored，不進 repo）
+- **ECDICT**（英中字典，約 66MB，含 GRE/TOEFL 標記＋音標＋中譯）：
+  ```bash
+  mkdir -p pipeline/data
+  python -c "import urllib.request as u; u.urlretrieve('https://raw.githubusercontent.com/skywind3000/ECDICT/master/ecdict.csv','pipeline/data/ecdict.csv')"
+  python -m pip install opencc   # 簡轉繁（s2twp，台灣用詞）
+  ```
+
+## 產生順序
+```bash
+python pipeline/gen_vocab_ecdict.py      # ECDICT → pipeline/out/vocab_base.json（音標/中譯/GRE-TOEFL/後中考過次數）
+python pipeline/gen_vocab_examples.py    # 併例句快取 → src/data/vocab.json（例句缺的可日後補）
+python pipeline/gen_classics.py          # 古文觀止精選 → src/data/classics.json
+python pipeline/gen_era.py               # 國文題加 era 欄（時代分析，需在 build 之後）
+python pipeline/gen_schedule.py          # → src/data/schedule.json（軌道排序＋pace＋每日考題池＋複習文章）
+```
+
+## 例句補齊（3000 字）
+`src/data/vocab.json` 的例句是 LLM 草稿（`draft:true`、UI 標「AI 草稿例句」），存在 `pipeline/data/vocab_examples.json`（已 commit，重排名不會弄丟）。補齊全部：
+```bash
+ANTHROPIC_API_KEY=sk-... python pipeline/gen_vocab_examples.py --fill 3000
+```
+
+## 時代分析（era）
+- `pipeline/data/author_dynasty.json`：作者/名篇 → 朝代對照表（高精準、低召回）。
+- `pipeline/tcmpipe/era.py`：只在命中的作者/篇名「一致指向同一朝代」時才標註，否則 `null`。
+- 改對照表後重跑 `python pipeline/gen_era.py`。
+
+## 日程是「游標 / pace 模型」，不是固定日曆
+`schedule.json` 只存**內容排序＋每日目標＋人性化節奏**；每天實際內容由前端依使用者「實際完成進度（游標）」切片，所以忙/衝刺自動吸收。`rhythm`：每週一輕量日（只複習）、約每 4 週一放空日、考前兩週 taper；pace 以「全強度讀書日」計。
+
+## 看學習情況 ＋ 後續日程調整（給未來任一 session）
+進度背景同步到雲端 KV。任何 session 都能**只讀**撈取學習摘要（免登入 cookie，用站台密碼自驗）：
+```bash
+curl -H "x-tcm-key: $SITE_PASSWORD" https://<site>/api/progress-summary
+```
+回傳：考試倒數、各軌進度與超前/落後、近 14 天活動、弱點考點、答對率、今日內容預覽。
+**要調整後續日程**（例如某科持續落後想加重）：① 撈 summary ② 改 `gen_schedule.py` 的 `PER_DAY`／排序，重跑 `gen_schedule.py` ③ commit + push（Vercel 自動重佈）。因內容是游標驅動，一般步調漂移免重排。
+
+## 複習文章
+`src/content/notes/*.mdx` 中 `kind: review` 的是跨考點複習摘要（`covers` 列涵蓋考點）。`gen_schedule.py` 會掃描並填入 `schedule.json.reviews`，輕量日於每日計畫帶出。

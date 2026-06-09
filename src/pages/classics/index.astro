@@ -1,0 +1,10 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ClassicsList from '@/components/classics/ClassicsList.svelte'
+
+export const prerender = false
+---
+
+<Layout title="古文選讀 · 後中醫題庫">
+  <ClassicsList client:load />
+</Layout>

@@ -1,4 +1,4 @@
-import type { OptionLetter } from '@/models/question'
+import type { OptionLetter, Subject } from '@/models/question'
 
 /** A wrong-answer-book entry, persisted in localStorage. Doubles as the spaced-
  *  repetition card: `due` is when it should next be reviewed, `box` the Leitner level. */
@@ -18,15 +18,6 @@ export interface ExamResult {
   perQuestion: Record<string, boolean> // question id -> correct?
 }
 
-/** A free-text personal note, filed under a concept tag, optionally tied to a question. */
-export interface PersonalNote {
-  id: string
-  tag: string          // concept tag → shows in that note's 我的筆記 section
-  questionId: string   // source question ('' if written elsewhere)
-  text: string
-  ts: number
-}
-
 /** Daily study streak (consecutive active days). */
 export interface Streak {
   lastDay: string // 'YYYY-MM-DD' (local)
@@ -34,12 +25,33 @@ export interface Streak {
   best: number
 }
 
+/** Per-day completion flags for the daily study plan (一格一段). */
+export interface DayPlanState {
+  notes?: Partial<Record<Subject, boolean>> // that day's note per subject -> done
+  quiz?: boolean
+  newVocab?: boolean
+  reviewVocab?: boolean
+  classic?: boolean
+  wrong?: boolean // due wrong-questions reviewed
+  rest?: boolean // user acknowledged a planned light/rest day (keeps the streak alive)
+}
+export type DailyPlanStore = Record<string, DayPlanState> // 'YYYY-MM-DD' -> state
+
+/** Word-level spaced-repetition card (Leitner box + next-due). */
+export interface VocabSrsEntry {
+  box: number // 1 = soonest
+  due: number // epoch ms — next review due
+  ts: number // last graded
+}
+export type VocabSrsStore = Record<string, VocabSrsEntry> // word id -> card
+
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
   wrongbook: Record<string, WrongEntry>
   progress: Record<string, Attempt>
-  notes: PersonalNote[]
   streak?: Streak
+  plan?: DailyPlanStore
+  vocabSrs?: VocabSrsStore
   updatedAt: number
 }
 

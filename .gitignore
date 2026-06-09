@@ -26,5 +26,8 @@ desktop.ini
 # pipeline intermediates (committed outputs are src/data + public/q only)
 pipeline/out/
 pipeline/out_spike/
+
+# large vendored dictionary — download per pipeline/README, never commit (~66MB)
+pipeline/data/ecdict.csv
 pipeline/__pycache__/
 **/__pycache__/

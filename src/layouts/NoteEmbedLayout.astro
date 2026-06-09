@@ -1,15 +1,13 @@
 ---
+// Chrome-less layout for notes rendered inside the daily-plan dialog (iframe,
+// /notes/[slug]?embed=1). No NavBar / SyncBoot / back-link — just the note body,
+// so the interactive MDX islands hydrate normally without a nested app shell.
 import '@/styles/tailwind.css'
-import NavBar from '@/components/common/NavBar.astro'
-import SyncBoot from '@/components/common/SyncBoot.svelte'
-import AskAiSelection from '@/components/common/AskAiSelection.svelte'
-import NoteDialog from '@/components/common/NoteDialog.svelte'
 
 interface Props {
   title?: string
-  gated?: boolean
 }
-const { title = '後中醫考古題', gated = true } = Astro.props
+const { title = '考點筆記' } = Astro.props
 ---
 
 <!doctype html>
@@ -32,26 +30,12 @@ const { title = '後中醫考古題', gated = true } = Astro.props
       crossorigin="anonymous"
     />
     <script is:inline>
-      // 夜讀(暖白低亮)模式記憶 — 預設關閉、維持亮色
-      if (localStorage.getItem('tcm-reading') === 'dim')
-        document.documentElement.dataset.reading = 'dim'
+      if (localStorage.getItem('tcm-reading') === 'dim') document.documentElement.dataset.reading = 'dim'
     </script>
   </head>
-  <body class="min-h-screen bg-base-200 text-base-content">
-    {
-      gated ? (
-        <>
-          <NavBar />
-          <SyncBoot client:load />
-          <AskAiSelection client:load />
-          <NoteDialog client:load />
-          <main class="mx-auto w-full max-w-5xl px-4 py-7 sm:px-6 sm:py-10">
-            <slot />
-          </main>
-        </>
-      ) : (
-        <slot />
-      )
-    }
+  <body class="bg-base-100 text-base-content">
+    <main class="mx-auto w-full max-w-3xl px-4 py-5 sm:px-6">
+      <slot />
+    </main>
   </body>
 </html>

@@ -4,7 +4,7 @@
   import { loadSchool } from '@/utils/dataset'
   import { getAttempts } from '@/utils/progress'
   import { listWrong } from '@/utils/wrongBook'
-  import { tagTrends, crossSchoolWeights, weaknessClusters, coverage } from '@/utils/analytics'
+  import { tagTrends, crossSchoolWeights, weaknessClusters, coverage, eraDistribution } from '@/utils/analytics'
   import Sparkline from '@/components/analytics/Sparkline.svelte'
 
   let subject = $state<Subject>('biology')
@@ -21,6 +21,8 @@
   const byId = $derived(new Map(all.map((q) => [q.id, q])))
 
   const trends = $derived(tagTrends(all, subject).slice(0, 12))
+  const eras = $derived(subject === 'chinese' ? eraDistribution(all) : [])
+  const eraMax = $derived(Math.max(1, ...eras.map((e) => e.count)))
   const cross = $derived(crossSchoolWeights(bySchool, subject).slice(0, 10))
   const weak = $derived(weaknessClusters(byId, listWrong()).slice(0, 8))
   const cover = $derived(coverage(all, getAttempts()))
@@ -60,6 +62,28 @@
       </div>
     </div>
   </section>
+
+  <!-- 1.5 國文時代分析（僅國文）-->
+  {#if subject === 'chinese' && eras.length}
+    <section class="card border border-base-300 bg-base-100">
+      <div class="card-body gap-3 p-4">
+        <h2 class="text-lg font-bold">時代分析 <span class="text-sm font-normal opacity-60">古文出自哪個朝代</span></h2>
+        <p class="text-xs opacity-60">由作者／篇名判定（高精準；部分題無法判定，不計入）。<span class="font-semibold text-accent">出題最多的朝代最該優先準備古文</span>。</p>
+        <div class="flex flex-col gap-2">
+          {#each eras as e (e.era)}
+            <div class="grid grid-cols-[5rem_1fr_4rem] items-center gap-2 text-sm">
+              <span class="font-medium">{e.era}</span>
+              <span class="h-2.5 overflow-hidden rounded-full bg-base-200">
+                <span class="block h-full rounded-full bg-primary" style={`width:${Math.round((e.count / eraMax) * 100)}%`}></span>
+              </span>
+              <span class="text-right text-xs tabular-nums opacity-70">{e.count}（{e.pct}%）</span>
+            </div>
+          {/each}
+        </div>
+        <a href="/classics" class="btn btn-sm btn-primary w-fit">去讀這些朝代的古文 →</a>
+      </div>
+    </section>
+  {/if}
 
   <!-- 2. 跨校比較 -->
   <section class="card border border-base-300 bg-base-100">
