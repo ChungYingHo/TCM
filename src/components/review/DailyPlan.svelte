@@ -4,11 +4,12 @@
   // than desyncing. dayType drives a humane rhythm: a weekly light day reviews only,
   // a rest day just encourages rest — neither breaks the streak.
   import scheduleJson from '@/data/schedule.json'
-  import vocabJson from '@/data/vocab.json'
   import classicsJson from '@/data/classics.json'
+  import { onMount } from 'svelte'
   import type { ScheduleData } from '@/utils/studyPlan'
   import { computeToday } from '@/utils/studyPlan'
   import type { VocabData } from '@/models/vocab'
+  import { loadVocab } from '@/utils/vocabData'
   import type { ClassicsData } from '@/models/classics'
   import { dumpPlan, getDay, setSectionDone, setNoteDone, type Section } from '@/utils/dailyPlan'
   import { learn, dueIds } from '@/utils/vocabSrs'
@@ -24,10 +25,15 @@
   import QuizQuestions from '@/components/review/QuizQuestions.svelte'
 
   const schedule = scheduleJson as unknown as ScheduleData
-  const vocab = vocabJson as unknown as VocabData
   const classics = classicsJson as unknown as ClassicsData
-  const wordById = new Map(vocab.words.map((w) => [w.id, w]))
   const classicById = new Map(classics.classics.map((c) => [c.id, c]))
+
+  // vocab.json is large → fetched lazily; word cards fill in once it arrives
+  let vocab = $state<VocabData | null>(null)
+  const wordById = $derived(new Map((vocab?.words ?? []).map((w) => [w.id, w])))
+  onMount(async () => {
+    vocab = await loadVocab()
+  })
 
   const today = ymd(Date.now())
   let planStore = $state(dumpPlan())
@@ -121,11 +127,15 @@
         {#if paceBadge}<span class={`badge badge-sm font-medium ${paceBadge.cls}`}>{paceBadge.label}</span>{/if}
       </div>
     </div>
-    <p class="text-sm text-base-content/55 tabular-nums">{today}　·　今日進度 {doneCount}/{sections.length}</p>
+    <p class="text-sm text-base-content/55 tabular-nums">{today}{#if vocab}　·　今日進度 {doneCount}/{sections.length}{/if}</p>
     <div class="h-2 overflow-hidden rounded-full bg-base-300">
-      <span class="block h-full rounded-full bg-primary transition-all" style={`width:${Math.round((doneCount / Math.max(sections.length, 1)) * 100)}%`}></span>
+      <span class="block h-full rounded-full bg-primary transition-all" style={`width:${vocab ? Math.round((doneCount / Math.max(sections.length, 1)) * 100) : 0}%`}></span>
     </div>
   </header>
+
+  {#if !vocab}
+    <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
+  {:else}
 
   {#if !plan.inRange}
     <div class="rounded-box border border-base-300 bg-base-100 p-4 text-sm text-base-content/70">
@@ -266,4 +276,5 @@
     </div>
     <DueQuestions />
   </section>
+  {/if}
 </div>

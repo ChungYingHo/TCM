@@ -14,12 +14,12 @@
   import { deriveCursors } from '@/utils/studyCursor'
   import { computeToday, type ScheduleData } from '@/utils/studyPlan'
   import scheduleJson from '@/data/schedule.json'
-  import vocabJson from '@/data/vocab.json'
-  import classicsJson from '@/data/classics.json'
 
   const schedule = scheduleJson as unknown as ScheduleData
-  const vocabTotal = (vocabJson as { count: number }).count
-  const classicsTotal = (classicsJson as { count: number }).count
+  // Totals come from the schedule tracks (length == dataset count), so the home
+  // page never bundles the large vocab.json / classics.json just for a number.
+  const vocabTotal = schedule.tracks.vocab.length
+  const classicsTotal = schedule.tracks.classics.length
 
   let loading = $state(true)
   let due = $state(0)

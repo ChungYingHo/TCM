@@ -1,13 +1,18 @@
 <script lang="ts">
   // 單字表 — browse (search / filter / sort) + flashcard study. Built on the enriched
   // vocab.json (3000 GRE/TOEFL words with phonetic + 中文 + bilingual examples).
-  import vocabJson from '@/data/vocab.json'
   import type { VocabData } from '@/models/vocab'
+  import { loadVocab } from '@/utils/vocabData'
+  import { onMount } from 'svelte'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
 
-  const data = vocabJson as unknown as VocabData
-  const words = data.words
+  // vocab.json is large, so it is fetched lazily (kept out of the main bundle)
+  let data = $state<VocabData | null>(null)
+  const words = $derived(data?.words ?? [])
+  onMount(async () => {
+    data = await loadVocab()
+  })
 
   let tab = $state<'browse' | 'study'>('browse')
   let q = $state('')
@@ -49,10 +54,11 @@
   <header class="flex flex-col gap-1">
     <h1 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">單字表</h1>
     <p class="text-sm text-base-content/55">
-      {data.count} 個 GRE／TOEFL 高頻字，附 KK 音標、中文與例句。標「後中考過」的是三校考古題實際出現過的字，最該優先背。
+      {data?.count ?? '3000+'} 個 GRE／TOEFL 高頻字，附 KK 音標、中文與例句。標「後中考過」的是三校考古題實際出現過的字，最該優先背。
     </p>
   </header>
 
+  {#if data}
   <div role="tablist" class="tabs tabs-boxed w-fit">
     <button role="tab" class="tab" class:tab-active={tab === 'browse'} onclick={() => (tab = 'browse')}>瀏覽</button>
     <button role="tab" class="tab" class:tab-active={tab === 'study'} onclick={() => (tab = 'study')}>練習（翻卡）</button>
@@ -88,5 +94,8 @@
     </div>
   {:else}
     <VocabStudy {words} />
+  {/if}
+  {:else}
+    <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
   {/if}
 </div>
