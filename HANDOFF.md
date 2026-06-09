@@ -68,8 +68,8 @@ python -c "import json; d=json.load(open('src/data/vocab.json',encoding='utf-8')
 ```
 重複 1–4 直到補完。**重排名不會弄丟例句**（cache 以單字為 key）。風格參考已寫的 45 字：句子要讓字義一看就懂，繁中翻譯自然。
 
-### ✅ B. 擴充古文（已 9 → 49 篇；目標 60–80，可續補）
-> **2026-06-10 完成**：新增 40 篇（先秦 12、魏晉南北朝 6、唐 6、宋 7、漢 3、明 3、清 3），補上原本完全缺漏的先秦等高權重時代。原文取公共領域可靠段落、長篇一律以（節錄）截斷以保正確；helper `pipeline/merge_guwen_batch.py`。要衝到 60–80 沿用下法續補即可。
+### ✅ B. 擴充古文（已 9 → 78 篇，達 60–80 目標）
+> **2026-06-10 完成**：共新增 69 篇，現分布 先秦 20、宋 14、魏晉南北朝 14、唐 13、漢 6、清 6、明 5（先秦最多，符合時代權重）。古文軌道每 3 天一篇、約 7 個月期程需約 50–75 篇，78 篇足以整段期程不重複。原文取公共領域可靠段落、長篇一律以（節錄）截斷以保正確；草稿用 helper `pipeline/merge_guwen_batch.py` 併入。元曲/近現代屬韻文與新文學，本古文（散文）選讀刻意未收。
 
 新增到 **`pipeline/data/guwen_seed.json`**（schema 看現有 9 篇：`id/title/author/dynasty/era/source/tags/original/translation/annotation[]`）。`original` 用公共領域原文（權威）、`translation`＋`annotation` 是你寫的草稿（會標 `draft:true`）。**依時代分析權重優先補**：先秦最多（49%），其次唐／魏晉南北朝／宋。`era` 要用這幾個 bucket 之一：`先秦/漢/魏晉南北朝/唐/宋/元/明/清/近現代`。
 ```bash
