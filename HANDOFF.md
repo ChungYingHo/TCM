@@ -44,8 +44,10 @@ npm run build             # production build，應 Complete!
 
 ## 3. 接下來要做的事（依優先序，可直接動工）
 
-### ⭐ A. 補滿單字例句（最高價值，目前 45 / 3215）
-音標與中文是 ECDICT 權威來源；**例句**是 LLM 草稿、目前只填了最常考的 45 字。例句存在 **`pipeline/data/vocab_examples.json`**（已 commit，key = 單字，value = `{example, example_zh}`），合併後寫進 `src/data/vocab.json`，每筆 `draft:true`、UI 顯示「AI 草稿例句」。
+### ✅ A. 補滿單字例句（已完成：3215 / 3215）
+> **2026-06-09 完成**：用「做法二」（環境無可用 API key）分批補完剩餘 3170 字的例句，依詞頻由高到低。每筆 `draft:true`、UI 顯示「AI 草稿例句」。新增可重用 helper **`pipeline/merge_examples_batch.py`**（把手寫的 `{word:{example,example_zh}}` batch 併進 cache，UTF-8、ASCII-only stdout、會驗證空值）。已過 lint＋69 unit tests＋production build。下面做法保留供日後補新字參考。
+
+音標與中文是 ECDICT 權威來源；**例句**是 LLM 草稿。例句存在 **`pipeline/data/vocab_examples.json`**（已 commit，key = 單字，value = `{example, example_zh}`），合併後寫進 `src/data/vocab.json`，每筆 `draft:true`、UI 顯示「AI 草稿例句」。
 
 **做法一（有 API key，最快）：**
 ```bash
@@ -76,8 +78,8 @@ python pipeline/gen_schedule.py      # 古文軌道會更新
 ### B'. 多寫複習文章（目前 2 篇）
 在 `src/content/notes/` 加 `kind: review` 的 MDX（看 `review-chem-atoms.mdx`、`review-cn-words.mdx`）。`covers:` 列出涵蓋的考點 tag。寫完跑 `python pipeline/gen_schedule.py`（會掃進 `schedule.json.reviews`，輕量日自動帶出）。建議每科再補 2–3 篇。
 
-### C.（選用，效能）vocab.json 改 lazy-load
-`src/data/vocab.json`（約 916KB／gzip 199KB）目前靜態 import 進首頁/今日複習/單字頁，是最大 chunk。可改成 runtime `fetch('/data/vocab.json')` 或拆「索引＋詳情」。手機一次性快取尚可接受，但值得優化。
+### C.（建議，效能）vocab.json 改 lazy-load ← 補完例句後優先度提高
+補完 3215 筆例句後 `src/data/vocab.json` 已從 ~916KB 漲到 **~1.16MB／gzip ~355KB**，是最大 chunk，`npm run build` 會出現 >500KB chunk 警告（功能正常，僅初次載入較肥）。目前靜態 import 進首頁/今日複習/單字頁。建議改成 runtime `fetch('/data/vocab.json')` 或拆「索引＋詳情」。手機一次性快取尚可接受，但已值得處理。
 
 ### D.（選用）提高 era 覆蓋率（目前可判定 22%）
 擴充 `pipeline/data/author_dynasty.json`（作者全名／名篇 → 朝代），或對特定題加 `pipeline/overrides/era.json`（若要做覆寫機制需接 `gen_era.py`）。維持「高精準、低召回」原則：只用 ≥2 字的作者/篇名，命中朝代不一致就維持 `null`。改完 `python pipeline/gen_era.py`。
