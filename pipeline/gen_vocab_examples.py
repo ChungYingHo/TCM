@@ -78,9 +78,11 @@ def fill_examples(words: list[dict], cache: dict, limit: int) -> None:
 
 
 def main() -> None:
-    base = load_json(BASE, None)
+    # Prefer the freshly-ranked base; fall back to the shipped vocab.json so examples
+    # can be filled on a clean clone without re-downloading ECDICT.
+    base = load_json(BASE, None) or load_json(OUT, None)
     if not base:
-        sys.exit(f'missing {BASE} — run pipeline/gen_vocab_ecdict.py first')
+        sys.exit(f'missing {BASE} and {OUT} — run pipeline/gen_vocab_ecdict.py first')
     words = base['words']
     cache = load_json(CACHE, {})
 
