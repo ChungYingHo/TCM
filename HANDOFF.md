@@ -68,24 +68,30 @@ python -c "import json; d=json.load(open('src/data/vocab.json',encoding='utf-8')
 ```
 重複 1–4 直到補完。**重排名不會弄丟例句**（cache 以單字為 key）。風格參考已寫的 45 字：句子要讓字義一看就懂，繁中翻譯自然。
 
-### ⭐ B. 擴充古文（目前 9 篇 → 目標 60–80 篇《古文觀止》）
+### ✅ B. 擴充古文（已 9 → 49 篇；目標 60–80，可續補）
+> **2026-06-10 完成**：新增 40 篇（先秦 12、魏晉南北朝 6、唐 6、宋 7、漢 3、明 3、清 3），補上原本完全缺漏的先秦等高權重時代。原文取公共領域可靠段落、長篇一律以（節錄）截斷以保正確；helper `pipeline/merge_guwen_batch.py`。要衝到 60–80 沿用下法續補即可。
+
 新增到 **`pipeline/data/guwen_seed.json`**（schema 看現有 9 篇：`id/title/author/dynasty/era/source/tags/original/translation/annotation[]`）。`original` 用公共領域原文（權威）、`translation`＋`annotation` 是你寫的草稿（會標 `draft:true`）。**依時代分析權重優先補**：先秦最多（49%），其次唐／魏晉南北朝／宋。`era` 要用這幾個 bucket 之一：`先秦/漢/魏晉南北朝/唐/宋/元/明/清/近現代`。
 ```bash
 python pipeline/gen_classics.py      # 重算 examRelevance、輸出 src/data/classics.json
 python pipeline/gen_schedule.py      # 古文軌道會更新
 ```
 
-### B'. 多寫複習文章（目前 2 篇）
+### ✅ B'. 多寫複習文章（已 2 → 11 篇，每科 2–3）
+> **2026-06-10 完成**：化學／生物／國文各 3、英文 2；`covers` 全部對齊 TAXONOMY 考點名稱（已驗證）。要再補沿用下法。
+
 在 `src/content/notes/` 加 `kind: review` 的 MDX（看 `review-chem-atoms.mdx`、`review-cn-words.mdx`）。`covers:` 列出涵蓋的考點 tag。寫完跑 `python pipeline/gen_schedule.py`（會掃進 `schedule.json.reviews`，輕量日自動帶出）。建議每科再補 2–3 篇。
 
-### C.（建議，效能）vocab.json 改 lazy-load ← 補完例句後優先度提高
-補完 3215 筆例句後 `src/data/vocab.json` 已從 ~916KB 漲到 **~1.16MB／gzip ~355KB**，是最大 chunk，`npm run build` 會出現 >500KB chunk 警告（功能正常，僅初次載入較肥）。目前靜態 import 進首頁/今日複習/單字頁。建議改成 runtime `fetch('/data/vocab.json')` 或拆「索引＋詳情」。手機一次性快取尚可接受，但已值得處理。
+### ✅ C.（效能）vocab.json 已改 lazy-load
+> **2026-06-10 完成**：新增受密碼閘保護的 `/api/data/vocab` ＋ `src/utils/vocabData.ts#loadVocab`（模組級 promise 快取）。單字頁、今日複習改 `onMount` 非同步載入＋loading 狀態；首頁改由 `schedule.tracks.{vocab,classics}.length` 取總數（3215／49），完全不抓 vocab。原本 **1,192KB（gzip ~355KB）的 vocab client chunk 消失**、build 不再出現 >500KB 警告；preview 實測 `/`、`/review`、`/vocab` 三頁正常、`/api/data/vocab` 回 200、零 console error。
 
-### D.（選用）提高 era 覆蓋率（目前可判定 22%）
+### ✅ D. 提高 era 覆蓋率（22% → 25%，並新增近現代 bucket）
+> **2026-06-10 完成**：擴充 author_dynasty（含台灣國文常考的近現代作家），國文 era-tagged 368→415；多代比較題由原本誤標單代正確改判 None。要再提高沿用下法。
+
 擴充 `pipeline/data/author_dynasty.json`（作者全名／名篇 → 朝代），或對特定題加 `pipeline/overrides/era.json`（若要做覆寫機制需接 `gen_era.py`）。維持「高精準、低召回」原則：只用 ≥2 字的作者/篇名，命中朝代不一致就維持 `null`。改完 `python pipeline/gen_era.py`。
 
-### E.（建議）跑一次正式審查
-依 `CLAUDE.md` 規範，對這批大改動跑 `/code-review`、UI 用設計 skill 評審。上一手做了 lint＋69 測試＋build＋逐頁實測，但規模大值得再過一輪。
+### ✅ E. 已跑正式審查
+> **2026-06-10**：對 B/B'/C/D 跑 `/code-review`（medium）＋ preview 逐頁實測；lint＋69 unit tests＋production build 全綠。重點確認：C 的 `/api/data/vocab` 受站台密碼閘保護（`isPublicPath`→false，與 `/api/data/[school]` 一致）。後續若要更嚴格，可再跑雲端 `/code-review ultra`（需你手動觸發、計費）。
 
 ---
 
