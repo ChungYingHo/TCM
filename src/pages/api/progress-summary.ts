@@ -116,7 +116,7 @@ export const GET: APIRoute = async ({ request }) => {
 
   return json({
     asOf: today,
-    exam: { date: schedule.examDate, daysLeft: tp.daysToExam },
+    exam: { date: schedule.examDate, daysLeft: tp.daysToExam, window: schedule.examWindow ?? null },
     dayType: tp.dayType,
     taper: tp.taper,
     streak: { count: streak.count, best: streak.best },

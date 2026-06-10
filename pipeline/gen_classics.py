@@ -37,7 +37,8 @@ def main() -> None:
     out = []
     for c in seed:
         title = c['title'].split('（')[0]  # 馬說（雜說四） -> 馬說
-        needles = [n for n in (title, c['author']) if n]
+        author = c['author'].split('（')[0]  # 孔子（語，《禮記》輯錄） -> 孔子
+        needles = [n for n in (title, author) if n]
         hits, tags = [], set()
         for q in qs:
             text = (q.get('question_text') or '') + ' ' + ' '.join(

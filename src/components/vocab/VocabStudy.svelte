@@ -5,7 +5,9 @@
   import { dueIds, grade, learn, getCard } from '@/utils/vocabSrs'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
 
-  let { words }: { words: VocabWord[] } = $props()
+  // `ids` pins the deck to a fixed set (today's due-review words on the daily page);
+  // without it the component self-selects due + fresh words (the /vocab study page).
+  let { words, ids, onfinish }: { words: VocabWord[]; ids?: string[]; onfinish?: () => void } = $props()
   const byId = new Map(words.map((w) => [w.id, w]))
 
   let deck = $state<string[]>([])
@@ -13,10 +15,14 @@
   let flipped = $state(false)
 
   function build() {
-    const due = dueIds().slice(0, 20)
-    const seen = new Set(due)
-    const fresh = words.filter((w) => !getCard(w.id) && !seen.has(w.id)).slice(0, 20).map((w) => w.id)
-    deck = [...due, ...fresh]
+    if (ids) {
+      deck = ids.filter((id) => byId.has(id))
+    } else {
+      const due = dueIds().slice(0, 20)
+      const seen = new Set(due)
+      const fresh = words.filter((w) => !getCard(w.id) && !seen.has(w.id)).slice(0, 20).map((w) => w.id)
+      deck = [...due, ...fresh]
+    }
     i = 0
     flipped = false
   }
@@ -33,6 +39,7 @@
     }
     i += 1
     flipped = false
+    if (i >= deck.length) onfinish?.()
   }
 </script>
 

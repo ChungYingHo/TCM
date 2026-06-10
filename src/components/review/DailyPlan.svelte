@@ -20,6 +20,7 @@
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
+  import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import DueQuestions from '@/components/review/DueQuestions.svelte'
   import QuizQuestions from '@/components/review/QuizQuestions.svelte'
@@ -39,6 +40,7 @@
   let planStore = $state(dumpPlan())
   let reviewIds = $state<string[]>([])
   let showQuiz = $state(false)
+  let showReview = $state(false)
 
   function refresh() {
     planStore = dumpPlan()
@@ -73,7 +75,7 @@
     const out: { key: Section | 'notes'; done: boolean }[] = []
     out.push({ key: 'notes', done: notesDone })
     if (full) out.push({ key: 'quiz', done: !!st.quiz })
-    if (full) out.push({ key: 'newVocab', done: !!st.newVocab })
+    if (full && plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
     if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
     out.push({ key: 'wrong', done: !!st.wrong })
@@ -122,12 +124,13 @@
     <div class="flex flex-wrap items-center justify-between gap-2">
       <h1 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">今日複習</h1>
       <div class="flex flex-wrap items-center gap-1.5">
-        <span class="badge badge-neutral badge-sm font-medium tabular-nums">距考試 {plan.daysToExam} 天</span>
+        <span class="badge badge-neutral badge-sm font-medium tabular-nums" title={schedule.examWindow ?? ''}>距完課 {plan.daysToExam} 天</span>
         {#if dayBadge}<span class={`badge badge-sm font-medium ${dayBadge.cls}`}>{dayBadge.label}</span>{/if}
         {#if paceBadge}<span class={`badge badge-sm font-medium ${paceBadge.cls}`}>{paceBadge.label}</span>{/if}
       </div>
     </div>
     <p class="text-sm text-base-content/55 tabular-nums">{today}{#if vocab}　·　今日進度 {doneCount}/{sections.length}{/if}</p>
+    {#if schedule.examWindow}<p class="text-xs text-base-content/45">完課目標 {schedule.examDate}；{schedule.examWindow}</p>{/if}
     <div class="h-2 overflow-hidden rounded-full bg-base-300">
       <span class="block h-full rounded-full bg-primary transition-all" style={`width:${vocab ? Math.round((doneCount / Math.max(sections.length, 1)) * 100) : 0}%`}></span>
     </div>
@@ -236,7 +239,7 @@
     </section>
   {/if}
 
-  <!-- 4. 複習單字（spaced review, calendar-based）-->
+  <!-- 4. 複習單字（spaced review, calendar-based）— 翻卡作答會回寫間隔重複 -->
   {#if reviewWords.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
@@ -245,11 +248,22 @@
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.reviewVocab} onchange={() => toggleSection('reviewVocab')} />複習完了
         </label>
       </div>
-      <div class="flex flex-wrap gap-1.5">
-        {#each reviewWords as w (w.id)}
-          <span class="rounded-full border border-base-300 bg-base-200/50 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>
-        {/each}
-      </div>
+      {#if showReview}
+        <VocabStudy
+          words={reviewWords}
+          ids={reviewWords.map((w) => w.id)}
+          onfinish={() => { if (!st.reviewVocab) toggleSection('reviewVocab') }}
+        />
+      {:else}
+        <p class="mb-3 text-sm text-base-content/55">翻卡作答——選「認識／不熟」會自動安排下次複習時間。</p>
+        <div class="mb-3 flex flex-wrap gap-1.5">
+          {#each reviewWords.slice(0, 30) as w (w.id)}
+            <span class="rounded-full border border-base-300 bg-base-200/50 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>
+          {/each}
+          {#if reviewWords.length > 30}<span class="px-1 py-1 text-sm text-base-content/50">…還有 {reviewWords.length - 30} 個</span>{/if}
+        </div>
+        <button class="btn btn-primary btn-sm" onclick={() => (showReview = true)}>開始複習（{reviewWords.length} 個）→</button>
+      {/if}
     </section>
   {/if}
 

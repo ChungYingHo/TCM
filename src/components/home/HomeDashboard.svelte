@@ -107,7 +107,7 @@
     </a>
 
     <div class="flex flex-col justify-between gap-1 rounded-box border border-base-300 bg-base-100 p-5 shadow-soft">
-      <p class="text-sm font-medium text-base-content/60">距離考試</p>
+      <p class="text-sm font-medium text-base-content/60">距完課目標</p>
       <p class="text-4xl font-bold tabular-nums">{tp.daysToExam}<span class="ml-1 text-base font-medium text-base-content/50">天</span></p>
       <p class="text-xs text-base-content/45">連續 {streak.count} 天 · 最佳 {streak.best} 天</p>
     </div>

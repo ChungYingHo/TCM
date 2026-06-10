@@ -22,6 +22,8 @@ from tcmpipe import config as C
 
 BASE = os.path.join(C.OUT_DIR, 'vocab_base.json')
 CACHE = os.path.join(C.ROOT, 'pipeline', 'data', 'vocab_examples.json')
+# 釋義補義/修正層（word -> zh）：ECDICT 釋義過窄/過時時的人工覆寫，重產 base 不會丟。
+ZH_OVERRIDES = os.path.join(C.ROOT, 'pipeline', 'data', 'vocab_zh_overrides.json')
 OUT = os.path.join(C.WEB_DATA_DIR, 'vocab.json')
 
 
@@ -91,7 +93,8 @@ def main() -> None:
         fill_examples(words, cache, n)
         cache = load_json(CACHE, {})
 
-    with_ex = 0
+    zh_overrides = load_json(ZH_OVERRIDES, {})
+    with_ex = patched = 0
     for w in words:
         ex = cache.get(w['word'])
         if ex and ex.get('example'):
@@ -99,6 +102,9 @@ def main() -> None:
             w['example_zh'] = ex.get('example_zh', '')
             w['draft'] = True  # LLM-drafted study aid
             with_ex += 1
+        if w['word'] in zh_overrides:
+            w['zh'] = zh_overrides[w['word']]
+            patched += 1
 
     out = {
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -109,7 +115,7 @@ def main() -> None:
     os.makedirs(C.WEB_DATA_DIR, exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
-    print(f'wrote {OUT}: {len(words)} words, {with_ex} with examples '
+    print(f'wrote {OUT}: {len(words)} words, {with_ex} with examples, {patched} zh overrides '
           f'({len(words) - with_ex} pending — run with --fill + API key)')
 
 

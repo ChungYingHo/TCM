@@ -25,10 +25,15 @@ from tcmpipe import config as C
 OUT = os.path.join(C.WEB_DATA_DIR, 'schedule.json')
 TAXONOMY_TS = os.path.join(C.ROOT, 'src', 'models', 'taxonomy.ts')
 
+# EXAM here is the *content-completion target* (finish all new material), not a real
+# exam date — the three schools test separately in 2027/3–4 (see EXAM_WINDOW). The last
+# 14 days before it are the review-only taper; newVocab is sized to finish the whole
+# vocab track on the last full day before that taper begins.
 START = '2026-06-22'
 END = '2027-01-31'
 EXAM = '2027-02-01'
-PER_DAY = {'notesPerSubject': 1, 'quiz': 10, 'newVocab': 16, 'classicEveryNDays': 3, 'reviewVocabMax': 70}
+EXAM_WINDOW = '實際考試 2027/3–4（義守約 3 月底、慈濟 4/10、中國醫約 4 月中下旬）'
+PER_DAY = {'notesPerSubject': 1, 'quiz': 10, 'newVocab': 18, 'reviewVocabMax': 100}
 RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14}
 QUIZ_POOL_CAP = 60  # ids kept per tag — enough to rotate without bloating the file
 
@@ -106,6 +111,7 @@ def main() -> None:
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'range': {'start': START, 'end': END, 'days': days},
         'examDate': EXAM,
+        'examWindow': EXAM_WINDOW,
         'perDay': PER_DAY,
         'rhythm': RHYTHM,
         'tracks': {

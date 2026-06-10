@@ -7,6 +7,14 @@
     "example": "The abandoned clinic stood empty for years.",
     "example_zh": "那間廢棄的診所空置了多年。"
   },
+  "abate": {
+    "example": "The storm finally began to abate, and the winds grew calmer.",
+    "example_zh": "暴風雨終於開始減弱，風勢漸漸平靜下來。"
+  },
+  "aberrant": {
+    "example": "Doctors removed the tumor caused by the aberrant growth of cells.",
+    "example_zh": "醫師切除了由細胞異常增生所造成的腫瘤。"
+  },
   "ability": {
     "example": "Years of training gave her the ability to diagnose rare diseases.",
     "example_zh": "多年的訓練讓她具備診斷罕見疾病的能力。"
@@ -95,6 +103,10 @@
     "example": "A nurse will accompany you to the scan.",
     "example_zh": "一名護理師會陪你去做掃描。"
   },
+  "accomplice": {
+    "example": "The thief was caught, but his accomplice managed to escape.",
+    "example_zh": "竊賊被抓到了，但他的共犯卻成功逃脫。"
+  },
   "accomplish": {
     "example": "He accomplished his goal of walking unaided.",
     "example_zh": "他達成了不靠協助行走的目標。"
@@ -122,6 +134,10 @@
   "accounting": {
     "example": "The clinic keeps careful accounting of its costs.",
     "example_zh": "這間診所仔細記帳，控管費用。"
+  },
+  "accredit": {
+    "example": "Only hospitals that meet strict standards are accredited by the board.",
+    "example_zh": "只有符合嚴格標準的醫院才會獲得委員會的認證。"
   },
   "accumulate": {
     "example": "Fluid began to accumulate in his lungs.",
@@ -227,6 +243,10 @@
     "example": "The doctor ordered an additional blood test.",
     "example_zh": "醫生加開了一項血液檢查。"
   },
+  "additive": {
+    "example": "Many processed foods contain artificial additives to extend their shelf life.",
+    "example_zh": "許多加工食品含有人工添加物，以延長保存期限。"
+  },
   "address": {
     "example": "The doctor addressed her fears one by one.",
     "example_zh": "醫生逐一回應了她的擔憂。"
@@ -234,6 +254,10 @@
   "adequate": {
     "example": "The clinic had adequate supplies for the winter.",
     "example_zh": "這間診所有足夠的物資撐過冬天。"
+  },
+  "adjacent": {
+    "example": "The recovery ward is adjacent to the operating room for quick access.",
+    "example_zh": "恢復病房緊鄰手術室，方便快速進出。"
   },
   "adjust": {
     "example": "The doctor adjusted the dose to suit her weight.",
@@ -351,9 +375,17 @@
     "example": "The clinic has an affiliation with the city hospital.",
     "example_zh": "這間診所與市立醫院有合作關係。"
   },
+  "affinity": {
+    "example": "Hemoglobin has a strong affinity for oxygen, allowing it to carry it in blood.",
+    "example_zh": "血紅素對氧氣有很強的親和力，因此能在血液中攜帶氧氣。"
+  },
   "affirm": {
     "example": "The test affirmed that she was healthy.",
     "example_zh": "這項檢查確認了她很健康。"
+  },
+  "afflict": {
+    "example": "A rare disease afflicts thousands of children around the world each year.",
+    "example_zh": "一種罕見疾病每年折磨著全球數以千計的兒童。"
   },
   "affluent": {
     "example": "She grew up in an affluent neighborhood where every house had a pool.",
@@ -370,6 +402,10 @@
   "aftermath": {
     "example": "In the aftermath of the crash, medics rushed in.",
     "example_zh": "車禍發生後，醫護人員立刻趕到。"
+  },
+  "afterthought": {
+    "example": "The safety features seemed like an afterthought rather than a priority.",
+    "example_zh": "那些安全措施看起來像是事後才補上的，而非首要考量。"
   },
   "age": {
     "example": "The risk of the disease rises with age.",
@@ -394,6 +430,10 @@
   "aggrieved": {
     "example": "The aggrieved family demanded a full investigation.",
     "example_zh": "受委屈的家屬要求徹底調查。"
+  },
+  "agoraphobia": {
+    "example": "Her agoraphobia was so severe that she rarely left her apartment.",
+    "example_zh": "她的廣場恐懼症嚴重到幾乎不敢踏出自己的公寓。"
   },
   "agriculture": {
     "example": "Many of his patients work in agriculture.",
@@ -471,9 +511,17 @@
     "example": "Stress can alter the way the heart beats.",
     "example_zh": "壓力會改變心臟跳動的方式。"
   },
+  "alternate": {
+    "example": "Patients should alternate hot and cold compresses to reduce swelling.",
+    "example_zh": "病人應交替使用熱敷和冷敷以減輕腫脹。"
+  },
   "alternative": {
     "example": "When surgery failed, they looked for an alternative treatment.",
     "example_zh": "手術失敗後，他們尋求替代療法。"
+  },
+  "altitude": {
+    "example": "At high altitude, the thin air can leave climbers short of breath.",
+    "example_zh": "在高海拔處，稀薄的空氣會讓登山者呼吸困難。"
   },
   "aluminum": {
     "example": "The pills come in a sealed aluminum strip.",
@@ -491,6 +539,14 @@
     "example": "Her recovery was nothing short of amazing.",
     "example_zh": "她的康復簡直令人驚嘆。"
   },
+  "ambient": {
+    "example": "The ambient temperature in the lab must be kept constant for the experiment.",
+    "example_zh": "實驗室的周遭環境溫度必須維持恆定，以利實驗進行。"
+  },
+  "ambiguity": {
+    "example": "The vague diagnosis left a lot of ambiguity about the next steps.",
+    "example_zh": "模糊的診斷讓後續步驟充滿了不確定性。"
+  },
   "ambition": {
     "example": "Her ambition was to open a rural hospital.",
     "example_zh": "她的志向是開一家鄉村醫院。"
@@ -507,6 +563,10 @@
     "example": "The nurse stayed calm amid the chaos.",
     "example_zh": "在一片混亂中，護理師保持鎮定。"
   },
+  "amnesty": {
+    "example": "The new government granted amnesty to all political prisoners.",
+    "example_zh": "新政府對所有政治犯實施了大赦。"
+  },
   "amount": {
     "example": "Even a small amount of the drug can be dangerous.",
     "example_zh": "即使少量這種藥也可能危險。"
@@ -514,6 +574,10 @@
   "ample": {
     "example": "There was ample time to prepare for the surgery.",
     "example_zh": "有充裕的時間為手術做準備。"
+  },
+  "amputation": {
+    "example": "Severe diabetes can lead to amputation of the toes or even the foot.",
+    "example_zh": "嚴重的糖尿病可能導致腳趾甚至整隻腳的截肢。"
   },
   "analogy": {
     "example": "The doctor used an analogy to explain the heart.",
@@ -538,6 +602,14 @@
   "anchor": {
     "example": "Hope was the anchor that kept her calm.",
     "example_zh": "希望是讓她保持平靜的支柱。"
+  },
+  "anecdotal": {
+    "example": "Anecdotal evidence is interesting, but it cannot replace rigorous clinical trials.",
+    "example_zh": "個別軼事性的證據雖有趣，卻無法取代嚴謹的臨床試驗。"
+  },
+  "anesthetic": {
+    "example": "The dentist applied a local anesthetic before drilling the tooth.",
+    "example_zh": "牙醫在鑽牙之前先施打了局部麻醉劑。"
   },
   "angle": {
     "example": "The X-ray was taken from a different angle.",
@@ -615,9 +687,17 @@
     "example": "Symptoms may not appear until weeks after infection.",
     "example_zh": "症狀可能在感染數週後才出現。"
   },
+  "appendage": {
+    "example": "A crab uses its claws and other appendages to capture prey.",
+    "example_zh": "螃蟹用牠的螯和其他附肢來捕捉獵物。"
+  },
   "appetite": {
     "example": "Her appetite returned as she got better.",
     "example_zh": "隨著她好轉，她的食慾也回來了。"
+  },
+  "appetizer": {
+    "example": "We ordered a light appetizer to share before the main course arrived.",
+    "example_zh": "在主菜上桌前，我們點了一道清爽的開胃菜一起分享。"
   },
   "applaud": {
     "example": "The crowd applauded the brave young patient.",
@@ -651,6 +731,10 @@
     "example": "She missed her appointment because of the storm.",
     "example_zh": "因為暴風雨，她錯過了預約。"
   },
+  "appraise": {
+    "example": "The expert was hired to appraise the value of the antique painting.",
+    "example_zh": "這位專家受聘來鑑定那幅古董畫作的價值。"
+  },
   "appreciate": {
     "example": "Patients appreciate a doctor who listens carefully.",
     "example_zh": "病人欣賞會仔細傾聽的醫生。"
@@ -659,6 +743,10 @@
     "example": "She wrote a card to show her appreciation to the nurses.",
     "example_zh": "她寫了張卡片，向護理師們表達感激。"
   },
+  "apprehension": {
+    "example": "She waited for her test results with growing apprehension.",
+    "example_zh": "她懷著愈來愈強的憂懼，等待著檢驗結果。"
+  },
   "approach": {
     "example": "The doctor took a gentle approach with the frightened child.",
     "example_zh": "醫生對受驚的孩子採取溫和的方式。"
@@ -666,6 +754,10 @@
   "appropriate": {
     "example": "The doctor chose an appropriate dose for her age.",
     "example_zh": "醫生為她的年齡選了適當的劑量。"
+  },
+  "appropriation": {
+    "example": "Congress approved a large appropriation for medical research this year.",
+    "example_zh": "國會今年批准了一大筆用於醫學研究的撥款。"
   },
   "approval": {
     "example": "The drug is still waiting for government approval.",
@@ -687,6 +779,10 @@
     "example": "The arch of her foot ached after standing all day.",
     "example_zh": "站了一整天後，她的足弓痠痛。"
   },
+  "archetypal": {
+    "example": "Sherlock Holmes is the archetypal brilliant detective in fiction.",
+    "example_zh": "福爾摩斯是小說中聰明絕頂偵探的典型原型。"
+  },
   "architect": {
     "example": "An architect designed the airy new clinic.",
     "example_zh": "一位建築師設計了這間通風明亮的新診所。"
@@ -702,6 +798,10 @@
   "arctic": {
     "example": "The arctic cold made his old wound ache.",
     "example_zh": "極地般的寒冷讓他的舊傷隱隱作痛。"
+  },
+  "ardent": {
+    "example": "She is an ardent supporter of public healthcare reform.",
+    "example_zh": "她是公共醫療改革的熱忱支持者。"
   },
   "arena": {
     "example": "The hospital became an arena in the fight against the virus.",
@@ -734,6 +834,10 @@
   "artery": {
     "example": "A blocked artery can lead to a heart attack.",
     "example_zh": "阻塞的動脈可能導致心臟病發作。"
+  },
+  "arthritis": {
+    "example": "Years of heavy labor left him with painful arthritis in his hands.",
+    "example_zh": "多年的粗重工作讓他的雙手患上了疼痛的關節炎。"
   },
   "article": {
     "example": "She read an article about preventing heart disease.",
@@ -799,6 +903,10 @@
     "example": "Her first assignment was on the night ward.",
     "example_zh": "她的第一份工作是在夜間病房。"
   },
+  "assimilate": {
+    "example": "Immigrants often take years to fully assimilate into a new culture.",
+    "example_zh": "移民往往需要多年才能完全融入一個新的文化。"
+  },
   "assist": {
     "example": "A junior doctor assisted in the operation.",
     "example_zh": "一名資淺醫生協助了這場手術。"
@@ -818,6 +926,10 @@
   "association": {
     "example": "There is a clear association between smoking and cancer.",
     "example_zh": "吸菸與癌症之間有明確的關聯。"
+  },
+  "assuage": {
+    "example": "The doctor's calm words helped assuage the patient's fears about surgery.",
+    "example_zh": "醫師平靜的話語有助於緩和病人對手術的恐懼。"
   },
   "assume": {
     "example": "Don't assume the pain will simply go away.",
@@ -923,6 +1035,10 @@
     "example": "A charity auction raised money for the ward.",
     "example_zh": "一場慈善拍賣為病房募了款。"
   },
+  "audacity": {
+    "example": "He had the audacity to lie to the judge right in the courtroom.",
+    "example_zh": "他竟然有膽量在法庭上當著法官的面說謊。"
+  },
   "audience": {
     "example": "The lecture drew a large audience of students.",
     "example_zh": "這場演講吸引了大批學生聽眾。"
@@ -942,6 +1058,10 @@
   "authenticate": {
     "example": "A signature is required to authenticate the prescription.",
     "example_zh": "處方需要簽名來證明其真實性。"
+  },
+  "authoritative": {
+    "example": "This textbook is the most authoritative reference on human anatomy available.",
+    "example_zh": "這本教科書是目前最具權威性的人體解剖學參考書。"
   },
   "authority": {
     "example": "The health authority ordered the clinic to close.",
@@ -1045,11 +1165,15 @@
   },
   "band": {
     "example": "A tight band was placed around his arm to draw blood.",
-    "example_zh": "抽血時在他手臂上綁了一條緊帶。"
+    "example_zh": "抽血時，他的手臂上綁了一條止血帶。"
   },
   "bang": {
     "example": "He hit his head with a bang on the cabinet.",
     "example_zh": "他的頭砰一聲撞上了櫃子。"
+  },
+  "banish": {
+    "example": "In ancient times, kings would banish their rivals to distant lands.",
+    "example_zh": "古時候，國王會把對手流放到遙遠的地方。"
   },
   "banker": {
     "example": "The banker collapsed from stress at work.",
@@ -1144,8 +1268,8 @@
     "example_zh": "高燒在他體內肆虐，宛如一頭野獸。"
   },
   "beat": {
-    "example": "The monitor showed a steady heartbeat.",
-    "example_zh": "監測儀顯示穩定的心跳。"
+    "example": "The drummer kept a steady beat throughout the song.",
+    "example_zh": "鼓手整首歌都維持穩定的節拍。"
   },
   "beg": {
     "example": "She had to beg him to see a doctor.",
@@ -1156,8 +1280,8 @@
     "example_zh": "她代表所有病人發言。"
   },
   "behave": {
-    "example": "The wound behaved well and healed quickly.",
-    "example_zh": "傷口情況良好，很快就癒合了。"
+    "example": "The children behaved well while waiting at the clinic.",
+    "example_zh": "孩子們在診所候診時很守規矩。"
   },
   "behavior": {
     "example": "Sudden changes in behavior can be a warning sign.",
@@ -1203,6 +1327,10 @@
     "example": "The benefits of the drug outweigh the risks.",
     "example_zh": "這種藥的益處大於風險。"
   },
+  "benevolence": {
+    "example": "The hospital was founded through the benevolence of a wealthy donor.",
+    "example_zh": "這家醫院是靠一位富有捐助者的善心而創立的。"
+  },
   "benevolent": {
     "example": "A benevolent donor paid for the new equipment.",
     "example_zh": "一位仁慈的捐贈者支付了新設備的費用。"
@@ -1215,6 +1343,10 @@
     "example": "Besides rest, she needs plenty of fluids.",
     "example_zh": "除了休息，她還需要大量補充水分。"
   },
+  "beta": {
+    "example": "The company released a beta version of the app to test for bugs.",
+    "example_zh": "公司推出了應用程式的測試版（beta版），以找出程式錯誤。"
+  },
   "betray": {
     "example": "Her shaking hands betrayed her fear.",
     "example_zh": "她顫抖的雙手洩露了她的恐懼。"
@@ -1226,6 +1358,10 @@
   "bid": {
     "example": "The hospital made a bid for new funding.",
     "example_zh": "醫院爭取新的經費。"
+  },
+  "bilateral": {
+    "example": "The scan revealed bilateral swelling in both of the patient's knees.",
+    "example_zh": "掃描顯示病人雙側膝蓋都有腫脹。"
   },
   "billion": {
     "example": "The disease costs the country billions each year.",
@@ -1246,6 +1382,14 @@
   "biologist": {
     "example": "The biologist studied how the virus reproduces.",
     "example_zh": "這位生物學家研究病毒如何繁殖。"
+  },
+  "biomarker": {
+    "example": "Researchers identified a blood biomarker that signals early kidney damage.",
+    "example_zh": "研究人員找到一種能反映早期腎臟損傷的血液生物標記。"
+  },
+  "biopsy": {
+    "example": "The doctor ordered a biopsy to determine whether the lump was malignant.",
+    "example_zh": "醫生安排了切片檢查，以判斷這個腫塊是否為惡性。"
   },
   "bit": {
     "example": "Eat just a bit at a time while you recover.",
@@ -1403,9 +1547,17 @@
     "example": "The old hospital sign was made of polished brass.",
     "example_zh": "那塊舊醫院招牌是用擦亮的黃銅做的。"
   },
+  "brave": {
+    "example": "The brave nurse stayed by her patients throughout the epidemic.",
+    "example_zh": "這位勇敢的護理師在整場疫情中始終守在病人身邊。"
+  },
   "breakdown": {
     "example": "Months of stress led to a complete breakdown.",
     "example_zh": "數月的壓力導致她徹底崩潰。"
+  },
+  "breakthrough": {
+    "example": "The new vaccine marked a major breakthrough in cancer treatment.",
+    "example_zh": "這款新疫苗是癌症治療上的一大突破。"
   },
   "breath": {
     "example": "Take a deep breath and hold it for the scan.",
@@ -1519,6 +1671,10 @@
     "example": "The appendix can burst if surgery is delayed.",
     "example_zh": "若延誤手術，闌尾可能會破裂。"
   },
+  "bust": {
+    "example": "Police busted the gang for selling counterfeit prescription drugs.",
+    "example_zh": "警方破獲了這個販售偽造處方藥的集團。"
+  },
   "butt": {
     "example": "He stubbed out the cigarette butt and quit for good.",
     "example_zh": "他熄掉菸頭，從此戒了菸。"
@@ -1530,6 +1686,10 @@
   "butterfly": {
     "example": "A butterfly rash across the cheeks can signal lupus.",
     "example_zh": "橫過雙頰的蝴蝶斑可能是紅斑性狼瘡的徵兆。"
+  },
+  "buzz": {
+    "example": "There was a buzz of excitement when the cure was announced.",
+    "example_zh": "療法公布時，現場洋溢著一陣興奮的騷動。"
   },
   "cab": {
     "example": "She took a cab straight to the hospital.",
@@ -1619,6 +1779,10 @@
     "example": "She is fully capable of caring for herself now.",
     "example_zh": "她現在完全有能力照顧自己。"
   },
+  "capacious": {
+    "example": "The new clinic has a capacious waiting room that seats over a hundred.",
+    "example_zh": "這家新診所有一間寬敞的候診室，可容納上百人就座。"
+  },
   "capacity": {
     "example": "The hospital is working at full capacity.",
     "example_zh": "這家醫院正以滿載運作。"
@@ -1647,6 +1811,10 @@
     "example": "A cargo of medical supplies arrived by ship.",
     "example_zh": "一批醫療物資由船運抵達。"
   },
+  "carnivore": {
+    "example": "Lions are carnivores that survive almost entirely on the meat of other animals.",
+    "example_zh": "獅子是肉食動物，幾乎完全以其他動物的肉為生。"
+  },
   "cart": {
     "example": "The nurse wheeled the medicine cart down the hall.",
     "example_zh": "護理師推著藥車走過走廊。"
@@ -1674,6 +1842,14 @@
   "catalog": {
     "example": "The pharmacy keeps a catalog of every drug.",
     "example_zh": "藥局保有一份每種藥的目錄。"
+  },
+  "catalyst": {
+    "example": "The new funding acted as a catalyst for groundbreaking research.",
+    "example_zh": "這筆新資金成為突破性研究的催化劑。"
+  },
+  "catapult": {
+    "example": "The surprise victory catapulted the young athlete to instant fame.",
+    "example_zh": "這場意外的勝利使這位年輕運動員瞬間聲名大噪。"
   },
   "category": {
     "example": "This drug falls into a high-risk category.",
@@ -1730,6 +1906,10 @@
   "census": {
     "example": "The census showed an aging population in the town.",
     "example_zh": "人口普查顯示這個鎮人口老化。"
+  },
+  "centenarian": {
+    "example": "The centenarian credited her long life to daily walks and a simple diet.",
+    "example_zh": "這位百歲人瑞把長壽歸功於每天散步和清淡飲食。"
   },
   "cereal": {
     "example": "A bowl of cereal was all she could eat.",
@@ -1811,6 +1991,10 @@
     "example": "The toddler led the nurse on a merry chase.",
     "example_zh": "這名幼兒讓護理師追得團團轉。"
   },
+  "chasm": {
+    "example": "A deep chasm separated the two cliffs, making the crossing impossible.",
+    "example_zh": "一道深邃的裂谷將兩座懸崖隔開，使人無法跨越。"
+  },
   "chat": {
     "example": "A friendly chat eased the patient's nerves.",
     "example_zh": "一段友善的閒聊緩解了病人的緊張。"
@@ -1826,6 +2010,10 @@
   "chest": {
     "example": "He felt a tightness in his chest while climbing.",
     "example_zh": "爬樓時他感到胸口發悶。"
+  },
+  "chicanery": {
+    "example": "The lawyer won the case through clever chicanery rather than honest argument.",
+    "example_zh": "那名律師靠著巧妙的詭辯而非誠實的論證贏得了官司。"
   },
   "chief": {
     "example": "She was promoted to chief of the surgical team.",
@@ -1939,6 +2127,10 @@
     "example": "The whole clan gathered at her bedside.",
     "example_zh": "整個家族聚集在她的床邊。"
   },
+  "clandestine": {
+    "example": "The reporters uncovered a clandestine meeting between the two rival officials.",
+    "example_zh": "記者揭露了兩名敵對官員之間的一場秘密會面。"
+  },
   "clarify": {
     "example": "The doctor clarified the dosing instructions.",
     "example_zh": "醫生釐清了用藥的指示。"
@@ -1994,6 +2186,10 @@
   "clip": {
     "example": "The nurse used a clip to close the small wound.",
     "example_zh": "護理師用一個夾子來閉合這道小傷口。"
+  },
+  "clog": {
+    "example": "Fatty deposits can clog the arteries and restrict blood flow.",
+    "example_zh": "脂肪沉積會阻塞動脈，限制血液流動。"
   },
   "close": {
     "example": "Keep a close watch on the patient's temperature.",
@@ -2086,6 +2282,10 @@
   "colony": {
     "example": "A colony of bacteria grew in the dish.",
     "example_zh": "培養皿中長出了一群細菌。"
+  },
+  "coma": {
+    "example": "After the severe head injury, the patient slipped into a deep coma.",
+    "example_zh": "嚴重的頭部外傷後，病患陷入深度昏迷。"
   },
   "combat": {
     "example": "New antibiotics are needed to combat resistant bacteria.",
@@ -2203,6 +2403,10 @@
     "example": "In comparison with last year, infections have dropped.",
     "example_zh": "與去年相比，感染人數下降了。"
   },
+  "compartmentalize": {
+    "example": "Surgeons learn to compartmentalize emotions so they can focus during operations.",
+    "example_zh": "外科醫師學會把情緒區隔開來，才能在手術中保持專注。"
+  },
   "compassion": {
     "example": "She treated every patient with warmth and compassion.",
     "example_zh": "她以溫暖與同情心對待每一位病人。"
@@ -2246,6 +2450,10 @@
   "compile": {
     "example": "She compiled a list of his daily medicines.",
     "example_zh": "她整理了一份他每日用藥的清單。"
+  },
+  "complacent": {
+    "example": "After early success, the team grew complacent and stopped working hard.",
+    "example_zh": "在初期的成功之後，這支團隊變得自滿，不再努力。"
   },
   "complain": {
     "example": "He began to complain of a sharp pain in his side.",
@@ -2322,6 +2530,10 @@
   "compound": {
     "example": "The drug is a compound of two simple chemicals.",
     "example_zh": "這種藥是兩種簡單化學物質的化合物。"
+  },
+  "comprehend": {
+    "example": "It took years for scientists to fully comprehend how the virus spreads.",
+    "example_zh": "科學家花了多年才完全理解這種病毒如何傳播。"
   },
   "comprehensive": {
     "example": "She was given a comprehensive health check.",
@@ -2430,6 +2642,10 @@
   "confession": {
     "example": "His confession that he had skipped his pills shocked the nurse.",
     "example_zh": "他坦承漏服了藥，令護理師震驚。"
+  },
+  "confidant": {
+    "example": "She told her closest confidant a secret she shared with no one else.",
+    "example_zh": "她把一個從未對別人說過的秘密告訴了她最親密的知己。"
   },
   "confidence": {
     "example": "Each small step rebuilt her confidence.",
@@ -2579,6 +2795,14 @@
     "example": "She consistently took her pills on time.",
     "example_zh": "她始終如一地準時服藥。"
   },
+  "consolidation": {
+    "example": "The consolidation of several small clinics into one hospital improved efficiency.",
+    "example_zh": "將數家小診所合併成一家醫院後，效率大為提升。"
+  },
+  "conspicuous": {
+    "example": "The bright red rash was conspicuous against her pale skin.",
+    "example_zh": "鮮紅的疹子在她蒼白的皮膚上格外顯眼。"
+  },
   "conspiracy": {
     "example": "He spread a wild conspiracy about the vaccine.",
     "example_zh": "他散布了一則關於疫苗的離譜陰謀論。"
@@ -2687,6 +2911,10 @@
     "example": "Funding for the project remains a contentious issue in the committee.",
     "example_zh": "該計畫的經費在委員會中仍是個有爭議的議題。"
   },
+  "contentment": {
+    "example": "A simple life brought her a deep sense of contentment and peace.",
+    "example_zh": "簡樸的生活帶給她深深的滿足與平靜。"
+  },
   "contest": {
     "example": "Quitting smoking felt like a daily contest.",
     "example_zh": "戒菸感覺像是每天的一場較量。"
@@ -2714,6 +2942,10 @@
   "contractor": {
     "example": "A contractor built the new wing in record time.",
     "example_zh": "一位承包商以破紀錄的速度蓋好了新側翼。"
+  },
+  "contradictory": {
+    "example": "The two studies reached completely contradictory conclusions.",
+    "example_zh": "這兩項研究得出了完全相互矛盾的結論。"
   },
   "contrary": {
     "example": "Contrary to fears, the surgery went smoothly.",
@@ -2753,7 +2985,7 @@
   },
   "conventional": {
     "example": "They tried conventional medicine before herbal remedies.",
-    "example_zh": "他們先嘗試了傳統醫學，才用草藥療法。"
+    "example_zh": "他們先嘗試了常規西醫治療，才改用草藥療法。"
   },
   "conversation": {
     "example": "A quiet conversation calmed the anxious patient.",
@@ -2888,8 +3120,8 @@
     "example_zh": "貪腐使公立醫院經費拮据。"
   },
   "cosmic": {
-    "example": "Looking up, her worries felt cosmic and small.",
-    "example_zh": "抬頭望去，她的煩惱在宇宙間顯得渺小。"
+    "example": "Looking up at the cosmic scale of the night sky, her worries felt small.",
+    "example_zh": "抬頭望向宇宙般浩瀚的夜空，她的煩惱顯得渺小。"
   },
   "costume": {
     "example": "The volunteer wore a clown costume for the children.",
@@ -3071,6 +3303,10 @@
     "example": "A dry crust formed over the healing wound.",
     "example_zh": "癒合的傷口上結了一層乾痂。"
   },
+  "crutch": {
+    "example": "After breaking his ankle, he had to walk on crutches for six weeks.",
+    "example_zh": "摔斷腳踝後，他得拄著拐杖走路六個星期。"
+  },
   "crystal": {
     "example": "The kidney stone was made of tiny crystals.",
     "example_zh": "這顆腎結石是由微小的結晶組成的。"
@@ -3086,6 +3322,10 @@
   "cue": {
     "example": "A nod from the surgeon was the cue to begin.",
     "example_zh": "外科醫生點頭就是開始的暗號。"
+  },
+  "culprit": {
+    "example": "Investigators finally identified the real culprit behind the data breach.",
+    "example_zh": "調查人員終於查出這起資料外洩事件背後的真正禍首。"
   },
   "cult": {
     "example": "The fake healer ran a dangerous cult.",
@@ -3227,6 +3467,10 @@
     "example": "The young surgeon made her debut in the operating room.",
     "example_zh": "這位年輕外科醫生在手術室首次登場。"
   },
+  "decay": {
+    "example": "Without brushing, teeth begin to decay as bacteria erode the enamel.",
+    "example_zh": "若不刷牙，細菌侵蝕琺瑯質，牙齒便開始蛀蝕腐壞。"
+  },
   "decent": {
     "example": "After surgery he finally got a decent night's sleep.",
     "example_zh": "手術後他終於睡了個像樣的好覺。"
@@ -3238,6 +3482,10 @@
   "decide": {
     "example": "The doctors will decide tomorrow whether to operate.",
     "example_zh": "醫生明天會決定是否動手術。"
+  },
+  "decimate": {
+    "example": "The epidemic decimated the population of the small village.",
+    "example_zh": "這場流行病使這個小村莊的人口大量減少。"
   },
   "deck": {
     "example": "He took a slow walk around the ship's deck.",
@@ -3271,6 +3519,10 @@
     "example": "She chose to dedicate her life to caring for others.",
     "example_zh": "她選擇把一生奉獻給照顧他人。"
   },
+  "dedication": {
+    "example": "Her dedication to her patients earned the respect of every colleague.",
+    "example_zh": "她對病人的奉獻贏得了每位同事的尊敬。"
+  },
   "deed": {
     "example": "A kind deed by the nurse lifted his spirits.",
     "example_zh": "護理師的一個善舉振奮了他的精神。"
@@ -3286,6 +3538,10 @@
   "defect": {
     "example": "The baby was born with a small heart defect.",
     "example_zh": "這名嬰兒生來就有一個小小的心臟缺陷。"
+  },
+  "defective": {
+    "example": "The company recalled thousands of cars because of a defective brake part.",
+    "example_zh": "由於煞車零件有瑕疵，該公司召回了數千輛汽車。"
   },
   "defend": {
     "example": "The body's white cells defend it against germs.",
@@ -3318,6 +3574,10 @@
   "definition": {
     "example": "The textbook gives a clear definition of the term.",
     "example_zh": "教科書對這個術語給出了清楚的定義。"
+  },
+  "deflect": {
+    "example": "The politician tried to deflect every difficult question with a joke.",
+    "example_zh": "那位政治人物試圖用笑話迴避每一個棘手的問題。"
   },
   "defy": {
     "example": "Her recovery seemed to defy all the odds.",
@@ -3371,6 +3631,10 @@
     "example": "The hospital sent reminders to patients with delinquent accounts.",
     "example_zh": "醫院向帳款逾期的病人寄出催繳通知。"
   },
+  "delirious": {
+    "example": "The patient's fever was so high that he became delirious and saw things.",
+    "example_zh": "病人的高燒嚴重到出現譫妄，開始看見幻覺。"
+  },
   "demand": {
     "example": "The flu season put huge demand on the clinic.",
     "example_zh": "流感季為診所帶來巨大的需求。"
@@ -3378,6 +3642,10 @@
   "demanding": {
     "example": "Nursing is a physically demanding job.",
     "example_zh": "護理是一份體力負荷很重的工作。"
+  },
+  "demeanor": {
+    "example": "Despite the chaos around her, the nurse kept a calm, professional demeanor.",
+    "example_zh": "儘管周遭一片混亂，那位護理師仍保持冷靜、專業的舉止。"
   },
   "democracy": {
     "example": "The country slowly returned to democracy.",
@@ -3398,6 +3666,10 @@
   "den": {
     "example": "The fox lay sick in its earthy den.",
     "example_zh": "那隻狐狸生病了，躺在牠的土穴裡。"
+  },
+  "denigrate": {
+    "example": "He constantly denigrates his colleagues to make himself look better.",
+    "example_zh": "他不斷詆毀同事，好讓自己顯得更出色。"
   },
   "denote": {
     "example": "On the chart, a red dot denotes an abnormal result.",
@@ -3446,6 +3718,10 @@
   "depict": {
     "example": "The chart depicts how the disease spreads.",
     "example_zh": "這張圖描繪了疾病如何傳播。"
+  },
+  "deplete": {
+    "example": "Intense exercise can quickly deplete the body's energy reserves.",
+    "example_zh": "劇烈運動會迅速耗盡身體的能量儲備。"
   },
   "deplored": {
     "example": "Critics deplored the cuts to the health budget.",
@@ -3527,6 +3803,10 @@
     "example": "She had a strong desire to recover quickly.",
     "example_zh": "她有強烈的渴望想快點康復。"
   },
+  "desist": {
+    "example": "The court ordered the firm to desist from making misleading health claims.",
+    "example_zh": "法院命令該公司停止發布誤導性的健康聲明。"
+  },
   "desperate": {
     "example": "The family was desperate for any kind of cure.",
     "example_zh": "這家人迫切渴望任何能治癒的方法。"
@@ -3579,6 +3859,10 @@
     "example": "Tests will determine whether the cells are cancerous.",
     "example_zh": "檢查將判定這些細胞是否為癌細胞。"
   },
+  "detestable": {
+    "example": "Most people find cruelty to animals utterly detestable.",
+    "example_zh": "大多數人都覺得虐待動物的行為令人深惡痛絕。"
+  },
   "detested": {
     "example": "As a child she detested the taste of cough syrup.",
     "example_zh": "小時候她極討厭咳嗽糖漿的味道。"
@@ -3590,6 +3874,10 @@
   "develop": {
     "example": "Some patients develop a rash after the injection.",
     "example_zh": "有些病人在注射後會出現疹子。"
+  },
+  "deviant": {
+    "example": "Researchers studied why some individuals develop deviant behavior in society.",
+    "example_zh": "研究人員探討為何某些人會發展出偏離常軌的行為。"
   },
   "device": {
     "example": "A small device monitors his heart rhythm.",
@@ -3631,6 +3919,10 @@
     "example": "The infection left him with fever and diarrhea.",
     "example_zh": "這次感染讓他發燒並腹瀉。"
   },
+  "dichotomy": {
+    "example": "There is a false dichotomy between traditional medicine and modern science.",
+    "example_zh": "把傳統醫學與現代科學對立起來，是一種錯誤的二分法。"
+  },
   "dictate": {
     "example": "The doctor dictated her notes to the nurse.",
     "example_zh": "醫生口述她的筆記讓護理師記下。"
@@ -3639,6 +3931,10 @@
     "example": "The country suffered for decades under a ruthless dictator.",
     "example_zh": "這個國家在殘酷的獨裁者統治下苦了數十年。"
   },
+  "didactic": {
+    "example": "The novel felt too didactic, lecturing readers instead of telling a story.",
+    "example_zh": "這部小說過於說教，只顧訓誡讀者，而非講述故事。"
+  },
   "die": {
     "example": "Without the transplant, he would surely die.",
     "example_zh": "沒有移植，他必死無疑。"
@@ -3646,6 +3942,10 @@
   "diet": {
     "example": "A healthy diet can lower your risk of heart disease.",
     "example_zh": "健康的飲食能降低你罹患心臟病的風險。"
+  },
+  "dietary": {
+    "example": "The doctor suggested several dietary changes to lower his cholesterol.",
+    "example_zh": "醫生建議他在飲食上做幾項改變以降低膽固醇。"
   },
   "dignity": {
     "example": "The hospice let her die with dignity.",
@@ -3719,6 +4019,10 @@
     "example": "Doctors must disclose the risks of the drug.",
     "example_zh": "醫生必須揭露這種藥的風險。"
   },
+  "discontinuity": {
+    "example": "A sudden discontinuity in the data suggested the sensor had malfunctioned.",
+    "example_zh": "數據中突然的不連續，顯示感測器曾經故障。"
+  },
   "discount": {
     "example": "The pharmacy gave her a discount on the drug.",
     "example_zh": "藥局給了她這種藥的折扣。"
@@ -3735,6 +4039,14 @@
     "example": "Patients should never face discrimination over their illness.",
     "example_zh": "病人絕不該因疾病而受到歧視。"
   },
+  "dishonor": {
+    "example": "Cheating on the exam would dishonor both himself and his family.",
+    "example_zh": "考試作弊不僅會使他自己蒙羞，也會玷辱他的家族。"
+  },
+  "disillusion": {
+    "example": "Years of broken promises left the voters deeply disillusioned with politics.",
+    "example_zh": "多年的食言而肥使選民對政治徹底感到幻滅。"
+  },
   "dismiss": {
     "example": "Don't dismiss the symptom as simple tiredness.",
     "example_zh": "別把這個症狀當成單純的疲倦而不予理會。"
@@ -3747,13 +4059,25 @@
     "example": "The clinic follows strict rules for waste disposal.",
     "example_zh": "這間診所遵循嚴格的廢棄物處理規定。"
   },
+  "disputatious": {
+    "example": "The disputatious committee argued for hours without reaching any agreement.",
+    "example_zh": "這個愛爭論的委員會爭辯了好幾個小時，仍無法達成任何共識。"
+  },
   "dispute": {
     "example": "There was a dispute over who was to blame.",
     "example_zh": "對於誰該負責有了爭執。"
   },
+  "disregard": {
+    "example": "His careless disregard for safety rules led to a serious accident.",
+    "example_zh": "他對安全規定的漠視，釀成了一場嚴重的意外。"
+  },
   "disrupt": {
     "example": "Noise at night can disrupt a patient's healing.",
     "example_zh": "夜間的噪音會擾亂病人的康復。"
+  },
+  "dissect": {
+    "example": "Medical students must dissect a cadaver to study human anatomy.",
+    "example_zh": "醫學生必須解剖大體以研究人體解剖構造。"
   },
   "dissolve": {
     "example": "The tablet will dissolve quickly in warm water.",
@@ -3770,6 +4094,10 @@
   "distant": {
     "example": "The pain spread to a distant part of the body.",
     "example_zh": "疼痛蔓延到身體較遠的部位。"
+  },
+  "distend": {
+    "example": "A blockage in the intestine can cause the abdomen to distend painfully.",
+    "example_zh": "腸道阻塞可能使腹部痛苦地膨脹起來。"
   },
   "distinct": {
     "example": "The rash has a distinct ring-like shape.",
@@ -3979,6 +4307,10 @@
     "example": "Water began to drip from the cracked pipe.",
     "example_zh": "水開始從裂開的水管滴落。"
   },
+  "droop": {
+    "example": "Without enough water, the flowers began to droop in the afternoon heat.",
+    "example_zh": "缺乏足夠的水分，花朵在午後的高溫下開始下垂枯萎。"
+  },
   "drought": {
     "example": "The long drought left the village without clean water.",
     "example_zh": "漫長的乾旱讓村莊沒有了乾淨的水。"
@@ -3990,6 +4322,10 @@
   "dubbed": {
     "example": "The drug was dubbed a miracle cure by the press.",
     "example_zh": "這種藥被媒體稱為神奇療法。"
+  },
+  "dubious": {
+    "example": "The salesman made dubious claims about the herb curing cancer.",
+    "example_zh": "推銷員提出該草藥能治癒癌症的可疑說法。"
   },
   "due": {
     "example": "Her next check-up is due in two weeks.",
@@ -4026,6 +4362,10 @@
   "earthquake": {
     "example": "The earthquake left the hospital without power.",
     "example_zh": "地震讓醫院停了電。"
+  },
+  "eccentric": {
+    "example": "Our eccentric professor wears mismatched socks and talks to his plants.",
+    "example_zh": "我們那位古怪的教授穿著不成對的襪子，還會對植物說話。"
   },
   "echo": {
     "example": "The scan uses sound echoes to picture the heart.",
@@ -4083,6 +4423,10 @@
     "example": "The new system is far more efficient.",
     "example_zh": "這套新系統的效率高出許多。"
   },
+  "egoistic": {
+    "example": "His egoistic attitude meant he took all the credit for the team's work.",
+    "example_zh": "他自我中心的態度，使他把團隊的功勞全攬到自己身上。"
+  },
   "elaborate": {
     "example": "The surgeon explained the procedure in elaborate detail.",
     "example_zh": "外科醫生鉅細靡遺地說明了手術過程。"
@@ -4123,6 +4467,10 @@
     "example": "The doctor's questions were meant to elicit the patient's history.",
     "example_zh": "醫生的問題是為了引出病人的病史。"
   },
+  "eligibility": {
+    "example": "Applicants must meet strict eligibility requirements before they can receive the grant.",
+    "example_zh": "申請人必須符合嚴格的資格條件，才能領取這筆補助金。"
+  },
   "eligible": {
     "example": "Only patients over sixty-five are eligible for the free vaccine.",
     "example_zh": "只有六十五歲以上的病人才有資格接種免費疫苗。"
@@ -4134,6 +4482,14 @@
   "elite": {
     "example": "She trained with an elite team of surgeons.",
     "example_zh": "她和一支頂尖的外科團隊一起受訓。"
+  },
+  "elitism": {
+    "example": "Critics accused the university of elitism for favoring wealthy applicants.",
+    "example_zh": "批評者指責該大學偏袒富裕申請者，是一種精英主義。"
+  },
+  "elucidate": {
+    "example": "The professor used a diagram to elucidate the complicated process.",
+    "example_zh": "教授用一張圖表來闡明這個複雜的過程。"
   },
   "embed": {
     "example": "A splinter was embedded deep in his foot.",
@@ -4166,6 +4522,10 @@
   "emerging": {
     "example": "Doctors watched the emerging signs of recovery.",
     "example_zh": "醫生留意著逐漸顯現的康復跡象。"
+  },
+  "eminence": {
+    "example": "She achieved eminence in cardiology after decades of pioneering research.",
+    "example_zh": "經過數十年的開創性研究，她在心臟科領域享有崇高聲望。"
   },
   "emission": {
     "example": "The factory's emission of fumes harmed local health.",
@@ -4271,6 +4631,10 @@
     "example": "After the illness, she slowly regained her energy.",
     "example_zh": "病後，她慢慢恢復了體力。"
   },
+  "enforce": {
+    "example": "Hospitals enforce strict hygiene rules to prevent the spread of infection.",
+    "example_zh": "醫院執行嚴格的衛生規定，以防止感染擴散。"
+  },
   "engage": {
     "example": "Staying engaged in hobbies helps the elderly stay sharp.",
     "example_zh": "持續投入嗜好有助於長者保持思緒清晰。"
@@ -4298,6 +4662,10 @@
   "enroll": {
     "example": "She decided to enroll in a first-aid course.",
     "example_zh": "她決定報名一門急救課程。"
+  },
+  "ensconced": {
+    "example": "By evening she was ensconced in her favorite armchair with a good book.",
+    "example_zh": "到了傍晚，她舒舒服服地窩在最愛的扶手椅裡看書。"
   },
   "ensemble": {
     "example": "The whole care ensemble worked as one.",
@@ -4351,6 +4719,10 @@
     "example": "Each dose is given its own entry in the log.",
     "example_zh": "每一劑都在紀錄中有自己的一筆登錄。"
   },
+  "envelope": {
+    "example": "She sealed the test results inside a white envelope and mailed it.",
+    "example_zh": "她把檢驗結果封進一個白色信封裡寄出。"
+  },
   "envision": {
     "example": "It is hard to envision life without the medicine.",
     "example_zh": "很難想像沒有這種藥的生活。"
@@ -4395,6 +4767,10 @@
     "example": "One tablet is equivalent to two spoons of the syrup.",
     "example_zh": "一顆藥片相當於兩匙糖漿。"
   },
+  "equivocal": {
+    "example": "The test results were equivocal, so the doctor ordered another scan.",
+    "example_zh": "檢驗結果模稜兩可，因此醫師又安排了一次掃描。"
+  },
   "era": {
     "example": "Antibiotics began a new era in medicine.",
     "example_zh": "抗生素開啟了醫學的新時代。"
@@ -4418,6 +4794,10 @@
   "erupt": {
     "example": "A rash can erupt within hours of the bite.",
     "example_zh": "疹子可能在被咬後數小時內爆發。"
+  },
+  "escalate": {
+    "example": "A minor disagreement quickly escalated into a full-blown argument.",
+    "example_zh": "一場小爭執很快升級成了激烈的爭吵。"
   },
   "escape": {
     "example": "No one can fully escape the effects of aging.",
@@ -4478,6 +4858,10 @@
   "eventually": {
     "example": "After months of therapy, she eventually walked again.",
     "example_zh": "經過數月的治療，她終於又能走路了。"
+  },
+  "everlasting": {
+    "example": "They believed true friendship was everlasting and could endure any hardship.",
+    "example_zh": "他們相信真正的友誼是永恆的，能夠承受任何艱難。"
   },
   "evidence": {
     "example": "There is strong evidence that exercise reduces stress.",
@@ -4591,6 +4975,14 @@
     "example": "The hospital's chief executive announced the plan.",
     "example_zh": "醫院的執行長宣布了這項計畫。"
   },
+  "exemplar": {
+    "example": "Her dedication to patients made her an exemplar for every young nurse.",
+    "example_zh": "她對病人的奉獻使她成為每位年輕護理師的典範。"
+  },
+  "exemplify": {
+    "example": "This case perfectly exemplifies the dangers of self-medication.",
+    "example_zh": "這個案例完美地例證了自行用藥的危險。"
+  },
   "exert": {
     "example": "The tumor began to exert pressure on the nerve.",
     "example_zh": "腫瘤開始對神經施加壓力。"
@@ -4598,6 +4990,14 @@
   "exhaust": {
     "example": "The long illness began to exhaust her.",
     "example_zh": "久病開始讓她精疲力竭。"
+  },
+  "exhaustion": {
+    "example": "After the double shift, the nurse collapsed from sheer exhaustion.",
+    "example_zh": "連值兩班後，那位護理師因極度疲憊而昏倒。"
+  },
+  "exhaustive": {
+    "example": "The doctors ran an exhaustive series of tests before making a diagnosis.",
+    "example_zh": "醫師在做出診斷前，進行了一系列詳盡徹底的檢查。"
   },
   "exhibit": {
     "example": "The patient began to exhibit signs of recovery.",
@@ -4622,6 +5022,10 @@
   "exonerated": {
     "example": "The investigation exonerated the nurse of any blame.",
     "example_zh": "調查還了那名護理師清白，免除了一切責任。"
+  },
+  "exorbitant": {
+    "example": "The clinic charged exorbitant fees that most patients could not afford.",
+    "example_zh": "這家診所收取大多數病人都負擔不起的過高費用。"
   },
   "exotic": {
     "example": "He fell ill after eating an exotic fruit.",
@@ -4650,6 +5054,10 @@
   "expertise": {
     "example": "Her expertise in heart surgery is widely known.",
     "example_zh": "她在心臟手術上的專業廣為人知。"
+  },
+  "explicable": {
+    "example": "Her fatigue was easily explicable once the blood test revealed anemia.",
+    "example_zh": "血液檢查顯示她貧血後，她的疲倦就變得很容易解釋了。"
   },
   "explicit": {
     "example": "The doctor gave explicit instructions for the dose.",
@@ -4715,6 +5123,10 @@
     "example": "The dentist had to extract the decayed tooth.",
     "example_zh": "牙醫不得不拔掉那顆蛀牙。"
   },
+  "extradite": {
+    "example": "The government agreed to extradite the fugitive to face trial abroad.",
+    "example_zh": "政府同意將該逃犯引渡至國外受審。"
+  },
   "extraordinary": {
     "example": "The team made an extraordinary effort to save him.",
     "example_zh": "團隊付出了非凡的努力來搶救他。"
@@ -4722,6 +5134,10 @@
   "fabric": {
     "example": "The bandage is made of a soft, breathable fabric.",
     "example_zh": "這款繃帶以柔軟透氣的織物製成。"
+  },
+  "fabricate": {
+    "example": "The researcher was fired for fabricating data in his published study.",
+    "example_zh": "該研究員因在發表的研究中捏造數據而遭到解僱。"
   },
   "fabulous": {
     "example": "She made a fabulous recovery in record time.",
@@ -4835,6 +5251,10 @@
     "example": "The new drug got a favorable response in trials.",
     "example_zh": "這款新藥在試驗中獲得良好的反應。"
   },
+  "favorably": {
+    "example": "Reviewers responded favorably to the new treatment's promising results.",
+    "example_zh": "評審對這項新療法可觀的成果反應良好。"
+  },
   "feasible": {
     "example": "Surgery was no longer a feasible option for the elderly patient.",
     "example_zh": "對這位年長病人來說，手術已不再是可行的選擇。"
@@ -4866,6 +5286,10 @@
   "festival": {
     "example": "She was home in time for the autumn festival.",
     "example_zh": "她及時回家過秋天的節慶。"
+  },
+  "fever": {
+    "example": "The child ran a high fever and needed to be taken to the clinic.",
+    "example_zh": "這個孩子發高燒，必須被送到診所。"
   },
   "fiber": {
     "example": "A diet rich in fiber keeps the gut healthy.",
@@ -4963,6 +5387,10 @@
     "example": "He had to lie flat for an hour after the test.",
     "example_zh": "檢查後他必須平躺一小時。"
   },
+  "flatulence": {
+    "example": "Eating beans often causes bloating and flatulence in many people.",
+    "example_zh": "對許多人來說，吃豆類常會引起腹脹和腸胃脹氣。"
+  },
   "flavor": {
     "example": "The syrup has an artificial cherry flavor.",
     "example_zh": "這款糖漿有人工櫻桃口味。"
@@ -5015,6 +5443,10 @@
     "example": "The garden began to flourish in the spring sun.",
     "example_zh": "花園在春日的陽光下開始繁茂起來。"
   },
+  "fluctuate": {
+    "example": "Blood sugar levels can fluctuate sharply after a heavy meal.",
+    "example_zh": "大餐之後血糖值可能會劇烈波動。"
+  },
   "fluid": {
     "example": "The patient was given fluid through a drip.",
     "example_zh": "病人經由點滴補充體液。"
@@ -5043,6 +5475,10 @@
     "example": "Local folk still trust the village healer.",
     "example_zh": "當地居民仍信任村裡的治療師。"
   },
+  "folklore": {
+    "example": "According to local folklore, the spring water can cure many illnesses.",
+    "example_zh": "根據當地的民間傳說，這泉水能治癒許多疾病。"
+  },
   "foolish": {
     "example": "It was foolish to ignore such severe pain.",
     "example_zh": "忽視這麼劇烈的疼痛實在愚蠢。"
@@ -5058,6 +5494,10 @@
   "foremost": {
     "example": "Patient safety is foremost in her mind.",
     "example_zh": "病人安全在她心中是第一位的。"
+  },
+  "forestall": {
+    "example": "The clinic ordered extra vaccines to forestall a possible shortage.",
+    "example_zh": "診所訂購了額外的疫苗，以預先防止可能的短缺。"
   },
   "forge": {
     "example": "Trust between doctor and patient takes time to forge.",
@@ -5102,6 +5542,10 @@
   "forth": {
     "example": "From that day forth, he never smoked again.",
     "example_zh": "從那天起，他再也沒抽過菸。"
+  },
+  "fortitude": {
+    "example": "She bore the long chemotherapy with remarkable fortitude and never complained.",
+    "example_zh": "她以驚人的堅毅承受漫長的化療，從不抱怨。"
   },
   "fortunate": {
     "example": "He was fortunate that the tumor was caught early.",
@@ -5151,6 +5595,10 @@
     "example": "A fragment of bone had to be removed.",
     "example_zh": "一塊骨頭碎片必須取出。"
   },
+  "frail": {
+    "example": "The frail elderly patient needed help walking to the examination room.",
+    "example_zh": "這位虛弱的年長病患需要人攙扶才能走到診間。"
+  },
   "frame": {
     "example": "His thin frame had grown weak with illness.",
     "example_zh": "他瘦弱的身軀因病而更加虛弱。"
@@ -5174,6 +5622,10 @@
   "freshly": {
     "example": "The bed was made up with freshly washed sheets.",
     "example_zh": "床鋪換上了剛洗好的床單。"
+  },
+  "fright": {
+    "example": "She screamed in fright when the spider suddenly dropped onto her arm.",
+    "example_zh": "蜘蛛突然掉到她手臂上時，她驚嚇得尖叫起來。"
   },
   "frightening": {
     "example": "The first night in hospital was frightening for the child.",
@@ -5235,6 +5687,10 @@
     "example": "The research lost its funding halfway through.",
     "example_zh": "這項研究進行到一半失去了經費。"
   },
+  "fungible": {
+    "example": "Money is fungible, since one ten-dollar bill is as good as another.",
+    "example_zh": "金錢是可替代的，因為一張十元鈔票和另一張並無差別。"
+  },
   "fur": {
     "example": "Pet fur can trigger her asthma.",
     "example_zh": "寵物的毛會引發她的氣喘。"
@@ -5246,6 +5702,10 @@
   "furniture": {
     "example": "The waiting room had soft, comfortable furniture.",
     "example_zh": "候診室裡擺著柔軟舒適的傢俱。"
+  },
+  "gaffe": {
+    "example": "The minister's embarrassing gaffe dominated the news for an entire week.",
+    "example_zh": "部長那次難堪的失言，整整佔據了一週的新聞版面。"
   },
   "galaxy": {
     "example": "The night sky was full of distant galaxies.",
@@ -5280,8 +5740,8 @@
     "example_zh": "她坐起來時痛得倒抽一口氣。"
   },
   "gauge": {
-    "example": "The nurse used a gauge to check his pressure.",
-    "example_zh": "護理師用一個量計測量他的血壓。"
+    "example": "The nurse used a gauge to check his blood pressure.",
+    "example_zh": "護理師用血壓計測量他的血壓。"
   },
   "gaze": {
     "example": "Her gaze drifted to the window as she rested.",
@@ -5343,6 +5803,10 @@
     "example": "The disease has a clear geographic pattern.",
     "example_zh": "這種病有明顯的地理分布模式。"
   },
+  "geopolitical": {
+    "example": "Rising oil prices reflect the geopolitical tensions between the two regions.",
+    "example_zh": "油價上漲反映了兩個地區之間的地緣政治緊張。"
+  },
   "gesture": {
     "example": "A kind gesture from the nurse calmed her.",
     "example_zh": "護理師一個善意的舉動安撫了她。"
@@ -5362,6 +5826,10 @@
   "glimpse": {
     "example": "She caught a glimpse of hope in his eyes.",
     "example_zh": "她瞥見了他眼中的一絲希望。"
+  },
+  "gloat": {
+    "example": "It's unkind to gloat over a rival's misfortune, however much you dislike them.",
+    "example_zh": "無論多麼討厭對手，對他的不幸幸災樂禍都是不厚道的。"
   },
   "global": {
     "example": "The outbreak quickly became a global concern.",
@@ -5414,6 +5882,10 @@
   "grant": {
     "example": "A research grant funded the cancer study.",
     "example_zh": "一筆研究經費資助了這項癌症研究。"
+  },
+  "grapevine": {
+    "example": "I heard through the grapevine that the clinic is hiring two new doctors.",
+    "example_zh": "我從小道消息聽說，那家診所正要聘請兩名新醫師。"
   },
   "graphic": {
     "example": "The doctor avoided graphic details to spare the family.",
@@ -5479,6 +5951,10 @@
     "example": "She kept a firm grip on the handrail while walking.",
     "example_zh": "她走路時緊緊抓著扶手。"
   },
+  "gritty": {
+    "example": "Her gritty determination helped her recover fully from the serious injury.",
+    "example_zh": "她堅韌不拔的決心，幫助她從重傷中完全康復。"
+  },
   "gross": {
     "example": "The clinic's gross income rose this year.",
     "example_zh": "這間診所今年的總收入增加了。"
@@ -5519,6 +5995,10 @@
     "example": "The mosquito's habitat is warm, still water.",
     "example_zh": "蚊子的棲息地是溫暖、靜止的水域。"
   },
+  "habitual": {
+    "example": "His habitual lateness eventually cost him the job.",
+    "example_zh": "他習以為常的遲到習慣最終讓他丟了工作。"
+  },
   "hail": {
     "example": "People hailed the vaccine as a breakthrough.",
     "example_zh": "人們將這款疫苗譽為一大突破。"
@@ -5526,6 +6006,14 @@
   "hall": {
     "example": "She walked slowly down the hospital hall.",
     "example_zh": "她慢慢走過醫院的走廊。"
+  },
+  "hallmark": {
+    "example": "Persistent thirst is a hallmark of untreated diabetes.",
+    "example_zh": "持續口渴是未治療糖尿病的典型特徵。"
+  },
+  "hallucination": {
+    "example": "High fever can cause hallucinations, making patients see things that aren't there.",
+    "example_zh": "高燒可能引起幻覺，使病人看見不存在的東西。"
   },
   "hallway": {
     "example": "She paced the hallway while she waited for news.",
@@ -5542,6 +6030,10 @@
   "hammer": {
     "example": "Pain pounded in his head like a hammer.",
     "example_zh": "疼痛像鐵錘般敲打著他的頭。"
+  },
+  "hamper": {
+    "example": "Heavy rain and thick fog severely hampered the rescue operation.",
+    "example_zh": "大雨和濃霧嚴重妨礙了救援行動。"
   },
   "handful": {
     "example": "Only a handful of patients reported the side effect.",
@@ -5651,6 +6143,10 @@
     "example": "He was the sole heir to the family clinic.",
     "example_zh": "他是這家家族診所的唯一繼承人。"
   },
+  "held": {
+    "example": "The nurse held the patient's hand firmly until the panic subsided.",
+    "example_zh": "護理師緊緊握住病人的手，直到他的恐慌平息下來。"
+  },
   "helmet": {
     "example": "Always wear a helmet to protect your head when cycling.",
     "example_zh": "騎單車時一定要戴安全帽保護頭部。"
@@ -5666,6 +6162,10 @@
   "herb": {
     "example": "The old woman brewed a bitter herb for her cough.",
     "example_zh": "老婦人為她的咳嗽熬了一帖苦草藥。"
+  },
+  "herculean": {
+    "example": "Rebuilding the hospital after the earthquake was a herculean task.",
+    "example_zh": "地震後重建醫院是一項極其艱鉅的任務。"
   },
   "herd": {
     "example": "A herd of cattle grazed near the rural clinic.",
@@ -5703,6 +6203,10 @@
     "example": "A long hike left blisters on his feet.",
     "example_zh": "一趟長途健行讓他的腳起了水泡。"
   },
+  "hinder": {
+    "example": "Lack of sleep can seriously hinder a student's ability to concentrate.",
+    "example_zh": "睡眠不足會嚴重妨礙學生的專注能力。"
+  },
   "hint": {
     "example": "A faint smell of smoke was the first hint of fire.",
     "example_zh": "一絲煙味是失火的第一個跡象。"
@@ -5711,9 +6215,21 @@
     "example": "The clinic serves a large Hispanic community.",
     "example_zh": "這間診所服務著一個龐大的西語裔社區。"
   },
+  "hitch": {
+    "example": "The whole ceremony went smoothly without a single hitch.",
+    "example_zh": "整場典禮進行得很順利，沒有出現任何差錯。"
+  },
   "hold": {
     "example": "Please hold still while I take your blood pressure.",
     "example_zh": "我量血壓時請保持不動。"
+  },
+  "holistic": {
+    "example": "Traditional medicine often takes a holistic approach to treating the whole person.",
+    "example_zh": "傳統醫學常採取整體性的方式來治療整個人。"
+  },
+  "holistically": {
+    "example": "Chinese medicine treats the patient holistically rather than just the symptom.",
+    "example_zh": "中醫從整體角度治療病人，而非只針對單一症狀。"
   },
   "homemade": {
     "example": "She brought him some homemade chicken soup.",
@@ -5771,6 +6287,10 @@
     "example": "The nurse hovered nearby in case he fell.",
     "example_zh": "護理師在一旁守著，以防他跌倒。"
   },
+  "howl": {
+    "example": "The injured dog began to howl loudly in pain throughout the night.",
+    "example_zh": "那隻受傷的狗整夜因疼痛而大聲嗥叫。"
+  },
   "human": {
     "example": "To err is human, even for a careful surgeon.",
     "example_zh": "犯錯是人之常情，連謹慎的外科醫生也不例外。"
@@ -5787,13 +6307,17 @@
     "example": "The famous surgeon remained humble and kind.",
     "example_zh": "這位著名的外科醫生依然謙遜而仁慈。"
   },
+  "humiliate": {
+    "example": "He felt the manager was trying to humiliate him in front of the staff.",
+    "example_zh": "他覺得經理是想當著全體員工的面羞辱他。"
+  },
   "humor": {
     "example": "His good humor lifted everyone on the ward.",
     "example_zh": "他的幽默感讓整個病房的人都開朗起來。"
   },
   "hunger": {
-    "example": "Loss of hunger can be an early sign of illness.",
-    "example_zh": "食慾不振可能是生病的早期徵兆。"
+    "example": "Constant hunger can be an early sign of diabetes.",
+    "example_zh": "持續的飢餓感可能是糖尿病的早期徵兆。"
   },
   "hurricane": {
     "example": "The hurricane cut off power to the hospital.",
@@ -5867,6 +6391,10 @@
     "example": "It is illegal to sell these drugs without a prescription.",
     "example_zh": "沒有處方就販售這些藥物是違法的。"
   },
+  "illicit": {
+    "example": "Police seized a large quantity of illicit drugs during the raid.",
+    "example_zh": "警方在突襲行動中查獲大量非法毒品。"
+  },
   "illuminate": {
     "example": "A bright lamp illuminated the operating table.",
     "example_zh": "一盞明燈照亮了手術臺。"
@@ -5915,6 +6443,10 @@
     "example": "The nurses showed immense patience with him.",
     "example_zh": "護理師對他展現了極大的耐心。"
   },
+  "immerse": {
+    "example": "To learn the language quickly, immerse yourself in the local culture.",
+    "example_zh": "想快速學會這門語言，就讓自己沉浸在當地文化中。"
+  },
   "immigrant": {
     "example": "The clinic helps many immigrant families.",
     "example_zh": "這間診所幫助許多移民家庭。"
@@ -5939,6 +6471,10 @@
     "example": "After the stroke, his speech was severely impaired.",
     "example_zh": "中風後，他的語言能力嚴重受損。"
   },
+  "impeachment": {
+    "example": "The scandal led to the president's impeachment by the legislature.",
+    "example_zh": "這起醜聞導致立法機關對總統提出彈劾。"
+  },
   "impecunious": {
     "example": "As an impecunious student, he survived on instant noodles.",
     "example_zh": "身為一個身無分文的學生，他靠泡麵度日。"
@@ -5954,6 +6490,22 @@
   "impermeable": {
     "example": "The gloves are impermeable to most chemicals.",
     "example_zh": "這種手套對大多數化學物質都無法滲透。"
+  },
+  "imperturbable": {
+    "example": "The surgeon stayed imperturbable even as complications arose mid-operation.",
+    "example_zh": "即使手術中途出現併發症，這位外科醫師仍然泰然自若。"
+  },
+  "impetuous": {
+    "example": "His impetuous decision to quit his job left him with no income.",
+    "example_zh": "他衝動地辭去工作，結果讓自己頓失收入。"
+  },
+  "implacable": {
+    "example": "Despite repeated apologies, her father remained an implacable enemy.",
+    "example_zh": "儘管一再道歉，她父親仍是個難以和解的敵人。"
+  },
+  "implant": {
+    "example": "The dentist will implant a titanium screw to anchor the new tooth.",
+    "example_zh": "牙醫會植入一根鈦合金螺釘來固定新的牙齒。"
   },
   "implement": {
     "example": "The hospital will implement the new safety rules next month.",
@@ -5974,6 +6526,10 @@
   "impose": {
     "example": "The hospital had to impose strict visiting limits.",
     "example_zh": "醫院不得不實施嚴格的探病限制。"
+  },
+  "impoverished": {
+    "example": "Years of civil war left the once-prosperous nation utterly impoverished.",
+    "example_zh": "多年內戰使這個昔日繁榮的國家陷入赤貧。"
   },
   "impression": {
     "example": "The dentist took an impression of her teeth.",
@@ -5999,6 +6555,10 @@
     "example": "It would be inappropriate to give such a high dose.",
     "example_zh": "給予這麼高的劑量並不恰當。"
   },
+  "inasmuch": {
+    "example": "The treatment is preferred inasmuch as it causes fewer side effects than surgery.",
+    "example_zh": "由於這種療法的副作用比手術少，因此較受青睞。"
+  },
   "inauguration": {
     "example": "The new wing opened with a formal inauguration ceremony.",
     "example_zh": "新側翼以正式的啟用典禮揭幕。"
@@ -6006,6 +6566,10 @@
   "incentive": {
     "example": "Lower fees gave people an incentive to get checked.",
     "example_zh": "較低的費用給了人們去檢查的誘因。"
+  },
+  "incessant": {
+    "example": "The incessant noise from the construction site kept the patients awake.",
+    "example_zh": "工地傳來不間斷的噪音，讓病人無法入睡。"
   },
   "incidence": {
     "example": "The incidence of the disease is rising fast.",
@@ -6022,6 +6586,14 @@
   "including": {
     "example": "The course covers several systems, including the heart and lungs.",
     "example_zh": "這門課涵蓋多個系統，包括心臟與肺臟。"
+  },
+  "incompetence": {
+    "example": "The manager was fired for sheer incompetence after the project collapsed.",
+    "example_zh": "專案失敗後，這位經理因為極度無能而被解雇。"
+  },
+  "incontrovertible": {
+    "example": "DNA evidence provided incontrovertible proof of the suspect's guilt.",
+    "example_zh": "DNA 證據提供了無可辯駁的證明，確認嫌犯有罪。"
   },
   "incorporate": {
     "example": "The plan incorporates daily exercise and rest.",
@@ -6083,6 +6655,10 @@
     "example": "Such a careless mistake in surgery is inexcusable.",
     "example_zh": "手術中如此粗心的錯誤是不可原諒的。"
   },
+  "inexpensive": {
+    "example": "Generic drugs are an inexpensive alternative to brand-name medicines.",
+    "example_zh": "學名藥是品牌藥物便宜的替代選擇。"
+  },
   "infant": {
     "example": "The infant was too small to feed on her own.",
     "example_zh": "這名嬰兒太小，無法自己進食。"
@@ -6094,6 +6670,22 @@
   "infection": {
     "example": "The wound became red and swollen from an infection.",
     "example_zh": "傷口因感染而紅腫。"
+  },
+  "infectious": {
+    "example": "Measles is a highly infectious disease that spreads through the air.",
+    "example_zh": "麻疹是一種透過空氣傳播、傳染性極強的疾病。"
+  },
+  "infiltrate": {
+    "example": "Cancer cells can infiltrate surrounding tissue and spread to other organs.",
+    "example_zh": "癌細胞能滲入周圍組織，並擴散到其他器官。"
+  },
+  "infinite": {
+    "example": "Caring for the sick demands an almost infinite amount of patience.",
+    "example_zh": "照顧病人需要近乎無限的耐心。"
+  },
+  "inflammatory": {
+    "example": "Doctors prescribed an anti-inflammatory drug to reduce the swelling in his knee.",
+    "example_zh": "醫生開了消炎藥，以減輕他膝蓋的腫脹。"
   },
   "inflated": {
     "example": "The report gave an inflated estimate of the project's benefits.",
@@ -6107,6 +6699,10 @@
     "example": "She was an influential voice in public health policy.",
     "example_zh": "她在公共衛生政策上是個有影響力的聲音。"
   },
+  "influenza": {
+    "example": "Every winter, thousands of people are hospitalized with severe influenza.",
+    "example_zh": "每年冬天，都有數千人因嚴重的流行性感冒而住院。"
+  },
   "informal": {
     "example": "The doctor had an informal chat with the family.",
     "example_zh": "醫生和家屬非正式地聊了聊。"
@@ -6114,6 +6710,14 @@
   "infrastructure": {
     "example": "Rural areas often lack basic medical infrastructure.",
     "example_zh": "偏鄉地區往往缺乏基本的醫療基礎設施。"
+  },
+  "infuse": {
+    "example": "The coach tried to infuse his discouraged players with fresh confidence.",
+    "example_zh": "教練試圖為灰心的球員注入新的信心。"
+  },
+  "ingenuity": {
+    "example": "The engineers solved the problem with remarkable ingenuity and creativity.",
+    "example_zh": "工程師們以非凡的巧思與創意解決了這個問題。"
   },
   "ingredient": {
     "example": "Sugar is the main ingredient in the cough syrup.",
@@ -6191,6 +6795,10 @@
     "example": "The clinic uses an innovative way to track doses.",
     "example_zh": "這間診所用一種創新的方式追蹤用藥。"
   },
+  "inpatient": {
+    "example": "After the surgery, she stayed as an inpatient for nearly two weeks.",
+    "example_zh": "手術後，她以住院病人的身分待了將近兩個星期。"
+  },
   "inquiry": {
     "example": "The family launched an inquiry into the error.",
     "example_zh": "家屬針對這項疏失展開了調查。"
@@ -6202,6 +6810,10 @@
   "insider": {
     "example": "An insider warned of the unsafe drug.",
     "example_zh": "一名知情人士警告了這種不安全的藥。"
+  },
+  "insidious": {
+    "example": "High blood pressure is insidious because it causes harm without symptoms.",
+    "example_zh": "高血壓很隱伏，因為它在沒有症狀的情況下悄悄造成傷害。"
   },
   "insight": {
     "example": "The scan gave doctors insight into the problem.",
@@ -6239,6 +6851,10 @@
     "example": "Engineers came to install the new scanner.",
     "example_zh": "工程師前來安裝新的掃描儀。"
   },
+  "installment": {
+    "example": "We bought the equipment by paying twelve monthly installments.",
+    "example_zh": "我們以分十二期、每月付款的方式買下了這套設備。"
+  },
   "instant": {
     "example": "The pain stopped the instant the drug took effect.",
     "example_zh": "藥一生效，疼痛立刻就停了。"
@@ -6256,8 +6872,8 @@
     "example_zh": "醫生囑咐她休息一週。"
   },
   "instruction": {
-    "example": "Follow the instruction on the label exactly.",
-    "example_zh": "嚴格遵照標籤上的說明。"
+    "example": "Follow the instructions on the label exactly.",
+    "example_zh": "請完全遵照標籤上的指示。"
   },
   "instrument": {
     "example": "Each surgical instrument is sterilized before use.",
@@ -6335,6 +6951,10 @@
     "example": "An interactive chart shows the patient's progress.",
     "example_zh": "一張互動式圖表顯示病人的進展。"
   },
+  "interdisciplinary": {
+    "example": "Treating chronic pain often requires an interdisciplinary team of specialists.",
+    "example_zh": "治療慢性疼痛往往需要一支跨學科的專家團隊。"
+  },
   "interest": {
     "example": "The student showed a keen interest in surgery.",
     "example_zh": "這名學生對外科展現出濃厚的興趣。"
@@ -6364,8 +6984,8 @@
     "example_zh": "只有受過訓練的醫生才能判讀這張掃描。"
   },
   "interpretation": {
-    "example": "Two doctors gave a different interpretation of the X-ray.",
-    "example_zh": "兩位醫生對這張 X 光片有不同的解讀。"
+    "example": "Two doctors gave different interpretations of the X-ray.",
+    "example_zh": "兩位醫師對這張 X 光片有不同的解讀。"
   },
   "interrupt": {
     "example": "Please do not interrupt the surgeon during the operation.",
@@ -6398,6 +7018,10 @@
   "intoxicated": {
     "example": "He was intoxicated and could not drive home safely.",
     "example_zh": "他喝醉了，無法安全開車回家。"
+  },
+  "intramuscular": {
+    "example": "The vaccine is given as an intramuscular injection in the upper arm.",
+    "example_zh": "這支疫苗是以肌肉注射的方式打在上臂。"
   },
   "intransitive": {
     "example": "In grammar, 'sleep' is an intransitive verb that takes no object.",
@@ -6458,6 +7082,10 @@
   "irrelevant": {
     "example": "That old test result is now irrelevant.",
     "example_zh": "那份舊的檢查結果現在已無關緊要。"
+  },
+  "irritable": {
+    "example": "Lack of sleep made him irritable and quick to lose his temper.",
+    "example_zh": "睡眠不足讓他變得易怒，動不動就發脾氣。"
   },
   "isolate": {
     "example": "Patients with the virus were isolated from others.",
@@ -6556,8 +7184,8 @@
     "example_zh": "那麼高的劑量毫無正當理由。"
   },
   "justify": {
-    "example": "The risks of surgery did not justify the small benefit.",
-    "example_zh": "手術的風險不足以證明那一點點效益是值得的。"
+    "example": "The small benefit did not justify the risks of surgery.",
+    "example_zh": "那一點點效益不足以證明手術的風險是值得的。"
   },
   "juvenile": {
     "example": "The clinic has a special wing for juvenile patients.",
@@ -6590,6 +7218,10 @@
   "laboratory": {
     "example": "The samples were sent to the laboratory at once.",
     "example_zh": "樣本立刻被送往實驗室。"
+  },
+  "laconic": {
+    "example": "The professor's laconic reply, just \"Try again,\" told us nothing useful.",
+    "example_zh": "教授簡短的回應——只有一句「再試試」——對我們毫無幫助。"
   },
   "lamp": {
     "example": "A small lamp lit the corner of the ward.",
@@ -6743,6 +7375,14 @@
     "example": "The dose was far below a lethal level.",
     "example_zh": "這個劑量遠低於致命的程度。"
   },
+  "lethargic": {
+    "example": "The anemia left her feeling lethargic and unable to climb the stairs.",
+    "example_zh": "貧血讓她感到昏沉無力，連爬樓梯都做不到。"
+  },
+  "leverage": {
+    "example": "The company used its size to leverage better deals with suppliers.",
+    "example_zh": "這家公司利用規模優勢向供應商爭取更好的條件。"
+  },
   "liability": {
     "example": "Failing to warn patients can be a legal liability.",
     "example_zh": "未能警告病人可能構成法律責任。"
@@ -6767,6 +7407,10 @@
     "example": "The nurse dimmed the light so the patient could rest.",
     "example_zh": "護理師把燈光調暗，好讓病人休息。"
   },
+  "likelihood": {
+    "example": "Regular exercise reduces the likelihood of developing heart disease.",
+    "example_zh": "規律運動能降低罹患心臟病的可能性。"
+  },
   "likewise": {
     "example": "Eat well and, likewise, get plenty of rest.",
     "example_zh": "好好吃飯，同樣地，也要充分休息。"
@@ -6785,7 +7429,7 @@
   },
   "linear": {
     "example": "The healing followed a slow, linear path.",
-    "example_zh": "癒合循著一條緩慢而穩定的路徑。"
+    "example_zh": "癒合循著一條緩慢而呈線性（直線）的路徑。"
   },
   "linen": {
     "example": "The bed was made with crisp white linen.",
@@ -6987,6 +7631,10 @@
     "example": "The drug's chemical makeup is complex.",
     "example_zh": "這種藥的化學組成很複雜。"
   },
+  "malevolent": {
+    "example": "The villain stared at the hero with a malevolent grin.",
+    "example_zh": "那名反派帶著惡毒的笑容盯著主角。"
+  },
   "malicious": {
     "example": "The hospital's network was hit by a malicious attack.",
     "example_zh": "醫院的網路遭到惡意攻擊。"
@@ -7077,7 +7725,11 @@
   },
   "massive": {
     "example": "He suffered a massive heart attack.",
-    "example_zh": "他發生了大範圍的心臟病。"
+    "example_zh": "他突發了一次嚴重的心臟病發作。"
+  },
+  "mastery": {
+    "example": "Becoming a surgeon requires complete mastery of human anatomy.",
+    "example_zh": "要成為外科醫師，必須完全精通人體解剖學。"
   },
   "match": {
     "example": "The donor's blood was a perfect match.",
@@ -7263,6 +7915,10 @@
     "example": "She had only a mild fever overnight.",
     "example_zh": "她整晚只有輕微的發燒。"
   },
+  "milestone": {
+    "example": "Graduating from medical school is a major milestone in any doctor's career.",
+    "example_zh": "從醫學院畢業是任何醫生職涯中的重要里程碑。"
+  },
   "military": {
     "example": "He was treated at a military hospital after the injury.",
     "example_zh": "他受傷後在一家軍醫院接受治療。"
@@ -7333,7 +7989,7 @@
   },
   "missile": {
     "example": "The clinic was damaged by a stray missile.",
-    "example_zh": "這間診所被一枚流彈擊中受損。"
+    "example_zh": "這間診所被一枚失控的飛彈擊中受損。"
   },
   "mission": {
     "example": "The team's mission was to vaccinate the whole village.",
@@ -7366,6 +8022,10 @@
   "moderate": {
     "example": "Doctors advise moderate exercise during recovery.",
     "example_zh": "醫生建議康復期間進行適度的運動。"
+  },
+  "moderation": {
+    "example": "Doctors advise eating sweets in moderation rather than cutting them out entirely.",
+    "example_zh": "醫生建議適度食用甜食，而非完全戒除。"
   },
   "modest": {
     "example": "The new drug brought only a modest improvement.",
@@ -7411,6 +8071,10 @@
     "example": "A machine monitors her heartbeat all night.",
     "example_zh": "一台機器整夜監測她的心跳。"
   },
+  "monologue": {
+    "example": "The actor delivered a moving ten-minute monologue at the end of the play.",
+    "example_zh": "演員在劇末發表了一段動人的十分鐘獨白。"
+  },
   "monopolize": {
     "example": "One company has come to monopolize the drug's supply.",
     "example_zh": "一家公司已壟斷了這種藥的供應。"
@@ -7426,6 +8090,10 @@
   "monument": {
     "example": "A stone monument honors the doctors who died in the epidemic.",
     "example_zh": "一座石碑紀念在疫情中殉職的醫生。"
+  },
+  "monumental": {
+    "example": "Discovering penicillin was a monumental achievement in medicine.",
+    "example_zh": "發現盤尼西林是醫學上一項不朽的成就。"
   },
   "mood": {
     "example": "Her mood improved as the pain eased.",
@@ -7515,6 +8183,14 @@
     "example": "He fell ill after eating a wild mushroom.",
     "example_zh": "他吃了一朵野菇後病倒了。"
   },
+  "mutate": {
+    "example": "Viruses can mutate rapidly, making existing vaccines less effective.",
+    "example_zh": "病毒可能快速變異，使現有疫苗的效力降低。"
+  },
+  "mutation": {
+    "example": "A single genetic mutation can dramatically change how a cell behaves.",
+    "example_zh": "單一個基因突變就可能大幅改變細胞的行為。"
+  },
   "mutter": {
     "example": "The feverish man began to mutter in his sleep.",
     "example_zh": "發燒的男子開始在睡夢中喃喃自語。"
@@ -7547,6 +8223,10 @@
     "example": "The rash was barely visible to the naked eye.",
     "example_zh": "這疹子幾乎是肉眼看不見的。"
   },
+  "narrate": {
+    "example": "The professor narrated the history of medicine in vivid detail.",
+    "example_zh": "教授生動詳盡地敘述了醫學的歷史。"
+  },
   "narrative": {
     "example": "She gave a clear narrative of her symptoms.",
     "example_zh": "她清楚地描述了她的症狀經過。"
@@ -7578,6 +8258,10 @@
   "neat": {
     "example": "She kept her notes neat and easy to read.",
     "example_zh": "她把筆記整理得整潔易讀。"
+  },
+  "nebulous": {
+    "example": "His plans for the future were still nebulous and lacked any concrete detail.",
+    "example_zh": "他對未來的規劃仍然模糊不清，缺乏任何具體細節。"
   },
   "necessity": {
     "example": "Clean water is a basic necessity in any clinic.",
@@ -7622,6 +8306,10 @@
   "nervous": {
     "example": "He was nervous before his first surgery.",
     "example_zh": "第一次手術前他很緊張。"
+  },
+  "nest": {
+    "example": "A pair of sparrows built a nest under the hospital eaves.",
+    "example_zh": "一對麻雀在醫院屋簷下築了一個巢。"
   },
   "net": {
     "example": "The hospital made little net profit last year.",
@@ -7736,7 +8424,7 @@
     "example_zh": "好的飲食與休息滋養著復原中的身體。"
   },
   "nutrient": {
-    "example": "Milk is a rich source of nutrient for babies.",
+    "example": "Milk is a rich source of nutrients for babies.",
     "example_zh": "牛奶是嬰兒豐富的營養來源。"
   },
   "nutrients": {
@@ -7767,6 +8455,10 @@
     "example": "Doctors have legal and ethical obligations to their patients.",
     "example_zh": "醫生對病人負有法律與道德上的義務。"
   },
+  "obliterate": {
+    "example": "The massive earthquake nearly obliterated the entire coastal village.",
+    "example_zh": "那場大地震幾乎將整個沿海村莊夷為平地。"
+  },
   "oblivion": {
     "example": "After the anesthetic, he sank into a peaceful oblivion.",
     "example_zh": "麻醉之後，他陷入了平靜的無意識狀態。"
@@ -7774,6 +8466,10 @@
   "oblivious": {
     "example": "He kept working, oblivious to the chaos around him.",
     "example_zh": "他繼續工作，渾然不覺周遭的混亂。"
+  },
+  "obnoxious": {
+    "example": "His obnoxious behavior at the party annoyed nearly every guest.",
+    "example_zh": "他在派對上令人討厭的行為惹惱了幾乎所有賓客。"
   },
   "obscure": {
     "example": "The cause of her illness remained obscure for months.",
@@ -7794,6 +8490,14 @@
   "obstacle": {
     "example": "Fear of needles is a common obstacle to treatment.",
     "example_zh": "怕打針是治療上常見的障礙。"
+  },
+  "obstreperous": {
+    "example": "The obstreperous toddler screamed and refused to leave the playground.",
+    "example_zh": "那個吵鬧不休的幼兒尖叫著，怎麼也不肯離開遊樂場。"
+  },
+  "obstruct": {
+    "example": "A blood clot can obstruct the artery and trigger a heart attack.",
+    "example_zh": "血栓可能阻塞動脈，引發心臟病發作。"
   },
   "obtain": {
     "example": "She obtained the test results within an hour.",
@@ -7875,6 +8579,14 @@
     "example": "Do not omit a single dose of the antibiotic.",
     "example_zh": "抗生素一劑也不可漏服。"
   },
+  "omnibus": {
+    "example": "Congress passed an omnibus bill covering healthcare, taxes, and defense at once.",
+    "example_zh": "國會一次通過了一項涵蓋醫療、稅務與國防的綜合性法案。"
+  },
+  "onerous": {
+    "example": "Caring for three sick relatives was an onerous burden for one person.",
+    "example_zh": "照顧三位生病的親人對一個人來說是沉重繁重的負擔。"
+  },
   "ongoing": {
     "example": "She is receiving ongoing care for her condition.",
     "example_zh": "她的病況正接受持續的照護。"
@@ -7938,6 +8650,10 @@
   "optional": {
     "example": "A second scan is optional, not required.",
     "example_zh": "第二次掃描是選擇性的，並非必要。"
+  },
+  "opulent": {
+    "example": "The hotel lobby was opulent, decorated with marble and gold.",
+    "example_zh": "這家飯店的大廳富麗堂皇，以大理石和黃金裝飾。"
   },
   "oral": {
     "example": "The doctor switched her to an oral medicine.",
@@ -8047,6 +8763,10 @@
     "example": "She slowly overcame her fear of surgery.",
     "example_zh": "她慢慢克服了對手術的恐懼。"
   },
+  "overhaul": {
+    "example": "The government plans a complete overhaul of the outdated health system.",
+    "example_zh": "政府計畫對過時的醫療體系進行徹底革新。"
+  },
   "overlook": {
     "example": "It is easy to overlook the early warning signs.",
     "example_zh": "早期的警訊很容易被忽略。"
@@ -8103,6 +8823,10 @@
     "example": "Her face turned pale just before she fainted.",
     "example_zh": "她昏倒前臉色發白。"
   },
+  "palpation": {
+    "example": "Through careful palpation, the doctor felt a lump in the patient's abdomen.",
+    "example_zh": "醫師透過仔細的觸診，摸到病人腹部有一個腫塊。"
+  },
   "pan": {
     "example": "She fried the herbs lightly in a small pan.",
     "example_zh": "她用一個小平底鍋把草藥略炒了一下。"
@@ -8127,6 +8851,10 @@
     "example": "The discovery caused a paradigm shift in medicine.",
     "example_zh": "這項發現引發了醫學上的典範轉移。"
   },
+  "paradox": {
+    "example": "It is a paradox that the more he sleeps, the more tired he feels.",
+    "example_zh": "他睡得越多反而越累，這是一個自相矛盾的現象。"
+  },
   "paradoxical": {
     "example": "It is paradoxical that the cure caused new symptoms.",
     "example_zh": "矛盾的是，療法竟引發了新的症狀。"
@@ -8138,6 +8866,10 @@
   "parameter": {
     "example": "Blood pressure is one parameter the nurse checks.",
     "example_zh": "血壓是護理師檢查的一項指標。"
+  },
+  "paraphernalia": {
+    "example": "The hiker packed all his camping paraphernalia into one enormous backpack.",
+    "example_zh": "這名登山客把所有露營用具全塞進一個巨大的背包裡。"
   },
   "partial": {
     "example": "The drug brought only partial relief from the pain.",
@@ -8211,9 +8943,17 @@
     "example": "Quitting smoking set him on the path to recovery.",
     "example_zh": "戒菸讓他踏上了康復之路。"
   },
+  "pathology": {
+    "example": "The biopsy was sent to the pathology lab to confirm the diagnosis.",
+    "example_zh": "切片被送到病理科實驗室，以確認診斷。"
+  },
   "patience": {
     "example": "Healing slowly tested her patience.",
     "example_zh": "緩慢的癒合考驗著她的耐性。"
+  },
+  "patriotism": {
+    "example": "His patriotism drove him to serve as a doctor on the front lines.",
+    "example_zh": "他的愛國精神驅使他到前線擔任軍醫。"
   },
   "patrol": {
     "example": "A night nurse made a quiet patrol of the ward.",
@@ -8222,6 +8962,14 @@
   "patron": {
     "example": "A wealthy patron funded the children's ward.",
     "example_zh": "一位富有的贊助人資助了兒童病房。"
+  },
+  "patronize": {
+    "example": "Loyal customers continue to patronize the old pharmacy downtown.",
+    "example_zh": "忠實顧客持續光顧市區那家老藥局。"
+  },
+  "paucity": {
+    "example": "A paucity of reliable data made the study difficult to complete.",
+    "example_zh": "可靠資料的缺乏使這項研究難以完成。"
   },
   "payment": {
     "example": "The clinic offers a payment plan for surgery.",
@@ -8278,6 +9026,10 @@
   "perch": {
     "example": "A small bird came to perch on the windowsill.",
     "example_zh": "一隻小鳥飛來停在窗臺上。"
+  },
+  "percolate": {
+    "example": "Rainwater slowly percolates through the soil to replenish the groundwater.",
+    "example_zh": "雨水緩慢地滲過土壤，補充地下水。"
   },
   "perfect": {
     "example": "No treatment is perfect, but this one helps.",
@@ -8397,7 +9149,7 @@
   },
   "phrase": {
     "example": "The doctor explained the illness without medical phrases.",
-    "example_zh": "醫生不用醫學術語就解釋了這種病。"
+    "example_zh": "醫生不用艱澀的醫學措詞就解釋了這種病。"
   },
   "physician": {
     "example": "Her family physician has known her for years.",
@@ -8435,6 +9187,10 @@
     "example": "She was a pioneer in the field of heart surgery.",
     "example_zh": "她是心臟手術領域的先驅。"
   },
+  "pique": {
+    "example": "The mysterious title piqued my curiosity, so I opened the book at once.",
+    "example_zh": "這個神秘的書名激起了我的好奇心，我立刻翻開了書。"
+  },
   "pistol": {
     "example": "The wounded man had a pistol wound to the leg.",
     "example_zh": "這名受傷的男子腿上有槍傷。"
@@ -8450,6 +9206,22 @@
   "pitcher": {
     "example": "A pitcher of water sat on the bedside table.",
     "example_zh": "床邊桌上放著一壺水。"
+  },
+  "pivotal": {
+    "example": "Early diagnosis plays a pivotal role in treating most cancers.",
+    "example_zh": "早期診斷在治療大多數癌症中扮演關鍵角色。"
+  },
+  "placate": {
+    "example": "The manager offered a refund to placate the angry customer.",
+    "example_zh": "經理提供退款，以安撫這名憤怒的顧客。"
+  },
+  "plagiarism": {
+    "example": "The student was expelled for plagiarism after copying his thesis from a journal.",
+    "example_zh": "那名學生因抄襲期刊論文寫成自己的學位論文而被退學。"
+  },
+  "plague": {
+    "example": "Chronic back pain has plagued him ever since the car accident.",
+    "example_zh": "自從那場車禍後，慢性背痛就一直折磨著他。"
   },
   "plain": {
     "example": "The doctor explained it in plain language.",
@@ -8474,6 +9246,10 @@
   "plastic": {
     "example": "The syringe is made of clear plastic.",
     "example_zh": "這支針筒是透明塑膠製成的。"
+  },
+  "plasticity": {
+    "example": "The brain's plasticity allows it to rewire itself after an injury.",
+    "example_zh": "大腦的可塑性使它能在受傷後重新建立連結。"
   },
   "plate": {
     "example": "The metal plate holds the broken bone together.",
@@ -8514,6 +9290,10 @@
   "plot": {
     "example": "The hospital was built on a small plot of land.",
     "example_zh": "這家醫院蓋在一小塊土地上。"
+  },
+  "plummet": {
+    "example": "His blood pressure began to plummet, alarming the medical team.",
+    "example_zh": "他的血壓開始驟降，讓醫療團隊大為緊張。"
   },
   "plunge": {
     "example": "Her temperature took a sudden plunge.",
@@ -8600,8 +9380,8 @@
     "example_zh": "她擁有安撫病人的罕見天賦。"
   },
   "possession": {
-    "example": "He lost possession of his speech after the stroke.",
-    "example_zh": "中風後他喪失了說話的能力。"
+    "example": "The police found stolen drugs in his possession.",
+    "example_zh": "警方發現他持有贓物。"
   },
   "post": {
     "example": "She was given a post in the children's ward.",
@@ -8675,6 +9455,10 @@
     "example": "A mild headache often precedes the seizure.",
     "example_zh": "輕微的頭痛常在癲癇發作前出現。"
   },
+  "precedence": {
+    "example": "In the emergency room, the most critical cases always take precedence.",
+    "example_zh": "在急診室裡，最危急的病例永遠享有優先處理權。"
+  },
   "precedent": {
     "example": "The unusual case set a new medical precedent.",
     "example_zh": "這個特殊的病例開創了新的醫學先例。"
@@ -8682,6 +9466,10 @@
   "precious": {
     "example": "Every minute is precious after a heart attack.",
     "example_zh": "心臟病發作後，每一分鐘都很寶貴。"
+  },
+  "precipitous": {
+    "example": "After the recall, the company's stock suffered a precipitous decline overnight.",
+    "example_zh": "召回事件後，公司股價一夜之間暴跌。"
   },
   "precise": {
     "example": "The dose must be precise for such a small child.",
@@ -8711,6 +9499,10 @@
     "example": "The doctor's prediction of a full recovery came true.",
     "example_zh": "醫生對完全康復的預測成真了。"
   },
+  "predispose": {
+    "example": "A family history of heart disease can predispose someone to similar conditions.",
+    "example_zh": "心臟病的家族病史可能使人較易罹患類似的疾病。"
+  },
   "predominantly": {
     "example": "The ward is staffed predominantly by young nurses.",
     "example_zh": "這個病房主要由年輕護理師組成。"
@@ -8739,6 +9531,18 @@
     "example": "She paid a higher premium for better health cover.",
     "example_zh": "她付了較高的保費以換取更好的醫療保障。"
   },
+  "preposterous": {
+    "example": "The idea that the earth is flat is utterly preposterous.",
+    "example_zh": "認為地球是平的這種想法實在荒謬至極。"
+  },
+  "prerequisite": {
+    "example": "Passing chemistry is a prerequisite for enrolling in the biochemistry course.",
+    "example_zh": "通過化學課是修讀生物化學課程的先決條件。"
+  },
+  "prescient": {
+    "example": "His prescient warning about the epidemic came years before the outbreak.",
+    "example_zh": "他對這場流行病的預警極具先見之明，比疫情爆發早了好幾年。"
+  },
   "prescribe": {
     "example": "The doctor will prescribe a cream for the rash.",
     "example_zh": "醫生會開一款藥膏來治這疹子。"
@@ -8758,6 +9562,10 @@
   "preservation": {
     "example": "Cold storage is key to the preservation of the drug.",
     "example_zh": "冷藏是保存這種藥的關鍵。"
+  },
+  "preservative": {
+    "example": "Manufacturers add preservatives to processed food to stop it from spoiling.",
+    "example_zh": "廠商在加工食品中添加防腐劑，以防止食物腐壞。"
   },
   "preserve": {
     "example": "Salt has long been used to preserve food.",
@@ -8791,9 +9599,17 @@
     "example": "Calm finally prevailed in the crowded waiting room.",
     "example_zh": "擁擠的候診室裡終於恢復了平靜。"
   },
+  "prevalence": {
+    "example": "The prevalence of diabetes has risen sharply in recent decades.",
+    "example_zh": "近幾十年來，糖尿病的盛行率急遽上升。"
+  },
   "prevalent": {
     "example": "Obesity is increasingly prevalent among young people.",
     "example_zh": "肥胖在年輕人之間越來越普遍。"
+  },
+  "prevaricate": {
+    "example": "Instead of admitting his mistake, he continued to prevaricate and dodge questions.",
+    "example_zh": "他不肯承認錯誤，反而不斷支吾搪塞、迴避問題。"
   },
   "prevent": {
     "example": "Washing your hands helps prevent the spread of germs.",
@@ -8875,6 +9691,14 @@
     "example": "The minister proclaimed the end of the epidemic.",
     "example_zh": "部長宣布疫情結束。"
   },
+  "proclivity": {
+    "example": "Children with a proclivity for sweets often resist eating vegetables.",
+    "example_zh": "偏好甜食的孩子往往抗拒吃蔬菜。"
+  },
+  "procrastination": {
+    "example": "Chronic procrastination meant he always finished his reports at the last minute.",
+    "example_zh": "長期的拖延習慣，讓他總是拖到最後一刻才完成報告。"
+  },
   "produce": {
     "example": "The body cannot produce enough of the hormone.",
     "example_zh": "身體無法製造足夠的這種荷爾蒙。"
@@ -8903,6 +9727,10 @@
     "example": "The hospital is run for care, not for profit.",
     "example_zh": "這家醫院以照護為宗旨，不以營利為目的。"
   },
+  "profligate": {
+    "example": "His profligate spending soon drained the entire family fortune.",
+    "example_zh": "他揮霍無度的花費，很快就耗盡了整個家族的財產。"
+  },
   "profound": {
     "example": "The diagnosis had a profound effect on her outlook.",
     "example_zh": "這個診斷對她的人生觀產生了深遠的影響。"
@@ -8930,6 +9758,18 @@
   "proliferate": {
     "example": "Cancer cells can proliferate at an alarming rate.",
     "example_zh": "癌細胞能以驚人的速度增生。"
+  },
+  "prolific": {
+    "example": "The prolific author published more than fifty novels in his lifetime.",
+    "example_zh": "這位多產的作家一生出版了五十多部小說。"
+  },
+  "prolifically": {
+    "example": "The author wrote so prolifically that she published three novels a year.",
+    "example_zh": "這位作家創作力極為旺盛，一年就出版三部小說。"
+  },
+  "prolong": {
+    "example": "Early treatment can prolong the lives of patients with chronic illness.",
+    "example_zh": "及早治療能延長慢性病患者的壽命。"
   },
   "prominent": {
     "example": "A prominent vein stood out on his forearm.",
@@ -9063,9 +9903,17 @@
     "example": "The clinic made provision for emergencies.",
     "example_zh": "這間診所為緊急狀況做了準備。"
   },
+  "provocative": {
+    "example": "The researcher published a provocative theory that challenged old beliefs.",
+    "example_zh": "這位研究者發表了一項挑戰舊有觀念、極具爭議性的理論。"
+  },
   "provoke": {
     "example": "Certain foods can provoke a flare-up of the rash.",
     "example_zh": "某些食物會誘發疹子的發作。"
+  },
+  "prowess": {
+    "example": "The surgeon was admired for her remarkable technical prowess in the operating room.",
+    "example_zh": "這位外科醫師因在手術室中超凡的技術而備受敬佩。"
   },
   "prudent": {
     "example": "It is prudent to get a second opinion before surgery.",
@@ -9094,6 +9942,10 @@
   "pulse": {
     "example": "The nurse checked his pulse and noted it was racing.",
     "example_zh": "護理師量了他的脈搏，發現跳得很快。"
+  },
+  "pummel": {
+    "example": "The boxer continued to pummel his opponent until the referee stopped the fight.",
+    "example_zh": "那名拳擊手不斷痛擊對手，直到裁判中止比賽。"
   },
   "pump": {
     "example": "The heart is a powerful pump for the blood.",
@@ -9155,6 +10007,10 @@
     "example": "The quality of care here is among the best.",
     "example_zh": "這裡的照護品質名列前茅。"
   },
+  "quandary": {
+    "example": "She was in a quandary over whether to accept the risky surgery.",
+    "example_zh": "她陷入兩難，不知是否該接受這項有風險的手術。"
+  },
   "quantity": {
     "example": "Only a small quantity of the drug is needed.",
     "example_zh": "只需少量的這種藥。"
@@ -9162,6 +10018,14 @@
   "quantum": {
     "example": "The discovery was a quantum leap in treatment.",
     "example_zh": "這項發現是治療上的一大飛躍。"
+  },
+  "quarantine": {
+    "example": "Passengers showing symptoms were placed in quarantine to prevent the disease from spreading.",
+    "example_zh": "出現症狀的旅客被隔離，以防止疾病擴散。"
+  },
+  "quarrel": {
+    "example": "The two colleagues had a bitter quarrel over who deserved the credit.",
+    "example_zh": "這兩位同事為了功勞該歸誰而激烈爭吵。"
   },
   "quarter": {
     "example": "Nearly a quarter of patients skip their medication.",
@@ -9267,6 +10131,10 @@
     "example": "This complication rarely occurs in healthy adults.",
     "example_zh": "這種併發症在健康成人身上很少發生。"
   },
+  "rash": {
+    "example": "An allergic reaction caused an itchy red rash all over her arms.",
+    "example_zh": "過敏反應使她雙臂佈滿發癢的紅疹。"
+  },
   "rat": {
     "example": "Lab rats are used to test the new drug.",
     "example_zh": "實驗室的老鼠被用來測試新藥。"
@@ -9331,13 +10199,17 @@
     "example": "The doctor tried to reassure the worried mother.",
     "example_zh": "醫生試著安撫這位憂心的母親。"
   },
+  "rebate": {
+    "example": "Customers who buy the printer can claim a fifty-dollar cash rebate.",
+    "example_zh": "購買這台印表機的顧客可申請五十美元的現金折扣。"
+  },
   "rebel": {
     "example": "His immune system began to rebel against his own body.",
     "example_zh": "他的免疫系統開始反過來攻擊自己的身體。"
   },
   "rebellion": {
     "example": "His body's rebellion against the organ worried doctors.",
-    "example_zh": "他身體對這個器官的排斥讓醫生擔憂。"
+    "example_zh": "他身體對這個器官的反抗讓醫生擔憂。"
   },
   "rebuild": {
     "example": "Therapy helped him rebuild the strength in his arm.",
@@ -9347,9 +10219,13 @@
     "example": "The maker issued a recall of the faulty device.",
     "example_zh": "製造商發布了這款瑕疵裝置的回收。"
   },
+  "recede": {
+    "example": "Once the fever broke, his symptoms gradually began to recede.",
+    "example_zh": "燒一退，他的症狀便逐漸開始消退。"
+  },
   "receiver": {
-    "example": "The transplant receiver must take drugs for life.",
-    "example_zh": "接受移植者必須終生服藥。"
+    "example": "He picked up the telephone receiver to call the nurse.",
+    "example_zh": "他拿起電話聽筒打給護理師。"
   },
   "recent": {
     "example": "A recent study links the drug to fewer strokes.",
@@ -9375,9 +10251,17 @@
     "example": "The recipient of the kidney is doing well.",
     "example_zh": "接受腎臟的病人狀況良好。"
   },
+  "reciprocal": {
+    "example": "The two countries signed a reciprocal agreement to lower trade tariffs.",
+    "example_zh": "兩國簽署了一項互惠協議，以降低貿易關稅。"
+  },
   "reciprocate": {
     "example": "She was kind to me, and I tried to reciprocate.",
     "example_zh": "她對我很好，我也試著回報她。"
+  },
+  "reckon": {
+    "example": "Doctors reckon that the patient will fully recover within a month.",
+    "example_zh": "醫生估計這位病人會在一個月內完全康復。"
   },
   "recognition": {
     "example": "Her years of service finally won recognition.",
@@ -9523,6 +10407,10 @@
     "example": "The good results reinforce the case for the new drug.",
     "example_zh": "這些良好的結果強化了採用新藥的理由。"
   },
+  "reiterate": {
+    "example": "The teacher had to reiterate the instructions because no one was listening.",
+    "example_zh": "因為沒人在聽，老師只好重申一遍指示。"
+  },
   "reject": {
     "example": "The body may reject the transplanted organ.",
     "example_zh": "身體可能排斥移植的器官。"
@@ -9623,6 +10511,10 @@
     "example": "The doctor advises patients in remote villages by phone.",
     "example_zh": "醫生透過電話為偏遠村莊的病人看診。"
   },
+  "removal": {
+    "example": "The surgeon recommended the removal of the inflamed appendix.",
+    "example_zh": "外科醫師建議切除發炎的闌尾。"
+  },
   "remove": {
     "example": "The surgeon will remove the inflamed appendix.",
     "example_zh": "外科醫生將切除發炎的闌尾。"
@@ -9647,9 +10539,17 @@
     "example": "The surgery will repair the damaged heart valve.",
     "example_zh": "這項手術將修補受損的心臟瓣膜。"
   },
+  "repay": {
+    "example": "She worked extra shifts to repay the loan she took for school.",
+    "example_zh": "她多排了好幾班，以償還上學時借的貸款。"
+  },
   "repeat": {
     "example": "The doctor asked her to repeat the test next week.",
     "example_zh": "醫生要她下週重做這項檢查。"
+  },
+  "repertoire": {
+    "example": "A good physician keeps a wide repertoire of treatment options.",
+    "example_zh": "一位優秀的醫師掌握著一整套廣泛的治療方案。"
   },
   "repetition": {
     "example": "Daily repetition of the exercise rebuilt his strength.",
@@ -9658,6 +10558,10 @@
   "replace": {
     "example": "The worn-out hip joint had to be replaced.",
     "example_zh": "磨損的髖關節必須更換。"
+  },
+  "replenish": {
+    "example": "Drink water after exercise to replenish the fluids your body has lost.",
+    "example_zh": "運動後要喝水，以補充身體流失的水分。"
   },
   "represent": {
     "example": "These few cases represent only the tip of the problem.",
@@ -9674,6 +10578,10 @@
   "reprimanded": {
     "example": "The intern was reprimanded for ignoring the protocol.",
     "example_zh": "實習醫生因無視規範而受到申斥。"
+  },
+  "reproach": {
+    "example": "His mother reproached him for neglecting his daily medication.",
+    "example_zh": "他母親責備他疏忽了每天的服藥。"
   },
   "reproached": {
     "example": "She gently reproached him for skipping his medication.",
@@ -9867,6 +10775,10 @@
     "example": "He took up gardening after his retirement.",
     "example_zh": "退休後他開始種花蒔草。"
   },
+  "retract": {
+    "example": "The journal forced the author to retract his fraudulent study.",
+    "example_zh": "期刊迫使作者撤回他造假的研究。"
+  },
   "retreat": {
     "example": "She went to a quiet retreat to recover her strength.",
     "example_zh": "她去了一處寧靜的休養所恢復元氣。"
@@ -10043,6 +10955,10 @@
     "example": "The nurse helped him roll onto his side.",
     "example_zh": "護理師幫他翻身側躺。"
   },
+  "rollout": {
+    "example": "The company delayed the rollout of its new app until the bugs were fixed.",
+    "example_zh": "公司推遲了新應用程式的首次推出，直到漏洞全部修復為止。"
+  },
   "romance": {
     "example": "Their romance began in the hospital ward.",
     "example_zh": "他們的戀情始於醫院病房。"
@@ -10103,6 +11019,10 @@
     "example": "A rumor spread that the clinic would close.",
     "example_zh": "診所要關閉的謠言傳了開來。"
   },
+  "rundown": {
+    "example": "Before the meeting, she gave us a quick rundown of the main points.",
+    "example_zh": "會議前，她向我們簡要說明了主要重點的概要。"
+  },
   "rural": {
     "example": "Doctors are scarce in many rural areas.",
     "example_zh": "在許多鄉村地區醫生很稀少。"
@@ -10147,6 +11067,10 @@
     "example": "Salmon is rich in oils that are good for the heart.",
     "example_zh": "鮭魚富含對心臟有益的油脂。"
   },
+  "salubrious": {
+    "example": "Patients were sent to a salubrious mountain resort to recover.",
+    "example_zh": "病人被送往一處有益健康的山區療養地休養。"
+  },
   "sample": {
     "example": "A small sample of tissue was sent for testing.",
     "example_zh": "一小塊組織樣本被送去檢驗。"
@@ -10162,6 +11086,10 @@
   "sandy": {
     "example": "He twisted his ankle on the soft, sandy path.",
     "example_zh": "他在鬆軟的沙地小徑上扭傷了腳踝。"
+  },
+  "sanitation": {
+    "example": "Poor sanitation in crowded camps allowed the disease to spread rapidly.",
+    "example_zh": "擁擠營區裡惡劣的衛生條件，讓疾病迅速蔓延。"
   },
   "sarcastic": {
     "example": "His sarcastic remark hurt the new intern.",
@@ -10190,6 +11118,10 @@
   "savory": {
     "example": "After the bland hospital food, the soup tasted wonderfully savory.",
     "example_zh": "在清淡的醫院餐後，這碗湯嚐起來特別鮮美。"
+  },
+  "savvy": {
+    "example": "A tech-savvy nurse quickly mastered the hospital's new digital records system.",
+    "example_zh": "一位精通科技的護理師很快就上手了醫院的新數位病歷系統。"
   },
   "scale": {
     "example": "The nurse weighed the baby on a small scale.",
@@ -10287,9 +11219,21 @@
     "example": "A small screw holds the broken bone together.",
     "example_zh": "一根小螺絲把斷骨固定在一起。"
   },
+  "scrimp": {
+    "example": "They had to scrimp and save for years to afford the surgery.",
+    "example_zh": "他們省吃儉用了好幾年，才負擔得起這場手術。"
+  },
   "script": {
     "example": "The pharmacist could not read the doctor's script.",
     "example_zh": "藥師看不懂醫生的手寫字跡。"
+  },
+  "scroll": {
+    "example": "Please scroll down to the bottom of the page to sign the consent form.",
+    "example_zh": "請向下滾動到頁面底部來簽署同意書。"
+  },
+  "scrutinize": {
+    "example": "The committee will scrutinize every detail of the clinical trial data.",
+    "example_zh": "委員會將仔細審查臨床試驗數據的每一個細節。"
   },
   "scrutiny": {
     "example": "Every dose came under careful scrutiny.",
@@ -10519,6 +11463,10 @@
     "example": "The cost of the surgery was shocking.",
     "example_zh": "手術的費用高得驚人。"
   },
+  "shoehorn": {
+    "example": "The editor tried to shoehorn three topics into a single short article.",
+    "example_zh": "編輯硬是把三個主題塞進一篇短文章裡。"
+  },
   "shoot": {
     "example": "A new shoot appeared on the old plant.",
     "example_zh": "老植株上長出了一根新芽。"
@@ -10545,7 +11493,7 @@
   },
   "shove": {
     "example": "Please don't shove; everyone will be seen.",
-    "example_zh": "請別推擠，每個人都會看到診。"
+    "example_zh": "請別推擠，每個人都會輪到看診。"
   },
   "shower": {
     "example": "He felt strong enough to take a shower at last.",
@@ -10660,8 +11608,8 @@
     "example_zh": "千萬別漏服一劑抗生素。"
   },
   "skirt": {
-    "example": "The clinic sits on the skirt of the old town.",
-    "example_zh": "這間診所位於舊城區的邊緣。"
+    "example": "The new road skirts the old town.",
+    "example_zh": "這條新路繞過舊城區。"
   },
   "skull": {
     "example": "The fall left a small crack in his skull.",
@@ -10674,6 +11622,10 @@
   "slash": {
     "example": "The budget cuts will slash the clinic's funding.",
     "example_zh": "預算刪減將大幅砍掉診所的經費。"
+  },
+  "slaughter": {
+    "example": "The senseless slaughter of so many innocent civilians shocked the entire world.",
+    "example_zh": "如此多無辜平民慘遭無謂屠殺，震驚了全世界。"
   },
   "slave": {
     "example": "He worked like a slave to support his sick mother.",
@@ -10715,6 +11667,10 @@
     "example": "The nurse fit her into the last slot of the day.",
     "example_zh": "護理師把她排進了當天最後一個空檔。"
   },
+  "sluggish": {
+    "example": "After a heavy lunch, he felt sluggish and could barely concentrate.",
+    "example_zh": "吃完豐盛的午餐後，他覺得昏沉遲鈍，幾乎無法專心。"
+  },
   "smart": {
     "example": "It was smart of her to keep a record of her symptoms.",
     "example_zh": "她記錄症狀的做法很聰明。"
@@ -10745,7 +11701,7 @@
   },
   "snap": {
     "example": "The dry bone could snap under light pressure.",
-    "example_zh": "乾脆的骨頭在輕微的壓力下就可能折斷。"
+    "example_zh": "乾燥易脆的骨頭在輕微的壓力下就可能折斷。"
   },
   "snatch": {
     "example": "He managed only to snatch a few hours of sleep.",
@@ -10827,6 +11783,10 @@
     "example": "The scanner is a sophisticated piece of equipment.",
     "example_zh": "這台掃描儀是一件精密的設備。"
   },
+  "soporific": {
+    "example": "The lecture was so soporific that half the class dozed off.",
+    "example_zh": "那場演講太催人入睡，半數的學生都打起了瞌睡。"
+  },
   "sort": {
     "example": "The nurse sorted the pills into a daily box.",
     "example_zh": "護理師把藥丸分裝進每日藥盒。"
@@ -10866,6 +11826,10 @@
   "spark": {
     "example": "A single spark of hope kept her going.",
     "example_zh": "一絲希望的火花支撐著她繼續走下去。"
+  },
+  "spasm": {
+    "example": "A sudden muscle spasm in her leg woke her up in the middle of the night.",
+    "example_zh": "腿部突然的肌肉痙攣讓她在半夜驚醒。"
   },
   "spatial": {
     "example": "The illness affected her spatial awareness.",
@@ -10939,6 +11903,10 @@
     "example": "A spider bite left a red mark on his arm.",
     "example_zh": "蜘蛛咬傷在他手臂上留下一個紅印。"
   },
+  "spike": {
+    "example": "Doctors noticed a sudden spike in flu cases this winter.",
+    "example_zh": "醫生注意到今年冬天流感病例突然激增。"
+  },
   "spill": {
     "example": "She cleaned up the spill of medicine at once.",
     "example_zh": "她立刻清理了灑出來的藥水。"
@@ -10971,6 +11939,10 @@
     "example": "A local firm agreed to sponsor the children's ward.",
     "example_zh": "一家當地公司同意贊助兒童病房。"
   },
+  "spontaneous": {
+    "example": "Some early tumors undergo spontaneous remission without any treatment.",
+    "example_zh": "有些早期腫瘤未經任何治療便自發地消退。"
+  },
   "spoon": {
     "example": "She fed him soup with a small spoon.",
     "example_zh": "她用一支小湯匙餵他喝湯。"
@@ -10998,6 +11970,10 @@
   "spring": {
     "example": "The cold she caught in spring lingered for weeks.",
     "example_zh": "她春天得的感冒拖了好幾週。"
+  },
+  "spurious": {
+    "example": "The study's conclusion rested on a spurious correlation, not real causation.",
+    "example_zh": "這項研究的結論建立在虛假的相關性上，而非真正的因果關係。"
   },
   "squad": {
     "example": "A rescue squad reached the crash within minutes.",
@@ -11127,6 +12103,10 @@
     "example": "She broke the stereotype of the cold surgeon.",
     "example_zh": "她打破了外科醫生冷漠的刻板印象。"
   },
+  "sterile": {
+    "example": "Surgeons must use sterile instruments to prevent post-operative infection.",
+    "example_zh": "外科醫師必須使用無菌器械，以防止術後感染。"
+  },
   "stick": {
     "example": "The doctor used a wooden stick to check her throat.",
     "example_zh": "醫生用一根木棒檢查她的喉嚨。"
@@ -11146,6 +12126,10 @@
   "stimulus": {
     "example": "Light is a stimulus that the eye responds to.",
     "example_zh": "光是眼睛會反應的一種刺激。"
+  },
+  "stingy": {
+    "example": "He was too stingy to tip the waiter even after excellent service.",
+    "example_zh": "他太小氣了，即使服務很好也不願給服務生小費。"
   },
   "stir": {
     "example": "The good news stirred hope in the whole ward.",
@@ -11284,12 +12268,16 @@
     "example_zh": "她的康復讓所有人又驚又喜。"
   },
   "subject": {
-    "example": "Each patient in the study is known only by a number.",
-    "example_zh": "研究中的每位受試者只以編號識別。"
+    "example": "The subjects in the clinical trial were followed for two years.",
+    "example_zh": "臨床試驗中的受試者被追蹤了兩年。"
   },
   "subjective": {
     "example": "Pain is subjective and hard to measure.",
     "example_zh": "疼痛是主觀的，難以衡量。"
+  },
+  "submerge": {
+    "example": "The flood was so severe that it submerged entire streets within hours.",
+    "example_zh": "洪水非常嚴重，幾小時內就淹沒了整條整條的街道。"
   },
   "submit": {
     "example": "Please submit the form before the operation.",
@@ -11355,6 +12343,10 @@
     "example": "The garden was full of succulent plants that store water.",
     "example_zh": "花園裡長滿了能儲水的多肉植物。"
   },
+  "suction": {
+    "example": "The surgeon used suction to remove blood from the wound during the operation.",
+    "example_zh": "外科醫師在手術中用抽吸法將傷口的血液清除。"
+  },
   "sue": {
     "example": "The family threatened to sue the hospital.",
     "example_zh": "家屬揚言要控告醫院。"
@@ -11391,6 +12383,10 @@
     "example": "She recovered in a private suite at the hospital.",
     "example_zh": "她在醫院的一間單人套房裡休養。"
   },
+  "sullen": {
+    "example": "The boy gave a sullen look and refused to answer any questions.",
+    "example_zh": "那男孩擺出一臉慍怒的表情，拒絕回答任何問題。"
+  },
   "sum": {
     "example": "The treatment cost a large sum of money.",
     "example_zh": "這項治療花了一大筆錢。"
@@ -11415,6 +12411,10 @@
     "example": "She loved to watch the sunset from her bed.",
     "example_zh": "她喜歡從床上看夕陽。"
   },
+  "superfluous": {
+    "example": "The report was full of superfluous details that nobody needed to read.",
+    "example_zh": "這份報告充滿了沒人需要閱讀的多餘細節。"
+  },
   "superintendent": {
     "example": "The hospital superintendent approved the plan.",
     "example_zh": "醫院的院長批准了這項計畫。"
@@ -11422,6 +12422,10 @@
   "superior": {
     "example": "The new drug proved superior to the old one.",
     "example_zh": "新藥被證實優於舊藥。"
+  },
+  "supersede": {
+    "example": "The new guidelines will supersede all the previous treatment protocols.",
+    "example_zh": "這份新準則將取代先前所有的治療方案。"
   },
   "supervise": {
     "example": "A senior doctor supervises every new intern.",
@@ -11591,6 +12595,14 @@
     "example": "The baby was born with a rare syndrome.",
     "example_zh": "這名嬰兒生來患有一種罕見的綜合症。"
   },
+  "synergy": {
+    "example": "The two drugs work in synergy, producing a stronger effect together than alone.",
+    "example_zh": "這兩種藥物產生協同作用，合用的效果比單用更強。"
+  },
+  "synoptic": {
+    "example": "The textbook opens with a synoptic overview of the entire nervous system.",
+    "example_zh": "這本教科書開頭先對整個神經系統作了概要式的綜述。"
+  },
   "synthetic": {
     "example": "The jacket is made of a synthetic material, not wool.",
     "example_zh": "這件外套是合成材質製成的，不是羊毛。"
@@ -11622,6 +12634,10 @@
   "tail": {
     "example": "A long tail of side effects worried the patient.",
     "example_zh": "一長串的副作用讓病人擔憂。"
+  },
+  "tailor": {
+    "example": "Doctors tailor each treatment plan to the individual patient's needs.",
+    "example_zh": "醫生會依據每位病人的需求量身打造治療方案。"
   },
   "tale": {
     "example": "The old nurse told tales of medicine in wartime.",
@@ -11822,6 +12838,10 @@
   "theoretical": {
     "example": "The risk is largely theoretical, not practical.",
     "example_zh": "這種風險大多是理論上的，並非實際的。"
+  },
+  "therapeutic": {
+    "example": "Gentle music can have a therapeutic effect on anxious patients.",
+    "example_zh": "輕柔的音樂對焦慮的病人能產生療癒的效果。"
   },
   "therapy": {
     "example": "She began speech therapy after the stroke.",
@@ -12191,6 +13211,10 @@
     "example": "Her recovery was a triumph of will.",
     "example_zh": "她的康復是意志的勝利。"
   },
+  "trivial": {
+    "example": "Don't ignore the symptom just because it seems trivial at first.",
+    "example_zh": "別因為這症狀起初看似微不足道就忽視它。"
+  },
   "troop": {
     "example": "A troop of medics was sent to the disaster zone.",
     "example_zh": "一隊醫護人員被派往災區。"
@@ -12243,6 +13267,10 @@
     "example": "The scanner felt like a narrow tunnel around her.",
     "example_zh": "掃描儀在她四周像一條狹窄的隧道。"
   },
+  "turmeric": {
+    "example": "Turmeric gives curry its yellow color and is valued for its anti-inflammatory effects.",
+    "example_zh": "薑黃讓咖哩呈現黃色，並因其抗發炎功效而備受重視。"
+  },
   "twist": {
     "example": "She felt a sharp twist of pain in her ankle.",
     "example_zh": "她感到腳踝一陣劇烈的扭痛。"
@@ -12266,6 +13294,10 @@
   "unabashedly": {
     "example": "He unabashedly admitted that he had never read the report.",
     "example_zh": "他毫不害臊地承認自己從沒讀過那份報告。"
+  },
+  "unanimous": {
+    "example": "The committee reached a unanimous decision to approve the new policy.",
+    "example_zh": "委員會一致決定通過這項新政策。"
   },
   "unconscious": {
     "example": "He was found unconscious on the floor.",
@@ -12314,6 +13346,10 @@
   "undertake": {
     "example": "The hospital agreed to undertake the risky surgery.",
     "example_zh": "醫院同意進行這場高風險的手術。"
+  },
+  "undocumented": {
+    "example": "Many undocumented immigrants are afraid to seek medical care when they fall ill.",
+    "example_zh": "許多沒有合法身分文件的移民生病時不敢就醫。"
   },
   "undoubtedly": {
     "example": "Rest is undoubtedly the best medicine here.",
@@ -12370,6 +13406,14 @@
   "unprecedented": {
     "example": "The hospital faced an unprecedented number of patients.",
     "example_zh": "醫院面臨前所未有的病患人數。"
+  },
+  "unravel": {
+    "example": "Detectives worked for months to unravel the mystery behind the crime.",
+    "example_zh": "偵探花了數月時間，才解開這起犯罪背後的謎團。"
+  },
+  "untenable": {
+    "example": "Once new data emerged, his original theory became completely untenable.",
+    "example_zh": "新數據出現後，他原先的理論變得完全站不住腳。"
   },
   "until": {
     "example": "The pharmacy stays open until midnight on weekdays.",
@@ -12523,6 +13567,10 @@
     "example": "The lab ran a second test to verify the result.",
     "example_zh": "實驗室做了第二次檢查來核實結果。"
   },
+  "versatility": {
+    "example": "Her versatility allows her to play many different roles on the team.",
+    "example_zh": "她的多才多藝使她能在團隊中勝任許多不同的角色。"
+  },
   "verse": {
     "example": "He found comfort in a verse of poetry.",
     "example_zh": "他從一句詩中得到慰藉。"
@@ -12543,6 +13591,10 @@
     "example": "The veteran nurse calmed the frightened patient.",
     "example_zh": "這位資深護理師安撫了受驚的病人。"
   },
+  "veterinarian": {
+    "example": "The veterinarian examined the sick dog and prescribed antibiotics.",
+    "example_zh": "獸醫檢查了生病的狗，並開了抗生素。"
+  },
   "via": {
     "example": "The drug enters the blood via a thin tube.",
     "example_zh": "藥物經由一條細管進入血液。"
@@ -12558,6 +13610,10 @@
   "victory": {
     "example": "Beating the infection felt like a real victory.",
     "example_zh": "戰勝這個感染感覺像是真正的勝利。"
+  },
+  "vigilant": {
+    "example": "Nurses must stay vigilant for any sudden change in the patient's vital signs.",
+    "example_zh": "護理師必須對病人生命徵象的任何突然變化保持警覺。"
   },
   "vigorous": {
     "example": "The doctor advised against vigorous exercise for now.",
@@ -12627,6 +13683,10 @@
     "example": "She lost her vocal power after the throat surgery.",
     "example_zh": "喉部手術後她失去了發聲的力量。"
   },
+  "volatility": {
+    "example": "The market's extreme volatility made investors nervous about their savings.",
+    "example_zh": "市場的劇烈波動讓投資人對自己的積蓄感到不安。"
+  },
   "volcano": {
     "example": "Ash from the volcano harmed people's lungs.",
     "example_zh": "火山的灰燼危害了人們的肺。"
@@ -12650,6 +13710,10 @@
   "voter": {
     "example": "Each voter received a card in the mail.",
     "example_zh": "每位選民都收到一張郵寄的卡片。"
+  },
+  "vow": {
+    "example": "He made a solemn vow to quit smoking for the sake of his health.",
+    "example_zh": "他鄭重發誓，為了健康要把菸戒掉。"
   },
   "vulnerable": {
     "example": "Newborns are especially vulnerable to infection because their immune systems are immature.",
@@ -12759,6 +13823,10 @@
     "example": "After a week's rest, she felt completely well again.",
     "example_zh": "休息一週後，她又覺得完全康復了。"
   },
+  "whack": {
+    "example": "He gave the stuck drawer a hard whack and it finally opened.",
+    "example_zh": "他用力重擊那個卡住的抽屜，它終於打開了。"
+  },
   "whale": {
     "example": "The huge whale surfaced beside the boat.",
     "example_zh": "巨大的鯨魚在船邊浮出水面。"
@@ -12803,6 +13871,10 @@
     "example": "He suffered painful withdrawal when he quit the drug.",
     "example_zh": "戒掉這種藥時，他經歷了痛苦的戒斷症狀。"
   },
+  "withstand": {
+    "example": "Healthy bones can withstand considerable pressure without fracturing.",
+    "example_zh": "健康的骨骼能承受相當大的壓力而不會骨折。"
+  },
   "witness": {
     "example": "A nurse witnessed the patient sign the consent form.",
     "example_zh": "一名護理師見證病人簽署同意書。"
@@ -12814,6 +13886,10 @@
   "wool": {
     "example": "A warm wool blanket covered the shivering patient.",
     "example_zh": "一條溫暖的羊毛毯蓋住了發抖的病人。"
+  },
+  "workable": {
+    "example": "After hours of discussion, they finally reached a workable compromise.",
+    "example_zh": "經過數小時的討論，他們終於達成了一個可行的折衷方案。"
   },
   "worldwide": {
     "example": "The vaccine is now used worldwide.",
@@ -12835,6 +13911,10 @@
     "example": "The nurse wrapped a bandage around his wrist.",
     "example_zh": "護理師用繃帶纏住他的手腕。"
   },
+  "wreak": {
+    "example": "The hurricane wreaked havoc on the coastal town, destroying hundreds of homes.",
+    "example_zh": "颶風在沿海小鎮造成嚴重破壞，摧毀了數百間房屋。"
+  },
   "wright": {
     "example": "The old wright built the wooden ward by hand.",
     "example_zh": "那位老工匠親手蓋了這間木造病房。"
@@ -12854,6 +13934,10 @@
   "youngster": {
     "example": "The youngster healed faster than the older patients.",
     "example_zh": "這名年輕人比年長的病人癒合得快。"
+  },
+  "zenith": {
+    "example": "At the zenith of his career, the surgeon was respected around the world.",
+    "example_zh": "在事業的巔峰時期，這位外科醫師受到全世界的敬重。"
   },
   "zone": {
     "example": "The hospital has a strict no-smoking zone.",

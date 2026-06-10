@@ -7,7 +7,9 @@
 
 ## 0. 一句話現況
 
-把網站從「題庫」擴成「**每天打開就能直接讀書、會跟著實際進度自動調整**的讀書中樞」。功能全上線、測試全過、production build 通過。**資料是刻意的「種子／部分填充」**——基礎建設完成，內容（例句、古文、複習文章）只先放了一部分，剩下照下面的步驟補。已 commit（`feat: 每日讀書系統…`）。
+把網站從「題庫」擴成「**每天打開就能直接讀書、會跟著實際進度自動調整**的讀書中樞」。功能全上線、測試全過（74 unit tests）、production build 通過。**資料是刻意的「種子／部分填充」**——基礎建設完成，內容（例句、古文、複習文章）只先放了一部分，剩下照下面的步驟補。已 commit（`feat: 每日讀書系統…`）。
+
+> **2026-06-10 二次知識複審＋全修**（報告：`知識驗證/複審報告.md`）。修了：① 古文 6 筆注音/用字（教育部辭典查證）＋胡越回改＋編輯級體例；② 單字 4 句例句、並把選字規則改成「曾為考題正解的字一律收錄」→ 缺字缺口 324→49（餘 49 皆 trivial 或 OCR 錯字）、單字總量 cap 3240、考過字覆蓋 694→1183；③ 程式：考前 14 天 taper 真的停發新單字、每日複習頁的「複習單字」改成可翻卡評分（修好 SRS 死鏈：以前到期字永不消化）、每日新字 16→18（剛好 taper 前學完全部）、reviewVocabMax 70→100、移除無作用的 `classicEveryNDays`、「距考試」改「距完課」並標實際考試 2027/3–4。新增 `pipeline/data/vocab_zh_overrides.json`（ECDICT 釋義補義層，重產不丟）與 `src/utils/studyPlan.test.ts`。
 
 ---
 
@@ -44,7 +46,7 @@ npm run build             # production build，應 Complete!
 
 ## 3. 接下來要做的事（依優先序，可直接動工）
 
-### ✅ A. 補滿單字例句（已完成：3215 / 3215）
+### ✅ A. 補滿單字例句（已完成：3240 / 3240；2026-06-10 複審後選字規則改版，見 §0）
 > **2026-06-09 完成**：用「做法二」（環境無可用 API key）分批補完剩餘 3170 字的例句，依詞頻由高到低。每筆 `draft:true`、UI 顯示「AI 草稿例句」。新增可重用 helper **`pipeline/merge_examples_batch.py`**（把手寫的 `{word:{example,example_zh}}` batch 併進 cache，UTF-8、ASCII-only stdout、會驗證空值）。已過 lint＋69 unit tests＋production build。下面做法保留供日後補新字參考。
 
 音標與中文是 ECDICT 權威來源；**例句**是 LLM 草稿。例句存在 **`pipeline/data/vocab_examples.json`**（已 commit，key = 單字，value = `{example, example_zh}`），合併後寫進 `src/data/vocab.json`，每筆 `draft:true`、UI 顯示「AI 草稿例句」。

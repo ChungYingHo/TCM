@@ -10,7 +10,8 @@ import { ymd, parseYmd, dayType, fullStudyDays, isTaper, type DayType, type Rhyt
 export interface ScheduleData {
   range: { start: string; end: string; days: number }
   examDate: string
-  perDay: { notesPerSubject: number; quiz: number; newVocab: number; classicEveryNDays: number; reviewVocabMax: number }
+  examWindow?: string
+  perDay: { notesPerSubject: number; quiz: number; newVocab: number; reviewVocabMax: number }
   rhythm: Rhythm
   tracks: { vocab: string[]; notes: Record<Subject, string[]>; classics: string[] }
   noteTags: Record<string, string>
@@ -64,13 +65,17 @@ export function computeToday(schedule: ScheduleData, plan: DailyPlanStore, today
   const poolUnion = [...new Set(notes.flatMap((n) => schedule.quizPoolByTag[n.tag] || []))]
   const quizIds = rotatePick(poolUnion, perDay.quiz, seed)
 
-  const newVocabIds = tracks.vocab.slice(cur.vocab, cur.vocab + perDay.newVocab)
+  // Pre-exam taper = review only: stop introducing new words (notes/classics keep
+  // cycling, which is itself review). New material is sized to finish by taper start.
+  const taper = isTaper(today, examDate, rhythm)
+  const newVocabIds = taper ? [] : tracks.vocab.slice(cur.vocab, cur.vocab + perDay.newVocab)
   const classicId = tracks.classics.length ? tracks.classics[cur.classics % tracks.classics.length] : null
 
   // Pace: where the vocab cursor should be, counting only full study days before today.
+  // Capped at the track length so finishing the list never reads as "behind".
   const yesterday = ymd(parseYmd(today) - DAY_MS)
   const expectedDays = inRange && yesterday >= range.start ? fullStudyDays(range.start, yesterday, rhythm) : 0
-  const vocabExpected = expectedDays * perDay.newVocab
+  const vocabExpected = Math.min(tracks.vocab.length, expectedDays * perDay.newVocab)
   const aheadDays = perDay.newVocab ? Math.round((cur.vocab - vocabExpected) / perDay.newVocab) : 0
   const daysToExam = Math.max(0, Math.round((parseYmd(examDate) - parseYmd(today)) / DAY_MS))
 
@@ -78,7 +83,7 @@ export function computeToday(schedule: ScheduleData, plan: DailyPlanStore, today
     date: today,
     inRange,
     dayType: dayType(today, range.start, rhythm),
-    taper: isTaper(today, examDate, rhythm),
+    taper,
     daysToExam,
     notes,
     quizIds,

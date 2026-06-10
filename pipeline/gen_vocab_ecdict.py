@@ -41,6 +41,27 @@ OUT = os.path.join(C.OUT_DIR, 'vocab_base.json')
 TARGET = 3000
 WANT_TAGS = ('gre', 'toefl')
 UNRANKED = 10**9
+# Words that were ever a CORRECT answer are proven exam vocabulary — include them all,
+# except very common words (frq rank ≤ TRIVIAL_FRQ without a gre/toefl tag).
+TRIVIAL_FRQ = 3000
+# Hard cap so the daily schedule can finish the track before the pre-exam taper
+# (18 new words/day × 180 full-intensity days, see gen_schedule.py).
+CAP = 3240
+
+
+def lemmas(w: str) -> set[str]:
+    """Cheap inflection→lemma candidates (escalates→escalate, abated→abate…)."""
+    out: set[str] = set()
+    for suf, reps in [('ies', ['y']), ('ied', ['y']), ('es', ['', 'e']), ('s', ['']),
+                      ('ed', ['', 'e']), ('d', ['']), ('ing', ['', 'e']), ('ly', ['']),
+                      ('er', ['', 'e']), ('est', ['', 'e']), ('ally', ['al']), ('ness', [''])]:
+        if w.endswith(suf) and len(w) - len(suf) >= 3:
+            base = w[: len(w) - len(suf)]
+            for r in reps:
+                out.add(base + r)
+            if len(base) >= 2 and base[-1] == base[-2]:  # running -> run
+                out.add(base[:-1])
+    return out
 
 POS_LABEL = {
     'n': 'n.', 'v': 'v.', 'j': 'adj.', 'a': 'adj.', 'r': 'adv.',
@@ -149,13 +170,72 @@ def main() -> None:
     chosen: dict[str, dict] = {w: make(w, row) for _, w, row in tagged[:TARGET]}
 
     # 2) Add exam-tested words that RECUR (≥2×) but missed the GRE/TOEFL cut — these
-    #    are proven 後中 vocabulary. One-off common options (release, spirit…) are left
-    #    out to keep the list focused, but their examCount still annotates the list.
+    #    are proven 後中 vocabulary.
     extra = 0
     for w, c in ex_count.items():
         if c >= 2 and w not in chosen and w in ec:
             chosen[w] = make(w, ec[w])
             extra += 1
+
+    # 3) Add every word that was ever a CORRECT answer (≥1×) — a once-tested answer
+    #    is higher-yield than a never-tested frequency pick. Inflections fold onto
+    #    their ECDICT lemma; trivially common words stay out.
+    def is_real(w: str) -> bool:
+        """A genuine study word, not an ECDICT junk stub (abbr/variant w/ no rank+tag)."""
+        row = ec.get(w)
+        return bool(row) and (frq_key(row) != UNRANKED or (row.get('tag') or '').strip() != '')
+
+    def best_lemma(w: str) -> str | None:
+        """Real ECDICT lemma for an inflected form: prefer the most frequent candidate."""
+        cands = [l for l in ({w} | lemmas(w)) if is_real(l)]
+        return min(cands, key=lambda l: frq_key(ec[l])) if cands else None
+
+    answers = 0
+    for w, c in ex_correct.items():
+        if c < 1 or w in STOP or w in chosen or any(l in chosen for l in lemmas(w)):
+            continue
+        target = best_lemma(w)
+        if not target or target in chosen:
+            continue
+        row = ec[target]
+        frq = frq_key(row)
+        tag = (row.get('tag') or '').lower()
+        if frq != UNRANKED and frq <= TRIVIAL_FRQ and not any(t in tag for t in WANT_TAGS):
+            continue
+        chosen[target] = make(target, row)
+        answers += 1
+
+    # 4) Re-attribute exam stats so inflected exam forms count toward their in-list
+    #    lemma (escalates/escalating -> escalate) — drives both the 「後中考過」badge
+    #    and the exam-first ordering.
+    agg_count: dict[str, int] = defaultdict(int)
+    agg_correct: dict[str, int] = defaultdict(int)
+    agg_ids: dict[str, list[str]] = defaultdict(list)
+    for w in ex_count:
+        tgt = w if w in chosen else next((l for l in lemmas(w) if l in chosen), None)
+        if not tgt:
+            continue
+        agg_count[tgt] += ex_count[w]
+        agg_correct[tgt] += ex_correct.get(w, 0)
+        for qid in ex_ids.get(w, []):
+            if qid not in agg_ids[tgt]:
+                agg_ids[tgt].append(qid)
+    for w, entry in chosen.items():
+        entry['examCount'] = agg_count.get(w, 0)
+        entry['examCorrect'] = agg_correct.get(w, 0)
+        entry['examIds'] = agg_ids.get(w, [])[:15]
+
+    # 5) Cap so the schedule finishes the track before the taper — drop the rarest
+    #    never-tested words first (the lowest-yield tail).
+    dropped = 0
+    if len(chosen) > CAP:
+        drop = sorted(
+            (w for w, e in chosen.items() if e['examCount'] == 0),
+            key=lambda w: frq_key(ec[w]), reverse=True,
+        )[: len(chosen) - CAP]
+        for w in drop:
+            del chosen[w]
+        dropped = len(drop)
 
     # Order: exam-tested first (by exam count), then most-frequent — this is also
     # the order the schedule introduces new words, so the most relevant come first.
@@ -168,7 +248,8 @@ def main() -> None:
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump({'count': len(words), 'words': words}, f, ensure_ascii=False, separators=(',', ':'))
     exam_in = sum(1 for w in words if w['examCount'])
-    print(f'ecdict={len(ec)} chosen={len(words)} exam-merged-extra={extra} exam-tested-in-list={exam_in}')
+    print(f'ecdict={len(ec)} chosen={len(words)} recur-extra={extra} answer-extra={answers} '
+          f'tail-dropped={dropped} exam-tested-in-list={exam_in}')
     print('first 12:', ', '.join(w['word'] for w in words[:12]))
 
 
