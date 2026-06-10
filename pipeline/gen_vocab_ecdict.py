@@ -50,6 +50,9 @@ CAP = 3240
 # 三審補收（知識驗證/單字三審.md）：曾為考題正解的醫學/時事字，但 ECDICT 無詞頻無標籤
 # （會被 is_real 當 junk stub 濾掉）或根本未收錄（新字，附手寫條目於 EXTRA_ROWS）。
 FORCE_ANSWER_WORDS = {'anosmia', 'lipoma', 'permacrisis'}
+# 三審 P2 回收：未考過但高價值的 TOEFL/GRE 字，詞頻剛好落在 TARGET/CAP 切線外
+# 被汰除（gauge 曾在複審 P0 修正清單上卻整字被砍）。一律收錄且不受 CAP 尾段汰除。
+FORCE_KEEP_WORDS = {'gauge'}
 EXTRA_ROWS: dict[str, dict] = {
     'permacrisis': {
         'word': 'permacrisis', 'phonetic': "'pɜːmәkraɪsɪs",
@@ -218,6 +221,11 @@ def main() -> None:
         chosen[target] = make(target, row)
         answers += 1
 
+    # 3b) Hand-picked keeps (FORCE_KEEP_WORDS) that the frequency cut excluded.
+    for w in FORCE_KEEP_WORDS:
+        if w not in chosen and w in ec:
+            chosen[w] = make(w, ec[w])
+
     # 4) Re-attribute exam stats so inflected exam forms count toward their in-list
     #    lemma (escalates/escalating -> escalate) — drives both the 「後中考過」badge
     #    and the exam-first ordering.
@@ -243,7 +251,7 @@ def main() -> None:
     dropped = 0
     if len(chosen) > CAP:
         drop = sorted(
-            (w for w, e in chosen.items() if e['examCount'] == 0),
+            (w for w, e in chosen.items() if e['examCount'] == 0 and w not in FORCE_KEEP_WORDS),
             key=lambda w: frq_key(ec[w]), reverse=True,
         )[: len(chosen) - CAP]
         for w in drop:
