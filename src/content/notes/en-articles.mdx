@@ -1,0 +1,157 @@
+---
+title: 冠詞與名詞數：可數不可數、a/an/the 的選用
+subject: english
+tag: 文法：冠詞與名詞數
+summary: 可數與不可數名詞的判別、a 與 an 看發音、a/an 與 the 的選用（首次提到 vs 已知）、the 的特指與獨一無二、few／little 的量詞、零冠詞，附判斷流程。
+audio: >
+  冠詞與名詞數，重點複習。
+  先判可數或不可數，不可數名詞像 water、advice、information、furniture，不加 a，也不加複數。
+  泛指單數可數名詞一定要有限定詞。第一次提到用 a 或 an，再次提到或雙方都知道用 the。
+  the 用在獨一無二、最高級、序數、特指。
+  a 還是 an 看發音，a university、an hour。
+  可數用 few、a few；不可數用 little、a little。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import CountableQuiz from '@/components/notes/CountableQuiz.svelte'
+import ArticleChooser from '@/components/notes/ArticleChooser.svelte'
+
+<NoteStats tag="句構與語意連貫" client:load />
+
+冠詞（a / an / the）和名詞單複數常被當成「小細節」，卻是克漏字與文法題穩定的失分點。關鍵第一步永遠是：**這個名詞可數還是不可數？**
+
+## 一、可數 vs 不可數
+
+| 類型 | 特徵 | 例 |
+|---|---|---|
+| **可數** | 有單複數、可加 a/an、可數數字 | a book / two books, a patient |
+| **不可數** | 無複數、不加 a/an、視為整體 | water, air, money, time |
+
+常考的**不可數名詞**（中文像可數、英文卻不可數）：**information, advice, news, equipment, furniture, luggage, homework, knowledge, research, progress**。
+
+- ✗ an advice / two advices　✓ **a piece of advice** / much advice
+
+<CountableQuiz client:visible />
+
+## 二、a 還是 an？看「發音」不是看字母
+
+- **a** + 子音開頭音：a university（/ju/）、a European、a one-way street（/w/）
+- **an** + 母音開頭音：an hour（h 不發音）、an honest man、an MP（/em/）
+
+## 三、a/an vs the 的選用
+
+| 用 a/an | 用 the |
+|---|---|
+| 第一次提到、不特定的單數可數名詞 | 再次提到、雙方都知道是哪一個 |
+| 表「一個（種）」 | 獨一無二（the sun, the moon, the earth） |
+| 職業（She is **a** nurse） | 最高級、序數（the best, the first） |
+
+- I saw **a** dog. **The** dog was barking.（先 a，再 the）
+- Please close **the** door.（雙方都知道哪扇門）
+
+<ArticleChooser client:visible />
+
+## 四、零冠詞（不加冠詞）
+
+- 複數或不可數名詞表**泛指**：**Dogs** are loyal. / **Water** is essential.
+- 三餐、運動、學科：have **breakfast**, play **tennis**, study **biology**
+- by + 交通工具：by **bus**, by **car**
+
+## 五、數量詞：可數 vs 不可數
+
+| 意思 | 可數 | 不可數 |
+|---|---|---|
+| 許多 | many | much |
+| 一些 | a few | a little |
+| 幾乎沒有 | **few** | **little** |
+| 較少 | **fewer** | **less** |
+
+> 注意 **few / little**（幾乎沒有，偏負面）vs **a few / a little**（有一些，偏正面）的差別。
+
+<Memorize>
+先判<b>可數／不可數</b>：information、advice、equipment、furniture 都是<b>不可數</b>（不加 a、不加複數）。<br />
+<b>a / an 看發音</b>：a university、an hour。<br />
+第一次提到用 <b>a/an</b>，再次提到或雙方已知用 <b>the</b>；獨一無二／最高級／序數用 <b>the</b>。<br />
+可數用 <b>few / a few / fewer</b>，不可數用 <b>little / a little / less</b>。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>不可數名詞</b>：information, advice, news, equipment, furniture, luggage, homework, knowledge, research, progress（不加 a、不加複數，用 a piece of …）。",
+  "<b>a vs an</b> 看後面字的<b>發音</b>：a university, a one-dollar bill；an hour, an honest, an MP。",
+  "<b>a/an</b>：首次提到、泛指一個；<b>the</b>：再次提到、雙方已知、獨一無二、最高級、序數。",
+  "<b>零冠詞</b>：複數/不可數泛指、三餐、運動、學科、by + 交通工具。",
+  "<b>few/little</b>（幾乎沒有，負面）≠ <b>a few/a little</b>（有一些，正面）。",
+  "<b>fewer + 可數</b>、<b>less + 不可數</b>（fewer mistakes / less time）。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="文法：冠詞與名詞數" />
+
+## 例題（先自己做，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="The doctor gave me ____ on how to manage my blood pressure."
+  options={["an advice", "advices", "some advice", "a few advice"]}
+  answer="(C) some advice"
+  steps={[
+    "<b>advice</b> 是不可數名詞，不能加 a/an，也沒有複數。",
+    "不可數名詞用 some / much / a piece of 修飾。",
+    "答案：<b>some advice</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="It took us almost ____ hour to fill in all the hospital forms."
+  options={["a", "an", "the", "one the"]}
+  answer="(B) an"
+  steps={[
+    "hour 的 h <b>不發音</b>，以母音 /aʊ/ 開頭。",
+    "母音開頭音前用 <b>an</b>。",
+    "答案：<b>an</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="There were ____ side effects, so most patients tolerated the drug well."
+  options={["few", "little", "a little", "much"]}
+  answer="(A) few"
+  steps={[
+    "side effects 是<b>可數複數</b> → 排除 little / a little / much（修飾不可數）。",
+    "語意是「幾乎沒有副作用」（正面結果）→ 用 <b>few</b>（幾乎沒有）。",
+    "答案：<b>few</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="She bought a new monitor yesterday, but ____ monitor stopped working this morning."
+  options={["a", "an", "the", "(no article)"]}
+  answer="(C) the"
+  steps={[
+    "monitor 第一次提到用 a（a new monitor）；<b>再次提到</b>同一台。",
+    "再次提到、雙方已知的特定物用 <b>the</b>。",
+    "答案：<b>the</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="Eating ____ fruit and getting enough sleep can boost ____ immune system."
+  options={["the / a", "a / the", "(no article) / the", "(no article) / a"]}
+  answer="(C) (no article) / the"
+  steps={[
+    "第一空 fruit 在此為<b>不可數泛指</b> → 零冠詞。",
+    "第二空 immune system 是身體裡<b>特定且獨一無二</b>的系統 → 用 <b>the</b>。",
+    "答案：<b>(no article) / the</b>。"
+  ]}
+/>

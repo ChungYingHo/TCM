@@ -56,6 +56,17 @@ def parse_taxonomy() -> dict[str, list[tuple[str, str]]]:
     return out
 
 
+def parse_tag_parents() -> dict[str, str]:
+    """-> {tag: parentTag} for note-only sub-topics (entries with a `parent:`)."""
+    txt = open(TAXONOMY_TS, encoding='utf-8').read()
+    parents: dict[str, str] = {}
+    for line in txt.splitlines():
+        ent = re.search(r"tag:\s*'([^']+)'.*parent:\s*'([^']+)'", line)
+        if ent:
+            parents[ent.group(1)] = ent.group(2)
+    return parents
+
+
 def all_questions() -> list[dict]:
     qs: list[dict] = []
     for s in C.SCHOOLS:
@@ -105,6 +116,12 @@ def main() -> None:
                 bucket = pool.setdefault(t, [])
                 if len(bucket) < QUIZ_POOL_CAP:
                     bucket.append(q['id'])
+
+    # note-only sub-topics carry no question tags of their own, so alias each one's
+    # quiz pool to its parent broad category (keeps 「今日考題」 populated on their days).
+    for tag, parent in parse_tag_parents().items():
+        if tag not in pool and parent in pool:
+            pool[tag] = list(pool[parent])
 
     days = (datetime.date.fromisoformat(END) - datetime.date.fromisoformat(START)).days + 1
     schedule = {

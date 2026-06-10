@@ -276,6 +276,12 @@ export const SOLVE_STEPS: Record<string, string[]> = {
     '「意思相同」題逐組比對，留意一字多義與虛詞用法。',
     '常見文言虛詞（之乎者也而以）記熟其用法。',
   ],
+  通假字與古今字: [
+    '讀到字面<b>講不通</b>時，先想它是不是<b>通假字</b>（借同音／音近字代本字）。',
+    '用<b>聲音</b>找本字：通假字與本字多半同音或聲符相同（如「蚤」通「早」、「說」通「悅」）。',
+    '古今字看<b>同源分化</b>（「莫」→「暮」、「反」→「返」）；判讀以該字在句中的<b>實際意義</b>為準。',
+    '把推測的本字代回句中，語意通順才算對。',
+  ],
   成語熟語: [
     '先解成語的<b>本義與褒貶</b>，再看是否切合句子情境。',
     '小心望文生義的陷阱（如「治絲益棼」其實是貶義）。',
@@ -290,6 +296,18 @@ export const SOLVE_STEPS: Record<string, string[]> = {
     '先判<b>詞性</b>（名／動／形…）與其在句中的功能。',
     '倒裝／省略／被動先還原成正常語序再理解。',
     '語病題找成分殘缺或搭配不當之處。',
+  ],
+  詞語結構與構詞: [
+    '先拆兩字詞的<b>語素關係</b>：並列（朋友）、偏正（紅花）、動賓（讀書）、主謂（地震）、補充（提高）。',
+    '辨<b>偏義複詞</b>：兩字並列但意義只偏一邊（「國家」偏國、「窗戶」偏窗、「緩急」偏急）。',
+    '辨<b>同義／反義複詞</b>與<b>衍聲複詞</b>（雙聲「彷彿」、疊韻「逍遙」、疊字「漸漸」——拆開無義）。',
+    '題目問「結構相同」時，先各自判出結構類型再配對。',
+  ],
+  標點符號與文意: [
+    '先讀懂句意，再判該停頓處的<b>語氣與層次</b>。',
+    '冒號總起下文／引出說明；分號分隔<b>並列的長句</b>；破折號表<b>解釋、轉折或聲音延續</b>。',
+    '引號標<b>引文、特定稱謂或反諷</b>；頓號用於<b>並列詞語</b>之間（比逗號更小）。',
+    '問號看是否真有<b>疑問語氣</b>（「我不知道他來不來」是直述，不用問號）。',
   ],
   古典韻文: [
     '先辨體裁：古體／近體（律詩八句、絕句四句）、詞（依詞牌）、曲。',
@@ -333,6 +351,36 @@ export const SOLVE_STEPS: Record<string, string[]> = {
     '主動或被動看主詞是否承受動作（被動＝be＋p.p.）。',
     '非限定動詞：to V（目的）、Ving（進行／主動）、p.p.（被動／完成）。',
   ],
+  '文法：假設語氣與條件句': [
+    '先分是<b>條件句</b>還是<b>that 子句</b>。條件句看與事實的關係：真實條件用直述（if + 現在 … will），與現在相反用 if + 過去 … would V，與過去相反用 if + had p.p. … would have p.p.。',
+    '看到 <b>were / had / should 放句首</b>＝省略 if 的<b>倒裝</b>假設句（Were I you… / Had he known…）。',
+    'suggest / recommend / insist / demand 與 It is essential/necessary that 後的子句用<b>原形動詞</b>（被動＝be + p.p.）。',
+    'wish / as if 後接<b>與事實相反</b>的過去式（wish I were…）。',
+  ],
+  '文法：動名詞與不定詞': [
+    '先記<b>只接動名詞</b>的動詞群：enjoy, avoid, finish, mind, suggest, consider, admit, deny, practice（口訣可串成情境記）。',
+    '記<b>只接不定詞</b>的動詞群：want, hope, decide, plan, agree, refuse, promise, manage, afford。',
+    '介系詞後、be used to / look forward to 的 <b>to 是介系詞</b>→ 接 V-ing。',
+    '<b>意義會變</b>的動詞要小心：stop to V（停下去做）vs stop Ving（停止做）；remember/forget to V（還沒做）vs Ving（已做過）。',
+  ],
+  '文法：主詞動詞一致': [
+    '先<b>找出真主詞</b>，略過介系詞片語等修飾（The box of apples <b>is</b>…，主詞是 box）。',
+    'either/neither/each/every/one of + 複數名詞，動詞仍用<b>單數</b>；a number of 複數、the number of 單數。',
+    '就近原則：either…or / neither…nor / not only…but also 動詞與<b>最靠近的主詞</b>一致。',
+    '不可數名詞（information, advice, equipment）與動名詞主詞用<b>單數</b>。',
+  ],
+  '文法：冠詞與名詞數': [
+    '先判名詞<b>可數或不可數</b>：不可數（water, advice, furniture）不加 a/an、不加複數。',
+    '泛指單數可數名詞要有<b>限定詞</b>（a/an/the/this…）；第一次提到用 a/an、再次提到或雙方已知用 the。',
+    'the 用於<b>獨一無二</b>（the sun）、最高級、序數、特指。',
+    '注意 a 與 an 看<b>發音</b>（a university, an hour）；少量可數用 few/a few、不可數用 little/a little。',
+  ],
+  '文法：比較與對等結構': [
+    '先判比較層級：兩者用<b>比較級（-er / more）</b>，三者以上用<b>最高級（-est / most）</b>。',
+    '原級用 as + 原形容詞 + as；倍數放最前面（twice as large as）。',
+    '「越…越…」用 <b>the + 比較級…, the + 比較級…</b>（The more, the better）；比較級加強用 much / far / even。',
+    '對等／平行：and, or, but 連接的前後要<b>詞性與結構一致</b>（parallel）。',
+  ],
   '文法：子句與關係代名詞': [
     '看先行詞是人（who／whom）還是物（which），that 兩者通用。',
     '子句缺主詞用主格、缺受詞用受格、表所有用 whose。',
@@ -352,6 +400,12 @@ export const SOLVE_STEPS: Record<string, string[]> = {
     '先讀整句抓<b>語氣（正面／負面）</b>與主題，縮小候選。',
     '不會的字<b>拆字根字首</b>推義（un- 否定、-tion 名詞）。',
     '用搭配詞與刪去法選最貼切者。',
+  ],
+  易混淆字詞: [
+    '先分這組是<b>形近</b>（principle/principal）、<b>音近</b>（affect/effect）還是<b>義近</b>（few/less）。',
+    '用<b>詞性</b>切：affect 多為動詞、effect 多為名詞；rise（不及物，無受詞）vs raise（及物，要受詞）。',
+    '用<b>記憶鉤</b>：dessert 多一個 s（甜點想再來一份）；stationery 的 e 對 envelope（信封文具）。',
+    '可數不可數選 fewer（可數）/ less（不可數）；代回句中確認語意與搭配。',
   ],
   同義反義與字根字首: [
     '鎖定被問的字，先用自己的話想出它的意思。',

@@ -1,0 +1,160 @@
+---
+title: 比較與對等結構：比較級、最高級、as…as 與平行
+subject: english
+tag: 文法：比較與對等結構
+summary: 比較級與最高級的構成、as…as 原級與倍數、the more…the more、比較級加強語（much／far／even）、平行結構與對等連接詞，附判斷層級的步驟。
+audio: >
+  比較與對等結構，重點複習。
+  兩者相比用比較級，加 er 或 more；三者以上用最高級，加 est 或 most。
+  原級用 as 加原形容詞 加 as；倍數放最前面，twice as large as。
+  越來越用 the 加比較級，逗號，the 加比較級，例如 the more the better。
+  比較級的加強用 much、far、even，不能用 very。
+  and、or、but 連接的前後要詞性結構一致，這叫平行結構。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import ComparativeForm from '@/components/notes/ComparativeForm.svelte'
+import ParallelQuiz from '@/components/notes/ParallelQuiz.svelte'
+
+<NoteStats tag="句構與語意連貫" client:load />
+
+比較結構考的是「拿幾個東西比」的句型。第一步永遠是判斷**比幾個**：兩者用**比較級**、三者以上用**最高級**、一樣時用**原級 as…as**。
+
+## 一、比較級與最高級的構成
+
+| 音節 | 比較級 | 最高級 |
+|---|---|---|
+| 單音節 | -er（taller） | -est（tallest） |
+| 雙音節 -y 結尾 | -ier（busier） | -iest（busiest） |
+| 兩音節以上 | more（more careful） | most（most careful） |
+
+**不規則**：good→better→best；bad→worse→worst；many/much→more→most；little→less→least；far→further/farther→furthest/farthest。
+
+- 比較級常配 **than**：She is **taller than** her brother.
+- 最高級常配 **the** 與範圍（in/of）：He is **the tallest in** the class.
+
+<ComparativeForm client:visible />
+
+## 二、原級 as…as 與倍數
+
+- 一樣：as + **原形容詞/副詞** + as：He runs **as fast as** I do.
+- 否定：not as/so … as（沒有那麼……）。
+- **倍數放最前面**：This room is **twice as large as** that one. / **three times as many** patients。
+
+## 三、the + 比較級, the + 比較級（越……越……）
+
+- **The more** you practice, **the better** you become.
+- **The higher** the dose, **the greater** the risk.
+
+## 四、比較級的加強與弱化
+
+| 加強（更、得多） | 弱化（稍微） |
+|---|---|
+| much, far, a lot, even, still | a little, a bit, slightly |
+
+- This drug is **much more** effective.（✗ very more）
+- 注意：**very** 修飾原級（very good），**much/far** 修飾比較級（much better）。
+
+## 五、平行結構（對等）
+
+對等連接詞 **and / or / but** 與 **not only…but also / both…and / either…or** 連接的前後，必須**詞性與結構一致**：
+
+- ✗ She likes swimming and to run.　✓ She likes **swimming and running**.
+- ✗ The job is challenging but rewards.　✓ The job is **challenging but rewarding**.
+
+<ParallelQuiz client:visible />
+
+## 六、常見比較陷阱
+
+- 比較對象要**對等**：My salary is lower than **a doctor's**（不是 than a doctor，要比「薪水」對「薪水」）。
+- 三者以上避免用比較級當最高級；「其他所有」用 **than any other + 單數**：He is taller than **any other** student.
+
+<Memorize>
+兩者用<b>比較級（-er / more）+ than</b>；三者以上用<b>最高級（-est / most）+ the</b>。<br />
+一樣用 <b>as + 原級 + as</b>；倍數放最前（<b>twice as … as</b>）。<br />
+越…越… = <b>the + 比較級…, the + 比較級…</b>。<br />
+比較級加強用 <b>much / far / even / a lot</b>（不可用 very）。<br />
+and / or / but 前後要<b>平行（結構一致）</b>。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>判層級</b>：兩者→比較級 + than；三者以上→最高級 + the + 範圍（in/of）。",
+  "<b>不規則</b>：good-better-best, bad-worse-worst, many/much-more-most, little-less-least。",
+  "<b>原級</b> as + 原形 + as；倍數（twice / three times）放最前面。",
+  "<b>the 比較級, the 比較級</b> = 越…越…（The more, the better）。",
+  "<b>加強比較級</b>用 much/far/even/a lot；very 只修飾原級。",
+  "<b>平行結構</b>：and/or/but、not only…but also 連接的成分詞性結構要一致。",
+  "<b>比較對象對等</b>：than any other + 單數名詞表「比其他所有都…」。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="文法：比較與對等結構" />
+
+## 例題（先自己做，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="The new treatment is far ____ than the old one, with fewer side effects."
+  options={["effective", "more effective", "most effective", "as effective"]}
+  answer="(B) more effective"
+  steps={[
+    "句中有 <b>than</b> → 用<b>比較級</b>。",
+    "effective 是多音節，比較級用 <b>more effective</b>；far 是加強語（更…得多）。",
+    "答案：<b>more effective</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="____ the patient follows the doctor's advice, the faster he will recover."
+  options={["The more closely", "More closely", "As closely", "Most closely"]}
+  answer="(A) The more closely"
+  steps={[
+    "後半是 <b>the faster</b> → 這是「越…越…」句型 <b>the + 比較級…, the + 比較級…</b>。",
+    "前半也要 the + 比較級：the more closely（副詞 closely 用 more）。",
+    "答案：<b>The more closely</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="This hospital treats ____ patients as the small clinic across the street."
+  options={["twice as many", "as twice many", "twice many as", "as many twice"]}
+  answer="(A) twice as many"
+  steps={[
+    "倍數 <b>twice</b> 要放在 <b>as … as</b> 結構的<b>最前面</b>。",
+    "patients 可數複數用 many：twice as many patients as…。",
+    "答案：<b>twice as many</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="A good nurse should be patient, attentive, and ____."
+  options={["with compassion", "compassionately", "compassionate", "have compassion"]}
+  answer="(C) compassionate"
+  steps={[
+    "and 連接的前兩項是<b>形容詞</b>（patient, attentive）。",
+    "<b>平行結構</b>要求第三項也是形容詞 → compassionate。",
+    "答案：<b>compassionate</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="Mount Everest is higher than ____ mountain in the world."
+  options={["any", "any other", "other", "the other"]}
+  answer="(B) any other"
+  steps={[
+    "用比較級表達「比其他所有都高」時，用 <b>than any other + 單數名詞</b>。",
+    "（聖母峰本身也是世界的山，要用 other 把自己排除。）",
+    "答案：<b>any other</b>。"
+  ]}
+/>

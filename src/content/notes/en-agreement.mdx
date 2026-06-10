@@ -1,0 +1,156 @@
+---
+title: 主詞動詞一致：找真主詞、特殊主詞與就近原則
+subject: english
+tag: 文法：主詞動詞一致
+summary: 略過修飾找真主詞、each／every／one of 用單數、a number of 與 the number of、either…or 就近原則、不可數與動名詞主詞用單數、集合名詞與數量片語，附判斷步驟。
+audio: >
+  主詞動詞一致，重點複習。
+  先找出真正的主詞，略過介系詞片語等修飾，例如 the box of apples is，主詞是 box 不是 apples。
+  each、every、one of 加複數名詞，動詞仍用單數。
+  a number of 加複數動詞，the number of 加單數動詞。
+  either or、neither nor、not only but also，動詞跟最靠近的主詞一致，這叫就近原則。
+  不可數名詞和動名詞當主詞用單數。
+draft: false
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import FindRealSubject from '@/components/notes/FindRealSubject.svelte'
+import AgreementRulePicker from '@/components/notes/AgreementRulePicker.svelte'
+
+<NoteStats tag="句構與語意連貫" client:load />
+
+主詞動詞一致（subject-verb agreement）考的是：動詞要配合**真正的主詞**做單複數變化。難點在於題目常用一堆修飾語**蓋住真主詞**，或用特殊主詞讓你誤判。
+
+## 一、先找「真主詞」，略過修飾
+
+主詞和動詞之間常插入**介系詞片語、關係子句**等修飾，動詞要跟「核心名詞」一致，不是跟最靠近的名詞：
+
+- The **box** of apples **is** on the table.（主詞是 box，不是 apples）
+- The **causes** of this disease **remain** unknown.（主詞 causes）
+- One of the **doctors who treat** cancer **is** my uncle.（主句主詞 one → is）
+
+<FindRealSubject client:visible />
+
+## 二、永遠單數的主詞
+
+| 主詞 | 動詞 | 例 |
+|---|---|---|
+| each / every / either / neither | 單數 | **Each** student **has** a locker. |
+| one of + 複數名詞 | 單數 | **One of** the nurses **is** sick. |
+| 不可數名詞（information, advice, news, equipment） | 單數 | The news **is** good. |
+| 動名詞 / 不定詞當主詞 | 單數 | **Swimming is** good exercise. |
+| 「金額、時間、距離」當整體 | 單數 | Ten dollars **is** enough. |
+
+## 三、a number of vs the number of
+
+| 片語 | 意思 | 動詞 |
+|---|---|---|
+| **a number of** + 複數N | 許多（≈ many） | **複數** |
+| **the number of** + 複數N | ……的數量 | **單數** |
+
+- **A number of** patients **are** waiting.（許多病人）
+- **The number of** patients **is** rising.（病人數量）
+
+## 四、就近原則（最靠近的主詞決定動詞）
+
+當主詞用 **either…or / neither…nor / not only…but also / or** 連接，動詞與**最後一個（最靠近的）主詞**一致：
+
+- Neither the doctor nor the **nurses are** available.（最近的是 nurses → are）
+- Not only the students but also the **teacher is** invited.（最近的是 teacher → is）
+
+對照：用 **and** 連接的並列主詞 → 視為複數（用 are/were）。
+
+<AgreementRulePicker client:visible />
+
+## 五、集合名詞看「整體 vs 個別」
+
+team, family, government, audience 等：當作**整體**用單數，強調**成員各自**時用複數（英式較常）：
+
+- The team **is** the best in the league.（整體）
+- The committee **were** divided in their opinions.（成員意見分歧）
+
+<Memorize>
+先<b>找真主詞</b>、略過 of 片語與子句（The box of apples <b>is</b>…）。<br />
+<b>each / every / one of + 複數名詞</b> → 動詞用<b>單數</b>。<br />
+<b>a number of</b> + 複數動詞；<b>the number of</b> + 單數動詞。<br />
+<b>either…or / neither…nor / not only…but also</b> → 動詞跟<b>最靠近</b>的主詞（就近原則）。<br />
+<b>不可數名詞、動名詞主詞</b>用單數。
+</Memorize>
+
+## 重點整理
+
+<KeyPoints items={[
+  "<b>真主詞</b>：略過介系詞片語、關係子句，動詞跟核心名詞（The causes of … <b>remain</b>）。",
+  "<b>恆單數</b>：each, every, either, neither, one of + 複數N；不可數名詞；動名詞/不定詞主詞。",
+  "<b>a number of</b> = 許多 → 複數動詞；<b>the number of</b> = 數量 → 單數動詞。",
+  "<b>就近原則</b>：either…or / neither…nor / not only…but also，動詞跟最後一個主詞。",
+  "<b>and 並列</b>主詞 → 複數；但指同一人事物時用單數（The poet and novelist <b>is</b>…）。",
+  "<b>集合名詞</b>：整體用單數，強調個別成員用複數。"
+]} />
+
+## 解題方向
+
+<SolveApproach tag="文法：主詞動詞一致" />
+
+## 例題（先自己做，再看步驟）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="The quality of the hospital's services ____ improved a lot in recent years."
+  options={["have", "has", "are", "were"]}
+  answer="(B) has"
+  steps={[
+    "主詞是 <b>quality</b>（單數），of the hospital's services 只是修飾。",
+    "搭配 in recent years 用現在完成 → <b>has</b> improved。",
+    "答案：<b>has</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="A number of volunteers ____ willing to help at the clinic."
+  options={["is", "was", "are", "has been"]}
+  answer="(C) are"
+  steps={[
+    "<b>a number of</b> + 複數名詞 = 許多，動詞用<b>複數</b>。",
+    "（若是 the number of volunteers 才用單數。）",
+    "答案：<b>are</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="Neither the patients nor the doctor ____ satisfied with the new policy."
+  options={["are", "is", "have been", "were"]}
+  answer="(B) is"
+  steps={[
+    "neither…nor 用<b>就近原則</b>：動詞跟最靠近的主詞 <b>the doctor</b>（單數）。",
+    "答案：<b>is</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="Each of the test results ____ to be double-checked before the report is issued."
+  options={["need", "needs", "are needing", "have"]}
+  answer="(B) needs"
+  steps={[
+    "主詞是 <b>each</b>（恆單數），of the test results 只是修飾。",
+    "答案：<b>needs</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="Regular exercise, along with a balanced diet, ____ essential to good health."
+  options={["are", "is", "have been", "were"]}
+  answer="(B) is"
+  steps={[
+    "主詞是 <b>Regular exercise</b>（單數）；<b>along with</b>… 是插入修飾，不改變主詞單複數。",
+    "（類似的還有 as well as, together with, in addition to。）",
+    "答案：<b>is</b>。"
+  ]}
+/>

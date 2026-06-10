@@ -9,6 +9,13 @@
 // The tag STRINGS must stay in sync with the offline tagger
 // (pipeline/tcmpipe/tags.py). Each tag maps to exactly one concept note
 // (src/content/notes/<slug>.mdx). Keep `tag` ⇄ note frontmatter `tag` aligned.
+//
+// Entries with a `parent` are NOTE-ONLY sub-topics: finer study notes that carve
+// out a slice of a broad category (e.g. 假設語氣 within 文法：時態與語態). They have
+// NO tagger rule, so no question carries their tag directly — the question-derived
+// surfaces (study filter, analytics) simply never list them. To still feed
+// "today's quiz" and show frequency, gen_schedule.py aliases each sub-topic's quiz
+// pool to its parent's, and the note's <NoteStats> points at the parent tag.
 
 import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
@@ -17,6 +24,7 @@ export interface TaxonomyEntry {
   tag: string // matches question.concept_tags[] and note frontmatter `tag`
   slug: string // note filename (src/content/notes/<slug>.mdx)
   short: string // compact label for chips/filters
+  parent?: string // note-only sub-topic: borrows this broad tag's quiz pool + stats
 }
 
 export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
@@ -75,9 +83,12 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   chinese: [
     { tag: '字音字形', slug: 'cn-phonetics', short: '字音字形' },
     { tag: '字詞義訓詁', slug: 'cn-word-meaning', short: '字詞義' },
+    { tag: '通假字與古今字', slug: 'cn-loan-characters', short: '通假字', parent: '古典散文文言閱讀' },
     { tag: '成語熟語', slug: 'cn-idioms', short: '成語' },
     { tag: '修辭格', slug: 'cn-rhetoric', short: '修辭' },
     { tag: '詞性語法句構', slug: 'cn-grammar', short: '語法句構' },
+    { tag: '詞語結構與構詞', slug: 'cn-word-formation', short: '詞語結構', parent: '詞性語法句構' },
+    { tag: '標點符號與文意', slug: 'cn-punctuation', short: '標點符號', parent: '詞性語法句構' },
     { tag: '古典韻文', slug: 'cn-verse', short: '古典韻文' },
     { tag: '古典散文文言閱讀', slug: 'cn-classical-prose', short: '文言閱讀' },
     { tag: '文學史常識', slug: 'cn-literature', short: '文學史' },
@@ -88,10 +99,16 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   ],
   english: [
     { tag: '文法：時態與語態', slug: 'en-tense', short: '時態語態' },
+    { tag: '文法：假設語氣與條件句', slug: 'en-subjunctive', short: '假設語氣', parent: '文法：時態與語態' },
+    { tag: '文法：動名詞與不定詞', slug: 'en-verbals', short: '動名詞/不定詞', parent: '文法：時態與語態' },
     { tag: '文法：子句與關係代名詞', slug: 'en-clauses', short: '子句關代' },
+    { tag: '文法：主詞動詞一致', slug: 'en-agreement', short: '主動詞一致', parent: '句構與語意連貫' },
     { tag: '文法：介系詞與片語', slug: 'en-prepositions', short: '介系詞' },
+    { tag: '文法：冠詞與名詞數', slug: 'en-articles', short: '冠詞/名詞數', parent: '句構與語意連貫' },
     { tag: '句構與語意連貫', slug: 'en-structure', short: '句構連貫' },
+    { tag: '文法：比較與對等結構', slug: 'en-comparison', short: '比較結構', parent: '句構與語意連貫' },
     { tag: '字彙', slug: 'en-vocab', short: '字彙' },
+    { tag: '易混淆字詞', slug: 'en-confusables', short: '易混淆字', parent: '字彙' },
     { tag: '同義反義與字根字首', slug: 'en-synonym', short: '同反義/字根' },
     { tag: '片語動詞與慣用語', slug: 'en-phrases', short: '片語慣用' },
     { tag: '克漏字', slug: 'en-cloze', short: '克漏字' },
