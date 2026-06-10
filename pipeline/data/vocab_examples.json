@@ -639,6 +639,10 @@
     "example": "The donor wished to give the money anonymously.",
     "example_zh": "這位捐贈者希望匿名捐出這筆錢。"
   },
+  "anosmia": {
+    "example": "Anosmia, the loss of the sense of smell, was a common early symptom of COVID-19.",
+    "example_zh": "嗅覺缺失（嗅覺喪失）是 COVID-19 常見的早期症狀。"
+  },
   "anthropologist": {
     "example": "An anthropologist studied the village's healing customs.",
     "example_zh": "一位人類學家研究了這個村莊的治療習俗。"
@@ -1360,7 +1364,7 @@
     "example_zh": "醫院爭取新的經費。"
   },
   "bilateral": {
-    "example": "The scan revealed bilateral swelling in both of the patient's knees.",
+    "example": "The scan revealed bilateral swelling in the patient's knees.",
     "example_zh": "掃描顯示病人雙側膝蓋都有腫脹。"
   },
   "billion": {
@@ -5253,7 +5257,7 @@
   },
   "favorably": {
     "example": "Reviewers responded favorably to the new treatment's promising results.",
-    "example_zh": "評審對這項新療法可觀的成果反應良好。"
+    "example_zh": "評審對這項新療法富有前景的成果反應良好。"
   },
   "feasible": {
     "example": "Surgery was no longer a feasible option for the elderly patient.",
@@ -6684,8 +6688,8 @@
     "example_zh": "照顧病人需要近乎無限的耐心。"
   },
   "inflammatory": {
-    "example": "Doctors prescribed an anti-inflammatory drug to reduce the swelling in his knee.",
-    "example_zh": "醫生開了消炎藥，以減輕他膝蓋的腫脹。"
+    "example": "Rheumatoid arthritis is a chronic inflammatory disease that damages the joints.",
+    "example_zh": "類風濕性關節炎是一種會損害關節的慢性發炎性疾病。"
   },
   "inflated": {
     "example": "The report gave an inflated estimate of the project's benefits.",
@@ -7442,6 +7446,10 @@
   "lip": {
     "example": "Her lips were dry and cracked from the fever.",
     "example_zh": "她的嘴唇因發燒而乾裂。"
+  },
+  "lipoma": {
+    "example": "A lipoma is a benign lump of fatty tissue that grows just under the skin.",
+    "example_zh": "脂肪瘤是長在皮膚下方的良性脂肪組織腫塊。"
   },
   "liquid": {
     "example": "He could only swallow liquid food after surgery.",
@@ -8585,7 +8593,7 @@
   },
   "onerous": {
     "example": "Caring for three sick relatives was an onerous burden for one person.",
-    "example_zh": "照顧三位生病的親人對一個人來說是沉重繁重的負擔。"
+    "example_zh": "照顧三位生病的親人，對一個人來說是過於沉重的負擔。"
   },
   "ongoing": {
     "example": "She is receiving ongoing care for her condition.",
@@ -9050,6 +9058,10 @@
   "period": {
     "example": "There may be a short period of dizziness after the dose.",
     "example_zh": "服藥後可能有一小段時間會頭暈。"
+  },
+  "permacrisis": {
+    "example": "Years of pandemic, war, and inflation left many people feeling stuck in a permacrisis.",
+    "example_zh": "多年的疫情、戰爭與通膨，讓許多人覺得身陷一場看不到盡頭的長期危機。"
   },
   "permanent": {
     "example": "The injury left him with permanent nerve damage.",
@@ -10201,7 +10213,7 @@
   },
   "rebate": {
     "example": "Customers who buy the printer can claim a fifty-dollar cash rebate.",
-    "example_zh": "購買這台印表機的顧客可申請五十美元的現金折扣。"
+    "example_zh": "購買這台印表機的顧客可申請五十美元的現金回饋。"
   },
   "rebel": {
     "example": "His immune system began to rebel against his own body.",
@@ -11229,7 +11241,7 @@
   },
   "scroll": {
     "example": "Please scroll down to the bottom of the page to sign the consent form.",
-    "example_zh": "請向下滾動到頁面底部來簽署同意書。"
+    "example_zh": "請向下捲動到頁面底部來簽署同意書。"
   },
   "scrutinize": {
     "example": "The committee will scrutinize every detail of the clinical trial data.",

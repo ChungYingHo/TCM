@@ -47,6 +47,16 @@ TRIVIAL_FRQ = 3000
 # Hard cap so the daily schedule can finish the track before the pre-exam taper
 # (18 new words/day × 180 full-intensity days, see gen_schedule.py).
 CAP = 3240
+# 三審補收（知識驗證/單字三審.md）：曾為考題正解的醫學/時事字，但 ECDICT 無詞頻無標籤
+# （會被 is_real 當 junk stub 濾掉）或根本未收錄（新字，附手寫條目於 EXTRA_ROWS）。
+FORCE_ANSWER_WORDS = {'anosmia', 'lipoma', 'permacrisis'}
+EXTRA_ROWS: dict[str, dict] = {
+    'permacrisis': {
+        'word': 'permacrisis', 'phonetic': "'pɜːmәkraɪsɪs",
+        'translation': 'n. 長期危機(接連不斷的危機狀態; 2022 柯林斯年度字)',
+        'tag': '', 'frq': '0', 'bnc': '0', 'pos': '',
+    },
+}
 
 
 def lemmas(w: str) -> set[str]:
@@ -139,6 +149,7 @@ def main() -> None:
     if not os.path.exists(ECDICT):
         sys.exit(f'missing {ECDICT} — download per pipeline/README.md')
     ec = load_ecdict()
+    ec.update(EXTRA_ROWS)
     ex_count, ex_correct, ex_ids = exam_words()
 
     def make(word: str, row: dict) -> dict:
@@ -182,6 +193,8 @@ def main() -> None:
     #    their ECDICT lemma; trivially common words stay out.
     def is_real(w: str) -> bool:
         """A genuine study word, not an ECDICT junk stub (abbr/variant w/ no rank+tag)."""
+        if w in FORCE_ANSWER_WORDS:
+            return w in ec
         row = ec.get(w)
         return bool(row) and (frq_key(row) != UNRANKED or (row.get('tag') or '').strip() != '')
 
