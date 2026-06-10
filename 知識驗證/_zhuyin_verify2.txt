@@ -1,0 +1,40 @@
+OK  guwen-bianque	腠理	腠音 ㄘㄡˋ	腠:ok
+OK  guwen-bianque	還走	，音 ㄒㄩㄢˊ	還:ok
+BAD guwen-bianque	火齊	，音 ㄐㄧˋ	火:MISMATCH ㄐㄧˋ not in ['ㄏㄨㄛˇ']
+OK  guwen-shanghanlun-xu	越人入虢之診	虢音 ㄍㄨㄛˊ	虢:ok
+OK  guwen-shanghanlun-xu	十稔	稔音 ㄖㄣˇ	稔:ok
+OK  guwen-shanghanlun-xu	橫夭	橫音 ㄏㄥˋ	橫:ok
+BAD guwen-lingshu-wuguan	五藏	，音 ㄗㄤˋ	五:MISMATCH ㄗㄤˋ not in ['ㄨˇ']
+OK  guwen-lingshu-wuguan	眥	；音 ㄗˋ	眥:ok
+OK  guwen-zhongyong	率性	，音 ㄕㄨㄞˋ	率:ok
+OK  guwen-kezhouqiujian	遽	；音 ㄐㄩˋ	遽:ok
+OK  guwen-kezhouqiujian	契	；音 ㄑㄧˋ	契:ok
+OK  guwen-yufu	三閭大夫	閭音 ㄌㄩˊ	閭:ok
+OK  guwen-yufu	鼓枻	枻音 ㄧˋ	枻:ok
+OK  guwen-yufu	濯纓	濯音 ㄓㄨㄛˊ	濯:ok
+OK  guwen-liuhoulun	卒然	，音 ㄘㄨˋ	卒:ok
+OK  guwen-renjiancihua	遽	；音 ㄐㄩˋ	遽:ok
+OK  guwen-laoshandaoshi	俛首	，音 ㄈㄨˇ	俛:ok
+OK  guwen-laoshandaoshi	逡巡	；音 ㄑㄩㄣ ㄒㄩㄣˊ	逡:ok; 巡:ok
+OK  guwen-laoshandaoshi	踣	；音 ㄅㄛˊ	踣:ok
+OK  guwen-laoshandaoshi	揶揄	；音 ㄧㄝˊ ㄩˊ	揶:ok; 揄:ok
+BAD guwen-minghuju	囀	；音 ㄓㄨㄢˋ	囀:MISMATCH ㄓㄨㄢˋ not in ['ㄓㄨㄢˇ']
+OK  guwen-shanju-qiuming	暝	；音 ㄇㄧㄥˊ	暝:ok
+OK  guwen-shanju-qiuming	浣女	浣音 ㄨㄢˇ	浣:ok
+OK  guwen-denggao	渚	；音 ㄓㄨˇ	渚:ok
+OK  guwen-jiangjinjiu	將進酒	將音 ㄑㄧㄤ	將:ok
+OK  guwen-jiangjinjiu	金樽	樽音 ㄗㄨㄣ	樽:ok
+OK  guwen-pipaxing	荻	；音 ㄉㄧˊ	荻:ok
+OK  guwen-wenguanjun	劍外／薊北	薊音 ㄐㄧˋ	薊:ok
+OK  guwen-shizhisaishang	候騎	騎音 ㄐㄧˋ	騎:ok
+OK  guwen-yumeiren	了	；音 ㄌㄧㄠˇ	了:ok
+OK  guwen-yumeiren	雕闌玉砌	砌音 ㄑㄧˋ	砌:ok
+OK  guwen-bashengganzhou	苒苒物華休	苒音 ㄖㄢˇ	苒:ok
+OK  guwen-bashengganzhou	渺邈	邈音 ㄇㄧㄠˇ	邈:ok
+OK  guwen-bashengganzhou	顒望	顒音 ㄩㄥˊ	顒:ok
+OK  guwen-dingfengbo	料峭	；音 ㄌㄧㄠˋ ㄑㄧㄠˋ	料:ok; 峭:ok
+OK  guwen-shuidiaogetou	宮闕	闕音 ㄑㄩㄝˋ	闕:ok
+OK  guwen-shuidiaogetou	不勝寒	勝音 ㄕㄥ	勝:ok
+OK  guwen-shuidiaogetou	綺戶	綺音 ㄑㄧˇ	綺:ok
+BAD guwen-zhengqige	時窮節乃見	，音 ㄒㄧㄢˋ	時:MISMATCH ㄒㄧㄢˋ not in ['ㄕˊ']
+BAD guwen-zhengqige	磅礡	；音 ㄆㄤˊ ㄅㄛˊ	磅:MISMATCH ㄆㄤˊ not in ['ㄅㄤˋ', 'ㄅㄥˋ', 'ㄆㄤ']; 礡:NO-ENTRY(ㄅㄛˊ)
