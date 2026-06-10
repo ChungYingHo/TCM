@@ -1,0 +1,73 @@
+OK	guwen-ailianshuo	鮮	音 ㄒㄧㄢˇ，少	鮮: ok ㄒㄧㄢˇ in ['ㄒㄧㄢ', 'ㄒㄧㄢˇ']; 鮮: MULTI ['ㄒㄧㄢ', 'ㄒㄧㄢˇ']	
+OK	guwen-lunyu-xuan	慍	音 ㄩㄣˋ，惱怒	慍: ok ㄩㄣˋ in ['ㄩㄣˋ']	
+OK	guwen-liyun-datong	與	音 ㄩˇ；一說通「舉」，選拔	與: ok ㄩˇ in ['ㄩˇ', 'ㄩˊ', 'ㄩˋ']; 與: MULTI ['ㄩˇ', 'ㄩˊ', 'ㄩˋ']	
+OK	guwen-liyun-datong	矜	音 ㄍㄨㄢ，同「鰥」，老而無妻者	矜: ok ㄍㄨㄢ in ['ㄍㄨㄢ', 'ㄐㄧㄣ', 'ㄑㄧㄣˊ']; 矜: MULTI ['ㄍㄨㄢ', 'ㄐㄧㄣ', 'ㄑㄧㄣˊ']	
+OK	guwen-liyun-datong	分	音 ㄈㄣˋ，職分、本分	分: ok ㄈㄣˋ in ['ㄈㄣ', 'ㄈㄣˋ']; 分: MULTI ['ㄈㄣ', 'ㄈㄣˋ']	
+OK	guwen-paoding	踦	音 ㄧˇ，以膝抵住	踦: ok ㄧˇ in ['ㄐㄧˇ', 'ㄑㄧˊ', 'ㄧˇ']; 踦: MULTI ['ㄐㄧˇ', 'ㄑㄧˊ', 'ㄧˇ']	
+OK	guwen-shengyuyouhuan	拂士	拂音 ㄅㄧˋ，同「弼」，輔佐之士	拂: ok ㄅㄧˋ in ['ㄅㄧˋ', 'ㄈㄨˊ']; 拂: MULTI ['ㄅㄧˋ', 'ㄈㄨˊ']	word:ㄅㄧˋㄕˋ
+OK	guwen-quanxue	跬步	半步；跬音 ㄎㄨㄟˇ	跬: ok ㄎㄨㄟˇ in ['ㄎㄨㄟˇ']	word:ㄎㄨㄟˇㄅㄨˋ
+OK	guwen-caogui	間	音 ㄐㄧㄢˋ，參與	間: ok ㄐㄧㄢˋ in ['ㄐㄧㄢ', 'ㄐㄧㄢˋ']; 間: MULTI ['ㄐㄧㄢ', 'ㄐㄧㄢˋ']	
+OK	guwen-zouji	昳麗	昳音 ㄧˋ，光豔俊美	昳: ok ㄧˋ in ['ㄉㄧㄝˊ', 'ㄧˋ']; 昳: MULTI ['ㄉㄧㄝˊ', 'ㄧˋ']	word:ㄧˋㄌㄧˋ
+OK	guwen-laozi-xuan	幾於道	幾音 ㄐㄧ，接近於道	幾: ok ㄐㄧ in ['ㄐㄧ', 'ㄐㄧˇ']; 幾: MULTI ['ㄐㄧ', 'ㄐㄧˇ']	
+OK	guwen-laozi-xuan	累土	一筐一筐的泥土；累音 ㄌㄟˇ	累: ok ㄌㄟˇ in ['ㄌㄟˇ', 'ㄌㄟˊ', 'ㄌㄟˋ']; 累: MULTI ['ㄌㄟˇ', 'ㄌㄟˊ', 'ㄌㄟˋ']	
+OK	guwen-lanting	脩禊	禊音 ㄒㄧˋ，於水邊舉行的除災祈福之禮	禊: ok ㄒㄧˋ in ['ㄒㄧˋ']	
+OK	guwen-chushibiao	崩殂	帝王去世；殂音 ㄘㄨˊ	殂: ok ㄘㄨˊ in ['ㄘㄨˊ']	word:ㄅㄥㄘㄨˊ
+OK	guwen-yuzhuyuansi	縹碧	縹音 ㄆㄧㄠˇ，青白色	縹: ok ㄆㄧㄠˇ in ['ㄆㄧㄠˇ', 'ㄆㄧㄠˋ']; 縹: MULTI ['ㄆㄧㄠˇ', 'ㄆㄧㄠˋ']	
+OK	guwen-yuzhuyuansi	鳶飛戾天	鳶音 ㄩㄢ，喻追逐名位者；戾，至	鳶: ok ㄩㄢ in ['ㄩㄢ']	word:ㄩㄢㄈㄟㄌㄧˋㄊㄧㄢ
+OK	guwen-chenqingbiao	險釁	命運坎坷多難；釁音 ㄒㄧㄣˋ	釁: ok ㄒㄧㄣˋ in ['ㄒㄧㄣˋ']	word:ㄒㄧㄢˇㄒㄧㄣˋ
+OK	guwen-chenqingbiao	更相為命	相依為命；更音 ㄍㄥ	更: ok ㄍㄥ in ['ㄍㄥ', 'ㄍㄥˋ', 'ㄐㄧㄥ']; 更: MULTI ['ㄍㄥ', 'ㄍㄥˋ', 'ㄐㄧㄥ']	
+OK	guwen-yongxue	差可擬	大致可以比擬；差音 ㄔㄚ	差: ok ㄔㄚ in ['ㄔㄚ', 'ㄔㄚˋ', 'ㄔㄞ', 'ㄔㄞˋ', 'ㄘ', 'ㄘㄨㄛ']; 差: MULTI ['ㄔㄚ', 'ㄔㄚˋ', 'ㄔㄞ', 'ㄔㄞˋ', 'ㄘ', 'ㄘㄨㄛ']	
+OK	guwen-guiqulai	東皋	東邊的高地；皋音 ㄍㄠ	皋: ok ㄍㄠ in ['ㄍㄠ']	word:ㄉㄨㄥㄍㄠ
+OK	guwen-xishanyan	僇人	獲罪之人；僇音 ㄌㄨˋ，同「戮」	僇: ok ㄌㄨˋ in ['ㄌㄨˋ']	word:ㄌㄨˋㄖㄣˊ
+OK	guwen-xishanyan	施施	緩行的樣子；音 ㄧˊ ㄧˊ	施: ok ㄧˊ in ['ㄕ', 'ㄧˊ', 'ㄧˋ']; 施: MULTI ['ㄕ', 'ㄧˊ', 'ㄧˋ']; 施: ok ㄧˊ in ['ㄕ', 'ㄧˊ', 'ㄧˋ']; 施: MULTI ['ㄕ', 'ㄧˊ', 'ㄧˋ']	word:ㄧˊㄧˊ
+OK	guwen-epanggong	兀	光禿；音 ㄨˋ	兀: ok ㄨˋ in ['ㄨˋ']	
+OK	guwen-tengwangge	孤鶩	孤單的野鴨；鶩音 ㄨˋ	鶩: ok ㄨˋ in ['ㄇㄨˋ', 'ㄨˋ']; 鶩: MULTI ['ㄇㄨˋ', 'ㄨˋ']	
+OK	guwen-tengwangge	彭蠡	即鄱陽湖；蠡音 ㄌㄧˇ	蠡: ok ㄌㄧˇ in ['ㄌㄧˇ', 'ㄌㄧˊ']; 蠡: MULTI ['ㄌㄧˇ', 'ㄌㄧˊ']	word:ㄆㄥˊㄌㄧˇ
+OK	guwen-jiantaizong	浚	疏通；音 ㄐㄩㄣˋ	浚: ok ㄐㄩㄣˋ in ['ㄐㄩㄣˋ']	
+OK	guwen-zhongshu-guotuo	病僂	患駝背；僂音 ㄌㄡˊ	僂: ok ㄌㄡˊ in ['ㄌㄡˊ']	
+OK	guwen-yueyanglou	謫守	貶官出任地方長官；謫音 ㄓㄜˊ	謫: ok ㄓㄜˊ in ['ㄓㄜˊ']	word:ㄓㄜˊㄕㄡˇ
+OK	guwen-yueyanglou	湯湯	水勢浩大；音 ㄕㄤ ㄕㄤ	湯: ok ㄕㄤ in ['ㄊㄤ', 'ㄕㄤ']; 湯: MULTI ['ㄊㄤ', 'ㄕㄤ']; 湯: ok ㄕㄤ in ['ㄊㄤ', 'ㄕㄤ']; 湯: MULTI ['ㄊㄤ', 'ㄕㄤ']	word:ㄕㄤㄕㄤ
+OK	guwen-baochanshan	瑰怪	瑰麗奇異；瑰音 ㄍㄨㄟ	瑰: ok ㄍㄨㄟ in ['ㄍㄨㄟ']	word:ㄍㄨㄟㄍㄨㄞˋ
+OK	guwen-guoqinlun	七廟隳	宗廟毀滅，喻王朝覆亡；隳音 ㄏㄨㄟ	隳: ok ㄏㄨㄟ in ['ㄏㄨㄟ']	
+OK	guwen-hongmenyan	數目	屢次使眼色；數音 ㄕㄨㄛˋ，目作動詞	數: ok ㄕㄨㄛˋ in ['ㄕㄨˇ', 'ㄕㄨˋ', 'ㄕㄨㄛˋ', 'ㄘㄨˋ', 'ㄙㄨˋ']; 數: MULTI ['ㄕㄨˇ', 'ㄕㄨˋ', 'ㄕㄨㄛˋ', 'ㄘㄨˋ', 'ㄙㄨˋ']	word:ㄕㄨˋㄇㄨˋ
+OK	guwen-hongmenyan	人為刀俎，我為魚肉	比喻任人宰割的處境；俎音 ㄗㄨˇ	俎: ok ㄗㄨˇ in ['ㄗㄨˇ']	
+OK	guwen-lianpo-xiangru	刎頸之交	可同生共死的至交；刎音 ㄨㄣˇ	刎: ok ㄨㄣˇ in ['ㄨㄣˇ']	word:ㄨㄣˇㄐㄧㄥˇㄓㄐㄧㄠ
+OK	guwen-maiganzheyan	燁然	光彩鮮明的樣子；燁音 ㄧㄝˋ	燁: ok ㄧㄝˋ in ['ㄧㄝˋ']	word:ㄧㄝˋㄖㄢˊ
+CHECK	guwen-maiganzheyan	賈十倍	賣到十倍的價錢；賈同「價」，音 ㄐㄧㄚˋ	賈: MISMATCH claimed=ㄐㄧㄚˋ dict=['ㄍㄨˇ', 'ㄐㄧㄚˇ']	
+OK	guwen-maiganzheyan	鬻	音 ㄩˋ，此處指買（一說賣）	鬻: ok ㄩˋ in ['ㄓㄨˋ', 'ㄩˋ']; 鬻: MULTI ['ㄓㄨˋ', 'ㄩˋ']	
+OK	guwen-xiangjixuan	滲漉	滲漏滴落；漉音 ㄌㄨˋ	漉: ok ㄌㄨˋ in ['ㄌㄨˋ']	word:ㄕㄣˋㄌㄨˋ
+OK	guwen-wurenmu	蓼洲周公	周順昌，號蓼洲，明末東林黨人；蓼音 ㄌㄧㄠˇ	蓼: ok ㄌㄧㄠˇ in ['ㄌㄧㄠˇ', 'ㄌㄨˋ']; 蓼: MULTI ['ㄌㄧㄠˇ', 'ㄌㄨˋ']	
+OK	guwen-zuozhongyi	廡下	堂下周圍的廊屋；廡音 ㄨˇ	廡: ok ㄨˇ in ['ㄨˇ']	
+OK	guwen-bingmeiguan	欹	傾斜；音 ㄧ（通「攲」，彼音 ㄑㄧ）	欹: ok ㄧ in ['ㄧ']	
+OK	guwen-bingmeiguan	斫	砍削；音 ㄓㄨㄛˊ	斫: ok ㄓㄨㄛˊ in ['ㄓㄨㄛˊ']	
+OK	guwen-wushibu	曳兵	拖著兵器；曳音 ㄧˋ	曳: ok ㄧˋ in ['ㄧˋ', 'ㄧㄝˋ']; 曳: MULTI ['ㄧˋ', 'ㄧㄝˋ']	
+OK	guwen-huizixiangliang	相	音 ㄒㄧㄤˋ，做宰相	相: ok ㄒㄧㄤˋ in ['ㄒㄧㄤ', 'ㄒㄧㄤˋ']; 相: MULTI ['ㄒㄧㄤ', 'ㄒㄧㄤˋ']	
+CHECK	guwen-huizixiangliang	鵷鶵	傳說中似鳳凰的高潔之鳥；音 ㄩㄢ ㄔㄨˊ	鵷: ok ㄩㄢ in ['ㄩㄢ']; 鶵: MISMATCH claimed=ㄔㄨˊ dict=[]	
+OK	guwen-huizixiangliang	鴟	貓頭鷹，喻貪戀祿位者；音 ㄔ	鴟: ok ㄔ in ['ㄔ']	
+OK	guwen-yugong	無窮匱	沒有窮盡；匱音 ㄎㄨㄟˋ	匱: ok ㄎㄨㄟˋ in ['ㄍㄨㄟˋ', 'ㄎㄨㄟˋ']; 匱: MULTI ['ㄍㄨㄟˋ', 'ㄎㄨㄟˋ']	
+OK	guwen-tangju	怫然	盛怒的樣子；怫音 ㄈㄟˋ	怫: ok ㄈㄟˋ in ['ㄅㄟˋ', 'ㄈㄟˋ', 'ㄈㄨˊ']; 怫: MULTI ['ㄅㄟˋ', 'ㄈㄟˋ', 'ㄈㄨˊ']	word:ㄈㄟˋㄖㄢˊ
+OK	guwen-guanju	雎鳩	一種水鳥；雎音 ㄐㄩ	雎: ok ㄐㄩ in ['ㄐㄩ']	word:ㄐㄩㄐㄧㄡ
+OK	guwen-guanju	窈窕	嫻靜美好；音 ㄧㄠˇ ㄊㄧㄠˇ	窈: ok ㄧㄠˇ in ['ㄧㄠˇ']; 窕: ok ㄊㄧㄠˇ in ['ㄊㄧㄠˇ']	word:ㄧㄠˇㄊㄧㄠˇ
+OK	guwen-guanju	好逑	好配偶；逑音 ㄑㄧㄡˊ	逑: ok ㄑㄧㄡˊ in ['ㄑㄧㄡˊ']	word:ㄏㄠˇㄑㄧㄡˊ
+OK	guwen-guanju	寤寐	醒與睡，指日夜；音 ㄨˋ ㄇㄟˋ	寤: ok ㄨˋ in ['ㄨˋ']; 寐: ok ㄇㄟˋ in ['ㄇㄟˋ']	word:ㄨˋㄇㄟˋ
+OK	guwen-zhuzhiwu	縋	用繩子吊下；音 ㄓㄨㄟˋ	縋: ok ㄓㄨㄟˋ in ['ㄓㄨㄟˋ']	
+OK	guwen-mulan	機杼	織布機；杼音 ㄓㄨˋ	杼: ok ㄓㄨˋ in ['ㄓㄨˋ']	word:ㄐㄧㄓㄨˋ
+OK	guwen-mulan	可汗	古代北方民族對君主的稱呼；音 ㄎㄜˋ ㄏㄢˊ	可: ok ㄎㄜˋ in ['ㄎㄜˇ', 'ㄎㄜˋ']; 可: MULTI ['ㄎㄜˇ', 'ㄎㄜˋ']; 汗: ok ㄏㄢˊ in ['ㄏㄢˊ', 'ㄏㄢˋ']; 汗: MULTI ['ㄏㄢˊ', 'ㄏㄢˋ']	word:ㄎㄜˋㄏㄢˊ
+OK	guwen-mulan	金柝	軍中打更用的器具；柝音 ㄊㄨㄛˋ	柝: ok ㄊㄨㄛˋ in ['ㄊㄨㄛˋ']	word:ㄐㄧㄣㄊㄨㄛˋ
+OK	guwen-jishierlang	怙	依靠，借指父親；音 ㄏㄨˋ	怙: ok ㄏㄨˋ in ['ㄏㄨˋ']	
+OK	guwen-bushezhe	齧	咬；音 ㄋㄧㄝˋ	齧: ok ㄋㄧㄝˋ in ['ㄋㄧㄝˋ']	
+OK	guwen-bushezhe	腊之	把它風乾；腊音 ㄒㄧˊ，乾肉、風乾	腊: ok ㄒㄧˊ in ['ㄒㄧˊ']	
+OK	guwen-kuaizai	謫	貶官；音 ㄓㄜˊ	謫: ok ㄓㄜˊ in ['ㄓㄜˊ']	
+OK	guwen-maiyouweng	自矜	自誇、自負；矜音 ㄐㄧㄣ	矜: ok ㄐㄧㄣ in ['ㄍㄨㄢ', 'ㄐㄧㄣ', 'ㄑㄧㄣˊ']; 矜: MULTI ['ㄍㄨㄢ', 'ㄐㄧㄣ', 'ㄑㄧㄣˊ']	word:ㄗˋㄐㄧㄣ
+OK	guwen-maiyouweng	睨	斜著眼看；音 ㄋㄧˋ	睨: ok ㄋㄧˋ in ['ㄋㄧˋ']	
+OK	guwen-maiyouweng	微頷	微微點頭；頷音 ㄏㄢˋ	頷: ok ㄏㄢˋ in ['ㄏㄢˋ']	
+OK	guwen-baorenan	臏腳	剜去膝蓋骨的酷刑；臏音 ㄅㄧㄣˋ	臏: ok ㄅㄧㄣˋ in ['ㄅㄧㄣˋ']	word:ㄅㄧㄣˋㄐㄧㄠˇ
+OK	guwen-xingxing	重	音 ㄔㄨㄥˊ，又、再	重: ok ㄔㄨㄥˊ in ['ㄓㄨㄥˋ', 'ㄔㄨㄥˊ']; 重: MULTI ['ㄓㄨㄥˋ', 'ㄔㄨㄥˊ']	
+OK	guwen-changgexing	晞	曬乾；音 ㄒㄧ	晞: ok ㄒㄧ in ['ㄒㄧ']	
+OK	guwen-changgexing	焜黃	枯黃；焜音 ㄎㄨㄣ	焜: ok ㄎㄨㄣ in ['ㄎㄨㄣ']	word:ㄎㄨㄣㄏㄨㄤˊ
+OK	guwen-huxinting	更定	初更已過（約晚上八點）；更音 ㄍㄥ	更: ok ㄍㄥ in ['ㄍㄥ', 'ㄍㄥˋ', 'ㄐㄧㄥ']; 更: MULTI ['ㄍㄥ', 'ㄍㄥˋ', 'ㄐㄧㄥ']	word:ㄍㄥㄉㄧㄥˋ
+OK	guwen-huxinting	拏	撐、划（船）；音 ㄋㄚˊ	拏: ok ㄋㄚˊ in ['ㄋㄚˊ']	
+OK	guwen-huxinting	毳衣	細毛皮衣；毳音 ㄘㄨㄟˋ	毳: ok ㄘㄨㄟˋ in ['ㄘㄨㄟˋ']	word:ㄘㄨㄟˋㄧ
+CHECK	guwen-huxinting	霧凇沆碭	冰花瀰漫一片；沆碭音 ㄏㄤˋ ㄉㄤˋ	碭: MISMATCH claimed=ㄏㄤˋ dict=['ㄉㄤˋ']	
+OK	guwen-manjing	燕地	今北京一帶；燕音 ㄧㄢ	燕: ok ㄧㄢ in ['ㄧㄢ', 'ㄧㄢˋ']; 燕: MULTI ['ㄧㄢ', 'ㄧㄢˋ']	
+OK	guwen-manjing	飛沙走礫	風颳得沙石亂飛；礫音 ㄌㄧˋ	礫: ok ㄌㄧˋ in ['ㄌㄧˋ']	word:ㄈㄟㄕㄚㄗㄡˇㄌㄧˋ
