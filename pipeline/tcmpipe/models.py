@@ -32,6 +32,11 @@ class QuestionRecord(BaseModel):
     needs_review: bool = False
     image_w: int = 0
     image_h: int = 0
+    # passage-group (題組/克漏字/長閱讀) context, when the question shares a passage
+    group: Optional[list[int]] = None         # [start_num, end_num] inclusive
+    passage_image_url: Optional[str] = None   # standalone crop of the shared passage
+    passage_image_w: int = 0
+    passage_image_h: int = 0
 
 
 class SchoolShard(BaseModel):

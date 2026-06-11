@@ -227,6 +227,20 @@ def run_school(school):
             if r.id in tag_ov:
                 r.concept_tags = tag_ov[r.id]
 
+    # passage-group context (題組/克漏字/長閱讀): attach the shared-passage crop
+    # produced by gen_groups.py so a member served standalone can show its passage.
+    gpath = os.path.join(C.ROOT, 'pipeline', 'data', 'question_groups.json')
+    if os.path.isfile(gpath):
+        with open(gpath, encoding='utf-8') as f:
+            gmap = json.load(f).get('groups', {})
+        for r in records:
+            gi = gmap.get(r.id)
+            if gi and gi.get('passage_image_url'):
+                r.group = gi['group']
+                r.passage_image_url = gi['passage_image_url']
+                r.passage_image_w = gi.get('passage_image_w', 0)
+                r.passage_image_h = gi.get('passage_image_h', 0)
+
     # every correct-answer letter must be clickable: some chemistry options render
     # only as structures (no text) or a 5th option E isn't in the text layer, so the
     # UI's A–D fallback can't select an E answer. Pad missing letters (empty text;

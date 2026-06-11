@@ -33,9 +33,12 @@
   let showImg = $state(false)
   const imgVisible = $derived(!compact || showImg)
 
-  // 題組支援：共用文章被裁在更前面那題的圖底部 — 單題抽出時可往前翻圖找文章。
+  // 題組支援。優先用 pipeline 裁好的「共用文章獨立圖」（passage_image_url）；
+  // 沒有時才退回啟發式：往前翻前一題的圖找文章。
   const IMG_BASE = (import.meta.env.PUBLIC_IMG_BASE || '').replace(/\/$/, '')
-  const groupish = $derived(needsPassageContext(question))
+  const passageUrl = $derived(question.passage_image_url || null)
+  let showPassage = $state(false)
+  const groupish = $derived(!passageUrl && needsPassageContext(question))
   let contextBack = $state(0) // 0 = closed; N = showing the image N questions earlier
   const contextUrl = $derived(contextBack > 0 ? earlierImageUrl(question, contextBack) : null)
 
@@ -103,7 +106,17 @@
       <span class="badge badge-outline">第 {question.question_number} 題</span>
     </header>
 
-    {#if groupish}
+    {#if passageUrl}
+      <!-- 題組共用文章（pipeline 裁切，永遠正確） -->
+      <div class="flex flex-col gap-2 rounded-box border border-info/30 bg-info/[0.05] p-2">
+        <button type="button" class="btn btn-ghost btn-xs self-start" onclick={() => (showPassage = !showPassage)}>
+          📄 題組閱讀文章（第 {question.group?.[0]}–{question.group?.[1]} 題共用）{showPassage ? ' ▲' : ' ▼'}
+        </button>
+        {#if showPassage}
+          <img src={IMG_BASE + passageUrl} alt={`第 ${question.group?.[0]}–${question.group?.[1]} 題的閱讀文章`} class="w-full rounded-lg bg-white" loading="lazy" decoding="async" />
+        {/if}
+      </div>
+    {:else if groupish}
       <div class="flex flex-col gap-2 rounded-box border border-dashed border-base-300 bg-base-200/30 p-2">
         {#if contextBack === 0}
           <button type="button" class="btn btn-ghost btn-xs self-start" onclick={() => (contextBack = 1)}>

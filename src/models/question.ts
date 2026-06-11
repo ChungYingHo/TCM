@@ -29,6 +29,12 @@ export interface QuestionRecord {
   needs_review: boolean
   image_w: number
   image_h: number
+  // passage-group (題組/克漏字/長閱讀): the shared passage rendered as its own crop,
+  // so a member served standalone (drill/wrong book/quiz) can show its context.
+  group?: [number, number] | null // [startNum, endNum] inclusive
+  passage_image_url?: string | null
+  passage_image_w?: number
+  passage_image_h?: number
   // provenance / search-only — stripped from the API payload to keep it lean
   ocr_text?: string | null
   source_pdf?: string
