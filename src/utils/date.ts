@@ -51,6 +51,14 @@ export function isTaper(dateKey: string, examKey: string, rhythm: Rhythm = DEFAU
   return left >= 0 && left < rhythm.taperLastDays
 }
 
+/** Mock-exam day: the Saturday right before each ~monthly rest Sunday. The daily
+ *  plan upgrades that day's drill into a timed 50-question block (pacing/stamina
+ *  training) without burning the reserved newest-year mock papers. */
+export function isMockDay(dateKey: string, startKey: string, rhythm: Rhythm = DEFAULT_RHYTHM): boolean {
+  if (new Date(parseYmd(dateKey)).getDay() !== 6) return false
+  return dayType(ymd(parseYmd(dateKey) + DAY_MS), startKey, rhythm) === 'rest'
+}
+
 /** Count full-intensity study days in [startKey, endKey] inclusive (excludes light + rest). */
 export function fullStudyDays(startKey: string, endKey: string, rhythm: Rhythm = DEFAULT_RHYTHM): number {
   if (parseYmd(endKey) < parseYmd(startKey)) return 0

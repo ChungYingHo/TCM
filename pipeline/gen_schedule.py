@@ -36,7 +36,9 @@ EXAM_WINDOW = '實際考試 2027/3–4（義守約 3 月底、慈濟 4/10、中�
 PER_DAY = {
     'notesPerSubject': 1,
     'quiz': 10,           # learn phase: questions tagged to today's notes
-    'quizDrill': 30,      # drill phase (first note pass done): sequential full-bank drill
+    'quizDrill': 30,      # drill phase (first note pass done): sequential full-bank drill…
+    'quizWeak': 6,        # …of which this many re-target the user's weakest tags
+    'quizMock': 50,       # ~monthly mock day: one timed block of this size instead
     'newVocab': 18,
     'reviewVocabMax': 100,    # hard cap when the SRS due-queue piles up
     'reviewVocabTarget': 60,  # daily review size; due words first, random learned words fill the rest

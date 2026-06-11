@@ -12,6 +12,7 @@ export interface Cursors {
   notes: Record<Subject, number> // # notes completed per subject
   classics: number // # classics read
   drill: number // # completed quiz days that fell in the drill phase (first note pass done)
+  drillDates: string[] // those days' dates — lets the planner replay how many drill items each consumed
 }
 
 function emptyNotes(): Record<Subject, number> {
@@ -37,16 +38,16 @@ export function deriveCursors(
   const notes = emptyNotes()
   let vocabDays = 0
   let classics = 0
-  let drill = 0
+  const drillDates: string[] = []
   const firstPassDone = () =>
     !!noteLens && SUBJECTS.every((s) => !noteLens[s] || notes[s] >= (noteLens[s] as number))
   for (const date of Object.keys(plan).sort()) {
     if (before && date >= before) continue
     const st = plan[date]
-    if (st.quiz && firstPassDone()) drill += 1
+    if (st.quiz && firstPassDone()) drillDates.push(date)
     if (st.newVocab) vocabDays += 1
     if (st.classic) classics += 1
     if (st.notes) for (const s of SUBJECTS) if (st.notes[s]) notes[s] += 1
   }
-  return { vocab: vocabDays * perDayNewVocab, notes, classics, drill }
+  return { vocab: vocabDays * perDayNewVocab, notes, classics, drill: drillDates.length, drillDates }
 }

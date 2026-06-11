@@ -14,6 +14,7 @@
   import { dumpPlan, getDay, setSectionDone, setNoteDone, type Section } from '@/utils/dailyPlan'
   import { learn, dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
   import { composeReview } from '@/utils/reviewSample'
+  import { getAttempts } from '@/utils/progress'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
   import { ymd } from '@/utils/date'
@@ -39,12 +40,31 @@
 
   const today = ymd(Date.now())
   let planStore = $state(dumpPlan())
+  let attemptsStore = $state(getAttempts())
   let reviewIds = $state<string[]>([])
   let showQuiz = $state(false)
   let showReview = $state(false)
+  let openMini = $state<Partial<Record<Subject, boolean>>>({})
+
+  // mock-day countdown (started by the user, purely informative — never blocks answering)
+  let mockLeft = $state(-1) // seconds; -1 = not started
+  let mockTicker: ReturnType<typeof setInterval> | null = null
+  function startMockTimer(minutes: number) {
+    mockLeft = minutes * 60
+    if (mockTicker) clearInterval(mockTicker)
+    mockTicker = setInterval(() => {
+      if (mockLeft > 0) mockLeft -= 1
+      else if (mockTicker) { clearInterval(mockTicker); mockTicker = null }
+    }, 1000)
+  }
+  $effect(() => () => { if (mockTicker) clearInterval(mockTicker) })
+  const mockClock = $derived(
+    mockLeft < 0 ? '' : `${String(Math.floor(mockLeft / 60)).padStart(2, '0')}:${String(mockLeft % 60).padStart(2, '0')}`,
+  )
 
   function refresh() {
     planStore = dumpPlan()
+    attemptsStore = getAttempts()
     // 複習單字 = SRS 到期字優先（弱字在前）＋從已背過的字隨機抽樣補滿每日目標。
     // 以日期當種子 → 同一天內列表穩定，跨天自然輪換。
     reviewIds = composeReview(
@@ -68,7 +88,7 @@
   })
 
   // today's content + completion (today excluded from cursor → stays stable as you finish it)
-  const plan = $derived(computeToday(schedule, planStore, today))
+  const plan = $derived(computeToday(schedule, planStore, today, attemptsStore))
   const st = $derived(planStore[today] ?? {})
   const newWords = $derived(plan.newVocabIds.map((id) => wordById.get(id)).filter(Boolean))
   const reviewWords = $derived(
@@ -200,15 +220,27 @@
       </div>
       <div class="grid gap-2 sm:grid-cols-2">
         {#each plan.notes as n (n.subject)}
-          <div class="flex items-center gap-2 rounded-box border border-base-300 bg-base-200/40 p-2.5">
-            <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.notes?.[n.subject]} onchange={() => toggleNote(n.subject)} aria-label={`${SUBJECT_LABEL[n.subject]}考點完成`} />
-            <button class="flex flex-1 items-center justify-between gap-2 text-left" onclick={() => openNote(n.slug, tagShort(n.tag))}>
-              <span class="flex flex-col">
-                <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}</span>
-                <span class="font-medium leading-tight">{tagShort(n.tag)}</span>
-              </span>
-              <span class="text-primary">開啟 →</span>
-            </button>
+          <div class="flex flex-col gap-2 rounded-box border border-base-300 bg-base-200/40 p-2.5">
+            <div class="flex items-center gap-2">
+              <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.notes?.[n.subject]} onchange={() => toggleNote(n.subject)} aria-label={`${SUBJECT_LABEL[n.subject]}考點完成`} />
+              <button class="flex flex-1 items-center justify-between gap-2 text-left" onclick={() => openNote(n.slug, tagShort(n.tag))}>
+                <span class="flex flex-col">
+                  <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}</span>
+                  <span class="font-medium leading-tight">{tagShort(n.tag)}</span>
+                </span>
+                <span class="text-primary">開啟 →</span>
+              </button>
+            </div>
+            {#if n.miniQuizIds.length}
+              <!-- 第 2 輪起＝先測後讀：答對快速掃過、答錯認真重讀 -->
+              {#if openMini[n.subject]}
+                <QuizQuestions ids={n.miniQuizIds} />
+              {:else}
+                <button class="btn btn-outline btn-primary btn-xs self-start" onclick={() => (openMini = { ...openMini, [n.subject]: true })}>
+                  先測 {n.miniQuizIds.length} 題再讀 →
+                </button>
+              {/if}
+            {/if}
           </div>
         {/each}
       </div>
@@ -219,20 +251,33 @@
   {#if plan.dayType === 'full' && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">{plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}</h2>
-        <label class="flex cursor-pointer items-center gap-2 text-sm">
-          <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.quiz} onchange={() => toggleSection('quiz')} />做完了
-        </label>
+        <h2 class="text-lg font-bold tracking-tight">
+          {plan.mock ? `限時模擬 · ${plan.quizIds.length} 題` : plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
+        </h2>
+        <div class="flex items-center gap-3">
+          {#if plan.mock && mockLeft >= 0}
+            <span class={`font-mono text-sm tabular-nums ${mockLeft === 0 ? 'font-bold text-error' : 'text-base-content/70'}`} role="timer">
+              {mockLeft === 0 ? '時間到' : mockClock}
+            </span>
+          {/if}
+          <label class="flex cursor-pointer items-center gap-2 text-sm">
+            <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.quiz} onchange={() => toggleSection('quiz')} />做完了
+          </label>
+        </div>
       </div>
       <p class="mb-3 text-sm text-base-content/55">
-        {plan.phase === 'drill'
-          ? '首輪筆記完成，進入刷題期——每天一段全新考古題（年份新到舊、四科混合），答錯會自動進錯題本。'
-          : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
+        {plan.mock
+          ? '每月一次的限時段——比照正式考的節奏（50 題／70 分鐘），練配速、也練「倒扣之下該不該猜」的取捨。時間到只是提醒，不會中斷作答。'
+          : plan.phase === 'drill'
+            ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
+            : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
       </p>
       {#if showQuiz}
         <QuizQuestions ids={plan.quizIds} />
       {:else}
-        <button class="btn btn-primary btn-sm" onclick={() => (showQuiz = true)}>開始作答（{plan.quizIds.length} 題）→</button>
+        <button class="btn btn-primary btn-sm" onclick={() => { showQuiz = true; if (plan.mock) startMockTimer(70) }}>
+          開始作答（{plan.quizIds.length} 題）→
+        </button>
       {/if}
     </section>
   {/if}

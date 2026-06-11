@@ -95,3 +95,58 @@ describe('computeToday — learn → drill phase', () => {
     expect(tp.phase).toBe('learn')
   })
 })
+
+describe('computeToday — weak-tag slots + monthly mock day', () => {
+  const weakSchedule: ScheduleData = {
+    ...schedule,
+    perDay: { ...schedule.perDay, quizDrill: 4, quizWeak: 2, quizMock: 4 },
+    tracks: { ...schedule.tracks, drill: ['d1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8'] },
+  }
+  // first note pass (1 chemistry note) completed on day 1 → drill phase afterwards
+  const passDone: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true }, quiz: true } }
+
+  it('fills weak slots from the lowest-accuracy tag when there is enough history', () => {
+    const attempts = { q1: { attempts: 4, correct: 1, lastTs: 0 }, q2: { attempts: 4, correct: 1, lastTs: 0 } }
+    const tp = computeToday(weakSchedule, passDone, '2026-06-23', attempts)
+    expect(tp.phase).toBe('drill')
+    expect(tp.quizIds.slice(0, 2)).toEqual(['d1', 'd2']) // sequential part shrinks to quizDrill − quizWeak
+    expect(tp.quizWeakCount).toBe(2)
+    expect(tp.quizIds.slice(2).every((id) => ['q1', 'q2', 'q3'].includes(id))).toBe(true)
+  })
+
+  it("falls back to today's note tags for weak slots when history is too thin", () => {
+    const tp = computeToday(weakSchedule, passDone, '2026-06-23', {})
+    expect(tp.quizWeakCount).toBe(2)
+    expect(tp.quizIds.slice(2).every((id) => ['q1', 'q2', 'q3'].includes(id))).toBe(true)
+  })
+
+  it('upgrades the Saturday before a rest Sunday to a timed mock block', () => {
+    // 2026-07-19 is the 4th Sunday after the 6-22 start (lightIndex 3 → rest), so 7-18 mocks.
+    const tp = computeToday(weakSchedule, passDone, '2026-07-18')
+    expect(tp.mock).toBe(true)
+    expect(tp.quizIds).toHaveLength(4) // quizMock
+    expect(tp.quizWeakCount).toBe(0) // mock day = pure sequential block
+  })
+
+  it('replays mock days as bigger drill-window consumption', () => {
+    const plan: DailyPlanStore = {
+      ...passDone,
+      '2026-06-23': { quiz: true }, // normal drill day → consumes 2 (quizDrill − quizWeak)
+      '2026-07-18': { quiz: true }, // mock day → consumes 4 (quizMock)
+    }
+    const tp = computeToday(weakSchedule, plan, '2026-07-20')
+    expect(tp.quizIds.slice(0, 2)).toEqual(['d7', 'd8']) // window start = 2 + 4 = 6
+  })
+})
+
+describe('computeToday — test-then-read mini quiz on later note rounds', () => {
+  it('attaches no mini quiz on the first pass and 3 questions from the second pass on', () => {
+    const first = computeToday(schedule, empty, '2026-06-22')
+    expect(first.notes[0].round).toBe(1)
+    expect(first.notes[0].miniQuizIds).toEqual([])
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true } } }
+    const second = computeToday(schedule, plan, '2026-06-23')
+    expect(second.notes[0].round).toBe(2)
+    expect(second.notes[0].miniQuizIds).toEqual(['q1', 'q2', 'q3'])
+  })
+})
