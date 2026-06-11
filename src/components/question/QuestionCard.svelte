@@ -8,6 +8,7 @@
   import { recordWrong, removeWrong, isInWrongBook } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
   import { askGemini, buildQuestionPrompt } from '@/utils/askAI'
+  import { needsPassageContext, earlierImageUrl } from '@/utils/passageContext'
 
   let {
     question,
@@ -31,6 +32,12 @@
 
   let showImg = $state(false)
   const imgVisible = $derived(!compact || showImg)
+
+  // 題組支援：共用文章被裁在更前面那題的圖底部 — 單題抽出時可往前翻圖找文章。
+  const IMG_BASE = (import.meta.env.PUBLIC_IMG_BASE || '').replace(/\/$/, '')
+  const groupish = $derived(needsPassageContext(question))
+  let contextBack = $state(0) // 0 = closed; N = showing the image N questions earlier
+  const contextUrl = $derived(contextBack > 0 ? earlierImageUrl(question, contextBack) : null)
 
   const letters = $derived(
     question.options.length
@@ -95,6 +102,25 @@
       <span class="badge badge-ghost">{SUBJECT_LABEL[question.subject]}</span>
       <span class="badge badge-outline">第 {question.question_number} 題</span>
     </header>
+
+    {#if groupish}
+      <div class="flex flex-col gap-2 rounded-box border border-dashed border-base-300 bg-base-200/30 p-2">
+        {#if contextBack === 0}
+          <button type="button" class="btn btn-ghost btn-xs self-start" onclick={() => (contextBack = 1)}>
+            📄 題組題——文章在更前面的題目圖裡，點開往前找
+          </button>
+        {:else}
+          <div class="flex flex-wrap items-center gap-2 text-xs text-base-content/60">
+            <span>第 {Number(question.question_number) - contextBack} 題的圖（文章通常在圖的下半部）</span>
+            <button type="button" class="btn btn-ghost btn-xs" disabled={!earlierImageUrl(question, contextBack + 1)} onclick={() => (contextBack += 1)}>← 再往前</button>
+            <button type="button" class="btn btn-ghost btn-xs" onclick={() => (contextBack -= 1)}>{contextBack === 1 ? '收合' : '往後 →'}</button>
+          </div>
+          {#if contextUrl}
+            <img src={IMG_BASE + contextUrl} alt={`第 ${Number(question.question_number) - contextBack} 題（題組文章脈絡）`} class="w-full rounded-lg bg-white" loading="lazy" decoding="async" />
+          {/if}
+        {/if}
+      </div>
+    {/if}
 
     {#if imgVisible}
       <QuestionImage {question} />

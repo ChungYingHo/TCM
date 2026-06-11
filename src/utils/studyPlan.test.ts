@@ -150,3 +150,22 @@ describe('computeToday — test-then-read mini quiz on later note rounds', () =>
     expect(second.notes[0].miniQuizIds).toEqual(['q1', 'q2', 'q3'])
   })
 })
+
+describe('computeToday — drill window groups by subject within the day', () => {
+  it('keeps same-subject (passage-group) questions adjacent', () => {
+    const s: ScheduleData = {
+      ...schedule,
+      perDay: { ...schedule.perDay, quizDrill: 4, quizWeak: 0 },
+      tracks: {
+        ...schedule.tracks,
+        drill: ['CMU-115-chemistry-1', 'CMU-115-chinese-1', 'CMU-115-chemistry-2', 'CMU-115-chinese-2'],
+      },
+    }
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true } } }
+    const tp = computeToday(s, plan, '2026-06-23')
+    expect(tp.quizIds).toEqual([
+      'CMU-115-chemistry-1', 'CMU-115-chemistry-2', // chemistry block, paper order kept
+      'CMU-115-chinese-1', 'CMU-115-chinese-2',
+    ])
+  })
+})

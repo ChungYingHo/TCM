@@ -136,7 +136,12 @@ export function computeToday(
       0,
     )
     const start = consumed % drillTrack.length
-    const seq = Array.from({ length: Math.min(seqN, drillTrack.length) }, (_, i) => drillTrack[(start + i) % drillTrack.length])
+    const window = Array.from({ length: Math.min(seqN, drillTrack.length) }, (_, i) => drillTrack[(start + i) % drillTrack.length])
+    // Group the day's window by subject (stable) so passage-group questions (長閱讀/
+    // 克漏字, consecutive numbers within a paper) sit next to each other instead of
+    // being interleaved with the other three subjects.
+    const subjOrder = (id: string) => SUBJECTS.indexOf(id.split('-')[2] as Subject)
+    const seq = window.map((id, i) => ({ id, i })).sort((a, b) => subjOrder(a.id) - subjOrder(b.id) || a.i - b.i).map((x) => x.id)
     const weak: string[] = []
     if (!mock && weakN > 0) {
       const taken = new Set(seq)
