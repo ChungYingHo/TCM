@@ -9,6 +9,11 @@ export function ymd(ts: number): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
+/** 顯示用中文日期眉題，如「6月11日 星期四」（首頁問候與今日複習共用）。 */
+export function zhDateLabel(d: Date = new Date()): string {
+  return new Intl.DateTimeFormat('zh-TW', { month: 'long', day: 'numeric', weekday: 'long' }).format(d)
+}
+
 /** Parse a YYYY-MM-DD key back to a local-midnight timestamp. */
 export function parseYmd(key: string): number {
   const [y, m, d] = key.split('-').map(Number)

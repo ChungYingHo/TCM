@@ -18,6 +18,7 @@ const { title = '後中醫考古題', gated = true } = Astro.props
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f5f2ea" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +33,13 @@ const { title = '後中醫考古題', gated = true } = Astro.props
       crossorigin="anonymous"
     />
     <script is:inline>
-      // 夜讀(暖白低亮)模式記憶 — 預設關閉、維持亮色
-      if (localStorage.getItem('tcm-reading') === 'dim')
+      // 夜讀模式記憶 — 預設關閉、維持亮色；同步行動瀏覽器外框色
+      if (localStorage.getItem('tcm-reading') === 'dim') {
         document.documentElement.dataset.reading = 'dim'
+        document
+          .querySelector('meta[name="theme-color"]')
+          ?.setAttribute('content', '#161d1f')
+      }
     </script>
   </head>
   <body class="min-h-screen bg-base-200 text-base-content">
@@ -48,6 +53,11 @@ const { title = '後中醫考古題', gated = true } = Astro.props
           <main class="mx-auto w-full max-w-5xl px-4 py-7 sm:px-6 sm:py-10">
             <slot />
           </main>
+          <footer class="mx-auto w-full max-w-5xl px-4 pb-8 sm:px-6">
+            <p class="border-t border-base-300 pt-5 text-center text-xs tracking-[0.18em] text-base-content/35">
+              日拱一卒 · 功不唐捐
+            </p>
+          </footer>
         </>
       ) : (
         <slot />

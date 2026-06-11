@@ -3,16 +3,18 @@
   themes: false;
 }
 
-/* ── 黛青／藥草 OKLCH 主題（精煉版：保留中醫氣質，提升呼吸感與當代感）──────── */
+/* ── 黛青／宣紙 OKLCH 主題（書齋版：暖紙底＋墨青字，像在書桌前讀書）─────────
+   底色由冷綠白改為溫潤米白（宣紙），墨青 ink 與黛青主色不變——
+   青墨落在暖紙上，對比柔和、久讀不躁，赭色暖調點綴也更協調。 */
 @plugin "daisyui/theme" {
   name: "tcm";
   default: true;
   color-scheme: light;
 
-  --color-base-100: oklch(0.994 0.003 150);   /* 紙白（卡片面） */
-  --color-base-200: oklch(0.975 0.005 152);   /* 頁面底 */
-  --color-base-300: oklch(0.945 0.006 155);   /* 柔和分隔線（已調亮，框線不再搶眼） */
-  --color-base-content: oklch(0.30 0.022 188); /* 墨青，非純黑 */
+  --color-base-100: oklch(0.988 0.0045 95);   /* 紙白（卡片面，微暖） */
+  --color-base-200: oklch(0.9645 0.0085 92);  /* 頁面底：宣紙米 */
+  --color-base-300: oklch(0.932 0.0105 92);   /* 柔和分隔線（暖灰） */
+  --color-base-content: oklch(0.295 0.021 192); /* 墨青，非純黑 */
 
   --color-primary: oklch(0.49 0.085 184);      /* 黛青（略深、略增彩度，更有意圖） */
   --color-primary-content: oklch(0.99 0.01 184);
@@ -59,13 +61,88 @@ html, body {
   text-rendering: optimizeLegibility;
   letter-spacing: 0.005em;
 }
-body { line-height: 1.7; }
+body {
+  line-height: 1.7;
+  /* 環境光暈：頁首一抹極淡的黛青與赭，像晨光落在書桌；隨捲動自然淡出 */
+  background-image:
+    radial-gradient(56rem 30rem at 88% -10rem,
+      color-mix(in oklab, var(--color-primary) 6.5%, transparent), transparent 70%),
+    radial-gradient(48rem 26rem at -8% -8rem,
+      color-mix(in oklab, var(--color-accent) 4.5%, transparent), transparent 70%);
+  background-repeat: no-repeat;
+  transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out);
+}
 
 /* 標題走宋體，字距與行高更舒展 */
 h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   letter-spacing: 0.015em;
   line-height: 1.35;
+}
+/* 標題內的輔助小字可退回黑體 */
+.font-body { font-family: var(--font-body); }
+
+/* ── 頁首／區塊標題語彙（全站統一）：
+   kicker（小字眉題＋短橫線）→ 宋體大標 → 灰說明，一眼分清「我在哪、這頁幹嘛」。
+   放 components 層，讓個別頁面仍可用 utilities（如 text-xl）微調。 */
+@layer components {
+  .page-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: color-mix(in oklab, var(--color-primary) 78%, transparent);
+  }
+  .page-kicker::before {
+    content: "";
+    width: 1.1rem;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.55;
+  }
+  .page-title {
+    font-family: var(--font-display);
+    font-size: 1.55rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+  @media (min-width: 640px) { .page-title { font-size: 1.85rem; } }
+  .page-desc {
+    font-size: 0.875rem;
+    line-height: 1.65;
+    color: color-mix(in oklab, var(--color-base-content) 58%, transparent);
+  }
+
+  /* 區塊標題：前綴一枚旋轉 45° 的小方印（印章意象），低調但有記憶點 */
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-display);
+    font-size: 1.08rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+  .section-heading::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 1.5px;
+    background: color-mix(in oklab, var(--color-primary) 72%, transparent);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+  /* 區塊標題後的小字補充：退回黑體與正常字距，灰一階 */
+  .section-sub {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.005em;
+    color: color-mix(in oklab, var(--color-base-content) 55%, transparent);
+  }
 }
 
 /* ── 設計系統：卡片/分隔/徽章/輸入/焦點，整體更柔、更有留白 ───────────── */

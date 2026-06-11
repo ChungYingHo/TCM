@@ -1,11 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import PageHeader from '@/components/common/PageHeader.astro'
 import StudyApp from '@/components/study/StudyApp.svelte'
 
 export const prerender = false
 ---
 
 <Layout title="刷題 · 後中醫題庫">
-  <h1 class="mb-4 text-2xl font-bold">學習模式</h1>
+  <PageHeader kicker="練習" title="刷題" desc="依學校、年份、考點挑題，逐題作答、即時對答案。" />
   <StudyApp client:load />
 </Layout>

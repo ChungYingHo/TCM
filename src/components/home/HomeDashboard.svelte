@@ -9,7 +9,7 @@
   import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
   import { tagSlug, tagShort } from '@/models/taxonomy'
-  import { ymd } from '@/utils/date'
+  import { ymd, zhDateLabel } from '@/utils/date'
   import { dumpPlan, getDay } from '@/utils/dailyPlan'
   import { deriveCursors } from '@/utils/studyCursor'
   import { computeToday, type ScheduleData } from '@/utils/studyPlan'
@@ -77,6 +77,11 @@
         : { label: '準時', cls: 'text-base-content/50' },
   )
 
+  // 書桌問候：日期當眉題、依時段打招呼，像坐下來翻開今天的進度
+  const dateLabel = zhDateLabel()
+  const hour = new Date().getHours()
+  const greeting = hour < 5 ? '夜深了' : hour < 11 ? '早安' : hour < 18 ? '午安' : '晚安'
+
   const links = [
     { href: '/study', label: '刷題', icon: '✎', desc: '依年份／考點挑題' },
     { href: '/exam', label: '模擬考', icon: '⏱', desc: '計時整卷練習' },
@@ -93,8 +98,8 @@
     <a href="/review" class="panel-hover group relative flex flex-col justify-between gap-3 rounded-box border border-primary/25 bg-primary/[0.07] p-5 sm:col-span-2">
       <div class="flex items-start justify-between gap-3">
         <div>
-          <p class="text-sm font-medium text-primary/80">今日複習</p>
-          <p class="mt-1 text-2xl font-bold text-primary">打開今天的讀書計畫</p>
+          <p class="page-kicker">{dateLabel}</p>
+          <p class="mt-1.5 font-display text-2xl font-bold text-primary">{greeting}，打開今天的讀書計畫</p>
           <p class="mt-1 text-sm text-base-content/60">
             {#if tp.dayType === 'rest'}今天是放空日，休息也很好 🌿
             {:else if tp.dayType === 'light'}輕量日 · 複習為主
@@ -108,14 +113,14 @@
 
     <div class="flex flex-col justify-between gap-1 rounded-box border border-base-300 bg-base-100 p-5 shadow-soft">
       <p class="text-sm font-medium text-base-content/60">距完課目標</p>
-      <p class="text-4xl font-bold tabular-nums">{tp.daysToExam}<span class="ml-1 text-base font-medium text-base-content/50">天</span></p>
+      <p class="font-display text-4xl font-bold tabular-nums">{tp.daysToExam}<span class="ml-1 font-body text-base font-medium text-base-content/50">天</span></p>
       <p class="text-xs text-base-content/45">連續 {streak.count} 天 · 最佳 {streak.best} 天</p>
     </div>
   </section>
 
   <!-- 步調總覽 -->
   <section class="flex flex-col gap-3">
-    <h2 class="text-lg font-bold tracking-tight">讀書進度</h2>
+    <h2 class="section-heading">讀書進度</h2>
     <div class="grid gap-3 sm:grid-cols-3">
       <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
         <div class="flex items-baseline justify-between">
@@ -157,7 +162,7 @@
   <!-- 該補強的考點 -->
   {#if weak.length}
     <section class="flex flex-col gap-3">
-      <h2 class="text-lg font-bold tracking-tight">該補強的考點</h2>
+      <h2 class="section-heading">該補強的考點</h2>
       <p class="-mt-2 text-xs text-base-content/50">依錯題累計排序，點開直接讀該考點筆記。</p>
       <div class="flex flex-wrap gap-2">
         {#each weak as w (w.tag)}
@@ -173,7 +178,7 @@
 
   <!-- 快速入口 -->
   <section class="flex flex-col gap-3">
-    <h2 class="text-lg font-bold tracking-tight">快速入口</h2>
+    <h2 class="section-heading">快速入口</h2>
     <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
       {#each links as l (l.href)}
         <a href={l.href} class="panel-hover flex items-center gap-3 rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">

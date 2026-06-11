@@ -1,11 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import PageHeader from '@/components/common/PageHeader.astro'
 import ExamApp from '@/components/exam/ExamApp.svelte'
 
 export const prerender = false
 ---
 
 <Layout title="模擬考 · 後中醫題庫">
-  <h1 class="mb-4 text-2xl font-bold">模擬考模式</h1>
+  <PageHeader kicker="練習" title="模擬考" desc="計時整卷練習，重建臨場感；交卷後依該年規則計分。" />
   <ExamApp client:load />
 </Layout>

@@ -1,0 +1,15 @@
+---
+// 全站統一頁首：kicker 眉題（對應導覽分區）＋宋體大標＋灰說明。
+interface Props {
+  kicker: string
+  title: string
+  desc?: string
+}
+const { kicker, title, desc } = Astro.props
+---
+
+<header class="mb-5 flex flex-col gap-1.5 sm:mb-7">
+  <p class="page-kicker">{kicker}</p>
+  <h1 class="page-title">{title}</h1>
+  {desc && <p class="page-desc max-w-2xl">{desc}</p>}
+</header>

@@ -83,7 +83,15 @@ const pill = (active: boolean) =>
       }
     </div>
 
-    <button id="reading-toggle" class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">☾</button>
+    <button id="reading-toggle" class="grid h-9 w-9 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">
+      <svg data-icon="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="h-[1.05rem] w-[1.05rem]" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"></path>
+      </svg>
+      <svg data-icon="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="hidden h-[1.05rem] w-[1.05rem]" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+      </svg>
+    </button>
 
     <!-- 手機：漢堡選單按鈕（lg 以上隱藏） -->
     <button
@@ -149,16 +157,26 @@ const pill = (active: boolean) =>
 </header>
 
 <script is:inline>
-  document.getElementById('reading-toggle')?.addEventListener('click', () => {
+  const readingToggle = document.getElementById('reading-toggle')
+  const syncReadingIcon = () => {
+    const dim = document.documentElement.dataset.reading === 'dim'
+    readingToggle?.querySelector('[data-icon="moon"]')?.classList.toggle('hidden', dim)
+    readingToggle?.querySelector('[data-icon="sun"]')?.classList.toggle('hidden', !dim)
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute('content', dim ? '#161d1f' : '#f5f2ea')
+  }
+  syncReadingIcon()
+  readingToggle?.addEventListener('click', () => {
     const el = document.documentElement
-    const dim = el.dataset.reading === 'dim'
-    if (dim) {
+    if (el.dataset.reading === 'dim') {
       delete el.dataset.reading
       localStorage.removeItem('tcm-reading')
     } else {
       el.dataset.reading = 'dim'
       localStorage.setItem('tcm-reading', 'dim')
     }
+    syncReadingIcon()
   })
 
   const navToggle = document.getElementById('nav-toggle')

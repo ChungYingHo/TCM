@@ -32,9 +32,10 @@
 </script>
 
 <div class="flex flex-col gap-4">
-  <header class="flex flex-col gap-1">
-    <h1 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">古文選讀</h1>
-    <p class="text-sm text-base-content/55">
+  <header class="flex flex-col gap-1.5">
+    <p class="page-kicker">字庫</p>
+    <h1 class="page-title">古文選讀</h1>
+    <p class="page-desc max-w-2xl">
       《古文觀止》精選 {data.count} 篇，原文＋白話翻譯＋註釋。點一篇即可閱讀；可依朝代篩選，配合「分析」的時代分布重點準備。
     </p>
   </header>

@@ -17,7 +17,7 @@
   import { getAttempts } from '@/utils/progress'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
-  import { ymd } from '@/utils/date'
+  import { ymd, zhDateLabel } from '@/utils/date'
   import type { Subject } from '@/models/question'
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
@@ -39,6 +39,7 @@
   })
 
   const today = ymd(Date.now())
+  const todayLabel = zhDateLabel()
   let planStore = $state(dumpPlan())
   let attemptsStore = $state(getAttempts())
   let reviewIds = $state<string[]>([])
@@ -150,15 +151,18 @@
 
 <div class="flex flex-col gap-5">
   <header class="flex flex-col gap-2">
-    <div class="flex flex-wrap items-center justify-between gap-2">
-      <h1 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">今日複習</h1>
+    <div class="flex flex-wrap items-end justify-between gap-2">
+      <div class="flex flex-col gap-1.5">
+        <p class="page-kicker tabular-nums">{todayLabel}</p>
+        <h1 class="page-title">今日複習</h1>
+      </div>
       <div class="flex flex-wrap items-center gap-1.5">
         <span class="badge badge-neutral badge-sm font-medium tabular-nums" title={schedule.examWindow ?? ''}>距完課 {plan.daysToExam} 天</span>
         {#if dayBadge}<span class={`badge badge-sm font-medium ${dayBadge.cls}`}>{dayBadge.label}</span>{/if}
         {#if paceBadge}<span class={`badge badge-sm font-medium ${paceBadge.cls}`}>{paceBadge.label}</span>{/if}
       </div>
     </div>
-    <p class="text-sm text-base-content/55 tabular-nums">{today}{#if vocab}　·　今日進度 {doneCount}/{sections.length}{/if}</p>
+    {#if vocab}<p class="text-sm tabular-nums text-base-content/55">今日進度 {doneCount}/{sections.length}</p>{/if}
     {#if schedule.examWindow}<p class="text-xs text-base-content/45">完課目標 {schedule.examDate}；{schedule.examWindow}</p>{/if}
     <div class="h-2 overflow-hidden rounded-full bg-base-300">
       <span class="block h-full rounded-full bg-primary transition-all" style={`width:${vocab ? Math.round((doneCount / Math.max(sections.length, 1)) * 100) : 0}%`}></span>
@@ -195,7 +199,7 @@
   <!-- 複習文章（輕量日的閱讀目標）-->
   {#if plan.dayType === 'light' && reviewDigests.length}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-4 sm:p-5">
-      <h2 class="mb-1 text-lg font-bold tracking-tight">今日複習文章</h2>
+      <h2 class="section-heading mb-1">今日複習文章</h2>
       <p class="mb-3 text-sm text-base-content/60">輕量日的閱讀目標——把這陣子讀過的考點用摘要再過一遍，不必上新進度。</p>
       <div class="flex flex-col gap-2">
         {#each reviewDigests as [slug, r] (slug)}
@@ -215,7 +219,7 @@
   {#if plan.notes.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
+        <h2 class="section-heading">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
         <span class="text-xs text-base-content/50">{plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '點開看筆記、不換頁'}</span>
       </div>
       <div class="grid gap-2 sm:grid-cols-2">
@@ -251,7 +255,7 @@
   {#if plan.dayType === 'full' && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">
+        <h2 class="section-heading">
           {plan.mock ? `限時模擬 · ${plan.quizIds.length} 題` : plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
         </h2>
         <div class="flex items-center gap-3">
@@ -286,7 +290,7 @@
   {#if plan.dayType === 'full' && newWords.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">今日單字 · {newWords.length} 個</h2>
+        <h2 class="section-heading">今日單字 · {newWords.length} 個</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.newVocab} onchange={() => toggleSection('newVocab')} />背完了
         </label>
@@ -301,7 +305,7 @@
   {#if reviewWords.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">複習單字 · {reviewWords.length} 個</h2>
+        <h2 class="section-heading">複習單字 · {reviewWords.length} 個</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.reviewVocab} onchange={() => toggleSection('reviewVocab')} />複習完了
         </label>
@@ -329,7 +333,7 @@
   {#if todayClassic}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">今日古文</h2>
+        <h2 class="section-heading">今日古文</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.classic} onchange={() => toggleSection('classic')} />讀過了
         </label>
@@ -341,7 +345,7 @@
   <!-- 6. 今日錯題 -->
   <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
     <div class="mb-3 flex items-center justify-between gap-2">
-      <h2 class="text-lg font-bold tracking-tight">今日錯題</h2>
+      <h2 class="section-heading">今日錯題</h2>
       <label class="flex cursor-pointer items-center gap-2 text-sm">
         <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.wrong} onchange={() => toggleSection('wrong')} />複習完了
       </label>

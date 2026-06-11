@@ -1,11 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import PageHeader from '@/components/common/PageHeader.astro'
 import WrongBookApp from '@/components/wrongbook/WrongBookApp.svelte'
 
 export const prerender = false
 ---
 
 <Layout title="錯題本 · 後中醫題庫">
-  <h1 class="mb-4 text-2xl font-bold">錯題本</h1>
+  <PageHeader kicker="練習" title="錯題本" desc="做錯與收藏的題目都在這裡，按間隔重練到熟。" />
   <WrongBookApp client:load />
 </Layout>

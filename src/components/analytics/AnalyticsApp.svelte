@@ -47,7 +47,7 @@
   <!-- 1. 考點趨勢 -->
   <section class="card border border-base-300 bg-base-100">
     <div class="card-body gap-3 p-4">
-      <h2 class="text-lg font-bold">① 考點趨勢 <span class="text-sm font-normal opacity-60">歷年出題次數</span></h2>
+      <h2 class="section-heading">① 考點趨勢 <span class="section-sub">歷年出題次數</span></h2>
       <p class="text-xs opacity-60"><span class="font-semibold text-accent">升溫</span>＝近年出題變多，建議優先主攻。</p>
       <div class="grid gap-2">
         {#each trends as t (t.tag)}
@@ -67,7 +67,7 @@
   {#if subject === 'chinese' && eras.length}
     <section class="card border border-base-300 bg-base-100">
       <div class="card-body gap-3 p-4">
-        <h2 class="text-lg font-bold">時代分析 <span class="text-sm font-normal opacity-60">古文出自哪個朝代</span></h2>
+        <h2 class="section-heading">時代分析 <span class="section-sub">古文出自哪個朝代</span></h2>
         <p class="text-xs opacity-60">由作者／篇名判定（高精準；部分題無法判定，不計入）。<span class="font-semibold text-accent">出題最多的朝代最該優先準備古文</span>。</p>
         <div class="flex flex-col gap-2">
           {#each eras as e (e.era)}
@@ -88,7 +88,7 @@
   <!-- 2. 跨校比較 -->
   <section class="card border border-base-300 bg-base-100">
     <div class="card-body gap-3 p-4">
-      <h2 class="text-lg font-bold">② 跨校比較 <span class="text-sm font-normal opacity-60">同一考點在各校的權重（佔該科比例）</span></h2>
+      <h2 class="section-heading">② 跨校比較 <span class="section-sub">同一考點在各校的權重（佔該科比例）</span></h2>
       <div class="flex flex-col gap-3">
         {#each cross as row (row.tag)}
           <div>
@@ -114,7 +114,7 @@
   <!-- 3. 個人化弱點報告 -->
   <section class="card border border-base-300 bg-base-100">
     <div class="card-body gap-3 p-4">
-      <h2 class="text-lg font-bold">③ 個人化弱點報告 <span class="text-sm font-normal opacity-60">由錯題本聚類</span></h2>
+      <h2 class="section-heading">③ 個人化弱點報告 <span class="section-sub">由錯題本聚類</span></h2>
       {#if weak.length === 0}
         <p class="opacity-60">還沒有足夠的錯題資料。去刷題，答錯的會自動進錯題本，這裡就會長出你的弱點地圖。</p>
       {:else}
@@ -140,7 +140,7 @@
   <!-- 4. 覆蓋度追蹤 -->
   <section class="card border border-base-300 bg-base-100">
     <div class="card-body gap-3 p-4">
-      <h2 class="text-lg font-bold">④ 覆蓋度追蹤 <span class="text-sm font-normal opacity-60">避免錯覺式複習</span></h2>
+      <h2 class="section-heading">④ 覆蓋度追蹤 <span class="section-sub">避免錯覺式複習</span></h2>
       <div class="grid gap-3 sm:grid-cols-2">
         {#each cover as c (c.subject)}
           <div class="rounded-lg border border-base-200 p-3">

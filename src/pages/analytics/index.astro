@@ -1,12 +1,12 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import PageHeader from '@/components/common/PageHeader.astro'
 import AnalyticsApp from '@/components/analytics/AnalyticsApp.svelte'
 
 export const prerender = false
 ---
 
-<Layout title="AI 分析儀表板 · 後中醫題庫">
-  <h1 class="mb-1 text-2xl font-bold">分析儀表板</h1>
-  <p class="mb-4 text-sm opacity-70">把三校十年真題 × 你的作答紀錄，轉成個人化命題情報。</p>
+<Layout title="分析儀表板 · 後中醫題庫">
+  <PageHeader kicker="分析" title="分析儀表板" desc="把三校十年真題 × 你的作答紀錄，轉成個人化命題情報。" />
   <AnalyticsApp client:load />
 </Layout>

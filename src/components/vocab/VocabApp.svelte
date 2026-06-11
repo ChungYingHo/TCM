@@ -51,9 +51,10 @@
 </script>
 
 <div class="flex flex-col gap-4">
-  <header class="flex flex-col gap-1">
-    <h1 class="font-display text-2xl font-bold tracking-tight sm:text-3xl">單字表</h1>
-    <p class="text-sm text-base-content/55">
+  <header class="flex flex-col gap-1.5">
+    <p class="page-kicker">字庫</p>
+    <h1 class="page-title">單字表</h1>
+    <p class="page-desc max-w-2xl">
       {data?.count ?? '3000+'} 個 GRE／TOEFL 高頻字，附 KK 音標、中文與例句。標「後中考過」的是三校考古題實際出現過的字，最該優先背。
     </p>
   </header>
