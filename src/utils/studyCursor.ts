@@ -11,6 +11,7 @@ export interface Cursors {
   vocab: number // # words already started (newVocab days × perDay newVocab)
   notes: Record<Subject, number> // # notes completed per subject
   classics: number // # classics read
+  drill: number // # completed quiz days that fell in the drill phase (first note pass done)
 }
 
 function emptyNotes(): Record<Subject, number> {
@@ -21,16 +22,31 @@ function emptyNotes(): Record<Subject, number> {
  * Derive progress from the completion log. Pass `before` (a YYYY-MM-DD key) to
  * count only days strictly before it — that gives the cursor for picking *today's*
  * content, so finishing today advances tomorrow rather than shifting today's slice.
+ *
+ * `noteLens` (note-track length per subject) lets the drill counter replay history:
+ * dates are walked in order, and a quiz day only counts toward `drill` if the first
+ * note pass was already complete at the START of that day — so the drill window
+ * starts at question 0 on the day the plan switches to drill mode.
  */
-export function deriveCursors(plan: DailyPlanStore, perDayNewVocab: number, before?: string): Cursors {
+export function deriveCursors(
+  plan: DailyPlanStore,
+  perDayNewVocab: number,
+  before?: string,
+  noteLens?: Partial<Record<Subject, number>>,
+): Cursors {
   const notes = emptyNotes()
   let vocabDays = 0
   let classics = 0
-  for (const [date, st] of Object.entries(plan)) {
+  let drill = 0
+  const firstPassDone = () =>
+    !!noteLens && SUBJECTS.every((s) => !noteLens[s] || notes[s] >= (noteLens[s] as number))
+  for (const date of Object.keys(plan).sort()) {
     if (before && date >= before) continue
+    const st = plan[date]
+    if (st.quiz && firstPassDone()) drill += 1
     if (st.newVocab) vocabDays += 1
     if (st.classic) classics += 1
     if (st.notes) for (const s of SUBJECTS) if (st.notes[s]) notes[s] += 1
   }
-  return { vocab: vocabDays * perDayNewVocab, notes, classics }
+  return { vocab: vocabDays * perDayNewVocab, notes, classics, drill }
 }

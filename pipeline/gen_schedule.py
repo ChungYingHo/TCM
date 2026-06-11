@@ -33,7 +33,14 @@ START = '2026-06-22'
 END = '2027-01-31'
 EXAM = '2027-02-01'
 EXAM_WINDOW = '實際考試 2027/3–4（義守約 3 月底、慈濟 4/10、中國醫約 4 月中下旬）'
-PER_DAY = {'notesPerSubject': 1, 'quiz': 10, 'newVocab': 18, 'reviewVocabMax': 100}
+PER_DAY = {
+    'notesPerSubject': 1,
+    'quiz': 10,           # learn phase: questions tagged to today's notes
+    'quizDrill': 30,      # drill phase (first note pass done): sequential full-bank drill
+    'newVocab': 18,
+    'reviewVocabMax': 100,    # hard cap when the SRS due-queue piles up
+    'reviewVocabTarget': 60,  # daily review size; due words first, random learned words fill the rest
+}
 RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14}
 QUIZ_POOL_CAP = 60  # ids kept per tag — enough to rotate without bloating the file
 
@@ -123,6 +130,27 @@ def main() -> None:
         if tag not in pool and parent in pool:
             pool[tag] = list(pool[parent])
 
+    # drill track: EVERY taxonomy-tagged question, newest exam years first (most
+    # representative of current exam style), round-robin across subjects so each
+    # drill day mixes all four subjects. Consumed sequentially in the drill phase.
+    by_subject: dict[str, list[dict]] = {s: [] for s in C.SUBJECTS}
+    for q in qs:
+        if any(t in taxo_tags for t in (q.get('concept_tags') or [])):
+            by_subject[q['subject']].append(q)
+    def qnum(q: dict) -> int:
+        m = re.search(r'(\d+)\D*$', q['id'])
+        return int(m.group(1)) if m else 0
+
+    for s in C.SUBJECTS:
+        by_subject[s].sort(key=lambda q: (-int(q['year']), q['school'], qnum(q)))
+    drill: list[str] = []
+    idx = {s: 0 for s in C.SUBJECTS}
+    while any(idx[s] < len(by_subject[s]) for s in C.SUBJECTS):
+        for s in C.SUBJECTS:
+            if idx[s] < len(by_subject[s]):
+                drill.append(by_subject[s][idx[s]]['id'])
+                idx[s] += 1
+
     days = (datetime.date.fromisoformat(END) - datetime.date.fromisoformat(START)).days + 1
     schedule = {
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
@@ -135,6 +163,7 @@ def main() -> None:
             'vocab': [w['id'] for w in vocab['words']],
             'notes': notes,
             'classics': [c['id'] for c in classics['classics']],
+            'drill': drill,
         },
         'noteTags': note_tags,
         'quizPoolByTag': pool,
@@ -145,7 +174,8 @@ def main() -> None:
         json.dump(schedule, f, ensure_ascii=False, separators=(',', ':'))
     print(f"schedule: {days} days, vocab={len(schedule['tracks']['vocab'])}, "
           f"notes={ {s: len(v) for s, v in notes.items()} }, "
-          f"classics={len(schedule['tracks']['classics'])}, quizTags={len(pool)}")
+          f"classics={len(schedule['tracks']['classics'])}, quizTags={len(pool)}, "
+          f"drill={len(drill)}")
 
 
 if __name__ == '__main__':

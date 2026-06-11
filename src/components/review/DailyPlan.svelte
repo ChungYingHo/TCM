@@ -12,7 +12,8 @@
   import { loadVocab } from '@/utils/vocabData'
   import type { ClassicsData } from '@/models/classics'
   import { dumpPlan, getDay, setSectionDone, setNoteDone, type Section } from '@/utils/dailyPlan'
-  import { learn, dueIds } from '@/utils/vocabSrs'
+  import { learn, dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
+  import { composeReview } from '@/utils/reviewSample'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
   import { ymd } from '@/utils/date'
@@ -44,7 +45,15 @@
 
   function refresh() {
     planStore = dumpPlan()
-    reviewIds = dueIds()
+    // 複習單字 = SRS 到期字優先（弱字在前）＋從已背過的字隨機抽樣補滿每日目標。
+    // 以日期當種子 → 同一天內列表穩定，跨天自然輪換。
+    reviewIds = composeReview(
+      dueIds(),
+      Object.keys(dumpVocabSrs()),
+      schedule.perDay.reviewVocabTarget ?? 60,
+      schedule.perDay.reviewVocabMax,
+      today,
+    )
   }
 
   $effect(() => {
@@ -187,7 +196,7 @@
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="text-lg font-bold tracking-tight">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
-        <span class="text-xs text-base-content/50">點開看筆記、不換頁</span>
+        <span class="text-xs text-base-content/50">{plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '點開看筆記、不換頁'}</span>
       </div>
       <div class="grid gap-2 sm:grid-cols-2">
         {#each plan.notes as n (n.subject)}
@@ -195,7 +204,7 @@
             <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.notes?.[n.subject]} onchange={() => toggleNote(n.subject)} aria-label={`${SUBJECT_LABEL[n.subject]}考點完成`} />
             <button class="flex flex-1 items-center justify-between gap-2 text-left" onclick={() => openNote(n.slug, tagShort(n.tag))}>
               <span class="flex flex-col">
-                <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}</span>
+                <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}</span>
                 <span class="font-medium leading-tight">{tagShort(n.tag)}</span>
               </span>
               <span class="text-primary">開啟 →</span>
@@ -206,16 +215,20 @@
     </section>
   {/if}
 
-  <!-- 2. 今日考題（full day only）-->
+  <!-- 2. 今日考題／刷題（full day only）-->
   {#if plan.dayType === 'full' && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="text-lg font-bold tracking-tight">今日考題</h2>
+        <h2 class="text-lg font-bold tracking-tight">{plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.quiz} onchange={() => toggleSection('quiz')} />做完了
         </label>
       </div>
-      <p class="mb-3 text-sm text-base-content/55">讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。</p>
+      <p class="mb-3 text-sm text-base-content/55">
+        {plan.phase === 'drill'
+          ? '首輪筆記完成，進入刷題期——每天一段全新考古題（年份新到舊、四科混合），答錯會自動進錯題本。'
+          : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
+      </p>
       {#if showQuiz}
         <QuizQuestions ids={plan.quizIds} />
       {:else}
@@ -255,7 +268,7 @@
           onfinish={() => { if (!st.reviewVocab) toggleSection('reviewVocab') }}
         />
       {:else}
-        <p class="mb-3 text-sm text-base-content/55">翻卡作答——選「認識／不熟」會自動安排下次複習時間。</p>
+        <p class="mb-3 text-sm text-base-content/55">到期的字優先、再從背過的字裡隨機抽樣補滿——翻卡作答，選「認識／不熟」會自動安排下次複習時間。</p>
         <div class="mb-3 flex flex-wrap gap-1.5">
           {#each reviewWords.slice(0, 30) as w (w.id)}
             <span class="rounded-full border border-base-300 bg-base-200/50 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>

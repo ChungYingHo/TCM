@@ -55,3 +55,43 @@ describe('computeToday — pace never reads "behind" once the track is done', ()
     expect(tp.pace.vocabExpected).toBeLessThanOrEqual(schedule.tracks.vocab.length)
   })
 })
+
+describe('computeToday — learn → drill phase', () => {
+  const drillSchedule: ScheduleData = {
+    ...schedule,
+    perDay: { ...schedule.perDay, quizDrill: 2 },
+    tracks: { ...schedule.tracks, drill: ['d1', 'd2', 'd3', 'd4', 'd5'] },
+  }
+
+  it('stays in learn phase (tag-targeted quiz) until the first note pass is done', () => {
+    const tp = computeToday(drillSchedule, empty, '2026-06-22')
+    expect(tp.phase).toBe('learn')
+    expect(tp.quizIds.every((id) => id.startsWith('q'))).toBe(true)
+    expect(tp.notes[0].round).toBe(1)
+  })
+
+  it('switches to drill and starts the bank at question 0 (pre-switch quiz days do not advance it)', () => {
+    // Day 1: note done (finishes the 1-note chemistry pass) AND a learn-phase quiz done.
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true }, quiz: true } }
+    const tp = computeToday(drillSchedule, plan, '2026-06-23')
+    expect(tp.phase).toBe('drill')
+    expect(tp.quizIds).toEqual(['d1', 'd2']) // learn-phase quiz day didn't consume the drill window
+    expect(tp.notes[0].round).toBe(2) // second pass is labeled as round 2
+  })
+
+  it('advances the drill window by completed drill days and wraps at the end', () => {
+    const plan: DailyPlanStore = {
+      '2026-06-22': { notes: { chemistry: true }, quiz: true },
+      '2026-06-23': { quiz: true }, // drill day 1
+      '2026-06-24': { quiz: true }, // drill day 2
+    }
+    const tp = computeToday(drillSchedule, plan, '2026-06-25')
+    expect(tp.quizIds).toEqual(['d5', 'd1']) // start = (2×2) % 5 = 4 → wraps
+  })
+
+  it('falls back to learn mode when the schedule has no drill track', () => {
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true } } }
+    const tp = computeToday(schedule, plan, '2026-06-23')
+    expect(tp.phase).toBe('learn')
+  })
+})
