@@ -6,6 +6,7 @@
   import { listWrong } from '@/utils/wrongBook'
   import { tagTrends, crossSchoolWeights, weaknessClusters, coverage, eraDistribution } from '@/utils/analytics'
   import Sparkline from '@/components/analytics/Sparkline.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   let subject = $state<Subject>('biology')
   let bySchool = $state<Partial<Record<School, QuestionRecord[]>>>({})
@@ -80,7 +81,7 @@
             </div>
           {/each}
         </div>
-        <a href="/classics" class="btn btn-sm btn-primary w-fit">去讀這些朝代的古文 →</a>
+        <a href="/classics" class="btn btn-sm btn-primary w-fit">去讀這些朝代的古文 <Icon name="arrowRight" class="h-4 w-4" /></a>
       </div>
     </section>
   {/if}

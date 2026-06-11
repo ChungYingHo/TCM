@@ -26,6 +26,7 @@
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import DueQuestions from '@/components/review/DueQuestions.svelte'
   import QuizQuestions from '@/components/review/QuizQuestions.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   const schedule = scheduleJson as unknown as ScheduleData
   const classics = classicsJson as unknown as ClassicsData
@@ -191,7 +192,7 @@
       <h2 class="text-lg font-bold">今天是放空日 🌿</h2>
       <p class="mt-1 text-sm text-base-content/65">連續衝刺會累、效率也會掉。今天可以完全休息，讓前幾天讀的東西沉澱下來；想讀的話，下面是輕量複習。</p>
       <button class="btn btn-success btn-sm mt-3" class:btn-outline={!st.rest} onclick={() => toggleSection('rest')}>
-        {st.rest ? '今天休息了 ✓' : '我今天休息'}
+        {#if st.rest}今天休息了 <Icon name="check" class="h-4 w-4" />{:else}我今天休息{/if}
       </button>
     </section>
   {/if}
@@ -208,7 +209,7 @@
               <span class="text-xs text-base-content/50">{SUBJECT_LABEL[r.subject]}</span>
               <span class="font-medium leading-tight">{r.title}</span>
             </span>
-            <span class="text-primary">開啟 →</span>
+            <span class="inline-flex shrink-0 items-center gap-0.5 text-primary">開啟 <Icon name="arrowRight" class="h-3.5 w-3.5" /></span>
           </button>
         {/each}
       </div>
@@ -232,7 +233,7 @@
                   <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}</span>
                   <span class="font-medium leading-tight">{tagShort(n.tag)}</span>
                 </span>
-                <span class="text-primary">開啟 →</span>
+                <span class="inline-flex shrink-0 items-center gap-0.5 text-primary">開啟 <Icon name="arrowRight" class="h-3.5 w-3.5" /></span>
               </button>
             </div>
             {#if n.miniQuizIds.length}
@@ -241,7 +242,7 @@
                 <QuizQuestions ids={n.miniQuizIds} />
               {:else}
                 <button class="btn btn-outline btn-primary btn-xs self-start" onclick={() => (openMini = { ...openMini, [n.subject]: true })}>
-                  先測 {n.miniQuizIds.length} 題再讀 →
+                  先測 {n.miniQuizIds.length} 題再讀 <Icon name="arrowRight" class="h-3.5 w-3.5" />
                 </button>
               {/if}
             {/if}
@@ -280,7 +281,7 @@
         <QuizQuestions ids={plan.quizIds} />
       {:else}
         <button class="btn btn-primary btn-sm" onclick={() => { showQuiz = true; if (plan.mock) startMockTimer(70) }}>
-          開始作答（{plan.quizIds.length} 題）→
+          開始作答（{plan.quizIds.length} 題）<Icon name="arrowRight" class="h-4 w-4" />
         </button>
       {/if}
     </section>
@@ -324,7 +325,7 @@
           {/each}
           {#if reviewWords.length > 30}<span class="px-1 py-1 text-sm text-base-content/50">…還有 {reviewWords.length - 30} 個</span>{/if}
         </div>
-        <button class="btn btn-primary btn-sm" onclick={() => (showReview = true)}>開始複習（{reviewWords.length} 個）→</button>
+        <button class="btn btn-primary btn-sm" onclick={() => (showReview = true)}>開始複習（{reviewWords.length} 個）<Icon name="arrowRight" class="h-4 w-4" /></button>
       {/if}
     </section>
   {/if}

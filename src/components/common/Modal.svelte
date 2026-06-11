@@ -3,6 +3,7 @@
   // for free; `onclose`/`oncancel` keep the bound `open` in sync when the user
   // closes via Esc or backdrop. Body is a snippet so callers pass any content.
   import type { Snippet } from 'svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   interface Props {
     open?: boolean
@@ -41,7 +42,7 @@
     <div class="flex items-center gap-3">
       {#if title}<h3 class="text-lg font-bold tracking-tight">{title}</h3>{/if}
       <form method="dialog" class="ml-auto">
-        <button class="btn btn-circle btn-ghost btn-sm" aria-label="關閉">✕</button>
+        <button class="btn btn-circle btn-ghost btn-sm" aria-label="關閉"><Icon name="x" class="h-4 w-4" /></button>
       </form>
     </div>
     <div class="min-h-0 flex-1 overflow-y-auto">

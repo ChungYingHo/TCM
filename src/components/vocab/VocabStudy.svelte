@@ -4,6 +4,7 @@
   import type { VocabWord } from '@/models/vocab'
   import { dueIds, grade, learn, getCard } from '@/utils/vocabSrs'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   // `ids` pins the deck to a fixed set (today's due-review words on the daily page);
   // without it the component self-selects due + fresh words (the /vocab study page).
@@ -65,7 +66,7 @@
       <VocabCard word={current} />
       <div class="grid grid-cols-2 gap-2">
         <button class="btn btn-outline btn-error" onclick={() => answer(false)}>不熟</button>
-        <button class="btn btn-success" onclick={() => answer(true)}>認識 ✓</button>
+        <button class="btn btn-success" onclick={() => answer(true)}>認識 <Icon name="check" class="h-4 w-4" /></button>
       </div>
     {/if}
   </div>

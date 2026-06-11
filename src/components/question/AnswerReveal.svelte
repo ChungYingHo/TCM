@@ -4,6 +4,7 @@
   import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
   import { solveSteps } from '@/models/solveTemplates'
   import Tag from '@/components/common/Tag.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   let { question }: { question: QuestionRecord } = $props()
 
@@ -37,8 +38,8 @@
 
   {#if steps.length}
     <details class="mt-3 rounded-lg border border-primary/25 bg-primary/5" open>
-      <summary class="cursor-pointer list-none px-3 py-2 font-semibold text-primary">
-        🧭 這類題的解法{#if ptag}<span class="ml-1 text-xs font-normal opacity-70">（{tagShort(ptag)}）</span>{/if}
+      <summary class="flex cursor-pointer list-none items-center gap-1.5 px-3 py-2 font-semibold text-primary">
+        <Icon name="compass" class="h-4 w-4 shrink-0" /> 這類題的解法{#if ptag}<span class="ml-1 text-xs font-normal opacity-70">（{tagShort(ptag)}）</span>{/if}
       </summary>
       <div class="border-t border-primary/15 px-3 py-2.5">
         <ol class="flex flex-col gap-1.5 leading-relaxed">
@@ -51,7 +52,7 @@
         </ol>
         {#if slug}
           <a class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline" href={`/notes/${slug}`}>
-            看完整考點筆記與例題詳解 →
+            看完整考點筆記與例題詳解 <Icon name="arrowRight" class="h-3 w-3" />
           </a>
         {/if}
       </div>

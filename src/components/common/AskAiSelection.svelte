@@ -3,6 +3,7 @@
   // explanations, option text…). Questions are images so they aren't selectable —
   // for those, the question card has its own "問 AI 這題" button.
   import { askGemini, buildSelectionPrompt } from '@/utils/askAI'
+  import Icon from '@/components/common/Icon.svelte'
 
   let visible = $state(false)
   let x = $state(0)
@@ -59,6 +60,6 @@
     onmousedown={(e) => e.preventDefault()}
     onclick={ask}
   >
-    <span aria-hidden="true">✦</span> 問 AI
+    <Icon name="sparkles" class="h-4 w-4" /> 問 AI
   </button>
 {/if}

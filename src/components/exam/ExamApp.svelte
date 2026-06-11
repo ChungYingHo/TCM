@@ -7,6 +7,7 @@
   import { recordAttempt } from '@/utils/progress'
   import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   // 考古題模式 = 還原某校某年某科真卷（依真實規則倒扣）；隨機模式 = 隨機抽 N 題練習（不倒扣）
   let mode = $state<'past' | 'random'>('past')
@@ -260,7 +261,7 @@
             class={`badge badge-lg font-bold tabular-nums ${secondsLeft != null && secondsLeft <= 60 ? 'badge-error' : secondsLeft != null && secondsLeft <= 300 ? 'badge-warning' : 'badge-ghost'}`}
             role="timer"
             aria-live="off"
-          >⏱ {timeLabel}</span>
+          ><Icon name="timer" class="h-3.5 w-3.5" /> {timeLabel}</span>
         {/if}
         <button class="btn btn-sm btn-primary" onclick={() => submit()}>交卷計分</button>
       </div>
@@ -325,7 +326,7 @@
             {/each}
           </div>
         {/if}
-        <a href="/review" class="btn btn-primary btn-sm mt-4">前往今日複習 →</a>
+        <a href="/review" class="btn btn-primary btn-sm mt-4">前往今日複習 <Icon name="arrowRight" class="h-4 w-4" /></a>
       </div>
     {:else if score.blank}
       <div class="rounded-box border border-info/30 bg-info/10 p-5 text-center">

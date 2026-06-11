@@ -4,6 +4,7 @@
   import { loadSchools } from '@/utils/dataset'
   import { listWrong, clearWrongBook, removeWrong } from '@/utils/wrongBook'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
+  import Icon from '@/components/common/Icon.svelte'
 
   let byId = $state<Map<string, QuestionRecord>>(new Map())
   let entries = $state(listWrong())
@@ -50,7 +51,7 @@
   {#if !loading && items.length === 0}
     <div class="flex flex-col items-center gap-3 rounded-box border border-dashed border-base-300 p-8 text-center">
       <p class="opacity-70">錯題本還是空的。答錯的題目會自動收進來。</p>
-      <a href="/study" class="btn btn-primary btn-sm">去刷題 →</a>
+      <a href="/study" class="btn btn-primary btn-sm">去刷題 <Icon name="arrowRight" class="h-4 w-4" /></a>
     </div>
   {/if}
 

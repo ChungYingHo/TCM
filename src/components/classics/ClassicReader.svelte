@@ -2,6 +2,7 @@
   // Renders one 古文: original (authoritative) + collapsible 白話翻譯 + 註釋. Reused
   // inline on the daily plan and inside the 古文 list modal.
   import type { Classic } from '@/models/classics'
+  import Icon from '@/components/common/Icon.svelte'
 
   let { classic, open = true }: { classic: Classic; open?: boolean } = $props()
   let showTranslation = $state(open)
@@ -22,7 +23,7 @@
 
   <div class="flex items-center gap-2">
     <button class="btn btn-xs" class:btn-primary={showTranslation} onclick={() => (showTranslation = !showTranslation)}>
-      白話翻譯 {showTranslation ? '▾' : '▸'}
+      白話翻譯 <Icon name="chevronDown" class={`h-3.5 w-3.5 transition-transform ${showTranslation ? 'rotate-180' : ''}`} />
     </button>
     {#each classic.tags as t (t)}<span class="badge badge-ghost badge-xs">{t}</span>{/each}
   </div>

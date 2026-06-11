@@ -3,6 +3,7 @@
   // example is the point — it's how Aira likes to memorise). Reused by the daily
   // plan, the vocab browser, and the flashcard study mode.
   import type { VocabWord } from '@/models/vocab'
+  import Icon from '@/components/common/Icon.svelte'
 
   let { word, onstudied }: { word: VocabWord; onstudied?: () => void } = $props()
 
@@ -43,6 +44,6 @@
   {/if}
 
   {#if onstudied}
-    <button class="btn btn-ghost btn-xs mt-1 self-end text-primary" onclick={onstudied}>記起來了 ✓</button>
+    <button class="btn btn-ghost btn-xs mt-1 self-end text-primary" onclick={onstudied}>記起來了 <Icon name="check" class="h-3.5 w-3.5" /></button>
   {/if}
 </article>
