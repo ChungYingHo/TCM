@@ -29,12 +29,12 @@
 
 <form
   onsubmit={submit}
-  class="flex w-full max-w-xs flex-col gap-3 rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-md"
+  class="flex w-full max-w-sm flex-col gap-3 rounded-2xl border border-base-300 bg-base-100/90 p-5 shadow-lift backdrop-blur-sm"
 >
   <div class="relative">
     <input
       type={show ? 'text' : 'password'}
-      class="input input-bordered w-full bg-white/80 pr-11 text-base-content"
+      class="input input-bordered w-full pr-11"
       placeholder="輸入通關密語"
       bind:value={password}
       autocomplete="off"
@@ -67,6 +67,6 @@
     {busy ? '驗證中…' : '進入'}
   </button>
   {#if error}
-    <p class="text-center text-sm text-error-content/90">密碼不對，再想想？</p>
+    <p class="text-center text-sm font-medium text-error">密碼不對，再想想？</p>
   {/if}
 </form>

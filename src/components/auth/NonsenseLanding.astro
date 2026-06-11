@@ -3,48 +3,45 @@ import Gate from '@/components/auth/Gate.svelte'
 ---
 
 <div class="landing">
-  <div class="blob blob-a"></div>
-  <div class="blob blob-b"></div>
-  <div class="blob blob-c"></div>
-
-  <div class="relative z-10 flex min-h-screen flex-col items-center justify-center gap-8 px-6 text-center">
-    <div class="space-y-3">
-      <p class="text-sm uppercase tracking-[0.5em] text-white/45">a quiet little machine</p>
-      <h1 class="font-display text-5xl font-black tracking-tight text-emerald-50 sm:text-7xl">
-        子曰：未知。
-      </h1>
-      <p class="mx-auto max-w-lg text-balance leading-loose text-white/55">
-        一道算式的價值惟在於答案本身——至於求解的過程，無論優雅或暴烈，莊嚴或諧謔——最終皆無意義
-      </p>
+  <div class="relative z-10 flex min-h-screen flex-col items-center justify-center gap-9 px-6 py-16 text-center">
+    <div class="flex flex-col items-center gap-6">
+      <img
+        src="/TCM.png"
+        alt="後中醫題庫"
+        width="76"
+        height="76"
+        class="h-[4.5rem] w-[4.5rem] rounded-2xl shadow-soft ring-1 ring-base-content/5"
+      />
+      <div class="space-y-3.5">
+        <p class="text-[0.7rem] font-semibold uppercase tracking-[0.4em] text-primary/75">a quiet little machine</p>
+        <h1 class="font-display text-5xl font-extrabold tracking-tight text-base-content sm:text-6xl">
+          子曰：未知。
+        </h1>
+        <p class="mx-auto max-w-md text-balance text-sm leading-loose text-base-content/55 sm:text-[0.95rem]">
+          一道算式的價值惟在於答案本身——至於求解的過程，無論優雅或暴烈，莊嚴或諧謔——最終皆無意義
+        </p>
+      </div>
     </div>
 
     <Gate client:load />
+
+    <p class="text-[0.7rem] tracking-[0.22em] text-base-content/30">日拱一卒 · 功不唐捐</p>
   </div>
 </div>
 
 <style>
+  /* 從賽伯龐克霓虹改為清爽書房光：冷白底＋極淡黛綠/森綠暈，沉靜、有呼吸感 */
   .landing {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
-    background: radial-gradient(120% 120% at 50% 0%, #0b1020 0%, #070a14 60%, #05070f 100%);
-  }
-  .blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.5;
-    animation: drift 18s ease-in-out infinite;
-  }
-  .blob-a { width: 42vmax; height: 42vmax; left: -10vmax; top: -8vmax; background: #2563eb; }
-  .blob-b { width: 34vmax; height: 34vmax; right: -8vmax; top: 20vmax; background: #10b981; animation-delay: -6s; }
-  .blob-c { width: 28vmax; height: 28vmax; left: 30vmax; bottom: -10vmax; background: #7c3aed; animation-delay: -12s; }
-  @keyframes drift {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(4vmax, 6vmax) scale(1.1); }
-    66% { transform: translate(-5vmax, 3vmax) scale(0.95); }
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .blob { animation: none; }
+    background:
+      radial-gradient(58rem 32rem at 50% -10rem,
+        color-mix(in oklab, var(--color-primary) 11%, transparent), transparent 70%),
+      radial-gradient(46rem 30rem at 8% 112%,
+        color-mix(in oklab, var(--color-secondary) 9%, transparent), transparent 72%),
+      radial-gradient(40rem 26rem at 92% 106%,
+        color-mix(in oklab, var(--color-accent) 6%, transparent), transparent 72%),
+      var(--color-base-200);
   }
 </style>
