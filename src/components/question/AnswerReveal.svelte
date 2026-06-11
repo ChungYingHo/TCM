@@ -17,7 +17,7 @@
   const showReason = $derived(question.errata_applied && !!question.explanation)
 </script>
 
-<div class="mt-3 rounded-lg border border-base-300 bg-base-200/60 p-3 text-sm animate-fade-in-up">
+<div class="mt-3 rounded-box border border-base-300 bg-base-200/60 p-3 text-sm animate-fade-in-up">
   <div class="flex flex-wrap items-center gap-2">
     <span class="font-semibold">正確答案：</span>
     <span class="badge badge-success badge-lg font-bold">{answerLabel(question)}</span>
@@ -37,7 +37,7 @@
   {/if}
 
   {#if steps.length}
-    <details class="mt-3 rounded-lg border border-primary/25 bg-primary/5" open>
+    <details class="mt-3 rounded-box border border-primary/25 bg-primary/5" open>
       <summary class="flex cursor-pointer list-none items-center gap-1.5 px-3 py-2 font-semibold text-primary">
         <Icon name="compass" class="h-4 w-4 shrink-0" /> 這類題的解法{#if ptag}<span class="ml-1 text-xs font-normal opacity-70">（{tagShort(ptag)}）</span>{/if}
       </summary>

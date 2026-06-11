@@ -6,6 +6,7 @@
   import { onMount } from 'svelte'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
+  import Segmented from '@/components/common/Segmented.svelte'
 
   // vocab.json is large, so it is fetched lazily (kept out of the main bundle)
   let data = $state<VocabData | null>(null)
@@ -60,10 +61,14 @@
   </header>
 
   {#if data}
-  <div role="tablist" class="tabs tabs-boxed w-fit">
-    <button role="tab" class="tab" class:tab-active={tab === 'browse'} onclick={() => (tab = 'browse')}>瀏覽</button>
-    <button role="tab" class="tab" class:tab-active={tab === 'study'} onclick={() => (tab = 'study')}>練習（翻卡）</button>
-  </div>
+  <Segmented
+    ariaLabel="單字模式"
+    bind:value={tab}
+    options={[
+      { value: 'browse', label: '瀏覽' },
+      { value: 'study', label: '練習（翻卡）' },
+    ]}
+  />
 
   {#if tab === 'browse'}
     <div class="flex flex-col gap-3">

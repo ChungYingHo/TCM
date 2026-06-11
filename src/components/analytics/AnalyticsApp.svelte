@@ -122,7 +122,7 @@
         <p class="text-sm opacity-80">這些是你最該補強的考點，建議從第一個開始：</p>
         <ol class="flex flex-col gap-2">
           {#each weak as w, i (w.tag)}
-            <li class="flex flex-wrap items-center gap-2 rounded-lg bg-base-200/60 p-2 text-sm">
+            <li class="flex flex-wrap items-center gap-2 rounded-box bg-base-200/60 p-2 text-sm">
               <span class="badge badge-error badge-sm">#{i + 1}</span>
               <span class="font-semibold">{w.tag}</span>
               <span class="badge badge-ghost badge-sm">{SUBJECT_LABEL[w.subject]}</span>
@@ -144,7 +144,7 @@
       <h2 class="section-heading">④ 覆蓋度追蹤 <span class="section-sub">避免錯覺式複習</span></h2>
       <div class="grid gap-3 sm:grid-cols-2">
         {#each cover as c (c.subject)}
-          <div class="rounded-lg border border-base-200 p-3">
+          <div class="rounded-box border border-base-200 p-3">
             <div class="mb-2 font-semibold">{SUBJECT_LABEL[c.subject]}</div>
             <div class="flex flex-col gap-2 text-xs">
               <div>

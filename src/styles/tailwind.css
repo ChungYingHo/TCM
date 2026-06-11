@@ -144,12 +144,19 @@ a.card:hover, .card-hover:hover {
   transform: translateY(-2px);
   border-color: color-mix(in oklab, var(--color-primary) 32%, var(--hairline));
 }
+/* 作答卡片游標焦點（鍵盤 J/K 移動的當前題）：邊框染主色＋柔浮起。
+   與 .card-hover 同語彙，但由 active 狀態驅動；未分層、選擇器較重 → 蓋過 .card 的髮絲框。 */
+.card.is-active {
+  border-color: color-mix(in oklab, var(--color-primary) 55%, var(--hairline));
+  box-shadow: var(--shadow-lift);
+}
 
 /* 所有 base-300 框線一律改為更柔的髮絲色，硬框感消失 */
 .border-base-300 { border-color: var(--hairline) !important; }
 
 /* 面板（非 daisyUI .card 的自訂卡片）共用同一套柔陰影語彙 */
 .shadow-soft { box-shadow: var(--shadow-soft); }
+.shadow-lift { box-shadow: var(--shadow-lift); }
 .panel-hover {
   transition: box-shadow 0.24s var(--ease-out), transform 0.24s var(--ease-out),
     border-color 0.24s var(--ease-out);

@@ -98,7 +98,7 @@
   function askThis() { void askGemini(buildQuestionPrompt(question)) }
 </script>
 
-<article class={`card border bg-base-100 transition-shadow ${active ? 'border-primary shadow-md ring-1 ring-primary/40' : 'border-base-300 shadow-sm'}`}>
+<article class={`card border bg-base-100 ${active ? 'is-active' : ''}`}>
   <div class="card-body gap-3 p-4 sm:p-5">
     <header class="flex flex-wrap items-center gap-2 text-xs">
       <span class="badge badge-neutral">{SCHOOL_LABEL[question.school]}</span>

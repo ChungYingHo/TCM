@@ -118,7 +118,7 @@
         <MultiSelect label="科目" options={SUBJECTS} bind:selected={subjects} format={(s) => SUBJECT_LABEL[s]} />
         <MultiSelect label="年份（民國）" options={facets.years} bind:selected={years} />
         {#if facets.tags.length}
-          <details class="rounded-lg border border-base-300 bg-base-200/40" open={tags.length > 0}>
+          <details class="rounded-box border border-base-300 bg-base-200/40" open={tags.length > 0}>
             <summary class="cursor-pointer list-none px-3 py-2 text-sm font-semibold">
               趨勢標籤（{facets.tags.length}）
               {#if tags.length}<span class="badge badge-primary badge-sm ml-1">{tags.length}</span>{/if}
@@ -171,7 +171,7 @@
     {/if}
 
     {#if !loading && filtered.length === 0 && schools.length > 0}
-      <div class="rounded-lg border border-dashed border-base-300 p-8 text-center opacity-70">
+      <div class="rounded-box border border-dashed border-base-300 p-8 text-center opacity-70">
         沒有符合條件的題目，試著放寬篩選。
       </div>
     {/if}

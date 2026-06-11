@@ -7,6 +7,7 @@
   import { recordAttempt } from '@/utils/progress'
   import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
+  import Segmented from '@/components/common/Segmented.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
   // 考古題模式 = 還原某校某年某科真卷（依真實規則倒扣）；隨機模式 = 隨機抽 N 題練習（不倒扣）
@@ -179,18 +180,15 @@
     <div class="card-body gap-4">
       <h2 class="card-title">模擬考設定</h2>
 
-      <div role="tablist" class="grid grid-cols-2 gap-1 rounded-box bg-base-200 p-1">
-        <button
-          role="tab"
-          class={`rounded-[0.8rem] px-3 py-2 text-sm font-semibold transition-colors ${mode === 'past' ? 'bg-base-100 text-primary shadow-soft' : 'text-base-content/60 hover:text-base-content'}`}
-          onclick={() => (mode = 'past')}
-        >考古題（還原真卷）</button>
-        <button
-          role="tab"
-          class={`rounded-[0.8rem] px-3 py-2 text-sm font-semibold transition-colors ${mode === 'random' ? 'bg-base-100 text-primary shadow-soft' : 'text-base-content/60 hover:text-base-content'}`}
-          onclick={() => (mode = 'random')}
-        >隨機練習</button>
-      </div>
+      <Segmented
+        block
+        ariaLabel="出題模式"
+        bind:value={mode}
+        options={[
+          { value: 'past', label: '考古題（還原真卷）' },
+          { value: 'random', label: '隨機練習' },
+        ]}
+      />
       <p class="-mt-2 text-xs text-base-content/50">
         {mode === 'past' ? '挑某校某年某科，照當年真實規則計分與倒扣。' : '從整個題庫隨機抽題，純練習、不倒扣。'}
       </p>
@@ -252,7 +250,7 @@
   </div>
 {:else if stage === 'running'}
   <div class="flex flex-col gap-3">
-    <div class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-lg bg-base-100/90 p-2 backdrop-blur">
+    <div class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-box bg-base-100/90 p-2 backdrop-blur">
       <span class="text-sm opacity-80">已作答 {Object.values(answers).filter(Boolean).length} / {paper.length}</span>
       <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答</span>
       <div class="flex items-center gap-2">
