@@ -18,12 +18,15 @@ const { title = '後中醫考古題', gated = true } = Astro.props
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex, nofollow" />
-    <meta name="theme-color" content="#f5f2ea" />
+    <meta name="theme-color" content="#f6f7f8" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>{title}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link
@@ -38,7 +41,7 @@ const { title = '後中醫考古題', gated = true } = Astro.props
         document.documentElement.dataset.reading = 'dim'
         document
           .querySelector('meta[name="theme-color"]')
-          ?.setAttribute('content', '#161d1f')
+          ?.setAttribute('content', '#15181c')
       }
     </script>
   </head>

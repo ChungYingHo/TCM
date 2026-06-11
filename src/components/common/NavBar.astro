@@ -43,12 +43,7 @@ const pill = (active: boolean) =>
 <header class="sticky top-0 z-30 border-b border-base-300/70 bg-base-100/75 backdrop-blur-xl">
   <nav class="mx-auto flex w-full max-w-5xl items-center gap-1 px-3 py-3 sm:px-5">
     <a href="/home" class="mr-auto flex shrink-0 items-center gap-2 font-display text-lg font-bold tracking-tight lg:mr-3">
-      <span class="grid h-7 w-7 place-items-center rounded-xl bg-primary/12 text-primary">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" aria-hidden="true">
-          <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-          <path d="M2 21c0-3 1.85-5.36 5.08-6"></path>
-        </svg>
-      </span>
+      <img src="/TCM.png" alt="後中醫題庫" width="28" height="28" class="h-7 w-7 shrink-0 rounded-xl object-cover" />
       後中醫<span class="text-primary">題庫</span>
     </a>
 
@@ -64,7 +59,8 @@ const pill = (active: boolean) =>
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </div>
-              <ul tabindex="0" class="dropdown-content menu z-50 mt-1 w-40 rounded-box border border-base-300 bg-base-100 p-1.5 shadow-lg">
+              <!-- before:* 是隱形 hover 橋：補上 mt-1 造成的 4px 死區，否則游標跨過縫隙時 dropdown-hover 會先關閉（幾乎點不到子選單） -->
+              <ul tabindex="0" class="dropdown-content menu z-50 mt-1.5 w-40 rounded-box border border-base-300 bg-base-100 p-1.5 shadow-lg before:absolute before:inset-x-0 before:-top-2 before:h-2 before:content-['']">
                 {item.children.map((c) => (
                   <li>
                     <a href={c.href} class={isActive(c.href) ? 'font-semibold text-primary' : ''}>
@@ -164,7 +160,7 @@ const pill = (active: boolean) =>
     readingToggle?.querySelector('[data-icon="sun"]')?.classList.toggle('hidden', !dim)
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute('content', dim ? '#161d1f' : '#f5f2ea')
+      ?.setAttribute('content', dim ? '#15181c' : '#f6f7f8')
   }
   syncReadingIcon()
   readingToggle?.addEventListener('click', () => {
