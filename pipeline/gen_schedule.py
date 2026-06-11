@@ -29,7 +29,7 @@ TAXONOMY_TS = os.path.join(C.ROOT, 'src', 'models', 'taxonomy.ts')
 # exam date — the three schools test separately in 2027/3–4 (see EXAM_WINDOW). The last
 # 14 days before it are the review-only taper; newVocab is sized to finish the whole
 # vocab track on the last full day before that taper begins.
-START = '2026-06-22'
+START = '2026-06-15'
 END = '2027-01-31'
 EXAM = '2027-02-01'
 EXAM_WINDOW = '實際考試 2027/3–4（義守約 3 月底、慈濟 4/10、中國醫約 4 月中下旬）'
@@ -133,8 +133,14 @@ def main() -> None:
     # drill track: EVERY taxonomy-tagged question, newest exam years first (most
     # representative of current exam style), round-robin across subjects so each
     # drill day mixes all four subjects. Consumed sequentially in the drill phase.
+    # The newest year (MOCK_YEAR) is EXCLUDED — those papers are reserved intact as
+    # full mock exams for the 2027/2–4 final-review phase; burning them as daily
+    # drill would waste the most representative simulation material.
+    MOCK_YEAR = max(int(q['year']) for q in qs)
     by_subject: dict[str, list[dict]] = {s: [] for s in C.SUBJECTS}
     for q in qs:
+        if int(q['year']) == MOCK_YEAR:
+            continue
         if any(t in taxo_tags for t in (q.get('concept_tags') or [])):
             by_subject[q['subject']].append(q)
     def qnum(q: dict) -> int:
