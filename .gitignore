@@ -29,6 +29,7 @@ pipeline/out_spike/
 # one-off audit/verification scratch (batch files + throwaway check scripts)
 pipeline/_audit/
 pipeline/_verify/
+pipeline/_guwen/
 
 # large vendored dictionary — download per pipeline/README, never commit (~66MB)
 pipeline/data/ecdict.csv
