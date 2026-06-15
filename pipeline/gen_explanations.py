@@ -16,10 +16,15 @@ Solutions live in pipeline/data/question_explanations.json (committed cache), me
 into src/data/explanations.json. Filling is incremental & checkpointed, newest exam
 years first (most representative), so a partial fill is already useful.
 
+By default --fill only drafts questions used in the DAILY quizzes (the schedule's
+quiz-pool union, ~2.5k eligible), NOT the whole bank. Pass --all to do every eligible
+question.
+
 Run:
   python pipeline/gen_explanations.py                 # merge cache -> src/data/explanations.json
   ANTHROPIC_API_KEY=sk-... python pipeline/gen_explanations.py --fill 300
-                                                      # draft 300 missing solutions, then merge
+                                                      # draft 300 daily-used solutions, then merge
+  ANTHROPIC_API_KEY=sk-... python pipeline/gen_explanations.py --fill 300 --all   # whole bank
 """
 from __future__ import annotations
 import os
@@ -77,16 +82,31 @@ def eligible(q: dict) -> bool:
     return True
 
 
+def daily_pool_ids() -> set:
+    """Ids that show up in the daily-quiz candidate pools (學習期「今日考題」＋「先測」).
+    This is the DEFAULT generation target — we only draft solutions for questions the
+    daily quizzes actually use, NOT the whole 6869-question bank. `--all` overrides."""
+    sched = load_json(os.path.join(C.WEB_DATA_DIR, 'schedule.json'), {})
+    ids: set = set()
+    for tag_ids in (sched.get('quizPoolByTag') or {}).values():
+        ids.update(tag_ids)
+    return ids
+
+
 def fill(questions: list[dict], cache: dict, limit: int) -> None:
     key = os.environ.get('ANTHROPIC_API_KEY')
     if not key:
         sys.exit('--fill needs ANTHROPIC_API_KEY (solutions are non-critical AI-draft aids).')
     import urllib.request
     base = os.environ.get('ANTHROPIC_BASE_URL', 'https://api.anthropic.com').rstrip('/')
+    # default: only daily-used (quiz-pool) questions; --all to do every eligible question.
+    scope = None if '--all' in sys.argv else daily_pool_ids()
     # newest exam years first (most representative of current style)
-    todo = [q for q in questions if eligible(q) and q['id'] not in cache]
+    todo = [q for q in questions if eligible(q) and q['id'] not in cache and (scope is None or q['id'] in scope)]
     todo.sort(key=lambda q: -int(q['year']))
     todo = todo[:limit]
+    print(f"target pool: {'whole bank' if scope is None else 'daily-quiz only'} "
+          f"({len([q for q in questions if eligible(q) and (scope is None or q['id'] in scope)])} eligible)")
     print(f'drafting {len(todo)} solutions via API…')
     for i in range(0, len(todo), 10):
         batch = todo[i:i + 10]
@@ -140,19 +160,21 @@ def main() -> None:
 
     ids = {q['id'] for q in questions}
     solutions = {qid: sol for qid, sol in cache.items() if qid in ids and isinstance(sol, str) and sol.strip()}
-    elig = sum(1 for q in questions if eligible(q))
+    pool = daily_pool_ids()
+    pool_elig = sum(1 for q in questions if eligible(q) and q['id'] in pool)
+    pool_done = sum(1 for qid in solutions if qid in pool)
     out = {
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'count': len(solutions),
-        'eligible': elig,
+        'eligible': sum(1 for q in questions if eligible(q)),
         'draft': True,  # every solution is an LLM-drafted aid; answer stays from the card
         'solutions': solutions,
     }
     os.makedirs(C.WEB_DATA_DIR, exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
-    print(f'wrote {OUT}: {len(solutions)}/{elig} eligible text questions have a draft '
-          f'({elig - len(solutions)} pending — run with --fill + API key)')
+    print(f'wrote {OUT}: {len(solutions)} drafts; daily-quiz coverage {pool_done}/{pool_elig} '
+          f'(run --fill + API key for the rest; add --all for the whole bank).')
 
 
 if __name__ == '__main__':
