@@ -3,6 +3,7 @@
   import { answerLabel } from '@/utils/score'
   import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
   import { solveSteps } from '@/models/solveTemplates'
+  import { loadExplanations } from '@/utils/explanations'
   import Tag from '@/components/common/Tag.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
@@ -15,6 +16,17 @@
   const slug = $derived(ptag ? tagSlug(ptag) : null)
   // errata reason is only worth showing when the answer was actually changed
   const showReason = $derived(question.errata_applied && !!question.explanation)
+
+  // per-question AI-draft worked solution (text questions only; answer stays from the
+  // card). Lazy-loaded once per session; null when this question has no draft yet.
+  let solution = $state<string | null>(null)
+  $effect(() => {
+    const id = question.id
+    solution = null
+    loadExplanations()
+      .then((d) => { if (question.id === id) solution = d.solutions[id] ?? null })
+      .catch(() => {})
+  })
 </script>
 
 <div class="mt-3 rounded-box border border-base-300 bg-base-200/60 p-3 text-sm animate-fade-in-up">
@@ -36,8 +48,23 @@
     <p class="mt-2 whitespace-pre-wrap leading-relaxed opacity-90">{question.explanation}</p>
   {/if}
 
+  {#if solution}
+    <details class="mt-3 rounded-box border border-secondary/30 bg-secondary/[0.06]" open>
+      <summary class="flex cursor-pointer list-none items-center gap-1.5 px-3 py-2 font-semibold text-secondary">
+        <Icon name="sparkles" class="h-4 w-4 shrink-0" /> 本題詳解
+        <span class="badge badge-ghost badge-sm font-normal">AI 草稿</span>
+      </summary>
+      <div class="border-t border-secondary/15 px-3 py-2.5">
+        <p class="whitespace-pre-wrap leading-relaxed">{solution}</p>
+        <p class="mt-2 text-xs leading-relaxed opacity-60">
+          正確答案以官方答案卡為準；此詳解為 AI 輔助草稿（可能有誤），請對照題目圖與課本驗證。
+        </p>
+      </div>
+    </details>
+  {/if}
+
   {#if steps.length}
-    <details class="mt-3 rounded-box border border-primary/25 bg-primary/5" open>
+    <details class="mt-3 rounded-box border border-primary/25 bg-primary/5" open={!solution}>
       <summary class="flex cursor-pointer list-none items-center gap-1.5 px-3 py-2 font-semibold text-primary">
         <Icon name="compass" class="h-4 w-4 shrink-0" /> 這類題的解法{#if ptag}<span class="ml-1 text-xs font-normal opacity-70">（{tagShort(ptag)}）</span>{/if}
       </summary>
