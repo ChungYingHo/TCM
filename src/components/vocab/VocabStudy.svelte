@@ -2,6 +2,7 @@
   // Flashcard study with word-level spaced repetition. Due cards come first (calendar
   // SRS), then fresh words in frequency order. 認識 advances the box; 不熟 resets it.
   import type { VocabWord } from '@/models/vocab'
+  import { onMount } from 'svelte'
   import { dueIds, grade, learn, getCard } from '@/utils/vocabSrs'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import Icon from '@/components/common/Icon.svelte'
@@ -27,7 +28,11 @@
     i = 0
     flipped = false
   }
-  $effect(() => { build() })
+  // Build the deck ONCE per mount. Grading a card writes to the SRS store, which makes
+  // the parent recompute `ids`/`words` (new array identity) — a reactive `$effect` here
+  // would re-run on that and reset `i` to 0, freezing the deck ("剩 N 張卻翻不過去").
+  // The deck is a stable snapshot; 再來一輪 rebuilds explicitly.
+  onMount(build)
 
   const current = $derived(deck[i] ? byId.get(deck[i]) : null)
   const remaining = $derived(Math.max(0, deck.length - i))

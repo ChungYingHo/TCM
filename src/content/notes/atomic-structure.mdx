@@ -29,6 +29,8 @@ import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import QuantumNumbers from '@/components/notes/QuantumNumbers.svelte'
 import OrbitalDiagram from '@/components/notes/OrbitalDiagram.svelte'
+import ConfigDecoder from '@/components/notes/ConfigDecoder.svelte'
+import PeriodicTable from '@/components/notes/PeriodicTable.svelte'
 import EnergyLevels from '@/components/notes/EnergyLevels.svelte'
 import HalfLife from '@/components/notes/HalfLife.svelte'
 
@@ -89,11 +91,30 @@ import HalfLife from '@/components/notes/HalfLife.svelte'
 
 <OrbitalDiagram client:visible />
 
-把電子填好後，用「副層 + 電子數」寫出來就是**電子組態（electron configuration）**。例如氧（O）是 1s²2s²2p⁴——右上的小數字代表該副層裡有幾個電子。內層常用最近的稀有氣體簡寫，例如 **[Ar]** 就代表氬（Ar）的 18 個內層電子。
+把電子填好後，用「副層 + 電子數」寫出來就是**電子組態（electron configuration）**。例如氧（O）是 1s²2s²2p⁴。內層常用最近的稀有氣體簡寫，例如 **[Ar]** 就代表氬（Ar）的 18 個內層電子。
+
+### 怎麼讀寫「1s²2s²2p⁴」？
+
+每一段都是**三個資訊疊在一起**：**前面的數字就是主量子數 n（電子在第幾層）**、中間的字母是副層（s/p/d/f，對應 ℓ）、右上的小數字是這個副層裡有幾個電子。所以 2p⁴ ＝「第 2 層的 p 副層、裡面有 4 個電子」。把氧拆開看最清楚：
+
+<ConfigDecoder client:visible />
 
 > **兩個必背的例外**：Cr（Z=24）是 [Ar] **3d⁵4s¹**、Cu（Z=29）是 [Ar] **3d¹⁰4s¹**。原因是**一個副層在半滿（d⁵：五條軌域各一個電子）或全滿（d¹⁰）時，電子分布較對稱、能量較低、特別穩定**，所以 4s 會讓出一個電子給 3d 去湊成半滿/全滿。把上面的 Z 調到 24 或 29，即可看到修正後的組態。
 
-## 四、電子躍遷：放光、吸光、游離
+## 四、電子組態與週期表：s、p、d、f 區塊
+
+週期表不是隨便排的——它的形狀就是電子組態畫出來的。把每個元素「**最後一個電子填進哪個副層**」上色，整張表剛好分成四個**區塊（block）**：
+
+- **s 區**：第 1、2 族（加上 He）——最後填 s 副層。
+- **p 區**：第 13–18 族——最後填 p 副層。
+- **d 區**：第 3–12 族（過渡金屬）——最後填 d 副層。
+- **f 區**：鑭系、錒系——最後填 f 副層。
+
+所以**位置 ↔ 組態可以互推**：知道某元素在第 4 週期、第 2 族，就知道它的外層是 4s²（鈣）；反過來，看到組態以 3p 結尾，就知道它在第 3 週期 p 區。下面點任一元素，看它的原子序、所在週期/族與所屬區塊（顏色＝區塊）：
+
+<PeriodicTable client:visible />
+
+## 五、電子躍遷：放光、吸光、游離
 
 **能階（energy level）**是電子在原子中可以擁有的能量值。電子能從一個能階躍遷到另一個能階：**往低能階掉 → 放出光**；**往高能階跳 → 吸收等量的光**。兩個能階的能量差，就是那顆光子的能量：
 
@@ -125,7 +146,7 @@ $$
 
 > 補充：落到 n=1 是**紫外**（Lyman）、落到 n=2 是**可見光**（Balmer）；ΔE 越大，波長 λ 越短。
 
-## 五、原子核會變：衰變與半衰期
+## 六、原子核會變：衰變與半衰期
 
 不穩定的原子核會放出粒子、變成別的核（核種寫成 ${}^A_Z X$：左上是質量數 A、左下是原子序 Z）。兩種最常考：
 
@@ -143,6 +164,15 @@ $$
 $$
 Z_{\text{母}} - 2(\text{α 次數}) + 1(\text{β 次數}) = Z_{\text{子}}
 $$
+
+光看公式很抽象，當場解一題就懂了：
+
+> **馬上算一次（釷系）**：${}^{232}_{90}\text{Th}$ 一路衰變到 ${}^{208}_{82}\text{Pb}$，共幾次 α、幾次 β？
+>
+> 1. **先用質量數抓 α**（只有 α 會改變 A，每次 −4）：α 次數 ＝ (232 − 208) ÷ 4 ＝ **6 次**。
+> 2. 6 次 α 會讓原子序少 2×6 ＝ 12 → 90 − 12 ＝ 78。
+> 3. 但子核原子序是 82，比 78 **多了 4**，這 4 要靠 β（每次 Z +1）補回 → **β ＝ 4 次**。
+> 4. 守恆式驗算：90 − 2(6) + 1(4) ＝ 82 ✓。答案：**6 次 α、4 次 β**。
 
 **半衰期（half-life，記為 $t_{1/2}$）**：放射性樣本衰變到只剩一半所需的時間。每經過一個半衰期，樣本量就少一半。下面的樣本可調整經過時間，觀察剩餘量的變化：
 
