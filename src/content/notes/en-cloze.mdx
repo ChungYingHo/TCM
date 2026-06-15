@@ -90,6 +90,13 @@ import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
 - 時態是否一致
 - 有沒有前後矛盾
 
+> **代回抓錯走一次**：句子「…acupuncture can effectively ___ chronic pain.」若順手選了 **escalate**（詞性其實沒錯——can effectively 後面接原形動詞，光看詞性篩不掉它）——
+> 1. **代回**：…can effectively **escalate** chronic pain.
+> 2. **抓矛盾**：前面是「research has shown… effectively」的正面語氣，但 escalate（升高、惡化）會讓疼痛更糟，前後語意打架。
+> 3. **改選**：換成 **alleviate**（緩解）→ …can effectively **alleviate** chronic pain，整句才一致。
+>
+> 重點：**詞性對 ≠ 答案對**——只有「代回去讀一遍」才抓得到這種語意矛盾，這正是第 4 步不能省的原因。
+
 <Memorize>
 克漏字四步：<b>①通讀抓主題時態 → ②每空判詞性 → ③連接詞看前後邏輯 → ④代回驗證</b>。<br />
 時態不一致、詞性不對 = 直接刪去，不用多想。
