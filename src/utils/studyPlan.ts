@@ -67,6 +67,19 @@ function rotatePick(list: string[], n: number, seed: number): string[] {
   return Array.from({ length: n }, (_, i) => list[(start + i) % list.length])
 }
 
+/** Reorder a tag's pool so any contiguous window spans the 3 schools evenly
+ *  (CMU₀, ISU₀, TCU₀, CMU₁, …) — keeps a rotatePick'd quiz school-balanced. */
+function schoolInterleave(ids: string[]): string[] {
+  const order = ['CMU', 'ISU', 'TCU']
+  const buckets: Record<string, string[]> = { CMU: [], ISU: [], TCU: [] }
+  const extra: string[] = []
+  for (const id of ids) (buckets[id.slice(0, 3)] ?? extra).push(id)
+  const max = Math.max(0, ...order.map((s) => buckets[s].length))
+  const out: string[] = []
+  for (let i = 0; i < max; i++) for (const s of order) if (buckets[s][i] !== undefined) out.push(buckets[s][i])
+  return [...out, ...extra]
+}
+
 /** Tags ranked weakest-first by the user's own accuracy over that tag's question pool. */
 function weakestTags(
   quizPoolByTag: Record<string, string[]>,
@@ -108,7 +121,7 @@ export function computeToday(
     const slug = list[cur.notes[s] % list.length]
     const tag = schedule.noteTags[slug] || ''
     const round = Math.floor(cur.notes[s] / list.length) + 1
-    const miniQuizIds = round > 1 ? rotatePick(schedule.quizPoolByTag[tag] || [], 3, cur.notes[s]) : []
+    const miniQuizIds = round > 1 ? rotatePick(schoolInterleave(schedule.quizPoolByTag[tag] || []), 3, cur.notes[s]) : []
     return { subject: s, slug, tag, round, miniQuizIds }
   }).filter((n): n is PlanNote => n !== null)
 
@@ -161,9 +174,14 @@ export function computeToday(
     }
     quizIds = [...seq, ...weak]
   } else {
-    const seed = SUBJECTS.reduce((a, s) => a + (cur.notes[s] || 0), 0)
-    const poolUnion = [...new Set(notes.flatMap((n) => schedule.quizPoolByTag[n.tag] || []))]
-    quizIds = rotatePick(poolUnion, perDay.quiz, seed)
+    // learn phase: balance across the day's subjects AND the 3 schools. (Previously a
+    // contiguous slice of a subject-grouped union → day 1 came out all-chemistry,
+    // all-CMU.) Each subject contributes a fair share, school-interleaved within its
+    // pool; the per-subject seed rotates so repeats bring fresh questions.
+    const per = Math.ceil(perDay.quiz / Math.max(notes.length, 1))
+    quizIds = notes.flatMap((n, ni) =>
+      rotatePick(schoolInterleave(schedule.quizPoolByTag[n.tag] || []), per, (cur.notes[n.subject] || 0) + ni),
+    )
   }
 
   // Pre-exam taper = review only: stop introducing new words (notes/classics keep

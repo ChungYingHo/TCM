@@ -117,9 +117,37 @@ def main() -> None:
     note_tags = {slug: tag for s in C.SUBJECTS for tag, slug in tax[s]}
     taxo_tags = set(note_tags.values())
 
-    # quiz candidate pool: concept tag -> question ids (capped, file-stable order)
-    pool: dict[str, list[str]] = {}
+    # qnum: trailing question number of an id (for stable, recent-first ordering).
+    def qnum(q: dict) -> int:
+        m = re.search(r'(\d+)\D*$', q['id'])
+        return int(m.group(1)) if m else 0
+
+    # The newest exam year is reserved intact as future full mock exams — excluded from
+    # BOTH the daily-quiz pool and the drill track so it is not spoiled before then.
+    MOCK_YEAR = max(int(q['year']) for q in qs)
+
+    # quiz candidate pool: concept tag -> question ids (capped, file-stable order).
+    # Fill in a school-round-robin, newest-year-first order so each tag's 60-cap is
+    # balanced across CMU/ISU/TCU. (Previously qs was CMU-first, so popular tags like
+    # 原子結構與核化學 filled the cap entirely with CMU → 「今日考題」全是中國醫。)
+    by_school: dict[str, list[dict]] = {}
     for q in qs:
+        if int(q['year']) == MOCK_YEAR:
+            continue
+        by_school.setdefault(q['school'], []).append(q)
+    for sch in by_school:
+        by_school[sch].sort(key=lambda q: (-int(q['year']), qnum(q)))
+    ordered: list[dict] = []
+    i = 0
+    while any(i < len(v) for v in by_school.values()):
+        for sch in ('CMU', 'ISU', 'TCU'):
+            lst = by_school.get(sch)
+            if lst and i < len(lst):
+                ordered.append(lst[i])
+        i += 1
+
+    pool: dict[str, list[str]] = {}
+    for q in ordered:
         for t in q.get('concept_tags') or []:
             if t in taxo_tags:
                 bucket = pool.setdefault(t, [])
@@ -138,17 +166,12 @@ def main() -> None:
     # The newest year (MOCK_YEAR) is EXCLUDED — those papers are reserved intact as
     # full mock exams for the 2027/2–4 final-review phase; burning them as daily
     # drill would waste the most representative simulation material.
-    MOCK_YEAR = max(int(q['year']) for q in qs)
     by_subject: dict[str, list[dict]] = {s: [] for s in C.SUBJECTS}
     for q in qs:
         if int(q['year']) == MOCK_YEAR:
             continue
         if any(t in taxo_tags for t in (q.get('concept_tags') or [])):
             by_subject[q['subject']].append(q)
-    def qnum(q: dict) -> int:
-        m = re.search(r'(\d+)\D*$', q['id'])
-        return int(m.group(1)) if m else 0
-
     for s in C.SUBJECTS:
         by_subject[s].sort(key=lambda q: (-int(q['year']), q['school'], qnum(q)))
     drill: list[str] = []
