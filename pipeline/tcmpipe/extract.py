@@ -211,6 +211,7 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
 
 
 MAX_SPAN_PAGES = 3          # cap a single question crop's page span
+FIG_MIN_MARKS = 12          # min raster+vector marks for a band to count as an embedded figure
 MAX_IMAGE_PX = 16000        # WebP hard limit is 16383
 # repeated page-header markers (exam title / 考試科目 / 頁碼 …) — excluded from crops
 HEADER_RE = re.compile(r'學年度|考試科目|頁碼|總頁數|本試題|招生考試|考試日期|含封面')
@@ -247,11 +248,40 @@ def _page_bands(doc: fitz.Document, a: Anchor, nxt: Anchor | None) -> list[tuple
         # real content = words in the raw band that aren't header/footer chrome
         ys = [(w[1], w[3]) for w in words
               if w[3] > raw_top + 0.5 and w[1] < raw_bottom - 0.5 and not _is_chrome(w[4])]
+        # Embedded figures (chemical structures, orbital diagrams, NMR/IR plots) carry no
+        # text words and often have vector parts (lines/lobes) below the raster box, so a
+        # text-only extent crops them off (option images sit below the last label). Gather
+        # figure pixels (raster image boxes + small vector strokes), skipping the page-
+        # spanning watermark/scan background and the large rotated watermark glyphs.
+        pw = page.rect.width
+        fig_ys = []
+        for im in page.get_image_info():
+            ix0, iy0, ix1, iy1 = im['bbox']
+            if iy1 <= raw_top + 0.5 or iy0 >= raw_bottom - 0.5:
+                continue
+            if (ix1 - ix0) > 0.85 * pw and (iy1 - iy0) > 0.4 * ph:
+                continue  # full-page watermark / scan background
+            fig_ys.append((iy0, iy1))
+        for d in page.get_drawings():
+            r = d['rect']
+            if r.y1 <= raw_top + 0.5 or r.y0 >= raw_bottom - 0.5:
+                continue
+            if (r.x1 - r.x0) >= 60 or (r.y1 - r.y0) >= 36:
+                continue  # large stroke = watermark glyph / page rule, skip
+            fig_ys.append((r.y0, r.y1))
+        # a genuine embedded figure is made of MANY marks (lobes / structure strokes /
+        # plot pixels: 50–250+); a handful of stray raster/vector bits are watermark or
+        # scan noise, so ignore those — keeps text questions and scanned pages tight.
+        is_figure = len(fig_ys) >= FIG_MIN_MARKS
+        if is_figure:
+            ys = ys + fig_ys
         if not ys:
             if pno == a.page:
                 bands.append((pno, raw_top, min(raw_bottom, raw_top + 24)))
             continue  # continuation page with only chrome -> skip (fixes header bleed)
         top = raw_top if pno == a.page else max(raw_top, min(y for y, _ in ys) - C.TOP_PAD_PT)
+        # extend to the lowest content (figure marks included only when is_figure), clamped to
+        # the next question. The density gate above already keeps scanned/essay pages out.
         bottom = min(raw_bottom, max(y for _, y in ys) + C.BOTTOM_PAD_PT)
         if bottom > top + 4:
             bands.append((pno, top, bottom))
