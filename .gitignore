@@ -35,3 +35,4 @@ pipeline/_guwen/
 pipeline/data/ecdict.csv
 pipeline/__pycache__/
 **/__pycache__/
+pipeline/_clean_report.txt

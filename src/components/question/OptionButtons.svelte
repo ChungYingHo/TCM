@@ -19,6 +19,11 @@
       : (['A', 'B', 'C', 'D'] as OptionLetter[]),
   )
 
+  // 化學結構式等「圖片選項」抽不出文字，按鈕只剩字母 → 提示對照題目圖作答
+  const imageOptions = $derived(
+    question.options.length > 0 && question.options.every((o) => !o.text?.trim()),
+  )
+
   function stateClass(letter: OptionLetter): string {
     if (revealed) {
       if (question.award_all || question.correct_answer.includes(letter)) return 'btn-success'
@@ -29,6 +34,9 @@
   }
 </script>
 
+{#if imageOptions}
+  <p class="-mb-1 text-xs text-base-content/50">此題選項為圖片（如化學結構式），請對照上方題目圖作答。</p>
+{/if}
 <div class="grid grid-cols-1 gap-2 sm:grid-cols-2" role="group" aria-label="選項">
   {#each letters as letter (letter)}
     <button

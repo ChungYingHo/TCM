@@ -147,6 +147,30 @@ def _smart_join(parts: list[str]) -> str:
     return out
 
 
+# Exam-paper chrome (page footers / next-section headers / passage labels) that the
+# greedy last-option absorber below can swallow into the final option/stem TEXT. The
+# HEADER_RE/FOOTER_RE further down only gate image CROPS, not text — so strip it here.
+# Mirrored in pipeline/clean_text_junk.py, which retro-cleaned the committed shards.
+_CHROME_RES = [
+    re.compile(r'[（(]?\s*(?:如)?有?缺頁.{0,4}毀損.*$'),            # （如有/有缺頁或毀損，應立即舉手…）
+    re.compile(r'\s*背面(?:還|沒)?有試題.*$'),
+    re.compile(r'\s*[二三]、\s*(?:作文題|非選擇題|寫作測驗|問答題|簡答題|申論題).*$'),  # 吃進「二、作文題…」
+    re.compile(r'\s*[IVX]+\s*[.．]?\s*(?:Cloze|Reading\b).*$'),      # 吃進「III.Cloze / IV Reading…」
+    re.compile(r'\s*【[A-D]】.*$'),                                 # 吃進閱讀文章標籤【A】-【D】
+    re.compile(r'\s*第\s*\d+\s*頁\s*[,，]?\s*共\s*\d+\s*頁\s*$'),
+    re.compile(r'\s*(?:第\s*\d+\s*)?頁\s*之\s*第\s*\d+\s*頁\s*$'),    # (第X)頁之第Y頁 — never eats a bare digit
+    re.compile(r'[（(]?\s*請勿翻[面頁].*$'),
+    re.compile(r'\s*(?:作答無效|測驗結束).*$'),
+]
+
+
+def strip_exam_chrome(text: str) -> str:
+    """Trim trailing exam chrome the last option/stem may have absorbed."""
+    for r in _CHROME_RES:
+        text = r.sub('', text)
+    return text.strip()
+
+
 def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
     """Reading-order tokens of one question -> (stem, options).
     Stem = text before the first option marker. Each `(X)` starts a new option;
@@ -181,9 +205,9 @@ def parse_stem_options(tokens: list[str]) -> tuple[str, list[dict]]:
         if o['letter'] in seen:
             continue
         seen.add(o['letter'])
-        uniq.append({'letter': o['letter'], 'text': _smart_join(o['parts']).strip()})
+        uniq.append({'letter': o['letter'], 'text': strip_exam_chrome(_smart_join(o['parts']).strip())})
     uniq.sort(key=lambda o: o['letter'])
-    return _smart_join(stem_parts).strip(), uniq
+    return strip_exam_chrome(_smart_join(stem_parts).strip()), uniq
 
 
 MAX_SPAN_PAGES = 3          # cap a single question crop's page span
