@@ -39,6 +39,10 @@ import InversionQuiz from '@/components/notes/InversionQuiz.svelte'
 
 > 口訣：if 子句「**往前推一個時態**」就是與事實相反——現在事用過去式、過去事用過去完成。
 
+**為什麼這樣設計（推導法，不必硬背三排）**：英文用「**時態退一格**」這個動作來標記「這不是真的」。現在的事退一格 → 過去式（所以是 `if + 過去式`）；過去的事已經沒得退，就退到「過去的過去」→ 過去完成（所以是 `if + had p.p.`）。主句的 **would** 就是 will 的過去式，跟著一起退格。**先判斷在講哪個時間、再各退一格**，三型就能自己推出來，不用背表。
+
+> **真實條件的時態**：兩邊用「現在簡單式 → will + 原形」，不要兩邊都用 will。科學/必然的因果也算真實條件——*If water **is heated** to 212°F, it **will boil***（is heated 不是 will be heated；CMU-112）。
+
 ## 二、省略 if 的倒裝（高頻陷阱）
 
 把 if 省略，再把 **were / had / should** 提到主詞前面，意思不變：
@@ -51,7 +55,18 @@ import InversionQuiz from '@/components/notes/InversionQuiz.svelte'
 
 所以看到句首是 **Were / Had / Should + 主詞**，立刻判斷它是「省略 if 的假設句」，再回推完整意思。
 
+> **為什麼只有這三個字能倒裝**：能提到主詞前的只有**助動詞**。were、had、should 本身就是助動詞，省掉 if 後直接把它們搬到句首即可；一般動詞（如 know）沒有這個身分，所以 *Knew I…* 不成立——要倒裝得先變成 had known，寫成 **Had I known…**（CMU-114）。**還原法**：把句首助動詞搬回主詞後、補一個 if，就是完整句。
+
 <InversionQuiz client:visible />
+
+### 否定副詞開頭也要倒裝（另一條規則，別搞混）
+
+把 **No sooner / Not until / Hardly / Seldom / Never / Little** 等否定／半否定詞放句首時，主句也要**助動詞提前**（疑問句語序），但這跟假設語氣**無關**——純粹是「否定詞開頭 → 倒裝」：
+
+- **No sooner had** they heard the news **than** they burst into tears.（No sooner 配 than；had p.p. 配後面 past）
+- **Not until** I lay in bed **did I think of** the quiz.（did + 主詞 + 原形）
+
+> 判斷法：句首是否定／限定副詞 → 後面**立刻接助動詞 + 主詞**；不要寫成正常語序（*Not until… I thought* 是錯的）。No sooner 永遠搭 **than**、Hardly/Scarcely 搭 **when**。
 
 ## 三、that 子句用原形（建議、要求、命令、重要）
 
@@ -70,12 +85,31 @@ import InversionQuiz from '@/components/notes/InversionQuiz.svelte'
 | wish + 與過去相反 | had + p.p. | I wish I **had studied** harder. |
 | as if / as though | 過去式（與現在相反） | He talks as if he **knew** everything. |
 
+## 五、不用 if 也能下條件（同義引導詞）
+
+條件不一定靠 if。**先把這些詞在心裡換回 if 句，再套三型的時態規則**就好：
+
+| 引導詞 | 等於 | 例 |
+|---|---|---|
+| **unless** | if … not（除非） | **Unless** she had argued well, the board **would have rejected** it.（= If she had not argued…，與過去相反）|
+| **but for / without** + 名詞 | if it were not for / if it had not been for | **But for** your help, I **would have failed**.（要不是你幫忙）|
+| **Had it not been for** + 名詞 | = But for（倒裝寫法） | The impact **might not have been** so great **had it not been for** her.（CMU-109）|
+| **otherwise / or** | 「否則」＝把前句反過來當條件 | He **must have** finished; **otherwise** he **wouldn't be** relaxing.（要是沒做完，他就不會在放鬆）|
+
+- **unless** 本身已含 not，子句**不要再加一個 not**（unless = if…not）。
+- 看到 **otherwise**，它後面那句就是「與前句相反的假設結果」，所以照樣用 would / wouldn't；前句常搭 **must have p.p.**（對過去的合理推斷：一定是…）。
+
+> **推斷型 must / might + have p.p.**：講「**對過去的推測**」而非條件本身——*He **must have** completed it*（一定做完了，ISU-111）、*None **might ever have survived***（大概沒人活下來，TCU-109）。判斷法：句子在「猜過去發生了什麼」就用 **modal + have + p.p.**。
+
 <Memorize>
 與現在相反：<b>if + 過去式 … would + 原形</b>（be 用 were）。<br />
 與過去相反：<b>if + had p.p. … would have p.p.</b>。<br />
 句首 <b>Were / Had / Should + 主詞</b> = 省略 if 的倒裝假設句。<br />
+<b>unless</b> = if…not（別再加 not）；<b>but for / had it not been for</b> = 要不是。<br />
 suggest / recommend / essential that … 子句動詞用<b>原形</b>（被動 = be + p.p.）。<br />
-wish、as if 後接<b>與事實相反</b>的過去式。
+wish、as if 後接<b>與事實相反</b>的過去式。<br />
+否定詞開頭（<b>No sooner / Not until / Hardly</b>）→ 主句<b>助動詞提前</b>倒裝（No sooner…than）。<br />
+推測過去用 <b>must / might + have + p.p.</b>（一定／大概…了）。
 </Memorize>
 
 ## 重點整理
@@ -86,6 +120,9 @@ wish、as if 後接<b>與事實相反</b>的過去式。
   "<b>倒裝</b>：句首 Were / Had / Should + 主詞 = 省略 if（Had he known = If he had known）。",
   "<b>that 子句原形</b>：suggest / recommend / demand / insist / It is essential that + S + <b>原形 V</b>（被動 = be + p.p.）。",
   "<b>混合條件</b>：過去的因、現在的果 → If + had p.p. … would + 原形 V（If I had saved, I would be rich now）。",
+  "<b>非 if 的條件詞</b>：unless（=if…not，別再加 not）、but for／had it not been for（=要不是）、otherwise（=否則，把前句反過來當條件）。",
+  "<b>否定副詞倒裝</b>：No sooner / Not until / Hardly / Seldom 開頭 → 主句助動詞提前（No sooner <b>had</b> they… <b>than</b>…；Not until… <b>did</b> I…）；與假設語氣無關。",
+  "<b>推測過去</b>：must / might + have + p.p.（一定做完了／大概沒活下來），用於猜過去而非條件本身。",
   "<b>wish / as if</b> 接與事實相反的過去式或 had + p.p.。"
 ]} />
 
@@ -152,5 +189,41 @@ wish、as if 後接<b>與事實相反</b>的過去式。
     "這是禮貌、表「萬一」的條件句（未來不太可能但仍提供協助）。",
     "未來假設可用 <b>should</b>，省略 if 倒裝成句首 <b>Should + 主詞 + 原形 V</b>（= If you should have…）。",
     "(C) Were / (D) Had 對應現在／過去，與後面 have（原形）不合。答案：<b>Should</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="Unless she presented a compelling argument supported by strong evidence, the board ____ her proposal without further discussion."
+  options={["should merely object to", "must possibly refuse", "would likely have rejected", "could scarcely disapprove"]}
+  answer="(C) would likely have rejected"
+  steps={[
+    "<b>Unless = if … not</b>，先還原成 <b>If she had not presented</b>（presented 是過去式，講已成定局的過去）。",
+    "if 子句既是「與過去相反」，主句就要 <b>would + have + p.p.</b>。",
+    "只有 (C) <b>would likely have rejected</b> 是這個結構。答案：<b>would likely have rejected</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="The impact of Thoreau's essay might not have been so far-reaching ____ for Elizabeth Peabody, who dared to publish the controversial essay."
+  options={["it not having been", "it is not being", "is it not being", "had it not been"]}
+  answer="(D) had it not been"
+  steps={[
+    "「要不是 X」的書面說法是 <b>if it had not been for X</b>，省略 if 後倒裝成 <b>had it not been for X</b>。",
+    "主句 <b>might not have been</b>（與過去相反的推測）正好搭這個過去假設。",
+    "答案：<b>had it not been</b>（= but for Elizabeth Peabody）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="____ they burst into tears."
+  options={["No sooner than they heard the bad news", "No sooner they heard the bad news than", "No sooner they hear the bad news than", "No sooner had they heard the bad news than"]}
+  answer="(D) No sooner had they heard the bad news than"
+  steps={[
+    "<b>No sooner</b> 放句首 → 主句要<b>助動詞提前</b>倒裝：No sooner <b>had</b> they heard…。",
+    "「一…就…」的搭配是 <b>No sooner … than …</b>（不是 when），且先發生的動作用 <b>had + p.p.</b>。",
+    "(A)(B)(C) 不是倒裝或搭錯詞。答案：<b>No sooner had they heard the bad news than</b>。"
   ]}
 />

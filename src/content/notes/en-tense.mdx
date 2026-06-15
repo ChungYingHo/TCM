@@ -61,6 +61,8 @@ import Subjunctive from '@/components/notes/Subjunctive.svelte'
 
 判斷技巧：主詞是「動作的承受者」→ 用被動；主詞是「動作的執行者」→ 用主動。
 
+> 被動不必整套硬背：**時態永遠掛在 be 上，p.p. 不動**。要哪個時態，就把那個時態的 be 拿來用——現在完成 → have **been** + p.p.；助動詞 → 助動詞 + **be** + p.p.；進行 → **being** + p.p.。所以「現在完成被動」自然就是 has/have been done。<br />另一個常考點是**主詞與 be 的單複數一致**：複數主詞（sources, systems …）配 have been；單數配 has been。
+
 ## 三、非限定動詞（Verbals）：to V、V-ing、p.p.
 
 非限定動詞不當主要動詞，而是扮演**名詞、形容詞或副詞**角色：
@@ -108,6 +110,8 @@ import Subjunctive from '@/components/notes/Subjunctive.svelte'
 | **used to + 原形 V** | 過去常常（現在不再） | 原形動詞：I **used to smoke**. |
 | **be used to + V-ing** | 習慣於（to 是介系詞） | V-ing：I **am used to getting up** early. |
 
+> 不用背哪個接什麼，看**有沒有 be 動詞 + to 後面的詞性**就能分：句中沒有 be（直接 used to）→ 這個 to 是不定詞 → 接**原形**，意思「過去常常」；前面有 be/get（am/was used to）→ 這個 to 是**介系詞** → 接 **V-ing/名詞**，意思「習慣於」。考點常見錯誤選項 *was used to be* 就是把兩者混在一起（be 後該接 V-ing 卻給原形）。
+
 ## 六、感官／使役動詞 + 受詞 + 原形 V
 
 see / hear / feel / watch / notice 及 make / let / have 後面，接受詞再接**原形動詞（bare infinitive，無 to）**：
@@ -117,12 +121,120 @@ see / hear / feel / watch / notice 及 make / let / have 後面，接受詞再�
 
 （若強調「正在進行」可改 V-ing：I saw him **crossing** the street；但被動時要還原 to V：He was made **to rewrite**。）
 
+## 七、分詞構句：把子句「降級」成一個分詞片語
+
+當兩個子句的主詞相同，可把其中一句的「連接詞＋主詞＋be」省掉，只留分詞，當作副詞片語修飾主句。**選 V-ing 還是 p.p. 不用背，看一條因果規則就能推**：問「片語的（隱藏）主詞和那個動詞是主動還是被動關係」——
+
+- 主詞**自己做**這個動作（主動）→ 用 **V-ing**。
+- 主詞**被**這個動作影響（被動）→ 用 **p.p.**（= being p.p. 省掉 being）。
+
+| 還原成子句 | 簡化後（分詞構句） | 主／被動 |
+|---|---|---|
+| **While we enjoyed** the breeze, we lost track of time. | **Enjoying** the breeze, we lost track of time. | we 主動享受 → V-ing |
+| **Because it was fueled** by conspiracy theories, the movement grew. | **Fueled** by conspiracy theories, the movement grew. | movement 被煽動 → p.p. |
+| AI systems **that are designed** to assist diagnosis … | AI systems **designed** to assist diagnosis … | systems 被設計 → p.p. |
+
+> 推導訣竅：分詞前補回主詞唸一次。「we enjoy」通 → **Enjoying**；「movement is fueled」通 → **Fueled**。**不要**選帶連接詞的 *Because enjoying*（連接詞後不能直接接分詞），也不要選完整子句 *We were enjoying*（沒有對等連接詞會變成兩句黏在一起）。
+
+**獨立分詞片語（absolute）**：如果片語有**自己的主詞**（和主句主詞不同），就保留那個名詞、後面接分詞，整包當背景說明——這正是 `weather permitting`（= if the weather permits）、`each making one point`（= and each makes one point）的結構：名詞 + V-ing。
+
+<ExampleQuestion client:visible
+  n={7}
+  q="The article opens and closes with two news reports, each ____ one major point in contrast with the other."
+  options={["makes", "made", "is to make", "making"]}
+  answer="(D) making"
+  steps={[
+    "each 在這裡帶出一個<b>獨立分詞片語</b>（補充說明 two reports），不是主句的主要動詞——主句動詞已是 opens/closes。",
+    "問主被動：each（report）<b>自己提出</b> one point → 主動 → 用 <b>V-ing</b>；若選 makes 會變成兩個動詞沒有連接詞的病句。",
+    "答案：<b>making</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="The coronavirus-denier movement, ____ in part by wild conspiracy theories, has grown rapidly."
+  options={["to fuel", "fuels", "has fueled", "fueled"]}
+  answer="(D) fueled"
+  steps={[
+    "逗號間是修飾 movement 的<b>分詞片語</b>，不是主要動詞（主要動詞是後面的 has grown）。",
+    "補回主詞問主被動：movement 是「<b>被</b>陰謀論煽動」→ 被動 → 用 <b>p.p.</b>（= being fueled 省略 being）。",
+    "fuels / has fueled 是主動且當成主要動詞，重複了；to fuel 是不定詞表目的，語意不合。答案：<b>fueled</b>。"
+  ]}
+/>
+
+## 八、倒裝（二）：否定副詞放句首 → 助動詞提前
+
+除了省略 If 的假設倒裝，另一個高頻倒裝是**否定／限制性副詞（片語）移到句首時，主句要「半倒裝」**：把助動詞（do/does/did、have、will…）提到主詞前，像問句語序。規則一句話：**句首是否定副詞 → 後面語序變問句**。
+
+| 否定副詞開頭 | 倒裝（助動詞提前） |
+|---|---|
+| **Not until** I lay in bed | **did I** think of the quiz |
+| **No sooner** had the news come | **than** they burst into tears |
+| **Hardly / Seldom / Never** | had he … / does she … |
+
+> 為什麼？這些副詞被「強調」提到最前面，英文用倒裝來標記這種非常規語序。判斷只需兩步：①句首是不是否定／準否定副詞（not until, no sooner, hardly, seldom, never, little）→ ②是 → 立刻把助動詞搬到主詞前，沒有助動詞就補 do/does/did。**No sooner 固定搭配 than**（不是 when/then）。
+
+<ExampleQuestion client:visible
+  n={9}
+  q="____ they burst into tears."
+  options={["No sooner than they heard the bad news", "No sooner they heard the bad news than", "No sooner they hear the bad news than", "No sooner had they heard the bad news than"]}
+  answer="(D) No sooner had they heard the bad news than"
+  steps={[
+    "句首 <b>No sooner</b> 是否定副詞 → 主句要<b>倒裝</b>：把助動詞 had 提到主詞 they 前面 → No sooner <b>had they</b> heard …。",
+    "No sooner 固定接 <b>than</b>（不是 when）。",
+    "(A) 沒倒裝；(B)(C) 語序與時態錯。答案：<b>No sooner had they heard the bad news than</b>。"
+  ]}
+/>
+
+## 九、to V vs V-ing：動詞後面到底接哪個
+
+「接 to V 還是 V-ing」常被當死背，但多數情況能用語意推：**to V 偏向「未發生／要去做」的動作；V-ing 偏向「已發生／正在做／一般概念」**。再記三組高頻考點：
+
+- **介系詞後一律 V-ing**：take pride **in** fulfilling、confess **to** having had、be entitled **to** be 例外（這裡 to 是不定詞符號，看後面接原形就知道）。判斷法：to 後面若可接名詞就是介系詞→用 V-ing；若是「to + 原形」才是不定詞。
+- **have trouble / have difficulty / have a hard time + (in) V-ing**：固定接動名詞（have trouble **breathing**）。
+- **完成式動名詞 having + p.p.**：要表達「比主要動詞**更早發生**」的事，用 having p.p.。regret **not having finished** college（後悔「當年沒念完」——念書在後悔之前）；confess **to having had** a fever（坦承「昨晚」發燒——早於坦承）。
+
+> 一句話原理：先看前面是不是**介系詞**（in/to/of/at…）→ 是就 V-ing；再看那件事是否**早於**主要動詞 → 是就升級成 **having + p.p.**。
+
+<ExampleQuestion client:visible
+  n={10}
+  q="I've always regretted not ____ college."
+  options={["to finish", "finished", "to have finished", "having finished"]}
+  answer="(D) having finished"
+  steps={[
+    "regret 後表「後悔已發生（或沒發生）的事」用<b>動名詞</b>，不是 to V（regret to V 是「遺憾地要告知」，語意不合）。",
+    "「沒念完」這件事<b>早於</b>「現在的後悔」→ 用<b>完成式動名詞 having + p.p.</b>；否定 not 放在 having 前。",
+    "答案：<b>having finished</b>（not having finished）。"
+  ]}
+/>
+
+## 十、補兩個易混點：使役被動 have + O + p.p.、情緒分詞 -ed/-ing
+
+**使役 have/get + 受詞 + p.p.（「請人把某事做掉」）**：第六節的 have + O + 原形 V 是「叫某人去做」（主詞使喚的人自己動作）；但當受詞是「**被處理的東西**」、動作由**別人代勞**時，要用 **have/get + 受詞 + p.p.**（被動）。判斷：受詞和後面動詞是被動關係就用 p.p.——have her tooth **taken** care of（牙齒是「被」處理）、have the car **repaired**。
+
+**情緒形容詞 -ing vs -ed**：同一動詞兩種分詞當形容詞，用主被動區分，不用背——**-ing 表「令人…的」（主動發出感受）；-ed 表「（人）感到…的」（被引發感受）**。所以人通常配 -ed：I am **bored**（我覺得無聊）；事物配 -ing：the lecture is **boring**（演講令人無聊）。
+
+<ExampleQuestion client:visible
+  n={11}
+  q="Tina is going to the dentist to have her sore tooth ____ care of."
+  options={["taking", "taken", "to take", "to be taken"]}
+  answer="(B) taken"
+  steps={[
+    "have + 受詞（her tooth）後面，問受詞與動作的關係：牙齒是<b>被</b>「處理（take care of）」→ 被動 → 用 <b>p.p.</b>。",
+    "這是<b>使役被動 have + O + p.p.</b>（請牙醫把蛀牙處理掉），不是 have + O + 原形 V（那是叫某人自己做）。",
+    "答案：<b>taken</b>。"
+  ]}
+/>
+
 <Memorize>
 時間副詞是判斷時態的<b>最快線索</b>：since/for/already/yet → 現在完成；yesterday/ago → 簡單過去。<br />
 被動 = <b>be + p.p.</b>，be 動詞本身要配合主詞的人稱與時態變化。<br />
 <b>suggest / recommend / essential that …</b> 子句動詞用<b>原形</b>（被動 = be + p.p.）。<br />
 句首 <b>Had / Were / Should + 主詞</b> = 省略 If 的<b>倒裝假設句</b>。<br />
-<b>used to V</b>（過去常常）≠ <b>be used to V-ing</b>（習慣於）；感官/使役動詞後接<b>原形 V</b>。
+<b>used to V</b>（過去常常）≠ <b>be used to V-ing</b>（習慣於）；感官/使役動詞後接<b>原形 V</b>。<br />
+<b>分詞構句</b>：主詞主動做 → <b>V-ing</b>，被動承受 → <b>p.p.</b>（補回主詞唸一次就知道）；名詞+V-ing 為獨立片語（weather permitting）。<br />
+否定副詞開頭（<b>Not until / No sooner / Hardly</b>）→ 主句<b>倒裝</b>成問句語序；介系詞後一律 <b>V-ing</b>，更早發生用 <b>having + p.p.</b>。<br />
+使役被動 <b>have/get + O + p.p.</b>（請人把事做掉，have it done）；情緒形容詞 <b>-ing</b>（令人…）vs <b>-ed</b>（人感到…）。
 </Memorize>
 
 ## 重點整理
@@ -136,7 +248,13 @@ see / hear / feel / watch / notice 及 make / let / have 後面，接受詞再�
   "<b>used to V vs be used to V-ing</b>：used to V＝過去常常（現已不）；be/get used to + V-ing＝習慣於（to 是介系詞）。",
   "<b>感官/使役動詞</b>：see/hear/feel/watch + O + <b>原形 V</b>（I felt it shake）；make/let/have + O + 原形 V。",
   "<b>介系詞後 V-ing</b>：in/on/by/before/after/without + V-ing；「be used to + V-ing」表「習慣於」。",
-  "<b>假設語氣條件句</b>：與現在相反 If + 過去式 … would V；與過去相反 If + had + p.p. … would have + p.p.。"
+  "<b>假設語氣條件句</b>：與現在相反 If + 過去式 … would V；與過去相反 If + had + p.p. … would have + p.p.。",
+  "<b>分詞構句</b>：同主詞時把子句簡化成分詞——主詞主動做用 <b>V-ing</b>（Enjoying …），被動承受用 <b>p.p.</b>（Fueled by …）；補回主詞唸一次就能判主被動。",
+  "<b>獨立分詞片語</b>：片語有自己的主詞時用「名詞 + V-ing」（weather <b>permitting</b>＝if weather permits；each <b>making</b> a point）。",
+  "<b>否定副詞倒裝</b>：Not until / No sooner / Hardly / Seldom / Never 放句首 → 主句助動詞提前成問句語序（Not until … <b>did I</b> …）；No sooner 固定接 <b>than</b>。",
+  "<b>to V vs V-ing</b>：介系詞（in/to/of）後一律 <b>V-ing</b>（pride in fulfilling、confess to having had）；have trouble + <b>V-ing</b>；比主動詞更早發生用 <b>having + p.p.</b>。",
+  "<b>使役被動</b>：have/get + 受詞 + <b>p.p.</b>（受詞被處理，have her tooth <b>taken</b> care of）；對比 have + O + 原形 V（叫某人做）。",
+  "<b>情緒分詞形容詞</b>：<b>-ing</b>＝令人…的（boring），<b>-ed</b>＝（人）感到…的（I am <b>bored</b>）；按主被動選即可。"
 ]} />
 
 ## 解題方向

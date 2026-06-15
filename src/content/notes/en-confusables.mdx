@@ -64,13 +64,30 @@ import ConfusableFlashcards from '@/components/notes/ConfusableFlashcards.svelte
 | **economic / economical** | economic 經濟的（與經濟有關）；economical 節省的 |
 | **sensible / sensitive** | sensible 明智的；sensitive 敏感的 |
 
+> 推導鉤：同字根的 **-ic vs -ical**，常是「**-ic 客觀分類、-ical 引申評價**」。economic=屬於經濟領域、economical=會精打細算（省）；historic=有歷史意義的、historical=歷史上的。一時記不住就靠這條原則推。
+
+## 五、同字首／同字根的「選一個」型（高頻陷阱）
+
+字彙題最愛的出法：四個選項**共用同一個字首或字根**，長得像、只有意思不同，逼你靠**拆字**選。破解方法不是硬背，而是**把字拆成「字首＋字根」，各自記意思再組回去**——意思對不上的先刪。
+
+| 字首／字根 | 意思 | 拆解推義 |
+|---|---|---|
+| **sub-** | 在下、低於 | sub + serve（服侍）→ **subservient** 順從聽命；sub + sequ（跟隨）→ subsequent 隨後的；sub + vert（翻轉）→ subversive 顛覆的 |
+| **trans-** | 跨越、轉移 | trans + fer（帶）→ **transfer** 轉移（權力）；trans + port（運）→ transport 運輸（貨物）；trans + plant（種）→ transplant 移植（器官）；trans + scend（爬）→ transcend 超越 |
+| **geo-** | 土地、地理 | geo + politic（政治）→ **geopolitical** 地緣政治的；geo + physic→ geophysical 地球物理的；gene（出生）+ logical→ genealogical 家譜的 |
+| **-archy** | 統治 | mon（一）→ monarchy 君主制；patri（父）→ patriarchy 父權；an（無）→ anarchy 無政府；hier（神聖階級）→ **hierarchy** 階級制度 |
+| **appro-/appre-** | ad（去）+ propri（own，佔為己有）／preci（價值） | **appropriation** 挪用、佔用（own→拿來用）；appreciation 賞識（價值）；apparition 幽靈 |
+
+> 推導示範：題目說「把權力從政府**轉移**給宗教議會」——要的是「轉移」。四個 trans- 選項拆開：fer=帶（轉移）、port=運貨、plant=移植器官、scend=超越，只有 **transfer** 是「把抽象的權力帶到別處」，選 transferring。
+
 <ConfusableFlashcards client:visible />
 
 <Memorize>
 <b>affect</b>（動詞，影響）vs <b>effect</b>（名詞，效果）。<br />
 <b>rise</b>（不及物，無受詞）vs <b>raise</b>（及物，要受詞）；<b>lie</b>（躺，lie-lay-lain）vs <b>lay</b>（放，lay-laid-laid）。<br />
 <b>fewer</b> + 可數、<b>less</b> + 不可數。<br />
-princip<b>le</b>＝原則、princip<b>al</b>＝校長/主要；station<b>a</b>ry＝靜止、station<b>e</b>ry＝文具。
+princip<b>le</b>＝原則、princip<b>al</b>＝校長/主要；station<b>a</b>ry＝靜止、station<b>e</b>ry＝文具。<br />
+四選項<b>同字首</b>（sub-/trans-/geo-/-archy…）時，<b>拆「字首＋字根」</b>各記意思再組回去，意思對不上的先刪。
 </Memorize>
 
 ## 重點整理
@@ -81,7 +98,8 @@ princip<b>le</b>＝原則、princip<b>al</b>＝校長/主要；station<b>a</b>ry
   "<b>lie/lay</b>：lie 躺（lie-lay-lain）；lay 放置（lay-laid-laid）；lie『說謊』則為 lie-lied-lied。",
   "<b>fewer/less</b>、<b>many/much</b>、<b>number/amount</b>：先判可數或不可數。",
   "<b>形近字</b>：principle/principal、stationary/stationery、dessert/desert、complement/compliment。",
-  "<b>義近不可換</b>：borrow/lend、bring/take、economic/economical、sensible/sensitive。"
+  "<b>義近不可換</b>：borrow/lend、bring/take、economic/economical、sensible/sensitive；<b>-ic</b> 多客觀分類、<b>-ical</b> 多引申評價。",
+  "<b>同字首一組選一個</b>：拆「字首＋字根」推義（sub-=在下、trans-=轉移、geo-=土地、-archy=統治），意思對不上的先刪——別硬背整個單字。"
 ]} />
 
 ## 解題方向
@@ -147,5 +165,29 @@ princip<b>le</b>＝原則、princip<b>al</b>＝校長/主要；station<b>a</b>ry
     "空格後<b>沒有受詞</b>（slightly 是副詞）→ 需要<b>不及物</b>動詞。",
     "『上升』不及物用 <b>rise</b>；raise 是及物（要受詞）。",
     "答案：<b>rise</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="The new law threatens to weaken the state by ____ power from the central government to local religious councils."
+  options={["transporting", "transplanting", "transferring", "transcending"]}
+  answer="(C) transferring"
+  steps={[
+    "四個選項都是 <b>trans-</b>（跨越／轉移）開頭，靠<b>字根</b>選。",
+    "拆字根：port=運貨、plant=移植器官、scend=爬→超越、fer=帶。把抽象的『權力』從一方<b>帶到</b>另一方＝<b>transfer</b>。",
+    "答案：<b>transferring</b>（transport 運實體貨物、transplant 移植器官，都不合）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="The small nation felt ____ to its powerful neighbor, obliged to obey even when it didn't want to."
+  options={["subsequent", "subservient", "subliminal", "subversive"]}
+  answer="(B) subservient"
+  steps={[
+    "四個選項都是 <b>sub-</b>（在下、低於）開頭，靠<b>字根</b>選。",
+    "拆字根：sequ=跟隨（隨後）、limin=門檻（潛意識）、vert=翻轉（顛覆）、serve=服侍。『被迫聽命服從』＝在人之下去<b>服侍</b>＝<b>subservient</b>。",
+    "答案：<b>subservient</b>。"
   ]}
 />

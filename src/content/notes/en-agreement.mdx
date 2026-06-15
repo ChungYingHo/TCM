@@ -32,6 +32,12 @@ import AgreementRulePicker from '@/components/notes/AgreementRulePicker.svelte'
 - The **causes** of this disease **remain** unknown.（主詞 causes）
 - One of the **doctors who treat** cancer **is** my uncle.（主句主詞 one → is）
 
+> **不用一條條背：把「主詞和動詞之間」整段遮掉，剩下的核心名詞才是真主詞。** 會插進來蓋住主詞的，幾乎都是這幾種「修飾」——一遮就現形：
+> - **介系詞片語**：of / with / in / from + 名詞（The box ~~of apples~~ is）
+> - **附加片語**：along with / as well as / together with / including / in addition to + 名詞（這些<b>不是對等連接詞</b>，不會把單數變複數）
+> - **關係子句**：who / which / that …（The studies ~~that he cited~~ <b>are</b>…）
+> 遮掉之後動詞只跟核心名詞做單複數，跟「最靠近動詞的那個名詞」無關——出題就是賭你跟錯最近的名詞。
+
 <FindRealSubject client:visible />
 
 ## 二、永遠單數的主詞
@@ -43,6 +49,9 @@ import AgreementRulePicker from '@/components/notes/AgreementRulePicker.svelte'
 | 不可數名詞（information, advice, news, equipment） | 單數 | The news **is** good. |
 | 動名詞 / 不定詞當主詞 | 單數 | **Swimming is** good exercise. |
 | 「金額、時間、距離」當整體 | 單數 | Ten dollars **is** enough. |
+| **each / every + A and B** | 單數 | **Every** boy and girl **was** given a gift. |
+
+> **不必把這張表硬記成幾條，抓背後的共同點：它們都被當成「一個整體、一個單位」在看。** each/every 是「一個一個地」逐一看（所以即使後面接 A and B 兩個名詞，焦點仍是「每一個」→ 動詞單數，這點最常被 and 騙）；動名詞／不定詞是「做某件事」這一件事；金額／時間／距離是「這一筆／這一段」當整體量。想成單位，就推得出單數。
 
 ## 三、a number of vs the number of
 
@@ -54,12 +63,16 @@ import AgreementRulePicker from '@/components/notes/AgreementRulePicker.svelte'
 - **A number of** patients **are** waiting.（許多病人）
 - **The number of** patients **is** rising.（病人數量）
 
+> **與其死背哪個配單數，不如問「真主詞是誰」——又回到找真主詞。** `a number of` 整組只是「許多」的量詞（≈ many），真主詞是後面的<b>複數名詞</b> patients → 複數動詞；`the number of` 的主詞是 <b>the number（數目）這個單數核心名詞</b>，patients 只是 of 片語修飾 → 單數動詞。看 the／a 後面那個 number 有沒有被當成主角即可推出。同理 <b>a lot of / plenty of / most of / some of + N</b>：動詞跟 of 後面的名詞（most of the **water is**；most of the **students are**）。
+
 ## 四、就近原則（最靠近的主詞決定動詞）
 
 當主詞用 **either…or / neither…nor / not only…but also / or** 連接，動詞與**最後一個（最靠近的）主詞**一致：
 
 - Neither the doctor nor the **nurses are** available.（最近的是 nurses → are）
 - Not only the students but also the **teacher is** invited.（最近的是 teacher → is）
+
+> **為什麼是「就近」？** 因為 either…or / neither…nor / not only…but also 連接的兩個主詞並沒有「相加」（不像 and 把兩者湊成複數），句子其實只在講「其中靠你最近的那一個」，動詞自然跟它走。<b>驗證法：把兩個主詞對調，動詞就跟著換</b>——Neither the nurses nor the **doctor is**… ↔ Neither the doctor nor the **nurses are**…。所以遇到這題，先圈出<b>緊貼動詞前</b>的那個名詞，再決定單複數即可。
 
 對照：用 **and** 連接的並列主詞 → 視為複數（用 are/were）。
 
@@ -72,21 +85,44 @@ team, family, government, audience 等：當作**整體**用單數，強調**成
 - The team **is** the best in the league.（整體）
 - The committee **were** divided in their opinions.（成員意見分歧）
 
+## 六、There is／are 與「動詞在主詞前面」
+
+主詞不一定在動詞左邊。**There is／are、Here is／are、以及倒裝句**裡，真主詞跑到動詞**後面**，動詞要跟它後面那個名詞一致：
+
+- There **is** a **book** on the desk. ／ There **are** two **towers** on the bridge.（動詞跟後面的 book／towers）
+- On the hill **stands** an old **temple**.（倒裝；主詞 temple 在動詞後）
+
+> **原理一句話：There／Here 只是虛字（佔位的形式主詞），真正決定單複數的是它後面的「真主詞」。** 解題時把句子還原成正常語序——two towers are there——就看得出該用 are。（口語常聽到 There's two…，但考試一律以「跟後面真主詞」為準。）
+
+## 七、關係子句裡的動詞跟「先行詞」
+
+關係代名詞 who／which／that 後面的動詞，要跟它代替的<b>先行詞</b>一致（先行詞單數→單數，複數→複數）：
+
+- the **studies that show** this（that = studies，複數 → show）
+- a **study that shows** this（that = study，單數 → shows）
+
+> **判法：把 who／which／that 換回它指的那個名詞，動詞就跟那個名詞。** 最常考的陷阱是 <b>one of the + 複數N + who／that …</b>：關係子句的動詞跟<b>複數名詞</b>（不是 one）。
+> - One of the doctors **who treat** cancer is my uncle.（who = doctors → **treat** 複數；但主句主詞仍是 one → **is** 單數）
+> - 例外：**the only one of …** 強調「唯一」，關係子句回到單數：She is the only one of the nurses **who works** night shifts.
+
 <Memorize>
 先<b>找真主詞</b>、略過 of 片語與子句（The box of apples <b>is</b>…）。<br />
 <b>each / every / one of + 複數名詞</b> → 動詞用<b>單數</b>。<br />
 <b>a number of</b> + 複數動詞；<b>the number of</b> + 單數動詞。<br />
 <b>either…or / neither…nor / not only…but also</b> → 動詞跟<b>最靠近</b>的主詞（就近原則）。<br />
-<b>不可數名詞、動名詞主詞</b>用單數。
+<b>不可數名詞、動名詞主詞</b>用單數；<b>each / every + A and B</b> 也用單數。<br />
+<b>There is／are</b> → 跟後面的真主詞；<b>關係子句</b>動詞跟<b>先行詞</b>（one of the + 複數N + who… → 複數）。
 </Memorize>
 
 ## 重點整理
 
 <KeyPoints items={[
   "<b>真主詞</b>：略過介系詞片語、關係子句，動詞跟核心名詞（The causes of … <b>remain</b>）。",
-  "<b>恆單數</b>：each, every, either, neither, one of + 複數N；不可數名詞；動名詞/不定詞主詞。",
-  "<b>a number of</b> = 許多 → 複數動詞；<b>the number of</b> = 數量 → 單數動詞。",
-  "<b>就近原則</b>：either…or / neither…nor / not only…but also，動詞跟最後一個主詞。",
+  "<b>恆單數</b>：each, every, either, neither, one of + 複數N；不可數名詞；動名詞/不定詞主詞；<b>each／every + A and B</b>（Every boy and girl <b>was</b>…）。",
+  "<b>a number of</b> = 許多 → 複數動詞；<b>the number of</b> = 數量 → 單數動詞（道理＝看真主詞是 number 還是後面的名詞；most of／some of + N 同理跟 N）。",
+  "<b>就近原則</b>：either…or / neither…nor / not only…but also，動詞跟最後一個主詞（兩主詞沒相加，對調就換動詞）。",
+  "<b>There is／are、倒裝</b>：真主詞在動詞後，動詞跟<b>後面的名詞</b>（There <b>are</b> two towers）。",
+  "<b>關係子句</b>：who／which／that 的動詞跟<b>先行詞</b>；one of the + 複數N + who… → 動詞<b>複數</b>。",
   "<b>and 並列</b>主詞 → 複數；但指同一人事物時用單數（The poet and novelist <b>is</b>…）。",
   "<b>集合名詞</b>：整體用單數，強調個別成員用複數。"
 ]} />
@@ -152,5 +188,29 @@ team, family, government, audience 等：當作**整體**用單數，強調**成
     "主詞是 <b>Regular exercise</b>（單數）；<b>along with</b>… 是插入修飾，不改變主詞單複數。",
     "（類似的還有 as well as, together with, in addition to。）",
     "答案：<b>is</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="In a suspension bridge ____ two towers that carry one or more flexible cables firmly attached at each end."
+  options={["there were two towers on it", "two towers there are", "there are two towers", "towers there are two"]}
+  answer="(C) there are two towers"
+  steps={[
+    "句首沒有真主詞，要用 <b>There + be</b> 帶出主詞；正常語序是「two towers are there」。",
+    "真主詞 <b>two towers</b>（複數）在動詞後面，<b>be 動詞跟它</b> → <b>are</b>；其餘語序錯亂。",
+    "答案：<b>there are two towers</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="She is one of the nurses who ____ night shifts at the emergency room."
+  options={["works", "work", "is working", "has worked"]}
+  answer="(B) work"
+  steps={[
+    "關係代名詞 <b>who</b> 的先行詞是 <b>the nurses</b>（複數）——把 who 換回 nurses，動詞就跟 nurses。",
+    "<b>one of the + 複數N + who…</b>：子句動詞用<b>複數</b> → work（若是 the <b>only</b> one of … who 才回到單數 works）。",
+    "答案：<b>work</b>。"
   ]}
 />

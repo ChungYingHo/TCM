@@ -28,6 +28,8 @@ import InferenceTraps from '@/components/notes/InferenceTraps.svelte'
 
 閱讀測驗最大的錯誤是「先把文章讀完才看題目」——既浪費時間又記不住細節。正確策略是**帶著問題去讀文章**，答案都在原文裡。
 
+**一條原則貫穿所有題型**：選項對不對，唯一裁判是**原文有沒有給根據**——不是「聽起來合不合理」，也不是「我知不知道這件事」。記住這點，下面每種題型其實都是同一招的變形：細節題要*找到*那句根據、推論題要*由*那句根據推出、NOT 題要*找不到*根據的那個。
+
 ## 一、三大題型與對策
 
 | 題型 | 常見題幹格式 | 解題對策 |
@@ -37,6 +39,8 @@ import InferenceTraps from '@/components/notes/InferenceTraps.svelte'
 | **推論題** | It can be inferred that… / The author implies that… / What can we conclude from…? | 選項必須有原文根據，**不能超出原文**加入自己的知識 |
 
 <EngReadingTypes client:visible />
+
+**為什麼主旨在首末段、主題句在句首？** 英文說明文是「先講結論、再展開」的演繹結構：每段第一句先丟出論點（topic sentence），後面幾句是支撐它的細節；全文則由首段開題、末段收束。所以**主旨題的正解＝能涵蓋首末段、又罩得住中間每一段**的那句——範圍太小（只講其中一段）或太大（超出全文）都是錯的，這也是淘汰主旨題選項的判準。
 
 ## 二、先看題目，再讀文章
 
@@ -50,6 +54,8 @@ import InferenceTraps from '@/components/notes/InferenceTraps.svelte'
 
 - 題目裡有**專有名詞、數字、年份**：直接在文章裡找它們
 - 題目說 "according to paragraph 2"：只看那一段
+- **正解一定是原文的「換句話說」（同義改寫），不會原字照搬**——出題者把原文的字換成同義詞來考你是否真懂。所以比對時**比的是意思不是字面**：原文 *irritate the stomach* 的正解可能寫成 *cause stomach discomfort*。
+- 反過來，**錯誤選項就靠三種「動手腳」生出來**，認得它們就能主動刪：①**偷換主詞／對象**（原文說 A 做的，選項改成 B 做）；②**改程度／範圍**（原文 *some*，選項變 *all／most*）；③**張冠李戴**（把文中真有的甲事實，硬接到乙身上）。逐項回原文時就盯這三點。
 - NOT true / EXCEPT 題：四個選項都要逐一確認，三個在文中有根據、一個沒有或相反 → 選那個「沒有/相反」的
 - 後中醫常見變體：**"Which is NOT true nor implied?"**（哪個既非事實、也無法推論）。這題把細節與推論合一：三個選項在文中有明說或可推出，剩下那個「文中沒講、也推不出（或相反）」就是答案。
 
@@ -70,14 +76,37 @@ import InferenceTraps from '@/components/notes/InferenceTraps.svelte'
 - 「可能（likely）」「可以（can）」的選項，有時比「一定（must）」更容易是正確答案
 - 「太絕對」的選項（always, never, all, none）通常是錯的
 
-## 五、字義題（line X 的某字意思）
+## 五、功能題：作者「為什麼」這樣寫（不是寫了什麼）
 
-等同字彙題，依上下文判斷，不用死背的第一意思。
+後中常考一種比細節題更高階的題：問某段、某例子、某個詞**在文章裡的作用／目的**。題幹長這樣：
+
+- *The main purpose of the third paragraph is to…*（某段的主要目的）
+- *Why does the author discuss / mention X?*（作者為何提到 X）
+- *The author uses "booster shots" as an example of …*（作者拿 X 當什麼的例子）
+- *The most likely purpose of the discussion of phonemes is to…*
+
+**為什麼不能用細節題的做法解？** 細節題問「文中說了什麼事實」，答案是原文的*複述*；功能題問「這段為什麼放在這裡」，答案是它對**全文論點**的*貢獻*——所以正解幾乎都是**比原文更抽象的一句概括**（illustrate / emphasize / explain / introduce…），照抄原文字面的選項反而通常是陷阱。
+
+可自己推導的三步法：
+
+1. **先定主旨**：這段／這個例子，是在支持全文哪個主張？（回到第一段的核心）
+2. **問「拿掉會少什麼」**：作者放這個例子是為了*證明*、*對比*、*舉例說明*，還是*帶出下一點*？那個「少掉的功能」就是答案。
+3. **比對選項的動詞**：選 illustrate／emphasize／explain／introduce 這種「對全文的作用」；**淘汰**只是把該段內容換句話說（複述細節）、或文中根本沒提的選項。
+
+> 例子上場（沿用上面那段 TCM 短文）：作者最後一句搬出「critics… lack rigorous clinical trials」是為了什麼？——不是要你記住「缺乏臨床試驗」這個*事實*（那是細節題），而是**在全篇偏正面的介紹後補上一個反面視角，讓全文保持平衡**。這就是它的「功能」。
+
+語氣／態度題（*the tone of the passage* / *the author's attitude*）是同一家族：問的也是作者**怎麼寫**而非寫了什麼。看全文有沒有偏袒一方：兩面都講＝**balanced／objective**；只捧＝promotional；只批＝critical。一句話有正有反，別被單一句帶走。
+
+## 六、字義題（line X 的某字意思）
+
+等同字彙題，依上下文判斷，不用死背的第一意思。**好消息：答案常就藏在同一句**——破折號、逗號補述、or／that is／which is 引導的同位語，往往直接把該字「解釋給你聽」，先在原句左右找這種「自帶定義」再回選項，比硬想字典意思快又準。
 
 <Memorize>
 <b>先看題目，帶著問題讀文章，回原文定位，不靠印象。</b><br />
+選項對不對只看「原文有沒有根據」，不看「合不合理」。<br />
 推論題：選項必須有原文根據，加入自己常識的選項幾乎都是陷阱。<br />
-NOT true 題：要找文章裡「沒有說到或說法相反」的那個。
+NOT true 題：要找文章裡「沒有說到或說法相反」的那個。<br />
+功能題（為什麼提到 X）：答的是它對全文的「作用」，不是複述細節。
 </Memorize>
 
 ## 重點整理
@@ -88,6 +117,8 @@ NOT true 題：要找文章裡「沒有說到或說法相反」的那個。
   "細節題：用關鍵字（人名、數字、專有名詞）快速定位原文，逐字比對選項。",
   "推論題：選項必須能從原文<b>直接推出</b>，原文沒提到的常識不算根據。",
   "NOT true / EXCEPT 題：三個選項有根據，找那個<b>沒根據或與原文矛盾</b>的。",
+  "細節題正解是原文的<b>同義改寫</b>；錯項多靠偷換主詞、改程度範圍、張冠李戴生成。",
+  "功能題（why mention X／purpose of paragraph／as an example of）：選 illustrate／emphasize／explain 這種<b>對全文的作用</b>，照抄原文細節的選項是陷阱。",
   "太絕對的選項（always / never / all / completely）通常是錯的，除非原文也這樣說。"
 ]} />
 
@@ -203,5 +234,41 @@ NOT true 題：要找文章裡「沒有說到或說法相反」的那個。
     "B. 對應『seek alternatives when conventional treatments fail to provide relief』✓ 有根據；",
     "C. 對應『Herbal remedies, acupuncture, and dietary therapy』✓ 有根據。",
     "D. 末句明說『many TCM practices LACK the rigorous clinical trials …』——與選項<b>相反</b>，既非事實也無法推論。答案 (D)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="What is the most likely purpose of the last sentence about critics in the passage?"
+  options={[
+    "To list the specific clinical trials that TCM has failed.",
+    "To balance the passage by adding a critical, scientific perspective.",
+    "To prove that TCM is completely ineffective and unsafe.",
+    "To recommend that readers avoid all TCM treatments."
+  ]}
+  answer="(B) To balance the passage by adding a critical, scientific perspective."
+  steps={[
+    "功能題：問的是末句的<b>作用</b>，不是它說了什麼事實。先定主旨——全文偏正面地介紹 TCM。",
+    "問『拿掉這句會少什麼』：少了反面視角，全文就變成一面倒的推銷。所以它的功能是<b>補上批評、讓全文平衡</b>。",
+    "A.『列出 TCM 失敗的具體試驗』——只是複述細節、且原文沒列清單❌；C.『證明完全無效』太絕對、原文只說 lack trials 不等於無效❌；D.『建議讀者避免』原文沒有勸阻❌。",
+    "B. 用 balance／critical perspective 這種『對全文的作用』描述，正解 (B)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q='Why does the author mention "acupuncture" and "dietary therapy" in the passage?'
+  options={[
+    "To argue that these are more effective than herbal remedies.",
+    "To give examples of the common treatments used in TCM.",
+    "To prove that TCM has passed modern clinical trials.",
+    "To compare TCM costs with those of Western medicine."
+  ]}
+  answer="(B) To give examples of the common treatments used in TCM."
+  steps={[
+    "功能題：問作者『為什麼提到』這兩項，看它們在文中扮演的角色。",
+    "回原句：『Herbal remedies, acupuncture, and dietary therapy are among the most commonly used TCM treatments.』——它們是並列的<b>例子</b>，用來具體說明『TCM 常用療法』。",
+    "A.『主張更有效』原文沒比較效果❌；C.『證明通過試驗』與末句相反❌；D.『比較費用』原文沒提價格❌。",
+    "B. 正是『舉例說明常用療法』。正解 (B)。功能題正解多用 give examples／illustrate／explain 這類動詞。"
   ]}
 />

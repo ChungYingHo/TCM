@@ -33,6 +33,8 @@ import ArticleChooser from '@/components/notes/ArticleChooser.svelte'
 
 常考的**不可數名詞**（中文像可數、英文卻不可數）：**information, advice, news, equipment, furniture, luggage, homework, knowledge, research, progress**。
 
+> **不用硬背：抓「能不能一個一個數」。** 不可數名詞多是把東西看成「整團、不分顆」——抽象概念（advice, information, knowledge）、整體物質（water, air）、或一類東西的集合（furniture, equipment, luggage 是「家具／設備／行李」這個總類，不是一件一件）。要表「一件」就借**單位詞**（a piece of advice、a bottle of water、an item of furniture）。反過來，若你能自然講「one、two、three＋複數」（two books），它就是可數。
+
 - ✗ an advice / two advices　✓ **a piece of advice** / much advice
 
 <CountableQuiz client:visible />
@@ -53,6 +55,8 @@ import ArticleChooser from '@/components/notes/ArticleChooser.svelte'
 - I saw **a** dog. **The** dog was barking.（先 a，再 the）
 - Please close **the** door.（雙方都知道哪扇門）
 
+> **核心直覺：聽者能不能鎖定「是哪一個」？** 能（前文提過、現場唯一、世上唯一、被最高級／序數限定到只剩一個）就用 **the**；不能（剛引入、任一個都行）就用 **a/an**。獨一無二、最高級、序數會用 the，正是因為它們把對象縮到「只有一個」——同一個原理，不必分開背。
+
 <ArticleChooser client:visible />
 
 ## 四、零冠詞（不加冠詞）
@@ -72,11 +76,60 @@ import ArticleChooser from '@/components/notes/ArticleChooser.svelte'
 
 > 注意 **few / little**（幾乎沒有，偏負面）vs **a few / a little**（有一些，偏正面）的差別。
 
+> **整欄都靠同一條線推：可不可數。** 左欄（many, a few, few, fewer）配**可數複數**，右欄（much, a little, little, less）配**不可數**——因為可數的東西能一個一個數（所以用「數量多寡 many/few」），不可數的看成整團只能論「量大小 much/little」。記住這條，遇到 fewer mistakes（錯誤可數）／less time（時間不可數）就能自己選，不必背成對。
+
+## 六、the + 最高級／程度：the least、the few、the little
+
+最高級前一定有 **the**（限定到「最…的那一個／那一群」）。考試愛把 **the least**（最不…）和長得很像的 **the few／the little** 擺在一起：
+
+| 形式 | 意思 | 接什麼 |
+|---|---|---|
+| **the least** + 形容詞 | 最不…（程度最低） | among **the least** likely（最不可能的一群） |
+| **the most** + 形容詞 | 最…（程度最高） | the most common |
+| **the few** + 複數 | 那為數不多的（特指） | the few friends I have |
+| **the little** + 不可數 | 那一點點（特指） | the little money I had |
+
+> **怎麼推不會錯：** 句子在比「程度高低」就用 **the least／the most**（後面接形容詞）；在講「數量很少的那些特定東西」才用 the few／the little（後面直接接名詞）。看空格後面是**形容詞**還是**名詞**就能分流。
+
+<ExampleQuestion client:visible
+  n={6}
+  q="For years, Asian Americans were among the ____ likely of any group to vote."
+  options={["few", "little", "least", "better"]}
+  answer="(C) least"
+  steps={[
+    "空格後是形容詞 <b>likely</b>，且語意在比「程度」（最不可能投票的一群）。",
+    "「最不…」用 <b>the least</b> + 形容詞；the few／the little 後面要接名詞，排除。",
+    "答案：<b>the least</b> likely。"
+  ]}
+/>
+
+## 七、避免重複名詞：that of／those of
+
+比較兩樣東西時，為了不重講同一個名詞，用代名詞 **that／those** 取代。**單數可數或不可數**用 **that of**；**複數**用 **those of**——選 that 還是 those，看被取代的那個名詞是單數還是複數。
+
+- The size of a man's eyes is smaller than **that of** a woman.（that = the size，單數 → that）
+- These results match **those of** the earlier study.（those = the results，複數 → those）
+
+> **推導關鍵在「數」：** that／those 必須和它替代的名詞**單複數一致**。先找出被省略的名詞是單數還是複數，再決定用 that 還是 those——這正是「名詞數」在比較句裡的延伸。注意 ✗ that of a woman**'s**（已有 of 就不再用所有格 's）。
+
+<ExampleQuestion client:visible
+  n={7}
+  q="The number of participants this year was half ____ last year."
+  options={["of", "those of", "that of", "that of … 's"]}
+  answer="(C) that of"
+  steps={[
+    "被取代的名詞是 <b>the number</b>（單數）→ 用 <b>that</b>，不是 those。",
+    "「…的」用 of 接出來：that <b>of</b> last year。",
+    "of 已表所有，後面不再加 's（✗ that of last year's）。答案：<b>that of</b>。"
+  ]}
+/>
+
 <Memorize>
 先判<b>可數／不可數</b>：information、advice、equipment、furniture 都是<b>不可數</b>（不加 a、不加複數）。<br />
 <b>a / an 看發音</b>：a university、an hour。<br />
-第一次提到用 <b>a/an</b>，再次提到或雙方已知用 <b>the</b>；獨一無二／最高級／序數用 <b>the</b>。<br />
-可數用 <b>few / a few / fewer</b>，不可數用 <b>little / a little / less</b>。
+第一次提到用 <b>a/an</b>，再次提到或雙方已知用 <b>the</b>；獨一無二／最高級／序數用 <b>the</b>（聽者能鎖定哪一個就用 the）。<br />
+可數用 <b>few / a few / fewer</b>，不可數用 <b>little / a little / less</b>。<br />
+程度最低用 <b>the least</b> + 形容詞；比較句避免重複名詞，單數用 <b>that of</b>、複數用 <b>those of</b>（of 後不再加 's）。
 </Memorize>
 
 ## 重點整理
@@ -87,7 +140,9 @@ import ArticleChooser from '@/components/notes/ArticleChooser.svelte'
   "<b>a/an</b>：首次提到、泛指一個；<b>the</b>：再次提到、雙方已知、獨一無二、最高級、序數。",
   "<b>零冠詞</b>：複數/不可數泛指、三餐、運動、學科、by + 交通工具。",
   "<b>few/little</b>（幾乎沒有，負面）≠ <b>a few/a little</b>（有一些，正面）。",
-  "<b>fewer + 可數</b>、<b>less + 不可數</b>（fewer mistakes / less time）。"
+  "<b>fewer + 可數</b>、<b>less + 不可數</b>（fewer mistakes / less time）。",
+  "<b>the least + 形容詞</b>＝程度最低（among the least likely）；勿與 the few／the little（接名詞）混。",
+  "比較句避免重複名詞：單數可數/不可數用 <b>that of</b>、複數用 <b>those of</b>；of 後<b>不</b>再加所有格 's。"
 ]} />
 
 ## 解題方向

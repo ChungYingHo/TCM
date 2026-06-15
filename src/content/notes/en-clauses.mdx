@@ -58,6 +58,10 @@ import ClauseTypes from '@/components/notes/ClauseTypes.svelte'
 
 例：The researchers, **whom** we admire, published the paper.（非限定，有逗號，且 whom 在子句中作受詞）
 
+> **怎麼判斷是哪一種**（不用背，用「刪刪看」）：把關係子句整段刪掉，若**剩下的句子仍能鎖定是哪一個**（資訊還夠），就是**非限定**（要加逗號、不能用 that）；若**刪掉就不知道在講哪一個**（資訊不可少），就是**限定**（不加逗號、that 可用）。
+>
+> **為什麼非限定不能用 that**：that 的本質是「把範圍縮小、緊緊界定」；非限定子句只是用逗號補一句旁白、不縮小範圍，性質互斥，所以非限定一律改用 who/whom/which，而非 that。
+
 ## 三、名詞子句 vs 副詞子句
 
 <ClauseTypes client:visible />
@@ -104,11 +108,74 @@ import ClauseTypes from '@/components/notes/ClauseTypes.svelte'
 
 - Unemployment rose, **which** in turn acted as a brake on wage growth.（which＝失業上升這整件事）
 
+## 七、關係副詞（where／when／why）vs 介系詞＋關代
+
+先行詞是**地點/時間/原因**時，常用**關係副詞** where／when／why 取代「介系詞＋which」。兩者其實**等值**：
+
+| 先行詞語意 | 關係副詞 | ＝介系詞＋which |
+|---|---|---|
+| 地點（the place / the country…） | **where** | in/at which |
+| 時間（the day / the moment…） | **when** | on/at/in which |
+| 原因（the reason） | **why** | for which |
+| 方式（the way） | （不用 how） | **in which**／或什麼都不加 |
+
+判斷原理（不用背，用推的）：**先把關係子句還原成獨立句**，看那個位置缺的是「名詞」還是「副詞語意（地點/時間/原因）」。
+
+- 缺名詞（主詞/受詞）→ 用**關代** who/whom/which/that。
+- 缺的是「在那裡／那時／因為那個」這種**副詞語意**，且子句本身已是完整句（不缺主受詞）→ 用**關係副詞**，或等值的「介系詞＋which」。
+
+> **走一次**：`the reason ___ you were late`
+> 1. 還原：You were late **for that reason**.（子句 you were late 已完整，不缺主受詞）
+> 2. 缺的是「為了那個原因」＝原因副詞語意 → 先行詞 the reason 配 **why**（＝ for which）。
+>
+> 同理：先行詞是 the place／the village → **where**（＝ in which）；the day／the moment → **when**（＝ on/at which）。
+
+⚠️ 兩個易混點：
+- **the way 不接 how**：英文說 the way **in which** it works，或乾脆 the way it works，但**不可** the way how。
+- 看到 the place/the day **後面是完整句**就選關係副詞；若子句**還缺主詞或受詞**，就要回頭用關代（which/that），別誤填 where/when。
+
+<ExampleQuestion client:visible
+  n={7}
+  q="Can you tell me the reason ____ you did not turn in your assignment on time?"
+  options={["how", "why", "what", "who"]}
+  answer="(B) why"
+  steps={[
+    "先把關係子句還原成獨立句：You did not turn in your assignment <b>for that reason</b>——子句本身已完整，不缺主詞或受詞。",
+    "缺的是「為了那個原因」這種<b>原因副詞語意</b>，先行詞又是 <b>the reason</b> → 用關係副詞 <b>why</b>（＝ for which）。",
+    "what/who 是關代要當主受詞用，但這裡子句不缺名詞；how 不接 the reason。答案：<b>why</b>。"
+  ]}
+/>
+
+## 八、whether 引導名詞子句（是否）＋介系詞/名詞後的 of whether
+
+**whether（是否）**引導名詞子句，可當主詞、受詞、補語；關鍵考點是它**能緊接在介系詞或名詞後面**，這時常見 **of whether**：
+
+- the uncertainty / the question / a doubt **of whether** …（名詞＋of＋whether 子句）
+- It depends **on whether** … ／ I'm not sure **about whether** …（介系詞後）
+
+原理：**介系詞後面要接名詞性的東西**，而 whether 子句是名詞子句，所以可直接接在 of/on/about 之後；**if 不行**（if 子句不能當介系詞受詞、也不放句首主詞），這就是為什麼空格前有 of 時選 of whether、不選 if。
+
+> 速記三條界線：①介系詞後只用 **whether**（不可 if）。②whether 後可直接接 **or not**（whether or not），if 不可。③**句首主詞**位置只用 whether。
+
+<ExampleQuestion client:visible
+  n={8}
+  q="The vice president found herself grappling with the uncertainty ____ the newly implemented policy would actually yield the intended financial benefits."
+  options={["of whether", "if whether", "whether", "whether with"]}
+  answer="(A) of whether"
+  steps={[
+    "先看空格前是名詞 <b>uncertainty</b>，要用「名詞＋of＋名詞子句」結構補充「對……的不確定」。",
+    "「是否會帶來預期效益」是<b>名詞子句</b>，用 <b>whether</b> 引導；緊接在 uncertainty 後須補介系詞 <b>of</b> → <b>of whether</b>。",
+    "if 不能接在介系詞/of 後（B、且 if whether 重複）；單獨 whether（C）少了 of，接不上 uncertainty。答案：<b>of whether</b>。"
+  ]}
+/>
+
 <Memorize>
 關係代名詞選用口訣：<b>先行詞是人用 who/whom/whose；是物用 which/whose；that 人物皆可但非限定子句不用。</b><br />
 格位判斷：子句缺主詞 → <b>主格（who/which/that）</b>；子句缺受詞 → <b>受格（whom/which/that）</b>；修飾名詞 → <b>所有格（whose）</b>。<br />
 介系詞後的關係代名詞<b>只能用 whom 或 which</b>（of whom / of which / in which），不能用 that 或 who。<br />
-名詞後直接接 <b>p.p.（被動）或 V-ing（主動）</b> = <b>省略關係子句</b>（the methods used = the methods that are used）。
+名詞後直接接 <b>p.p.（被動）或 V-ing（主動）</b> = <b>省略關係子句</b>（the methods used = the methods that are used）。<br />
+子句<b>不缺主受詞、缺的是地點/時間/原因</b>時用<b>關係副詞</b>：the place <b>where</b>／the day <b>when</b>／the reason <b>why</b>（＝ in/on/for which）；<b>the way 不接 how</b>。<br />
+<b>介系詞或名詞後</b>接「是否」用 <b>whether</b>（the uncertainty <b>of whether</b>…），<b>不可用 if</b>。
 </Memorize>
 
 ## 重點整理
@@ -122,7 +189,9 @@ import ClauseTypes from '@/components/notes/ClauseTypes.svelte'
   "<b>複合關係代名詞</b> what = the thing(s) that，做名詞子句（<b>What</b> he said was wrong.）；what 也可當限定詞接名詞（learn <b>what forms</b> of life thrived）；注意 what 不能用 that 代替。",
   "<b>介系詞 + which/whom</b>：the way / the manner / a task <b>in which</b>；rely on → <b>on which</b>；介系詞後不可接 that/who。",
   "<b>省略關係子句</b>：名詞後直接接 p.p.（被動，methods <b>used</b> in…）或 V-ing（主動，the man <b>standing</b>…）= 省略了「關代 + be」。",
-  "<b>省略 that</b>：名詞子句的 that 可省（I think [that] he is right.）；限定關係子句中受格 that 也可省（the book [that] I read）。"
+  "<b>省略 that</b>：名詞子句的 that 可省（I think [that] he is right.）；限定關係子句中受格 that 也可省（the book [that] I read）。",
+  "<b>關係副詞 where/when/why</b>：先行詞是地點/時間/原因、且子句<b>不缺主受詞</b>時用——the place <b>where</b>、the day <b>when</b>、the reason <b>why</b>（各＝ in/on/for which）；<b>the way 不用 how</b>。子句若還缺主詞或受詞，要改回關代（which/that）。",
+  "<b>whether（是否）名詞子句</b>：可接在<b>介系詞或名詞之後</b>（the uncertainty <b>of whether</b>…、depends <b>on whether</b>…），<b>if 不行</b>；whether 後可直接加 or not、也可放句首主詞。"
 ]} />
 
 ## 解題方向

@@ -2,7 +2,7 @@
 title: 句構與語意連貫：連接詞、主謂一致與平行結構
 subject: english
 tag: 句構與語意連貫
-summary: 連接詞的邏輯選用、連接副詞與從屬連接詞的差別、主謂一致、平行結構、分詞構句與垂懸修飾語、倒裝與 Given 句型，附連接詞與分詞構句工具。
+summary: 連接詞的邏輯選用、連接副詞與從屬連接詞的差別、主謂一致、平行結構、分詞構句與垂懸修飾語、倒裝與 Given 句型、動詞接 to V/V-ing 搭配、No sooner…than 與強調句、that of/those of 比較對等，附連接詞與分詞構句工具。
 audio: >
   句構與語意連貫，重點複習。
   連接詞判斷口訣：前後句同方向（因，得到 果）用 therefore/because；反方向用 although/however。
@@ -65,6 +65,8 @@ import ParticipialPhrase from '@/components/notes/ParticipialPhrase.svelte'
 
 注意：therefore/however **不能**直接用逗號連接兩個句子（comma splice 錯誤）。
 
+> **不用背表，用「看後面接什麼」自己判**：從屬連接詞**自己帶一個子句**（後面一定接「主詞＋動詞」），所以它能把兩件事黏成一句；連接副詞**只是副詞**，沒有黏合句子的力氣，前後兩邊都得是**能各自獨立的完整句**，中間靠句號或分號斷開。所以填空看空格**後面**：直接接「S＋V」就找從屬連接詞，前後是兩個完整句（常有 `;`）就找連接副詞。這也解釋了為什麼 because/since 不能塞在分號後（ISU 真題常考）——它要的是子句，不是第二個完整句。
+
 ## 三、主謂一致（Subject-Verb Agreement）常見陷阱
 
 | 情況 | 規則 | 例子 |
@@ -74,6 +76,8 @@ import ParticipialPhrase from '@/components/notes/ParticipialPhrase.svelte'
 | **集合名詞**（team, committee） | 通常當單數 | The team **is** ready. |
 | **不定代名詞**（everyone, each, nobody） | 當單數 | Everyone **has** a role to play. |
 | **what 子句** | 當主詞時視內容定單複數 | What he said **was** surprising. |
+
+> **這張表的共同原則只有一句：先刪掉雜訊，找到真正的「主詞核心名詞」，動詞跟它配。** of/with… 引導的介系詞片語、逗號插入語都是修飾語，**先用括號刪掉**再看動詞（The list ~~of items~~ **is**…）。所以遇到 `A number of + 複數`（核心是 number 後面那群人，意思是「許多」）配**複數**；`the number of + 複數`（核心是單一的「數目」）配**單數**——抓對核心，單複數自然出來，不必硬背。
 
 ## 四、平行結構（Parallelism）
 
@@ -138,12 +142,86 @@ import ParticipialPhrase from '@/components/notes/ParticipialPhrase.svelte'
 
 （注意是 **Given**（p.p.），不是 Giving；它已經是固定的介系詞化用法。）
 
+## 八、動詞後面接 to V 還是 V-ing（動詞型態搭配）
+
+「先做動作，再決定後面那個動詞長什麼樣」——主要動詞會**規定**它的受詞動詞用不定詞（to V）還是動名詞（V-ing），選錯就是錯。這不是平行結構問題，是**動詞各自的搭配習性**：
+
+| 主要動詞 | 接什麼 | 例 |
+|---|---|---|
+| enjoy, avoid, finish, mind, suggest, consider | **只接 V-ing** | They **enjoy swimming**（✗ to swim） |
+| ask, decide, hope, agree, promise, refuse, manage | **只接 to V** | I **asked to see** his ID |
+| allow / advise / recommend **+ 受詞** | 受詞後接 **to V** | The owner doesn't allow people **to smoke** |
+
+> **怎麼推、不用全背**：抓「動作的時間感」當直覺——enjoy/avoid/finish/mind 講的是**正在或已在發生、當下這件事本身**（事實感）→ 配 V-ing；ask/decide/hope/promise 講的是**還沒做、想去做的下一步**（未來、意圖感）→ 配 to V。雖有少數例外，但這個「事實 vs. 意圖」的直覺能解掉考古題大多數題目。allow/recommend 這類則是「**及物動詞＋受詞＋to V**」的三件套（allow **somebody to do**），看到後面有人/物當受詞，受詞之後就補 to V。
+
+<ExampleQuestion client:visible
+  n={8}
+  q="Which of the following is grammatically correct?"
+  options={["She avoided to speak during the meeting.", "The lecturer recommended to read a number of books before the exam.", "They enjoy to swim in the lake during summer.", "I asked to see his identification before I let him into the house."]}
+  answer="(D) I asked to see his identification before I let him into the house."
+  steps={[
+    "逐一檢查每個動詞的搭配：avoid、enjoy <b>只接 V-ing</b>，所以 (A) avoided <b>to speak</b>、(C) enjoy <b>to swim</b> 都錯，應為 avoided speaking／enjoy swimming。",
+    "recommend 接「(that) 人 (should) do」或 recommend <b>V-ing</b>，不接 to V；(B) recommended <b>to read</b> 錯（應 recommended reading）。",
+    "ask 屬於「想做下一步」的<b>意圖類</b>動詞 → 接 <b>to V</b>。(D) asked <b>to see</b> 正確。答案：<b>(D)</b>。"
+  ]}
+/>
+
+## 九、No sooner / Hardly / Not until 的固定時間搭配與倒裝
+
+表達「一……就……」「直到……才……」有幾組**搭檔詞**是死搭配，且把它們放句首時要**倒裝**。重點不是背句子，而是記住「哪個頭配哪個尾」：
+
+| 句首（前句） | 固定搭配（後句） | 例 |
+|---|---|---|
+| **No sooner** + 倒裝 | **than** | **No sooner had we** stepped out **than** it rained. |
+| **Hardly / Scarcely** + 倒裝 | **when / before** | **Hardly had he** arrived **when** the bell rang. |
+| **Not until** + 時間 + 倒裝 | （主句倒裝） | **Not until** dawn **did she** sleep. |
+
+> **怎麼記搭配，不用硬背**：no soon**er**、hard**ly** 本身帶**比較／程度**味道，而「比較」在英文要用 **than**（A is taller **than** B 的那個 than）——所以 no sooner 自然配 than。hardly/scarcely 強調「幾乎還沒……的那個**時間點**」，配的是時間連接詞 **when/before**。先判斷句首是哪個頭，尾巴就跟著定。
+>
+> **為什麼要倒裝**：no sooner / hardly / not until 都帶**否定或近否定**語氣，把它們提到句首強調，就觸發第六節那條「否定副詞置句首 → 助動詞＋主詞」規則（No sooner **had we**…）。
+
+另一個常考變體是 **It is/was not until … that …**（強調句，**直到……才……**）：此時 that 後面**回到正常語序、不倒裝**——因為真正被強調的成分被 It is/was … that 框起來了。
+
+<ExampleQuestion client:visible
+  n={9}
+  q="No sooner had we stepped outside the cozy restaurant ____ it began to rain heavily, drenching the bustling city streets."
+  options={["when", "then", "than", "as"]}
+  answer="(C) than"
+  steps={[
+    "句首是 <b>No sooner</b> + 倒裝（had we stepped）→ 這是「一……就……」的固定句型。",
+    "No sooner 帶「比較級（sooner）」味道，固定搭配的尾巴是 <b>than</b>（不是 when，那是 hardly／scarcely 的搭配）。",
+    "答案：<b>than</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={10}
+  q="It was not until the final analysis ____ the bias introduced during data collection was fully recognized."
+  options={["did they realize", "when they realized", "they realized", "that they realized"]}
+  answer="(D) that they realized"
+  steps={[
+    "句型是 <b>It was not until … that …</b>（強調句，「直到……才……」）；被 It was … that 框住的是 the final analysis。",
+    "強調句的 that 子句要<b>回到正常語序、不倒裝</b>（真正觸發倒裝的工作已由句型本身吸收），所以不選 (A) did they realize。",
+    "(B) when、(C) 缺 that 都破壞 It was not until … <b>that</b> 結構。答案：<b>that</b> 引導的選項。"
+  ]}
+/>
+
+## 十、比較句的對象要對等：用 that of / those of 代換
+
+比較兩樣東西時，**被比較的名詞兩邊要對等**——不能拿「男人的眼睛」去比「女人（整個人）」，要比「女人的**眼睛**」。為避免重複那個名詞，英文用 **that of**（代單數名詞）／ **those of**（代複數名詞）把它替換掉：
+
+- the size of a man's eyes is smaller than **that of a woman**（that = the size，補回被省略的「女人的尺寸」）
+- The roads here are wider than **those of** the old town（those = the roads）
+
+> **判斷原則：先問「我在比的是哪個名詞」，再讓兩邊都指向同一個名詞。** 看到 than 後面只剩一個所有格（a woman's…）卻沒接名詞，多半要補 that/those of 把比較對象拉回對等；單數用 that、複數用 those，跟著前面那個被比的名詞的單複數走。
+
 <Memorize>
 連接詞判斷口訣：前後句<b>同方向</b>（因→果）用 therefore/because；<b>反方向</b>用 although/however。<br />
 主謂一致：插入語不影響動詞，看<b>真正主詞</b>；either…or / neither…nor 配<b>靠近的主詞</b>。<br />
 平行結構：and / or / but 連接的東西<b>詞性要一樣</b>——都是名詞、都是 V-ing、都是 to V。<br />
 <b>分詞構句</b>：句首分詞的隱藏主詞 = 主句主詞（Having seen…, <b>I</b> …）；主動用 V-ing、被動用 p.p.。<br />
-<b>倒裝</b>：Only by… / Never / Not only 置句首 → 主句<b>助動詞 + 主詞</b>（Only by studying hard <b>can we</b> pass）。
+<b>倒裝</b>：Only by… / Never / Not only 置句首 → 主句<b>助動詞 + 主詞</b>（Only by studying hard <b>can we</b> pass）。<br />
+<b>動詞搭配</b>：enjoy/avoid 接 <b>V-ing</b>、ask/decide 接 <b>to V</b>；No sooner…<b>than</b>、Hardly…<b>when</b>；比較對象用 <b>that of / those of</b> 拉對等。
 </Memorize>
 
 ## 重點整理
@@ -158,7 +236,11 @@ import ParticipialPhrase from '@/components/notes/ParticipialPhrase.svelte'
   "<b>分詞主動/被動</b>：主詞主動做 → V-ing（Studying hard, she…）；主詞被動承受 → p.p.（Positioned between…, Canada is…）。",
   "<b>Given + N</b>：句首表「鑑於、考慮到」，用過去分詞 Given（不是 Giving）。",
   "<b>平行結構</b>：not only <b>runs</b> but also <b>swims</b>（動詞原形並列）；not only <b>a doctor</b> but also <b>a researcher</b>（名詞並列）。",
-  "<b>when vs where</b>：填空若問「在什麼情況下」→ when；「在什麼地方/哪個方面」→ where（如 especially <b>when</b> it comes to…）。"
+  "<b>when vs where</b>：填空若問「在什麼情況下」→ when；「在什麼地方/哪個方面」→ where（如 especially <b>when</b> it comes to…）。",
+  "<b>動詞接 V-ing/to V</b>：enjoy/avoid/finish/mind/suggest 接 <b>V-ing</b>（事實感）；ask/decide/hope/promise/refuse 接 <b>to V</b>（意圖感）；allow/advise/recommend + 受詞 + <b>to V</b>。",
+  "<b>No sooner / Hardly 搭配</b>：No sooner…<b>than</b>（sooner 帶比較→than）；Hardly/Scarcely…<b>when/before</b>；置句首皆倒裝（No sooner <b>had we</b>…）。",
+  "<b>It is/was not until … that …</b>：強調句「直到……才……」，that 後<b>回正常語序、不倒裝</b>。",
+  "<b>比較對象對等</b>：比的是哪個名詞，兩邊就都指它；用 <b>that of</b>（單）／<b>those of</b>（複）代換，不可拿名詞去比整個人（…smaller than <b>that of</b> a woman）。"
 ]} />
 
 ## 解題方向

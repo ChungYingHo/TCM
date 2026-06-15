@@ -38,6 +38,8 @@ import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
 - 全文用過去式 → 空格多半也填過去式動詞
 - 出現 since、for + 一段時間 → 完成式（has/have + p.p.）
 
+**這些不用硬背，想成一條時間線就推得出**：完成式的本質是「過去發生、延續到現在」，所以一看到把過去和現在連起來的字（since 從…以來、for + 一段時間、已 already／yet），就該用完成式；反之，純粹的過去時間點（yesterday、in 1990、ago）只連到過去，就用過去式。**先判斷動作落在時間線的哪一段，再選時態**，比背規則牢。
+
 ## 二、逐空判詞性
 
 <PosClues client:visible />
@@ -54,6 +56,8 @@ import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
 | _____ ，後接完整句子 | 連接詞 or 副詞連接語 |
 
 詞性不對 → 直接刪去，不用考慮語意。
+
+**為什麼鄰字就能決定詞性**：英文每個位置是固定「詞性插槽」——冠詞後面一定是名詞、be 動詞後面一定是補語（形容詞／分詞）、情態動詞後面一定是原形動詞。所以你**不必看懂整句**，光憑空格左右那一兩個字就能反推插槽要什麼詞性，這也是為什麼判詞性要擺在判語意之前。
 
 ## 三、連接詞看前後邏輯關係
 
@@ -97,9 +101,86 @@ import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
 >
 > 重點：**詞性對 ≠ 答案對**——只有「代回去讀一遍」才抓得到這種語意矛盾，這正是第 4 步不能省的原因。
 
+## 六、固定搭配：介系詞／片語不是「猜」是「背配對」
+
+考古題裡最大宗的不是邏輯題，而是**固定搭配**（collocation）：某個形容詞、動詞天生「只配某個介系詞」，換一個就錯。這種空格**不靠語意推、也不靠詞性篩**（四個選項常常詞性都對），而是看**前面那個關鍵字慣用什麼介系詞**。
+
+判斷流程很固定：**先鎖定空格緊鄰的「主詞字」（形容詞或動詞）→ 回想它的招牌介系詞 → 選項裡只有一個配對正確**。所以這類其實考的是「你有沒有把整組詞當一個單位記」，而不是臨場推理。
+
+| 主詞字（adj／v） | 招牌介系詞 | 整組意思 |
+|---|---|---|
+| resistant／immune／prone／susceptible | **to** | 抗拒／免疫／易於／易受（resistant **to** 抗藥） |
+| derive／result／refrain／suffer | **from** | 源自／肇因／克制／受苦 |
+| consist／result | **in** | 由…組成／導致（result **in** 結果） |
+| insist／rely／depend／focus | **on** | 堅持／依賴／聚焦 |
+| comply／cope／deal | **with** | 遵守／應付／處理 |
+
+**為什麼能「自己推一半」**：很多介系詞有方向感——`from` 帶「來源／離開」、`to` 帶「指向／對象」、`on` 帶「附著／依靠」、`in` 帶「結果落在裡面」。記不得整組時，先想動作的方向，常能刪掉明顯不搭的選項，再從剩下的挑。
+
+<ExampleQuestion client:visible
+  n={5}
+  q="（搭配＋字首辨義）Some bacteria have become highly ___ the drugs that once killed them. （選最適合者）"
+  options={["resistant to", "persistent to", "insistent on", "consistent to"]}
+  answer="(A) resistant to"
+  steps={[
+    "先看搭配：空格後是介系詞片語，主詞字要能描述「細菌對藥物」的關係。",
+    "拆字首：re-（反）+sist（站）= 站著對抗 → resist；per-（貫穿）= 堅持；in-（在上）= 堅決主張；con-（一起）= 一致。",
+    "B. persistent、D. consistent 慣用的是 <b>in／with</b>，不接 to❌；C. insistent on 雖搭配對，但語意是「堅持要求」與細菌無關❌。",
+    "A. resistant <b>to</b>（對…有抗性）搭配對、語意也對（抗藥性）。答案 (A)。"
+  ]}
+/>
+
+## 七、關係詞空格：先問「代誰、缺什麼」
+
+考古題另一個常考點是**關係詞**（whom／which／whose／where／what…）。看到空格後面接「一個不完整的句子」就是關係詞題。**別憑語感選**，照兩步推：
+
+1. **代的是人、物、地、還是「整件事」？** 人 → who／whom；物 → which；地點 → where；前面沒有先行詞、要自己兼當名詞 → what。
+2. **後面子句缺主詞還是缺受詞？** 缺主詞 → 用主格（who／which）；缺受詞或介系詞後 → 用受格（**whom**／which）；缺的是「副詞（在哪／何時）」→ where／when。
+
+所以 whom 用在「代人 + 在子句裡當受詞（或介系詞受詞）」；where 用在「代地點 + 子句本身已完整、缺的只是地方副詞」。**這兩個判準一搭，答案幾乎是唯一**，不必背例句。
+
+<ExampleQuestion client:visible
+  n={6}
+  q="（關係詞）The researchers ___ the committee consulted later published the findings. （選最適合者）"
+  options={["them", "whom", "which", "those"]}
+  answer="(B) whom"
+  steps={[
+    "代誰：先行詞是 the researchers（人）→ 排除 which（代物）。",
+    "缺什麼：後面 the committee consulted ___ ——consulted 後面缺<b>受詞</b>，且代的是人 → 要<b>受格關係代名詞</b>。",
+    "A. them、D. those 是一般代名詞，無法引導關係子句（會變兩句相黏）❌；C. which 代物❌。",
+    "B. whom = 代人＋當受詞，正解。答案 (B)。"
+  ]}
+/>
+
+## 八、字彙空格：用「字首字根字尾」拆解，別硬背整本單字
+
+字彙空格（四個是**不同的字**）佔最大宗。遇到不認識的字別投降——英文單字多半由**字首（方向／否定）＋字根（核心意思）＋字尾（詞性）**組成，拆開常能推出大概意思，至少能刪掉方向相反的選項。
+
+| 部位 | 作用 | 常見例 |
+|---|---|---|
+| 字首 | 給方向／程度／否定 | **over-**（過度）、**under-**（在下／不足）、**re-**（再／反）、**un-／in-／dis-**（否定） |
+| 字根 | 核心意義 | **-sist-**（站）、**-ject-**（丟）、**-spect-**（看）、**-vert-**（轉） |
+| 字尾 | 決定詞性 | **-ance／-ence／-ity**（名詞）、**-ous／-al／-ive**（形容詞）、**-ize／-ate**（動詞） |
+
+**兩個立刻能用的招**：①**字尾先定詞性**——若空格依詞性只能放名詞，凡是 -ous／-ive 結尾的選項先刪。②**同字首一組就比字根**——四個都 over- 開頭時，字首幫不上忙，改比字根（haul 拖＝大翻修、whelm 淹＝壓垮、estimate 估、abundance 多）。
+
+<ExampleQuestion client:visible
+  n={7}
+  q="（字彙）The aging hospital needs a complete ___ of its outdated equipment and wiring. （選最適合者）"
+  options={["overestimate", "overabundance", "overwhelm", "overhaul"]}
+  answer="(D) overhaul"
+  steps={[
+    "字尾定詞性：a complete ___ → 冠詞＋形容詞後要<b>名詞</b>，四者皆可當名詞，無法靠詞性篩 → 進到比字根。",
+    "四個都是 over- 字首（程度），字首幫不上忙 → 比字根：estimate 估、abundance 充裕、whelm 淹沒、haul 拖／搬。",
+    "語意要「對老舊設備做的事」：overestimate 高估❌、overabundance 過剩❌、overwhelm 壓垮❌。",
+    "overhaul = 徹底翻修、全面檢修，正合 outdated equipment 的情境。答案 (D)。"
+  ]}
+/>
+
 <Memorize>
 克漏字四步：<b>①通讀抓主題時態 → ②每空判詞性 → ③連接詞看前後邏輯 → ④代回驗證</b>。<br />
-時態不一致、詞性不對 = 直接刪去，不用多想。
+時態不一致、詞性不對 = 直接刪去，不用多想。<br />
+四大高頻空格各有招：<b>邏輯詞看前後句、固定搭配背介系詞配對、關係詞問「代誰＋缺什麼」、生字拆字首字根字尾</b>。
 </Memorize>
 
 ## 重點整理
@@ -109,6 +190,9 @@ import ClozeBlankType from '@/components/notes/ClozeBlankType.svelte'
   "每個空格先判斷詞性——冠詞後接名詞、be 動詞後接形容詞或分詞。",
   "連接詞空格：讀前後兩句判邏輯（相反→轉折；延伸→附加；前因後果→因果）。",
   "代名詞空格：找前文<b>先行詞</b>，單複數、人/物要一致。",
+  "<b>固定搭配（collocation）</b>是最大宗：rely <b>on</b>、resistant／prone <b>to</b>、derive／result <b>from</b>——把整組當一個單位記，介系詞別硬猜。",
+  "<b>關係詞</b>兩步定：先問代「人/物/地/整件事」，再看子句缺主詞或受詞（缺受詞用 whom／which）。",
+  "<b>生字拆解</b>：字尾定詞性（-ance 名詞、-ive 形容詞）、字首給方向（over- 過度、under- 不足、re- 再/反），拆開推義或刪反向選項。",
   "<b>全文時態統一</b>：若文章用現在式，空格幾乎不會填過去式動詞。",
   "填完後把答案代回讀一遍——語意不通順就重選，這步驟常救回一兩分。"
 ]} />

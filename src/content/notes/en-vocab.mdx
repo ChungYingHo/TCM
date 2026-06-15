@@ -43,11 +43,13 @@ import ToneVocab from '@/components/notes/ToneVocab.svelte'
 | 字首 / 字根 | 意義 | 例字 |
 |---|---|---|
 | un- / in- / im- / ir- | 否定 | unhappy, incomplete, impossible |
-| re- | 再次 | review, rebuild, reconsider |
+| re- | 再次 / 往回 | review, rebuild, reverse |
 | pre- | 之前 | predict, prevent, precaution |
 | mis- | 錯誤 | misunderstand, misjudge |
 | over- | 過度 | overestimate, overload |
-| sub- | 在下 / 次要 | submarine, substandard |
+| sub- | 在下 / 次要 / 順從 | submarine, substandard, subservient |
+| trans- | 橫越 / 轉移 | transfer, transport, transcend |
+| geo- | 地、土地 | geography, geopolitical |
 | -tion / -sion | 名詞化 | action, decision, invasion |
 | -ous / -ful / -ive | 形容詞化 | dangerous, careful, effective |
 | -ize / -ify | 動詞化 | realize, simplify |
@@ -58,10 +60,32 @@ import ToneVocab from '@/components/notes/ToneVocab.svelte'
 | -dict | 說 | predict, contradict, dictate |
 | -vis / -vid | 看 | visible, evidence, supervise |
 | -mit / -miss | 送 | transmit, mission, submit |
+| -archy / -cracy | 統治、政體 | monarchy, hierarchy, democracy |
 
 想看完整高頻單字表，請前往 [高頻單字表](/vocab)。
 
 <WordRoots client:visible />
+
+### 同字首／同字根題：比的是「第二段」
+
+近年最常見的陷阱是**四個選項共用同一個字首或字根**，例如 patriarchy／anarchy／monarchy／**hierarchy**、appeal／**appropriation**／appreciation／apparition、transferring／transporting／transplanting／transcending。  
+這時共用的部分（-archy、appro-、trans-）對答案毫無鑑別力，**真正在比的是「另一段語素」**。原則：**先把共同部分劃掉，只看相異的字根，再回句子核對**。
+
+- patri-（父）／an-（無）／mono-（單一）／hier-（神聖→層級）+ -archy（統治）→ 句意要「位階高低的界線」就選 **hierarchy（階層）**。
+- appeal（吸引）／appropri-（據為己有）／appreci-（珍視）／appari-（顯現）→ 句意是「多數族群『挪用』少數文化」就選 **appropriation（挪用）**。
+- 同理 geo- 系列差在 -physical／-nealogy（家系）／-metric（測量）／-politic：談國界與和平就選 **geopolitical**。
+
+也用在**詞性區分**：四個選項同字根、字尾不同（如 -ate 動詞／-tion 名詞／-ous 形容詞），先看空格需要什麼詞性，字尾不對直接刪。
+
+### 拆不出來時：用上下文與搭配詞推
+
+字根拆不動、選項又都眼生時，**句子本身會給線索**——別空等想起字義：
+
+- **搭配詞（collocation）**：某些字幾乎只跟特定名詞一起出現。amass 後面常接 **fortune／wealth**（聚斂財富）；virulent 多形容 **disease**（劇毒、傳染力強的病）；exert 後面常接 **pressure／influence**（施加壓力）。看到熟悉的搭配名詞，就能反推空格字。
+- **定義式線索**：空格後常用 such as、which means、亦即…把答案「解釋」給你。如 *"Proper ___ facilities (such as toilets)"*，括號裡的 toilets 直接定義了 **sanitation（衛生設施）**。
+- **對比／轉折詞**：but、however、while、unlike 後面語意常**相反**；therefore、thus、so 則語意**順承**。題幹 "controversial… therefore both ___ and opponents"，therefore 順承且與 opponents（反對者）對舉，空格就是**支持者 proponents**。
+
+口訣：**拆得動就拆字根，拆不動就讀上下文**——兩條路都通往刪去法。
 
 ## 三、刪去法
 
@@ -69,6 +93,8 @@ import ToneVocab from '@/components/notes/ToneVocab.svelte'
 
 <Memorize>
 遇到不會的字：<b>①判語氣正負 → ②拆字根字首推義 → ③刪去詞性/語氣不符的選項</b>。<br />
+四個選項<b>同字首／同字根</b>時，劃掉共同部分、<b>只比相異那段語素</b>。<br />
+字根拆不動就<b>讀上下文與搭配詞</b>（such as 定義、therefore 順承、but 轉折）回推。<br />
 時間不夠時，光靠語氣（正/負）刪去法就能把勝率拉到 50% 以上。
 </Memorize>
 
@@ -77,11 +103,13 @@ import ToneVocab from '@/components/notes/ToneVocab.svelte'
 <KeyPoints items={[
   "先讀完整句，確認空格需要<b>正面、負面還是中性</b>的字。",
   "看空格在句中位置（名詞、動詞、形容詞、副詞）——詞性不對直接刪。",
-  "用<b>字首字根</b>推陌生字：un-/in-/im- 否定、bene- 好、mal- 壞、re- 再次……",
+  "用<b>字首字根</b>推陌生字：un-/in-/im- 否定、bene- 好、mal- 壞、re- 再次、trans- 橫越/轉移、geo- 地、-archy/-cracy 統治……",
+  "四個選項<b>同字首／同字根</b>時（hierarchy/monarchy/anarchy、appropriation/appreciation/apparition），劃掉共同段、<b>只比相異的語素</b>，再回句子核對。",
+  "拆不出字根時用<b>上下文</b>：such as／which means 是定義線索；therefore/thus 順承、but/however/unlike 轉折反義；搭配名詞（amass+fortune、virulent+disease、exert+pressure）反推空格。",
   "注意搭配詞（collocation）：evidence 常配 compelling / convincing / <b>telling</b>（皆表「有力的」）；telling 作形容詞＝有力的、具揭露性的（a telling piece of evidence）。",
   "四個選項語氣相似時，找「語意最貼句子邏輯」的那個，而非「看起來最難」的字。",
-  "考古題醫學高頻字：<b>mitigate 減輕、alleviate 緩解、exacerbate/aggravate 惡化、stabilize 穩定、benign 良性、malignant 惡性</b>。",
-  "考古題通用高頻字：<b>feasible 可行的、amass 累積、stimulate 促進/刺激、compelling/telling 有力的、omit 省略、imperative 必要的</b>——直接背意思最快。"
+  "考古題醫學高頻字：<b>mitigate 減輕、alleviate 緩解、exacerbate/aggravate 惡化、stabilize 穩定、benign 良性、malignant 惡性、virulent 劇毒/傳染力強、ubiquitous 無所不在、sanitation 衛生設施、impermeable 不透的</b>。",
+  "考古題通用高頻字：<b>feasible 可行的、amass 累積、stimulate 促進/刺激、compelling/telling 有力的、omit 省略、imperative 必要的、supersede 取代、exert 施加(壓力)、proponent 支持者、appropriation 挪用</b>——直接背意思最快。"
 ]} />
 
 ## 解題方向
@@ -175,5 +203,29 @@ import ToneVocab from '@/components/notes/ToneVocab.svelte'
     "句意：替代能源研究因為這筆增加的經費而被「___」。→ 經費增加是好事，需要<b>正面、促進</b>的字。",
     "A. embellished（美化）、B. disfigured（毀容、損壞）負面、C. avenged（報仇）都不符。",
     "D. <b>stimulated</b>（刺激、促進）＝正面，符合「經費 → 推動研究」。答案 (D)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="Post-humanism emphasizes interconnectedness among organisms and complex systems, seeking to disrupt _____ and boundaries between humans and other entities."
+  options={["patriarchies", "anarchies", "monarchies", "hierarchies"]}
+  answer="(D) hierarchies"
+  steps={[
+    "四個選項都以 <b>-archy（統治、體制）</b>結尾——共同字尾沒有鑑別力，<b>只看相異的字首</b>。",
+    "patri-（父）→ 父權；an-（無）→ 無政府；mono-（單一）→ 君主／一元。",
+    "句意：與 boundaries（界線）並列、要被「打破」的是人與其他存在之間的<b>位階高低</b>。hier-（層級）+ -archy → <b>hierarchy（階層）</b>最貼。答案 (D)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={9}
+  q="Because tuberculosis is a particularly _____ disease, many schools mandate that students be vaccinated to prevent it from spreading rapidly among the population."
+  options={["contemptuous", "contentious", "virulent", "dominant"]}
+  answer="(C) virulent"
+  steps={[
+    "拆字根不易、選項又眼生時，<b>讀上下文搭配</b>：空格形容 disease，且下文點出『spreading rapidly（快速傳播）、需打疫苗防範』。→ 要『傳染力強、毒性猛』的字。",
+    "A. contemptuous（輕蔑的）形容人態度，與 disease 不搭❌；B. contentious（有爭議的）❌；D. dominant（佔優勢的）語意不足、未扣『快速傳播』。",
+    "C. <b>virulent</b>（病毒性的、劇毒而傳染力強的）正是描述危險傳染病的搭配詞，與 vir-（毒，同 virus）同源。答案 (C)。"
   ]}
 />
