@@ -38,5 +38,6 @@ test('exam mode: run a paper and get a score', async ({ page }) => {
   await page.getByRole('button', { name: '交卷計分' }).first().click()
 
   await expect(page.getByRole('heading', { name: '成績' })).toBeVisible()
-  await expect(page.getByText(/\d+ \/ \d+/).first()).toBeVisible()
+  // a score in N/M form is shown (tolerant of spacing around the slash)
+  await expect(page.getByText(/\d+\s*\/\s*\d+/).first()).toBeVisible()
 })

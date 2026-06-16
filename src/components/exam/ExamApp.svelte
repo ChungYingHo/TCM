@@ -287,7 +287,7 @@
           <span class="badge badge-warning badge-sm">時間到・自動交卷</span>
         {/if}
         {#if mode === 'past'}
-          <div class="text-5xl font-black text-primary tabular-nums">{fmtPts(score.points)}<span class="text-2xl text-base-content/40"> / {score.maxPoints}</span></div>
+          <div class="text-5xl font-black text-primary tabular-nums">{fmtPts(score.points)} <span class="text-2xl text-base-content/40">/ {score.maxPoints}</span></div>
           {#if examRule.wrongPenalty > 0}
             <p class="text-sm text-base-content/55">含倒扣（答錯每題 −{examRule.wrongPenalty} 分）</p>
           {/if}
