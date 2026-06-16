@@ -1,6 +1,8 @@
 import { defineConfig, devices } from '@playwright/test'
 
-const PORT = 4321
+// Must match astro.config.mjs's pinned dev port (strictPort 4330). Passed explicitly
+// to the server command below so the two can't silently drift apart again.
+const PORT = 4330
 
 export default defineConfig({
   testDir: './e2e',
@@ -13,7 +15,7 @@ export default defineConfig({
   },
   webServer: {
     // Vercel adapter has no `astro preview`; run the dev server for E2E.
-    command: 'npm start',
+    command: `npm start -- --port ${PORT}`,
     url: `http://localhost:${PORT}`,
     timeout: 180000,
     reuseExistingServer: !process.env.CI,
