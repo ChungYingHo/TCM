@@ -17,7 +17,7 @@
   import { getAttempts } from '@/utils/progress'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
-  import { ymd, zhDateLabel } from '@/utils/date'
+  import { ymd, parseYmd, zhDateLabel } from '@/utils/date'
   import type { Subject } from '@/models/question'
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
@@ -100,14 +100,22 @@
   const notesDone = $derived(plan.notes.length > 0 && plan.notes.every((n) => st.notes?.[n.subject]))
   const reviewDigests = $derived(Object.entries(schedule.reviews))
 
-  // sections shown today (key + whether it's done) — light/rest days drop the heavy
-  // quiz/drill block, but 背單字每天都做：new vocab is carried on EVERY day (使用者要求
-  // 「單字不可以放棄」)。Only the pre-exam taper stops new words (computeToday → []).
+  // why today is light, so the page + badge can speak specifically:
+  //  Saturday = weekend drill/catch-up buffer (still 刷題, keeps the ~monthly timed mock);
+  //  biweekly Tuesday = 高雄 commute (minimal); Sunday = the weekly breather.
+  const weekday = new Date(parseYmd(today)).getDay()
+  const isBuffer = $derived(plan.dayType === 'light' && schedule.rhythm.bufferWeekday === weekday)
+  const isCommute = $derived(plan.dayType === 'light' && schedule.rhythm.commuteWeekday === weekday)
+  const showDrill = $derived(plan.dayType === 'full' || isBuffer) // weekend buffer drills too
+
+  // sections shown today (key + whether it's done) — light days drop the heavy 刷題 block
+  // EXCEPT the Saturday buffer (drills to catch up). 背單字每天都做：new vocab is carried on
+  // EVERY day (使用者要求「單字不可以放棄」); only the pre-exam taper stops new words.
   const sections = $derived.by(() => {
     const full = plan.dayType === 'full'
     const out: { key: Section | 'notes'; done: boolean }[] = []
     out.push({ key: 'notes', done: notesDone })
-    if (full) out.push({ key: 'quiz', done: !!st.quiz })
+    if (full || isBuffer) out.push({ key: 'quiz', done: !!st.quiz })
     if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
     if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
@@ -135,11 +143,15 @@
   const dayBadge = $derived(
     plan.dayType === 'rest'
       ? { label: '放空日 · 休息也很好', cls: 'badge-success' }
-      : plan.dayType === 'light'
-        ? { label: '輕量日 · 複習為主', cls: 'badge-info' }
-        : plan.taper
-          ? { label: '考前衝刺 · 複習為重', cls: 'badge-warning' }
-          : null,
+      : isBuffer
+        ? { label: '週末緩衝 · 追進度刷題', cls: 'badge-info' }
+        : isCommute
+          ? { label: '外出日 · 高雄', cls: 'badge-info' }
+          : plan.dayType === 'light'
+            ? { label: '輕量日 · 複習為主', cls: 'badge-info' }
+            : plan.taper
+              ? { label: '考前衝刺 · 複習為重', cls: 'badge-warning' }
+              : null,
   )
   const paceBadge = $derived(
     !plan.inRange
@@ -199,8 +211,8 @@
     </section>
   {/if}
 
-  <!-- 複習文章（輕量日的閱讀目標）-->
-  {#if plan.dayType === 'light' && reviewDigests.length}
+  <!-- 複習文章（週日/外出日的閱讀目標；週六緩衝日改刷題、不出此區）-->
+  {#if plan.dayType === 'light' && !isBuffer && reviewDigests.length}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-4 sm:p-5">
       <h2 class="section-heading mb-1">今日複習文章</h2>
       <p class="mb-3 text-sm text-base-content/60">輕量日的閱讀目標——把這陣子讀過的考點用摘要再過一遍，不必上新進度。</p>
@@ -254,12 +266,18 @@
     </section>
   {/if}
 
-  <!-- 2. 今日考題／刷題（full day only）-->
-  {#if plan.dayType === 'full' && plan.quizIds.length}
+  <!-- 2. 今日考題／刷題（full 日＋週六緩衝日；週日/外出/放空日不出）-->
+  {#if showDrill && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">
-          {plan.mock ? `限時模擬 · ${plan.quizIds.length} 題` : plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
+          {plan.mock
+            ? `限時模擬 · ${plan.quizIds.length} 題`
+            : isBuffer
+              ? `週末刷題 · 追進度 · ${plan.quizIds.length} 題`
+              : plan.phase === 'drill'
+                ? `今日刷題 · ${plan.quizIds.length} 題`
+                : '今日考題'}
         </h2>
         <div class="flex items-center gap-3">
           {#if plan.mock && mockLeft >= 0}
@@ -275,9 +293,11 @@
       <p class="mb-3 text-sm text-base-content/55">
         {plan.mock
           ? '每月一次的限時段——比照正式考的節奏（50 題／70 分鐘），練配速、也練「倒扣之下該不該猜」的取捨。時間到只是提醒，不會中斷作答。'
-          : plan.phase === 'drill'
-            ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
-            : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
+          : isBuffer
+            ? `週末是追進度的好時機——把這週沒做完、或想多練的考古題在這裡一次刷掉${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯一樣自動進錯題本。`
+            : plan.phase === 'drill'
+              ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
+              : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
       </p>
       {#if showQuiz}
         <QuizQuestions ids={plan.quizIds} />
