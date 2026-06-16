@@ -63,11 +63,6 @@ export function getCard(id: string): VocabSrsEntry | undefined {
   return read()[id]
 }
 
-/** How many distinct words have ever been studied (mastery breadth). */
-export function learnedCount(): number {
-  return Object.keys(read()).length
-}
-
 /** Raw snapshot / restore — used by the cloud layer. */
 export function dumpVocabSrs(): VocabSrsStore {
   return read()

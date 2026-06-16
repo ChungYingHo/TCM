@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { QuestionRecord } from '@/models/question'
-import { filterQuestions, searchQuestions, tagFrequency } from '@/utils/query'
+import { filterQuestions, searchQuestions } from '@/utils/query'
 import { EMPTY_FILTER } from '@/models/filters'
 
 function q(p: Partial<QuestionRecord>): QuestionRecord {
@@ -61,14 +61,5 @@ describe('searchQuestions', () => {
   })
   it('returns all on empty term', () => {
     expect(searchQuestions(txt, '   ')).toHaveLength(2)
-  })
-})
-
-describe('tagFrequency', () => {
-  it('counts tag occurrences', () => {
-    const f = tagFrequency(data)
-    expect(f.get('酸鹼平衡')).toBe(1)
-    expect(f.get('光合作用')).toBe(1)
-    expect(f.get('C4與CAM植物')).toBe(1)
   })
 })

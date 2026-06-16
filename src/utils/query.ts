@@ -28,14 +28,3 @@ export function searchQuestions(questions: QuestionRecord[], term: string): Ques
     return q.options.some((o) => o.text.toLowerCase().includes(t))
   })
 }
-
-/** Count tag frequency across a set of questions (for trend display). */
-export function tagFrequency(questions: QuestionRecord[]): Map<string, number> {
-  const counts = new Map<string, number>()
-  for (const q of questions) {
-    for (const tag of q.concept_tags) {
-      counts.set(tag, (counts.get(tag) ?? 0) + 1)
-    }
-  }
-  return counts
-}

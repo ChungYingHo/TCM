@@ -160,7 +160,6 @@ def _segment_records(school, year, subject, doc, amap, answer_src, e_subj, exist
 def run_school(school):
     records: list[QuestionRecord] = []
     qa: list[dict] = []
-    answer_cache: dict[int, dict] = {}
     for year in C.YEARS:
         if not os.path.isdir(C.exam_dir(school, year)):
             continue

@@ -21,7 +21,6 @@
     "@astrojs/vercel": "^9.0.4",
     "@tailwindcss/vite": "^4.1.18",
     "astro": "^5.17.1",
-    "chart.js": "^4.5.1",
     "daisyui": "^5.5.17",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
