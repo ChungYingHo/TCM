@@ -33,21 +33,41 @@ export function dayDiff(aKey: string, bKey: string): number {
 export type DayType = 'full' | 'light' | 'rest'
 
 export interface Rhythm {
-  lightWeekday: number // 0=Sun … 6=Sat — this weekday is the weekly light day
+  lightWeekday: number // 0=Sun … 6=Sat — primary weekly light day (carries the rest cycle)
   restEveryNCycles: number // every Nth light day is framed as a full rest day (0 = never)
   taperLastDays: number // final N days before the exam → review-heavy taper
+  bufferWeekday?: number // optional 2nd weekly light/review day (e.g. 6=Sat); always light, never rest
+  commuteWeekday?: number // optional BIWEEKLY light day (e.g. 2=Tue): out-of-town every other week
 }
 
-export const DEFAULT_RHYTHM: Rhythm = { lightWeekday: 0, restEveryNCycles: 4, taperLastDays: 14 }
+export const DEFAULT_RHYTHM: Rhythm = {
+  lightWeekday: 0,
+  restEveryNCycles: 4,
+  taperLastDays: 14,
+  bufferWeekday: 6, // Saturday: weekend review/buffer
+  commuteWeekday: 2, // every other Tuesday: away in 高雄 → minimal website time
+}
 
 /** Classify a date into a rhythm day type (full / light / rest). */
 export function dayType(dateKey: string, startKey: string, rhythm: Rhythm = DEFAULT_RHYTHM): DayType {
   const weekday = new Date(parseYmd(dateKey)).getDay()
-  if (weekday !== rhythm.lightWeekday) return 'full'
-  const lightIndex = Math.floor(dayDiff(startKey, dateKey) / 7) // which weekly light day this is
-  const isRest =
-    rhythm.restEveryNCycles > 0 && lightIndex % rhythm.restEveryNCycles === rhythm.restEveryNCycles - 1
-  return isRest ? 'rest' : 'light'
+  if (weekday === rhythm.lightWeekday) {
+    const lightIndex = Math.floor(dayDiff(startKey, dateKey) / 7) // which weekly light day this is
+    const isRest =
+      rhythm.restEveryNCycles > 0 && lightIndex % rhythm.restEveryNCycles === rhythm.restEveryNCycles - 1
+    return isRest ? 'rest' : 'light'
+  }
+  // secondary weekly buffer/review day (weekend catch-up + drill) — always light, never rest
+  if (rhythm.bufferWeekday != null && weekday === rhythm.bufferWeekday) return 'light'
+  // biweekly commute day: every OTHER occurrence (aligned to the start week, so the start
+  // week's commute weekday counts) — away from home → minimal site time, treat as light.
+  if (
+    rhythm.commuteWeekday != null &&
+    weekday === rhythm.commuteWeekday &&
+    Math.floor(dayDiff(startKey, dateKey) / 7) % 2 === 0
+  )
+    return 'light'
+  return 'full'
 }
 
 /** True inside the pre-exam taper window (review-heavy, ease off new material). */

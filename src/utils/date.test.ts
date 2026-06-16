@@ -19,12 +19,15 @@ describe('ymd / parse / diff', () => {
 describe('study rhythm (humane pacing)', () => {
   const start = '2026-06-22'
 
-  it('marks the configured weekday light/rest, every other day full', () => {
-    for (let i = 0; i < 14; i++) {
+  it('marks Sun + Sat + biweekly-Tue light/rest, other weekdays full', () => {
+    for (let i = 0; i < 21; i++) {
       const key = ymd(parseYmd(start) + i * DAY)
       const weekday = new Date(parseYmd(key)).getDay()
       const t = dayType(key, start)
-      if (weekday === DEFAULT_RHYTHM.lightWeekday) expect(['light', 'rest']).toContain(t)
+      if (weekday === DEFAULT_RHYTHM.lightWeekday || weekday === DEFAULT_RHYTHM.bufferWeekday)
+        expect(['light', 'rest']).toContain(t) // Sun (light/rest cycle) + Sat (weekend buffer)
+      else if (weekday === DEFAULT_RHYTHM.commuteWeekday && Math.floor(dayDiff(start, key) / 7) % 2 === 0)
+        expect(t).toBe('light') // every other Tuesday (高雄 commute)
       else expect(t).toBe('full')
     }
   })
@@ -38,10 +41,10 @@ describe('study rhythm (humane pacing)', () => {
     expect(lightTypes[DEFAULT_RHYTHM.restEveryNCycles - 1]).toBe('rest')
   })
 
-  it('fullStudyDays excludes the weekly light day (one per 7-day span)', () => {
-    const span = 7
-    const end = ymd(parseYmd(start) + (span - 1) * DAY)
-    expect(fullStudyDays(start, end)).toBe(span - 1)
+  it('fullStudyDays counts only full days (excludes Sun, Sat, biweekly Tue)', () => {
+    // start = 2026-06-22 (Mon); span 06-22..06-28: Tue(commute)+Sat+Sun light → Mon/Wed/Thu/Fri full = 4
+    const end = ymd(parseYmd(start) + 6 * DAY)
+    expect(fullStudyDays(start, end)).toBe(4)
   })
 
   it('isTaper is true only inside the pre-exam window', () => {

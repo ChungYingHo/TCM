@@ -43,7 +43,8 @@ PER_DAY = {
     'reviewVocabMax': 100,    # hard cap when the SRS due-queue piles up
     'reviewVocabTarget': 60,  # daily review size; due words first, random learned words fill the rest
 }
-RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14}
+RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14,
+          'bufferWeekday': 6, 'commuteWeekday': 2}  # Sat=週末複習緩衝；隔週二=高雄外出日
 QUIZ_POOL_CAP = 60  # ids kept per tag — enough to rotate without bloating the file
 
 

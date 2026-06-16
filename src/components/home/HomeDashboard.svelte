@@ -9,7 +9,7 @@
   import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
   import { tagSlug, tagShort } from '@/models/taxonomy'
-  import { ymd, zhDateLabel } from '@/utils/date'
+  import { ymd, parseYmd, zhDateLabel } from '@/utils/date'
   import { dumpPlan, getDay } from '@/utils/dailyPlan'
   import { deriveCursors } from '@/utils/studyCursor'
   import { computeToday, type ScheduleData } from '@/utils/studyPlan'
@@ -81,6 +81,17 @@
 
   // 書桌問候：日期當眉題、依時段打招呼，像坐下來翻開今天的進度
   const dateLabel = zhDateLabel()
+  // friendly sub-label that names WHY today is light (so the rhythm reflects real life)
+  const dayLabel = $derived.by(() => {
+    if (tp.dayType === 'rest') return '今天是放空日，休息也很好 🌿'
+    if (tp.dayType === 'light') {
+      const wd = new Date(parseYmd(today)).getDay()
+      if (wd === 6) return '週末複習緩衝日 · 趁今天追進度、多刷題'
+      if (wd === 2) return '外出日（高雄）· 能複習多少算多少，別有壓力'
+      return '輕量日 · 複習為主'
+    }
+    return `今日已完成 ${todayDone} 段`
+  })
   const hour = new Date().getHours()
   const greeting = hour < 5 ? '夜深了' : hour < 11 ? '早安' : hour < 18 ? '午安' : '晚安'
 
@@ -102,11 +113,7 @@
         <div>
           <p class="page-kicker">{dateLabel}</p>
           <p class="mt-2 font-display text-2xl font-bold tracking-tight sm:text-[1.7rem]">{greeting}，打開今天的讀書計畫</p>
-          <p class="mt-1.5 text-sm text-base-content/60">
-            {#if tp.dayType === 'rest'}今天是放空日，休息也很好 🌿
-            {:else if tp.dayType === 'light'}輕量日 · 複習為主
-            {:else}今日已完成 {todayDone} 段{/if}
-          </p>
+          <p class="mt-1.5 text-sm text-base-content/60">{dayLabel}</p>
         </div>
         <span aria-hidden="true" class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/12 text-primary">
           <Icon name="bookOpen" class="h-6 w-6" />
