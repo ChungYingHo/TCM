@@ -40,8 +40,9 @@ PER_DAY = {
     'quizWeak': 6,        # …of which this many re-target the user's weakest tags
     'quizMock': 50,       # ~monthly mock day: one timed block of this size instead
     'newVocab': 18,
-    'reviewVocabMax': 100,    # hard cap when the SRS due-queue piles up
-    'reviewVocabTarget': 60,  # daily review size; due words first, random learned words fill the rest
+    'reviewVocabMax': 100,    # absolute ceiling (cap = min(target, max))
+    'reviewVocabTarget': 30,  # daily review size — a LIMITED, date-seeded random rotating batch
+                              # (more-due-than-this rolls to following days); tune here if needed
 }
 RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14,
           'bufferWeekday': 6, 'commuteWeekday': 2}  # Sat=週末複習緩衝；隔週二=高雄外出日

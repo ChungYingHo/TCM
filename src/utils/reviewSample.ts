@@ -39,8 +39,12 @@ export function seededSample<T>(items: T[], n: number, seedKey: string): T[] {
   return pool.slice(0, take)
 }
 
-/** Compose today's review list: due ids first (already weakness-ordered), then a
- *  date-seeded random fill from learned-but-not-due ids, capped at `max`. */
+/** Compose today's review list: a LIMITED, date-seeded RANDOM batch capped at the daily
+ *  target — not the whole due queue. When more words are due than the cap, a random rotating
+ *  slice is shown (the rest roll to following days, so it varies day to day instead of dumping
+ *  everything). When the due queue fits, all due come first (most-overdue first) and a random
+ *  draw from learned-but-not-due words fills the spare capacity. Seeded by date → stable within
+ *  a day, rotating across days. (Today's brand-new words are due tomorrow, so they never appear.) */
 export function composeReview(
   dueIds: string[],
   learnedIds: string[],
@@ -48,10 +52,10 @@ export function composeReview(
   max: number,
   dateKey: string,
 ): string[] {
-  const due = dueIds.slice(0, max)
-  const need = Math.min(target, max) - due.length
-  if (need <= 0) return due
-  const dueSet = new Set(due)
+  const cap = Math.max(0, Math.min(target, max))
+  if (cap === 0) return []
+  if (dueIds.length >= cap) return seededSample(dueIds, cap, dateKey)
+  const dueSet = new Set(dueIds)
   const rest = learnedIds.filter((id) => !dueSet.has(id))
-  return [...due, ...seededSample(rest, need, dateKey)]
+  return [...dueIds, ...seededSample(rest, cap - dueIds.length, dateKey)]
 }

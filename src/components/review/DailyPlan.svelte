@@ -351,7 +351,7 @@
           onfinish={() => { if (!st.reviewVocab) toggleSection('reviewVocab') }}
         />
       {:else}
-        <p class="mb-3 text-sm text-base-content/55">到期的字優先、再從背過的字裡隨機抽樣補滿——翻卡作答，選「認識／不熟」會自動安排下次複習時間。</p>
+        <p class="mb-3 text-sm text-base-content/55">每天隨機抽一批（最多 {schedule.perDay.reviewVocabTarget} 個、到期的優先），不是一次全部——沒抽到的改天會輪到。翻卡作答，選「認識／不熟」會自動安排下次複習時間。</p>
         <div class="mb-3 flex flex-wrap gap-1.5">
           {#each reviewWords.slice(0, 30) as w (w.id)}
             <span class="rounded-full border border-base-300 bg-base-200/50 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>
