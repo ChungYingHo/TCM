@@ -265,15 +265,25 @@ def run_school(school):
     for r in records:
         _ensure_answer_selectable(r)
 
-    # apply human overrides (sacred, last)
+    # apply human overrides (sacred, last). An override is the final word on an answer,
+    # so a typo'd / cross-school id silently doing nothing = a question keeps its wrong
+    # auto-answer. Surface both cases loudly (stderr + QA) instead of skipping in silence.
     overrides = _load_overrides(school)
     if overrides:
         by_id = {r.id: r for r in records}
         for rid, patch in overrides.items():
-            if rid in by_id:
-                cur = by_id[rid].model_dump()
-                cur.update(patch)
-                by_id[rid] = QuestionRecord(**cur)
+            if not rid.startswith(f'{school}-'):
+                qa.append({'issue': 'override_wrong_school', 'id': rid})
+                print(f'[{school}] override id 不屬本校，略過: {rid}', file=sys.stderr)
+                continue
+            if rid not in by_id:
+                qa.append({'issue': 'override_id_not_found', 'id': rid})
+                print(f'[{school}] override id 找不到對應題目，略過（該題仍用自動答案！）: {rid}',
+                      file=sys.stderr)
+                continue
+            cur = by_id[rid].model_dump()
+            cur.update(patch)
+            by_id[rid] = QuestionRecord(**cur)
         records = list(by_id.values())
 
     records.sort(key=lambda r: (r.year, r.subject, r.question_number))
