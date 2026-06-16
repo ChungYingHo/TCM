@@ -1,7 +1,6 @@
 <script lang="ts">
   import type { QuestionRecord } from '@/models/question'
-  import { SCHOOLS } from '@/models/question'
-  import { loadSchools } from '@/utils/dataset'
+  import { loadByIds } from '@/utils/dataset'
   import { listWrong, clearWrongBook, removeWrong } from '@/utils/wrongBook'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
   import Icon from '@/components/common/Icon.svelte'
@@ -10,10 +9,10 @@
   let entries = $state(listWrong())
   let loading = $state(true)
 
+  // Resolve question bodies for the current wrong-book entries; reruns (cheap, cached)
+  // whenever the entry set changes so a freshly-added id is always covered.
   $effect(() => {
-    loadSchools([...SCHOOLS])
-      .then((qs) => { byId = new Map(qs.map((q) => [q.id, q])) })
-      .finally(() => { loading = false })
+    loadByIds(entries.map((e) => e.id)).then((m) => { byId = m }).finally(() => { loading = false })
   })
 
   // refresh when the cloud copy loads, or the user answers elsewhere

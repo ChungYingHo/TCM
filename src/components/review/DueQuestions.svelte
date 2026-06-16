@@ -2,8 +2,7 @@
   // The spaced-repetition queue of due wrong-book questions, extracted from the old
   // ReviewApp so the daily plan can embed it as one section. Answering grades the card.
   import type { QuestionRecord } from '@/models/question'
-  import { SCHOOLS } from '@/models/question'
-  import { loadSchools } from '@/utils/dataset'
+  import { loadByIds } from '@/utils/dataset'
   import { dueEntries, gradeReview } from '@/utils/wrongBook'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
 
@@ -12,15 +11,16 @@
   let done = $state(0)
   let loading = $state(true)
 
-  function buildQueue() {
+  // Rebuild the due queue and resolve ONLY the shards its ids reference — a corrupt
+  // shard drops just its own ids, never blanks the whole queue.
+  function loadQueue() {
     queue = dueEntries().map((e) => e.id)
+    loadByIds(queue).then((m) => { byId = m }).finally(() => { loading = false })
   }
 
   $effect(() => {
-    loadSchools([...SCHOOLS])
-      .then((qs) => { byId = new Map(qs.map((q) => [q.id, q])); buildQueue() })
-      .finally(() => { loading = false })
-    const onCloud = () => { if (done === 0) buildQueue() }
+    loadQueue()
+    const onCloud = () => { if (done === 0) loadQueue() }
     window.addEventListener('tcm:cloudloaded', onCloud)
     return () => window.removeEventListener('tcm:cloudloaded', onCloud)
   })

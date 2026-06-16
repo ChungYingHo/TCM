@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { QuestionRecord, School, Subject } from '@/models/question'
   import { SCHOOLS, SUBJECTS, SUBJECT_LABEL, SCHOOL_LABEL } from '@/models/question'
-  import { loadSchool } from '@/utils/dataset'
+  import { loadBySchool } from '@/utils/dataset'
   import { getAttempts } from '@/utils/progress'
   import { listWrong } from '@/utils/wrongBook'
   import { tagTrends, crossSchoolWeights, weaknessClusters, coverage, eraDistribution } from '@/utils/analytics'
@@ -13,8 +13,8 @@
   let loading = $state(true)
 
   $effect(() => {
-    Promise.all(SCHOOLS.map((s) => loadSchool(s).then((qs) => [s, qs] as const)))
-      .then((pairs) => { bySchool = Object.fromEntries(pairs) })
+    loadBySchool()
+      .then((m) => { bySchool = Object.fromEntries(m) as Partial<Record<School, QuestionRecord[]>> })
       .finally(() => { loading = false })
   })
 
