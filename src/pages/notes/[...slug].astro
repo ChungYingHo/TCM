@@ -50,14 +50,14 @@ const isReview = entry.data.kind === 'review'
           <span class="badge badge-ghost">{entry.data.tag}</span>
           <NoteReadChip slug={entry.id} client:load />
         </div>
-        <h1 class="font-display text-2xl font-bold sm:text-3xl">{entry.data.title}</h1>
+        <h1 class="page-title">{entry.data.title}</h1>
 
         <article class="prose mt-5">
           <Content />
         </article>
 
         <hr class="my-8 border-base-300" />
-        <h2 class="mb-1 text-lg font-bold">經典考古題</h2>
+        <h2 class="section-heading mb-1">經典考古題</h2>
         <p class="mb-2 text-sm opacity-60">這些是題庫中標到本考點的真實考題；看答案時會帶出與本筆記一致的解題方向。</p>
         <RelatedQuestions tag={entry.data.tag} limit={4} client:visible />
 
