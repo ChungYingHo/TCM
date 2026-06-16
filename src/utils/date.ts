@@ -64,11 +64,11 @@ export function dayType(dateKey: string, startKey: string, rhythm: Rhythm = DEFA
     return isRest ? 'rest' : 'light'
   }
   // secondary weekly buffer/review day (weekend catch-up + drill) — always light, never rest
-  if (rhythm.bufferWeekday != null && weekday === rhythm.bufferWeekday) return 'light'
+  if (rhythm.bufferWeekday !== undefined && weekday === rhythm.bufferWeekday) return 'light'
   // biweekly commute day: every OTHER occurrence (aligned to the start week, so the start
   // week's commute weekday counts) — away from home → minimal site time, treat as light.
   if (
-    rhythm.commuteWeekday != null &&
+    rhythm.commuteWeekday !== undefined &&
     weekday === rhythm.commuteWeekday &&
     Math.floor(dayDiff(startKey, dateKey) / 7) % 2 === 0
   )
