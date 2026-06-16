@@ -20,10 +20,15 @@ export function mdShort(key: string): string {
   return `${Number(m)}/${Number(d)}`
 }
 
-/** Parse a YYYY-MM-DD key back to a local-midnight timestamp. */
+/** Parse a YYYY-MM-DD key back to a local-midnight timestamp. Returns NaN for a
+ *  malformed key (wrong arity / non-numeric) so a bad key surfaces instead of silently
+ *  resolving to a bogus date. */
 export function parseYmd(key: string): number {
-  const [y, m, d] = key.split('-').map(Number)
-  return new Date(y, (m || 1) - 1, d || 1).getTime()
+  const parts = key.split('-')
+  if (parts.length !== 3) return NaN
+  const [y, m, d] = parts.map(Number)
+  if (!Number.isFinite(y) || !Number.isFinite(m) || !Number.isFinite(d)) return NaN
+  return new Date(y, m - 1, d).getTime()
 }
 
 /** Whole-day difference (b − a) by local calendar date. */

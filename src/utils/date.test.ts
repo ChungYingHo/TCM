@@ -14,6 +14,12 @@ describe('ymd / parse / diff', () => {
     expect(dayDiff('2026-06-22', '2026-06-29')).toBe(7)
     expect(dayDiff('2026-06-29', '2026-06-22')).toBe(-7)
   })
+  it('parseYmd returns NaN for a malformed key, a valid timestamp otherwise', () => {
+    expect(Number.isNaN(parseYmd(''))).toBe(true)
+    expect(Number.isNaN(parseYmd('2026-06'))).toBe(true)
+    expect(Number.isNaN(parseYmd('not-a-date'))).toBe(true)
+    expect(Number.isNaN(parseYmd('2026-06-22'))).toBe(false)
+  })
 })
 
 describe('study rhythm (humane pacing)', () => {
