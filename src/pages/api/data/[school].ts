@@ -15,21 +15,31 @@ const SHARDS: Record<School, { school: string; questions: QuestionRecord[] }> = 
 // Fields the UI never reads — dropped to keep the payload lean.
 const STRIP = ['ocr_text', 'source_pdf', 'source_answer_pdf', 'errata_reason_image_url']
 
-export const GET: APIRoute = ({ params }) => {
-  const school = params.school as School
-  const shard = SHARDS[school]
-  if (!shard) {
-    return new Response(JSON.stringify({ error: 'unknown school' }), { status: 404 })
-  }
-  const lean = {
+function lean(shard: { school: string; questions: QuestionRecord[] }): string {
+  return JSON.stringify({
     school: shard.school,
     questions: shard.questions.map((q) => {
       const out: Record<string, unknown> = { ...q }
       for (const k of STRIP) delete out[k]
       return out
     }),
+  })
+}
+
+// Shards are static at module load, so strip + serialize ONCE rather than per request
+// (each shard is ~2k records). Sibling endpoints (vocab/explanations) do the same.
+const BODY: Record<School, string> = {
+  CMU: lean(SHARDS.CMU),
+  ISU: lean(SHARDS.ISU),
+  TCU: lean(SHARDS.TCU),
+}
+
+export const GET: APIRoute = ({ params }) => {
+  const body = BODY[params.school as School]
+  if (!body) {
+    return new Response(JSON.stringify({ error: 'unknown school' }), { status: 404 })
   }
-  return new Response(JSON.stringify(lean), {
+  return new Response(body, {
     status: 200,
     headers: {
       'content-type': 'application/json',
