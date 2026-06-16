@@ -49,7 +49,8 @@ def _norm(s: str | None) -> str:
 def _classify_columns(header_row: list[str]) -> dict[str, int]:
     cols: dict[str, int] = {}
     for ci, cell in enumerate(header_row):
-        c = _norm(cell).replace('\n', '')
+        # strip spaces too, so spaced headers like '題 號' / '科 目' match the keywords
+        c = _norm(cell).replace('\n', '').replace(' ', '')
         for key, kws in HEADER_KEYS.items():
             if key in cols:
                 continue
@@ -64,6 +65,29 @@ def _subject_code(text: str) -> str | None:
         if kw in t:
             return code
     return None
+
+
+def _dedup(seq: list[str]) -> list[str]:
+    seen: set[str] = set()
+    return [x for x in seq if not (x in seen or seen.add(x))]
+
+
+def _classify_row(result_txt: str, reason_txt: str) -> tuple[bool, bool, list[str]]:
+    """Decide (award_all, changed, letters) from the 釋疑結果 + 釋疑答覆 cells (already
+    NFKC-normalized by the caller).
+
+    Conservative (rule #4): a correction is honored only when BOTH the change verb AND
+    the corrected letter come from the RESULT column — a 改為 buried in the reason prose
+    (often hypothetical, e.g.「若改為 C 則…」) is NOT auto-applied; build leaves it as
+    needs_review instead. 維持原答案 anywhere suppresses a change. Letters prefer the
+    result cell, falling back to the reason cell for the official answer."""
+    blob = result_txt + ' ' + reason_txt
+    award = bool(AWARD_RE.search(result_txt)) or bool(AWARD_RE.search(reason_txt))
+    keep = bool(KEEP_RE.search(blob))
+    result_letters = _dedup(LETTER_RE.findall(result_txt))
+    changed = bool(CHANGE_RE.search(result_txt)) and bool(result_letters) and not keep
+    letters = result_letters or _dedup(LETTER_RE.findall(reason_txt))
+    return award, changed, letters
 
 
 def parse_clarification(path: str) -> dict[str, dict[int, Errata]]:
@@ -104,13 +128,7 @@ def parse_clarification(path: str) -> dict[str, dict[int, Errata]]:
                 qnum = int(m.group(0))
                 result_txt = cell('result')
                 reason_txt = cell('reason')
-                blob = result_txt + ' ' + reason_txt
-                award = bool(AWARD_RE.search(result_txt)) or bool(AWARD_RE.search(reason_txt))
-                changed = bool(CHANGE_RE.search(blob)) and not KEEP_RE.search(result_txt)
-                # corrected/official letter: prefer result cell, else reason cell
-                letters = LETTER_RE.findall(result_txt) or LETTER_RE.findall(reason_txt)
-                # de-dup preserve order
-                seen = set(); letters = [x for x in letters if not (x in seen or seen.add(x))]
+                award, changed, letters = _classify_row(result_txt, reason_txt)
                 e = Errata(subject=cur_subject, qnum=qnum, award_all=award,
                            changed=changed, letters=letters, reason=reason_txt.strip())
                 result.setdefault(cur_subject or '?', {})[qnum] = e

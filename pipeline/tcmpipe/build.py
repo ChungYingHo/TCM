@@ -205,6 +205,13 @@ def run_school(school):
             for ex in extracted:
                 ex.source_pdf = src
                 rec = _merge_one(school, year, subject, ex, amap, answer_src, e_subj.get(ex.num))
+                # surface every errata-driven answer CHANGE (not 送分, not card-lacked) for
+                # human spot-check — this is the one path that overwrites the card answer.
+                if (rec.errata_applied and not rec.award_all and rec.original_answer
+                        and rec.correct_answer != rec.original_answer):
+                    qa.append({'year': year, 'subject': subject, 'qnum': ex.num,
+                               'issue': 'errata_changed_answer',
+                               'from': rec.original_answer, 'to': rec.correct_answer})
                 records.append(rec)
             # image-only segments fill in questions normal extraction can't reach
             records.extend(_segment_records(school, year, subject, doc, amap, answer_src,

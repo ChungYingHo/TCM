@@ -35,6 +35,38 @@ def test_classify_columns_variant_keywords():
     assert cols['subject'] == 0 and cols['qnum'] == 1 and cols['result'] == 3
 
 
+def test_classify_columns_handles_internal_spaces():
+    # spaced headers (PDF table cells sometimes render '題 號' / '科 目') must still match
+    header = ['科 目', '題 號', '釋疑答覆', '釋疑結果']
+    assert err._classify_columns(header) == {'subject': 0, 'qnum': 1, 'reason': 2, 'result': 3}
+
+
+def test_classify_row_award():
+    award, changed, _ = err._classify_row('送分', '本題一律給分')
+    assert award is True and changed is False
+
+
+def test_classify_row_change_from_result_column():
+    award, changed, letters = err._classify_row('答案更正為(C)', '經查選項…')
+    assert changed is True and letters == ['C']
+
+
+def test_classify_row_ignores_change_verb_in_reason_only():
+    # 改為 only in the reason prose (hypothetical) → NOT an auto-change (stays card answer)
+    _, changed, letters = err._classify_row('(B)', '若改為 C 則亦可')
+    assert changed is False and letters == ['B']
+
+
+def test_classify_row_keep_suppresses_change():
+    _, changed, _ = err._classify_row('更正為(C)', '經討論維持原答案')
+    assert changed is False
+
+
+def test_classify_row_letters_prefer_result_cell():
+    _, _, letters = err._classify_row('(A)', '(B)')
+    assert letters == ['A']
+
+
 def test_award_keywords():
     assert err.AWARD_RE.search('本題送分')
     assert err.AWARD_RE.search('一律給分')
