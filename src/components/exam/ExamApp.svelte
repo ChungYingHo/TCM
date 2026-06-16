@@ -250,7 +250,7 @@
   </div>
 {:else if stage === 'running'}
   <div class="flex flex-col gap-3">
-    <div class="sticky top-0 z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-box bg-base-100/90 p-2 backdrop-blur">
+    <div class="sticky top-[calc(4rem+env(safe-area-inset-top))] z-10 flex flex-wrap items-center justify-between gap-2 rounded-b-box bg-base-100/90 p-2 backdrop-blur">
       <span class="text-sm opacity-80">已作答 {Object.values(answers).filter(Boolean).length} / {paper.length}</span>
       <span class="hidden text-xs opacity-60 lg:inline">↑↓ / J K 移動 · 1–5 作答</span>
       <div class="flex items-center gap-2">
