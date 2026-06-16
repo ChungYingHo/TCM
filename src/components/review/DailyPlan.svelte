@@ -100,23 +100,22 @@
   const notesDone = $derived(plan.notes.length > 0 && plan.notes.every((n) => st.notes?.[n.subject]))
   const reviewDigests = $derived(Object.entries(schedule.reviews))
 
-  // why today is light, so the page + badge can speak specifically:
-  //  Saturday = weekend drill/catch-up buffer (still 刷題, keeps the ~monthly timed mock);
-  //  biweekly Tuesday = 高雄 commute (minimal); Sunday = the weekly breather.
+  // why today is light, so the page + badge can speak specifically. 週六與週日都是「複習日」
+  // ——複習＝重讀前幾天讀完並打勾的考點（不上新進度）；隔週二高雄外出日＝只顧單字。
   const weekday = new Date(parseYmd(today)).getDay()
-  const isBuffer = $derived(plan.dayType === 'light' && schedule.rhythm.bufferWeekday === weekday)
-  const isCommute = $derived(plan.dayType === 'light' && schedule.rhythm.commuteWeekday === weekday)
-  const showDrill = $derived(plan.dayType === 'full' || isBuffer) // weekend buffer drills too
+  const isBuffer = $derived(plan.dayType === 'light' && schedule.rhythm.bufferWeekday === weekday) // 週六
+  const isCommute = $derived(plan.dayType === 'light' && schedule.rhythm.commuteWeekday === weekday) // 高雄
+  // a review day (weekly light / weekend / rest) re-reads finished notes; commute = vocab only.
+  const isReviewDay = $derived((plan.dayType === 'light' || plan.dayType === 'rest') && !isCommute)
+  const hasReviewNotes = $derived(plan.notes.length > 0) // on a review day: 有讀完的可複習
 
-  // sections shown today (key + whether it's done) — light days drop the heavy 刷題 block
-  // EXCEPT the Saturday buffer (drills to catch up). 背單字每天都做：new vocab is carried on
-  // EVERY day (使用者要求「單字不可以放棄」); only the pre-exam taper stops new words.
+  // sections shown today (key + whether it's done). 高雄外出日＝只顧單字（在外一整天、晚上給
+  // 補習班）。背單字每天都做：new vocab carried EVERY day (使用者要求「單字不可以放棄」)，唯考前
+  // taper 停新字。複習日的考點只在「有讀完的筆記」時才列入；刷題只在 full 日（與每月限時模擬）。
   const sections = $derived.by(() => {
-    const full = plan.dayType === 'full'
     const out: { key: Section | 'notes'; done: boolean }[] = []
-    // 高雄外出日＝只顧單字（在外一整天、晚上給補習班），考點/古文/錯題都不列入今日任務
-    if (!isCommute) out.push({ key: 'notes', done: notesDone })
-    if (full || isBuffer) out.push({ key: 'quiz', done: !!st.quiz })
+    if (plan.notes.length && !isCommute) out.push({ key: 'notes', done: notesDone })
+    if (plan.dayType === 'full' || plan.mock) out.push({ key: 'quiz', done: !!st.quiz })
     if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
     if (todayClassic && !isCommute) out.push({ key: 'classic', done: !!st.classic })
@@ -144,10 +143,10 @@
   const dayBadge = $derived(
     plan.dayType === 'rest'
       ? { label: '放空日 · 休息也很好', cls: 'badge-success' }
-      : isBuffer
-        ? { label: '週末緩衝 · 追進度刷題', cls: 'badge-info' }
-        : isCommute
-          ? { label: '外出日 · 高雄', cls: 'badge-info' }
+      : isCommute
+        ? { label: '外出日 · 高雄', cls: 'badge-info' }
+        : isBuffer
+          ? { label: '週末複習日', cls: 'badge-info' }
           : plan.dayType === 'light'
             ? { label: '輕量日 · 複習為主', cls: 'badge-info' }
             : plan.taper
@@ -219,8 +218,8 @@
     </section>
   {/if}
 
-  <!-- 複習文章（週日的閱讀目標；週六緩衝改刷題、高雄外出日只顧單字，皆不出此區）-->
-  {#if plan.dayType === 'light' && !isBuffer && !isCommute && reviewDigests.length}
+  <!-- 複習文章（複習日的閱讀目標；高雄外出日只顧單字不出；要有讀完的進度才出）-->
+  {#if isReviewDay && hasReviewNotes && reviewDigests.length}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-4 sm:p-5">
       <h2 class="section-heading mb-1">今日複習文章</h2>
       <p class="mb-3 text-sm text-base-content/60">輕量日的閱讀目標——把這陣子讀過的考點用摘要再過一遍，不必上新進度。</p>
@@ -238,12 +237,19 @@
     </section>
   {/if}
 
-  <!-- 1. 今日考點（高雄外出日不出，只顧單字）-->
+  <!-- 複習日但前幾天還沒讀完任何考點 → 沒東西可複習，誠實說明、不假裝 -->
+  {#if isReviewDay && !isCommute && !hasReviewNotes}
+    <section class="rounded-box border border-base-300 bg-base-100 p-4 text-sm text-base-content/65">
+      今天是複習日，但前幾天還沒有打勾完成的考點可以複習——先把單字、錯題顧好。等讀過幾篇考點後，這裡就會自動帶出來讓你回頭複習。
+    </section>
+  {/if}
+
+  <!-- 1. 今日考點（高雄外出日不出，只顧單字；複習日只重讀已讀完的）-->
   {#if plan.notes.length && !isCommute}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
-        <span class="text-xs text-base-content/50">{plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '點開看筆記、不換頁'}</span>
+        <span class="text-xs text-base-content/50">{isReviewDay ? '複習前幾天讀完的——先測再讀' : plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '點開看筆記、不換頁'}</span>
       </div>
       <div class="grid gap-2 sm:grid-cols-2">
         {#each plan.notes as n (n.subject)}
@@ -274,18 +280,12 @@
     </section>
   {/if}
 
-  <!-- 2. 今日考題／刷題（full 日＋週六緩衝日；週日/外出/放空日不出）-->
-  {#if showDrill && plan.quizIds.length}
+  <!-- 2. 今日考題／刷題（只在 full 日與每月限時模擬；複習日靠「先測再讀」＋今日錯題複習）-->
+  {#if (plan.dayType === 'full' || plan.mock) && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">
-          {plan.mock
-            ? `限時模擬 · ${plan.quizIds.length} 題`
-            : isBuffer
-              ? `週末刷題 · 追進度 · ${plan.quizIds.length} 題`
-              : plan.phase === 'drill'
-                ? `今日刷題 · ${plan.quizIds.length} 題`
-                : '今日考題'}
+          {plan.mock ? `限時模擬 · ${plan.quizIds.length} 題` : plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
         </h2>
         <div class="flex items-center gap-3">
           {#if plan.mock && mockLeft >= 0}
@@ -301,11 +301,9 @@
       <p class="mb-3 text-sm text-base-content/55">
         {plan.mock
           ? '每月一次的限時段——比照正式考的節奏（50 題／70 分鐘），練配速、也練「倒扣之下該不該猜」的取捨。時間到只是提醒，不會中斷作答。'
-          : isBuffer
-            ? `週末是追進度的好時機——把這週沒做完、或想多練的考古題在這裡一次刷掉${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯一樣自動進錯題本。`
-            : plan.phase === 'drill'
-              ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
-              : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
+          : plan.phase === 'drill'
+            ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
+            : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
       </p>
       {#if showQuiz}
         <QuizQuestions ids={plan.quizIds} />

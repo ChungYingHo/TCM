@@ -151,6 +151,38 @@ describe('computeToday — test-then-read mini quiz on later note rounds', () =>
   })
 })
 
+describe('computeToday — review days re-read FINISHED notes only', () => {
+  // 2-note chemistry so "review a read one" is distinguishable from "advance to the next".
+  const s: ScheduleData = {
+    ...schedule,
+    tracks: { ...schedule.tracks, notes: { chemistry: ['chem1', 'chem2'], biology: [], chinese: [], english: [] } },
+    noteTags: { chem1: 'atoms', chem2: 'bonds' },
+    quizPoolByTag: { atoms: ['q1', 'q2', 'q3'], bonds: ['r1', 'r2', 'r3'] },
+  }
+
+  it('shows nothing to review on a light day before any note is finished', () => {
+    const tp = computeToday(s, empty, '2026-06-28') // first Sunday after the 06-22 start → light
+    expect(tp.dayType).toBe('light')
+    expect(tp.notes).toEqual([]) // 0 finished → nothing to review (no fake "review" of unread notes)
+  })
+
+  it('re-reads a FINISHED note (never the next unread) on a light day, as test-then-read', () => {
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true } } } // only chem1 finished
+    const tp = computeToday(s, plan, '2026-06-28')
+    expect(tp.dayType).toBe('light')
+    expect(tp.notes).toHaveLength(1)
+    expect(tp.notes[0].slug).toBe('chem1') // the read note — NOT chem2 (the next unread)
+    expect(tp.notes[0].miniQuizIds).toHaveLength(3) // review = retrieval first
+  })
+
+  it('still advances to the next NEW note on a full day', () => {
+    const plan: DailyPlanStore = { '2026-06-22': { notes: { chemistry: true } } }
+    const tp = computeToday(s, plan, '2026-06-23') // Tuesday → full
+    expect(tp.dayType).toBe('full')
+    expect(tp.notes[0].slug).toBe('chem2') // forward progress to the unread note
+  })
+})
+
 describe('computeToday — drill window groups by subject within the day', () => {
   it('keeps same-subject (passage-group) questions adjacent', () => {
     const s: ScheduleData = {

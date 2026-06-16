@@ -5,7 +5,7 @@ import type { DailyPlanStore, Attempt } from '@/models/progress'
 import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
 import { deriveCursors } from '@/utils/studyCursor'
-import { ymd, parseYmd, dayType, fullStudyDays, isTaper, isMockDay, type DayType, type Rhythm } from '@/utils/date'
+import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, isTaper, isMockDay, type DayType, type Rhythm } from '@/utils/date'
 
 export interface ScheduleData {
   range: { start: string; end: string; days: number }
@@ -111,17 +111,27 @@ export function computeToday(
   const noteLens = Object.fromEntries(SUBJECTS.map((s) => [s, (tracks.notes[s] || []).length]))
   const cur = deriveCursors(plan, perDay.newVocab, today, noteLens) // cursor BEFORE today
   const inRange = today >= range.start && today <= range.end
+  const tdy = dayType(today, range.start, rhythm)
+  // Review days (weekly light day / weekend / rest) re-read notes you've ALREADY finished —
+  // you can only review what you've actually read. Full days advance to the next new note.
+  const reviewDay = tdy === 'light' || tdy === 'rest'
+  const reviewSeed = Math.abs(dayDiff(range.start, today)) // rotates the reviewed note day to day
 
-  // One note per subject, from each subject's own cursor (cycles for spaced repetition).
-  // Round 1 = deep read. Round ≥2 = test-then-read: 3 retrieval questions (rotated each
-  // pass) come first, so re-reads become active recall instead of passive re-reading.
-  const notes: PlanNote[] = SUBJECTS.map((s) => {
+  // One note per subject. Full day = the next note from the cursor (forward progress).
+  // Review day = a note already finished (rotated by date), or nothing for a subject with none
+  // finished yet. Round 1 = deep read; a re-read (round ≥2) OR any review-day note is
+  // test-then-read — 3 retrieval questions first, so it's active recall not passive re-reading.
+  const notes: PlanNote[] = SUBJECTS.map((s, si) => {
     const list = tracks.notes[s] || []
     if (!list.length) return null
-    const slug = list[cur.notes[s] % list.length]
+    const read = Math.min(cur.notes[s], list.length) // # distinct notes finished in this subject
+    if (reviewDay && read === 0) return null // nothing finished yet → nothing to review here
+    const idx = reviewDay ? (reviewSeed + si) % read : cur.notes[s] % list.length
+    const slug = list[idx]
     const tag = schedule.noteTags[slug] || ''
     const round = Math.floor(cur.notes[s] / list.length) + 1
-    const miniQuizIds = round > 1 ? rotatePick(schoolInterleave(schedule.quizPoolByTag[tag] || []), 3, cur.notes[s]) : []
+    const miniQuizIds =
+      reviewDay || round > 1 ? rotatePick(schoolInterleave(schedule.quizPoolByTag[tag] || []), 3, idx) : []
     return { subject: s, slug, tag, round, miniQuizIds }
   }).filter((n): n is PlanNote => n !== null)
 
@@ -201,7 +211,7 @@ export function computeToday(
   return {
     date: today,
     inRange,
-    dayType: dayType(today, range.start, rhythm),
+    dayType: tdy,
     taper,
     daysToExam,
     phase,
