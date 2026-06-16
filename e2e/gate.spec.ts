@@ -20,5 +20,7 @@ test('wrong password shows an error, correct password unlocks', async ({ page })
   await page.getByPlaceholder('輸入通關密語').fill('test-password')
   await page.getByRole('button', { name: '進入' }).click()
   await expect(page).toHaveURL('/home')
-  await expect(page.getByRole('heading', { name: '學習儀表板' })).toBeVisible()
+  // dashboard rendered (the redesign leads with a greeting, not a 「學習儀表板」 title;
+  // 快速入口 is a stable, data-independent section heading)
+  await expect(page.getByRole('heading', { name: '快速入口' })).toBeVisible()
 })
