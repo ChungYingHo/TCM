@@ -19,7 +19,7 @@
     {#if classic.source}<span class="text-xs text-base-content/40">{classic.source}</span>{/if}
   </header>
 
-  <p class="whitespace-pre-wrap font-serif text-[17px] leading-loose tracking-wide">{classic.original}</p>
+  <p class="whitespace-pre-wrap text-[17px] leading-loose tracking-wide">{classic.original}</p>
 
   <div class="flex items-center gap-2">
     <button class="btn btn-xs" class:btn-primary={showTranslation} onclick={() => (showTranslation = !showTranslation)}>
