@@ -10,6 +10,7 @@ import os
 import sys
 import json
 import datetime
+import traceback
 
 import fitz
 
@@ -168,7 +169,12 @@ def run_school(school):
         errata_by_subj: dict[str, dict] = {}
         cpath = os.path.join(C.answer_dir(school, year), 'clarification.pdf')
         if os.path.isfile(cpath):
-            errata_by_subj = err.parse_clarification(cpath)
+            try:
+                errata_by_subj = err.parse_clarification(cpath)
+            except Exception as exc:  # 壞掉的 clarification.pdf 只影響該年
+                qa.append({'year': year, 'issue': 'errata_parse_failed', 'detail': repr(exc)})
+                print(f'[{school} {year}] errata 解析失敗，該年改用答案卡（其他年/校不受影響）: {exc!r}',
+                      file=sys.stderr)
         # 科別未偵測的釋疑列只能落在 '?' 桶；不可跨科盲套（A 科第 N 題的送分/更正
         # 套到 B 科第 N 題會靜默改錯答案）。改記入 QA 供人工以 override 處理。
         if '?' in errata_by_subj:
@@ -321,8 +327,17 @@ def _write_qa(school, qa, records):
 
 def main():
     schools = [s for s in sys.argv[1:] if s in C.SCHOOLS] or C.SCHOOLS
+    failed = []
     for school in schools:
-        run_school(school)
+        try:
+            run_school(school)
+        except Exception:  # 一校壞掉不得中止/汙染其他校（per-school 隔離鐵則）
+            failed.append(school)
+            print(f'[{school}] 產出失敗，跳過此校、其他校照常產出：', file=sys.stderr)
+            traceback.print_exc()
+    if failed:
+        print(f'完成，但下列學校失敗（其他校未受影響）：{failed}', file=sys.stderr)
+        sys.exit(1)
 
 
 if __name__ == '__main__':
