@@ -7,5 +7,11 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/*.{test,spec}.ts'],
     globals: true,
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+      // focus coverage on the pure logic where it's meaningful (UI islands are e2e-tested)
+      include: ['src/utils/**', 'src/models/**'],
+    },
   },
 })
