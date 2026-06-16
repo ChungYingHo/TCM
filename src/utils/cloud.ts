@@ -32,7 +32,12 @@ function applyServer(s: SyncState): void {
 }
 
 let timer: ReturnType<typeof setTimeout> | null = null
+let loaded = false // becomes true once the initial DB load has been attempted
 async function save(): Promise<void> {
+  // Never PUT before we've loaded the server copy — otherwise a pre-load (possibly
+  // empty) local snapshot could clobber real cloud data. The change stays in
+  // localStorage and flushes on the next statechange after load.
+  if (!loaded) return
   try {
     await fetch('/api/state', {
       method: 'PUT',
@@ -52,12 +57,15 @@ let started = false
 export function bootCloud(): void {
   if (started || typeof window === 'undefined') return
   started = true
-  const attach = () => window.addEventListener('tcm:statechange', () => saveDebounced())
+  const ready = () => {
+    loaded = true // enable saving only now — see save()'s guard
+    window.addEventListener('tcm:statechange', () => saveDebounced())
+  }
   // load the DB copy first, THEN start saving (so we never overwrite with a
   // pre-load stale snapshot)
   fetch('/api/state')
     .then((r) => r.json())
     .then((d) => { if (d?.state) applyServer(d.state) })
     .catch(() => {})
-    .finally(attach)
+    .finally(ready)
 }
