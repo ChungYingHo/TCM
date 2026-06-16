@@ -39,7 +39,6 @@ export interface QuestionRecord {
   ocr_text?: string | null
   source_pdf?: string
   source_answer_pdf?: string
-  errata_reason_image_url?: string | null
 }
 
 export interface SchoolShard {
