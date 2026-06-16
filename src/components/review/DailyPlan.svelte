@@ -100,13 +100,15 @@
   const notesDone = $derived(plan.notes.length > 0 && plan.notes.every((n) => st.notes?.[n.subject]))
   const reviewDigests = $derived(Object.entries(schedule.reviews))
 
-  // sections shown today (key + whether it's done) — light/rest days drop new material
+  // sections shown today (key + whether it's done) — light/rest days drop the heavy
+  // quiz/drill block, but 背單字每天都做：new vocab is carried on EVERY day (使用者要求
+  // 「單字不可以放棄」)。Only the pre-exam taper stops new words (computeToday → []).
   const sections = $derived.by(() => {
     const full = plan.dayType === 'full'
     const out: { key: Section | 'notes'; done: boolean }[] = []
     out.push({ key: 'notes', done: notesDone })
     if (full) out.push({ key: 'quiz', done: !!st.quiz })
-    if (full && plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
+    if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
     if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
     out.push({ key: 'wrong', done: !!st.wrong })
@@ -287,11 +289,11 @@
     </section>
   {/if}
 
-  <!-- 3. 今日單字（full day only）-->
-  {#if plan.dayType === 'full' && newWords.length}
+  <!-- 3. 今日單字（背單字每天都做，不因輕量/放空日中斷；唯考前 taper 停新字）-->
+  {#if newWords.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="section-heading">今日單字 · {newWords.length} 個</h2>
+        <h2 class="section-heading">今日單字 · {newWords.length} 個{#if plan.dayType !== 'full'}<span class="ml-2 align-middle text-xs font-normal text-base-content/45">背單字每天不間斷</span>{/if}</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.newVocab} onchange={() => toggleSection('newVocab')} />背完了
         </label>
