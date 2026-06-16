@@ -169,13 +169,18 @@ def run_school(school):
         cpath = os.path.join(C.answer_dir(school, year), 'clarification.pdf')
         if os.path.isfile(cpath):
             errata_by_subj = err.parse_clarification(cpath)
+        # 科別未偵測的釋疑列只能落在 '?' 桶；不可跨科盲套（A 科第 N 題的送分/更正
+        # 套到 B 科第 N 題會靜默改錯答案）。改記入 QA 供人工以 override 處理。
+        if '?' in errata_by_subj:
+            qa.append({'year': year, 'issue': 'errata_subject_undetected',
+                       'qnums': sorted(errata_by_subj['?'])})
 
         for subject, doc, anchors, src in _exam_sources(school, year):
             if subject is None:
                 qa.append({'year': year, 'issue': 'subject_undetected', 'count': len(anchors)})
                 continue
             amap, answer_src = answers_by_subj.get(subject, ({}, ''))
-            e_subj = errata_by_subj.get(subject) or errata_by_subj.get('?') or {}
+            e_subj = errata_by_subj.get(subject) or {}
             # a `replace` segment spec means normal extraction is unreliable for this
             # subject (scanned / doubled-glyph PDF) — use ONLY the image-only segments
             seg_spec = _SEGMENTS.get(f'{school}-{year}-{subject}')
