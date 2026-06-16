@@ -65,6 +65,21 @@ def test_keep_result_but_letter_disagrees_flags_without_changing():
     assert rec.needs_review is True
 
 
+def test_keep_result_multi_letter_disagreement_flags_even_when_first_letter_matches():
+    # errata lists [B, C] but the card says B; first-letter-only comparison missed this —
+    # set comparison catches it. Answer stays the card's (only flagged for review).
+    e = Errata(subject='chemistry', qnum=1, changed=False, letters=['B', 'C'])
+    rec = build._merge_one('CMU', 110, 'chemistry', _ex(), {1: 'B'}, 'src.pdf', e)
+    assert rec.needs_review is True
+    assert rec.correct_answer == ['B']
+
+
+def test_keep_result_matching_letter_does_not_flag():
+    e = Errata(subject='chemistry', qnum=1, changed=False, letters=['B'])
+    rec = build._merge_one('CMU', 110, 'chemistry', _ex(), {1: 'B'}, 'src.pdf', e)
+    assert rec.needs_review is False
+
+
 def test_no_answer_anywhere_flags_needs_review():
     rec = build._merge_one('CMU', 110, 'chemistry', _ex(), {}, 'src.pdf', None)
     assert rec.correct_answer == []

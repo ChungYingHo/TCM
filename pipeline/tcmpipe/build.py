@@ -73,8 +73,8 @@ def _merge_one(school, year, subject, ex, amap, answer_src, e):
             errata_applied = True
         elif e.letters and not original:
             correct = e.letters            # official answer when sheet lacked it
-        elif e.letters and original and e.letters[0] != original[0]:
-            needs_review = True            # keep-result but letter disagrees -> flag
+        elif e.letters and original and set(e.letters) != set(original):
+            needs_review = True            # keep-result but letters disagree (as a set) -> flag
 
     if not correct and not award_all:
         needs_review = True                # no answer resolved
