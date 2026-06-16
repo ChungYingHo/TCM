@@ -10,7 +10,7 @@ const notes = defineCollection({
     kind: z.enum(['note', 'review']).default('note'), // 'review' = 跨考點複習摘要文章
     covers: z.array(z.string()).default([]), // review digests: concept tags recapped
     summary: z.string().default(''),
-    audio: z.string().default(''), // spoken key-points for the TTS player (drive-time review)
+    audio: z.string().default(''), // spoken key-points — TTS player removed 2026-06 (browser voice too poor); data kept for a future better engine
     draft: z.boolean().default(false),
   }),
 })

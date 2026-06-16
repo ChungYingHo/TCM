@@ -17,7 +17,8 @@
   import { getAttempts } from '@/utils/progress'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
-  import { ymd, parseYmd, zhDateLabel } from '@/utils/date'
+  import { noteReadDates } from '@/utils/studyCursor'
+  import { ymd, parseYmd, mdShort, zhDateLabel } from '@/utils/date'
   import type { Subject } from '@/models/question'
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
@@ -99,6 +100,8 @@
   const todayClassic = $derived(plan.classicId ? classicById.get(plan.classicId) : null)
   const notesDone = $derived(plan.notes.length > 0 && plan.notes.every((n) => st.notes?.[n.subject]))
   const reviewDigests = $derived(Object.entries(schedule.reviews))
+  // slug → first-read date (full-day reads only) for the「讀完 M/D」chip on each note card
+  const readDates = $derived(noteReadDates(planStore, schedule.tracks.notes, schedule.rhythm, schedule.range.start))
 
   // why today is light, so the page + badge can speak specifically. 週六與週日都是「複習日」
   // ——複習＝重讀前幾天讀完並打勾的考點（不上新進度）；隔週二高雄外出日＝只顧單字。
@@ -258,7 +261,9 @@
               <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.notes?.[n.subject]} onchange={() => toggleNote(n.subject)} aria-label={`${SUBJECT_LABEL[n.subject]}考點完成`} />
               <button class="flex flex-1 items-center justify-between gap-2 text-left" onclick={() => openNote(n.slug, tagShort(n.tag))}>
                 <span class="flex flex-col">
-                  <span class="text-xs text-base-content/50">{SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}</span>
+                  <span class="text-xs text-base-content/50">
+                    {SUBJECT_LABEL[n.subject]}{#if n.round > 1}　·　第 {n.round} 輪{/if}{#if readDates[n.slug]}<span class="ml-1 rounded-full bg-success/15 px-1.5 py-0.5 text-[0.65rem] font-medium text-success">讀完 {mdShort(readDates[n.slug])}</span>{/if}
+                  </span>
                   <span class="font-medium leading-tight">{tagShort(n.tag)}</span>
                 </span>
                 <span class="inline-flex shrink-0 items-center gap-0.5 text-primary">開啟 <Icon name="arrowRight" class="h-3.5 w-3.5" /></span>

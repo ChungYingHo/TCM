@@ -14,6 +14,12 @@ export function zhDateLabel(d: Date = new Date()): string {
   return new Intl.DateTimeFormat('zh-TW', { month: 'long', day: 'numeric', weekday: 'long' }).format(d)
 }
 
+/** 'YYYY-MM-DD' → compact 'M/D' (e.g. '2026-06-15' → '6/15'), for chips/badges. */
+export function mdShort(key: string): string {
+  const [, m, d] = key.split('-')
+  return `${Number(m)}/${Number(d)}`
+}
+
 /** Parse a YYYY-MM-DD key back to a local-midnight timestamp. */
 export function parseYmd(key: string): number {
   const [y, m, d] = key.split('-').map(Number)

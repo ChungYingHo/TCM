@@ -6,6 +6,7 @@
 import type { DailyPlanStore } from '@/models/progress'
 import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
+import { dayType, type Rhythm } from '@/utils/date'
 
 export interface Cursors {
   vocab: number // # words already started (newVocab days × perDay newVocab)
@@ -34,6 +35,8 @@ export function deriveCursors(
   perDayNewVocab: number,
   before?: string,
   noteLens?: Partial<Record<Subject, number>>,
+  rhythm?: Rhythm,
+  startKey?: string,
 ): Cursors {
   const notes = emptyNotes()
   let vocabDays = 0
@@ -41,13 +44,44 @@ export function deriveCursors(
   const drillDates: string[] = []
   const firstPassDone = () =>
     !!noteLens && SUBJECTS.every((s) => !noteLens[s] || notes[s] >= (noteLens[s] as number))
+  // A note "read" only advances forward progress on a FULL day — review days re-read notes
+  // you've already finished, so counting them would skip unread notes. (Omitting rhythm/start
+  // keeps the old count-every-day behaviour, used by the unit tests.)
+  const isFull = (date: string) => !rhythm || !startKey || dayType(date, startKey, rhythm) === 'full'
   for (const date of Object.keys(plan).sort()) {
     if (before && date >= before) continue
     const st = plan[date]
     if (st.quiz && firstPassDone()) drillDates.push(date)
     if (st.newVocab) vocabDays += 1
     if (st.classic) classics += 1
-    if (st.notes) for (const s of SUBJECTS) if (st.notes[s]) notes[s] += 1
+    if (st.notes && isFull(date)) for (const s of SUBJECTS) if (st.notes[s]) notes[s] += 1
   }
   return { vocab: vocabDays * perDayNewVocab, notes, classics, drill: drillDates.length, drillDates }
+}
+
+/**
+ * First-read date per note slug — for the「讀完 M/D」chip. Replays the completion log on
+ * FULL days only (a review-day re-read is not the first read), mirroring how `deriveCursors`
+ * advances the note cursor, so the slug picked here matches the note that day actually served.
+ */
+export function noteReadDates(
+  plan: DailyPlanStore,
+  notesBySubject: Partial<Record<Subject, string[]>>,
+  rhythm: Rhythm,
+  startKey: string,
+): Record<string, string> {
+  const out: Record<string, string> = {}
+  const idx: Record<string, number> = Object.fromEntries(SUBJECTS.map((s) => [s, 0]))
+  for (const date of Object.keys(plan).sort()) {
+    if (dayType(date, startKey, rhythm) !== 'full') continue
+    const st = plan[date]
+    if (!st.notes) continue
+    for (const s of SUBJECTS) {
+      if (!st.notes[s]) continue
+      const list = notesBySubject[s] || []
+      if (list.length && !(list[idx[s] % list.length] in out)) out[list[idx[s] % list.length]] = date
+      idx[s] += 1
+    }
+  }
+  return out
 }

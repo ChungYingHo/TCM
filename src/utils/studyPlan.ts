@@ -109,7 +109,7 @@ export function computeToday(
 ): TodayPlan {
   const { tracks, perDay, rhythm, range, examDate } = schedule
   const noteLens = Object.fromEntries(SUBJECTS.map((s) => [s, (tracks.notes[s] || []).length]))
-  const cur = deriveCursors(plan, perDay.newVocab, today, noteLens) // cursor BEFORE today
+  const cur = deriveCursors(plan, perDay.newVocab, today, noteLens, rhythm, range.start) // cursor BEFORE today
   const inRange = today >= range.start && today <= range.end
   const tdy = dayType(today, range.start, rhythm)
   // Review days (weekly light day / weekend / rest) re-read notes you've ALREADY finished —

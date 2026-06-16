@@ -61,7 +61,9 @@
   })
 
   const tp = $derived(computeToday(schedule, planStore, today))
-  const cur = $derived(deriveCursors(planStore, schedule.perDay.newVocab))
+  const cur = $derived(
+    deriveCursors(planStore, schedule.perDay.newVocab, undefined, undefined, schedule.rhythm, schedule.range.start),
+  )
   const todayState = $derived(getDay(today))
   const todayDone = $derived.by(() => {
     const s = todayState

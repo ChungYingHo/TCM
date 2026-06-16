@@ -60,7 +60,8 @@ export const GET: APIRoute = async ({ request }) => {
   const now = Date.now()
   const today = new URL(request.url).searchParams.get('today') || ymd(now)
   const tp = computeToday(schedule, plan, today)
-  const total = deriveCursors(plan, schedule.perDay.newVocab) // all completed days = total progress
+  // note progress counts only full-day reads (review days re-read finished notes)
+  const total = deriveCursors(plan, schedule.perDay.newVocab, undefined, undefined, schedule.rhythm, schedule.range.start)
 
   // accuracy
   let attempted = 0
