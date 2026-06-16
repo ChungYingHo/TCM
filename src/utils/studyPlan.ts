@@ -6,6 +6,7 @@ import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
 import { deriveCursors } from '@/utils/studyCursor'
 import { ymd, parseYmd, dayDiff, dayType, newVocabDays, isTaper, isMockDay, type DayType, type Rhythm } from '@/utils/date'
+import { parseQuestionId, schoolOf } from '@/utils/questionId'
 
 export interface ScheduleData {
   range: { start: string; end: string; days: number }
@@ -73,7 +74,7 @@ function schoolInterleave(ids: string[]): string[] {
   const order = ['CMU', 'ISU', 'TCU']
   const buckets: Record<string, string[]> = { CMU: [], ISU: [], TCU: [] }
   const extra: string[] = []
-  for (const id of ids) (buckets[id.slice(0, 3)] ?? extra).push(id)
+  for (const id of ids) (buckets[schoolOf(id) ?? ''] ?? extra).push(id)
   const max = Math.max(0, ...order.map((s) => buckets[s].length))
   const out: string[] = []
   for (let i = 0; i < max; i++) for (const s of order) if (buckets[s][i] !== undefined) out.push(buckets[s][i])
@@ -163,7 +164,10 @@ export function computeToday(
     // Group the day's window by subject (stable) so passage-group questions (長閱讀/
     // 克漏字, consecutive numbers within a paper) sit next to each other instead of
     // being interleaved with the other three subjects.
-    const subjOrder = (id: string) => SUBJECTS.indexOf(id.split('-')[2] as Subject)
+    const subjOrder = (id: string) => {
+      const p = parseQuestionId(id)
+      return p ? SUBJECTS.indexOf(p.subject) : SUBJECTS.length // unparseable → sort last (stable)
+    }
     const seq = window.map((id, i) => ({ id, i })).sort((a, b) => subjOrder(a.id) - subjOrder(b.id) || a.i - b.i).map((x) => x.id)
     const weak: string[] = []
     if (!mock && weakN > 0) {
