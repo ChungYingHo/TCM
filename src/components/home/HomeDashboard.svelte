@@ -87,7 +87,7 @@
     if (tp.dayType === 'light') {
       const wd = new Date(parseYmd(today)).getDay()
       if (wd === 6) return '週末複習緩衝日 · 趁今天追進度、多刷題'
-      if (wd === 2) return '外出日（高雄）· 能複習多少算多少，別有壓力'
+      if (wd === 2) return '外出日（高雄）· 顧好單字就好，其他等明天'
       return '輕量日 · 複習為主'
     }
     return `今日已完成 ${todayDone} 段`

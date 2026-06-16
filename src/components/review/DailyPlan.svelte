@@ -114,12 +114,13 @@
   const sections = $derived.by(() => {
     const full = plan.dayType === 'full'
     const out: { key: Section | 'notes'; done: boolean }[] = []
-    out.push({ key: 'notes', done: notesDone })
+    // 高雄外出日＝只顧單字（在外一整天、晚上給補習班），考點/古文/錯題都不列入今日任務
+    if (!isCommute) out.push({ key: 'notes', done: notesDone })
     if (full || isBuffer) out.push({ key: 'quiz', done: !!st.quiz })
     if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
-    if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
-    out.push({ key: 'wrong', done: !!st.wrong })
+    if (todayClassic && !isCommute) out.push({ key: 'classic', done: !!st.classic })
+    if (!isCommute) out.push({ key: 'wrong', done: !!st.wrong })
     return out
   })
   const doneCount = $derived(sections.filter((s) => s.done).length)
@@ -211,8 +212,15 @@
     </section>
   {/if}
 
-  <!-- 複習文章（週日/外出日的閱讀目標；週六緩衝日改刷題、不出此區）-->
-  {#if plan.dayType === 'light' && !isBuffer && reviewDigests.length}
+  {#if isCommute}
+    <section class="rounded-box border border-info/30 bg-info/[0.06] p-5">
+      <h2 class="text-lg font-bold">今天去高雄 🚆</h2>
+      <p class="mt-1 text-sm text-base-content/65">在外一整天、晚上留給補習班課程——網站今天只留下單字（你本來就每天背的）。考點、古文、錯題都等明天回到正常節奏再說，別有壓力。</p>
+    </section>
+  {/if}
+
+  <!-- 複習文章（週日的閱讀目標；週六緩衝改刷題、高雄外出日只顧單字，皆不出此區）-->
+  {#if plan.dayType === 'light' && !isBuffer && !isCommute && reviewDigests.length}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-4 sm:p-5">
       <h2 class="section-heading mb-1">今日複習文章</h2>
       <p class="mb-3 text-sm text-base-content/60">輕量日的閱讀目標——把這陣子讀過的考點用摘要再過一遍，不必上新進度。</p>
@@ -230,8 +238,8 @@
     </section>
   {/if}
 
-  <!-- 1. 今日考點 -->
-  {#if plan.notes.length}
+  <!-- 1. 今日考點（高雄外出日不出，只顧單字）-->
+  {#if plan.notes.length && !isCommute}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
@@ -352,8 +360,8 @@
     </section>
   {/if}
 
-  <!-- 5. 今日古文 -->
-  {#if todayClassic}
+  <!-- 5. 今日古文（高雄外出日不出）-->
+  {#if todayClassic && !isCommute}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">今日古文</h2>
@@ -365,7 +373,8 @@
     </section>
   {/if}
 
-  <!-- 6. 今日錯題 -->
+  <!-- 6. 今日錯題（高雄外出日不出）-->
+  {#if !isCommute}
   <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
     <div class="mb-3 flex items-center justify-between gap-2">
       <h2 class="section-heading">今日錯題</h2>
@@ -375,5 +384,6 @@
     </div>
     <DueQuestions />
   </section>
+  {/if}
   {/if}
 </div>
