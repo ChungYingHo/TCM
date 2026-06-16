@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, isTaper, DEFAULT_RHYTHM } from '@/utils/date'
+import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, newVocabDays, isTaper, DEFAULT_RHYTHM } from '@/utils/date'
 
 const DAY = 86_400_000
 
@@ -45,6 +45,14 @@ describe('study rhythm (humane pacing)', () => {
     // start = 2026-06-22 (Mon); span 06-22..06-28: Tue(commute)+Sat+Sun light → Mon/Wed/Thu/Fri full = 4
     const end = ymd(parseYmd(start) + 6 * DAY)
     expect(fullStudyDays(start, end)).toBe(4)
+  })
+
+  it('newVocabDays counts every non-taper day (full/light/rest alike)', () => {
+    const exam = '2027-02-01'
+    // 06-22..06-28 is far from the exam → no taper → all 7 days introduce vocab
+    expect(newVocabDays(start, ymd(parseYmd(start) + 6 * DAY), exam)).toBe(7)
+    // a window fully inside the 14-day taper introduces none
+    expect(newVocabDays('2027-01-25', '2027-01-28', exam)).toBe(0)
   })
 
   it('isTaper is true only inside the pre-exam window', () => {

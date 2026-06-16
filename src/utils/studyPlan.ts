@@ -5,7 +5,7 @@ import type { DailyPlanStore, Attempt } from '@/models/progress'
 import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
 import { deriveCursors } from '@/utils/studyCursor'
-import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, isTaper, isMockDay, type DayType, type Rhythm } from '@/utils/date'
+import { ymd, parseYmd, dayDiff, dayType, newVocabDays, isTaper, isMockDay, type DayType, type Rhythm } from '@/utils/date'
 
 export interface ScheduleData {
   range: { start: string; end: string; days: number }
@@ -200,10 +200,12 @@ export function computeToday(
   const newVocabIds = taper ? [] : tracks.vocab.slice(cur.vocab, cur.vocab + perDay.newVocab)
   const classicId = tracks.classics.length ? tracks.classics[cur.classics % tracks.classics.length] : null
 
-  // Pace: where the vocab cursor should be, counting only full study days before today.
-  // Capped at the track length so finishing the list never reads as "behind".
+  // Pace: where the vocab cursor SHOULD be by yesterday — counted over the SAME day-set
+  // the cursor advances on (every non-taper day, not just full days). Using full days
+  // here made a diligent daily user always read "ahead". Capped at the track length so
+  // finishing the list never reads as "behind".
   const yesterday = ymd(parseYmd(today) - DAY_MS)
-  const expectedDays = inRange && yesterday >= range.start ? fullStudyDays(range.start, yesterday, rhythm) : 0
+  const expectedDays = inRange && yesterday >= range.start ? newVocabDays(range.start, yesterday, examDate, rhythm) : 0
   const vocabExpected = Math.min(tracks.vocab.length, expectedDays * perDay.newVocab)
   const aheadDays = perDay.newVocab ? Math.round((cur.vocab - vocabExpected) / perDay.newVocab) : 0
   const daysToExam = Math.max(0, Math.round((parseYmd(examDate) - parseYmd(today)) / DAY_MS))

@@ -99,3 +99,18 @@ export function fullStudyDays(startKey: string, endKey: string, rhythm: Rhythm =
   }
   return n
 }
+
+/** Count days in [startKey, endKey] inclusive that introduce new vocab: every day that
+ *  is NOT in the pre-exam taper. New vocab runs daily — full/light/rest alike（單字每天
+ *  不可斷）— only the taper stops new words. Mirrors the vocab cursor's per-day advance
+ *  so pace is measured against the same day-set (else a diligent daily user reads "ahead"). */
+export function newVocabDays(
+  startKey: string, endKey: string, examKey: string, rhythm: Rhythm = DEFAULT_RHYTHM,
+): number {
+  if (parseYmd(endKey) < parseYmd(startKey)) return 0
+  let n = 0
+  for (let t = parseYmd(startKey); t <= parseYmd(endKey); t += DAY_MS) {
+    if (!isTaper(ymd(t), examKey, rhythm)) n += 1
+  }
+  return n
+}
