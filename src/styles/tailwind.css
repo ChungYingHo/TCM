@@ -196,6 +196,14 @@ a.card:hover, .card-hover:hover {
   box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-primary) 16%, transparent);
 }
 
+/* 鍵盤聚焦環：本站大量自刻互動元素（NavBar pill、面板卡、翻卡鈕、Segmented 分頁），
+   它們不是 DaisyUI .btn，少了可見焦點框；鍵盤使用者會「看不到」目前焦點在哪。
+   低特異度 :where 提供統一焦點環，元件仍可自訂覆蓋；outline 會貼合 border-radius。 */
+:where(a, button, summary, [role='button'], [role='tab'], [tabindex='0']):focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--color-primary) 70%, transparent);
+  outline-offset: 2px;
+}
+
 /* 文字選取色 */
 ::selection { background: color-mix(in oklab, var(--color-primary) 22%, transparent); }
 
