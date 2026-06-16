@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, newVocabDays, isTaper, DEFAULT_RHYTHM } from '@/utils/date'
+import { ymd, parseYmd, dayDiff, dayType, fullStudyDays, newVocabDays, dayKind, isTaper, DEFAULT_RHYTHM } from '@/utils/date'
 
 const DAY = 86_400_000
 
@@ -59,6 +59,17 @@ describe('study rhythm (humane pacing)', () => {
     expect(newVocabDays(start, ymd(parseYmd(start) + 6 * DAY), exam)).toBe(7)
     // a window fully inside the 14-day taper introduces none
     expect(newVocabDays('2027-01-25', '2027-01-28', exam)).toBe(0)
+  })
+
+  it('dayKind names the reason for today\'s intensity', () => {
+    const start = '2026-06-15' // Monday
+    const exam = '2027-02-01'
+    expect(dayKind('2026-06-16', start, exam)).toBe('commute') // Tue, even week → 高雄外出
+    expect(dayKind('2026-06-20', start, exam)).toBe('buffer') // Sat → weekend buffer
+    expect(dayKind('2026-06-21', start, exam)).toBe('light') // Sun, non-rest light
+    expect(dayKind('2026-07-12', start, exam)).toBe('rest') // 4th light-Sun → rest cycle
+    expect(dayKind('2026-06-17', start, exam)).toBe('full') // Wed → full
+    expect(dayKind('2027-01-20', start, exam)).toBe('taper') // Wed inside the 14-day taper
   })
 
   it('isTaper is true only inside the pre-exam window', () => {

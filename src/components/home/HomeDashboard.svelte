@@ -9,7 +9,7 @@
   import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
   import { tagSlug, tagShort } from '@/models/taxonomy'
-  import { ymd, parseYmd, zhDateLabel } from '@/utils/date'
+  import { ymd, zhDateLabel, dayKind } from '@/utils/date'
   import { dumpPlan, getDay } from '@/utils/dailyPlan'
   import { deriveCursors } from '@/utils/studyCursor'
   import { computeToday, type ScheduleData } from '@/utils/studyPlan'
@@ -83,16 +83,18 @@
 
   // 書桌問候：日期當眉題、依時段打招呼，像坐下來翻開今天的進度
   const dateLabel = zhDateLabel()
-  // friendly sub-label that names WHY today is light (so the rhythm reflects real life)
+  // friendly sub-label naming WHY today is light — shares dayKind with the 今日複習 hub so
+  // home and the daily plan never disagree about the day (and reads the rhythm, not the
+  // previously-hardcoded weekdays).
+  const kind = $derived(dayKind(today, schedule.range.start, schedule.examDate, schedule.rhythm))
   const dayLabel = $derived.by(() => {
-    if (tp.dayType === 'rest') return '今天是放空日，休息也很好 🌿'
-    if (tp.dayType === 'light') {
-      const wd = new Date(parseYmd(today)).getDay()
-      if (wd === 6) return '週末複習日 · 重讀這週讀過的考點'
-      if (wd === 2) return '外出日（高雄）· 顧好單字就好，其他等明天'
-      return '輕量日 · 複習為主'
+    switch (kind) {
+      case 'rest': return '今天是放空日，休息也很好 🌿'
+      case 'buffer': return '週末複習日 · 重讀這週讀過的考點'
+      case 'commute': return '外出日（高雄）· 顧好單字就好，其他等明天'
+      case 'light': return '輕量日 · 複習為主'
+      default: return `今日已完成 ${todayDone} 段` // full / taper
     }
-    return `今日已完成 ${todayDone} 段`
   })
   const hour = new Date().getHours()
   const greeting = hour < 5 ? '夜深了' : hour < 11 ? '早安' : hour < 18 ? '午安' : '晚安'

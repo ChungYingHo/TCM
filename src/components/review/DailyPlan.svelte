@@ -18,7 +18,7 @@
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
   import { noteReadDates } from '@/utils/studyCursor'
-  import { ymd, parseYmd, mdShort, zhDateLabel } from '@/utils/date'
+  import { ymd, mdShort, zhDateLabel, dayKind, type DayKind } from '@/utils/date'
   import type { Subject } from '@/models/question'
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
@@ -105,9 +105,9 @@
 
   // why today is light, so the page + badge can speak specifically. 週六與週日都是「複習日」
   // ——複習＝重讀前幾天讀完並打勾的考點（不上新進度）；隔週二高雄外出日＝只顧單字。
-  const weekday = new Date(parseYmd(today)).getDay()
-  const isBuffer = $derived(plan.dayType === 'light' && schedule.rhythm.bufferWeekday === weekday) // 週六
-  const isCommute = $derived(plan.dayType === 'light' && schedule.rhythm.commuteWeekday === weekday) // 高雄
+  const kind = $derived(dayKind(today, schedule.range.start, schedule.examDate, schedule.rhythm))
+  const isBuffer = $derived(kind === 'buffer') // 週六
+  const isCommute = $derived(kind === 'commute') // 高雄外出
   // a review day (weekly light / weekend / rest) re-reads finished notes; commute = vocab only.
   const isReviewDay = $derived((plan.dayType === 'light' || plan.dayType === 'rest') && !isCommute)
   const hasReviewNotes = $derived(plan.notes.length > 0) // on a review day: 有讀完的可複習
@@ -143,19 +143,16 @@
     bump()
   }
 
-  const dayBadge = $derived(
-    plan.dayType === 'rest'
-      ? { label: '放空日 · 休息也很好', cls: 'badge-success' }
-      : isCommute
-        ? { label: '外出日 · 高雄', cls: 'badge-info' }
-        : isBuffer
-          ? { label: '週末複習日', cls: 'badge-info' }
-          : plan.dayType === 'light'
-            ? { label: '輕量日 · 複習為主', cls: 'badge-info' }
-            : plan.taper
-              ? { label: '考前衝刺 · 複習為重', cls: 'badge-warning' }
-              : null,
-  )
+  // day-type → badge. Shares dayKind with the home dashboard so the two never drift.
+  const DAY_BADGES: Record<DayKind, { label: string; cls: string } | null> = {
+    rest: { label: '放空日 · 休息也很好', cls: 'badge-success' },
+    commute: { label: '外出日 · 高雄', cls: 'badge-info' },
+    buffer: { label: '週末複習日', cls: 'badge-info' },
+    light: { label: '輕量日 · 複習為主', cls: 'badge-info' },
+    taper: { label: '考前衝刺 · 複習為重', cls: 'badge-warning' },
+    full: null,
+  }
+  const dayBadge = $derived(DAY_BADGES[kind])
   const paceBadge = $derived(
     !plan.inRange
       ? null

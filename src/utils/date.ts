@@ -119,3 +119,23 @@ export function newVocabDays(
   }
   return n
 }
+
+export type DayKind = 'rest' | 'commute' | 'buffer' | 'taper' | 'light' | 'full'
+
+/** Why today has its intensity — the single source for day labels/badges across the
+ *  dashboard and the daily-plan hub (they previously each re-derived this, and the home
+ *  page hardcoded the weekdays instead of reading the rhythm). Distinguishes the two
+ *  light-day reasons (biweekly 高雄 commute vs weekend buffer) and the pre-exam taper. */
+export function dayKind(
+  dateKey: string, startKey: string, examKey: string, rhythm: Rhythm = DEFAULT_RHYTHM,
+): DayKind {
+  const dt = dayType(dateKey, startKey, rhythm)
+  if (dt === 'rest') return 'rest'
+  if (dt === 'light') {
+    const weekday = new Date(parseYmd(dateKey)).getDay()
+    if (rhythm.commuteWeekday === weekday) return 'commute'
+    if (rhythm.bufferWeekday === weekday) return 'buffer'
+    return 'light'
+  }
+  return isTaper(dateKey, examKey, rhythm) ? 'taper' : 'full'
+}
