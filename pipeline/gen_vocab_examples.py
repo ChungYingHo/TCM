@@ -13,6 +13,7 @@ Run:
 """
 from __future__ import annotations
 import os
+import re
 import sys
 import json
 import datetime
@@ -79,6 +80,60 @@ def fill_examples(words: list[dict], cache: dict, limit: int) -> None:
             print(f'  batch {i // 20 + 1} failed: {e}')
 
 
+def _inflections(h: str) -> set[str]:
+    """Regular surface forms of a headword (approximate — matches the audit tooling)."""
+    o = {h, h + 's'}
+    if h.endswith(('s', 'x', 'z', 'ch', 'sh')):
+        o.add(h + 'es')
+    if len(h) > 2 and h[-1] == 'y' and h[-2] not in 'aeiou':
+        o |= {h[:-1] + 'ies', h[:-1] + 'ied'}
+    if h.endswith('e'):
+        o |= {h[:-1] + 'ed', h[:-1] + 'ing', h + 'd'}
+    else:
+        o |= {h + 'ed', h + 'ing', h + 'er', h + 'est'}
+    return o
+
+
+_TOKEN = re.compile(r'[A-Za-z]+')
+
+
+def tag_reuses(words: list[dict]) -> int:
+    """Mark, per example, the OTHER exam-seen list-words it reuses (surface form + short
+    gloss) so the card can highlight them as a tappable mini-review — the whole point of
+    the reuse rewrite. Only exam-seen words (examCount>0) are tagged, to keep highlights
+    sparse and on-target. Surface→lemma via the same regular-inflection map as _audit."""
+    head = {w['word'].lower() for w in words}
+    surface: dict[str, str] = {}
+    for h in sorted(head):
+        for s in _inflections(h):
+            if s not in head:                 # don't let an inflection shadow a real headword
+                surface.setdefault(s, h)
+    for h in head:
+        surface[h] = h
+    by_lemma = {w['word'].lower(): w for w in words}
+    total = 0
+    for w in words:
+        ex, tgt = w.get('example', ''), w['word'].lower()
+        seen: set[str] = set()
+        reuses: list[dict] = []
+        for m in _TOKEN.finditer(ex):
+            lemma = surface.get(m.group(0).lower())
+            if not lemma or lemma == tgt or lemma in seen:
+                continue
+            lw = by_lemma.get(lemma)
+            if not lw or lw.get('examCount', 0) <= 0:
+                continue
+            seen.add(lemma)
+            # short peek gloss: primary POS group, first few senses
+            primary = (lw.get('zh') or '').split('；')[0]
+            reuses.append({'s': m.group(0), 'zh': ','.join(primary.split(',')[:3])[:24]})
+        w.pop('reuses', None)
+        if reuses:
+            w['reuses'] = reuses
+            total += len(reuses)
+    return total
+
+
 def main() -> None:
     # Prefer the freshly-ranked base; fall back to the shipped vocab.json so examples
     # can be filled on a clean clone without re-downloading ECDICT.
@@ -106,6 +161,8 @@ def main() -> None:
             w['zh'] = zh_overrides[w['word']]
             patched += 1
 
+    reuse_tags = tag_reuses(words)  # after zh overrides so glosses are final
+
     out = {
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'count': len(words),
@@ -115,8 +172,8 @@ def main() -> None:
     os.makedirs(C.WEB_DATA_DIR, exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(out, f, ensure_ascii=False, separators=(',', ':'))
-    print(f'wrote {OUT}: {len(words)} words, {with_ex} with examples, {patched} zh overrides '
-          f'({len(words) - with_ex} pending — run with --fill + API key)')
+    print(f'wrote {OUT}: {len(words)} words, {with_ex} with examples, {patched} zh overrides, '
+          f'{reuse_tags} reuse tags ({len(words) - with_ex} pending — run with --fill + API key)')
 
 
 if __name__ == '__main__':

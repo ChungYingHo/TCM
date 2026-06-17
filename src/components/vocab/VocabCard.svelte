@@ -1,20 +1,51 @@
 <script lang="ts">
   // One vocabulary card: headword + KK phonetic + 中文 + a bilingual example (the
-  // example is the point — it's how Aira likes to memorise). Reused by the daily
-  // plan, the vocab browser, and the flashcard study mode.
+  // example is the point — it's how Aira likes to memorise). The example also reuses
+  // other 考過 words on purpose: those are underlined and tap to peek their meaning, so
+  // reading one card doubles as a mini-review. Reused by the daily plan, the vocab
+  // browser, and the flashcard study mode.
   import type { VocabWord } from '@/models/vocab'
   import Icon from '@/components/common/Icon.svelte'
 
   let { word, onstudied }: { word: VocabWord; onstudied?: () => void } = $props()
 
-  // Split the example so the headword (and its inflections) can be bolded.
-  const parts = $derived.by(() => {
-    if (!word.example) return null
-    const re = new RegExp(`(${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*)`, 'i')
-    const m = word.example.match(re)
-    if (!m || m.index === undefined) return [word.example, '', '']
-    return [word.example.slice(0, m.index), m[0], word.example.slice(m.index + m[0].length)]
+  // Which reused word's gloss is currently revealed (tap to toggle).
+  let peek = $state<{ s: string; zh: string } | null>(null)
+
+  type Seg = { t: string; kind: 'text' | 'head' | 'reuse'; zh?: string }
+
+  // Slice the example into plain text, the bolded headword, and tappable reused words.
+  // Ranges come from the headword match + each precomputed reuse surface; overlaps are
+  // dropped (first wins) so rendering is a single clean pass.
+  const segments = $derived.by<Seg[]>(() => {
+    const ex = word.example
+    if (!ex) return []
+    const ranges: { start: number; end: number; kind: 'head' | 'reuse'; zh?: string }[] = []
+    const headRe = new RegExp(`\\b${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*`, 'i')
+    const hm = ex.match(headRe)
+    if (hm && hm.index !== undefined) ranges.push({ start: hm.index, end: hm.index + hm[0].length, kind: 'head' })
+    for (const r of word.reuses ?? []) {
+      const i = ex.indexOf(r.s)
+      if (i >= 0) ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', zh: r.zh })
+    }
+    ranges.sort((a, b) => a.start - b.start)
+    const out: Seg[] = []
+    let pos = 0
+    for (const rg of ranges) {
+      if (rg.start < pos) continue
+      if (rg.start > pos) out.push({ t: ex.slice(pos, rg.start), kind: 'text' })
+      out.push({ t: ex.slice(rg.start, rg.end), kind: rg.kind, zh: rg.zh })
+      pos = rg.end
+    }
+    if (pos < ex.length) out.push({ t: ex.slice(pos), kind: 'text' })
+    return out
   })
+
+  const hasReuse = $derived((word.reuses?.length ?? 0) > 0)
+
+  function tapReuse(t: string, zh: string) {
+    peek = peek?.s === t ? null : { s: t, zh }
+  }
 </script>
 
 <article class="flex flex-col gap-1.5 rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
@@ -35,11 +66,29 @@
 
   <p class="text-[15px] leading-snug">{word.zh}</p>
 
-  {#if parts}
+  {#if word.example}
     <div class="mt-1 rounded-lg bg-base-200/60 p-2.5 text-sm">
-      <p class="leading-relaxed">{parts[0]}<strong class="text-primary">{parts[1]}</strong>{parts[2]}</p>
+      <p class="leading-relaxed">
+        {#each segments as seg}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
+              type="button"
+              class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
+              title="點看字義（考過的字）"
+              onclick={() => tapReuse(seg.t, seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
+      </p>
+
+      {#if peek}
+        <p class="mt-1.5 flex items-baseline gap-1.5 rounded bg-primary/10 px-2 py-1 text-xs">
+          <strong class="shrink-0 text-primary">{peek.s}</strong>
+          <span class="text-base-content/75">{peek.zh}</span>
+        </p>
+      {/if}
+
       {#if word.example_zh}<p class="mt-0.5 text-base-content/60">{word.example_zh}</p>{/if}
-      {#if word.draft}<span class="mt-1 inline-block rounded bg-base-300/60 px-1 text-[10px] text-base-content/50">AI 草稿例句</span>{/if}
+
+      <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
+        {#if word.draft}<span class="inline-block rounded bg-base-300/60 px-1 text-[10px] text-base-content/50">AI 草稿例句</span>{/if}
+        {#if hasReuse}<span class="text-[10px] text-base-content/40">點<span class="border-b border-dotted border-primary/50">底線字</span>複習考過的字</span>{/if}
+      </div>
     </div>
   {/if}
 
