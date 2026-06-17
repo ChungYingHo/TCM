@@ -340,8 +340,8 @@
     "example_zh": "醫師建議她調整飲食並多休息。"
   },
   "advocacy": {
-    "example": "Her advocacy helped change the health law.",
-    "example_zh": "她的倡議促成了衛生法的修改。"
+    "example": "Her influential advocacy helped change the health law.",
+    "example_zh": "她極具影響力的倡議，促成了衛生法的修改。"
   },
   "advocate": {
     "example": "She is a tireless advocate for the most vulnerable patients.",
@@ -1324,8 +1324,8 @@
     "example_zh": "疼痛深藏在皮膚表面之下。"
   },
   "beneficial": {
-    "example": "A short walk each day is beneficial to the heart.",
-    "example_zh": "每天散步片刻對心臟有益。"
+    "example": "A tailored exercise plan is most beneficial.",
+    "example_zh": "量身打造的運動計畫最有助益。"
   },
   "benefit": {
     "example": "The benefits of the drug outweigh the risks.",
@@ -1548,8 +1548,8 @@
     "example_zh": "醫生開了這種藥較便宜的品牌。"
   },
   "brass": {
-    "example": "The old hospital sign was made of polished brass.",
-    "example_zh": "那塊舊醫院招牌是用擦亮的黃銅做的。"
+    "example": "A medieval brass plaque hung by the old chapel.",
+    "example_zh": "一面中世紀的黃銅匾額掛在舊禮拜堂旁。"
   },
   "brave": {
     "example": "The brave nurse stayed by her patients throughout the epidemic.",
@@ -1812,8 +1812,8 @@
     "example_zh": "小心地對傷口直接加壓。"
   },
   "cargo": {
-    "example": "A cargo of medical supplies arrived by ship.",
-    "example_zh": "一批醫療物資由船運抵達。"
+    "example": "The cargo of vaccines needed certification before release.",
+    "example_zh": "這批疫苗貨物在放行前需要認證。"
   },
   "carnivore": {
     "example": "Lions are carnivores that survive almost entirely on the meat of other animals.",
@@ -2324,8 +2324,8 @@
     "example_zh": "醫生在病歷上寫了簡短的註記。"
   },
   "commentary": {
-    "example": "The textbook had a clear commentary on each diagram.",
-    "example_zh": "這本教科書對每張圖都有清楚的註解。"
+    "example": "The commentary explained each representation in the textbook.",
+    "example_zh": "評註解釋了課本中的每一張圖示。"
   },
   "commentator": {
     "example": "A medical commentator explained the new vaccine.",
@@ -2520,8 +2520,8 @@
     "example_zh": "手術前她試著讓自己鎮定下來。"
   },
   "composer": {
-    "example": "The old composer lost his hearing late in life.",
-    "example_zh": "這位老作曲家在晚年失去了聽力。"
+    "example": "The old composer's repertoire outlived his failing health.",
+    "example_zh": "這位老作曲家的作品，比他衰退的健康存續得更久。"
   },
   "composition": {
     "example": "The lab studied the chemical composition of the synthetic dye.",
@@ -2596,8 +2596,8 @@
     "example_zh": "她康復到能再次去聽音樂會。"
   },
   "concession": {
-    "example": "The hospital made a concession on the bill.",
-    "example_zh": "醫院在帳單上做了讓步。"
+    "example": "The hospital made a concession, letting her repay slowly.",
+    "example_zh": "醫院做出讓步，讓她慢慢償還。"
   },
   "conclude": {
     "example": "The doctors concluded that surgery was needed.",
@@ -3268,8 +3268,8 @@
     "example_zh": "內出血很危急，必須立刻處理。"
   },
   "critique": {
-    "example": "The doctor wrote a critique of the new method.",
-    "example_zh": "醫生對這種新方法寫了一篇評論。"
+    "example": "Her provocative critique challenged the old method.",
+    "example_zh": "她那篇挑釁性的評論，挑戰了舊有的方法。"
   },
   "cross": {
     "example": "Do not cross your legs right after the surgery.",
@@ -3284,8 +3284,8 @@
     "example_zh": "急診室外聚集了一群人。"
   },
   "crown": {
-    "example": "The dentist fitted a crown on the broken tooth.",
-    "example_zh": "牙醫為這顆斷牙裝上牙冠。"
+    "example": "The crown restored the natural height of the broken tooth.",
+    "example_zh": "牙冠恢復了斷牙原本的高度。"
   },
   "crucial": {
     "example": "The first hour after a stroke is crucial.",
@@ -3408,8 +3408,8 @@
     "example_zh": "他避吃乳製品，因為會讓他的胃不舒服。"
   },
   "dam": {
-    "example": "The new dam changed the flow of the river.",
-    "example_zh": "新水壩改變了這條河的水流。"
+    "example": "Solar panels now power the pumps at the dam.",
+    "example_zh": "太陽能板如今為水壩的抽水機供電。"
   },
   "damn": {
     "example": "Chasing prosperity, he did not give a damn about his health.",
@@ -5844,8 +5844,8 @@
     "example_zh": "能再次走路是種美妙的感受。"
   },
   "glow": {
-    "example": "A healthy glow returned to her cheeks.",
-    "example_zh": "她的雙頰恢復了健康的紅潤。"
+    "example": "A healthy glow returned, bringing color back to her cheeks.",
+    "example_zh": "健康的紅潤回到她臉上，讓雙頰恢復血色。"
   },
   "goal": {
     "example": "A full recovery is a feasible goal within a few months.",
@@ -6084,8 +6084,8 @@
     "example_zh": "刺激性的肥皂會讓敏感肌膚變得乾燥。"
   },
   "harvest": {
-    "example": "The autumn harvest brought fresh food to the village.",
-    "example_zh": "秋收為村莊帶來了新鮮的食物。"
+    "example": "Careful conservation of the harvest fed the village all winter.",
+    "example_zh": "對收成的妥善保存，讓村子撐過了整個冬天。"
   },
   "hatred": {
     "example": "Years of pain bred a quiet hatred of hospitals.",
@@ -6096,8 +6096,8 @@
     "example_zh": "救難人員不得不把他從懸崖拉上來。"
   },
   "haunt": {
-    "example": "The loss of the patient continued to haunt her.",
-    "example_zh": "失去這名病人的事一直縈繞在她心頭。"
+    "example": "The quiet cemetery seemed to haunt her dreams.",
+    "example_zh": "那座靜默的墓園，彷彿縈繞在她的夢中。"
   },
   "haven": {
     "example": "The quiet ward was a haven from the busy city.",
@@ -7348,8 +7348,8 @@
     "example_zh": "這位老外科醫生是醫院裡的傳奇人物。"
   },
   "legendary": {
-    "example": "Her kindness to patients was legendary.",
-    "example_zh": "她對病人的仁慈是出了名的。"
+    "example": "Her legendary mastery of surgery saved many lives.",
+    "example_zh": "她那傳奇般的外科技藝，救了許多人。"
   },
   "legislation": {
     "example": "New legislation requires clearer drug labels.",
@@ -7608,8 +7608,8 @@
     "example_zh": "孩子的笑聲有種近乎神奇的力量。"
   },
   "magnetic": {
-    "example": "The scanner uses a strong magnetic field.",
-    "example_zh": "這台掃描儀使用強大的磁場。"
+    "example": "A magnetic field makes the body's atoms spin and align.",
+    "example_zh": "磁場使體內的原子旋轉並排列。"
   },
   "magnificent": {
     "example": "The view from the ward was magnificent.",
@@ -7932,8 +7932,8 @@
     "example_zh": "他受傷後在一家軍醫院接受治療。"
   },
   "militia": {
-    "example": "A local militia helped carry the wounded.",
-    "example_zh": "一支當地的民兵幫忙抬運傷者。"
+    "example": "A militia clashed with troops near the field hospital.",
+    "example_zh": "一支民兵在野戰醫院附近與軍隊衝突。"
   },
   "milk": {
     "example": "Warm milk with a mild flavor may help her sleep.",
@@ -8056,8 +8056,8 @@
     "example_zh": "這種藥在分子層面發揮作用。"
   },
   "molecule": {
-    "example": "A drug molecule is far too small to see.",
-    "example_zh": "一個藥物分子小到根本看不見。"
+    "example": "Countless drug molecules circulate in the bloodstream after the injection.",
+    "example_zh": "注射後，無數的藥物分子在血液中循環。"
   },
   "moment": {
     "example": "For a moment she felt fortunate — the pain had completely gone.",
@@ -8200,8 +8200,8 @@
     "example_zh": "單一個基因突變就可能大幅改變細胞的行為。"
   },
   "mutter": {
-    "example": "The feverish man began to mutter in his sleep.",
-    "example_zh": "發燒的男子開始在睡夢中喃喃自語。"
+    "example": "The feverish poet began to mutter lines of verse.",
+    "example_zh": "發燒的詩人開始喃喃念出詩句。"
   },
   "mutual": {
     "example": "Recovery was a mutual, cooperative effort between them.",
@@ -8256,8 +8256,8 @@
     "example_zh": "身體有自然癒合小傷口的能力。"
   },
   "naval": {
-    "example": "He served as a doctor in a naval hospital.",
-    "example_zh": "他曾在一家海軍醫院當醫生。"
+    "example": "He earned a commission as a naval doctor.",
+    "example_zh": "他取得了海軍軍醫的委任。"
   },
   "nearly": {
     "example": "She has treated nearly every casualty from the crash.",
@@ -8288,8 +8288,8 @@
     "example_zh": "病毒檢驗結果呈陰性。"
   },
   "neglect": {
-    "example": "The wound got worse through simple neglect.",
-    "example_zh": "這傷口因單純的疏忽而惡化。"
+    "example": "Years of neglect left the rural clinic backward and bare.",
+    "example_zh": "多年的疏於照管，使這家偏鄉診所落後又簡陋。"
   },
   "negligent": {
     "example": "The clinic was found negligent in handling the records.",
@@ -9204,8 +9204,8 @@
     "example_zh": "這個神秘的書名激起了我的好奇心，我立刻翻開了書。"
   },
   "pistol": {
-    "example": "The wounded man had a pistol wound to the leg.",
-    "example_zh": "這名受傷的男子腿上有槍傷。"
+    "example": "He faced a heavy penalty for firing the pistol.",
+    "example_zh": "他因開槍而面臨重罰。"
   },
   "pit": {
     "example": "An old mine pit lay abandoned outside the town.",
@@ -9460,8 +9460,8 @@
     "example_zh": "醫生稱讚她準時服藥。"
   },
   "preach": {
-    "example": "It is easy to preach exercise but harder to do it.",
-    "example_zh": "鼓吹運動容易，要做到卻難。"
+    "example": "Doctors preach a conventional diet of less salt and sugar.",
+    "example_zh": "醫師宣導少鹽少糖的傳統飲食。"
   },
   "precede": {
     "example": "A mild headache often precedes the seizure.",
@@ -10428,8 +10428,8 @@
     "example_zh": "身體可能排斥移植的器官。"
   },
   "rejection": {
-    "example": "The body showed early signs of rejection of the organ.",
-    "example_zh": "身體出現了排斥這個器官的早期跡象。"
+    "example": "Early signs of rejection meant the body would reject the organ.",
+    "example_zh": "排斥的早期跡象，意味著身體將排斥這個器官。"
   },
   "relate": {
     "example": "Her own illness let her relate directly to the patient's fear.",
@@ -11608,8 +11608,8 @@
     "example_zh": "他對這種草藥的療效宣稱抱持懷疑。"
   },
   "sketch": {
-    "example": "He drew a quick sketch of where it hurt.",
-    "example_zh": "他快速畫了張圖標出哪裡痛。"
+    "example": "He drew a quick sketch showing the profile of the lump.",
+    "example_zh": "他迅速畫了張草圖，呈現腫塊的側面輪廓。"
   },
   "skillet": {
     "example": "She warmed the broth in a small skillet.",
@@ -11816,8 +11816,8 @@
     "example_zh": "牛奶在溫暖的房間裡變酸了。"
   },
   "sovereignty": {
-    "example": "The small nation guarded its sovereignty fiercely.",
-    "example_zh": "這個小國堅決捍衛它的主權。"
+    "example": "The dictator crushed the nation's sovereignty.",
+    "example_zh": "那名獨裁者踐踏了這個國家的主權。"
   },
   "soy": {
     "example": "He switched to soy milk after the allergy test.",
@@ -11836,8 +11836,8 @@
     "example_zh": "護理師口袋裡備了一份多餘的敷料。"
   },
   "spark": {
-    "example": "A single spark of hope kept her going.",
-    "example_zh": "一絲希望的火花支撐著她繼續走下去。"
+    "example": "A single spark of a revolutionary idea changed her care.",
+    "example_zh": "一個革命性想法的火花，改變了她的照護。"
   },
   "spasm": {
     "example": "A sudden muscle spasm in her leg woke her up in the middle of the night.",
@@ -12276,8 +12276,8 @@
     "example_zh": "這個診斷彷彿讓全家人都愣住了。"
   },
   "stunning": {
-    "example": "Her recovery was a stunning surprise to all.",
-    "example_zh": "她的康復讓所有人又驚又喜。"
+    "example": "Her fever's stunning plummet surprised the team.",
+    "example_zh": "她發燒驚人地驟降，讓團隊大感意外。"
   },
   "subject": {
     "example": "The subjects in the clinical trial were followed for two years.",
@@ -12572,8 +12572,8 @@
     "example_zh": "這間診所對規定做了全面的更動。"
   },
   "swell": {
-    "example": "Her ankle began to swell after the fall.",
-    "example_zh": "跌倒後她的腳踝開始腫起來。"
+    "example": "When one ankle begins to swell, the other leg must compensate.",
+    "example_zh": "當一隻腳踝開始腫脹時，另一條腿就得代為使力。"
   },
   "swing": {
     "example": "His mood would swing from hope to despair.",
@@ -13512,8 +13512,8 @@
     "example_zh": "固定劑量與變動劑量之間有明顯的區別。"
   },
   "variance": {
-    "example": "There was wide variance in the test results.",
-    "example_zh": "檢驗結果之間有很大的差異。"
+    "example": "Wide variance made the dubious result hard to trust.",
+    "example_zh": "巨大的變異使這個可疑的結果難以採信。"
   },
   "variation": {
     "example": "There is wide variation in how patients respond.",
@@ -13756,8 +13756,8 @@
     "example_zh": "他只想好好睡一覺。"
   },
   "ward": {
-    "example": "The children's ward was painted in bright colors.",
-    "example_zh": "兒童病房漆上了明亮的色彩。"
+    "example": "The children's ward sits adjacent to the nursery.",
+    "example_zh": "兒童病房就緊鄰著育嬰室。"
   },
   "warehouse": {
     "example": "The vaccines are stored in a cold warehouse.",
