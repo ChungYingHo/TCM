@@ -204,8 +204,8 @@
     "example_zh": "溫暖有助於啟動修復細胞。"
   },
   "active": {
-    "example": "Staying active helps keep the heart healthy.",
-    "example_zh": "保持活躍有助於維持心臟健康。"
+    "example": "An active lifestyle should consist of daily walking.",
+    "example_zh": "積極的生活方式應包含每日步行。"
   },
   "actively": {
     "example": "She actively took part in her own recovery.",
@@ -240,8 +240,8 @@
     "example_zh": "除了新進人員，這台掃描儀更是一大提升。"
   },
   "additional": {
-    "example": "The doctor ordered an additional blood test.",
-    "example_zh": "醫生加開了一項血液檢查。"
+    "example": "The doctor requested an additional blood test.",
+    "example_zh": "醫師要求再做一次血液檢查。"
   },
   "additive": {
     "example": "Many processed foods contain artificial additives to extend their shelf life.",
@@ -332,8 +332,8 @@
     "example_zh": "這間診所不為自己的服務打廣告。"
   },
   "advice": {
-    "example": "Her best advice was to rest and drink plenty of water.",
-    "example_zh": "她最好的建議是休息並多喝水。"
+    "example": "She quoted her doctor's advice word for word.",
+    "example_zh": "她一字不差地引述了醫師的建議。"
   },
   "advise": {
     "example": "The doctor advised her to rest for a week.",
@@ -1092,16 +1092,16 @@
     "example_zh": "新的研究為治癒開闢了一條途徑。"
   },
   "average": {
-    "example": "Recovery takes two weeks on average.",
-    "example_zh": "康復平均需要兩週。"
+    "example": "The average dose is derived from the patient's weight.",
+    "example_zh": "平均劑量是依病人體重推算出來的。"
   },
   "avoid": {
     "example": "Avoid greasy food while your stomach heals.",
     "example_zh": "胃在復原期間要避免油膩的食物。"
   },
   "aware": {
-    "example": "Be aware of the early signs of dehydration.",
-    "example_zh": "要留意脫水的早期徵兆。"
+    "example": "Be aware of the early signs that predict a relapse.",
+    "example_zh": "留意那些預示復發的早期徵兆。"
   },
   "awareness": {
     "example": "The campaign raised awareness of heart disease.",
@@ -1120,8 +1120,8 @@
     "example_zh": "她去年取得了護理學士學位。"
   },
   "background": {
-    "example": "The doctor asked about her family medical background.",
-    "example_zh": "醫生詢問了她的家族病史背景。"
+    "example": "From the patient's background, the doctor constructed a clear risk picture.",
+    "example_zh": "根據病人的背景病史，醫師建構出清楚的風險輪廓。"
   },
   "backward": {
     "example": "He took a step backward and nearly fell.",
@@ -1500,8 +1500,8 @@
     "example_zh": "一頓好飯給了他急需的能量。"
   },
   "border": {
-    "example": "The disease spread quickly across the border.",
-    "example_zh": "這種病迅速越過邊界擴散。"
+    "example": "Authorities imposed checks at the border to stop the disease.",
+    "example_zh": "當局在邊境實施檢查以阻止疾病擴散。"
   },
   "bore": {
     "example": "The dentist's drill can bore through hard enamel.",
@@ -2160,8 +2160,8 @@
     "example_zh": "孩子們用黏土捏出小動物。"
   },
   "clean": {
-    "example": "Keep the wound clean and dry.",
-    "example_zh": "保持傷口乾淨乾燥。"
+    "example": "Keep the wound clean and the dressing secure.",
+    "example_zh": "保持傷口清潔、敷料牢固。"
   },
   "clerk": {
     "example": "The clerk at the desk checked her appointment.",
@@ -2236,8 +2236,8 @@
     "example_zh": "這顆藥丸有層光滑的外衣，容易吞嚥。"
   },
   "code": {
-    "example": "Each drug has its own barcode for safety.",
-    "example_zh": "每種藥都有自己的條碼以策安全。"
+    "example": "The hospital follows a strict code of ethics.",
+    "example_zh": "這家醫院遵守嚴格的倫理守則。"
   },
   "cognitive": {
     "example": "The illness caused a slow cognitive decline.",
@@ -2348,12 +2348,12 @@
     "example_zh": "衛生首長下令進行緊急檢討。"
   },
   "commit": {
-    "example": "The young doctor is fully committed to her patients.",
-    "example_zh": "這位年輕醫生全心投入照顧她的病人。"
+    "example": "She commits herself fully, devoting every hour to her patients.",
+    "example_zh": "她全心投入，把每一小時都奉獻給病人。"
   },
   "commitment": {
-    "example": "Recovery takes time and real commitment.",
-    "example_zh": "康復需要時間與真正的投入。"
+    "example": "Recovery entails real commitment and patience.",
+    "example_zh": "康復需要真正的投入與耐心。"
   },
   "committee": {
     "example": "A committee reviewed the hospital's safety record.",
@@ -3652,8 +3652,8 @@
     "example_zh": "儘管周遭一片混亂，那位護理師仍保持冷靜、專業的舉止。"
   },
   "democracy": {
-    "example": "The country slowly returned to democracy.",
-    "example_zh": "這個國家慢慢回歸民主。"
+    "example": "Democracy rests on a philosophy of equal voice.",
+    "example_zh": "民主建立在人人平等發聲的理念之上。"
   },
   "democrat": {
     "example": "The senator is a lifelong democrat.",
@@ -5184,8 +5184,8 @@
     "example_zh": "她感到頭暈，不得不趕緊坐下。"
   },
   "fair": {
-    "example": "It is only fair that every patient waits their turn.",
-    "example_zh": "每位病人依序等候才公平。"
+    "example": "The injured worker was awarded fair compensation.",
+    "example_zh": "這名受傷的工人獲得了合理的賠償。"
   },
   "fairly": {
     "example": "She recovered fairly quickly after the operation.",
@@ -5364,8 +5364,8 @@
     "example_zh": "針扎進去時他握緊了拳頭。"
   },
   "fit": {
-    "example": "After months of training, she was fit again.",
-    "example_zh": "經過數月訓練，她又恢復了健康。"
+    "example": "A daily exercise routine kept her fit after surgery.",
+    "example_zh": "每日的運動習慣讓她術後保持健康。"
   },
   "fitness": {
     "example": "Months of training restored his fitness.",
@@ -6824,8 +6824,8 @@
     "example_zh": "這張掃描讓醫生對問題有了深入的了解。"
   },
   "insist": {
-    "example": "The doctor insisted that she rest completely.",
-    "example_zh": "醫生堅持要她完全休息。"
+    "example": "The doctor will insist on absolute rest for a week.",
+    "example_zh": "醫師會堅持要她絕對臥床休息一週。"
   },
   "insomnia": {
     "example": "Stress at work led to weeks of insomnia.",
@@ -9256,8 +9256,8 @@
     "example_zh": "種植園裡許多工人染上了熱病。"
   },
   "plastic": {
-    "example": "The syringe is made of clear plastic.",
-    "example_zh": "這支針筒是透明塑膠製成的。"
+    "example": "The syringe's plastic component is single-use.",
+    "example_zh": "注射器的塑膠部件是一次性的。"
   },
   "plasticity": {
     "example": "The brain's plasticity allows it to rewire itself after an injury.",
@@ -9432,8 +9432,8 @@
     "example_zh": "這款新藥有拯救許多生命的潛力。"
   },
   "pound": {
-    "example": "Her heart began to pound before the operation.",
-    "example_zh": "手術前她的心臟開始劇烈跳動。"
+    "example": "Her heart began to pound as the fear escalated.",
+    "example_zh": "隨著恐懼升高，她的心臟開始怦怦狂跳。"
   },
   "poverty": {
     "example": "Poverty often goes hand in hand with poor health.",
@@ -9644,8 +9644,8 @@
     "example_zh": "她最主要的擔憂是胸口的疼痛。"
   },
   "prime": {
-    "example": "He was in the prime of life when he fell ill.",
-    "example_zh": "他正值壯年時病倒了。"
+    "example": "In the prime of life, he sank into deep depression.",
+    "example_zh": "正值壯年，他卻陷入了深深的憂鬱。"
   },
   "primitive": {
     "example": "Primitive tools made of stone have been found at the site.",
@@ -9788,8 +9788,8 @@
     "example_zh": "他前臂上一條明顯的靜脈凸了出來。"
   },
   "promise": {
-    "example": "The new drug shows real promise against the disease.",
-    "example_zh": "這款新藥在對抗這種疾病上展現了真正的希望。"
+    "example": "The new drug shows real promise, but no ultimate cure yet.",
+    "example_zh": "這款新藥很有希望，但仍非根本的解藥。"
   },
   "promising": {
     "example": "Early results of the drug are very promising.",
@@ -10400,8 +10400,8 @@
     "example_zh": "腎臟有助於調節血液中的鹽分濃度。"
   },
   "regulation": {
-    "example": "A new regulation limits how the drug is sold.",
-    "example_zh": "一項新規定限制了這種藥的販售方式。"
+    "example": "A new regulation requires approval before the drug is sold.",
+    "example_zh": "新法規要求藥品上市前須先取得核准。"
   },
   "regulatory": {
     "example": "The drug passed every regulatory check.",
@@ -10556,8 +10556,8 @@
     "example_zh": "她多排了好幾班，以償還上學時借的貸款。"
   },
   "repeat": {
-    "example": "The doctor asked her to repeat the test next week.",
-    "example_zh": "醫生要她下週重做這項檢查。"
+    "example": "Repeat the dose at the frequency the label states.",
+    "example_zh": "依標示的頻率重複給藥。"
   },
   "repertoire": {
     "example": "A good physician keeps a wide repertoire of treatment options.",
@@ -10700,8 +10700,8 @@
     "example_zh": "時間是醫生最寶貴的資源。"
   },
   "respect": {
-    "example": "Doctors must respect each patient's wishes.",
-    "example_zh": "醫生必須尊重每位病人的意願。"
+    "example": "A sincere compliment shows respect for the patient's effort.",
+    "example_zh": "一句真誠的稱讚，表達了對病人努力的尊重。"
   },
   "respective": {
     "example": "The two nurses returned to their respective wards.",
@@ -10824,8 +10824,8 @@
     "example_zh": "戒菸能逆轉部分的傷害。"
   },
   "review": {
-    "example": "The doctor will review your test results tomorrow.",
-    "example_zh": "醫生明天會檢視你的檢查結果。"
+    "example": "The radiologist will review and interpret the scan.",
+    "example_zh": "放射科醫師會檢視並判讀這張掃描。"
   },
   "revise": {
     "example": "The doctor revised the dose after the blood test.",
@@ -11552,8 +11552,8 @@
     "example_zh": "聽到好消息，她鬆了一口氣。"
   },
   "sight": {
-    "example": "Her sight slowly returned after the operation.",
-    "example_zh": "手術後她的視力慢慢恢復。"
+    "example": "Initially blurred, her sight slowly returned after surgery.",
+    "example_zh": "起初視線模糊，術後她的視力慢慢恢復。"
   },
   "signal": {
     "example": "Pain is the body's signal that something is wrong.",
@@ -12200,8 +12200,8 @@
     "example_zh": "源源不絕的病人擠滿了診所。"
   },
   "strength": {
-    "example": "Slowly, she rebuilt the strength in her legs.",
-    "example_zh": "她慢慢重建了雙腿的力量。"
+    "example": "She had to withdraw from work as her strength faded.",
+    "example_zh": "體力衰退使她不得不退出工作。"
   },
   "strengthen": {
     "example": "Physiotherapy can strengthen weak limbs and bolster a patient's confidence.",
@@ -12260,8 +12260,8 @@
     "example_zh": "X 光顯示骨頭有結構性的損傷。"
   },
   "struggle": {
-    "example": "She won her struggle against the illness.",
-    "example_zh": "她贏得了與病魔的搏鬥。"
+    "example": "She fought the illness like an adversary and won her long struggle.",
+    "example_zh": "她像對抗敵人般與疾病搏鬥，最終贏得了這場奮鬥。"
   },
   "studio": {
     "example": "The artist worked in a sunny studio by the river.",
@@ -12468,8 +12468,8 @@
     "example_zh": "這種藥有助於抑制身體的反應。"
   },
   "supreme": {
-    "example": "Patient safety is of supreme importance here.",
-    "example_zh": "病人安全在這裡是至高無上的。"
+    "example": "The training underscores patient safety as the supreme priority.",
+    "example_zh": "這項訓練強調病人安全是最高的優先。"
   },
   "surface": {
     "example": "Bacteria can live on a hard surface for hours.",
@@ -13544,8 +13544,8 @@
     "example_zh": "茂密的植被環繞著這間鄉村診所。"
   },
   "vehicle": {
-    "example": "Mosquitoes act as a vehicle for the disease.",
-    "example_zh": "蚊子充當這種疾病的傳播媒介。"
+    "example": "Mosquitoes constitute the main vehicle for transmitting malaria.",
+    "example_zh": "蚊子是傳播瘧疾的主要媒介。"
   },
   "vein": {
     "example": "The nurse found a vein and drew the blood.",
@@ -13720,8 +13720,8 @@
     "example_zh": "委員會將就新政策進行表決。"
   },
   "voter": {
-    "example": "Each voter received a card in the mail.",
-    "example_zh": "每位選民都收到一張郵寄的卡片。"
+    "example": "Each voter helps decide the hospital board election.",
+    "example_zh": "每位選民都參與決定醫院董事會的選舉。"
   },
   "vow": {
     "example": "He made a solemn vow to quit smoking for the sake of his health.",
@@ -13804,8 +13804,8 @@
     "example_zh": "病人在掃描前必須穿上檢查服。"
   },
   "weather": {
-    "example": "Cold weather often makes her joints ache.",
-    "example_zh": "寒冷的天氣常讓她的關節痠痛。"
+    "example": "Joint pain worsens in cold weather, a clear seasonal trend.",
+    "example_zh": "關節疼痛在寒冷天氣中加劇，是明顯的季節性趨勢。"
   },
   "weave": {
     "example": "The nurse helped weave a blanket for the ward.",
