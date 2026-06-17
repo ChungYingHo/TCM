@@ -1,0 +1,18 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
+
+export const prerender = false
+---
+
+<Layout title="元素週期表 · 後中醫題庫">
+  <header class="mb-6 flex flex-col gap-1.5">
+    <p class="page-kicker">化學工具</p>
+    <h1 class="page-title">元素週期表</h1>
+    <p class="page-desc max-w-2xl">
+      每格中英文名與<b class="font-semibold text-base-content/80">電子組態（含稀有氣體簡寫）</b>，點開還有<b class="font-semibold text-base-content/80">價電子數與常見氧化態</b>；切換檢視可把<b class="font-semibold text-base-content/80">電負度、原子半徑、游離能、電子親和力</b>整表上色成熱圖，並附「往右、往下」為何增減的考點解說。
+    </p>
+  </header>
+
+  <PeriodicTableTool client:load />
+</Layout>
