@@ -916,8 +916,8 @@
     "example_zh": "一名資淺醫生協助了這場手術。"
   },
   "assistance": {
-    "example": "She needed assistance to climb the stairs.",
-    "example_zh": "她需要協助才能爬樓梯。"
+    "example": "Assistance from a nurse will enable her to walk again.",
+    "example_zh": "護理師的協助將使她能再次行走。"
   },
   "assistant": {
     "example": "The lab assistant prepared the samples for testing.",
@@ -1788,8 +1788,8 @@
     "example_zh": "這家新診所有一間寬敞的候診室，可容納上百人就座。"
   },
   "capacity": {
-    "example": "The hospital is working at full capacity.",
-    "example_zh": "這家醫院正以滿載運作。"
+    "example": "The hospital's limited capacity forced some transfers.",
+    "example_zh": "醫院有限的收治量迫使部分病人轉院。"
   },
   "capture": {
     "example": "The scan captured a clear image of the tumor.",
@@ -1808,8 +1808,8 @@
     "example_zh": "一次受傷差點結束她的舞者生涯。"
   },
   "careful": {
-    "example": "Be careful not to wet the bandage.",
-    "example_zh": "小心別把繃帶弄濕。"
+    "example": "Be careful to apply direct pressure to the wound.",
+    "example_zh": "小心地對傷口直接加壓。"
   },
   "cargo": {
     "example": "A cargo of medical supplies arrived by ship.",
@@ -1888,8 +1888,8 @@
     "example_zh": "病人茫然地盯著天花板。"
   },
   "celebrate": {
-    "example": "The family gathered to celebrate her recovery.",
-    "example_zh": "全家聚在一起慶祝她的康復。"
+    "example": "The family gathered, trying to compose themselves and celebrate.",
+    "example_zh": "家人聚在一起，努力穩住情緒，一同慶祝。"
   },
   "celebrity": {
     "example": "A local celebrity opened the new ward.",
@@ -2652,8 +2652,8 @@
     "example_zh": "她把一個從未對別人說過的秘密告訴了她最親密的知己。"
   },
   "confidence": {
-    "example": "Each small step rebuilt her confidence.",
-    "example_zh": "每一小步都重建了她的信心。"
+    "example": "Each small step helped strengthen her confidence.",
+    "example_zh": "每跨出一小步，都有助於增強她的信心。"
   },
   "confident": {
     "example": "The surgeon was confident the operation would go well.",
@@ -3020,8 +3020,8 @@
     "example_zh": "她以平靜的堅定談論她的照護方式。"
   },
   "convince": {
-    "example": "It took time to convince him to see a doctor.",
-    "example_zh": "花了一些時間才說服他去看醫生。"
+    "example": "A clear demonstration will convince him to try therapy.",
+    "example_zh": "一次清楚的示範會說服他嘗試治療。"
   },
   "convinced": {
     "example": "She was convinced the treatment would work.",
@@ -3060,8 +3060,8 @@
     "example_zh": "銅管把乾淨的水輸送到病房。"
   },
   "copy": {
-    "example": "The patient asked for a copy of her records.",
-    "example_zh": "病人要求一份她的病歷副本。"
+    "example": "Register first, then ask for a copy of your records.",
+    "example_zh": "先登記，再索取你的病歷副本。"
   },
   "coral": {
     "example": "Diving near the coral, he cut his foot.",
@@ -3180,8 +3180,8 @@
     "example_zh": "乾淨的敷料應覆蓋傷口。"
   },
   "coverage": {
-    "example": "His insurance coverage paid for the operation.",
-    "example_zh": "他的保險給付支付了手術費。"
+    "example": "His insurance coverage included a provision for home care.",
+    "example_zh": "他的保險給付包含居家照護的條款。"
   },
   "cow": {
     "example": "Fresh milk came from the farm's own cows.",
@@ -3504,8 +3504,8 @@
     "example_zh": "該國宣布疫情結束。"
   },
   "decline": {
-    "example": "His health began to decline after the fall.",
-    "example_zh": "跌倒之後他的健康開始走下坡。"
+    "example": "His decline was slow but, sadly, inevitable.",
+    "example_zh": "他的衰退雖慢，卻令人遺憾地無可避免。"
   },
   "decorate": {
     "example": "The children helped decorate the ward for the festival.",
@@ -4252,8 +4252,8 @@
     "example_zh": "圖表上一個紅點標出了最糟的那天。"
   },
   "doubt": {
-    "example": "There is no doubt that exercise helps the heart.",
-    "example_zh": "毫無疑問，運動對心臟有益。"
+    "example": "There is no legitimate doubt that exercise helps the heart.",
+    "example_zh": "運動有益心臟，這點沒有任何合理的懷疑。"
   },
   "down": {
     "example": "The swelling slowly went down over a few days.",
@@ -4812,8 +4812,8 @@
     "example_zh": "休息是良好康復的關鍵所在。"
   },
   "essential": {
-    "example": "Vitamin C is essential for a healthy body.",
-    "example_zh": "維生素 C 對健康的身體不可或缺。"
+    "example": "Folic acid is an essential vitamin during pregnancy.",
+    "example_zh": "葉酸是懷孕期間必需的維生素。"
   },
   "established": {
     "example": "It is now an established fact that smoking causes cancer.",
@@ -7936,8 +7936,8 @@
     "example_zh": "一支當地的民兵幫忙抬運傷者。"
   },
   "milk": {
-    "example": "Warm milk may help her fall asleep.",
-    "example_zh": "溫牛奶或許能幫她入睡。"
+    "example": "Warm milk with a mild flavor may help her sleep.",
+    "example_zh": "一杯口味清淡的溫牛奶或許有助她入睡。"
   },
   "mill": {
     "example": "He worked at the flour mill for thirty years.",
@@ -8136,8 +8136,8 @@
     "example_zh": "病房在夜裡大多很安靜。"
   },
   "motion": {
-    "example": "A wave of his hand was the only motion he could make.",
-    "example_zh": "揮一揮手是他唯一能做的動作。"
+    "example": "Physiotherapy can reverse the loss of motion in a stiff joint.",
+    "example_zh": "物理治療能逆轉僵硬關節活動度的喪失。"
   },
   "motivate": {
     "example": "A clear goal can motivate a patient to recover.",
@@ -8244,8 +8244,8 @@
     "example_zh": "這份語音導覽的旁白者聲音平靜。"
   },
   "narrow": {
-    "example": "The artery had become dangerously narrow.",
-    "example_zh": "這條動脈變得危險地狹窄。"
+    "example": "A narrow segment of the artery had to be widened.",
+    "example_zh": "動脈中一段狹窄的部分必須加以撐開。"
   },
   "nationwide": {
     "example": "A nationwide campaign promoted hand washing.",
@@ -8484,8 +8484,8 @@
     "example_zh": "她生病的原因好幾個月來始終不明。"
   },
   "observation": {
-    "example": "He was kept in hospital for observation overnight.",
-    "example_zh": "他被留院觀察一晚。"
+    "example": "Careful observation during each encounter caught the early signs.",
+    "example_zh": "每次看診時的仔細觀察，及早發現了徵兆。"
   },
   "observe": {
     "example": "Nurses observe the patient closely after surgery.",
@@ -8624,8 +8624,8 @@
     "example_zh": "康復給了她追求更平靜生活的機會。"
   },
   "oppose": {
-    "example": "Some doctors oppose the use of the new drug.",
-    "example_zh": "有些醫生反對使用這款新藥。"
+    "example": "Conservative doctors still oppose the new therapy.",
+    "example_zh": "較保守的醫師仍反對這種新療法。"
   },
   "opposed": {
     "example": "Many residents are strongly opposed to closing the clinic.",
@@ -8764,8 +8764,8 @@
     "example_zh": "她用烤箱幫他把湯熱了一下。"
   },
   "overall": {
-    "example": "Her overall health has improved this year.",
-    "example_zh": "她今年的整體健康狀況有所改善。"
+    "example": "Her overall stability improved with daily therapy.",
+    "example_zh": "透過每日治療，她整體的穩定度改善了。"
   },
   "overcome": {
     "example": "She slowly overcame her fear of surgery.",
@@ -9028,8 +9028,8 @@
     "example_zh": "一小部分病人反應不佳。"
   },
   "perception": {
-    "example": "Pain perception differs from person to person.",
-    "example_zh": "痛覺的感受因人而異。"
+    "example": "Pain perception shows wide variation between people.",
+    "example_zh": "痛覺在不同人之間有很大的差異。"
   },
   "perch": {
     "example": "A small bird came to perch on the windowsill.",
@@ -9104,8 +9104,8 @@
     "example_zh": "持續不退的咳嗽一定要檢查。"
   },
   "personality": {
-    "example": "The illness slowly changed his cheerful personality.",
-    "example_zh": "這種病慢慢改變了他開朗的個性。"
+    "example": "Her dominant personality made her a natural leader on the ward.",
+    "example_zh": "她強勢的個性使她自然成為病房裡的領導者。"
   },
   "personnel": {
     "example": "Trained personnel handle the dangerous samples.",
@@ -10484,8 +10484,8 @@
     "example_zh": "他不情願地同意減少鹽分與酒精的攝取。"
   },
   "rely": {
-    "example": "Elderly patients often rely on family for care.",
-    "example_zh": "年長的病人常依賴家人照顧。"
+    "example": "Rural clinics rely on a visiting consultant once a month.",
+    "example_zh": "偏鄉診所依賴每月一次的駐診顧問醫師。"
   },
   "remaining": {
     "example": "The remaining tablets should be returned to the pharmacy.",
@@ -11348,8 +11348,8 @@
     "example_zh": "這項檢查對這種病有很高的靈敏度。"
   },
   "sentence": {
-    "example": "The doctor explained it in one simple sentence.",
-    "example_zh": "醫生用一個簡單的句子解釋了它。"
+    "example": "He could not grasp the abstract idea in a single sentence.",
+    "example_zh": "他無法用一句話理解這個抽象的概念。"
   },
   "sentiment": {
     "example": "There was a strong sentiment of hope in the ward.",
@@ -11544,8 +11544,8 @@
     "example_zh": "這種病可能在手足之間傳染。"
   },
   "sick": {
-    "example": "She felt too sick to eat anything.",
-    "example_zh": "她不舒服到什麼都吃不下。"
+    "example": "Frequent stress can make you feel physically sick.",
+    "example_zh": "經常性的壓力會讓你身體感到不適。"
   },
   "sigh": {
     "example": "She let out a sigh of relief at the good news.",
@@ -11556,8 +11556,8 @@
     "example_zh": "起初視線模糊，術後她的視力慢慢恢復。"
   },
   "signal": {
-    "example": "Pain is the body's signal that something is wrong.",
-    "example_zh": "疼痛是身體發出有問題的訊號。"
+    "example": "Pain is a signal, and the mechanism behind it is complex.",
+    "example_zh": "疼痛是一種訊號，其背後的機制相當複雜。"
   },
   "signature": {
     "example": "The form is not valid without the doctor's signature.",
@@ -11572,8 +11572,8 @@
     "example_zh": "該試驗顯示存活率有顯著的改善。"
   },
   "silence": {
-    "example": "An uneasy silence filled the waiting room.",
-    "example_zh": "一股不安的沉默瀰漫在候診室裡。"
+    "example": "He broke the silence with a small gesture of comfort.",
+    "example_zh": "他以一個小小的安慰手勢打破了沉默。"
   },
   "silly": {
     "example": "It was silly of him to ignore the warning.",
@@ -11664,8 +11664,8 @@
     "example_zh": "完全康復的機會很渺茫。"
   },
   "slip": {
-    "example": "She slipped on the wet floor and hurt her hip.",
-    "example_zh": "她在濕滑的地板上滑倒，傷了髖部。"
+    "example": "A single slip over an unseen obstacle broke her hip.",
+    "example_zh": "一次在沒看見的障礙物上滑倒，就摔斷了她的髖部。"
   },
   "slogan": {
     "example": "The campaign slogan urged people to wash their hands.",
@@ -12212,8 +12212,8 @@
     "example_zh": "長期壓力會削弱免疫系統。"
   },
   "stretch": {
-    "example": "Gently stretch the leg to ease the cramp.",
-    "example_zh": "輕輕伸展腿部以緩解抽筋。"
+    "example": "Stretch gently before each subsequent exercise.",
+    "example_zh": "在每一次後續運動前先輕輕伸展。"
   },
   "strict": {
     "example": "The patient was put on a strict low-salt diet.",
@@ -13008,8 +13008,8 @@
     "example_zh": "醫生請她伸出舌頭。"
   },
   "topic": {
-    "example": "Sleep was the main topic of the health talk.",
-    "example_zh": "睡眠是這場健康講座的主題。"
+    "example": "Memory was the main topic of the cognitive study.",
+    "example_zh": "記憶是這項認知研究的主要課題。"
   },
   "torture": {
     "example": "The endless waiting was a kind of torture.",
@@ -13288,8 +13288,8 @@
     "example_zh": "她感到腳踝一陣劇烈的扭痛。"
   },
   "typical": {
-    "example": "A runny nose is a typical sign of a cold.",
-    "example_zh": "流鼻水是感冒的典型徵兆。"
+    "example": "Typical flu patients exhibit fever and aching muscles.",
+    "example_zh": "典型的流感病人會出現發燒與肌肉痠痛。"
   },
   "ubiquitous": {
     "example": "Bacteria are ubiquitous and hard to detect without a microscope.",
@@ -13508,8 +13508,8 @@
     "example_zh": "注射後疼痛彷彿消失了。"
   },
   "variable": {
-    "example": "Recovery time is highly variable between patients.",
-    "example_zh": "病人之間的康復時間差異很大。"
+    "example": "A clear distinction exists between a constant and a variable dose.",
+    "example_zh": "固定劑量與變動劑量之間有明顯的區別。"
   },
   "variance": {
     "example": "There was wide variance in the test results.",
@@ -13536,8 +13536,8 @@
     "example_zh": "今年有大量民眾接種了疫苗。"
   },
   "vegetable": {
-    "example": "Eat more vegetables and less fried food.",
-    "example_zh": "多吃蔬菜，少吃油炸食物。"
+    "example": "Higher vegetable consumption lowers the risk of disease.",
+    "example_zh": "多吃蔬菜能降低罹病風險。"
   },
   "vegetation": {
     "example": "Thick vegetation surrounded the rural clinic.",
