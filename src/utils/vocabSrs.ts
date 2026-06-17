@@ -50,6 +50,24 @@ export function grade(id: string, known: boolean, now = Date.now()): void {
   write(store)
 }
 
+/**
+ * Soft "passive review" for words glimpsed incidentally (e.g. tapped in another word's
+ * example). Only credits a word that was ALREADY learned AND currently due: it reschedules
+ * at the SAME box (a light review, not a box advance). Never creates a card (so the cursor-
+ * driven new-word pace is untouched) and never touches a not-yet-due card. No-op otherwise.
+ */
+export function touch(ids: string[], now = Date.now()): void {
+  const store = read()
+  let changed = false
+  for (const id of ids) {
+    const c = store[id]
+    if (!c || c.due > now) continue // skip unlearned words and ones not yet due
+    store[id] = { box: c.box, due: dueAt(c.box, now), ts: now }
+    changed = true
+  }
+  if (changed) write(store)
+}
+
 /** Word ids whose review is due (box-1 cards just learned today are excluded by `since`). */
 export function dueIds(now = Date.now()): string[] {
   const store = read()

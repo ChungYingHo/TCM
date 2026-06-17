@@ -6,13 +6,14 @@
   // browser, and the flashcard study mode.
   import type { VocabWord } from '@/models/vocab'
   import Icon from '@/components/common/Icon.svelte'
+  import { touch } from '@/utils/vocabSrs'
 
   let { word, onstudied }: { word: VocabWord; onstudied?: () => void } = $props()
 
   // Which reused word's gloss is currently revealed (tap to toggle).
   let peek = $state<{ s: string; zh: string } | null>(null)
 
-  type Seg = { t: string; kind: 'text' | 'head' | 'reuse'; zh?: string }
+  type Seg = { t: string; kind: 'text' | 'head' | 'reuse'; w?: string; zh?: string }
 
   // Slice the example into plain text, the bolded headword, and tappable reused words.
   // Ranges come from the headword match + each precomputed reuse surface; overlaps are
@@ -20,13 +21,13 @@
   const segments = $derived.by<Seg[]>(() => {
     const ex = word.example
     if (!ex) return []
-    const ranges: { start: number; end: number; kind: 'head' | 'reuse'; zh?: string }[] = []
+    const ranges: { start: number; end: number; kind: 'head' | 'reuse'; w?: string; zh?: string }[] = []
     const headRe = new RegExp(`\\b${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*`, 'i')
     const hm = ex.match(headRe)
     if (hm && hm.index !== undefined) ranges.push({ start: hm.index, end: hm.index + hm[0].length, kind: 'head' })
     for (const r of word.reuses ?? []) {
       const i = ex.indexOf(r.s)
-      if (i >= 0) ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', zh: r.zh })
+      if (i >= 0) ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', w: r.w, zh: r.zh })
     }
     ranges.sort((a, b) => a.start - b.start)
     const out: Seg[] = []
@@ -34,7 +35,7 @@
     for (const rg of ranges) {
       if (rg.start < pos) continue
       if (rg.start > pos) out.push({ t: ex.slice(pos, rg.start), kind: 'text' })
-      out.push({ t: ex.slice(rg.start, rg.end), kind: rg.kind, zh: rg.zh })
+      out.push({ t: ex.slice(rg.start, rg.end), kind: rg.kind, w: rg.w, zh: rg.zh })
       pos = rg.end
     }
     if (pos < ex.length) out.push({ t: ex.slice(pos), kind: 'text' })
@@ -43,8 +44,15 @@
 
   const hasReuse = $derived((word.reuses?.length ?? 0) > 0)
 
-  function tapReuse(t: string, zh: string) {
-    peek = peek?.s === t ? null : { s: t, zh }
+  // Tapping a reused word reveals its gloss AND counts as a light incidental review of
+  // that word (touch is a no-op for words not yet learned).
+  function tapReuse(t: string, w: string, zh: string) {
+    if (peek?.s === t) {
+      peek = null
+      return
+    }
+    peek = { s: t, zh }
+    if (w) touch([w])
   }
 </script>
 
@@ -73,7 +81,7 @@
               type="button"
               class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
               title="點看字義（考過的字）"
-              onclick={() => tapReuse(seg.t, seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
+              onclick={() => tapReuse(seg.t, seg.w ?? '', seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
       </p>
 
       {#if peek}

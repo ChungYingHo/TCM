@@ -14,9 +14,10 @@ export interface VocabWord {
   example: string
   example_zh: string
   draft: boolean // example is an AI draft
-  // Other exam-seen list-words the example reuses (surface form + short gloss), tagged at
-  // build time so the card can highlight them as a tappable mini-review. Omitted if none.
-  reuses?: { s: string; zh: string }[]
+  // Other exam-seen list-words the example reuses, tagged at build time so the card can
+  // highlight them as a tappable mini-review (s = surface form in the example, w = the
+  // reused word's id for SRS, zh = short peek gloss). Omitted if none.
+  reuses?: { s: string; w: string; zh: string }[]
 }
 
 export interface VocabData {

@@ -126,7 +126,8 @@ def tag_reuses(words: list[dict]) -> int:
             seen.add(lemma)
             # short peek gloss: primary POS group, first few senses
             primary = (lw.get('zh') or '').split('；')[0]
-            reuses.append({'s': m.group(0), 'zh': ','.join(primary.split(',')[:3])[:24]})
+            # w = lemma (== the reused word's SRS id) so a peek-tap can feed spaced repetition
+            reuses.append({'s': m.group(0), 'w': lw['word'], 'zh': ','.join(primary.split(',')[:3])[:24]})
         w.pop('reuses', None)
         if reuses:
             w['reuses'] = reuses
