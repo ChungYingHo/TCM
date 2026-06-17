@@ -1,6 +1,7 @@
 <script lang="ts">
   // The spaced-repetition queue of due wrong-book questions, extracted from the old
   // ReviewApp so the daily plan can embed it as one section. Answering grades the card.
+  import { onMount } from 'svelte'
   import type { QuestionRecord } from '@/models/question'
   import { loadByIds } from '@/utils/dataset'
   import { dueEntries, gradeReview } from '@/utils/wrongBook'
@@ -18,7 +19,10 @@
     loadByIds(queue).then((m) => { byId = m }).finally(() => { loading = false })
   }
 
-  $effect(() => {
+  // Mount-time load + re-load when cloud state arrives. NOT an $effect: loadQueue
+  // both writes and reads `queue`, so a reactive effect would self-invalidate and
+  // loop forever (effect_update_depth_exceeded), jamming the whole DailyPlan island.
+  onMount(() => {
     loadQueue()
     const onCloud = () => { if (done === 0) loadQueue() }
     window.addEventListener('tcm:cloudloaded', onCloud)
