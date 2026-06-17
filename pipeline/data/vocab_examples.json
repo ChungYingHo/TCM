@@ -436,8 +436,8 @@
     "example_zh": "她的廣場恐懼症嚴重到幾乎不敢踏出自己的公寓。"
   },
   "agriculture": {
-    "example": "Many of his patients work in agriculture.",
-    "example_zh": "他的許多病人從事農業。"
+    "example": "Among workers in agriculture, the infectious disease spread fast.",
+    "example_zh": "在從事農業的工人之間，這種傳染病迅速擴散。"
   },
   "aim": {
     "example": "The treatment's aim is to ease the pain.",
@@ -464,8 +464,8 @@
     "example_zh": "護理師整個漫漫長夜都保持警覺。"
   },
   "alien": {
-    "example": "The hospital felt cold and alien at first.",
-    "example_zh": "醫院起初讓人覺得冰冷又陌生。"
+    "example": "At first the ward felt alien, but she learned to adapt.",
+    "example_zh": "起初病房讓她覺得陌生，但她漸漸適應了。"
   },
   "align": {
     "example": "The surgeon worked to align the broken bones.",
@@ -1628,8 +1628,8 @@
     "example_zh": "她在桶子裡裝滿溫水來清理地板。"
   },
   "buddy": {
-    "example": "His old army buddy visited him in hospital.",
-    "example_zh": "他的老戰友到醫院探望他。"
+    "example": "His army buddy pledged to visit him every week.",
+    "example_zh": "他軍中的好友承諾每週都來探望他。"
   },
   "budget": {
     "example": "The clinic ran on a very tight budget.",
@@ -1824,8 +1824,8 @@
     "example_zh": "護理師推著藥車走過走廊。"
   },
   "cartoon": {
-    "example": "A cartoon on the wall made the children laugh.",
-    "example_zh": "牆上的一幅卡通逗笑了孩子們。"
+    "example": "The children laughed and tried to imitate the cartoon on the wall.",
+    "example_zh": "孩子們大笑，還學起牆上卡通的樣子。"
   },
   "carve": {
     "example": "The surgeon carved away the dead tissue with care.",
@@ -2928,8 +2928,8 @@
     "example_zh": "一個字的意思往往取決於它的上下文。"
   },
   "continent": {
-    "example": "The disease spread across the whole continent.",
-    "example_zh": "這種病蔓延了整個大陸。"
+    "example": "The plague spread across the whole continent.",
+    "example_zh": "這場瘟疫蔓延了整個大陸。"
   },
   "continually": {
     "example": "The pump beeps continually until it is reset.",
@@ -3032,8 +3032,8 @@
     "example_zh": "這項試驗給出了藥物價值的有力證明。"
   },
   "cooperate": {
-    "example": "The patient agreed to cooperate with the tests.",
-    "example_zh": "病人同意配合接受檢查。"
+    "example": "The child's spontaneous smile showed she would cooperate.",
+    "example_zh": "孩子自然的微笑顯示她願意配合。"
   },
   "cooperation": {
     "example": "Recovery requires close cooperation with the doctor.",
@@ -3432,8 +3432,8 @@
     "example_zh": "這些藥丸已過了有效期限。"
   },
   "dawn": {
-    "example": "She finally fell asleep just before dawn.",
-    "example_zh": "她終於在天亮前睡著了。"
+    "example": "She fell asleep at dawn as the pain finally receded.",
+    "example_zh": "疼痛終於消退，她在破曉時分睡著了。"
   },
   "dead": {
     "example": "The dead tissue was cut away to save the remaining limb.",
@@ -3900,8 +3900,8 @@
     "example_zh": "她是個盡心盡力、從不放棄的護理師。"
   },
   "diabetes": {
-    "example": "Her diabetes is controlled with daily insulin.",
-    "example_zh": "她的糖尿病靠每天施打胰島素來控制。"
+    "example": "Her diabetes needs daily insulin and careful dietary control.",
+    "example_zh": "她的糖尿病需要每日胰島素與謹慎的飲食控制。"
   },
   "diagnose": {
     "example": "It can be hard to diagnose the illness early on.",
@@ -4356,8 +4356,8 @@
     "example_zh": "康復是個動態的過程，而非單一的步驟。"
   },
   "dynamics": {
-    "example": "The dynamics of the family changed after his illness.",
-    "example_zh": "他生病後，家庭的互動關係改變了。"
+    "example": "His illness complicated the dynamics of the whole family.",
+    "example_zh": "他的病使整個家庭的互動變得複雜。"
   },
   "eager": {
     "example": "Eager to thrive, she followed every doctor's order.",
@@ -4752,8 +4752,8 @@
     "example_zh": "她為醫療資源的平等取得而奮鬥。"
   },
   "equation": {
-    "example": "Cost is only one part of the equation in care.",
-    "example_zh": "費用只是照護這道難題的一部分。"
+    "example": "Cost is just one constituent of the care equation.",
+    "example_zh": "成本只是照護這道方程式中的一項要素。"
   },
   "equip": {
     "example": "The clinic is well equipped for emergencies.",
@@ -5788,8 +5788,8 @@
     "example_zh": "這種疾病有很強的遺傳因素。"
   },
   "genius": {
-    "example": "It took no genius to see he needed rest.",
-    "example_zh": "不用天才也看得出他需要休息。"
+    "example": "It took no genius to comprehend that he needed rest.",
+    "example_zh": "不需要天才也能明白他需要休息。"
   },
   "genre": {
     "example": "Calm music of any genre helped her sleep.",
@@ -6064,8 +6064,8 @@
     "example_zh": "她已經三個晚上幾乎沒睡。"
   },
   "hardware": {
-    "example": "The scanner is the most costly piece of hardware.",
-    "example_zh": "掃描儀是最昂貴的一件硬體設備。"
+    "example": "A technician must activate the scanner hardware each morning.",
+    "example_zh": "技術員每天早上必須啟動掃描儀的硬體。"
   },
   "harm": {
     "example": "Smoking does great harm to the lungs.",
@@ -6248,8 +6248,8 @@
     "example_zh": "能照顧這麼勇敢的病人是種榮幸。"
   },
   "hook": {
-    "example": "The drip bag hung from a metal hook.",
-    "example_zh": "點滴袋掛在一個金屬鉤上。"
+    "example": "Nurses rotate the drip bag on its metal hook.",
+    "example_zh": "護理師會轉動掛在金屬鉤上的點滴袋。"
   },
   "horizon": {
     "example": "New treatments are appearing on the horizon.",
@@ -7048,8 +7048,8 @@
     "example_zh": "身體會抵禦細菌的入侵。"
   },
   "inventory": {
-    "example": "The pharmacy took an inventory of its drugs.",
-    "example_zh": "藥局清點了藥品的庫存。"
+    "example": "A neat stack of boxes was logged in the pharmacy inventory.",
+    "example_zh": "一疊整齊的藥盒登記進了藥局的庫存。"
   },
   "investigate": {
     "example": "The team set out to investigate the outbreak.",
@@ -7112,8 +7112,8 @@
     "example_zh": "她把草藥存在一個密封的玻璃罐裡。"
   },
   "jaw": {
-    "example": "He broke his jaw in the fall.",
-    "example_zh": "他跌倒時摔斷了下巴。"
+    "example": "An X-ray showed a bilateral fracture of the jaw.",
+    "example_zh": "X 光顯示下顎兩側都有骨折。"
   },
   "jazz": {
     "example": "Soft jazz offered a moment of recreation in the ward.",
@@ -7744,8 +7744,8 @@
     "example_zh": "捐贈者的血型完全相符。"
   },
   "mate": {
-    "example": "His wife was his closest mate through the illness.",
-    "example_zh": "在病中，妻子是他最親密的伴侶。"
+    "example": "With his lifelong mate beside him, he could withstand the pain.",
+    "example_zh": "有終身伴侶在身邊，他才撐得過疼痛。"
   },
   "mathematics": {
     "example": "Calculating the dose takes simple mathematics.",
@@ -8780,8 +8780,8 @@
     "example_zh": "早期的警訊很容易被忽略。"
   },
   "oversee": {
-    "example": "A senior doctor will oversee the operation.",
-    "example_zh": "一位資深醫生將監督這場手術。"
+    "example": "A proponent of reform was chosen to oversee the new ward.",
+    "example_zh": "一位改革的倡導者獲選監督新病房。"
   },
   "oversight": {
     "example": "A simple oversight led to the wrong dose.",
@@ -9716,12 +9716,12 @@
     "example_zh": "身體無法製造足夠的這種荷爾蒙。"
   },
   "productive": {
-    "example": "A good night's sleep made her more productive.",
-    "example_zh": "一夜好眠讓她更有效率。"
+    "example": "A vigorous morning walk left her more productive.",
+    "example_zh": "一段精力充沛的晨間散步，讓她更有效率。"
   },
   "productivity": {
-    "example": "Poor health lowered his productivity at work.",
-    "example_zh": "不佳的健康降低了他工作的生產力。"
+    "example": "Poor health had an adverse effect on his productivity.",
+    "example_zh": "健康不佳對他的工作效率造成不良影響。"
   },
   "profession": {
     "example": "She is proud to belong to the nursing profession.",
@@ -9988,8 +9988,8 @@
     "example_zh": "把純淨的溶液存放在密封的容器中。"
   },
   "purple": {
-    "example": "The bruise slowly turned a deep purple.",
-    "example_zh": "瘀青慢慢變成了深紫色。"
+    "example": "A purple bruise and a deep chill spread over his skin.",
+    "example_zh": "紫色的瘀青與一陣寒意在他皮膚上蔓延。"
   },
   "purse": {
     "example": "She kept her pills in a small zipped purse.",
@@ -10024,8 +10024,8 @@
     "example_zh": "她陷入兩難，不知是否該接受這項有風險的手術。"
   },
   "quantity": {
-    "example": "Only a small quantity of the drug is needed.",
-    "example_zh": "只需少量的這種藥。"
+    "example": "Only a small quantity of the potent drug is needed.",
+    "example_zh": "這種強效藥只需要少量。"
   },
   "quantum": {
     "example": "The discovery was a quantum leap in treatment.",
@@ -10116,8 +10116,8 @@
     "example_zh": "一道輪椅坡道通向診所的門口。"
   },
   "ranch": {
-    "example": "He grew up working on a cattle ranch.",
-    "example_zh": "他在一個養牛的牧場長大工作。"
+    "example": "He used to reside on a cattle ranch as a boy.",
+    "example_zh": "他小時候住在一座養牛的牧場。"
   },
   "random": {
     "example": "Patients were placed in random groups for the trial.",
@@ -10452,8 +10452,8 @@
     "example_zh": "提及任何與研究主題相關的家族病史。"
   },
   "reliability": {
-    "example": "Doctors trust the reliability of the new test.",
-    "example_zh": "醫生信賴這項新檢查的可靠性。"
+    "example": "The old test's reliability was questionable at best.",
+    "example_zh": "舊檢驗的可靠度充其量也令人存疑。"
   },
   "reliable": {
     "example": "She is a reliable nurse you can always count on.",
@@ -11140,8 +11140,8 @@
     "example_zh": "護理師用一台小磅秤幫嬰兒量體重。"
   },
   "scan": {
-    "example": "The scan showed no sign of a tumor.",
-    "example_zh": "掃描沒有顯示出腫瘤的跡象。"
+    "example": "The scan showed a sudden spike in brain activity.",
+    "example_zh": "掃描顯示腦部活動突然飆升。"
   },
   "scandal": {
     "example": "The press condemned the hospital after the safety scandal.",
@@ -11424,8 +11424,8 @@
     "example_zh": "蛇會隨著成長而蛻皮。"
   },
   "sheer": {
-    "example": "It was sheer luck that the tumor was found.",
-    "example_zh": "腫瘤能被發現純粹是運氣。"
+    "example": "There was little likelihood of finding it; it was sheer luck.",
+    "example_zh": "本來幾乎不可能找到，純粹是運氣。"
   },
   "sheet": {
     "example": "The nurse changed the bed sheet every morning.",
@@ -11884,8 +11884,8 @@
     "example_zh": "擠滿人的候診室是個不小的場面。"
   },
   "spectacular": {
-    "example": "Her recovery was nothing short of spectacular.",
-    "example_zh": "她的康復簡直令人嘆為觀止。"
+    "example": "Her spectacular recovery came to exemplify the new therapy.",
+    "example_zh": "她驚人的康復成了這種新療法的典範。"
   },
   "spectator": {
     "example": "He was just a spectator to his own slow recovery.",
@@ -11940,8 +11940,8 @@
     "example_zh": "她從晨禱中汲取精神力量。"
   },
   "spite": {
-    "example": "In spite of the pain, she kept smiling.",
-    "example_zh": "儘管疼痛，她仍保持微笑。"
+    "example": "In spite of her illness, her spirit continued to flourish.",
+    "example_zh": "儘管病著，她的精神依然蓬勃。"
   },
   "split": {
     "example": "The sutured wound split open again and began to bleed.",
@@ -12268,8 +12268,8 @@
     "example_zh": "這位藝術家在河邊一間採光充足的工作室創作。"
   },
   "stumble": {
-    "example": "The weak patient began to stumble as he walked.",
-    "example_zh": "虛弱的病人走著走著開始踉蹌。"
+    "example": "The weak patient began to stumble as his coordination failed.",
+    "example_zh": "隨著協調能力變差，虛弱的病人開始踉蹌。"
   },
   "stun": {
     "example": "The diagnosis seemed to stun the whole family.",
@@ -13148,8 +13148,8 @@
     "example_zh": "護理師端來一盤乾淨的器械。"
   },
   "treasure": {
-    "example": "She treasured the time she had left with him.",
-    "example_zh": "她珍惜與他剩下的相處時光。"
+    "example": "She treasured even the most humble moments together.",
+    "example_zh": "她珍惜每一個哪怕最平凡的相處時刻。"
   },
   "treat": {
     "example": "Doctors used antibiotics to treat the infection.",
@@ -13736,8 +13736,8 @@
     "example_zh": "護理師為更好的待遇進行了長期的抗爭。"
   },
   "wagon": {
-    "example": "The supplies arrived by horse and wagon.",
-    "example_zh": "物資是用馬車運來的。"
+    "example": "The wagon hauled away the debris from the old ward.",
+    "example_zh": "馬車運走了舊病房的瓦礫。"
   },
   "waist": {
     "example": "He has lost weight around his waist this year.",
