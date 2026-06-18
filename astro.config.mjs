@@ -20,6 +20,10 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   markdown: {
+    // 關掉 smartypants：它會把直引號 '/" 轉成彎引號 ’/“”（U+2019…），而 CJK 字型
+    // 把彎引號畫成「全形」，英文縮寫貼著中文時就裂出大空格（It’ s）。筆記是中英混排，
+    // 這類位置很多，故全站改用直引號根治。（破折號/刪節號無人依賴，影響極小。）
+    smartypants: false,
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
