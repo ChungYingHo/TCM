@@ -1,8 +1,9 @@
 <script lang="ts">
-  // 今日複習 — the daily study hub. Content is sliced from the schedule ORDERING by
-  // the user's actual cursor (deriveCursors), so a busy/sprint day is absorbed rather
-  // than desyncing. dayType drives a humane rhythm: a weekly light day reviews only,
-  // a rest day just encourages rest — neither breaks the streak.
+  // 今日複習 — the daily study hub. Content is sliced from the schedule ORDERING by the
+  // user's actual cursor (deriveCursors), so the plan is a ROLLING sequence: a busy day is
+  // absorbed, not desynced. Weekday vs weekend is read from the real clock — weekdays are
+  // full study days (one subject PAIR's notes + quiz), weekends are buffer days (catch up
+  // if behind, otherwise rest). 單字/古文/元素 run every day; only the pre-exam taper stops new words.
   import scheduleJson from '@/data/schedule.json'
   import classicsJson from '@/data/classics.json'
   import { onMount } from 'svelte'
@@ -13,17 +14,21 @@
   import type { ClassicsData } from '@/models/classics'
   import { dumpPlan, getDay, setSectionDone, setNoteDone, type Section } from '@/utils/dailyPlan'
   import { learn, dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
+  import { dueCount as elementDueCount } from '@/utils/elementSrs'
+  import { learn as learnClassic, grade as gradeClassic, dueIds as classicDueIds } from '@/utils/classicSrs'
+  import { dueCount as wrongDueCount } from '@/utils/wrongBook'
   import { composeReview } from '@/utils/reviewSample'
   import { getAttempts } from '@/utils/progress'
   import { openNote } from '@/utils/noteDialog'
   import { touchStreak } from '@/utils/streak'
   import { noteReadDates } from '@/utils/studyCursor'
-  import { ymd, mdShort, zhDateLabel, dayKind, type DayKind } from '@/utils/date'
+  import { todayKey, parseYmd, mdShort, zhDateLabel, dayKind, type DayKind } from '@/utils/date'
   import type { Subject } from '@/models/question'
   import { SUBJECT_LABEL } from '@/models/question'
   import { tagShort } from '@/models/taxonomy'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
+  import ElementQuiz from '@/components/element/ElementQuiz.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import DueQuestions from '@/components/review/DueQuestions.svelte'
   import QuizQuestions from '@/components/review/QuizQuestions.svelte'
@@ -40,30 +45,18 @@
     vocab = await loadVocab()
   })
 
-  const today = ymd(Date.now())
-  const todayLabel = zhDateLabel()
+  const today = todayKey() // 5 AM rollover (see date.ts)
+  const todayLabel = zhDateLabel(new Date(parseYmd(today)))
   let planStore = $state(dumpPlan())
   let attemptsStore = $state(getAttempts())
   let reviewIds = $state<string[]>([])
   let showQuiz = $state(false)
   let showReview = $state(false)
+  let showElement = $state(false)
   let openMini = $state<Partial<Record<Subject, boolean>>>({})
-
-  // mock-day countdown (started by the user, purely informative — never blocks answering)
-  let mockLeft = $state(-1) // seconds; -1 = not started
-  let mockTicker: ReturnType<typeof setInterval> | null = null
-  function startMockTimer(minutes: number) {
-    mockLeft = minutes * 60
-    if (mockTicker) clearInterval(mockTicker)
-    mockTicker = setInterval(() => {
-      if (mockLeft > 0) mockLeft -= 1
-      else if (mockTicker) { clearInterval(mockTicker); mockTicker = null }
-    }, 1000)
-  }
-  $effect(() => () => { if (mockTicker) clearInterval(mockTicker) })
-  const mockClock = $derived(
-    mockLeft < 0 ? '' : `${String(Math.floor(mockLeft / 60)).padStart(2, '0')}:${String(mockLeft % 60).padStart(2, '0')}`,
-  )
+  // due-review backlog (for the weekend 落後清單) + the soonest-due 古文 to re-read
+  let dueCounts = $state({ vocab: 0, element: 0, wrong: 0, classic: 0 })
+  let reviewClassicId = $state<string | null>(null)
 
   function refresh() {
     planStore = dumpPlan()
@@ -77,6 +70,9 @@
       schedule.perDay.reviewVocabMax,
       today,
     )
+    const dueClassics = classicDueIds()
+    dueCounts = { vocab: dueIds().length, element: elementDueCount(), wrong: wrongDueCount(), classic: dueClassics.length }
+    reviewClassicId = dueClassics[0] ?? null // soonest-due 古文 to re-read
   }
 
   $effect(() => {
@@ -100,29 +96,26 @@
   const todayClassic = $derived(plan.classicId ? classicById.get(plan.classicId) : null)
   const notesDone = $derived(plan.notes.length > 0 && plan.notes.every((n) => st.notes?.[n.subject]))
   const reviewDigests = $derived(Object.entries(schedule.reviews))
-  // slug → first-read date (full-day reads only) for the「讀完 M/D」chip on each note card
-  const readDates = $derived(noteReadDates(planStore, schedule.tracks.notes, schedule.rhythm, schedule.range.start))
+  // slug → first-read date for the「讀完 M/D」chip on each note card
+  const readDates = $derived(noteReadDates(planStore, schedule.tracks.notes))
+  const reviewClassic = $derived(reviewClassicId ? classicById.get(reviewClassicId) : null)
+  const behindTotal = $derived(dueCounts.vocab + dueCounts.element + dueCounts.wrong + dueCounts.classic)
 
-  // why today is light, so the page + badge can speak specifically. 週六與週日都是「複習日」
-  // ——複習＝重讀前幾天讀完並打勾的考點（不上新進度）；隔週二高雄外出日＝只顧單字。
-  const kind = $derived(dayKind(today, schedule.range.start, schedule.examDate, schedule.rhythm))
-  const isBuffer = $derived(kind === 'buffer') // 週六
-  const isCommute = $derived(kind === 'commute') // 高雄外出
-  // a review day (weekly light / weekend / rest) re-reads finished notes; commute = vocab only.
-  const isReviewDay = $derived((plan.dayType === 'light' || plan.dayType === 'rest') && !isCommute)
-  const hasReviewNotes = $derived(plan.notes.length > 0) // on a review day: 有讀完的可複習
+  // Weekday = full study day; weekend = buffer (catch up if behind, else rest). Read from the clock.
+  const kind = $derived(dayKind(today, schedule.examDate))
+  const isWeekend = $derived(plan.dayType === 'weekend')
 
-  // sections shown today (key + whether it's done). 高雄外出日＝只顧單字（在外一整天、晚上給
-  // 補習班）。背單字每天都做：new vocab carried EVERY day (使用者要求「單字不可以放棄」)，唯考前
-  // taper 停新字。複習日的考點只在「有讀完的筆記」時才列入；刷題只在 full 日（與每月限時模擬）。
+  // sections shown today (key + whether it's done). Notes = today's subject pair; quiz only on
+  // weekdays; 單字/複習/元素/古文/錯題 every day. Weekends keep all of these for catch-up.
   const sections = $derived.by(() => {
     const out: { key: Section | 'notes'; done: boolean }[] = []
-    if (plan.notes.length && !isCommute) out.push({ key: 'notes', done: notesDone })
-    if (plan.dayType === 'full' || plan.mock) out.push({ key: 'quiz', done: !!st.quiz })
+    if (plan.notes.length) out.push({ key: 'notes', done: notesDone })
+    if (plan.dayType === 'full') out.push({ key: 'quiz', done: !!st.quiz })
     if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
-    if (todayClassic && !isCommute) out.push({ key: 'classic', done: !!st.classic })
-    if (!isCommute) out.push({ key: 'wrong', done: !!st.wrong })
+    out.push({ key: 'elementQuiz', done: !!st.elementQuiz })
+    if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
+    out.push({ key: 'wrong', done: !!st.wrong })
     return out
   })
   const doneCount = $derived(sections.filter((s) => s.done).length)
@@ -139,16 +132,18 @@
   function toggleSection(sec: Section) {
     const next = !st[sec]
     setSectionDone(today, sec, next)
-    if (sec === 'newVocab' && next) learn(plan.newVocabIds) // enter SRS on completion
+    if (sec === 'newVocab' && next) learn(plan.newVocabIds) // 完成即進 SRS
+    if (sec === 'classic' && next && todayClassic) learnClassic([todayClassic.id]) // 古文進 SRS，日後間隔重現
     bump()
   }
+  function gradeReviewClassic(known: boolean) {
+    if (reviewClassicId) gradeClassic(reviewClassicId, known)
+    bump() // refresh → 已評分的篇章離開到期清單
+  }
 
-  // day-type → badge. Shares dayKind with the home dashboard so the two never drift.
+  // day-kind → badge. Shares dayKind with the home dashboard so the two never drift.
   const DAY_BADGES: Record<DayKind, { label: string; cls: string } | null> = {
-    rest: { label: '放空日 · 休息也很好', cls: 'badge-success' },
-    commute: { label: '外出日 · 高雄', cls: 'badge-info' },
-    buffer: { label: '週末複習日', cls: 'badge-info' },
-    light: { label: '輕量日 · 複習為主', cls: 'badge-info' },
+    weekend: { label: '週末緩衝日', cls: 'badge-info' },
     taper: { label: '考前衝刺 · 複習為重', cls: 'badge-warning' },
     full: null,
   }
@@ -156,11 +151,9 @@
   const paceBadge = $derived(
     !plan.inRange
       ? null
-      : plan.pace.aheadDays > 0
-        ? { label: `單字超前 ${plan.pace.aheadDays} 天`, cls: 'badge-success' }
-        : plan.pace.aheadDays < 0
-          ? { label: `單字落後 ${-plan.pace.aheadDays} 天`, cls: 'badge-warning' }
-          : { label: '進度準時', cls: 'badge-ghost' },
+      : plan.pace.onTrack
+        ? { label: '單字跟得上考期', cls: 'badge-success' }
+        : { label: `單字需加速 · 每天約 ${plan.pace.neededPerDay} 個`, cls: 'badge-warning' },
   )
 </script>
 
@@ -190,7 +183,7 @@
 
   {#if !plan.inRange}
     <div class="rounded-box border border-base-300 bg-base-100 p-4 text-sm text-base-content/70">
-      讀書計畫期間為 <b>{schedule.range.start}</b> ～ <b>{schedule.range.end}</b>。目前不在計畫期內，先複習到期錯題即可。
+      讀書計畫到完課目標 <b>{schedule.examDate}</b> 為止。已過完課日，之後以複習到期錯題與單字為主即可。
     </div>
   {/if}
 
@@ -201,28 +194,33 @@
     </div>
   {/if}
 
-  {#if plan.dayType === 'rest'}
-    <section class="rounded-box border border-success/30 bg-success/[0.06] p-5">
-      <h2 class="text-lg font-bold">今天是放空日 🌿</h2>
-      <p class="mt-1 text-sm text-base-content/65">連續衝刺會累、效率也會掉。今天可以完全休息，讓前幾天讀的東西沉澱下來；想讀的話，下面是輕量複習。</p>
-      <button class="btn btn-success btn-sm mt-3" class:btn-outline={!st.rest} onclick={() => toggleSection('rest')}>
-        {#if st.rest}今天休息了 <Icon name="check" class="h-4 w-4" />{:else}我今天休息{/if}
-      </button>
-    </section>
-  {/if}
-
-  {#if isCommute}
+  <!-- 週末緩衝日：具體列出落後什麼（一鍵跳到該段）＋ 限時模擬入口；跟上就休息 -->
+  {#if isWeekend}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-5">
-      <h2 class="text-lg font-bold">今天去高雄 🚆</h2>
-      <p class="mt-1 text-sm text-base-content/65">在外一整天、晚上留給補習班課程——網站今天只留下單字（你本來就每天背的）。考點、古文、錯題都等明天回到正常節奏再說，別有壓力。</p>
+      <h2 class="text-lg font-bold">週末緩衝日 🌿</h2>
+      {#if behindTotal === 0 && plan.pace.onTrack}
+        <p class="mt-1 text-sm text-base-content/65">進度都跟上了，今天好好休息、讓記憶沉澱；想加碼就往下繼續。</p>
+      {:else}
+        <p class="mt-1 mb-2 text-sm text-base-content/65">趁今天把落後的補一補，跟上了就休息：</p>
+        <ul class="flex flex-col gap-1.5 text-sm">
+          {#if !plan.pace.onTrack}
+            <li class="flex items-center gap-1.5 font-medium text-warning"><Icon name="flame" class="h-4 w-4" filled /> 單字進度需加速 · 每天約 {plan.pace.neededPerDay} 個</li>
+          {/if}
+          {#if dueCounts.vocab && reviewWords.length}<li><a class="link link-primary" href="#sec-reviewVocab">單字到期複習 {dueCounts.vocab} 個 →</a></li>{/if}
+          {#if dueCounts.element}<li><a class="link link-primary" href="#sec-element">元素到期 {dueCounts.element} 個 →</a></li>{/if}
+          {#if dueCounts.classic}<li><a class="link link-primary" href="#sec-reviewClassic">古文待複習 {dueCounts.classic} 篇 →</a></li>{/if}
+          {#if dueCounts.wrong}<li><a class="link link-primary" href="#sec-wrong">錯題到期 {dueCounts.wrong} 題 →</a></li>{/if}
+        </ul>
+      {/if}
+      <a href="/exam" class="btn btn-outline btn-sm mt-3 gap-1">練配速 · 限時整卷模擬 <Icon name="timer" class="h-4 w-4" /></a>
     </section>
   {/if}
 
-  <!-- 複習文章（複習日的閱讀目標；高雄外出日只顧單字不出；要有讀完的進度才出）-->
-  {#if isReviewDay && hasReviewNotes && reviewDigests.length}
+  <!-- 週末複習文章（跨考點摘要；把這陣子讀過的再過一遍）-->
+  {#if isWeekend && reviewDigests.length}
     <section class="rounded-box border border-info/30 bg-info/[0.06] p-4 sm:p-5">
-      <h2 class="section-heading mb-1">今日複習文章</h2>
-      <p class="mb-3 text-sm text-base-content/60">輕量日的閱讀目標——把這陣子讀過的考點用摘要再過一遍，不必上新進度。</p>
+      <h2 class="section-heading mb-1">週末複習文章</h2>
+      <p class="mb-3 text-sm text-base-content/60">把這陣子讀過的考點用摘要再過一遍，串起整體脈絡。</p>
       <div class="flex flex-col gap-2">
         {#each reviewDigests as [slug, r] (slug)}
           <button class="flex items-center justify-between gap-2 rounded-box border border-base-300 bg-base-100 p-3 text-left" onclick={() => openNote(slug, r.title)}>
@@ -237,19 +235,12 @@
     </section>
   {/if}
 
-  <!-- 複習日但前幾天還沒讀完任何考點 → 沒東西可複習，誠實說明、不假裝 -->
-  {#if isReviewDay && !isCommute && !hasReviewNotes}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 text-sm text-base-content/65">
-      今天是複習日，但前幾天還沒有打勾完成的考點可以複習——先把單字、錯題顧好。等讀過幾篇考點後，這裡就會自動帶出來讓你回頭複習。
-    </section>
-  {/if}
-
-  <!-- 1. 今日考點（高雄外出日不出，只顧單字；複習日只重讀已讀完的）-->
-  {#if plan.notes.length && !isCommute}
+  <!-- 1. 今日考點（今天這一對科目；週末＝補進度）-->
+  {#if plan.notes.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="section-heading">{plan.dayType === 'full' ? '今日考點' : '複習考點'}</h2>
-        <span class="text-xs text-base-content/50">{isReviewDay ? '複習前幾天讀完的——先測再讀' : plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '點開看筆記、不換頁'}</span>
+        <h2 class="section-heading">{isWeekend ? '週末緩衝 · 補進度' : '今日考點'}</h2>
+        <span class="text-xs text-base-content/50">{isWeekend ? '趁週末把落後的考點補上' : plan.phase === 'drill' ? '第 2 輪起＝快速複習，5–10 分鐘過一篇' : '今天兩科 · 點開看筆記、不換頁'}</span>
       </div>
       <div class="grid gap-2 sm:grid-cols-2">
         {#each plan.notes as n (n.subject)}
@@ -282,46 +273,37 @@
     </section>
   {/if}
 
-  <!-- 2. 今日考題／刷題（只在 full 日與每月限時模擬；複習日靠「先測再讀」＋今日錯題複習）-->
-  {#if (plan.dayType === 'full' || plan.mock) && plan.quizIds.length}
+  <!-- 2. 今日考題／刷題（只在平日；週末靠「先測再讀」＋今日錯題複習）-->
+  {#if plan.dayType === 'full' && plan.quizIds.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">
-          {plan.mock ? `限時模擬 · ${plan.quizIds.length} 題` : plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
+          {plan.phase === 'drill' ? `今日刷題 · ${plan.quizIds.length} 題` : '今日考題'}
         </h2>
-        <div class="flex items-center gap-3">
-          {#if plan.mock && mockLeft >= 0}
-            <span class={`font-mono text-sm tabular-nums ${mockLeft === 0 ? 'font-bold text-error' : 'text-base-content/70'}`} role="timer">
-              {mockLeft === 0 ? '時間到' : mockClock}
-            </span>
-          {/if}
-          <label class="flex cursor-pointer items-center gap-2 text-sm">
-            <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.quiz} onchange={() => toggleSection('quiz')} />做完了
-          </label>
-        </div>
+        <label class="flex cursor-pointer items-center gap-2 text-sm">
+          <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.quiz} onchange={() => toggleSection('quiz')} />做完了
+        </label>
       </div>
       <p class="mb-3 text-sm text-base-content/55">
-        {plan.mock
-          ? '每月一次的限時段——比照正式考的節奏（50 題／70 分鐘），練配速、也練「倒扣之下該不該猜」的取捨。時間到只是提醒，不會中斷作答。'
-          : plan.phase === 'drill'
-            ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
-            : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
+        {plan.phase === 'drill'
+          ? `每天一段全新考古題（年份新到舊、四科混合）${plan.quizWeakCount ? `，其中 ${plan.quizWeakCount} 題針對你正確率最低的考點` : ''}，答錯會自動進錯題本。`
+          : '讀完就測——以下是今日考點的考古題，答錯會自動進錯題本。'}
       </p>
       {#if showQuiz}
         <QuizQuestions ids={plan.quizIds} />
       {:else}
-        <button class="btn btn-primary btn-sm" onclick={() => { showQuiz = true; if (plan.mock) startMockTimer(70) }}>
+        <button class="btn btn-primary btn-sm" onclick={() => (showQuiz = true)}>
           開始作答（{plan.quizIds.length} 題）<Icon name="arrowRight" class="h-4 w-4" />
         </button>
       {/if}
     </section>
   {/if}
 
-  <!-- 3. 今日單字（背單字每天都做，不因輕量/放空日中斷；唯考前 taper 停新字）-->
+  <!-- 3. 今日單字（每天都做，不因週末中斷；唯考前 taper 停新字）-->
   {#if newWords.length}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
-        <h2 class="section-heading">今日單字 · {newWords.length} 個{#if plan.dayType !== 'full'}<span class="ml-2 align-middle text-xs font-normal text-base-content/45">背單字每天不間斷</span>{/if}</h2>
+        <h2 class="section-heading">今日單字 · {newWords.length} 個{#if isWeekend}<span class="ml-2 align-middle text-xs font-normal text-base-content/45">背單字每天不間斷</span>{/if}</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.newVocab} onchange={() => toggleSection('newVocab')} />背完了
         </label>
@@ -334,7 +316,7 @@
 
   <!-- 4. 複習單字（spaced review, calendar-based）— 翻卡作答會回寫間隔重複 -->
   {#if reviewWords.length}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <section id="sec-reviewVocab" class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">複習單字 · {reviewWords.length} 個</h2>
         <label class="flex cursor-pointer items-center gap-2 text-sm">
@@ -360,8 +342,24 @@
     </section>
   {/if}
 
-  <!-- 5. 今日古文（高雄外出日不出）-->
-  {#if todayClassic && !isCommute}
+  <!-- 5. 今日元素小遊戲（每天的輕量練習）-->
+  <section id="sec-element" class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <div class="mb-3 flex items-center justify-between gap-2">
+      <h2 class="section-heading">今日元素 · 小遊戲</h2>
+      <label class="flex cursor-pointer items-center gap-2 text-sm">
+        <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.elementQuiz} onchange={() => toggleSection('elementQuiz')} />玩過了
+      </label>
+    </div>
+    {#if showElement}
+      <ElementQuiz onfinish={() => { if (!st.elementQuiz) toggleSection('elementQuiz') }} />
+    {:else}
+      <p class="mb-3 text-sm text-base-content/55">每天幾題，把元素的原子序、電子組態、價電子、族週期與鍵別練成反射——化學的地基。題型與作答方式（選擇／填充）隨機輪換，答對自動排進間隔複習。</p>
+      <button class="btn btn-primary btn-sm" onclick={() => (showElement = true)}>開始遊戲 <Icon name="sparkles" class="h-4 w-4" /></button>
+    {/if}
+  </section>
+
+  <!-- 6. 今日古文（主動回想：先讀原文回想，再翻開白話對照；讀過進 SRS） -->
+  {#if todayClassic}
     <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
       <div class="mb-3 flex items-center justify-between gap-2">
         <h2 class="section-heading">今日古文</h2>
@@ -369,13 +367,26 @@
           <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.classic} onchange={() => toggleSection('classic')} />讀過了
         </label>
       </div>
+      <p class="mb-3 text-sm text-base-content/55">先讀原文、試著回想語意與讀音，再翻開「白話翻譯」對照——主動回想比直接看翻譯更記得住。讀過之後它會隔幾天回來讓你複習。</p>
       <ClassicReader classic={todayClassic} open={false} />
     </section>
   {/if}
 
-  <!-- 6. 今日錯題（高雄外出日不出）-->
-  {#if !isCommute}
-  <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+  <!-- 6.5 複習古文（SRS 到期；先回想再翻譯，選記得／不熟安排下次。只在有到期時出）-->
+  {#if reviewClassic}
+    <section id="sec-reviewClassic" class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+      <h2 class="section-heading mb-1">複習古文</h2>
+      <p class="mb-3 text-sm text-base-content/55">之前讀過、今天該回顧的一篇——先讀原文回想語意與讀音，再翻開對照，然後選「記得／不熟」安排下次複習。</p>
+      <ClassicReader classic={reviewClassic} open={false} />
+      <div class="mt-3 grid grid-cols-2 gap-2">
+        <button class="btn btn-outline btn-error" onclick={() => gradeReviewClassic(false)}>不熟</button>
+        <button class="btn btn-success" onclick={() => gradeReviewClassic(true)}>記得 <Icon name="check" class="h-4 w-4" /></button>
+      </div>
+    </section>
+  {/if}
+
+  <!-- 7. 今日錯題 -->
+  <section id="sec-wrong" class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
     <div class="mb-3 flex items-center justify-between gap-2">
       <h2 class="section-heading">今日錯題</h2>
       <label class="flex cursor-pointer items-center gap-2 text-sm">
@@ -384,6 +395,5 @@
     </div>
     <DueQuestions />
   </section>
-  {/if}
   {/if}
 </div>

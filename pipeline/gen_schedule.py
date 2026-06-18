@@ -3,10 +3,11 @@
 """Build src/data/schedule.json — the ORDERING + pace targets that drive 今日複習.
 
 This is NOT a fixed calendar. The daily page slices each track from the user's
-actual cursor (derived from completion), so a busy or sprint day is absorbed
-instead of desyncing. The file carries:
+actual cursor (derived from completion), so the plan is a ROLLING sequence consumed
+at real pace — a busy day just doesn't advance. Weekday vs weekend is read from the
+clock (studyPlan.ts), not pinned here. The file carries:
   - per-day pace targets (notes/quiz/new-vocab/classic)
-  - a humane rhythm (weekly light day, periodic rest, pre-exam taper)
+  - subject pairs rotated one-per-study-day (lighter daily note load)
   - ordered tracks (vocab by frequency, notes by pedagogical order, classics by yield)
   - a per-tag quiz candidate pool (today's quiz = questions on today's note tags)
 
@@ -28,33 +29,34 @@ TAXONOMY_TS = os.path.join(C.ROOT, 'src', 'models', 'taxonomy.ts')
 # EXAM here is the *content-completion target* (finish all new material), not a real
 # exam date — the three schools test separately in 2027/3–4 (see EXAM_WINDOW). The last
 # 14 days before it are the review-only taper; newVocab is sized to finish the whole
-# vocab track on the last full day before that taper begins.
-START = '2026-06-15'
-END = '2027-01-31'
+# vocab track before that taper begins.
 EXAM = '2027-02-01'
 EXAM_WINDOW = '實際考試 2027/3–4（義守約 3 月底、慈濟 4/10、中國醫約 4 月中下旬）'
+HORIZON_DAYS = 200  # nominal rolling length (a sizing hint; the plan is consumed at real pace,
+                    # not pinned to dates — see studyPlan.ts).
+# Subject pairs, rotated one per STUDY day (cursor-driven), so each weekday is only two
+# subjects' notes — lighter load alongside cram school. 單字/古文/元素 still run daily.
+PAIRS = [['biology', 'english'], ['chemistry', 'chinese']]
 PER_DAY = {
     'notesPerSubject': 1,
     'quiz': 10,           # learn phase: questions tagged to today's notes
     'quizDrill': 30,      # drill phase (first note pass done): sequential full-bank drill…
     'quizWeak': 6,        # …of which this many re-target the user's weakest tags
-    'quizMock': 50,       # ~monthly mock day: one timed block of this size instead
     'newVocab': 18,
     'reviewVocabMax': 100,    # absolute ceiling (cap = min(target, max))
     'reviewVocabTarget': 30,  # daily review size — a LIMITED, date-seeded random rotating batch
                               # (more-due-than-this rolls to following days); tune here if needed
 }
-RHYTHM = {'lightWeekday': 0, 'restEveryNCycles': 4, 'taperLastDays': 14,
-          'bufferWeekday': 6, 'commuteWeekday': 2}  # Sat=週末複習緩衝；隔週二=高雄外出日
 QUIZ_POOL_CAP = 60  # ids kept per tag — enough to rotate without bloating the file
 
 
-def parse_taxonomy() -> dict[str, list[tuple[str, str]]]:
-    """-> {subject: [(tag, slug), ...]} in pedagogical order, parsed from taxonomy.ts
-    (the single source of truth, so the order can't drift)."""
+def parse_taxonomy() -> dict[str, list[tuple[str, str, str | None]]]:
+    """-> {subject: [(tag, slug, readIn|None), ...]} in pedagogical order, parsed from
+    taxonomy.ts (the single source of truth, so the order can't drift). `readIn` is set when a
+    tag's reading is merged into another note (tag still exists for question-tagging/trends)."""
     txt = open(TAXONOMY_TS, encoding='utf-8').read()
     body = txt[txt.index('export const TAXONOMY'):]
-    out: dict[str, list[tuple[str, str]]] = {s: [] for s in C.SUBJECTS}
+    out: dict[str, list[tuple[str, str, str | None]]] = {s: [] for s in C.SUBJECTS}
     cur = None
     for line in body.splitlines():
         head = re.match(r"\s*(chemistry|biology|chinese|english):\s*\[", line)
@@ -63,7 +65,8 @@ def parse_taxonomy() -> dict[str, list[tuple[str, str]]]:
             continue
         ent = re.search(r"tag:\s*'([^']+)',\s*slug:\s*'([^']+)'", line)
         if ent and cur:
-            out[cur].append((ent.group(1), ent.group(2)))
+            readin = re.search(r"readIn:\s*'([^']+)'", line)
+            out[cur].append((ent.group(1), ent.group(2), readin.group(1) if readin else None))
     return out
 
 
@@ -115,9 +118,23 @@ def main() -> None:
     classics = json.load(open(os.path.join(C.WEB_DATA_DIR, 'classics.json'), encoding='utf-8'))
     qs = all_questions()
 
-    notes = {s: [slug for _, slug in tax[s]] for s in C.SUBJECTS}
-    note_tags = {slug: tag for s in C.SUBJECTS for tag, slug in tax[s]}
-    taxo_tags = set(note_tags.values())
+    # Resolve readIn → the merged note, and DEDUPE so a merged note appears once in its
+    # subject's track. note_tags maps the (resolved) slug to its CANONICAL tag — the first
+    # entry that owns the file (the readIn target), used for the note's mini-quiz.
+    notes: dict[str, list[str]] = {}
+    note_tags: dict[str, str] = {}
+    for s in C.SUBJECTS:
+        seen: set[str] = set()
+        lst: list[str] = []
+        for tag, slug, readin in tax[s]:
+            resolved = readin or slug
+            if resolved not in seen:
+                seen.add(resolved)
+                lst.append(resolved)
+                note_tags[resolved] = tag
+        notes[s] = lst
+    # ALL taxonomy tags (incl. merged-in ones) stay eligible for the quiz pool + drill + trends.
+    taxo_tags = {tag for s in C.SUBJECTS for tag, slug, readin in tax[s]}
 
     # qnum: trailing question number of an id (for stable, recent-first ordering).
     def qnum(q: dict) -> int:
@@ -184,14 +201,13 @@ def main() -> None:
                 drill.append(by_subject[s][idx[s]]['id'])
                 idx[s] += 1
 
-    days = (datetime.date.fromisoformat(END) - datetime.date.fromisoformat(START)).days + 1
     schedule = {
         'generated_at': datetime.datetime.now(datetime.timezone.utc).isoformat(),
-        'range': {'start': START, 'end': END, 'days': days},
         'examDate': EXAM,
         'examWindow': EXAM_WINDOW,
+        'horizonDays': HORIZON_DAYS,
+        'pairs': PAIRS,
         'perDay': PER_DAY,
-        'rhythm': RHYTHM,
         'tracks': {
             'vocab': [w['id'] for w in vocab['words']],
             'notes': notes,
@@ -205,7 +221,7 @@ def main() -> None:
     os.makedirs(C.WEB_DATA_DIR, exist_ok=True)
     with open(OUT, 'w', encoding='utf-8') as f:
         json.dump(schedule, f, ensure_ascii=False, separators=(',', ':'))
-    print(f"schedule: {days} days, vocab={len(schedule['tracks']['vocab'])}, "
+    print(f"schedule: horizon={HORIZON_DAYS}d, pairs={PAIRS}, vocab={len(schedule['tracks']['vocab'])}, "
           f"notes={ {s: len(v) for s, v in notes.items()} }, "
           f"classics={len(schedule['tracks']['classics'])}, quizTags={len(pool)}, "
           f"drill={len(drill)}")

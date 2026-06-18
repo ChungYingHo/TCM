@@ -18,12 +18,14 @@ const DATA_DIR = path.resolve('./src/data')
 const allEntries = SUBJECTS.flatMap((s) => TAXONOMY[s])
 const allTags = allEntries.map((e) => e.tag)
 
-function noteFrontmatter(slug: string): { tag: string; subject: string; kind: string } {
+function noteFrontmatter(slug: string): { tag: string; subject: string; kind: string; covers: string[] } {
   const src = readFileSync(path.join(NOTES_DIR, `${slug}.mdx`), 'utf8')
   const tag = /\btag:\s*(.+)/.exec(src)?.[1].trim() ?? ''
   const subject = /\bsubject:\s*(.+)/.exec(src)?.[1].trim() ?? ''
   const kind = /\bkind:\s*(.+)/.exec(src)?.[1].trim() ?? 'note'
-  return { tag, subject, kind }
+  const coversInner = /\bcovers:\s*\[(.*?)\]/.exec(src)?.[1] ?? ''
+  const covers = [...coversInner.matchAll(/['"]([^'"]+)['"]/g)].map((m) => m[1])
+  return { tag, subject, kind, covers }
 }
 
 describe('taxonomy integrity', () => {
@@ -33,11 +35,11 @@ describe('taxonomy integrity', () => {
     expect(new Set(slugs).size).toBe(slugs.length)
   })
 
-  it('every tag resolves to its subject and slug', () => {
+  it('every tag resolves to its subject and slug (readIn → merged note)', () => {
     for (const s of SUBJECTS)
       for (const e of TAXONOMY[s]) {
         expect(tagSubject(e.tag)).toBe(s)
-        expect(tagSlug(e.tag)).toBe(e.slug)
+        expect(tagSlug(e.tag)).toBe(e.readIn ?? e.slug)
       }
   })
 
@@ -56,13 +58,19 @@ describe('taxonomy integrity', () => {
 })
 
 describe('taxonomy ⇄ concept notes', () => {
-  it('every taxonomy tag has a note file with matching tag + subject', () => {
+  it('every taxonomy tag resolves to a note file (own or via readIn) with matching subject', () => {
     for (const s of SUBJECTS)
       for (const e of TAXONOMY[s]) {
-        expect(existsSync(path.join(NOTES_DIR, `${e.slug}.mdx`)), `missing note ${e.slug}`).toBe(true)
-        const fm = noteFrontmatter(e.slug)
-        expect(fm.tag, `tag mismatch in ${e.slug}`).toBe(e.tag)
-        expect(fm.subject, `subject mismatch in ${e.slug}`).toBe(s)
+        const file = e.readIn ?? e.slug
+        expect(existsSync(path.join(NOTES_DIR, `${file}.mdx`)), `missing note ${file}`).toBe(true)
+        const fm = noteFrontmatter(file)
+        expect(fm.subject, `subject mismatch in ${file}`).toBe(s)
+        if (e.readIn) {
+          // a merged-in tag: the host note must declare it under `covers`
+          expect(fm.covers, `${file} should cover "${e.tag}"`).toContain(e.tag)
+        } else {
+          expect(fm.tag, `tag mismatch in ${e.slug}`).toBe(e.tag)
+        }
       }
   })
 

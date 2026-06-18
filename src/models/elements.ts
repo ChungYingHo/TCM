@@ -377,6 +377,19 @@ export const ELEMENTS: Element[] = SYMBOLS.map((sym, i) => {
   }
 })
 
+/** Element by atomic number (1-based Z), or undefined out of range. */
+export function elementByZ(z: number): Element | undefined {
+  return ELEMENTS[z - 1]
+}
+
+// 每日元素小遊戲的題池：後中考點相關的子集（週期 1–4 主族 + 常考過渡金屬/鹵素/惰性、
+// 加上 Ag/I/Au/Hg）。刻意不含 f 區（價電子多變、非考點），讓價電子等題型都答得出來。
+export const QUIZ_ELEMENT_ZS: number[] = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, // H–Ca
+  24, 25, 26, 28, 29, 30, // Cr Mn Fe Ni Cu Zn（常考過渡金屬）
+  35, 47, 53, 79, 80, // Br Ag I Au Hg
+]
+
 export const CATEGORY_LABEL: Record<Category, string> = {
   alkali: '鹼金屬',
   alkaline: '鹼土金屬',

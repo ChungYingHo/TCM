@@ -4,14 +4,17 @@
   import { loadSchools } from '@/utils/dataset'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
 
-  let { tag, limit = 3 }: { tag: string; limit?: number } = $props()
+  // `also` lets a merged note (covers multiple concept tags) surface questions from all of
+  // them — e.g. atomic-structure covers 週期性 + 化學鍵與分子結構.
+  let { tag, also = [], limit = 3 }: { tag: string; also?: string[]; limit?: number } = $props()
 
   let matches = $state<QuestionRecord[]>([])
   let loading = $state(true)
 
   $effect(() => {
+    const wanted = new Set([tag, ...also])
     loadSchools([...SCHOOLS])
-      .then((qs) => { matches = qs.filter((q) => q.concept_tags.includes(tag)) })
+      .then((qs) => { matches = qs.filter((q) => q.concept_tags.some((t) => wanted.has(t))) })
       .finally(() => { loading = false })
   })
 

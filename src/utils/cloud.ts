@@ -10,6 +10,8 @@ import { getAttempts, replaceProgress } from '@/utils/progress'
 import { getStreak, replaceStreak } from '@/utils/streak'
 import { dumpPlan, replacePlan } from '@/utils/dailyPlan'
 import { dumpVocabSrs, replaceVocabSrs } from '@/utils/vocabSrs'
+import { dumpElementSrs, replaceElementSrs } from '@/utils/elementSrs'
+import { dumpClassicSrs, replaceClassicSrs } from '@/utils/classicSrs'
 
 export function localSnapshot(): SyncState {
   return {
@@ -18,6 +20,8 @@ export function localSnapshot(): SyncState {
     streak: getStreak(),
     plan: dumpPlan(),
     vocabSrs: dumpVocabSrs(),
+    elementSrs: dumpElementSrs(),
+    classicSrs: dumpClassicSrs(),
     updatedAt: Date.now(),
   }
 }
@@ -28,6 +32,8 @@ function applyServer(s: SyncState): void {
   if (s.streak) replaceStreak(s.streak)
   replacePlan(s.plan ?? {})
   replaceVocabSrs(s.vocabSrs ?? {})
+  replaceElementSrs(s.elementSrs ?? {})
+  replaceClassicSrs(s.classicSrs ?? {})
   if (typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:cloudloaded'))
 }
 

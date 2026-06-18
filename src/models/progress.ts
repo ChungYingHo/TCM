@@ -32,6 +32,7 @@ export interface DayPlanState {
   newVocab?: boolean
   reviewVocab?: boolean
   classic?: boolean
+  elementQuiz?: boolean // 今日元素小遊戲完成
   wrong?: boolean // due wrong-questions reviewed
   rest?: boolean // user acknowledged a planned light/rest day (keeps the streak alive)
 }
@@ -45,6 +46,13 @@ export interface VocabSrsEntry {
 }
 export type VocabSrsStore = Record<string, VocabSrsEntry> // word id -> card
 
+/** Element-game spaced-repetition card. Same Leitner shape as vocab; keyed by a
+ *  quiz-item id (`el:<z>` for an element, `bond:<formula>` for a bond example). */
+export type ElementSrsEntry = VocabSrsEntry
+export type ElementSrsStore = Record<string, ElementSrsEntry> // item id -> card
+// 古文 SRS reuses the same card shape, keyed by classic id.
+export type ClassicSrsStore = ElementSrsStore
+
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
   wrongbook: Record<string, WrongEntry>
@@ -52,6 +60,8 @@ export interface SyncState {
   streak?: Streak
   plan?: DailyPlanStore
   vocabSrs?: VocabSrsStore
+  elementSrs?: ElementSrsStore
+  classicSrs?: ClassicSrsStore
   updatedAt: number
 }
 

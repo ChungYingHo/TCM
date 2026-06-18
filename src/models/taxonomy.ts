@@ -25,13 +25,17 @@ export interface TaxonomyEntry {
   slug: string // note filename (src/content/notes/<slug>.mdx)
   short: string // compact label for chips/filters
   parent?: string // note-only sub-topic: borrows this broad tag's quiz pool + stats
+  // This tag's READING is merged into another note (that note `covers:` this tag). The tag
+  // still exists for question-tagging / 考點趨勢; tagSlug resolves it to `readIn` for the page.
+  readIn?: string
 }
 
 export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   chemistry: [
     { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
-    { tag: '週期性', slug: 'periodicity', short: '週期性' },
-    { tag: '化學鍵與分子結構', slug: 'chem-bonding', short: '化學鍵' },
+    // 週期性 + 化學鍵的「閱讀」併入 atomic-structure（covers 三個 tag）；tag 本身保留供題庫/趨勢。
+    { tag: '週期性', slug: 'periodicity', short: '週期性', readIn: 'atomic-structure' },
+    { tag: '化學鍵與分子結構', slug: 'chem-bonding', short: '化學鍵', readIn: 'atomic-structure' },
     { tag: '化學計量', slug: 'stoichiometry', short: '化學計量' },
     { tag: '氣體', slug: 'gas-laws', short: '氣體' },
     { tag: '溶液與依數性質', slug: 'solutions', short: '溶液' },
@@ -131,9 +135,10 @@ export function orderedTags(subject: Subject): string[] {
   return TAXONOMY[subject].map((e) => e.tag)
 }
 
-/** Note slug for a tag, or null if none. */
+/** Note slug for a tag (resolves `readIn` to the merged note), or null if none. */
 export function tagSlug(tag: string): string | null {
-  return TAG_TO_ENTRY.get(tag)?.slug ?? null
+  const e = TAG_TO_ENTRY.get(tag)
+  return e ? (e.readIn ?? e.slug) : null
 }
 
 /** Compact chip label for a tag (falls back to the tag itself). */

@@ -9,7 +9,7 @@
   import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
   import { tagSlug, tagShort } from '@/models/taxonomy'
-  import { ymd, zhDateLabel, dayKind } from '@/utils/date'
+  import { todayKey, parseYmd, zhDateLabel, dayKind } from '@/utils/date'
   import { dumpPlan, getDay } from '@/utils/dailyPlan'
   import { deriveCursors } from '@/utils/studyCursor'
   import { computeToday, type ScheduleData } from '@/utils/studyPlan'
@@ -33,7 +33,7 @@
   let planStore = $state(dumpPlan())
 
   let questions: QuestionRecord[] = []
-  const today = ymd(Date.now())
+  const today = todayKey() // 5 AM rollover (see date.ts)
 
   function refresh(qs: QuestionRecord[]) {
     const attempts = getAttempts()
@@ -61,39 +61,33 @@
   })
 
   const tp = $derived(computeToday(schedule, planStore, today))
-  const cur = $derived(
-    deriveCursors(planStore, schedule.perDay.newVocab, undefined, undefined, schedule.rhythm, schedule.range.start),
-  )
+  const cur = $derived(deriveCursors(planStore, schedule.perDay.newVocab))
   const todayState = $derived(getDay(today))
   const todayDone = $derived.by(() => {
     const s = todayState
     const notesDone = s.notes ? Object.values(s.notes).filter(Boolean).length : 0
-    return notesDone + (['quiz', 'newVocab', 'reviewVocab', 'classic', 'wrong'] as const).filter((f) => s[f]).length
+    return notesDone + (['quiz', 'newVocab', 'reviewVocab', 'classic', 'elementQuiz', 'wrong'] as const).filter((f) => s[f]).length
   })
   const covBySubject = $derived(new Map(cov.map((c) => [c.subject, c])))
   const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0)
 
   const paceBadge = $derived(
-    tp.pace.aheadDays > 0
-      ? { label: `超前 ${tp.pace.aheadDays} 天`, cls: 'text-success' }
-      : tp.pace.aheadDays < 0
-        ? { label: `落後 ${-tp.pace.aheadDays} 天`, cls: 'text-warning' }
-        : { label: '準時', cls: 'text-base-content/50' },
+    tp.pace.onTrack
+      ? { label: '跟得上考期', cls: 'text-success' }
+      : { label: `需加速 · 每天約 ${tp.pace.neededPerDay} 字`, cls: 'text-warning' },
   )
 
   // 書桌問候：日期當眉題、依時段打招呼，像坐下來翻開今天的進度
-  const dateLabel = zhDateLabel()
+  const dateLabel = zhDateLabel(new Date(parseYmd(today)))
   // friendly sub-label naming WHY today is light — shares dayKind with the 今日複習 hub so
   // home and the daily plan never disagree about the day (and reads the rhythm, not the
   // previously-hardcoded weekdays).
-  const kind = $derived(dayKind(today, schedule.range.start, schedule.examDate, schedule.rhythm))
+  const kind = $derived(dayKind(today, schedule.examDate))
   const dayLabel = $derived.by(() => {
     switch (kind) {
-      case 'rest': return '今天是放空日，休息也很好 🌿'
-      case 'buffer': return '週末複習日 · 重讀這週讀過的考點'
-      case 'commute': return '外出日（高雄）· 顧好單字就好，其他等明天'
-      case 'light': return '輕量日 · 複習為主'
-      default: return `今日已完成 ${todayDone} 段` // full / taper
+      case 'weekend': return '週末緩衝日 · 落後就追、跟上就休息 🌿'
+      case 'taper': return '考前衝刺 · 以複習為重'
+      default: return `今日已完成 ${todayDone} 段` // full weekday
     }
   })
   const hour = new Date().getHours()
@@ -172,10 +166,10 @@
         {@const c = covBySubject.get(s)}
         <div class="flex items-center gap-3 rounded-box border border-base-300 bg-base-100 p-3 shadow-soft">
           <span class="w-10 shrink-0 text-sm font-semibold">{SUBJECT_LABEL[s]}</span>
-          <div class="flex-1">
+          <div class="min-w-0 flex-1">
             <div class="h-2 overflow-hidden rounded-full bg-base-300"><span class="block h-full rounded-full bg-primary/70" style={`width:${c ? pct(c.practicedTags, c.totalTags) : 0}%`}></span></div>
           </div>
-          <span class="w-24 text-right text-xs tabular-nums text-base-content/55">考點 {c ? c.practicedTags : 0}/{c ? c.totalTags : 0}</span>
+          <span class="shrink-0 text-right text-xs tabular-nums text-base-content/55">考點 {c ? c.practicedTags : 0}/{c ? c.totalTags : 0}</span>
         </div>
       {/each}
     </div>

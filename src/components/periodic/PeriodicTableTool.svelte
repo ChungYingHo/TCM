@@ -372,7 +372,7 @@
         </div>
         <p class="mt-2.5 leading-relaxed text-base-content/70"><b>{meta.big}</b>。{meta.why}</p>
         {#if mode === 'ie'}
-          <a href="/notes/periodicity" class="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">用「連續游離能暴增」找價電子數 →</a>
+          <a href="/notes/atomic-structure" class="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">用「連續游離能暴增」找價電子數 →</a>
         {/if}
         {#if range}
           <div class="mt-3">

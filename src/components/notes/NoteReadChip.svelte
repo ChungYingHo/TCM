@@ -14,7 +14,7 @@
 
   let date = $state<string | null>(null)
   function refresh() {
-    const dates = noteReadDates(dumpPlan(), schedule.tracks.notes, schedule.rhythm, schedule.range.start)
+    const dates = noteReadDates(dumpPlan(), schedule.tracks.notes)
     date = dates[slug] ?? null
   }
   onMount(() => {

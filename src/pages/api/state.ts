@@ -41,6 +41,8 @@ export const PUT: APIRoute = async ({ request }) => {
         streak: cleanStreak(st.streak),
         plan: st.plan && typeof st.plan === 'object' ? st.plan : {},
         vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
+        elementSrs: st.elementSrs && typeof st.elementSrs === 'object' ? st.elementSrs : {},
+        classicSrs: st.classicSrs && typeof st.classicSrs === 'object' ? st.classicSrs : {},
         updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
       }
     }

@@ -7,7 +7,7 @@ import type { SyncState } from '@/models/progress'
 import type { QuestionRecord, Subject } from '@/models/question'
 import { kvEnabled, kvGet } from '@/utils/kv'
 import { checkPassword } from '@/utils/authToken'
-import { ymd } from '@/utils/date'
+import { todayKey } from '@/utils/date'
 import { deriveCursors } from '@/utils/studyCursor'
 import { computeToday, type ScheduleData } from '@/utils/studyPlan'
 import scheduleJson from '@/data/schedule.json'
@@ -58,10 +58,9 @@ export const GET: APIRoute = async ({ request }) => {
   const streak = state.streak ?? { count: 0, best: 0, lastDay: '' }
 
   const now = Date.now()
-  const today = new URL(request.url).searchParams.get('today') || ymd(now)
+  const today = new URL(request.url).searchParams.get('today') || todayKey(now)
   const tp = computeToday(schedule, plan, today)
-  // note progress counts only full-day reads (review days re-read finished notes)
-  const total = deriveCursors(plan, schedule.perDay.newVocab, undefined, undefined, schedule.rhythm, schedule.range.start)
+  const total = deriveCursors(plan, schedule.perDay.newVocab)
 
   // accuracy
   let attempted = 0
@@ -103,7 +102,7 @@ export const GET: APIRoute = async ({ request }) => {
     .map((d) => {
       const s = plan[d]
       const notesDone = s.notes ? Object.values(s.notes).filter(Boolean).length : 0
-      const flags = ['quiz', 'newVocab', 'reviewVocab', 'classic', 'wrong', 'rest'] as const
+      const flags = ['quiz', 'newVocab', 'reviewVocab', 'classic', 'elementQuiz', 'wrong', 'rest'] as const
       const done = notesDone + flags.filter((f) => s[f]).length
       return { date: d, done }
     })
@@ -124,8 +123,10 @@ export const GET: APIRoute = async ({ request }) => {
     vocab: {
       learned: total.vocab,
       total: vocabCount,
-      expectedByNow: tp.pace.vocabExpected,
-      aheadDays: tp.pace.aheadDays,
+      left: tp.pace.vocabLeft,
+      neededPerDay: tp.pace.neededPerDay,
+      dailyQuota: tp.pace.perDay,
+      onTrack: tp.pace.onTrack,
       srsTracked: Object.keys(vocabSrs).length,
       dueNow: dueVocab,
     },

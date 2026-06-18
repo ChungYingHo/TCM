@@ -13,10 +13,12 @@ const { subject, slug } = Astro.props
 const notes = (await getCollection('notes')).filter((n) => !n.data.draft)
 const titleBySlug = new Map(notes.map((n) => [n.id, n.data.title]))
 
-// 同科、依教學先後排好、且已發佈的筆記序列
+// 同科、依教學先後排好、且已發佈的筆記序列。多個 tag 可能 readIn 同一篇合併筆記
+// （如原子結構/週期性/化學鍵），故依 resolved slug 去重，合併篇只出現一次。
+const seen = new Set<string>()
 const seq = orderedTags(subject)
   .map((tag) => tagSlug(tag))
-  .filter((s): s is string => !!s && titleBySlug.has(s))
+  .filter((s): s is string => !!s && titleBySlug.has(s) && !seen.has(s) && !!seen.add(s))
   .map((s) => ({ slug: s, title: titleBySlug.get(s)! }))
 
 const i = seq.findIndex((n) => n.slug === slug)
