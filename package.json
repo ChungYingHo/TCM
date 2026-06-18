@@ -24,6 +24,7 @@
     "astro": "^5.17.1",
     "daisyui": "^5.5.17",
     "rehype-katex": "^7.0.1",
+    "remark-cjk-friendly": "^2.2.0",
     "remark-math": "^6.0.0",
     "svelte": "^5.49.1",
     "tailwindcss": "^4.1.18",

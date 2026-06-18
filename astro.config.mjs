@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 import vercel from '@astrojs/vercel'
 import path from 'node:path'
 import remarkMath from 'remark-math'
+import remarkCjkFriendly from 'remark-cjk-friendly'
 import rehypeKatex from 'rehype-katex'
 
 // Server output so middleware can enforce the password gate (incl. data/image routes).
@@ -24,7 +25,10 @@ export default defineConfig({
     // 把彎引號畫成「全形」，英文縮寫貼著中文時就裂出大空格（It’ s）。筆記是中英混排，
     // 這類位置很多，故全站改用直引號根治。（破折號/刪節號無人依賴，影響極小。）
     smartypants: false,
-    remarkPlugins: [remarkMath],
+    // CommonMark 的 emphasis flanking 規則對 CJK 不友善：當 **粗體** 的收尾 ** 夾在
+    // 全形標點（如「）」）與中文字之間（…）**是…），** 不符合 right-flanking → 不收尾，
+    // 整段 ** 變字面顯示。remark-cjk-friendly 修補 micromark 規則，讓中英混排的 ** 正常運作。
+    remarkPlugins: [remarkCjkFriendly, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
   adapter: vercel({ webAnalytics: { enabled: true } }),
