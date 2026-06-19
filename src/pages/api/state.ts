@@ -43,6 +43,7 @@ export const PUT: APIRoute = async ({ request }) => {
         vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
         elementSrs: st.elementSrs && typeof st.elementSrs === 'object' ? st.elementSrs : {},
         classicSrs: st.classicSrs && typeof st.classicSrs === 'object' ? st.classicSrs : {},
+        aminoAcidSrs: st.aminoAcidSrs && typeof st.aminoAcidSrs === 'object' ? st.aminoAcidSrs : {},
         updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
       }
     }

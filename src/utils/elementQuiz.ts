@@ -12,6 +12,7 @@ import {
   SERIES,
   QUIZ_CORE_ZS,
 } from '@/models/elements'
+import { mulberry32, shuffle, sample } from '@/utils/rng'
 
 export type QuestionType = 'z2el' | 'el2z' | 'name' | 'valence' | 'group' | 'period' | 'mass' | 'series'
 export type InputMode = 'choice' | 'fill'
@@ -30,30 +31,6 @@ export interface ElementQuestion {
 
 /** 所有題目項目 id（逐元素題池）。 */
 export const QUIZ_ITEM_IDS: string[] = QUIZ_CORE_ZS.map((z) => `el:${z}`)
-
-// ── 種子隨機（mulberry32）：同 seed → 同題，測試可重現 ──
-export function mulberry32(seed: number): () => number {
-  let a = seed >>> 0
-  return () => {
-    a = (a + 0x6d2b79f5) | 0
-    let t = Math.imul(a ^ (a >>> 15), 1 | a)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
-}
-
-function shuffle<T>(arr: T[], rng: () => number): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function sample<T>(pool: T[], n: number, rng: () => number): T[] {
-  return shuffle(pool, rng).slice(0, n)
-}
 
 // 填充作答正規化：去頭尾與內部空白、小寫（符號大小寫不敏感）。中文與數字保持原樣。
 function normalize(s: string): string {

@@ -8,7 +8,7 @@ import type { Subject } from '@/models/question'
 
 const KEY = 'tcm.dailyplan.v1'
 
-export type Section = 'quiz' | 'newVocab' | 'reviewVocab' | 'classic' | 'elementQuiz' | 'wrong' | 'rest'
+export type Section = 'quiz' | 'newVocab' | 'reviewVocab' | 'classic' | 'elementQuiz' | 'aminoAcid' | 'wrong' | 'rest'
 
 function read(): DailyPlanStore {
   if (typeof localStorage === 'undefined') return {}

@@ -16,9 +16,9 @@ describe('胺基酸結構產生器', () => {
       for (const p of s.prims) {
         const nums =
           p.k === 'bond' ? [p.x1, p.y1, p.x2, p.y2]
-          : p.k === 'atom' ? [p.x, p.y]
-          : p.k === 'ring' ? [p.cx, p.cy, p.rad]
-          : p.pts.split(/[ ,]/).map(Number)
+            : p.k === 'atom' ? [p.x, p.y]
+              : p.k === 'ring' ? [p.cx, p.cy, p.rad]
+                : p.pts.split(/[ ,]/).map(Number)
         for (const n of nums) expect(Number.isFinite(n), `${c} ${p.k}`).toBe(true)
       }
     }

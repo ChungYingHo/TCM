@@ -12,6 +12,7 @@ import { dumpPlan, replacePlan } from '@/utils/dailyPlan'
 import { dumpVocabSrs, replaceVocabSrs } from '@/utils/vocabSrs'
 import { dumpElementSrs, replaceElementSrs } from '@/utils/elementSrs'
 import { dumpClassicSrs, replaceClassicSrs } from '@/utils/classicSrs'
+import { dumpAminoAcidSrs, replaceAminoAcidSrs } from '@/utils/aminoAcidSrs'
 
 export function localSnapshot(): SyncState {
   return {
@@ -22,6 +23,7 @@ export function localSnapshot(): SyncState {
     vocabSrs: dumpVocabSrs(),
     elementSrs: dumpElementSrs(),
     classicSrs: dumpClassicSrs(),
+    aminoAcidSrs: dumpAminoAcidSrs(),
     updatedAt: Date.now(),
   }
 }
@@ -34,6 +36,7 @@ function applyServer(s: SyncState): void {
   replaceVocabSrs(s.vocabSrs ?? {})
   replaceElementSrs(s.elementSrs ?? {})
   replaceClassicSrs(s.classicSrs ?? {})
+  replaceAminoAcidSrs(s.aminoAcidSrs ?? {})
   if (typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:cloudloaded'))
 }
 

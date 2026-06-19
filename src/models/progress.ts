@@ -33,6 +33,7 @@ export interface DayPlanState {
   reviewVocab?: boolean
   classic?: boolean
   elementQuiz?: boolean // 今日元素小遊戲完成
+  aminoAcid?: boolean // 今日胺基酸測驗完成
   wrong?: boolean // due wrong-questions reviewed
   rest?: boolean // user acknowledged a planned light/rest day (keeps the streak alive)
 }
@@ -52,6 +53,8 @@ export type ElementSrsEntry = VocabSrsEntry
 export type ElementSrsStore = Record<string, ElementSrsEntry> // item id -> card
 // 古文 SRS reuses the same card shape, keyed by classic id.
 export type ClassicSrsStore = ElementSrsStore
+// 胺基酸 SRS reuses the same card shape, keyed by `aa:<code1>`.
+export type AminoAcidSrsStore = ElementSrsStore
 
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
@@ -62,6 +65,7 @@ export interface SyncState {
   vocabSrs?: VocabSrsStore
   elementSrs?: ElementSrsStore
   classicSrs?: ClassicSrsStore
+  aminoAcidSrs?: AminoAcidSrsStore
   updatedAt: number
 }
 

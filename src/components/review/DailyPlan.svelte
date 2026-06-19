@@ -21,6 +21,7 @@
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import ElementQuiz from '@/components/element/ElementQuiz.svelte'
   import ElementRecall from '@/components/element/ElementRecall.svelte'
+  import AminoAcidQuiz from '@/components/amino/AminoAcidQuiz.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import Segmented from '@/components/common/Segmented.svelte'
   import Icon from '@/components/common/Icon.svelte'
@@ -43,6 +44,7 @@
   let showReview = $state(false)
   let showElement = $state(false)
   let elementMode = $state<'quiz' | 'recall'>('quiz')
+  let showAmino = $state(false)
   let reviewClassicId = $state<string | null>(null) // soonest-due 古文 to re-read
 
   function refresh() {
@@ -88,6 +90,7 @@
     if (plan.newVocabIds.length) out.push({ key: 'newVocab', done: !!st.newVocab })
     if (reviewWords.length) out.push({ key: 'reviewVocab', done: !!st.reviewVocab })
     out.push({ key: 'elementQuiz', done: !!st.elementQuiz })
+    out.push({ key: 'aminoAcid', done: !!st.aminoAcid })
     if (todayClassic) out.push({ key: 'classic', done: !!st.classic })
     return out
   })
@@ -226,6 +229,22 @@
       {/if}
     {:else}
       <ElementRecall onfinish={() => { if (!st.elementQuiz) toggleSection('elementQuiz') }} />
+    {/if}
+  </section>
+
+  <!-- 3.5 今日胺基酸（看結構↔名、中文↔代號、分類；完整結構參考在 化學工具→胺基酸）-->
+  <section id="sec-amino" class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <div class="mb-3 flex items-center justify-between gap-2">
+      <h2 class="section-heading">今日胺基酸 · 結構對照</h2>
+      <label class="flex cursor-pointer items-center gap-2 text-sm">
+        <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.aminoAcid} onchange={() => toggleSection('aminoAcid')} />練過了
+      </label>
+    </div>
+    <p class="mb-3 text-sm text-base-content/55"><b>結構 ↔ 中文 ↔ 英文 ↔ 簡寫</b> 四者互相對照（看結構猜名、看名選結構…）——把 20 個胺基酸練熟，答對自動排間隔複習。完整結構參考在 <a class="link link-primary" href="/amino-acids">化學工具 → 胺基酸</a>。</p>
+    {#if showAmino}
+      <AminoAcidQuiz onfinish={() => { if (!st.aminoAcid) toggleSection('aminoAcid') }} />
+    {:else}
+      <button class="btn btn-primary btn-sm" onclick={() => (showAmino = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
     {/if}
   </section>
 

@@ -66,7 +66,7 @@
   // 每日只剩 單字／古文／元素 三件事（筆記/刷題/錯題已移出每日排程）→ 只計這幾段
   const todayDone = $derived.by(() => {
     const s = todayState
-    return (['newVocab', 'reviewVocab', 'classic', 'elementQuiz'] as const).filter((f) => s[f]).length
+    return (['newVocab', 'reviewVocab', 'classic', 'elementQuiz', 'aminoAcid'] as const).filter((f) => s[f]).length
   })
   const covBySubject = $derived(new Map(cov.map((c) => [c.subject, c])))
   const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0)
