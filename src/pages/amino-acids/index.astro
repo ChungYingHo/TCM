@@ -1,0 +1,59 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import { AMINO_ACIDS, AA_CATEGORY_LABEL, type AACategory } from '@/models/aminoAcids'
+import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
+
+export const prerender = false
+
+const CATS: AACategory[] = ['nonpolar', 'aromatic', 'polar', 'acidic', 'basic']
+const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category === c) }))
+---
+
+<Layout title="20 種胺基酸 · 後中醫題庫">
+  <header class="mb-6 flex flex-col gap-1.5">
+    <p class="page-kicker">化學工具</p>
+    <h1 class="page-title">20 種胺基酸</h1>
+    <p class="page-desc max-w-2xl">
+      每個胺基酸都是<b class="font-semibold text-base-content/80">共通的兩性離子骨架</b>（H₃N⁺–C(–COO⁻)–H）接上不同的<b class="font-semibold text-base-content/80">側鏈 R</b>——要背的就是那個 R。下圖<b class="font-semibold text-base-content/80">黑色為骨架、紅色為側鏈</b>，依側鏈的酸鹼極性分成五類。
+    </p>
+  </header>
+
+  <div class="mb-5 flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-base-content/55">
+    <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-4 rounded-sm" style="background:var(--color-base-content)"></span>共通骨架</span>
+    <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-4 rounded-sm" style="background:var(--color-error)"></span>側鏈 R（要背）</span>
+    <span>必需胺基酸 9 個：His・Ile・Leu・Lys・Met・Phe・Thr・Trp・Val</span>
+  </div>
+
+  <div class="flex flex-col gap-7">
+    {
+      byCat.map((grp) => (
+        <section>
+          <h2 class="section-heading mb-3">
+            {AA_CATEGORY_LABEL[grp.c]}
+            <span class="section-sub">{grp.items.length} 個</span>
+          </h2>
+          <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {grp.items.map((a) => (
+              <div class="flex flex-col items-center justify-between rounded-box border border-base-300 bg-base-100 p-3 shadow-soft">
+                <AminoAcidStructure code1={a.code1} size={148} client:visible />
+                <div class="mt-1.5 text-center">
+                  <div class="font-semibold leading-tight">
+                    {a.zh} <span class="font-normal text-base-content/55">{a.en}</span>
+                  </div>
+                  <div class="text-xs tabular-nums text-base-content/55">
+                    {a.code3}・{a.code1}
+                    {a.essential && <span class="ml-1 rounded-full bg-warning/15 px-1.5 py-0.5 text-[0.65rem] font-medium text-warning">必需</span>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+
+  <p class="mt-7 text-xs text-base-content/45">
+    結構為兩性離子（生理 pH）畫法；側鏈以縮寫結構式呈現，酸性／鹼性側鏈在生理 pH 多帶電（此處畫中性式以利辨識官能基）。分類採 Lehninger 五大類。
+  </p>
+</Layout>

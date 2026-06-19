@@ -256,11 +256,11 @@
       <dl class="mt-3.5 space-y-1.5 text-sm">
         <div class="flex items-baseline gap-2">
           <dt class="w-14 shrink-0 text-xs text-base-content/55">完整組態</dt>
-          <dd class="font-mono tracking-tight">{cur.config}</dd>
+          <dd class="min-w-0 break-all font-mono tracking-tight">{cur.config}</dd>
         </div>
         <div class="flex items-baseline gap-2">
           <dt class="w-14 shrink-0 text-xs text-base-content/55">簡寫</dt>
-          <dd class="font-mono tracking-tight font-semibold text-primary">{cur.shorthand}</dd>
+          <dd class="min-w-0 break-all font-mono tracking-tight font-semibold text-primary">{cur.shorthand}</dd>
         </div>
       </dl>
 

@@ -26,7 +26,13 @@ const nav: NavItem[] = [
       { href: '/classics', label: '古文' },
     ],
   },
-  { href: '/periodic-table', label: '週期表' },
+  {
+    label: '化學工具',
+    children: [
+      { href: '/periodic-table', label: '週期表' },
+      { href: '/amino-acids', label: '胺基酸' },
+    ],
+  },
   { href: '/analytics', label: '分析' },
 ]
 
