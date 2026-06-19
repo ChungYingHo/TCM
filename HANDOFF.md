@@ -134,7 +134,7 @@ curl -H "x-tcm-key: $SITE_PASSWORD" https://<你的網站>/api/progress-summary
 
 | 區塊 | 檔案 |
 |---|---|
-| 每日讀書頁 | `src/components/review/DailyPlan.svelte`（＋`DueQuestions`/`QuizQuestions`）、`src/pages/review/index.astro` |
+| 每日讀書頁 | `src/components/review/DailyPlan.svelte`（單字/古文/元素；＋`element/ElementQuiz`、`element/ElementRecall`）、`src/pages/review/index.astro` |
 | 排程大腦 | `src/utils/studyPlan.ts`、`studyCursor.ts`、`date.ts`（rhythm）、`dailyPlan.ts`、`vocabSrs.ts` |
 | 單字 | `src/components/vocab/{VocabApp,VocabCard,VocabStudy}.svelte`、`src/models/vocab.ts`、`src/data/vocab.json` |
 | 古文 | `src/components/classics/{ClassicsList,ClassicReader}.svelte`、`src/pages/classics/`、`src/models/classics.ts`、`src/data/classics.json` |

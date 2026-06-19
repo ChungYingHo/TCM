@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content'
 import { SUBJECTS, SUBJECT_LABEL } from '@/models/question'
 import type { Subject } from '@/models/question'
 import { byTaxonomyOrder } from '@/models/taxonomy'
-import NoteReadChip from '@/components/notes/NoteReadChip.svelte'
 
 export const prerender = false
 
@@ -47,7 +46,6 @@ const bySubject = SUBJECTS.map((s) => ({
                         {i + 1}
                       </span>
                       <span class="badge badge-ghost badge-sm">{n.data.tag}</span>
-                      <NoteReadChip slug={n.id} client:load />
                     </div>
                     <h3 class="font-display text-lg font-bold leading-snug">{n.data.title}</h3>
                     <p class="text-sm leading-relaxed text-base-content/55">{n.data.summary}</p>

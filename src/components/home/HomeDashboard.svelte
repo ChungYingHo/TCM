@@ -63,10 +63,10 @@
   const tp = $derived(computeToday(schedule, planStore, today))
   const cur = $derived(deriveCursors(planStore, schedule.perDay.newVocab))
   const todayState = $derived(getDay(today))
+  // 每日只剩 單字／古文／元素 三件事（筆記/刷題/錯題已移出每日排程）→ 只計這幾段
   const todayDone = $derived.by(() => {
     const s = todayState
-    const notesDone = s.notes ? Object.values(s.notes).filter(Boolean).length : 0
-    return notesDone + (['quiz', 'newVocab', 'reviewVocab', 'classic', 'elementQuiz', 'wrong'] as const).filter((f) => s[f]).length
+    return (['newVocab', 'reviewVocab', 'classic', 'elementQuiz'] as const).filter((f) => s[f]).length
   })
   const covBySubject = $derived(new Map(cov.map((c) => [c.subject, c])))
   const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0)
@@ -157,7 +157,7 @@
       <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
         <span class="font-semibold">到期錯題</span>
         <p class="mt-1 text-2xl font-bold tabular-nums">{loading ? '—' : due}<span class="text-base font-medium text-base-content/40"> 題</span></p>
-        <a href="/review" class="mt-2 inline-flex items-center gap-0.5 text-xs font-medium text-primary">去複習 <Icon name="arrowRight" class="h-3 w-3" /></a>
+        <a href="/wrongbook" class="mt-2 inline-flex items-center gap-0.5 text-xs font-medium text-primary">去複習 <Icon name="arrowRight" class="h-3 w-3" /></a>
       </div>
     </div>
 

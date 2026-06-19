@@ -1,8 +1,7 @@
 // Element-game spaced repetition (Leitner). Thin wrapper over the shared Leitner core
 // (utils/leitner.ts) — the exact same model as vocabSrs, so the user holds ONE mental
-// model of "due for review" across words and elements. Cards are keyed by quiz-item id:
-// `el:<z>` for an element, `bond:<formula>` for a bond example (see elementQuiz.ts).
-// Synced via cloud.ts under `elementSrs`.
+// model of "due for review" across words and elements. Cards are keyed by quiz-item id
+// `el:<z>` (an element; see elementQuiz.ts). Synced via cloud.ts under `elementSrs`.
 import type { ElementSrsStore } from '@/models/progress'
 import { createLeitner } from '@/utils/leitner'
 

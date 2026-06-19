@@ -1,7 +1,17 @@
 import { describe, expect, it } from 'vitest'
-import { ELEMENTS, totalElectrons } from '@/models/elements'
+import {
+  ELEMENTS,
+  totalElectrons,
+  groupLabelAB,
+  seriesOf,
+  COMMON_MASS,
+  RECALL_GROUPS,
+  RECALL_PERIODS,
+  RECALL_SERIES,
+} from '@/models/elements'
 
 const byZ = (z: number) => ELEMENTS.find((e) => e.z === z)!
+const symsOf = (zs: number[]) => zs.map((z) => byZ(z).sym)
 
 describe('元素資料完整性', () => {
   it('恰好 118 個元素、Z 連續', () => {
@@ -147,5 +157,76 @@ describe('考試用欄位：價電子與氧化態', () => {
     for (const e of ELEMENTS) {
       for (let i = 1; i < e.ox.length; i++) expect(e.ox[i]).toBeGreaterThan(e.ox[i - 1])
     }
+  })
+})
+
+describe('週期表地基：族(A/B)、系列、常用原子量、背誦整列', () => {
+  it('groupLabelAB：主族 A、過渡 B、f 區 null', () => {
+    expect(groupLabelAB(byZ(1))).toBe('1A') // H
+    expect(groupLabelAB(byZ(20))).toBe('2A') // Ca
+    expect(groupLabelAB(byZ(7))).toBe('5A') // N
+    expect(groupLabelAB(byZ(8))).toBe('6A') // O
+    expect(groupLabelAB(byZ(17))).toBe('7A') // Cl
+    expect(groupLabelAB(byZ(2))).toBe('8A') // He（第 18 族）
+    expect(groupLabelAB(byZ(10))).toBe('8A') // Ne
+    expect(groupLabelAB(byZ(21))).toBe('3B') // Sc
+    expect(groupLabelAB(byZ(25))).toBe('7B') // Mn
+    expect(groupLabelAB(byZ(26))).toBe('8B') // Fe（第 8 欄）
+    expect(groupLabelAB(byZ(28))).toBe('8B') // Ni（第 10 欄）
+    expect(groupLabelAB(byZ(29))).toBe('1B') // Cu
+    expect(groupLabelAB(byZ(30))).toBe('2B') // Zn
+    expect(groupLabelAB(byZ(57))).toBeNull() // La（f 區）
+    expect(groupLabelAB(byZ(92))).toBeNull() // U（f 區）
+  })
+
+  it('seriesOf：3d=Sc–Zn、4d=Y–Cd、5d=La,Hf–Hg；非過渡 null', () => {
+    expect(seriesOf(26)).toBe('3d') // Fe
+    expect(seriesOf(21)).toBe('3d') // Sc
+    expect(seriesOf(47)).toBe('4d') // Ag
+    expect(seriesOf(79)).toBe('5d') // Au
+    expect(seriesOf(57)).toBe('5d') // La（5d 起點）
+    expect(seriesOf(80)).toBe('5d') // Hg
+    expect(seriesOf(6)).toBeNull() // C
+    expect(seriesOf(31)).toBeNull() // Ga（p 區）
+  })
+
+  it('COMMON_MASS：24 個指定元素，值與標準原子量四捨五入一致', () => {
+    expect(Object.keys(COMMON_MASS)).toHaveLength(24)
+    expect(COMMON_MASS[17]).toBe(35.5) // Cl
+    expect(COMMON_MASS[29]).toBe(63.5) // Cu
+    expect(COMMON_MASS[80]).toBe(200.6) // Hg
+    expect(COMMON_MASS[1]).toBe(1) // H
+    expect(COMMON_MASS[26]).toBe(56) // Fe
+    expect(COMMON_MASS[47]).toBe(108) // Ag
+    expect(COMMON_MASS[79]).toBe(197) // Au
+    // 每個常用量都與該元素的標準原子量相差不到 0.6（即只是四捨五入，未寫錯）
+    for (const [z, m] of Object.entries(COMMON_MASS)) {
+      expect(Math.abs(m - byZ(Number(z)).mass)).toBeLessThan(0.6)
+    }
+  })
+
+  it('RECALL_GROUPS：主族整欄（含 H 在 1A、Og 在 8A），5A = N P As Sb Bi Mc', () => {
+    const g5a = RECALL_GROUPS.find((s) => s.label === '5A')!
+    expect(symsOf(g5a.zs)).toEqual(['N', 'P', 'As', 'Sb', 'Bi', 'Mc'])
+    const g1a = RECALL_GROUPS.find((s) => s.label === '1A')!
+    expect(symsOf(g1a.zs)[0]).toBe('H') // 含氫、且排首
+    const g8a = RECALL_GROUPS.find((s) => s.label === '8A')!
+    expect(symsOf(g8a.zs)).toEqual(['He', 'Ne', 'Ar', 'Kr', 'Xe', 'Rn', 'Og'])
+  })
+
+  it('RECALL_PERIODS：第 3 週期 = Na…Ar，且聚焦第 1–4 週期', () => {
+    expect(RECALL_PERIODS.map((s) => s.label)).toEqual(['第 1 週期', '第 2 週期', '第 3 週期', '第 4 週期'])
+    const p3 = RECALL_PERIODS.find((s) => s.label === '第 3 週期')!
+    expect(symsOf(p3.zs)).toEqual(['Na', 'Mg', 'Al', 'Si', 'P', 'S', 'Cl', 'Ar'])
+    const p4 = RECALL_PERIODS.find((s) => s.label === '第 4 週期')!
+    expect(p4.zs).toHaveLength(18) // K…Kr，含 3d 系列
+  })
+
+  it('RECALL_SERIES：3d/4d/5d 各 10 個，5d 以 La 起、含 Hg', () => {
+    expect(RECALL_SERIES.map((s) => s.label)).toEqual(['3d', '4d', '5d'])
+    for (const s of RECALL_SERIES) expect(s.zs).toHaveLength(10)
+    const s5d = RECALL_SERIES.find((s) => s.label === '5d')!
+    expect(symsOf(s5d.zs)[0]).toBe('La')
+    expect(symsOf(s5d.zs)).toContain('Hg')
   })
 })

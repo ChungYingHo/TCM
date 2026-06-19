@@ -308,7 +308,7 @@
       <div class="rounded-box border border-warning/30 bg-warning/10 p-5">
         <p class="font-bold">交卷後的複習建議</p>
         <p class="mt-1 text-sm text-base-content/70">
-          答錯 <span class="font-semibold">{wrongQs.length}</span> 題，已收進錯題本並排入「今日複習」{score.blank ? `（另有 ${score.blank} 題未作答，未列入錯題本）` : ''}。建議先讀以下考點筆記，再到複習佇列重練。
+          答錯 <span class="font-semibold">{wrongQs.length}</span> 題，已收進錯題本{score.blank ? `（另有 ${score.blank} 題未作答，未列入錯題本）` : ''}。建議先讀以下考點筆記，再到錯題本按間隔重練。
         </p>
         {#if weakTags.length}
           <div class="mt-3 flex flex-wrap gap-2">
@@ -324,7 +324,7 @@
             {/each}
           </div>
         {/if}
-        <a href="/review" class="btn btn-primary btn-sm mt-4">前往今日複習 <Icon name="arrowRight" class="h-4 w-4" /></a>
+        <a href="/wrongbook" class="btn btn-primary btn-sm mt-4">前往錯題本 <Icon name="arrowRight" class="h-4 w-4" /></a>
       </div>
     {:else if score.blank}
       <div class="rounded-box border border-info/30 bg-info/10 p-5 text-center">

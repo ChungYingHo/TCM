@@ -1,7 +1,7 @@
 <script lang="ts">
-  // 今日元素小遊戲：每天抽幾個元素/化合物，問原子序·組態·價電子·族週期·鍵別（全為選擇題）。
-  // 題型隨機輪換，連對 streak 與即時回饋帶點遊戲感；計分後寫入 elementSrs（與單字共用一套
-  // 「到期複習」心智模型）。
+  // 今日元素「測驗」：每天抽幾個元素，問原子序↔元素、中/英/符號、價電子、族、週期、常用原子量、
+  // 3d/4d/5d 系列。題型與作答方式（選擇／填充）隨機輪換，連對 streak 與即時回饋帶點遊戲感；
+  // 計分後寫入 elementSrs（與單字共用一套「到期複習」心智模型）。
   import { onMount } from 'svelte'
   import { dueIds, grade, learn, getCard } from '@/utils/elementSrs'
   import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type ElementQuestion } from '@/utils/elementQuiz'
@@ -14,6 +14,7 @@
   let revealed = $state(false)
   let chosen = $state<string | null>(null)
   let correct = $state(false)
+  let fillValue = $state('')
   let streak = $state(0)
   let best = $state(0)
   let correctCount = $state(0)
@@ -34,6 +35,7 @@
     i = 0
     revealed = false
     chosen = null
+    fillValue = ''
     streak = 0
     best = 0
     correctCount = 0
@@ -45,9 +47,8 @@
   onMount(build)
 
   const current = $derived(deck[i] ?? null)
-  // config / shorthand answers are long strings → give them full width + wrapping so they
-  // don't overflow and overlap (the 2-col grid is only for short answers like Z / 價電子 / 族).
-  const longChoice = $derived(current?.type === 'config' || current?.type === 'shorthand')
+  // long choices (中/英名) → full width + wrapping; short ones (Z / 族 / 週期) keep the 2-col grid.
+  const longChoice = $derived(current?.choices.some((c) => c.length > 8) ?? false)
 
   function submit(answerStr: string) {
     const q = current
@@ -68,10 +69,16 @@
     grade(q.itemId, ok)
   }
 
+  function submitFill(e: Event) {
+    e.preventDefault()
+    if (!revealed && fillValue.trim()) submit(fillValue)
+  }
+
   function next() {
     i += 1
     revealed = false
     chosen = null
+    fillValue = ''
     if (i >= deck.length) {
       finished = true
       onfinish?.()
@@ -115,19 +122,41 @@
     <!-- 題卡 -->
     <div class="rounded-box border border-base-300 bg-base-100 p-6 shadow-soft" class:shake={revealed && !correct}>
       <p class="text-center text-sm text-base-content/55">{current.prompt}</p>
-      <p class="mt-1 text-center font-display text-3xl font-bold tracking-tight">{current.subject}</p>
+      <p class="mt-1 text-center font-display text-3xl font-bold tracking-tight break-words">{current.subject}</p>
 
-      <div class="mt-5 grid gap-2 {longChoice ? '' : 'sm:grid-cols-2'}">
-        {#each current.choices as c (c)}
-          <button
-            class="btn {choiceClass(c)} h-auto min-h-11 whitespace-normal py-2 font-normal {longChoice ? 'break-all text-sm leading-snug' : 'text-base'}"
+      {#if current.input === 'fill'}
+        <!-- 填充作答 -->
+        <form class="mt-5 flex flex-col gap-2" onsubmit={submitFill}>
+          <input
+            type="text"
+            bind:value={fillValue}
             disabled={revealed}
-            onclick={() => submit(c)}
-          >
-            {c}
-          </button>
-        {/each}
-      </div>
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            inputmode="text"
+            placeholder="輸入答案"
+            class="input input-bordered w-full text-center text-lg font-semibold {revealed ? (correct ? 'input-success' : 'input-error') : ''}"
+            aria-label="填入答案"
+          />
+          {#if !revealed}
+            <button type="submit" class="btn btn-primary" disabled={!fillValue.trim()}>送出</button>
+          {/if}
+        </form>
+      {:else}
+        <!-- 選擇作答 -->
+        <div class="mt-5 grid gap-2 {longChoice ? '' : 'sm:grid-cols-2'}">
+          {#each current.choices as c (c)}
+            <button
+              class="btn {choiceClass(c)} h-auto min-h-11 whitespace-normal break-words py-2 text-base font-normal"
+              disabled={revealed}
+              onclick={() => submit(c)}
+            >
+              {c}
+            </button>
+          {/each}
+        </div>
+      {/if}
     </div>
 
     <!-- 回饋 -->
@@ -137,8 +166,8 @@
           <Icon name={correct ? 'check' : 'x'} class="h-5 w-5" />
           {correct ? '答對了！' : '答錯了'}
         </p>
-        {#if !correct}<p class="mt-1 text-sm">正解：<span class="font-semibold break-all">{current.answer}</span></p>{/if}
-        {#if current.explain}<p class="mt-1 text-sm text-base-content/70">{current.explain}</p>{/if}
+        {#if !correct}<p class="mt-1 text-sm">正解：<span class="font-semibold break-words">{current.answer}</span></p>{/if}
+        {#if current.explain}<p class="mt-1 text-sm text-base-content/70 break-words">{current.explain}</p>{/if}
         <button class="btn btn-primary btn-sm mt-3 w-full" onclick={next}>
           {i + 1 >= deck.length ? '完成' : '下一題'}
         </button>

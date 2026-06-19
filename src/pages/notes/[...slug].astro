@@ -5,7 +5,6 @@ import { getCollection, render } from 'astro:content'
 import { SUBJECT_LABEL } from '@/models/question'
 import type { Subject } from '@/models/question'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
-import NoteReadChip from '@/components/notes/NoteReadChip.svelte'
 import NoteNav from '@/components/notes/NoteNav.astro'
 
 export const prerender = false
@@ -30,7 +29,6 @@ const isReview = entry.data.kind === 'review'
         <span class="badge badge-primary">{SUBJECT_LABEL[subject]}</span>
         {isReview && <span class="badge badge-secondary">複習</span>}
         <span class="badge badge-ghost">{entry.data.tag}</span>
-        <NoteReadChip slug={entry.id} client:load />
       </div>
       <h1 class="font-display text-2xl font-bold">{entry.data.title}</h1>
       <article class="prose mt-5 max-w-none">
@@ -48,7 +46,6 @@ const isReview = entry.data.kind === 'review'
           <span class="badge badge-primary">{SUBJECT_LABEL[subject]}</span>
           {isReview && <span class="badge badge-secondary">複習</span>}
           <span class="badge badge-ghost">{entry.data.tag}</span>
-          <NoteReadChip slug={entry.id} client:load />
         </div>
         <h1 class="page-title">{entry.data.title}</h1>
 

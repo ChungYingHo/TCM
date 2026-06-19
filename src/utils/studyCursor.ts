@@ -61,27 +61,3 @@ export function deriveCursors(
   }
   return { vocab: vocabDays * perDayNewVocab, notes, classics, drill, noteDays }
 }
-
-/**
- * First-read date per note slug — for the「讀完 M/D」chip. Replays the completion log in
- * order, advancing each subject's note pointer as its notes are marked done, so the slug
- * picked matches the note that day actually served.
- */
-export function noteReadDates(
-  plan: DailyPlanStore,
-  notesBySubject: Partial<Record<Subject, string[]>>,
-): Record<string, string> {
-  const out: Record<string, string> = {}
-  const idx: Record<string, number> = Object.fromEntries(SUBJECTS.map((s) => [s, 0]))
-  for (const date of Object.keys(plan).sort()) {
-    const st = plan[date]
-    if (!st.notes) continue
-    for (const s of SUBJECTS) {
-      if (!st.notes[s]) continue
-      const list = notesBySubject[s] || []
-      if (list.length && !(list[idx[s] % list.length] in out)) out[list[idx[s] % list.length]] = date
-      idx[s] += 1
-    }
-  }
-  return out
-}

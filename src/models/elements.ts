@@ -382,13 +382,85 @@ export function elementByZ(z: number): Element | undefined {
   return ELEMENTS[z - 1]
 }
 
-// 每日元素小遊戲的題池：後中考點相關的子集（週期 1–4 主族 + 常考過渡金屬/鹵素/惰性、
-// 加上 Ag/I/Au/Hg）。刻意不含 f 區（價電子多變、非考點），讓價電子等題型都答得出來。
-export const QUIZ_ELEMENT_ZS: number[] = [
+// ── 週期表「地基」練習資料（每日元素遊戲：測驗＋背誦） ───────────────────────────
+// 老師：「元素表是一切之基礎」。以下全為靜態化學常識（族/週期/系列/常用原子量），非 LLM。
+
+/** 族別的美式 A／B 表示（1A–8A 主族、1B–8B 過渡）。f 區（鑭系/錒系）回 null。 */
+export function groupLabelAB(e: Element): string | null {
+  const g = e.group
+  if (e.block === 'f' || g === null) return null
+  if (g <= 2) return `${g}A` // 1A、2A
+  if (g >= 13) return `${g - 10}A` // 13→3A … 18→8A
+  if (g <= 7) return `${g}B` // 3B–7B
+  if (g <= 10) return '8B' // 第 8/9/10 欄同屬 8B（Fe/Co/Ni 三縱列）
+  return `${g - 10}B` // 11→1B、12→2B
+}
+
+/** B 族的 3d／4d／5d 過渡系列（La 當 5d 起點、不深究 f 區）。 */
+export const SERIES: Record<'3d' | '4d' | '5d', number[]> = {
+  '3d': [21, 22, 23, 24, 25, 26, 27, 28, 29, 30], // Sc–Zn
+  '4d': [39, 40, 41, 42, 43, 44, 45, 46, 47, 48], // Y–Cd
+  '5d': [57, 72, 73, 74, 75, 76, 77, 78, 79, 80], // La, Hf–Hg
+}
+
+/** 某原子序屬於哪一個 d 過渡系列；非過渡回 null。 */
+export function seriesOf(z: number): '3d' | '4d' | '5d' | null {
+  for (const k of ['3d', '4d', '5d'] as const) if (SERIES[k].includes(z)) return k
+  return null
+}
+
+// 老師指定要背熟的「常用原子量」（慣用整數/半整數值，避免四捨五入歧義；與 MASS[] 四捨五入一致）。
+export const COMMON_MASS: Record<number, number> = {
+  1: 1, 2: 4, 6: 12, 7: 14, 8: 16, 9: 19, 10: 20, // H He C N O F Ne
+  11: 23, 12: 24, 13: 27, 15: 31, 16: 32, 17: 35.5, 18: 40, // Na Mg Al P S Cl Ar
+  19: 39, 20: 40, 24: 52, 26: 56, 29: 63.5, // K Ca Cr Fe Cu
+  35: 80, 47: 108, 53: 127, 79: 197, 80: 200.6, // Br Ag I Au Hg
+}
+
+// 每日「測驗」逐元素題池：原子序 1–20 ∪ 3d 系列 ∪ 鹵素 Br/I ∪ 8A Kr/Xe/Rn ∪ 常用量補充 Ag/Au/Hg。
+// 較重的 4d/5d 只在「背誦·系列」模式整列背，不單獨抽考其名稱/原子量（呼應「不深究」）。
+export const QUIZ_CORE_ZS: number[] = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, // H–Ca
-  24, 25, 26, 28, 29, 30, // Cr Mn Fe Ni Cu Zn（常考過渡金屬）
-  35, 47, 53, 79, 80, // Br Ag I Au Hg
+  21, 22, 23, 24, 25, 26, 27, 28, 29, 30, // 3d 系列 Sc–Zn
+  35, 36, 47, 53, 54, 79, 80, 86, // Br Kr Ag I Xe Au Hg Rn
 ]
+
+/** 背誦模式的一個「整列」（一族／一週期／一系列）：依週期表順序排列的成員原子序。 */
+export interface RecallSet {
+  key: string
+  label: string // 1A、第 3 週期、3d…
+  name: string // 鹵素、—、3d 過渡系列…
+  zs: number[]
+}
+
+const MAIN_GROUP_NAME: Record<number, string> = {
+  1: '鹼金屬（含氫）', 2: '鹼土金屬', 13: '硼族', 14: '碳族',
+  15: '氮族', 16: '氧族', 17: '鹵素', 18: '惰性氣體',
+}
+
+/** 依主族 1A–8A 背（整欄，含 H 在 1A、Og 在 8A）。 */
+export const RECALL_GROUPS: RecallSet[] = [1, 2, 13, 14, 15, 16, 17, 18].map((g) => ({
+  key: `group-${g}`,
+  label: g <= 2 ? `${g}A` : `${g - 10}A`,
+  name: MAIN_GROUP_NAME[g],
+  zs: ELEMENTS.filter((e) => e.group === g).map((e) => e.z),
+}))
+
+/** 依週期背（聚焦第 1–4 週期；含 3d 系列在第 4 週期）。 */
+export const RECALL_PERIODS: RecallSet[] = [1, 2, 3, 4].map((p) => ({
+  key: `period-${p}`,
+  label: `第 ${p} 週期`,
+  name: '',
+  zs: ELEMENTS.filter((e) => e.period === p).map((e) => e.z),
+}))
+
+/** 依 B 族過渡系列背（3d／4d／5d，各 10 個）。 */
+export const RECALL_SERIES: RecallSet[] = (['3d', '4d', '5d'] as const).map((k) => ({
+  key: `series-${k}`,
+  label: k,
+  name: `${k} 過渡系列`,
+  zs: SERIES[k],
+}))
 
 export const CATEGORY_LABEL: Record<Category, string> = {
   alkali: '鹼金屬',
