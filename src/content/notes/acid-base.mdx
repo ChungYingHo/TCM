@@ -30,6 +30,8 @@ $$
 \text{莫耳濃度 } M = \frac{\text{溶質莫耳數 (mol)}}{\text{溶液體積 (L)}}
 $$
 
+（注意：大寫 **M** 在這裡是**莫耳濃度**（mol/L，讀作『莫耳』）；它和有些題目代表**莫耳質量**的 M（g/mol）只是恰好同一個字母，看單位與上下文分辨。）
+
 例：把 0.5 mol 的鹽溶成 2 L，濃度就是 0.5 ÷ 2 = 0.25 M。
 
 ## 二、log（對數）
@@ -71,7 +73,7 @@ $$
 \alpha = \frac{\text{已解離的酸}}{\text{原本的酸}} = \frac{[\text{H}^+]}{C} \times 100\%
 $$
 
-弱酸算出 $[\text{H}^+] \approx \sqrt{K_a \cdot C}$ 後，再除以原濃度 $C$ 就是 α。
+（C＝弱酸的**初始（分析）濃度**，mol/L）弱酸算出 $[\text{H}^+] \approx \sqrt{K_a \cdot C}$ 後，再除以原濃度 $C$ 就是 α。
 
 這條 $\sqrt{K_a\cdot C}$ 不用死背，從 $K_a$ 定義就推得出來：$K_a=\dfrac{[\text{H}^+][\text{A}^-]}{[\text{HA}]}$，弱酸解離產生的 H⁺ 與 A⁻ 等量（$[\text{H}^+]=[\text{A}^-]$），且解離很少使剩下的 $[\text{HA}]\approx C$，代入得 $K_a\approx\dfrac{[\text{H}^+]^2}{C}$，移項就是 $[\text{H}^+]\approx\sqrt{K_a\cdot C}$。（弱鹼把 H⁺→OH⁻、$K_a$→$K_b$ 同理。）
 
@@ -87,7 +89,7 @@ $$
 
 （H₂A⁻ 由 Ka1、Ka2 夾住；HA²⁻ 由 Ka2、Ka3 夾住。）
 
-**為什麼是「平均」而不是隨便取一個**：兩性物種同時在做兩件相反的事——往下丟 H⁺（受 Ka2 控制）和往上收 H⁺（即 Ka1 的逆反應）。當這兩個競爭趨勢勢均力敵時，可導出 $[\text{H}^+]\approx\sqrt{K_{a1}\cdot K_{a2}}$（兩個 Ka 的幾何平均）；取 −log 後乘積開根號就變成相加除以 2，於是 $\text{pH}\approx\tfrac12(\text{p}K_{a1}+\text{p}K_{a2})$。這也是它幾乎與初濃度無關的原因。
+**為什麼是「平均」而不是隨便取一個**：兩性物種同時在做兩件相反的事——往下丟 H⁺（受 Ka2 控制）和往上收 H⁺（即把 H₂A⁻ 收回一個 H⁺、變回 H₃A，這正是 Ka₁ 那步反應的**逆向**）。當這兩個競爭趨勢勢均力敵時，可導出 $[\text{H}^+]\approx\sqrt{K_{a1}\cdot K_{a2}}$（兩個 Ka 的幾何平均）；取 −log 後乘積開根號就變成相加除以 2，於是 $\text{pH}\approx\tfrac12(\text{p}K_{a1}+\text{p}K_{a2})$。這也是它幾乎與初濃度無關的原因。
 
 <Memorize>
 pH ＝ −log[H⁺]、pH ＋ pOH ＝ 14（25°C）。<br />
@@ -199,6 +201,8 @@ $$
 $$
 [\text{OH}^-] \approx \sqrt{K_b \cdot C} \;\Longrightarrow\; \text{pOH} = -\log[\text{OH}^-] \;\Longrightarrow\; \text{pH} = 14 - \text{pOH}
 $$
+
+（C＝弱鹼的**初始（分析）濃度**，mol/L）
 
 **給 pH 反求 $K_b$**：先由 pH 得 pOH、再得 $[\text{OH}^-]$，代回：
 
