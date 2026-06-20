@@ -387,30 +387,34 @@
     </div>
   </div>
 
-  <!-- 單格（主表與 f 區共用；非趨勢檢視時底部顯示原子量，趨勢檢視顯示該性質數值） -->
+  <!-- 單格：頂列原子序＋（趨勢檢視顯示該性質數值，否則原子量）；中段符號→中文名→英文名。 -->
   {#snippet cellBtn(c: Cell, extra: string)}
     <button
       type="button"
       data-z={c.e.z}
       onclick={() => (sel = c.e.z)}
       style={`grid-column:${c.col};grid-row:${c.row};background:${cellBg(c.e)};${lightText(c.e) ? 'color:var(--color-primary-content)' : ''}`}
-      class={`flex aspect-square flex-col items-center justify-center rounded-[0.35rem] leading-none transition ${extra} ${sel === c.e.z ? 'ring-2 ring-primary ring-offset-1 ring-offset-base-100' : 'hover:brightness-95'}`}
+      class={`flex aspect-square flex-col items-center justify-center gap-px overflow-hidden rounded-[0.4rem] px-0.5 leading-none transition ${extra} ${sel === c.e.z ? 'ring-2 ring-primary ring-offset-1 ring-offset-base-100' : 'hover:brightness-95'}`}
       aria-label={`${c.e.zh || c.e.en} ${c.e.sym}，原子序 ${c.e.z}`}
       aria-pressed={sel === c.e.z}
     >
-      <span class="text-[0.5rem] opacity-60">{c.e.z}</span>
-      <span class="text-[0.82rem] font-bold">{c.e.sym}</span>
-      {#if isTrend(mode)}
-        <span class="hidden text-[0.5rem] tabular-nums opacity-75 sm:block">{trendText(trendVal(c.e, mode), mode)}</span>
-      {:else}
-        <span class="hidden text-[0.46rem] tabular-nums opacity-55 sm:block">{c.e.mass.toFixed(c.e.mass >= 100 ? 0 : 1)}</span>
-      {/if}
+      <span class="flex w-full items-center justify-between text-[0.5rem] tabular-nums opacity-60">
+        <span>{c.e.z}</span>
+        {#if isTrend(mode)}
+          <span>{trendText(trendVal(c.e, mode), mode)}</span>
+        {:else}
+          <span class="hidden sm:inline">{c.e.mass.toFixed(c.e.mass >= 100 ? 0 : 1)}</span>
+        {/if}
+      </span>
+      <span class="text-[0.9rem] font-bold">{c.e.sym}</span>
+      {#if c.e.zh}<span class="text-[0.6rem] font-medium opacity-90">{c.e.zh}</span>{/if}
+      <span class={`w-full truncate text-center opacity-70 ${c.e.en.length > 11 ? 'text-[0.42rem]' : 'text-[0.5rem]'}`}>{c.e.en}</span>
     </button>
   {/snippet}
 
   <!-- 週期表本體 -->
   <div class="overflow-x-auto pb-1">
-    <div class="grid w-max gap-[3px]" style="grid-template-columns: repeat(18, 2.5rem);">
+    <div class="grid w-max gap-[3px]" style="grid-template-columns: repeat(18, 3.5rem);">
       {#each mainCells as c (c.e.z)}
         {@render cellBtn(c, '')}
       {/each}
