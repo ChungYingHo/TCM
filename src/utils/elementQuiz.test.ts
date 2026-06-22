@@ -20,7 +20,7 @@ describe('makeQuestion（週期表地基）', () => {
 
   it('未知項目回 null；鍵別題已移除', () => {
     expect(makeQuestion('el:999', 1)).toBeNull()
-    expect(makeQuestion('bond:NaCl', 1)).toBeNull() // 不再支援鍵別
+    expect(makeQuestion('bond:NaCl', 1)).toBeNull()
     expect(makeQuestion('bogus', 1)).toBeNull()
   })
 
@@ -30,43 +30,31 @@ describe('makeQuestion（週期表地基）', () => {
     for (const id of QUIZ_ITEM_IDS) expect(makeQuestion(id, 7), `no q for ${id}`).not.toBeNull()
   })
 
-  it('選擇題＝恰 4 個不重複選項且含正解；填充題＝無選項、accept 含正解（全項目 × 多種子）', () => {
-    // 寬種子掃描：未來改題池若讓某干擾池塌縮（選項不足 4）會在此大聲報錯，而非靜默壞在 UI。
+  it('Z=1-36 全在題池中', () => {
+    for (let z = 1; z <= 36; z++) expect(QUIZ_ITEM_IDS, `el:${z} missing`).toContain(`el:${z}`)
+  })
+
+  it('全部選擇題：恰 4 個不重複選項且含正解（全項目 × 多種子）', () => {
     for (const id of QUIZ_ITEM_IDS) {
       for (let s = 1; s <= 40; s++) {
         const q = makeQuestion(id, s)!
-        if (q.input === 'choice') {
-          expect(q.choices.length, `${id}@${s}`).toBe(4)
-          expect(new Set(q.choices).size, `${id}@${s} dup`).toBe(4)
-          expect(q.choices, `${id}@${s} missing answer`).toContain(q.answer)
-        } else {
-          expect(q.choices, `${id}@${s} fill 不該有選項`).toHaveLength(0)
-          expect(q.accept, `${id}@${s} accept 缺正解`).toContain(q.answer)
-        }
+        expect(q.choices.length, `${id}@${s}`).toBe(4)
+        expect(new Set(q.choices).size, `${id}@${s} dup`).toBe(4)
+        expect(q.choices, `${id}@${s} missing answer`).toContain(q.answer)
       }
     }
   })
 
-  it('checkAnswer：選擇題只認正解；填充題去空白、符號大小寫不敏感', () => {
-    const choice = findQ('el:6', (q) => q.input === 'choice')
-    expect(checkAnswer(choice, choice.answer)).toBe(true)
-    const wrong = choice.choices.find((c) => c !== choice.answer)!
-    expect(checkAnswer(choice, wrong)).toBe(false)
-
-    const fill = findQ('el:6', (q) => q.input === 'fill')
-    expect(checkAnswer(fill, fill.answer)).toBe(true)
-    expect(checkAnswer(fill, ` ${fill.answer.toLowerCase()} `)).toBe(true)
+  it('checkAnswer：只認正解', () => {
+    const q = findQ('el:6', () => true)
+    expect(checkAnswer(q, q.answer)).toBe(true)
+    const wrong = q.choices.find((c) => c !== q.answer)!
+    expect(checkAnswer(q, wrong)).toBe(false)
   })
 
   it('原子序↔元素雙向都會出（看到 6→碳/C、看到碳→6）', () => {
     expect(findQ('el:6', (q) => q.type === 'z2el')).toBeTruthy()
     expect(findQ('el:6', (q) => q.type === 'el2z').answer).toBe('6')
-  })
-
-  it('z2el 填充可填符號或中文（碳：C 或 碳 皆對）', () => {
-    const q = findQ('el:6', (x) => x.type === 'z2el' && x.input === 'fill')
-    expect(checkAnswer(q, 'C')).toBe(true)
-    expect(checkAnswer(q, '碳')).toBe(true)
   })
 
   it('永不問過渡金屬的價電子（Fe 價數多變）', () => {
@@ -89,7 +77,7 @@ describe('makeQuestion（週期表地基）', () => {
         if (makeQuestion(id, s)!.type === 'mass') expect(COMMON_MASS[z], `${id} 不在 COMMON_MASS`).toBeDefined()
       }
     }
-    expect(findQ('el:17', (x) => x.type === 'mass').answer).toBe('35.5') // Cl
+    expect(findQ('el:17', (x) => x.type === 'mass').answer).toBe('35.5')
   })
 
   it('系列題：正解為該系列真成員、干擾項不在該系列（Fe 在 3d）', () => {

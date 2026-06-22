@@ -20,10 +20,8 @@
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import ElementQuiz from '@/components/element/ElementQuiz.svelte'
-  import ElementRecall from '@/components/element/ElementRecall.svelte'
   import AminoAcidQuiz from '@/components/amino/AminoAcidQuiz.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
-  import Segmented from '@/components/common/Segmented.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
   const schedule = scheduleJson as unknown as ScheduleData
@@ -43,7 +41,6 @@
   let reviewIds = $state<string[]>([])
   let showReview = $state(false)
   let showElement = $state(false)
-  let elementMode = $state<'quiz' | 'recall'>('quiz')
   let showAmino = $state(false)
   let reviewClassicId = $state<string | null>(null) // soonest-due 古文 to re-read
 
@@ -210,25 +207,11 @@
         <input type="checkbox" class="checkbox checkbox-primary checkbox-sm" checked={!!st.elementQuiz} onchange={() => toggleSection('elementQuiz')} />練過了
       </label>
     </div>
-    <p class="mb-3 text-sm text-base-content/55">把元素表練成反射——原子序↔元素、A 族價電子、8A 原子序、族與週期、常用原子量、英中符號、3d/4d/5d 系列。<b>測驗</b>每天抽考、答對自動排間隔複習；<b>背誦</b>一族一族、一週期一週期填符號主動回想。</p>
-    <div class="mb-3">
-      <Segmented
-        ariaLabel="元素練習模式"
-        bind:value={elementMode}
-        options={[
-          { value: 'quiz', label: '測驗' },
-          { value: 'recall', label: '背誦' },
-        ]}
-      />
-    </div>
-    {#if elementMode === 'quiz'}
-      {#if showElement}
-        <ElementQuiz onfinish={() => { if (!st.elementQuiz) toggleSection('elementQuiz') }} />
-      {:else}
-        <button class="btn btn-primary btn-sm" onclick={() => (showElement = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
-      {/if}
+    <p class="mb-3 text-sm text-base-content/55">把元素表練成反射——原子序↔元素、A 族價電子、8A 原子序、族與週期、常用原子量、英中符號、3d/4d/5d 系列。每天抽考，答對自動排間隔複習。</p>
+    {#if showElement}
+      <ElementQuiz onfinish={() => { if (!st.elementQuiz) toggleSection('elementQuiz') }} />
     {:else}
-      <ElementRecall onfinish={() => { if (!st.elementQuiz) toggleSection('elementQuiz') }} />
+      <button class="btn btn-primary btn-sm" onclick={() => (showElement = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
     {/if}
   </section>
 

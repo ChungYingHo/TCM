@@ -1,7 +1,7 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
-import ElementRecall from '@/components/element/ElementRecall.svelte'
+import TeacherHighlights from '@/components/element/TeacherHighlights.astro'
 
 export const prerender = false
 ---
@@ -11,20 +11,28 @@ export const prerender = false
     <p class="page-kicker">化學工具</p>
     <h1 class="page-title">元素週期表</h1>
     <p class="page-desc max-w-2xl">
-      每格直接標出<b class="font-semibold text-base-content/80">原子序、符號、中文名與英文名</b>，點開元素再看<b class="font-semibold text-base-content/80">電子組態（含稀有氣體簡寫）、價電子數與常見氧化態</b>；切換檢視可把<b class="font-semibold text-base-content/80">電負度、原子半徑、游離能、電子親和力</b>整表上色成熱圖，並附「往右、往下」為何增減的考點解說。最下方還能<b class="font-semibold text-base-content/80">依族、依週期默背元素</b>。
+      老師畫重點的速查表、完整互動週期表（電子組態、電負度/半徑/游離能熱圖）。
     </p>
   </header>
 
-  <PeriodicTableTool client:load />
-
-  <section class="mt-10 border-t border-base-200 pt-8">
+  <!-- 老師畫重點 -->
+  <section class="mb-10">
     <header class="mb-4 flex flex-col gap-1.5">
-      <p class="page-kicker">記憶練習</p>
-      <h2 class="section-heading">背元素 · 依族／依週期</h2>
+      <p class="page-kicker">老師畫重點</p>
+      <h2 class="section-heading">必背速查表</h2>
+    </header>
+    <TeacherHighlights />
+  </section>
+
+  <!-- 互動週期表 -->
+  <section class="border-t border-base-200 pt-8">
+    <header class="mb-4 flex flex-col gap-1.5">
+      <p class="page-kicker">互動工具</p>
+      <h2 class="section-heading">完整週期表</h2>
       <p class="page-desc max-w-2xl">
-        老師說「元素表是一切之基礎」。一族一族（由上而下）、一週期一週期（由左而右）默寫元素符號，再對答案；也能切到 B 族 3d／4d／5d 過渡系列。
+        點開元素看<b class="font-semibold text-base-content/80">電子組態、價電子、氧化態</b>；切換檢視把<b class="font-semibold text-base-content/80">電負度、原子半徑、游離能、電子親和力</b>上色成熱圖。
       </p>
     </header>
-    <ElementRecall client:visible />
+    <PeriodicTableTool client:load />
   </section>
 </Layout>

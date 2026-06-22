@@ -261,14 +261,14 @@ const sup = (n: number) =>
 
 const fmt = (subs: Subshell[]) => subs.map((s) => `${s.n}${L_LETTER[s.l]}${sup(s.count)}`).join('')
 
-const NOBLE_GASES = [2, 10, 18, 36, 54, 86]
+export const NOBLE_GAS_ZS = [2, 10, 18, 36, 54, 86]
 
 function configFull(z: number): string {
   return fmt(subshells(z))
 }
 
 function configShorthand(z: number): string {
-  const core = [...NOBLE_GASES].reverse().find((n) => n < z)
+  const core = [...NOBLE_GAS_ZS].reverse().find((n) => n < z)
   if (!core) return configFull(z) // H、He 無內層可簡寫
   const coreSubs = subshells(core)
   const valence = subshells(z).filter((s) => !coreSubs.some((c) => c.n === s.n && c.l === s.l))
@@ -417,12 +417,19 @@ export const COMMON_MASS: Record<number, number> = {
   35: 80, 47: 108, 53: 127, 79: 197, 80: 200.6, // Br Ag I Au Hg
 }
 
-// 每日「測驗」逐元素題池：原子序 1–20 ∪ 3d 系列 ∪ 鹵素 Br/I ∪ 8A Kr/Xe/Rn ∪ 常用量補充 Ag/Au/Hg。
-// 較重的 4d/5d 只在「背誦·系列」模式整列背，不單獨抽考其名稱/原子量（呼應「不深究」）。
+// 老師指定要背的 B 族欄位（6B、8B②③、1B、2B；考試範圍只到 5d，超重元素不列）。
+export const B_GROUP_HIGHLIGHT: { label: string; note: string; zs: number[] }[] = [
+  { label: '6B', note: '', zs: [24, 42, 74] },
+  { label: '8B②', note: 'Co 開始', zs: [27, 45, 77] },
+  { label: '8B③', note: 'Ni 開始', zs: [28, 46, 78] },
+  { label: '1B', note: '', zs: [29, 47, 79] },
+  { label: '2B', note: '', zs: [30, 48, 80] },
+]
+
+// 每日「測驗」題池：老師指定 Z=1–36 必背 ∪ 常用原子量補充 Ag/I/Au/Hg ∪ 8A Xe/Rn。
 export const QUIZ_CORE_ZS: number[] = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, // H–Ca
-  21, 22, 23, 24, 25, 26, 27, 28, 29, 30, // 3d 系列 Sc–Zn
-  35, 36, 47, 53, 54, 79, 80, 86, // Br Kr Ag I Xe Au Hg Rn
+  ...Array.from({ length: 36 }, (_, i) => i + 1), // H–Kr（Z=1–36 完整）
+  47, 53, 54, 79, 80, 86, // Ag I Xe Au Hg Rn
 ]
 
 /** 背誦模式的一個「整列」（一族／一週期／一系列）：依週期表順序排列的成員原子序。 */
