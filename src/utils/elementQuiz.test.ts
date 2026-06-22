@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type ElementQuestion } from '@/utils/elementQuiz'
-import { ELEMENTS, COMMON_MASS, seriesOf } from '@/models/elements'
+import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, availableTypesForElements, quizzableCount, type ElementQuestion } from '@/utils/elementQuiz'
+import { ELEMENTS, COMMON_MASS, seriesOf, NOBLE_GAS_ZS } from '@/models/elements'
 
 /** First seed that yields a question matching `pred` for an item. */
 function findQ(itemId: string, pred: (q: ElementQuestion) => boolean): ElementQuestion {
@@ -86,5 +86,31 @@ describe('makeQuestion（週期表地基）', () => {
     expect(q.answer).toBe('Fe')
     expect(seriesOfSym(q.answer)).toBe('3d')
     for (const c of q.choices) if (c !== q.answer) expect(seriesOfSym(c)).not.toBe('3d')
+  })
+
+  it('allowedTypes 過濾：只允許 mass → 只出 mass 題', () => {
+    for (let s = 1; s <= 50; s++) {
+      const q = makeQuestion('el:26', s, ['mass'])!
+      expect(q.type).toBe('mass')
+    }
+  })
+
+  it('allowedTypes 過濾：元素無對應題型 → null', () => {
+    // Li(3) 不在 COMMON_MASS → 只允許 mass 時回 null
+    expect(makeQuestion('el:3', 1, ['mass'])).toBeNull()
+  })
+
+  it('availableTypesForElements 回傳正確題型', () => {
+    const types = availableTypesForElements([26]) // Fe
+    expect(types.has('z2el')).toBe(true)
+    expect(types.has('mass')).toBe(true)
+    expect(types.has('series')).toBe(true)
+    expect(types.has('valence')).toBe(false) // 過渡金屬無價電子題
+  })
+
+  it('quizzableCount 計數正確', () => {
+    expect(quizzableCount(NOBLE_GAS_ZS)).toBe(6)
+    expect(quizzableCount(NOBLE_GAS_ZS, ['mass'])).toBeLessThan(6)
+    expect(quizzableCount([999], ['z2el'])).toBe(0)
   })
 })

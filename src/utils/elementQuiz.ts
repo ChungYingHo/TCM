@@ -26,8 +26,45 @@ export interface ElementQuestion {
   explain?: string // 作答後顯示的詳解
 }
 
+export interface QuizMode {
+  key: string
+  types: QuestionType[]
+  label: string
+  example: [string, string]
+}
+
+export const QUIZ_MODES: QuizMode[] = [
+  { key: 'z', types: ['z2el', 'el2z'], label: '原子序 ↔ 元素', example: ['26', 'Fe 鐵'] },
+  { key: 'name', types: ['name'], label: '名稱 ↔ 符號', example: ['Gold', 'Au'] },
+  { key: 'mass', types: ['mass'], label: '原子量', example: ['Fe', '55.85'] },
+  { key: 'valence', types: ['valence'], label: '價電子', example: ['O', '6'] },
+  { key: 'group', types: ['group'], label: '族（A/B）', example: ['Cl', '7A'] },
+  { key: 'period', types: ['period'], label: '週期', example: ['Na', '3'] },
+  { key: 'series', types: ['series'], label: 'd 系列', example: ['3d', 'Fe'] },
+]
+
 /** 所有題目項目 id（逐元素題池）。 */
 export const QUIZ_ITEM_IDS: string[] = QUIZ_CORE_ZS.map((z) => `el:${z}`)
+
+/** 一組元素能出哪些題型。 */
+export function availableTypesForElements(zs: number[]): Set<QuestionType> {
+  const types = new Set<QuestionType>()
+  for (const z of zs) {
+    const e = elementByZ(z)
+    if (e) for (const t of elementTypes(e)) types.add(t)
+  }
+  return types
+}
+
+/** 在指定題型下，有幾個元素能出題。 */
+export function quizzableCount(zs: number[], allowedTypes?: QuestionType[]): number {
+  if (!allowedTypes?.length) return zs.filter((z) => elementByZ(z)).length
+  return zs.filter((z) => {
+    const e = elementByZ(z)
+    if (!e) return false
+    return elementTypes(e).some((t) => allowedTypes.includes(t))
+  }).length
+}
 
 /** 選項相符即正確。 */
 export function checkAnswer(q: ElementQuestion, choice: string): boolean {
@@ -60,8 +97,10 @@ function neighbours(z: number, rng: () => number): Element[] {
 
 const AB_GROUP_POOL = ['1A', '2A', '3A', '4A', '5A', '6A', '7A', '8A', '1B', '2B', '3B', '4B', '5B', '6B', '7B', '8B']
 
-function makeElementQuestion(e: Element, rng: () => number): ElementQuestion {
-  const types = elementTypes(e)
+function makeElementQuestion(e: Element, rng: () => number, allowedTypes?: QuestionType[]): ElementQuestion | null {
+  let types = elementTypes(e)
+  if (allowedTypes?.length) types = types.filter((t) => allowedTypes.includes(t))
+  if (!types.length) return null
   const type = types[Math.floor(rng() * types.length)]
   const id = `el:${e.z}`
   const base = { itemId: id, type, explain: recap(e) } as const
@@ -135,11 +174,11 @@ function choiceQ(
 }
 
 /** 由項目 id + 種子產生一題（種子相同 → 題目相同）。未知 id 回 null。 */
-export function makeQuestion(itemId: string, seed: number): ElementQuestion | null {
+export function makeQuestion(itemId: string, seed: number, allowedTypes?: QuestionType[]): ElementQuestion | null {
   const rng = mulberry32(seed)
   if (itemId.startsWith('el:')) {
     const e = elementByZ(Number(itemId.slice(3)))
-    return e ? makeElementQuestion(e, rng) : null
+    return e ? makeElementQuestion(e, rng, allowedTypes) : null
   }
   return null
 }

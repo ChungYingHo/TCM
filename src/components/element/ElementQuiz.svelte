@@ -4,10 +4,20 @@
   // 計分後寫入 elementSrs（與單字共用一套「到期複習」心智模型）。
   import { onMount } from 'svelte'
   import { dueIds, grade, learn, getCard } from '@/utils/elementSrs'
-  import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type ElementQuestion } from '@/utils/elementQuiz'
+  import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type ElementQuestion, type QuestionType } from '@/utils/elementQuiz'
   import Icon from '@/components/common/Icon.svelte'
 
-  let { count = 8, onfinish }: { count?: number; onfinish?: () => void } = $props()
+  let {
+    count = 8,
+    onfinish,
+    elementZs,
+    questionTypes,
+  }: {
+    count?: number
+    onfinish?: () => void
+    elementZs?: number[]
+    questionTypes?: QuestionType[]
+  } = $props()
 
   let deck = $state<ElementQuestion[]>([])
   let i = $state(0)
@@ -21,16 +31,18 @@
   let finished = $state(false)
 
   function build() {
-    const due = dueIds().slice(0, count)
+    const pool = elementZs ? elementZs.map((z) => `el:${z}`) : QUIZ_ITEM_IDS
+    const poolSet = new Set(pool)
+    const due = dueIds().filter((id) => poolSet.has(id)).slice(0, count)
     const seen = new Set(due)
-    const fresh = QUIZ_ITEM_IDS.filter((id) => !getCard(id) && !seen.has(id))
+    const fresh = pool.filter((id) => !getCard(id) && !seen.has(id))
     for (let k = fresh.length - 1; k > 0; k--) {
       const j = Math.floor(Math.random() * (k + 1))
       ;[fresh[k], fresh[j]] = [fresh[j], fresh[k]]
     }
     const ids = [...due, ...fresh].slice(0, count)
     const base = Math.floor(Math.random() * 1e9)
-    deck = ids.map((id, idx) => makeQuestion(id, base + idx)).filter((q): q is ElementQuestion => !!q)
+    deck = ids.map((id, idx) => makeQuestion(id, base + idx, questionTypes)).filter((q): q is ElementQuestion => !!q)
     i = 0
     revealed = false
     chosen = null

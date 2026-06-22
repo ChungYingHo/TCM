@@ -2,6 +2,7 @@
 import Layout from '@/layouts/Layout.astro'
 import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
 import TeacherHighlights from '@/components/element/TeacherHighlights.astro'
+import ElementQuizPage from '@/components/element/ElementQuizPage.svelte'
 
 export const prerender = false
 ---
@@ -22,6 +23,18 @@ export const prerender = false
       <h2 class="section-heading">必背速查表</h2>
     </header>
     <TeacherHighlights />
+  </section>
+
+  <!-- 自由練習 -->
+  <section class="mb-10">
+    <header class="mb-4 flex flex-col gap-1.5">
+      <p class="page-kicker">自由練習</p>
+      <h2 class="section-heading">元素測驗</h2>
+      <p class="page-desc max-w-2xl">
+        選擇題型和範圍，自由練習。每日計畫則會強制練習老師重點。
+      </p>
+    </header>
+    <ElementQuizPage client:load />
   </section>
 
   <!-- 互動週期表 -->
