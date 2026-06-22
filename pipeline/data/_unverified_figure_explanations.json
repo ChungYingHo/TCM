@@ -1,0 +1,282 @@
+{
+  "_comment": "這些題的詳解是在 2026-06-23 session 中，因 API 圖片上限無法 Read .webp 的情況下，僅憑題幹文字描述 + 化學原理撰寫。建議未來 session 逐題 Read 圖片比對，確認解釋與圖示一致；若有誤需修正 question_explanations.json 並重跑 gen_explanations.py。",
+  "_severity_levels": {
+    "high": "選項為純結構圖（無文字標示），解釋可能與圖示不符",
+    "medium": "題幹有部分文字但選項含結構圖，解釋大致可靠但細節需核對",
+    "low": "題幹/選項文字資訊充足，幾乎不需要圖片即可正確解釋"
+  },
+  "questions": [
+    {
+      "id": "TCU-105-chemistry-38",
+      "severity": "medium",
+      "reason": "4 條合成路徑圖（Grignard/酯/丙酮/腈），ans=D，解釋依反應原理推導但未核對具體結構圖"
+    },
+    {
+      "id": "TCU-105-chemistry-39",
+      "severity": "low",
+      "reason": "丙醛自身醛醇縮合，選項為結構式但題目文字足以推導正確產物"
+    },
+    {
+      "id": "TCU-105-chemistry-40",
+      "severity": "low",
+      "reason": "C₄H₉Br NMR 單峰→tert-BuBr，邏輯確定但未看到實際 NMR 光譜圖"
+    },
+    {
+      "id": "TCU-105-chemistry-46",
+      "severity": "high",
+      "reason": "Birch 還原產物選項為純結構圖，解釋只寫了一般規則"
+    },
+    {
+      "id": "TCU-105-chemistry-47",
+      "severity": "high",
+      "reason": "苯甲酸衍生物酸性比較，選項含取代基結構圖，解釋僅描述原則"
+    },
+    {
+      "id": "TCU-105-chemistry-49",
+      "severity": "high",
+      "reason": "progesterone 合成步驟，選項為反應條件圖，解釋非常籠統"
+    },
+    {
+      "id": "TCU-105-chemistry-50",
+      "severity": "medium",
+      "reason": "化合物各位置質子酸性，題幹文字有 methyl/methylene/vinyl 分類"
+    },
+    {
+      "id": "CMU-104-chemistry-21",
+      "severity": "low",
+      "reason": "極性分子判斷，選項全有文字（PBr₃/SO₃/CS₂/CH₄/SiF₄），不需要圖"
+    },
+    {
+      "id": "CMU-104-chemistry-23",
+      "severity": "high",
+      "reason": "晶格 unit cell 圖需看原子位置才能計數，解釋只寫了計數原則"
+    },
+    {
+      "id": "CMU-104-chemistry-27",
+      "severity": "high",
+      "reason": "化合物 NMR 訊號數需看結構圖的對稱性，解釋只說「3種」未具體分析"
+    },
+    {
+      "id": "CMU-104-chemistry-31",
+      "severity": "high",
+      "reason": "Fischer/Newman 投影判 R/S 需看楔形鍵方向，解釋只寫了一般方法"
+    },
+    {
+      "id": "CMU-104-chemistry-34",
+      "severity": "low",
+      "reason": "質譜 m/z=84 分子式計算，文字資訊完整"
+    },
+    {
+      "id": "CMU-104-chemistry-36",
+      "severity": "high",
+      "reason": "KMnO₄ 氧化產物需看起始物結構圖，解釋只寫了氧化原則"
+    },
+    {
+      "id": "CMU-104-chemistry-38",
+      "severity": "medium",
+      "reason": "1-甲基環己烯+HOCl，題幹文字足以推理但選項結構圖未核對"
+    },
+    {
+      "id": "CMU-104-chemistry-40",
+      "severity": "high",
+      "reason": "多步反應最終產物，選項為純結構圖，解釋非常籠統"
+    },
+    {
+      "id": "CMU-104-chemistry-41",
+      "severity": "medium",
+      "reason": "2-甲氧基萘溴化，區域化學原理明確但選項結構圖未核對"
+    },
+    {
+      "id": "CMU-104-chemistry-42",
+      "severity": "medium",
+      "reason": "甲苯 Birch 還原，規則明確但選項結構圖未核對"
+    },
+    {
+      "id": "CMU-104-chemistry-44",
+      "severity": "high",
+      "reason": "哪個反應不生成胺類，5 條反應路徑全為結構圖"
+    },
+    {
+      "id": "CMU-104-chemistry-46",
+      "severity": "high",
+      "reason": "加熱產物（retro-DA 等），選項為純結構圖"
+    },
+    {
+      "id": "CMU-104-chemistry-47",
+      "severity": "medium",
+      "reason": "DA 反應立體化學，題幹有文字但產物結構圖未核對"
+    },
+    {
+      "id": "CMU-104-chemistry-49",
+      "severity": "high",
+      "reason": "苯炔 vs SNAr 機制，5 條反應全為結構圖"
+    },
+    {
+      "id": "CMU-104-chemistry-50",
+      "severity": "high",
+      "reason": "哪個反應得到預期產物，5 條反應全為結構圖"
+    },
+    {
+      "id": "ISU-104-chemistry-28",
+      "severity": "medium",
+      "reason": "環狀縮醛形成，題幹有部分結構文字但產物圖未核對"
+    },
+    {
+      "id": "ISU-104-chemistry-29",
+      "severity": "high",
+      "reason": "鉻酸氧化哪個化合物，4 個結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-34",
+      "severity": "low",
+      "reason": "C₃H₃Br IR 光譜判定末端炔，文字資訊充足"
+    },
+    {
+      "id": "ISU-104-chemistry-35",
+      "severity": "high",
+      "reason": "NMR 4 訊號匹配化合物，選項結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-36",
+      "severity": "high",
+      "reason": "多步合成產物，選項結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-37",
+      "severity": "medium",
+      "reason": "溴醇反應產物，題幹有部分文字但結構圖未核對"
+    },
+    {
+      "id": "ISU-104-chemistry-38",
+      "severity": "high",
+      "reason": "C-H 鍵強度排序需看 4 個鍵的位置（sp/sp²/sp³），結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-44",
+      "severity": "high",
+      "reason": "Fischer 投影 R/S 判定，4 個結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-45",
+      "severity": "high",
+      "reason": "炔類多步反應產物，選項結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-47",
+      "severity": "low",
+      "reason": "C₁₀H₁₄ NMR 解圖 = p-cymene，文字資訊完整"
+    },
+    {
+      "id": "ISU-104-chemistry-48",
+      "severity": "high",
+      "reason": "有機鋰加酯產物，選項結構圖未看到"
+    },
+    {
+      "id": "ISU-104-chemistry-50",
+      "severity": "low",
+      "reason": "酮→胺基醇合成條件，選項全有文字"
+    },
+    {
+      "id": "ISU-104-chemistry-9",
+      "severity": "low",
+      "reason": "混成軌域判定，選項全有文字（O₃/CO₃²⁻/I₃⁻/NO₂⁻）"
+    },
+    {
+      "id": "TCU-104-chemistry-1",
+      "severity": "low",
+      "reason": "速率定律從數據表推導，文字資訊完整"
+    },
+    {
+      "id": "TCU-104-chemistry-12",
+      "severity": "low",
+      "reason": "一級反應曲線上哪點速率最大，概念確定"
+    },
+    {
+      "id": "TCU-104-chemistry-14",
+      "severity": "medium",
+      "reason": "滴定曲線上 III 點的物種，需看曲線位置"
+    },
+    {
+      "id": "TCU-104-chemistry-16",
+      "severity": "high",
+      "reason": "HNO₂ Lewis 結構，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-17",
+      "severity": "medium",
+      "reason": "硫相圖三相點數目，需看相圖但選項有文字"
+    },
+    {
+      "id": "TCU-104-chemistry-24",
+      "severity": "low",
+      "reason": "Hess 定律計算，文字資訊完整"
+    },
+    {
+      "id": "TCU-104-chemistry-25",
+      "severity": "low",
+      "reason": "沸點計算，文字資訊完整"
+    },
+    {
+      "id": "TCU-104-chemistry-30",
+      "severity": "low",
+      "reason": "SN1 反應性排序，化合物名稱全有文字"
+    },
+    {
+      "id": "TCU-104-chemistry-33",
+      "severity": "high",
+      "reason": "消去反應主要產物，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-34",
+      "severity": "low",
+      "reason": "幾個化合物有芳香性，化合物名稱全有文字"
+    },
+    {
+      "id": "TCU-104-chemistry-35",
+      "severity": "high",
+      "reason": "反應產物正確與否，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-36",
+      "severity": "high",
+      "reason": "反應產物有誤，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-37",
+      "severity": "high",
+      "reason": "反應產物有誤，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-42",
+      "severity": "low",
+      "reason": "C₆H₁₂O₃ NMR 解圖，文字資訊完整"
+    },
+    {
+      "id": "TCU-104-chemistry-44",
+      "severity": "medium",
+      "reason": "鹵仿反應，化合物多數有文字名稱但 V 被截斷"
+    },
+    {
+      "id": "TCU-104-chemistry-45",
+      "severity": "low",
+      "reason": "不能自身 aldol 的化合物，名稱全有文字"
+    },
+    {
+      "id": "TCU-104-chemistry-48",
+      "severity": "high",
+      "reason": "Hofmann 消除產物有誤，選項為純結構圖"
+    },
+    {
+      "id": "TCU-104-chemistry-50",
+      "severity": "low",
+      "reason": "C₁₀H₁₂O₂ NMR 解圖，文字資訊完整"
+    }
+  ],
+  "summary": {
+    "total": 53,
+    "high": 22,
+    "medium": 12,
+    "low": 19,
+    "action": "未來 session 優先處理 severity=high 的 22 題：Read 該題 .webp → 比對現有解釋 → 若有誤則修正 question_explanations.json 中對應 entry → 重跑 python pipeline/gen_explanations.py → commit"
+  }
+}
