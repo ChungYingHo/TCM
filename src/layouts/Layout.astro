@@ -3,7 +3,6 @@ import '@/styles/tailwind.css'
 import NavBar from '@/components/common/NavBar.astro'
 import SyncBoot from '@/components/common/SyncBoot.svelte'
 import AskAiSelection from '@/components/common/AskAiSelection.svelte'
-import NoteDialog from '@/components/common/NoteDialog.svelte'
 
 interface Props {
   title?: string
@@ -52,7 +51,6 @@ const { title = 'TCM 考古題', gated = true } = Astro.props
           <NavBar />
           <SyncBoot client:load />
           <AskAiSelection client:load />
-          <NoteDialog client:load />
           <main class="mx-auto w-full max-w-5xl px-4 py-7 sm:px-6 sm:py-10">
             <slot />
           </main>

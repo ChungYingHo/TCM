@@ -5,7 +5,7 @@
   import { examScoring, scoreExamPoints, isChoiceCorrect } from '@/utils/score'
   import { recordWrong } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
-  import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
+  import { primaryTag, tagShort } from '@/models/taxonomy'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
   import Segmented from '@/components/common/Segmented.svelte'
   import Icon from '@/components/common/Icon.svelte'
@@ -308,14 +308,13 @@
       <div class="rounded-box border border-warning/30 bg-warning/10 p-5">
         <p class="font-bold">交卷後的複習建議</p>
         <p class="mt-1 text-sm text-base-content/70">
-          答錯 <span class="font-semibold">{wrongQs.length}</span> 題，已收進錯題本{score.blank ? `（另有 ${score.blank} 題未作答，未列入錯題本）` : ''}。建議先讀以下考點筆記，再到錯題本按間隔重練。
+          答錯 <span class="font-semibold">{wrongQs.length}</span> 題，已收進錯題本{score.blank ? `（另有 ${score.blank} 題未作答，未列入錯題本）` : ''}。建議到錯題本按間隔重練。
         </p>
         {#if weakTags.length}
           <div class="mt-3 flex flex-wrap gap-2">
             {#each weakTags as [tag, n] (tag)}
-              {@const slug = tagSlug(tag)}
               <a
-                href={slug ? `/notes/${slug}` : '/notes'}
+                href={`/study?tag=${encodeURIComponent(tag)}`}
                 class="inline-flex items-center gap-1.5 rounded-full border border-warning/30 bg-base-100 px-3 py-1.5 text-sm font-medium transition-colors hover:bg-warning/15"
               >
                 {tagShort(tag)}

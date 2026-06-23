@@ -12,7 +12,7 @@ import {
 } from '@/models/taxonomy'
 import { SOLVE_STEPS, solveSteps } from '@/models/solveTemplates'
 
-const NOTES_DIR = path.resolve('./src/content/notes')
+const NOTES_DIR = path.resolve('./_deprecated/notes')
 const DATA_DIR = path.resolve('./src/data')
 
 const allEntries = SUBJECTS.flatMap((s) => TAXONOMY[s])

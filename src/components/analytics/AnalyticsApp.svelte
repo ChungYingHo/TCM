@@ -129,7 +129,6 @@
               <span class="opacity-60">錯 {w.wrongCount} 次・{w.questionCount} 題</span>
               <span class="ml-auto flex gap-1">
                 <a class="btn btn-xs btn-primary" href={`/study?tag=${encodeURIComponent(w.tag)}`}>練這個考點</a>
-                <a class="btn btn-xs btn-ghost" href="/notes">看筆記</a>
               </span>
             </li>
           {/each}

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { QuestionRecord } from '@/models/question'
   import { answerLabel } from '@/utils/score'
-  import { primaryTag, tagSlug, tagShort } from '@/models/taxonomy'
+  import { primaryTag, tagShort } from '@/models/taxonomy'
   import { solveSteps } from '@/models/solveTemplates'
   import { loadExplanations } from '@/utils/explanations'
   import Tag from '@/components/common/Tag.svelte'
@@ -13,7 +13,7 @@
   // method shown here is identical to the note for this question's category.
   const ptag = $derived(primaryTag(question.concept_tags))
   const steps = $derived(ptag ? solveSteps(ptag) : [])
-  const slug = $derived(ptag ? tagSlug(ptag) : null)
+
   // errata reason is only worth showing when the answer was actually changed
   const showReason = $derived(question.errata_applied && !!question.explanation)
 
@@ -77,11 +77,6 @@
             </li>
           {/each}
         </ol>
-        {#if slug}
-          <a class="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline" href={`/notes/${slug}`}>
-            看完整考點筆記與例題詳解 <Icon name="arrowRight" class="h-3 w-3" />
-          </a>
-        {/if}
       </div>
     </details>
   {/if}

@@ -8,7 +8,7 @@
   import { listWrong, dueCount } from '@/utils/wrongBook'
   import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
-  import { tagSlug, tagShort } from '@/models/taxonomy'
+  import { tagShort } from '@/models/taxonomy'
   import { todayKey, parseYmd, zhDateLabel, dayKind } from '@/utils/date'
   import { dumpPlan, getDay } from '@/utils/dailyPlan'
   import { deriveCursors } from '@/utils/studyCursor'
@@ -97,7 +97,6 @@
     { href: '/study', label: '刷題', icon: 'pencil', desc: '依年份／考點挑題' },
     { href: '/exam', label: '模擬考', icon: 'timer', desc: '計時整卷練習' },
     { href: '/wrongbook', label: '錯題本', icon: 'star', desc: '收藏與重練' },
-    { href: '/notes', label: '考點筆記', icon: 'notes', desc: '觀念與解題模板' },
     { href: '/vocab', label: '單字', icon: 'type', desc: '3000 高頻字＋例句' },
     { href: '/classics', label: '古文', icon: 'book', desc: '古文觀止精選' },
   ]
@@ -180,11 +179,10 @@
   {#if weak.length}
     <section class="flex flex-col gap-3">
       <h2 class="section-heading">該補強的考點</h2>
-      <p class="-mt-2 text-xs text-base-content/50">依錯題累計排序，點開直接讀該考點筆記。</p>
+      <p class="-mt-2 text-xs text-base-content/50">依錯題累計排序，點進去練習相關題目。</p>
       <div class="flex flex-wrap gap-2">
         {#each weak as w (w.tag)}
-          {@const slug = tagSlug(w.tag)}
-          <a href={slug ? `/notes/${slug}` : '/notes'} class="inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/10 px-3.5 py-1.5 text-sm font-medium text-base-content transition-colors hover:bg-warning/20">
+          <a href={`/study?tag=${encodeURIComponent(w.tag)}`} class="inline-flex items-center gap-2 rounded-full border border-warning/30 bg-warning/10 px-3.5 py-1.5 text-sm font-medium text-base-content transition-colors hover:bg-warning/20">
             <span>{tagShort(w.tag)}</span>
             <span class="rounded-full bg-warning/20 px-1.5 text-xs tabular-nums text-warning-content/80">錯 {w.wrongCount}</span>
           </a>

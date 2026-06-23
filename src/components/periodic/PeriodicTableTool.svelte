@@ -371,9 +371,6 @@
           </div>
         </div>
         <p class="mt-2.5 leading-relaxed text-base-content/70"><b>{meta.big}</b>。{meta.why}</p>
-        {#if mode === 'ie'}
-          <a href="/notes/atomic-structure" class="mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-primary hover:underline">用「連續游離能暴增」找價電子數 →</a>
-        {/if}
         {#if range}
           <div class="mt-3">
             <div class="h-2.5 w-full rounded-full" style="background:linear-gradient(to right, color-mix(in oklab, var(--color-primary) 10%, var(--color-base-100)), color-mix(in oklab, var(--color-primary) 88%, var(--color-base-100)))"></div>
