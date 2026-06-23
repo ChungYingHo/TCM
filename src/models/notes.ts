@@ -52,6 +52,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['基礎'],
     desc: '孤對電子公式 E=(V−X)/2、ABₓEᵧ→分子形狀對照表、鍵角壓縮、極性判斷',
   },
+  {
+    id: 'chem-math',
+    href: '/chem-math',
+    title: '化學常用數學速查',
+    subject: '化學',
+    tags: ['基礎'],
+    desc: 'log 背值表、對數指數運算、科學記號、pH/pOH/pKa 計算',
+  },
 ]
 
 export function notesBySubject(subject: NoteSubject): NoteEntry[] {
