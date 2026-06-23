@@ -1,10 +1,4 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import DailyPlan from '@/components/review/DailyPlan.svelte'
-
 export const prerender = false
+return Astro.redirect('/home')
 ---
-
-<Layout title="隨機練習站 · TCM 題庫">
-  <DailyPlan client:load />
-</Layout>

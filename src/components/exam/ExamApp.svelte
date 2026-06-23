@@ -323,7 +323,7 @@
             {/each}
           </div>
         {/if}
-        <a href="/wrongbook" class="btn btn-primary btn-sm mt-4">前往錯題本 <Icon name="arrowRight" class="h-4 w-4" /></a>
+        <a href="/study?tab=wrong" class="btn btn-primary btn-sm mt-4">前往錯題本 <Icon name="arrowRight" class="h-4 w-4" /></a>
       </div>
     {:else if score.blank}
       <div class="rounded-box border border-info/30 bg-info/10 p-5 text-center">

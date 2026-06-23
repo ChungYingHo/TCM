@@ -7,7 +7,7 @@
   import { dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
   import { dueIds as classicDueIds, grade as gradeClassic } from '@/utils/classicSrs'
   import { composeReview, seededSample } from '@/utils/reviewSample'
-  import { todayKey, zhDateLabel, parseYmd } from '@/utils/date'
+  import { todayKey } from '@/utils/date'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import ElementQuiz from '@/components/element/ElementQuiz.svelte'
@@ -25,7 +25,6 @@
   })
 
   const today = todayKey()
-  const todayLabel = zhDateLabel(new Date(parseYmd(today)))
 
   let reviewIds = $state<string[]>([])
   let showReview = $state(false)
@@ -79,12 +78,6 @@
 </script>
 
 <div class="flex flex-col gap-5">
-  <header class="flex flex-col gap-1.5">
-    <p class="page-kicker tabular-nums">{todayLabel}</p>
-    <h1 class="page-title">隨機練習站</h1>
-    <p class="page-desc">每天隨機抽出單字、古文、元素與胺基酸，輕鬆練習不綁進度。</p>
-  </header>
-
   {#if !vocab}
     <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
   {:else}

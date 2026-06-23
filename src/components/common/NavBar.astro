@@ -1,37 +1,24 @@
 ---
 const path = Astro.url.pathname
 
-type NavLeaf = { href: string; label: string }
-type NavGroup = { label: string; children: NavLeaf[] }
-type NavItem = NavLeaf | NavGroup
+type NavItem = { href: string; label: string }
 
-// 刷題/模擬考/錯題本 are one activity → 練習 group; 單字/古文 share 字庫. 今日複習 stays
-// the primary entry; 考點筆記 keeps its own page.
 const nav: NavItem[] = [
-  { href: '/home', label: '首頁' },
-  { href: '/review', label: '練習站' },
-  {
-    label: '練習',
-    children: [
-      { href: '/study', label: '刷題' },
-      { href: '/exam', label: '模擬考' },
-      { href: '/wrongbook', label: '錯題本' },
-    ],
-  },
-  {
-    label: '字庫',
-    children: [
-      { href: '/vocab', label: '單字' },
-      { href: '/classics', label: '古文' },
-    ],
-  },
+  { href: '/home', label: '練習' },
+  { href: '/study', label: '題庫' },
+  { href: '/vocab', label: '字庫' },
   { href: '/notes', label: '筆記' },
   { href: '/analytics', label: '分析' },
 ]
 
-const isGroup = (i: NavItem): i is NavGroup => 'children' in i
-const isActive = (href: string) => path === href || path.startsWith(href + '/')
-const groupActive = (g: NavGroup) => g.children.some((c) => isActive(c.href))
+function isActive(href: string): boolean {
+  if (href === '/home') return path === '/home' || path === '/review'
+  if (href === '/study') return path === '/study' || path === '/exam' || path === '/wrongbook'
+  if (href === '/vocab') return path === '/vocab' || path === '/classics'
+  if (href === '/notes') return path === '/notes' || path.startsWith('/periodic-table') || path.startsWith('/amino-acids')
+  return path === href || path.startsWith(href + '/')
+}
+
 const pill = (active: boolean) =>
   `shrink-0 rounded-full px-3.5 py-1.5 text-sm transition-colors ${
     active
@@ -47,36 +34,13 @@ const pill = (active: boolean) =>
       TCM<span class="text-primary">題庫</span>
     </a>
 
-    <!-- 桌機：橫排連結 + 下拉群組（lg 以下隱藏） -->
-    <div class="hidden flex-1 items-center gap-0.5 lg:flex">
-      {
-        nav.map((item) =>
-          isGroup(item) ? (
-            <div class="dropdown dropdown-hover">
-              <div tabindex="0" role="button" class={`inline-flex items-center gap-1 ${pill(groupActive(item))}`}>
-                {item.label}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3 opacity-60">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </div>
-              <!-- before:* 是隱形 hover 橋：補上 mt-1 造成的 4px 死區，否則游標跨過縫隙時 dropdown-hover 會先關閉（幾乎點不到子選單） -->
-              <ul tabindex="0" class="dropdown-content menu z-50 mt-1.5 w-40 rounded-box border border-base-300 bg-base-100 p-1.5 shadow-lg before:absolute before:inset-x-0 before:-top-2 before:h-2 before:content-['']">
-                {item.children.map((c) => (
-                  <li>
-                    <a href={c.href} class={isActive(c.href) ? 'font-semibold text-primary' : ''}>
-                      {c.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : (
-            <a href={item.href} class={pill(isActive(item.href))}>
-              {item.label}
-            </a>
-          ),
-        )
-      }
+    <!-- 桌機：橫排連結（lg 以下隱藏，由 BottomNav 接手） -->
+    <div class="hidden items-center gap-0.5 lg:flex">
+      {nav.map((item) => (
+        <a href={item.href} class={pill(isActive(item.href))}>
+          {item.label}
+        </a>
+      ))}
     </div>
 
     <button id="reading-toggle" class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content lg:h-9 lg:w-9" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">
@@ -88,68 +52,7 @@ const pill = (active: boolean) =>
         <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
       </svg>
     </button>
-
-    <!-- 手機：漢堡選單按鈕（lg 以上隱藏） -->
-    <button
-      id="nav-toggle"
-      class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-base-content/65 transition-colors hover:bg-base-content/5 hover:text-base-content lg:hidden"
-      aria-label="開啟選單"
-      aria-controls="mobile-menu"
-      aria-expanded="false"
-    >
-      <svg data-icon="menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="h-5 w-5">
-        <path d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-      <svg data-icon="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="hidden h-5 w-5">
-        <path d="M6 6l12 12M18 6 6 18"></path>
-      </svg>
-    </button>
   </nav>
-
-  <!-- 手機：下拉選單面板 -->
-  <div id="mobile-menu" class="hidden border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl lg:hidden">
-    <div class="mx-auto flex w-full max-w-5xl flex-col gap-0.5 px-3 py-2 sm:px-5">
-      {
-        nav.map((item) =>
-          isGroup(item) ? (
-            <details open={groupActive(item)} class="group/disc">
-              <summary class="flex cursor-pointer list-none items-center justify-between rounded-xl px-3.5 py-2.5 text-sm hover:bg-base-content/5 [&::-webkit-details-marker]:hidden">
-                <span class={groupActive(item) ? 'font-semibold text-primary' : 'font-medium text-base-content/75'}>{item.label}</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 opacity-50 transition-transform group-open/disc:rotate-180">
-                  <path d="m6 9 6 6 6-6" />
-                </svg>
-              </summary>
-              <div class="ml-2 flex flex-col gap-0.5 border-l border-base-300 pl-2">
-                {item.children.map((c) => (
-                  <a
-                    href={c.href}
-                    class={`rounded-xl px-3.5 py-2 text-sm transition-colors ${
-                      isActive(c.href)
-                        ? 'bg-primary/12 font-semibold text-primary'
-                        : 'font-medium text-base-content/70 hover:bg-base-content/5 hover:text-base-content'
-                    }`}
-                  >
-                    {c.label}
-                  </a>
-                ))}
-              </div>
-            </details>
-          ) : (
-            <a
-              href={item.href}
-              class={`rounded-xl px-3.5 py-2.5 text-sm transition-colors ${
-                isActive(item.href)
-                  ? 'bg-primary/12 font-semibold text-primary'
-                  : 'font-medium text-base-content/75 hover:bg-base-content/5 hover:text-base-content'
-              }`}
-            >
-              {item.label}
-            </a>
-          ),
-        )
-      }
-    </div>
-  </div>
 </header>
 
 <script is:inline>
@@ -173,15 +76,5 @@ const pill = (active: boolean) =>
       localStorage.setItem('tcm-reading', 'dim')
     }
     syncReadingIcon()
-  })
-
-  const navToggle = document.getElementById('nav-toggle')
-  const mobileMenu = document.getElementById('mobile-menu')
-  navToggle?.addEventListener('click', () => {
-    const open = !mobileMenu.classList.toggle('hidden')
-    navToggle.setAttribute('aria-expanded', String(open))
-    navToggle.setAttribute('aria-label', open ? '關閉選單' : '開啟選單')
-    navToggle.querySelector('[data-icon="menu"]')?.classList.toggle('hidden', open)
-    navToggle.querySelector('[data-icon="close"]')?.classList.toggle('hidden', !open)
   })
 </script>

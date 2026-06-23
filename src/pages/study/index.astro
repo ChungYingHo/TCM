@@ -1,12 +1,10 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import PageHeader from '@/components/common/PageHeader.astro'
-import StudyApp from '@/components/study/StudyApp.svelte'
+import StudyTabs from '@/components/study/StudyTabs.svelte'
 
 export const prerender = false
 ---
 
-<Layout title="刷題 · TCM 題庫">
-  <PageHeader kicker="練習" title="刷題" desc="依學校、年份、考點挑題，逐題作答、即時對答案。" />
-  <StudyApp client:load />
+<Layout title="題庫 · TCM 題庫">
+  <StudyTabs client:load />
 </Layout>

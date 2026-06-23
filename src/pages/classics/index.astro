@@ -1,10 +1,4 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import ClassicsList from '@/components/classics/ClassicsList.svelte'
-
 export const prerender = false
+return Astro.redirect('/vocab?tab=classics')
 ---
-
-<Layout title="古文選讀 · TCM 題庫">
-  <ClassicsList client:load />
-</Layout>

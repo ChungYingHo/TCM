@@ -1,0 +1,50 @@
+---
+import { ICONS } from '@/utils/icons'
+import type { IconName } from '@/utils/icons'
+
+const path = Astro.url.pathname
+
+interface Tab { href: string; label: string; icon: IconName }
+const tabs: Tab[] = [
+  { href: '/home', label: '練習', icon: 'home' },
+  { href: '/study', label: '題庫', icon: 'pencil' },
+  { href: '/vocab', label: '字庫', icon: 'layers' },
+  { href: '/notes', label: '筆記', icon: 'notes' },
+  { href: '/analytics', label: '分析', icon: 'barChart' },
+]
+
+function isActive(href: string): boolean {
+  if (href === '/home') return path === '/home' || path === '/review'
+  if (href === '/study') return path === '/study' || path === '/exam' || path === '/wrongbook'
+  if (href === '/vocab') return path === '/vocab' || path === '/classics'
+  if (href === '/notes') return path === '/notes' || path.startsWith('/periodic-table') || path.startsWith('/amino-acids')
+  return path === href || path.startsWith(href + '/')
+}
+---
+
+<nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden">
+  <div class="mx-auto grid max-w-lg grid-cols-5">
+    {tabs.map((t) => (
+      <a
+        href={t.href}
+        class={`flex flex-col items-center gap-0.5 pb-1.5 pt-2 text-[0.65rem] font-medium transition-colors ${
+          isActive(t.href)
+            ? 'text-primary'
+            : 'text-base-content/40 active:text-base-content/60'
+        }`}
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width={isActive(t.href) ? '2.2' : '1.8'}
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-[1.35rem] w-[1.35rem]"
+          set:html={ICONS[t.icon]}
+        />
+        <span>{t.label}</span>
+      </a>
+    ))}
+  </div>
+</nav>

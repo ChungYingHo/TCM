@@ -81,7 +81,7 @@
             </div>
           {/each}
         </div>
-        <a href="/classics" class="btn btn-sm btn-primary w-fit">去讀這些朝代的古文 <Icon name="arrowRight" class="h-4 w-4" /></a>
+        <a href="/vocab?tab=classics" class="btn btn-sm btn-primary w-fit">去讀這些朝代的古文 <Icon name="arrowRight" class="h-4 w-4" /></a>
       </div>
     </section>
   {/if}
