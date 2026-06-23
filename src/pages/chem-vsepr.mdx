@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import VseprShapes from '@/components/notes/VseprShapes.svelte'
 
 <NoteStats tag="VSEPR" client:load />
 
@@ -69,7 +70,15 @@ $$
 
 ---
 
-## 三、AB$_x$E$_y$ → 分子形狀對照表
+## 三、互動圖解
+
+點選任一 AB$_x$E$_y$ 類型，看電子域幾何、分子形狀、鍵角與範例。灰色橢圓＝孤對電子。
+
+<VseprShapes client:visible />
+
+---
+
+## 四、AB$_x$E$_y$ → 分子形狀對照表
 
 ### SN = 2（電子對幾何：直線形）
 
@@ -115,7 +124,7 @@ $$
 
 ---
 
-## 四、鍵角壓縮規則
+## 五、鍵角壓縮規則
 
 > 孤對的電子雲比鍵結對「更胖」→ 壓縮鍵結對的空間 → 鍵角變小。
 
@@ -133,7 +142,7 @@ $$
 
 ---
 
-## 五、極性判斷速查
+## 六、極性判斷速查
 
 $$
 \text{分子有極性} \iff \text{有極性鍵} \;\mathbf{且}\; \text{鍵偶極向量不互消}
@@ -159,7 +168,7 @@ $$
 
 ---
 
-## 六、解題 SOP
+## 七、解題 SOP
 
 <SolveApproach client:visible
   steps={[
@@ -173,7 +182,7 @@ $$
 
 ---
 
-## 七、必背清單
+## 八、必背清單
 
 <Memorize client:visible
   items={[
