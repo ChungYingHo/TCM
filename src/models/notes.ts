@@ -28,6 +28,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['基礎'],
     desc: '五大分類、側鏈結構圖、必需胺基酸、簡寫對照',
   },
+  {
+    id: 'chem-fundamentals',
+    href: '/chem-fundamentals',
+    title: '化學基礎定律與 Unit Factor 換算',
+    subject: '化學',
+    tags: ['基礎'],
+    desc: '五大定律、道耳吞原子說、amu／莫耳／莫耳質量、unit factor 速查表',
+  },
 ]
 
 export function notesBySubject(subject: NoteSubject): NoteEntry[] {

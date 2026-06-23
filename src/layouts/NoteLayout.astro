@@ -1,0 +1,17 @@
+---
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props
+---
+
+<Layout title={`${frontmatter.title} · TCM 題庫`}>
+  <header class="mb-6 flex flex-col gap-1.5">
+    <p class="page-kicker">筆記 · 基礎</p>
+    <h1 class="page-title">{frontmatter.title}</h1>
+    {frontmatter.summary && <p class="page-desc max-w-2xl">{frontmatter.summary}</p>}
+  </header>
+
+  <article class="prose max-w-none">
+    <slot />
+  </article>
+</Layout>

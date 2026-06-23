@@ -1,0 +1,211 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 化學基礎定律與 Unit Factor 換算速查
+summary: 五大定律、道耳吞原子說、amu／莫耳／莫耳質量定義，以及所有換算的 unit factor 寫法速查。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="化學基礎定律" client:load />
+
+速查用——忘了哪條定律、哪個定義、unit factor 怎麼寫，直接翻。
+
+---
+
+## 一、化學基礎定律
+
+| 定律 | 提出者 | 一句話 |
+|------|--------|--------|
+| **質量守恆** | Lavoisier 1789 | 反應前後，物質**總質量不變** |
+| **定比定律** | Proust 1799 | 同一化合物，各元素**質量比恆定** |
+| **倍比定律** | Dalton 1803 | 兩元素形成多種化合物，固定 A 的量，B 的質量比為**簡單整數比** |
+| **氣體化合體積定律** | Gay-Lussac 1808 | 同溫同壓下，反應氣體的**體積比**為簡單整數比 |
+| **亞佛加厥假說** | Avogadro 1811 | 同溫同壓**同體積**的任何氣體，含**相同數目的分子** |
+
+> **定比 vs 倍比**：定比說的是「一種化合物裡組成比固定」；倍比說的是「同兩元素能組成多種化合物時，比值之間成整數倍」。
+
+---
+
+## 二、道耳吞原子說（Dalton, 1808）
+
+| # | 主張 | 今日修正 |
+|---|------|----------|
+| 1 | 物質由**不可再分的原子**組成 | 原子可再分（質子、中子、電子） |
+| 2 | 同一元素的原子，質量與性質**完全相同** | 同位素質量不同 |
+| 3 | 不同元素的原子，質量與性質不同 | 仍成立 |
+| 4 | 原子以**簡單整數比**結合成化合物 | 仍成立 |
+| 5 | 化學反應中原子**不會創造或消滅**，只重新排列 | 仍成立（→ 質量守恆） |
+
+---
+
+## 三、amu 與原子量
+
+- **原子質量單位 (amu / u)**：${}^{12}\text{C}$ 質量的 $\dfrac{1}{12}$
+
+$$
+1\ \text{amu} = \frac{1\ \text{g}}{6.022 \times 10^{23}} = 1.6605 \times 10^{-24}\ \text{g}
+$$
+
+> 直接用 unit factor 理解：**1 g 裡有 $N_A$ 個 amu**，所以 1 amu 就是把 1 g 除以 $N_A$。
+
+- **原子量**：某原子質量相對於 1 amu 的倍數，單位 u
+  - 例：$\text{O} = 16\ \text{u}$ → 1 個氧原子質量 = $16 \times \dfrac{1\ \text{g}}{6.022\times10^{23}} = 2.657\times10^{-23}\ \text{g}$
+- **分子量**：分子中各原子量的總和
+  - 例：$\text{H}_2\text{O} = 1\times2 + 16 = 18\ \text{u}$
+- **平均原子量**（考慮同位素加權平均）：
+
+$$
+\bar{M} = \sum (\text{同位素質量} \times \text{天然存在比})
+$$
+
+> 例：Cl 有 ${}^{35}\text{Cl}$ (75.8%) 和 ${}^{37}\text{Cl}$ (24.2%)
+> $\bar{M} = 35 \times 0.758 + 37 \times 0.242 = 35.5\ \text{u}$
+
+---
+
+## 四、莫耳、莫耳質量、amu ↔ g/mol
+
+| 概念 | 定義 | 單位 |
+|------|------|------|
+| **莫耳 (mol)** | $6.022\times10^{23}$ 個粒子（$N_A$） | 計數單位 |
+| **莫耳質量 ($M$)** | 1 mol 該物質的質量 | g/mol |
+| **關鍵橋接** | **$X$ u = $X$ g/mol**（數值相同） | — |
+
+為什麼「u 的數字 ＝ g/mol 的數字」？
+
+$$
+\underbrace{16\ \text{u}}_{\text{1 個 O 原子}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23} \times 1\ \text{u}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
+$$
+
+分子分母的 $6.022\times10^{23}$ **直接約掉**，所以 **X u = X g/mol**（數值永遠相同）。
+
+---
+
+## 五、Unit Factor 換算法
+
+核心：**每一步都寫成「已知量 $\times \dfrac{\text{目標單位}}{\text{已知單位}}$」，分子分母帶單位、約分後只剩目標單位。**
+
+### 5-1. 質量 → 莫耳
+
+$$
+36\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}} = 2\ \text{mol}
+$$
+
+### 5-2. 莫耳 → 質量
+
+$$
+0.5\ \text{mol H}_2\text{O} \times \frac{18\ \text{g}}{1\ \text{mol}} = 9\ \text{g}
+$$
+
+### 5-3. 莫耳 → 粒子數
+
+$$
+2\ \text{mol} \times \frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}} = 1.204\times10^{24}\ \text{個}
+$$
+
+### 5-4. 粒子數 → 莫耳
+
+$$
+5\ \text{個} \times \frac{1\ \text{mol}}{6.022\times10^{23}\ \text{個}} = 8.3\times10^{-24}\ \text{mol}
+$$
+
+### 5-5. 氣體體積（STP）→ 莫耳
+
+$$
+11.2\ \text{L} \times \frac{1\ \text{mol}}{22.4\ \text{L}} = 0.5\ \text{mol}
+$$
+
+### 5-6. 串連多步（質量 → mol → 粒子數）
+
+$$
+9\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}} \times \frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}} = 3.011\times10^{23}\ \text{個}
+$$
+
+> **要訣**：先把所有 unit factor 橫著乘在一起，上下同單位對消，最後只剩目標單位，就不會搞混方向。
+
+### Unit Factor 速查表
+
+| 換算方向 | Unit Factor |
+|----------|-------------|
+| g → mol | $\times \dfrac{1\ \text{mol}}{M\ \text{g}}$ |
+| mol → g | $\times \dfrac{M\ \text{g}}{1\ \text{mol}}$ |
+| mol → 個 | $\times \dfrac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}$ |
+| 個 → mol | $\times \dfrac{1\ \text{mol}}{6.022\times10^{23}\ \text{個}}$ |
+| L (STP) → mol | $\times \dfrac{1\ \text{mol}}{22.4\ \text{L}}$ |
+| mol → L (STP) | $\times \dfrac{22.4\ \text{L}}{1\ \text{mol}}$ |
+| 跨物質（係數比） | $\times \dfrac{\text{目標係數}}{\text{已知係數}}$ |
+
+---
+
+<Memorize client:visible>
+五大定律：質量守恆、定比、倍比、氣體化合體積、亞佛加厥假說。<br/>
+道耳吞原子說：原子不可分（已修正）、同元素同質量（已修正：同位素）、異元素異性質、整數比結合、原子守恆。<br/>
+<b>1 amu = 1 g ÷ 6.022×10²³ = 1.6605×10⁻²⁴ g</b>；X u = X g/mol（數值相同，N<sub>A</sub> 約掉）。<br/>
+Unit factor：<b>每步寫完整分數帶單位，上下約分只剩目標</b>。
+</Memorize>
+
+<KeyPoints client:visible items={[
+  "質量守恆定律：反應前後<b>總質量不變</b>（Lavoisier）。",
+  "定比定律：同一化合物各元素質量比<b>恆定</b>（Proust）。",
+  "倍比定律：同兩元素的多種化合物，固定一元素量後另一元素質量比為<b>簡單整數比</b>（Dalton）。",
+  "亞佛加厥假說：同溫同壓同體積的氣體<b>分子數相同</b>。",
+  "1 amu = 1 g ÷ N<sub>A</sub> = <b>1 g / 6.022×10²³ = 1.6605×10⁻²⁴ g</b>。",
+  "1 mol = <b>6.022×10²³</b> 個粒子；莫耳質量 M 的<b>數值＝原子量/分子量</b>，單位 g/mol。",
+  "平均原子量 = Σ(同位素質量 × 天然存在比)。",
+  "Unit Factor：已知量 × (目標單位/已知單位)，<b>分數帶單位、約分只剩目標</b>。",
+  "串連多步時所有 unit factor 橫著乘，<b>上下同單位對消</b>即可。"
+]} />
+
+<SolveApproach tag="化學基礎定律" client:visible />
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="銅有兩種同位素：⁶³Cu (69.2%) 和 ⁶⁵Cu (30.8%)。銅的平均原子量為多少？"
+  options={["63.0 u", "63.6 u", "64.0 u", "65.0 u"]}
+  answer="(B) 63.6 u"
+  steps={[
+    "平均原子量 = Σ(質量 × 比例)。",
+    "= 63 × 0.692 + 65 × 0.308 = 43.60 + 20.02 = <b>63.6 u</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="48 g 的鎂（Mg = 24 g/mol）含有多少個鎂原子？用 unit factor 完整列式。（N<sub>A</sub> = 6.0×10²³）"
+  options={["6.0×10²³", "1.2×10²⁴", "2.4×10²⁴", "3.0×10²³"]}
+  answer="(B) 1.2×10²⁴"
+  steps={[
+    "Unit factor 列式：48 g × <b>(1 mol / 24 g)</b> × <b>(6.0×10²³ 個 / 1 mol)</b>",
+    "= 2 mol × 6.0×10²³ 個/mol = <b>1.2×10²⁴ 個</b>。",
+    "注意每步分數都帶單位：g 約掉、mol 約掉，只剩「個」。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="STP 下 5.6 L 的 O₂（M = 32 g/mol）質量為多少克？用 unit factor 完整列式。"
+  options={["4 g", "8 g", "16 g", "32 g"]}
+  answer="(B) 8 g"
+  steps={[
+    "Unit factor 列式：5.6 L × <b>(1 mol / 22.4 L)</b> × <b>(32 g / 1 mol)</b>",
+    "= 0.25 mol × 32 g/mol = <b>8 g</b>。",
+    "兩個 unit factor 串連：L→mol→g，上下約分只剩 g。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="碳（C）和氧（O）可形成 CO 和 CO₂ 兩種化合物。在 CO 中碳氧質量比為 3:4，在 CO₂ 中碳氧質量比為 3:8。固定碳的質量，兩化合物中氧的質量比為何？此現象符合哪條定律？"
+  options={["1:2，質量守恆", "1:2，倍比定律", "3:4，定比定律", "2:1，倍比定律"]}
+  answer="(B) 1:2，倍比定律"
+  steps={[
+    "固定碳質量（都取 3 份）：CO 的氧 = 4 份，CO₂ 的氧 = 8 份。",
+    "氧的質量比 = 4:8 = <b>1:2</b>（簡單整數比）。",
+    "同兩元素組成多種化合物，固定一元素量後另一元素質量成整數比 → <b>倍比定律</b>。"
+  ]}
+/>
