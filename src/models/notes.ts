@@ -36,6 +36,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['基礎'],
     desc: '五大定律、道耳吞原子說、amu／莫耳／莫耳質量、unit factor 速查表',
   },
+  {
+    id: 'chem-units',
+    href: '/chem-units',
+    title: '化學常用單位換算（Unit Factor）',
+    subject: '化學',
+    tags: ['基礎'],
+    desc: '長度(Å/pm)、壓力(atm/mmHg/kPa)、能量(cal/J)、濃度(%→M/ppm)、R 值——全 unit factor 分數',
+  },
 ]
 
 export function notesBySubject(subject: NoteSubject): NoteEntry[] {
