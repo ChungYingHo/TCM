@@ -44,6 +44,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['基礎'],
     desc: '長度(Å/pm)、壓力(atm/mmHg/kPa)、能量(cal/J)、濃度(%→M/ppm)、R 值——全 unit factor 分數',
   },
+  {
+    id: 'chem-vsepr',
+    href: '/chem-vsepr',
+    title: 'VSEPR 分子形狀與 ABₓEᵧ',
+    subject: '化學',
+    tags: ['基礎'],
+    desc: '孤對電子公式 E=(V−X)/2、ABₓEᵧ→分子形狀對照表、鍵角壓縮、極性判斷',
+  },
 ]
 
 export function notesBySubject(subject: NoteSubject): NoteEntry[] {
