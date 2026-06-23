@@ -1,0 +1,18 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import NotesIndex from '@/components/notes/NotesIndex.svelte'
+
+export const prerender = false
+---
+
+<Layout title="考點筆記 · TCM 題庫">
+  <header class="mb-8 flex flex-col gap-1.5">
+    <p class="page-kicker">筆記</p>
+    <h1 class="page-title">考點筆記</h1>
+    <p class="page-desc max-w-2xl">
+      依科目整理的互動筆記，標示<span class="font-semibold text-primary">基礎</span>的是必背內容。
+    </p>
+  </header>
+
+  <NotesIndex client:load />
+</Layout>
