@@ -12,6 +12,7 @@
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import ElementQuiz from '@/components/element/ElementQuiz.svelte'
   import AminoAcidQuiz from '@/components/amino/AminoAcidQuiz.svelte'
+  import UnitFactorQuiz from '@/components/unit/UnitFactorQuiz.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
@@ -32,6 +33,7 @@
   let showReview = $state(false)
   let showElement = $state(false)
   let showAmino = $state(false)
+  let showUnitFactor = $state(false)
   let reviewClassicId = $state<string | null>(null)
 
   function refresh() {
@@ -135,7 +137,18 @@
     {/if}
   </section>
 
-  <!-- 5. 今日古文（隨機一篇） -->
+  <!-- 5. 今日化學基礎 · Unit Factor 換算 -->
+  <section class="rounded-box border border-base-300 border-l-[3px] border-l-secondary bg-base-100 p-4 shadow-soft sm:p-5">
+    <h2 class="section-heading mb-3">今日化學基礎 · Unit Factor</h2>
+    <p class="mb-3 text-sm text-base-content/55">壓力、溫度、能量、體積、長度、莫耳——隨機抽 8 題 unit factor 換算，練到手感自然。</p>
+    {#if showUnitFactor}
+      <UnitFactorQuiz />
+    {:else}
+      <button class="btn btn-primary btn-sm" onclick={() => (showUnitFactor = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
+    {/if}
+  </section>
+
+  <!-- 6. 今日古文（隨機一篇） -->
   {#if todayClassic}
     <section class="rounded-box border border-base-300 border-l-[3px] border-l-accent bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-3">今日古文</h2>
@@ -144,7 +157,7 @@
     </section>
   {/if}
 
-  <!-- 6. 複習古文（SRS 到期；先回想再翻譯，選記得／不熟安排下次） -->
+  <!-- 7. 複習古文（SRS 到期；先回想再翻譯，選記得／不熟安排下次） -->
   {#if reviewClassic}
     <section class="rounded-box border border-base-300 border-l-[3px] border-l-secondary bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-1">複習古文</h2>
