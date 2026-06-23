@@ -1,50 +1,33 @@
 <script lang="ts">
-  // 首頁指揮中心 — 今日讀書入口、距考倒數、各軌步調（單字/考點/古文）、連續天數、
-  // 該補強考點、快速統計與入口。資料與「今日複習」「進度摘要 API」同源（studyPlan）。
-  import type { QuestionRecord, Subject } from '@/models/question'
+  import type { QuestionRecord } from '@/models/question'
   import { SCHOOLS, SUBJECTS, SUBJECT_LABEL } from '@/models/question'
   import { loadSchools } from '@/utils/dataset'
   import { getAttempts } from '@/utils/progress'
   import { listWrong, dueCount } from '@/utils/wrongBook'
-  import { getStreak } from '@/utils/streak'
   import { coverage, weaknessClusters, type SubjectCoverage, type WeakCluster } from '@/utils/analytics'
   import { tagShort } from '@/models/taxonomy'
-  import { todayKey, parseYmd, zhDateLabel, dayKind } from '@/utils/date'
-  import { dumpPlan, getDay } from '@/utils/dailyPlan'
-  import { deriveCursors } from '@/utils/studyCursor'
-  import { computeToday, type ScheduleData } from '@/utils/studyPlan'
-  import scheduleJson from '@/data/schedule.json'
+  import { todayKey, parseYmd, zhDateLabel } from '@/utils/date'
   import Icon from '@/components/common/Icon.svelte'
   import type { IconName } from '@/utils/icons'
 
-  const schedule = scheduleJson as unknown as ScheduleData
-  // Totals come from the schedule tracks (length == dataset count), so the home
-  // page never bundles the large vocab.json / classics.json just for a number.
-  const vocabTotal = schedule.tracks.vocab.length
-  const classicsTotal = schedule.tracks.classics.length
-
   let loading = $state(true)
   let due = $state(0)
-  let streak = $state(getStreak())
   let cov = $state<SubjectCoverage[]>([])
   let weak = $state<WeakCluster[]>([])
   let attemptedTotal = $state(0)
   let totalQuestions = $state(0)
-  let planStore = $state(dumpPlan())
 
   let questions: QuestionRecord[] = []
-  const today = todayKey() // 5 AM rollover (see date.ts)
+  const today = todayKey()
 
   function refresh(qs: QuestionRecord[]) {
     const attempts = getAttempts()
     const byId = new Map(qs.map((q) => [q.id, q]))
     due = dueCount()
-    streak = getStreak()
     cov = coverage(qs, attempts)
     weak = weaknessClusters(byId, listWrong()).slice(0, 6)
     attemptedTotal = Object.values(attempts).filter((a) => a.attempts > 0).length
     totalQuestions = qs.length
-    planStore = dumpPlan()
   }
 
   $effect(() => {
@@ -60,119 +43,73 @@
     }
   })
 
-  const tp = $derived(computeToday(schedule, planStore, today))
-  const cur = $derived(deriveCursors(planStore, schedule.perDay.newVocab))
-  const todayState = $derived(getDay(today))
-  // 每日只剩 單字／古文／元素 三件事（筆記/刷題/錯題已移出每日排程）→ 只計這幾段
-  const todayDone = $derived.by(() => {
-    const s = todayState
-    return (['newVocab', 'reviewVocab', 'classic', 'elementQuiz', 'aminoAcid'] as const).filter((f) => s[f]).length
-  })
   const covBySubject = $derived(new Map(cov.map((c) => [c.subject, c])))
   const pct = (n: number, d: number) => (d ? Math.round((n / d) * 100) : 0)
 
-  const paceBadge = $derived(
-    tp.pace.onTrack
-      ? { label: '跟得上考期', cls: 'text-success' }
-      : { label: `需加速 · 每天約 ${tp.pace.neededPerDay} 字`, cls: 'text-warning' },
-  )
-
-  // 書桌問候：日期當眉題、依時段打招呼，像坐下來翻開今天的進度
   const dateLabel = zhDateLabel(new Date(parseYmd(today)))
-  // friendly sub-label naming WHY today is light — shares dayKind with the 今日複習 hub so
-  // home and the daily plan never disagree about the day (and reads the rhythm, not the
-  // previously-hardcoded weekdays).
-  const kind = $derived(dayKind(today, schedule.examDate))
-  const dayLabel = $derived.by(() => {
-    switch (kind) {
-      case 'weekend': return '週末緩衝日 · 落後就追、跟上就休息 🌿'
-      case 'taper': return '考前衝刺 · 以複習為重'
-      default: return `今日已完成 ${todayDone} 段` // full weekday
-    }
-  })
   const hour = new Date().getHours()
   const greeting = hour < 5 ? '夜深了' : hour < 11 ? '早安' : hour < 18 ? '午安' : '晚安'
 
   const links: { href: string; label: string; icon: IconName; desc: string }[] = [
+    { href: '/review', label: '練習站', icon: 'bookOpen', desc: '今日隨機練習' },
     { href: '/study', label: '刷題', icon: 'pencil', desc: '依年份／考點挑題' },
     { href: '/exam', label: '模擬考', icon: 'timer', desc: '計時整卷練習' },
     { href: '/wrongbook', label: '錯題本', icon: 'star', desc: '收藏與重練' },
     { href: '/vocab', label: '單字', icon: 'type', desc: '3000 高頻字＋例句' },
     { href: '/classics', label: '古文', icon: 'book', desc: '古文觀止精選' },
+    { href: '/notes', label: '筆記', icon: 'sparkles', desc: '考點互動筆記' },
   ]
 </script>
 
 <div class="flex flex-col gap-7">
-  <!-- Hero: 今日複習 + 倒數 -->
-  <section class="grid gap-3 sm:grid-cols-3">
-    <a href="/review" class="panel-hover group relative flex flex-col justify-between gap-5 overflow-hidden rounded-box border border-primary/20 bg-gradient-to-br from-primary/[0.09] via-primary/[0.04] to-transparent p-5 sm:col-span-2 sm:p-6">
+  <!-- Hero: 問候 + 練習站入口 -->
+  <section>
+    <a href="/review" class="panel-hover group relative flex flex-col justify-between gap-5 overflow-hidden rounded-box border border-primary/20 bg-gradient-to-br from-primary/[0.09] via-primary/[0.04] to-transparent p-5 sm:p-6">
       <div class="flex items-start justify-between gap-3">
         <div>
           <p class="page-kicker">{dateLabel}</p>
-          <p class="mt-2 font-display text-2xl font-bold tracking-tight sm:text-[1.7rem]">{greeting}，打開今天的讀書計畫</p>
-          <p class="mt-1.5 text-sm text-base-content/60">{dayLabel}</p>
+          <p class="mt-2 font-display text-2xl font-bold tracking-tight sm:text-[1.7rem]">{greeting}，開始今天的練習吧</p>
         </div>
         <span aria-hidden="true" class="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/12 text-primary">
           <Icon name="bookOpen" class="h-6 w-6" />
         </span>
       </div>
       <span class="inline-flex w-fit items-center gap-1.5 rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-content shadow-soft transition-all group-hover:gap-2.5">
-        開始讀書
+        進入練習站
         <Icon name="arrowRight" class="h-4 w-4" stroke={2.2} />
       </span>
     </a>
-
-    <div class="flex flex-col justify-between gap-4 rounded-box border border-base-300 bg-base-100 p-5 shadow-soft">
-      <div>
-        <p class="text-sm font-medium text-base-content/55">距完課目標</p>
-        <p class="mt-1 font-display text-[2.75rem] font-extrabold leading-none tabular-nums">{tp.daysToExam}<span class="ml-1 font-body text-base font-medium text-base-content/45">天</span></p>
-      </div>
-      <div class="flex items-center gap-2 rounded-xl bg-accent/10 px-3 py-2">
-        <Icon name="flame" class="h-4 w-4 shrink-0 text-accent" />
-        <span class="text-sm tabular-nums"><span class="font-bold text-base-content/85">{streak.count}</span><span class="text-base-content/55"> 天連續 · 最佳 {streak.best}</span></span>
-      </div>
-    </div>
   </section>
 
-  <!-- 步調總覽 -->
+  <!-- 簡單統計 -->
   <section class="flex flex-col gap-3">
-    <h2 class="section-heading">讀書進度</h2>
+    <h2 class="section-heading">學習概況</h2>
     <div class="grid gap-3 sm:grid-cols-3">
       <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
-        <div class="flex items-baseline justify-between">
-          <span class="font-semibold">單字</span>
-          <span class={`text-xs font-medium ${paceBadge.cls}`}>{paceBadge.label}</span>
-        </div>
-        <p class="mt-1 text-2xl font-bold tabular-nums">{cur.vocab}<span class="text-base font-medium text-base-content/40">/{vocabTotal}</span></p>
-        <div class="mt-2 h-2 overflow-hidden rounded-full bg-base-300"><span class="block h-full rounded-full bg-primary" style={`width:${pct(cur.vocab, vocabTotal)}%`}></span></div>
+        <span class="text-sm font-medium text-base-content/55">已練習</span>
+        <p class="mt-1 text-2xl font-bold tabular-nums">{loading ? '—' : attemptedTotal}<span class="text-base font-medium text-base-content/40"> / {totalQuestions} 題</span></p>
       </div>
-
       <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
-        <span class="font-semibold">古文</span>
-        <p class="mt-1 text-2xl font-bold tabular-nums">{cur.classics}<span class="text-base font-medium text-base-content/40">/{classicsTotal}</span></p>
-        <div class="mt-2 h-2 overflow-hidden rounded-full bg-base-300"><span class="block h-full rounded-full bg-primary" style={`width:${pct(cur.classics, classicsTotal)}%`}></span></div>
-      </div>
-
-      <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
-        <span class="font-semibold">到期錯題</span>
+        <span class="text-sm font-medium text-base-content/55">到期錯題</span>
         <p class="mt-1 text-2xl font-bold tabular-nums">{loading ? '—' : due}<span class="text-base font-medium text-base-content/40"> 題</span></p>
         <a href="/wrongbook" class="mt-2 inline-flex items-center gap-0.5 text-xs font-medium text-primary">去複習 <Icon name="arrowRight" class="h-3 w-3" /></a>
       </div>
-    </div>
-
-    <div class="grid gap-2 sm:grid-cols-2">
-      {#each SUBJECTS as s (s)}
-        {@const c = covBySubject.get(s)}
-        <div class="flex items-center gap-3 rounded-box border border-base-300 bg-base-100 p-3 shadow-soft">
-          <span class="w-10 shrink-0 text-sm font-semibold">{SUBJECT_LABEL[s]}</span>
-          <div class="min-w-0 flex-1">
-            <div class="h-2 overflow-hidden rounded-full bg-base-300"><span class="block h-full rounded-full bg-primary/70" style={`width:${c ? pct(c.practicedTags, c.totalTags) : 0}%`}></span></div>
-          </div>
-          <span class="shrink-0 text-right text-xs tabular-nums text-base-content/55">考點 {c ? c.practicedTags : 0}/{c ? c.totalTags : 0}</span>
+      <div class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft">
+        <span class="text-sm font-medium text-base-content/55">各科考點覆蓋</span>
+        <div class="mt-2 flex flex-col gap-1.5">
+          {#each SUBJECTS as s (s)}
+            {@const c = covBySubject.get(s)}
+            <div class="flex items-center gap-2">
+              <span class="w-8 shrink-0 text-xs font-semibold">{SUBJECT_LABEL[s]}</span>
+              <div class="min-w-0 flex-1">
+                <div class="h-1.5 overflow-hidden rounded-full bg-base-300"><span class="block h-full rounded-full bg-primary/70" style={`width:${c ? pct(c.practicedTags, c.totalTags) : 0}%`}></span></div>
+              </div>
+              <span class="shrink-0 text-right text-[0.65rem] tabular-nums text-base-content/50">{c ? c.practicedTags : 0}/{c ? c.totalTags : 0}</span>
+            </div>
+          {/each}
         </div>
-      {/each}
+      </div>
     </div>
-    <p class="text-xs text-base-content/45">已練 {attemptedTotal} / {totalQuestions} 題</p>
   </section>
 
   <!-- 該補強的考點 -->

@@ -4,7 +4,7 @@
 // Pages/endpoints reachable WITHOUT the cookie gate. /api/progress-summary is here
 // because it self-authenticates with the site password (x-tcm-key), so a headless
 // session can pull the learning summary without first unlocking a cookie.
-const PUBLIC_PATHS = new Set(['/', '/api/unlock', '/api/progress-summary'])
+const PUBLIC_PATHS = new Set(['/', '/api/unlock'])
 
 // Public static assets, served openly: Astro build output (/_astro/), the
 // on-demand image endpoint (/_image), and the question images (/q/).

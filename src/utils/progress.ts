@@ -3,7 +3,6 @@
 // the user's curated review list).
 
 import type { Attempt } from '@/models/progress'
-import { touchStreak } from '@/utils/streak'
 export type { Attempt }
 
 type Store = Record<string, Attempt>
@@ -38,7 +37,6 @@ export function recordAttempt(id: string, wasCorrect: boolean, now: number): voi
     correct: prev.correct + (wasCorrect ? 1 : 0),
     lastTs: now,
   }
-  touchStreak(now) // silent — the write below triggers the cloud save
   write(store)
 }
 

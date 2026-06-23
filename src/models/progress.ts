@@ -1,4 +1,4 @@
-import type { OptionLetter, Subject } from '@/models/question'
+import type { OptionLetter } from '@/models/question'
 
 /** A wrong-answer-book entry, persisted in localStorage. Doubles as the spaced-
  *  repetition card: `due` is when it should next be reviewed, `box` the Leitner level. */
@@ -17,27 +17,6 @@ export interface ExamResult {
   answered: number
   perQuestion: Record<string, boolean> // question id -> correct?
 }
-
-/** Daily study streak (consecutive active days). */
-export interface Streak {
-  lastDay: string // 'YYYY-MM-DD' (local)
-  count: number
-  best: number
-}
-
-/** Per-day completion flags for the daily study plan (一格一段). */
-export interface DayPlanState {
-  notes?: Partial<Record<Subject, boolean>> // that day's note per subject -> done
-  quiz?: boolean
-  newVocab?: boolean
-  reviewVocab?: boolean
-  classic?: boolean
-  elementQuiz?: boolean // 今日元素小遊戲完成
-  aminoAcid?: boolean // 今日胺基酸測驗完成
-  wrong?: boolean // due wrong-questions reviewed
-  rest?: boolean // user acknowledged a planned light/rest day (keeps the streak alive)
-}
-export type DailyPlanStore = Record<string, DayPlanState> // 'YYYY-MM-DD' -> state
 
 /** Word-level spaced-repetition card (Leitner box + next-due). */
 export interface VocabSrsEntry {
@@ -60,8 +39,6 @@ export type AminoAcidSrsStore = ElementSrsStore
 export interface SyncState {
   wrongbook: Record<string, WrongEntry>
   progress: Record<string, Attempt>
-  streak?: Streak
-  plan?: DailyPlanStore
   vocabSrs?: VocabSrsStore
   elementSrs?: ElementSrsStore
   classicSrs?: ClassicSrsStore

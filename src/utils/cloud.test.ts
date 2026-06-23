@@ -1,9 +1,6 @@
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { bootCloud, localSnapshot, saveDebounced } from '@/utils/cloud'
 
-// cloud.ts holds module-level boot state (started/loaded) and applyServer is private,
-// so the load path is exercised through bootCloud (the public entry). Vitest isolates
-// the module per file, and bootCloud's `started` guard means it boots once here.
 afterEach(() => {
   localStorage.clear()
   vi.unstubAllGlobals()
@@ -12,7 +9,7 @@ afterEach(() => {
 describe('localSnapshot', () => {
   it('returns the full sync shape with a numeric timestamp', () => {
     const snap = localSnapshot()
-    for (const k of ['wrongbook', 'progress', 'plan', 'vocabSrs']) expect(snap).toHaveProperty(k)
+    for (const k of ['wrongbook', 'progress', 'vocabSrs']) expect(snap).toHaveProperty(k)
     expect(typeof snap.updatedAt).toBe('number')
   })
 })
@@ -22,13 +19,10 @@ describe('bootCloud', () => {
     let resolveGet: () => void = () => {}
     const serverState = {
       wrongbook: {}, progress: {},
-      streak: { lastDay: '2026-06-17', count: 3, best: 5 },
-      plan: { '2026-06-17': { newVocab: true } },
       vocabSrs: {}, updatedAt: 1,
     }
     const fetchMock = vi.fn((_url: string, init?: { method?: string }) => {
       if (init?.method === 'PUT') return Promise.resolve({ ok: true, json: async () => ({}) })
-      // the boot GET stays pending until we release it
       return new Promise((res) => { resolveGet = () => res({ json: async () => ({ state: serverState }) }) })
     })
     vi.stubGlobal('fetch', fetchMock)
@@ -39,16 +33,15 @@ describe('bootCloud', () => {
     bootCloud()
     saveDebounced(5)
     await new Promise((r) => setTimeout(r, 30))
-    expect(puts()).toBe(0) // gated — initial load not done
+    expect(puts()).toBe(0)
     expect(loaded).toBe(false)
 
-    resolveGet() // GET resolves with state → applyServer runs, ready() flips loaded = true
+    resolveGet()
     await new Promise((r) => setTimeout(r, 30))
-    expect(loaded).toBe(true) // applyServer dispatched tcm:cloudloaded
-    expect(localSnapshot().streak).toMatchObject({ lastDay: '2026-06-17', count: 3 }) // and restored state
+    expect(loaded).toBe(true)
 
     saveDebounced(5)
     await new Promise((r) => setTimeout(r, 30))
-    expect(puts()).toBeGreaterThan(0) // saves now that load completed
+    expect(puts()).toBeGreaterThan(0)
   })
 })

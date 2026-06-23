@@ -7,8 +7,6 @@
 import type { SyncState } from '@/models/progress'
 import { dumpWrong, replaceWrong } from '@/utils/wrongBook'
 import { getAttempts, replaceProgress } from '@/utils/progress'
-import { getStreak, replaceStreak } from '@/utils/streak'
-import { dumpPlan, replacePlan } from '@/utils/dailyPlan'
 import { dumpVocabSrs, replaceVocabSrs } from '@/utils/vocabSrs'
 import { dumpElementSrs, replaceElementSrs } from '@/utils/elementSrs'
 import { dumpClassicSrs, replaceClassicSrs } from '@/utils/classicSrs'
@@ -18,8 +16,6 @@ export function localSnapshot(): SyncState {
   return {
     wrongbook: dumpWrong(),
     progress: getAttempts(),
-    streak: getStreak(),
-    plan: dumpPlan(),
     vocabSrs: dumpVocabSrs(),
     elementSrs: dumpElementSrs(),
     classicSrs: dumpClassicSrs(),
@@ -31,8 +27,6 @@ export function localSnapshot(): SyncState {
 function applyServer(s: SyncState): void {
   replaceWrong(s.wrongbook ?? {})
   replaceProgress(s.progress ?? {})
-  if (s.streak) replaceStreak(s.streak)
-  replacePlan(s.plan ?? {})
   replaceVocabSrs(s.vocabSrs ?? {})
   replaceElementSrs(s.elementSrs ?? {})
   replaceClassicSrs(s.classicSrs ?? {})

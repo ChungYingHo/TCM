@@ -1,6 +1,5 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 
-// mock the KV layer so the route handlers can be tested without a real store
 vi.mock('@/utils/kv', () => ({
   kvEnabled: vi.fn(() => true),
   kvGet: vi.fn(async () => null),
@@ -47,21 +46,13 @@ describe('PUT /api/state', () => {
 
   it('sanitizes a valid body before storing (defaults, type coercion, object guards)', async () => {
     const res = await put({
-      state: { wrongbook: { a: 1 }, streak: { lastDay: '2026-06-17', count: '3', best: 5 }, plan: 'bad', updatedAt: 9 },
+      state: { wrongbook: { a: 1 }, updatedAt: 9 },
     })
     expect(await res.json()).toEqual({ ok: true })
     const stored = JSON.parse(vi.mocked(kvSet).mock.calls[0][1])
     expect(stored.wrongbook).toEqual({ a: 1 })
-    expect(stored.progress).toEqual({}) // defaulted
-    expect(stored.streak).toEqual({ lastDay: '2026-06-17', count: 3, best: 5 }) // count coerced from '3'
-    expect(stored.plan).toEqual({}) // 'bad' is not an object → {}
+    expect(stored.progress).toEqual({})
     expect(stored.updatedAt).toBe(9)
-  })
-
-  it('drops a malformed streak (no string lastDay)', async () => {
-    await put({ state: { streak: { count: 1 } } })
-    const stored = JSON.parse(vi.mocked(kvSet).mock.calls[0][1])
-    expect(stored.streak).toBeUndefined()
   })
 
   it('400s on a non-JSON body', async () => {
