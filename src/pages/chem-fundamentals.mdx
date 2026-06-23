@@ -43,7 +43,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ## 三、amu 與原子量
 
-- **原子質量單位 (amu / u)**：${}^{12}\text{C}$ 質量的 $\dfrac{1}{12}$
+- **原子質量單位 (amu)**：${}^{12}\text{C}$ 質量的 $\dfrac{1}{12}$
 
 $$
 1\ \text{amu} = \frac{1\ \text{g}}{6.022 \times 10^{23}} = 1.6605 \times 10^{-24}\ \text{g}
@@ -51,10 +51,10 @@ $$
 
 > 直接用 unit factor 理解：**1 g 裡有 $N_A$ 個 amu**，所以 1 amu 就是把 1 g 除以 $N_A$。
 
-- **原子量**：某原子質量相對於 1 amu 的倍數，單位 u
-  - 例：$\text{O} = 16\ \text{u}$ → 1 個氧原子質量 = $16 \times \dfrac{1\ \text{g}}{6.022\times10^{23}} = 2.657\times10^{-23}\ \text{g}$
+- **原子量**：某原子質量相對於 1 amu 的倍數，單位 amu
+  - 例：$\text{O} = 16\ \text{amu}$ → 1 個氧原子質量 = $16 \times \dfrac{1\ \text{g}}{6.022\times10^{23}} = 2.657\times10^{-23}\ \text{g}$
 - **分子量**：分子中各原子量的總和
-  - 例：$\text{H}_2\text{O} = 1\times2 + 16 = 18\ \text{u}$
+  - 例：$\text{H}_2\text{O} = 1\times2 + 16 = 18\ \text{amu}$
 - **平均原子量**（考慮同位素加權平均）：
 
 $$
@@ -62,7 +62,7 @@ $$
 $$
 
 > 例：Cl 有 ${}^{35}\text{Cl}$ (75.8%) 和 ${}^{37}\text{Cl}$ (24.2%)
-> $\bar{M} = 35 \times 0.758 + 37 \times 0.242 = 35.5\ \text{u}$
+> $\bar{M} = 35 \times 0.758 + 37 \times 0.242 = 35.5\ \text{amu}$
 
 ---
 
@@ -72,15 +72,15 @@ $$
 |------|------|------|
 | **莫耳 (mol)** | $6.022\times10^{23}$ 個粒子（$N_A$） | 計數單位 |
 | **莫耳質量 ($M$)** | 1 mol 該物質的質量 | g/mol |
-| **關鍵橋接** | **$X$ u = $X$ g/mol**（數值相同） | — |
+| **關鍵橋接** | **$X$ amu = $X$ g/mol**（數值相同） | — |
 
-為什麼「u 的數字 ＝ g/mol 的數字」？
+為什麼「amu 的數字 ＝ g/mol 的數字」？
 
 $$
-\underbrace{16\ \text{u}}_{\text{1 個 O 原子}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23} \times 1\ \text{u}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
+\underbrace{16\ \text{amu}}_{\text{1 個 O 原子}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23} \times 1\ \text{amu}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
 $$
 
-分子分母的 $6.022\times10^{23}$ **直接約掉**，所以 **X u = X g/mol**（數值永遠相同）。
+分子分母的 $6.022\times10^{23}$ **直接約掉**，所以 **X amu = X g/mol**（數值永遠相同）。
 
 ---
 
@@ -143,7 +143,7 @@ $$
 <Memorize client:visible>
 五大定律：質量守恆、定比、倍比、氣體化合體積、亞佛加厥假說。<br/>
 道耳吞原子說：原子不可分（已修正）、同元素同質量（已修正：同位素）、異元素異性質、整數比結合、原子守恆。<br/>
-<b>1 amu = 1 g ÷ 6.022×10²³ = 1.6605×10⁻²⁴ g</b>；X u = X g/mol（數值相同，N<sub>A</sub> 約掉）。<br/>
+<b>1 amu = 1 g ÷ 6.022×10²³ = 1.6605×10⁻²⁴ g</b>；X amu = X g/mol（數值相同，N<sub>A</sub> 約掉）。<br/>
 Unit factor：<b>每步寫完整分數帶單位，上下約分只剩目標</b>。
 </Memorize>
 
@@ -166,11 +166,11 @@ Unit factor：<b>每步寫完整分數帶單位，上下約分只剩目標</b>�
 <ExampleQuestion client:visible
   n={1}
   q="銅有兩種同位素：⁶³Cu (69.2%) 和 ⁶⁵Cu (30.8%)。銅的平均原子量為多少？"
-  options={["63.0 u", "63.6 u", "64.0 u", "65.0 u"]}
-  answer="(B) 63.6 u"
+  options={["63.0 amu", "63.6 amu", "64.0 amu", "65.0 amu"]}
+  answer="(B) 63.6 amu"
   steps={[
     "平均原子量 = Σ(質量 × 比例)。",
-    "= 63 × 0.692 + 65 × 0.308 = 43.60 + 20.02 = <b>63.6 u</b>。"
+    "= 63 × 0.692 + 65 × 0.308 = 43.60 + 20.02 = <b>63.6 amu</b>。"
   ]}
 />
 
