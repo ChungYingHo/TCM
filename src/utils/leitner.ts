@@ -28,19 +28,29 @@ export interface Leitner {
 }
 
 export function createLeitner(KEY: string): Leitner {
+  let _cache: LeitnerStore | null = null
+
   function read(): LeitnerStore {
-    if (typeof localStorage === 'undefined') return {}
+    if (typeof localStorage === 'undefined') return _cache ?? {}
+    // Fast path: return cache if localStorage still holds the key (getItem is
+    // cheap; JSON.parse is not). Cache invalidates if localStorage.clear() or
+    // removeItem removed the key externally (e.g. between test runs).
+    if (_cache !== null && localStorage.getItem(KEY) !== null) return _cache
     try {
       const v = JSON.parse(localStorage.getItem(KEY) || '{}')
-      return v && typeof v === 'object' ? (v as LeitnerStore) : {}
+      _cache = v && typeof v === 'object' ? (v as LeitnerStore) : {}
     } catch {
-      return {}
+      _cache = {}
     }
+    return _cache
   }
 
   function write(store: LeitnerStore, silent = false): void {
+    _cache = store
     if (typeof localStorage === 'undefined') return
-    localStorage.setItem(KEY, JSON.stringify(store))
+    try {
+      localStorage.setItem(KEY, JSON.stringify(store))
+    } catch { /* QuotaExceededError — data stays in memory, retries on next write */ }
     if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
   }
 

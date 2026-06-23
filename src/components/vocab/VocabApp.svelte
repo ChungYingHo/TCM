@@ -10,9 +10,14 @@
 
   // vocab.json is large, so it is fetched lazily (kept out of the main bundle)
   let data = $state<VocabData | null>(null)
+  let loadError = $state(false)
   const words = $derived(data?.words ?? [])
   onMount(async () => {
-    data = await loadVocab()
+    try {
+      data = await loadVocab()
+    } catch {
+      loadError = true
+    }
   })
 
   let tab = $state<'browse' | 'study'>('browse')
@@ -101,6 +106,11 @@
   {:else}
     <VocabStudy {words} />
   {/if}
+  {:else if loadError}
+    <div class="flex flex-col items-center gap-3 py-16">
+      <p class="text-sm text-base-content/60">單字資料載入失敗</p>
+      <button class="btn btn-primary btn-sm" onclick={() => { loadError = false; loadVocab().then((d) => (data = d)).catch(() => (loadError = true)) }}>重試</button>
+    </div>
   {:else}
     <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
   {/if}

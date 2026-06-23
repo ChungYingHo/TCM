@@ -2,40 +2,37 @@
   import StudyApp from '@/components/study/StudyApp.svelte'
   import ExamApp from '@/components/exam/ExamApp.svelte'
   import WrongBookApp from '@/components/wrongbook/WrongBookApp.svelte'
+  import Segmented from '@/components/common/Segmented.svelte'
 
   type Tab = 'study' | 'exam' | 'wrong'
-  const tabs: { id: Tab; label: string }[] = [
-    { id: 'study', label: '刷題' },
-    { id: 'exam', label: '模擬考' },
-    { id: 'wrong', label: '錯題本' },
-  ]
+  const VALID: Tab[] = ['study', 'exam', 'wrong']
 
   let active = $state<Tab>('study')
 
   $effect(() => {
-    const p = new URLSearchParams(window.location.search)
-    const t = p.get('tab') as Tab | null
-    if (t && tabs.some((x) => x.id === t)) active = t
+    const t = new URLSearchParams(window.location.search).get('tab') as Tab | null
+    if (t && VALID.includes(t)) active = t
   })
 
-  function switchTab(id: Tab) {
-    active = id
+  let mounted = false
+  $effect(() => {
+    const id = active
+    if (!mounted) { mounted = true; return }
     history.replaceState(null, '', id === 'study' ? '/study' : `/study?tab=${id}`)
-  }
-
-  function tabCls(id: Tab) {
-    return active === id
-      ? 'flex-1 rounded-lg px-3 py-2.5 text-sm font-semibold transition-all duration-200 bg-base-100 shadow-sm text-primary ring-1 ring-black/[0.04]'
-      : 'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 text-base-content/50 hover:text-base-content/70'
-  }
+  })
 </script>
 
-<div class="mb-5 flex gap-1 rounded-xl bg-base-200 p-1 shadow-inner">
-  {#each tabs as t (t.id)}
-    <button class={tabCls(t.id)} onclick={() => switchTab(t.id)}>
-      {t.label}
-    </button>
-  {/each}
+<div class="mb-5">
+  <Segmented
+    block
+    ariaLabel="題庫模式"
+    bind:value={active}
+    options={[
+      { value: 'study', label: '刷題' },
+      { value: 'exam', label: '模擬考' },
+      { value: 'wrong', label: '錯題本' },
+    ]}
+  />
 </div>
 
 {#if active === 'study'}

@@ -1,39 +1,36 @@
 <script lang="ts">
   import VocabApp from '@/components/vocab/VocabApp.svelte'
   import ClassicsList from '@/components/classics/ClassicsList.svelte'
+  import Segmented from '@/components/common/Segmented.svelte'
 
   type Tab = 'vocab' | 'classics'
-  const tabs: { id: Tab; label: string }[] = [
-    { id: 'vocab', label: '單字' },
-    { id: 'classics', label: '古文' },
-  ]
+  const VALID: Tab[] = ['vocab', 'classics']
 
   let active = $state<Tab>('vocab')
 
   $effect(() => {
-    const p = new URLSearchParams(window.location.search)
-    const t = p.get('tab') as Tab | null
-    if (t && tabs.some((x) => x.id === t)) active = t
+    const t = new URLSearchParams(window.location.search).get('tab') as Tab | null
+    if (t && VALID.includes(t)) active = t
   })
 
-  function switchTab(id: Tab) {
-    active = id
+  let mounted = false
+  $effect(() => {
+    const id = active
+    if (!mounted) { mounted = true; return }
     history.replaceState(null, '', id === 'vocab' ? '/vocab' : `/vocab?tab=${id}`)
-  }
-
-  function tabCls(id: Tab) {
-    return active === id
-      ? 'flex-1 rounded-lg px-3 py-2.5 text-sm font-semibold transition-all duration-200 bg-base-100 shadow-sm text-primary ring-1 ring-black/[0.04]'
-      : 'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 text-base-content/50 hover:text-base-content/70'
-  }
+  })
 </script>
 
-<div class="mb-5 flex gap-1 rounded-xl bg-base-200 p-1 shadow-inner">
-  {#each tabs as t (t.id)}
-    <button class={tabCls(t.id)} onclick={() => switchTab(t.id)}>
-      {t.label}
-    </button>
-  {/each}
+<div class="mb-5">
+  <Segmented
+    block
+    ariaLabel="字庫模式"
+    bind:value={active}
+    options={[
+      { value: 'vocab', label: '單字' },
+      { value: 'classics', label: '古文' },
+    ]}
+  />
 </div>
 
 {#if active === 'vocab'}

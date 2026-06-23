@@ -1,15 +1,21 @@
 <script lang="ts">
   // 古文 list —《古文觀止》精選，按朝代篩選；點一篇在 modal 內讀原文＋白話＋註釋。
-  import classicsJson from '@/data/classics.json'
+  import { onMount } from 'svelte'
   import type { ClassicsData, Classic } from '@/models/classics'
+  import { loadClassics } from '@/utils/classicsData'
   import Modal from '@/components/common/Modal.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
 
-  const data = classicsJson as unknown as ClassicsData
-  const all = data.classics
+  let data = $state<ClassicsData | null>(null)
+  onMount(async () => {
+    try {
+      data = await loadClassics()
+    } catch { /* stays null → spinner */ }
+  })
+  const all = $derived(data?.classics ?? [])
 
   const ERA_ORDER = ['先秦', '漢', '魏晉南北朝', '唐', '宋', '元', '明', '清', '近現代']
-  const presentEras = ERA_ORDER.filter((e) => all.some((c) => c.era === e))
+  const presentEras = $derived(ERA_ORDER.filter((e) => all.some((c) => c.era === e)))
 
   let q = $state('')
   let era = $state('all')
@@ -31,6 +37,9 @@
   }
 </script>
 
+{#if !data}
+  <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
+{:else}
 <div class="flex flex-col gap-4">
   <header class="flex flex-col gap-1.5">
     <p class="page-kicker">字庫</p>
@@ -76,3 +85,4 @@
 <Modal bind:open title={selected?.title ?? ''} size="full">
   {#if selected}<ClassicReader classic={selected} />{/if}
 </Modal>
+{/if}

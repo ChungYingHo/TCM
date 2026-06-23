@@ -1,17 +1,19 @@
 <script lang="ts">
-  // Interactive demo: C3 vs C4 — where CO2 is first fixed, and why C4 beats
-  // photorespiration in hot/dry conditions. Toggle between the two pathways.
+  import Segmented from '@/components/common/Segmented.svelte'
+
   let mode = $state<'C3' | 'C4'>('C4')
 </script>
 
 <div class="my-4 rounded-xl border border-base-300 bg-base-100 p-4">
-  <div role="tablist" class="tabs tabs-boxed mb-3 w-fit">
-    <button role="tab" class={`tab ${mode === 'C3' ? 'tab-active' : ''}`} onclick={() => (mode = 'C3')}>
-      C3 植物
-    </button>
-    <button role="tab" class={`tab ${mode === 'C4' ? 'tab-active' : ''}`} onclick={() => (mode = 'C4')}>
-      C4 植物
-    </button>
+  <div class="mb-3">
+    <Segmented
+      ariaLabel="光合作用類型"
+      bind:value={mode}
+      options={[
+        { value: 'C3', label: 'C3 植物' },
+        { value: 'C4', label: 'C4 植物' },
+      ]}
+    />
   </div>
 
   <div class="grid gap-3 sm:grid-cols-2">

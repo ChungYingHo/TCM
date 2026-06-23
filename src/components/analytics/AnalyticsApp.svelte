@@ -15,6 +15,7 @@
   $effect(() => {
     loadBySchool()
       .then((m) => { bySchool = Object.fromEntries(m) as Partial<Record<School, QuestionRecord[]>> })
+      .catch(() => { bySchool = {} })
       .finally(() => { loading = false })
   })
 

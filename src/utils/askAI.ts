@@ -61,6 +61,10 @@ function toast(msg: string): void {
 /** Copy the prompt and open Gemini. */
 export async function askGemini(prompt: string): Promise<void> {
   await copy(prompt)
-  window.open(GEMINI_URL, '_blank', 'noopener')
+  const w = window.open(GEMINI_URL, '_blank', 'noopener')
+  if (!w) {
+    toast('瀏覽器擋住了彈出視窗——請允許此網站開啟新分頁，或手動打開 Gemini 貼上')
+    return
+  }
   toast('已複製問題 → 切到 Gemini 貼上（Ctrl/⌘+V）按 Enter 即可')
 }

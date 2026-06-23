@@ -5,18 +5,25 @@ const KEY = 'tcm.wrongbook.v1'
 
 type Store = Record<string, WrongEntry>
 
+let _cache: Store | null = null
+
 function read(): Store {
-  if (typeof localStorage === 'undefined') return {}
+  if (typeof localStorage === 'undefined') return _cache ?? {}
+  if (_cache !== null && localStorage.getItem(KEY) !== null) return _cache
   try {
-    return JSON.parse(localStorage.getItem(KEY) || '{}') as Store
+    _cache = JSON.parse(localStorage.getItem(KEY) || '{}') as Store
   } catch {
-    return {}
+    _cache = {}
   }
+  return _cache
 }
 
 function write(store: Store, silent = false): void {
+  _cache = store
   if (typeof localStorage === 'undefined') return
-  localStorage.setItem(KEY, JSON.stringify(store))
+  try {
+    localStorage.setItem(KEY, JSON.stringify(store))
+  } catch { /* QuotaExceededError — data stays in memory, retries on next write */ }
   if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
 }
 

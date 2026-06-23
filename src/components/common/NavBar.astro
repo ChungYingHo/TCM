@@ -1,4 +1,6 @@
 ---
+import { isNavActive } from '@/utils/navActive'
+
 const path = Astro.url.pathname
 
 type NavItem = { href: string; label: string }
@@ -10,14 +12,6 @@ const nav: NavItem[] = [
   { href: '/notes', label: '筆記' },
   { href: '/analytics', label: '分析' },
 ]
-
-function isActive(href: string): boolean {
-  if (href === '/home') return path === '/home' || path === '/review'
-  if (href === '/study') return path === '/study' || path === '/exam' || path === '/wrongbook'
-  if (href === '/vocab') return path === '/vocab' || path === '/classics'
-  if (href === '/notes') return path === '/notes' || path.startsWith('/periodic-table') || path.startsWith('/amino-acids')
-  return path === href || path.startsWith(href + '/')
-}
 
 const pill = (active: boolean) =>
   `shrink-0 rounded-full px-3.5 py-1.5 text-sm transition-colors ${
@@ -36,11 +30,14 @@ const pill = (active: boolean) =>
 
     <!-- 桌機：橫排連結（lg 以下隱藏，由 BottomNav 接手） -->
     <div class="hidden items-center gap-0.5 lg:flex">
-      {nav.map((item) => (
-        <a href={item.href} class={pill(isActive(item.href))}>
-          {item.label}
-        </a>
-      ))}
+      {nav.map((item) => {
+        const active = isNavActive(path, item.href)
+        return (
+          <a href={item.href} class={pill(active)} aria-current={active ? 'page' : undefined}>
+            {item.label}
+          </a>
+        )
+      })}
     </div>
 
     <button id="reading-toggle" class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-base-content/60 transition-colors hover:bg-base-content/5 hover:text-base-content lg:h-9 lg:w-9" aria-label="切換夜讀(護眼)模式" title="夜讀(護眼)模式">

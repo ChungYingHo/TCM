@@ -37,7 +37,10 @@ const BODY: Record<School, string> = {
 export const GET: APIRoute = ({ params }) => {
   const body = BODY[params.school as School]
   if (!body) {
-    return new Response(JSON.stringify({ error: 'unknown school' }), { status: 404 })
+    return new Response(JSON.stringify({ error: 'unknown school' }), {
+      status: 404,
+      headers: { 'content-type': 'application/json' },
+    })
   }
   return new Response(body, {
     status: 200,

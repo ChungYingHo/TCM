@@ -51,7 +51,7 @@
     const useAll = mode === 'random' && mixSchools
     const load = useAll ? loadSchools([...SCHOOLS]) : loadSchool(school)
     loading = true
-    load.then((qs) => { pool = qs }).finally(() => { loading = false })
+    load.then((qs) => { pool = qs }).catch(() => { pool = [] }).finally(() => { loading = false })
   })
   $effect(() => () => stopTicker()) // clear timer on unmount
 

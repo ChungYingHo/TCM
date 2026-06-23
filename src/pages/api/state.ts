@@ -23,20 +23,21 @@ export const GET: APIRoute = async () => {
 
 export const PUT: APIRoute = async ({ request }) => {
   if (!kvEnabled()) return json({ disabled: true })
-  let state: SyncState = EMPTY
+  let state: SyncState
   try {
     const body = await request.json()
     const st = body?.state
-    if (st && typeof st === 'object') {
-      state = {
-        wrongbook: st.wrongbook ?? {},
-        progress: st.progress ?? {},
-        vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
-        elementSrs: st.elementSrs && typeof st.elementSrs === 'object' ? st.elementSrs : {},
-        classicSrs: st.classicSrs && typeof st.classicSrs === 'object' ? st.classicSrs : {},
-        aminoAcidSrs: st.aminoAcidSrs && typeof st.aminoAcidSrs === 'object' ? st.aminoAcidSrs : {},
-        updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
-      }
+    if (!st || typeof st !== 'object') {
+      return json({ error: 'missing_state' }, 400)
+    }
+    state = {
+      wrongbook: st.wrongbook && typeof st.wrongbook === 'object' ? st.wrongbook : {},
+      progress: st.progress && typeof st.progress === 'object' ? st.progress : {},
+      vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
+      elementSrs: st.elementSrs && typeof st.elementSrs === 'object' ? st.elementSrs : {},
+      classicSrs: st.classicSrs && typeof st.classicSrs === 'object' ? st.classicSrs : {},
+      aminoAcidSrs: st.aminoAcidSrs && typeof st.aminoAcidSrs === 'object' ? st.aminoAcidSrs : {},
+      updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
     }
   } catch {
     return json({ error: 'bad_body' }, 400)

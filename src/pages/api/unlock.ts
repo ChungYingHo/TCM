@@ -22,7 +22,16 @@ export const POST: APIRoute = async ({ request, cookies }) => {
   // Secure cookies are rejected by some browsers over http://localhost, which
   // would silently drop the auth cookie. Only mark Secure on real https.
   const isHttps = new URL(request.url).protocol === 'https:'
-  cookies.set(AUTH_COOKIE, makeToken(), {
+  let token: string
+  try {
+    token = makeToken()
+  } catch {
+    return new Response(JSON.stringify({ ok: false, error: 'server_config' }), {
+      status: 500,
+      headers: { 'content-type': 'application/json' },
+    })
+  }
+  cookies.set(AUTH_COOKIE, token, {
     httpOnly: true,
     secure: isHttps,
     sameSite: 'lax',

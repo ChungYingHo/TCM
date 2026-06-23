@@ -4,6 +4,7 @@
   let { question }: { question: QuestionRecord } = $props()
   let zoomed = $state(false)
   let actualSize = $state(false) // false = fit-to-screen, true = 1:1 native (scrollable)
+  let imgError = $state(false)
 
   // Question images may be served from a CDN (PUBLIC_IMG_BASE) instead of the
   // app deploy — e.g. jsDelivr over the public repo, so the ~300MB of images
@@ -33,14 +34,22 @@
   onclick={open}
   aria-label="放大題目圖片"
 >
-  <img
-    src={imgSrc}
-    alt={`${question.subject} 第 ${question.question_number} 題`}
-    class="w-full rounded-lg bg-white"
-    style={`aspect-ratio: ${ratio}`}
-    loading="lazy"
-    decoding="async"
-  />
+  {#if imgError}
+    <div class="flex w-full items-center justify-center rounded-lg border border-dashed border-base-300 bg-base-200/50 py-10 text-sm text-base-content/50" style={`aspect-ratio: ${ratio}`}>
+      圖片載入失敗
+      <button type="button" class="ml-2 underline" onclick={(e) => { e.stopPropagation(); imgError = false }}>重試</button>
+    </div>
+  {:else}
+    <img
+      src={imgSrc}
+      alt={`${question.subject} 第 ${question.question_number} 題`}
+      class="w-full rounded-lg bg-white"
+      style={`aspect-ratio: ${ratio}`}
+      loading="lazy"
+      decoding="async"
+      onerror={() => (imgError = true)}
+    />
+  {/if}
 </button>
 
 {#if zoomed}

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import classicsJson from '@/data/classics.json'
   import { onMount } from 'svelte'
   import type { VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
   import type { ClassicsData } from '@/models/classics'
+  import { loadClassics } from '@/utils/classicsData'
   import { dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
   import { dueIds as classicDueIds, grade as gradeClassic } from '@/utils/classicSrs'
   import { composeReview, seededSample } from '@/utils/reviewSample'
@@ -15,13 +15,15 @@
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
-  const classics = classicsJson as unknown as ClassicsData
-  const classicById = new Map(classics.classics.map((c) => [c.id, c]))
+  let classics = $state<ClassicsData | null>(null)
+  const classicById = $derived(new Map((classics?.classics ?? []).map((c) => [c.id, c])))
 
   let vocab = $state<VocabData | null>(null)
   const wordById = $derived(new Map((vocab?.words ?? []).map((w) => [w.id, w])))
   onMount(async () => {
-    vocab = await loadVocab()
+    const [v, c] = await Promise.allSettled([loadVocab(), loadClassics()])
+    if (v.status === 'fulfilled') vocab = v.value
+    if (c.status === 'fulfilled') classics = c.value
   })
 
   const today = todayKey()
@@ -64,8 +66,8 @@
   )
 
   const todayClassic = $derived.by(() => {
-    const all = classics.classics
-    if (!all.length) return null
+    const all = classics?.classics
+    if (!all?.length) return null
     return seededSample(all, 1, today)[0] ?? null
   })
 
