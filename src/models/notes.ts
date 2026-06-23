@@ -58,7 +58,7 @@ export const NOTES: NoteEntry[] = [
     title: '化學常用數學速查',
     subject: '化學',
     tags: ['基礎'],
-    desc: 'log 背值表、對數指數運算、科學記號、pH/pOH/pKa 計算',
+    desc: 'log 背值表、對數指數運算、科學記號、化學常用數學場景',
   },
 ]
 

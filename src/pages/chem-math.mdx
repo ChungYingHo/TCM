@@ -1,7 +1,7 @@
 ---
 layout: '@/layouts/NoteLayout.astro'
 title: 化學常用數學速查
-summary: log 背值表、對數與指數運算規則、科學記號、pH/pOH——化學計算的數學基本功。
+summary: log 背值表、對數與指數運算規則、科學記號——化學計算的數學基本功。
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
@@ -11,7 +11,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 <NoteStats tag="化學數學" client:load />
 
-速查用——忘了 log 幾等於多少、指數怎麼算、pH 公式，直接翻。
+速查用——忘了 log 幾等於多少、指數怎麼算、科學記號運算，直接翻。
 
 ---
 
@@ -86,8 +86,8 @@ $$
 | **負指數** | $a^{-n} = \dfrac{1}{a^n}$ | $10^{-3} = 0.001$ |
 | **分數指數** | $a^{1/n} = \sqrt[n]{a}$ | $8^{1/3} = 2$ |
 
-> **化學最常見**：$10^{-n}$ 的操作（濃度、$K$ 值、pH）。
-> 例：$[H^+] = 10^{-3}$ → $pH = -\log(10^{-3}) = 3$
+> **化學最常見**：$10^{-n}$ 的操作（濃度、$K$ 值等）。
+> 例：$10^{-3} = 0.001$，$\dfrac{1}{10^{-3}} = 10^3 = 1000$
 
 ---
 
@@ -123,80 +123,24 @@ $$
 
 ---
 
-## 五、pH / pOH / pK 計算
-
-### 定義
-
-$$
-\text{pH} = -\log[\text{H}^+] \qquad \text{pOH} = -\log[\text{OH}^-]
-$$
-
-$$
-\text{pH} + \text{pOH} = 14 \quad (25°\text{C})
-$$
-
-### p 的通用定義
-
-$$
-\text{p}X = -\log X
-$$
-
-所以 $\text{p}K_a = -\log K_a$，$\text{p}K_b = -\log K_b$，$\text{p}K_w = -\log K_w = 14$。
-
-### pH 速算表
-
-| $[\text{H}^+]$ | pH | 酸鹼性 |
-|-----------------|-----|--------|
-| $1 \times 10^{-1}$ (0.1 M) | **1** | 強酸 |
-| $1 \times 10^{-3}$ | **3** | 酸 |
-| $1 \times 10^{-7}$ | **7** | 中性 |
-| $1 \times 10^{-11}$ | **11** | 鹼 |
-| $1 \times 10^{-14}$ | **14** | 強鹼 |
-| $2 \times 10^{-3}$ | **2.7** | $-\log 2 - \log 10^{-3}$ = $-0.301 + 3$ |
-| $5 \times 10^{-5}$ | **4.3** | $-\log 5 - \log 10^{-5}$ = $-0.699 + 5$ |
-
-> **非整數 pH 速算法**：$[\text{H}^+] = a \times 10^{-n}$
->
-> $$\text{pH} = n - \log a$$
->
-> 例：$[\text{H}^+] = 4 \times 10^{-6}$ → $\text{pH} = 6 - \log 4 = 6 - 0.602 = \mathbf{5.398}$
-
-### 反算：pH → [H⁺]
-
-$$
-[\text{H}^+] = 10^{-\text{pH}}
-$$
-
-> 例：pH = 4.3 → $[\text{H}^+] = 10^{-4.3} = 10^{-4} \times 10^{-0.3} = 10^{-4} \times 0.5 = 5 \times 10^{-5}$
->
-> 技巧：$10^{-0.3} = 10^{-\log 2} = \dfrac{1}{2} = 0.5$
-
----
-
-## 六、常見化學計算用到的數學
+## 五、常見化學計算用到的數學
 
 | 化學場景 | 數學工具 | 公式 |
 |----------|----------|------|
-| pH | $-\log$ | $\text{pH} = -\log[\text{H}^+]$ |
-| 緩衝液 | log + 減法 | Henderson-Hasselbalch：$\text{pH} = \text{p}K_a + \log\dfrac{[\text{A}^-]}{[\text{HA}]}$ |
 | 半衰期 | 指數 + ln | $N = N_0 \left(\dfrac{1}{2}\right)^{t/t_{1/2}}$ |
 | 反應速率 | log + 比較 | $\log\dfrac{r_2}{r_1} = n \cdot \log\dfrac{[A]_2}{[A]_1}$（求反應級數 $n$） |
 | 活化能 | ln + 1/T | $\ln\dfrac{k_2}{k_1} = \dfrac{E_a}{R}\left(\dfrac{1}{T_1} - \dfrac{1}{T_2}\right)$ |
 | 自由能 | ln K | $\Delta G° = -RT \ln K = -2.303\,RT \log K$ |
-| 能斯特方程 | log | $E = E° - \dfrac{0.0592}{n} \log Q$（25°C） |
-| 稀釋 | 指數 | pH 每降 1 → $[\text{H}^+]$ 變 10 倍 |
 
 ---
 
-## 七、必背清單
+## 六、必背清單
 
 <Memorize client:visible
   items={[
     "log 2 = 0.301、log 3 = 0.477（其餘推算）",
     "乘→加、除→減、指數→搬下來",
     "ln x = 2.303 × log x",
-    "pH = −log[H⁺]、pH + pOH = 14",
-    "[H⁺] = a × 10⁻ⁿ → pH = n − log a",
     "10⁻⁰·³ = 0.5（因為 log 2 = 0.3）",
     "10⁻⁰·⁴⁸ ≈ 1/3（因為 log 3 ≈ 0.48）",
     "科學記號乘除：係數乘除、次方加減"
@@ -206,9 +150,8 @@ $$
 <KeyPoints client:visible
   items={[
     "log 4 = 2×log2 = 0.602、log 5 = 1−log2 = 0.699、log 8 = 3×log2 = 0.903",
-    "pKa + pKb = pKw = 14",
-    "pH 每變 1 → [H⁺] 差 10 倍；pH 每變 0.3 → [H⁺] 差 2 倍",
-    "Henderson-Hasselbalch 的 log 項：鹼/酸 > 1 → pH > pKa（偏鹼側）"
+    "半衰期公式：N = N₀ × (1/2)^(t/t₁/₂)——指數運算的經典應用",
+    "Arrhenius 活化能：ln(k₂/k₁) = (Eₐ/R)(1/T₁ − 1/T₂)——ln 與 1/T 的關係"
   ]}
 />
 
@@ -218,29 +161,6 @@ $$
 
 <ExampleQuestion client:visible
   n={1}
-  q="若 [H⁺] = 2 × 10⁻⁴ M，求 pH。（log 2 = 0.301）"
-  options={["3.3", "3.7", "4.3", "4.7"]}
-  answer="(B) 3.7"
-  steps={[
-    "公式：pH = n − log a，其中 a = 2、n = 4",
-    "pH = 4 − log 2 = 4 − 0.301 = <b>3.699 ≈ 3.7</b>"
-  ]}
-/>
-
-<ExampleQuestion client:visible
-  n={2}
-  q="pH = 5.3 的溶液，[H⁺] 為多少？（log 2 = 0.301）"
-  options={["2 × 10⁻⁵", "5 × 10⁻⁶", "3 × 10⁻⁵", "2 × 10⁻⁶"]}
-  answer="(B) 5 × 10⁻⁶"
-  steps={[
-    "[H⁺] = 10⁻⁵·³ = 10⁻⁵ × 10⁻⁰·³",
-    "10⁻⁰·³ = 10⁻ˡᵒᵍ² = 1/2 = 0.5",
-    "[H⁺] = 10⁻⁵ × 0.5 = <b>5 × 10⁻⁶ M</b>"
-  ]}
-/>
-
-<ExampleQuestion client:visible
-  n={3}
   q="log 12 = ?（用 log 2 + log 3 推算）"
   options={["1.079", "0.845", "1.176", "0.903"]}
   answer="(A) 1.079"
@@ -252,7 +172,7 @@ $$
 />
 
 <ExampleQuestion client:visible
-  n={4}
+  n={2}
   q="某放射性元素半衰期 10 天，經過 30 天後剩餘分率為原來的多少？"
   options={["1/2", "1/4", "1/8", "1/16"]}
   answer="(C) 1/8"
@@ -260,29 +180,5 @@ $$
     "經過的半衰期數 = 30 / 10 = <b>3</b>",
     "剩餘分率 = (1/2)³ = <b>1/8</b>",
     "指數規則：底數相同，次方數 = 經過時間 / 半衰期"
-  ]}
-/>
-
-<ExampleQuestion client:visible
-  n={5}
-  q="某弱酸 HA 的 Ka = 2 × 10⁻⁵，求 pKa。（log 2 = 0.301）"
-  options={["4.7", "5.3", "4.3", "5.7"]}
-  answer="(A) 4.7"
-  steps={[
-    "pKa = −log Ka = −log(2 × 10⁻⁵)",
-    "= −(log 2 + log 10⁻⁵)",
-    "= −(0.301 + (−5)) = −0.301 + 5 = <b>4.699 ≈ 4.7</b>"
-  ]}
-/>
-
-<ExampleQuestion client:visible
-  n={6}
-  q="Henderson-Hasselbalch：某 pKa = 4.7 的緩衝液，[A⁻]/[HA] = 2，求 pH。（log 2 = 0.301）"
-  options={["4.4", "5.0", "5.3", "4.7"]}
-  answer="(B) 5.0"
-  steps={[
-    "pH = pKa + log([A⁻]/[HA])",
-    "= 4.7 + log 2 = 4.7 + 0.301 = <b>5.001 ≈ 5.0</b>",
-    "鹼/酸 > 1 → pH > pKa，偏鹼側 ✓"
   ]}
 />
