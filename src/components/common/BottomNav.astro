@@ -24,27 +24,31 @@ function isActive(href: string): boolean {
 
 <nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden">
   <div class="mx-auto grid max-w-lg grid-cols-5">
-    {tabs.map((t) => (
-      <a
-        href={t.href}
-        class={`flex flex-col items-center gap-0.5 pb-1.5 pt-2 text-[0.65rem] font-medium transition-colors ${
-          isActive(t.href)
-            ? 'text-primary'
-            : 'text-base-content/40 active:text-base-content/60'
-        }`}
-      >
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width={isActive(t.href) ? '2.2' : '1.8'}
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-[1.35rem] w-[1.35rem]"
-          set:html={ICONS[t.icon]}
-        />
-        <span>{t.label}</span>
-      </a>
-    ))}
+    {tabs.map((t) => {
+      const active = isActive(t.href)
+      return (
+        <a
+          href={t.href}
+          class={`relative flex flex-col items-center gap-0.5 pb-2 pt-2.5 text-[0.65rem] font-medium transition-colors ${
+            active
+              ? 'text-primary font-semibold'
+              : 'text-base-content/50 active:text-primary/70'
+          }`}
+        >
+          {active && <span class="absolute top-0 left-1/2 h-[2.5px] w-5 -translate-x-1/2 rounded-full bg-primary" />}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width={active ? '2.2' : '1.6'}
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class={`h-[1.4rem] w-[1.4rem] transition-transform ${active ? 'scale-110' : ''}`}
+            set:html={ICONS[t.icon]}
+          />
+          <span>{t.label}</span>
+        </a>
+      )
+    })}
   </div>
 </nav>

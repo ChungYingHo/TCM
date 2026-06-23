@@ -84,7 +84,7 @@
 
   <!-- 1. 今日單字（隨機 20 個） -->
   {#if randomWords.length}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <section class="rounded-box border border-base-300 border-l-[3px] border-l-primary bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-3">今日單字 · {randomWords.length} 個</h2>
       <div class="grid gap-2.5 sm:grid-cols-2">
         {#each randomWords as w (w.id)}<VocabCard word={w} />{/each}
@@ -94,7 +94,7 @@
 
   <!-- 2. 複習單字（SRS 到期 + 隨機補滿）— 翻卡作答回寫間隔重複 -->
   {#if reviewWords.length}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <section class="rounded-box border border-base-300 border-l-[3px] border-l-info bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-3">複習單字 · {reviewWords.length} 個</h2>
       {#if showReview}
         <VocabStudy words={reviewWords} ids={reviewWords.map((w) => w.id)} />
@@ -112,7 +112,7 @@
   {/if}
 
   <!-- 3. 今日元素 · 週期表地基 -->
-  <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+  <section class="rounded-box border border-base-300 border-l-[3px] border-l-success bg-base-100 p-4 shadow-soft sm:p-5">
     <h2 class="section-heading mb-3">今日元素 · 週期表地基</h2>
     <p class="mb-3 text-sm text-base-content/55">原子序↔元素、A 族價電子、常用原子量、英中符號、3d/4d/5d 系列。每天抽考，答對自動排間隔複習。</p>
     {#if showElement}
@@ -123,7 +123,7 @@
   </section>
 
   <!-- 4. 今日胺基酸 -->
-  <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+  <section class="rounded-box border border-base-300 border-l-[3px] border-l-warning bg-base-100 p-4 shadow-soft sm:p-5">
     <h2 class="section-heading mb-3">今日胺基酸 · 結構對照</h2>
     <p class="mb-3 text-sm text-base-content/55"><b>結構 ↔ 中文 ↔ 英文 ↔ 簡寫</b>四者互相對照——把 20 個胺基酸練熟，答對自動排間隔複習。</p>
     {#if showAmino}
@@ -135,7 +135,7 @@
 
   <!-- 5. 今日古文（隨機一篇） -->
   {#if todayClassic}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <section class="rounded-box border border-base-300 border-l-[3px] border-l-accent bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-3">今日古文</h2>
       <p class="mb-3 text-sm text-base-content/55">先讀原文、試著回想語意與讀音，再翻開「白話翻譯」對照。</p>
       <ClassicReader classic={todayClassic} open={false} />
@@ -144,7 +144,7 @@
 
   <!-- 6. 複習古文（SRS 到期；先回想再翻譯，選記得／不熟安排下次） -->
   {#if reviewClassic}
-    <section class="rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+    <section class="rounded-box border border-base-300 border-l-[3px] border-l-secondary bg-base-100 p-4 shadow-soft sm:p-5">
       <h2 class="section-heading mb-1">複習古文</h2>
       <p class="mb-3 text-sm text-base-content/55">之前讀過、今天該回顧的一篇——先讀原文回想語意與讀音，再翻開對照，然後選「記得／不熟」安排下次複習。</p>
       <ClassicReader classic={reviewClassic} open={false} />

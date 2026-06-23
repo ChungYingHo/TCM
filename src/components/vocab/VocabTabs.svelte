@@ -23,12 +23,12 @@
 
   function tabCls(id: Tab) {
     return active === id
-      ? 'flex-1 rounded-lg px-3 py-2.5 text-sm font-semibold transition-all bg-base-100 shadow-sm text-primary'
-      : 'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-base-content/55'
+      ? 'flex-1 rounded-lg px-3 py-2.5 text-sm font-semibold transition-all duration-200 bg-base-100 shadow-sm text-primary ring-1 ring-black/[0.04]'
+      : 'flex-1 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-200 text-base-content/50 hover:text-base-content/70'
   }
 </script>
 
-<div class="mb-5 flex gap-1 rounded-xl bg-base-300/50 p-1">
+<div class="mb-5 flex gap-1 rounded-xl bg-base-200 p-1 shadow-inner">
   {#each tabs as t (t.id)}
     <button class={tabCls(t.id)} onclick={() => switchTab(t.id)}>
       {t.label}
