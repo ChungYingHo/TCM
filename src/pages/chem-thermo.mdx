@@ -1,0 +1,191 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 簡單的熱力學
+summary: 自發性、熵與亂度、系統／外界／宇宙熵（第二定律），與 ΔH·ΔS 四種組合對自發性的影響。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import EntropySign from '@/components/notes/EntropySign.svelte'
+
+<NoteStats tag="熱力學" client:load />
+
+## 一、自發性
+
+**自發變化**：不需持續外力，就會自己往某方向進行的變化。
+
+- **自發 ≠ 快**：熱力學只管「**方向**」，速率是動力學的事。
+- 判據：**宇宙熵增**（熱力學第二定律）—— $\Delta S_\text{宇宙} > 0$ 才自發。
+
+> 例：鐵生鏽、冰在室溫融化都是**自發**；但鑽石→石墨雖自發，速率極慢（千萬年）。「自發」不保證「看得到反應」。
+
+---
+
+## 二、熵 $S$（亂度）與 $\Delta S_\text{系統}$ 的正負
+
+**熵 $S$＝亂度**，越亂 $S$ 越大：**固體 ＜ 液體 ＜ 氣體**。
+
+判斷 $\Delta S_\text{系統}$ 符號**最快的方法：數反應前後的氣體莫耳數**（氣體亂度遠大於固液）：
+
+- 氣體**變多** → $\Delta S > 0$；**變少** → $\Delta S < 0$。
+- 固→液→氣、溶解、混合、升溫，也都使 $\Delta S$ 增加。
+
+<EntropySign client:visible />
+
+> 例：$\ce{CaCO3(s) -> CaO(s) + CO2(g)}$ 氣體 0→1 → $\Delta S>0$；$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ 氣體 4→2 → $\Delta S<0$。
+
+---
+
+## 三、系統熵、外界熵、宇宙熵（第二定律）
+
+$$
+\Delta S_\text{宇宙} = \Delta S_\text{系統} + \Delta S_\text{外界} \;>\; 0 \quad(\text{自發})
+$$
+
+**外界熵來自系統放／吸的熱**（定溫定壓）：
+
+$$
+\Delta S_\text{外界} = -\frac{\Delta H_\text{系統}}{T}
+$$
+
+- **放熱**（$\Delta H<0$）→ 外界得熱 → $\Delta S_\text{外界}>0$（**有利**自發）。
+- **吸熱**（$\Delta H>0$）→ 外界失熱 → $\Delta S_\text{外界}<0$。
+- 同樣的熱，**$T$ 越高，$\Delta S_\text{外界}$ 越小**（被 $T$ 除掉）。
+
+> 例：放熱 $\Delta H=-200$ kJ/mol 在 $300$ K：$\Delta S_\text{外界}=-\dfrac{-200000\ \text{J}}{300\ \text{K}}=+667\ \text{J/K}$。系統就算變整齊（$\Delta S_\text{系統}<0$），只要外界熵增夠多，宇宙熵仍可 $>0$ → 自發。
+
+---
+
+## 四、$\Delta H$ 與 $\Delta S_\text{系統}$ 的四種組合（用宇宙熵判斷）
+
+把 $\Delta S_\text{外界}=-\dfrac{\Delta H}{T}$ 代入，自發與否就看：
+
+$$
+\Delta S_\text{宇宙} = \Delta S_\text{系統} - \frac{\Delta H}{T} \;>\; 0
+$$
+
+| $\Delta H$ | $\Delta S_\text{系統}$ | $\Delta S_\text{外界}=-\frac{\Delta H}{T}$ | 自發性 |
+|:---:|:---:|:---:|------|
+| 放熱 − | ＋ | ＋ | **任何溫度**自發（兩項皆使宇宙熵增） |
+| 吸熱 ＋ | − | − | **任何溫度**不自發（兩項皆減） |
+| 放熱 − | − | ＋ | **低溫**自發（低溫 $-\frac{\Delta H}{T}$ 大，蓋過 $\Delta S_\text{系統}$） |
+| 吸熱 ＋ | ＋ | − | **高溫**自發（高溫 $-\frac{\Delta H}{T}$ 變小，$\Delta S_\text{系統}$ 勝出） |
+
+同號（−−／＋＋）時有**臨界溫度**（宇宙熵恰為 0、自發↔不自發的分界）：
+
+$$
+T = \frac{\Delta H}{\Delta S_\text{系統}}\quad(\Delta H、\Delta S\ \text{都用 J})
+$$
+
+> 例：冰融化 $\ce{H2O(s) -> H2O(l)}$，$\Delta H>0$（吸熱）、$\Delta S_\text{系統}>0$（變亂）→「高溫自發」：$T>0°\text{C}$（臨界 $T=273$ K＝熔點）才自發。
+
+---
+
+<Memorize client:visible
+  items={[
+    "自發 ⟺ ΔS_宇宙 > 0（第二定律）；自發≠快（方向是熱力學、速率是動力學）。",
+    "熵＝亂度：固＜液＜氣。ΔS_系統 符號看『氣體莫耳數』增減最快。",
+    "ΔS_宇宙 ＝ ΔS_系統 ＋ ΔS_外界；ΔS_外界 ＝ −ΔH/T（放熱→外界熵增）。<b>ΔS_宇宙>0 才自發</b>。",
+    "四組合：ΔH−ΔS+ 恆自發；ΔH+ΔS− 恆不自發；同號看溫度（−−低溫、++高溫）。",
+    "臨界溫度（宇宙熵=0）：T＝ΔH/ΔS_系統（ΔH、ΔS 同用 J）。"
+  ]}
+/>
+
+<KeyPoints client:visible
+  items={[
+    "「自發」只說會不會往那個方向、不說多快——鑽石→石墨自發卻極慢。",
+    "判 ΔS 符號先數氣體莫耳數變化；固→液→氣、溶解皆增熵。",
+    "放熱使外界熵增（−ΔH/T），所以放熱通常有利自發、但非絕對（要看 ΔS_宇宙）。",
+    "算 ΔS_宇宙＝ΔS_系統−ΔH/T 時，ΔH 與 ΔS 單位要一致（都用 J）。",
+    "ΔH、ΔS 同號才有臨界溫度 T＝ΔH/ΔS_系統；異號則與溫度無關。"
+  ]}
+/>
+
+<SolveApproach client:visible
+  steps={[
+    "判 ΔS_系統 符號：數反應前後氣體莫耳數（變多為正）。",
+    "判 ΔH 符號：放熱負、吸熱正 → 得 ΔS_外界 = −ΔH/T 的正負。",
+    "合起來算 ΔS_宇宙 = ΔS_系統 + ΔS_外界（單位都用 J）。",
+    "ΔS_宇宙 > 0 自發、= 0 平衡、< 0 不自發。",
+    "ΔH、ΔS 同號時用臨界溫度 T＝ΔH/ΔS_系統 找自發的溫度範圍。"
+  ]}
+/>
+
+## 例題（由易到難）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="下列關於「自發反應」的敘述，何者正確？"
+  options={[
+    "自發反應一定進行得很快",
+    "自發反應一定放熱",
+    "自發反應使宇宙熵增加（ΔS_宇宙 > 0）",
+    "自發反應必使系統熵增加（ΔS_系統 > 0）"
+  ]}
+  answer="(C) 自發反應使宇宙熵增加（ΔS_宇宙 > 0）"
+  steps={[
+    "自發≠快（鑽石→石墨自發卻極慢）→ (A) 錯。",
+    "吸熱也可能自發（如冰融化）→ (B) 錯。",
+    "系統熵可減少（如結冰、放熱），只要外界熵增夠多、宇宙熵仍 > 0 即自發 → (D) 錯。",
+    "判據是第二定律：<b>ΔS_宇宙 > 0</b> → (C) 對。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="下列反應何者 ΔS_系統 < 0（亂度減少）？"
+  options={[
+    "CaCO₃(s) → CaO(s) + CO₂(g)",
+    "2KClO₃(s) → 2KCl(s) + 3O₂(g)",
+    "N₂(g) + 3H₂(g) → 2NH₃(g)",
+    "H₂O(l) → H₂O(g)"
+  ]}
+  answer="(C) N₂(g) + 3H₂(g) → 2NH₃(g)"
+  steps={[
+    "看氣體莫耳數增減：(A) 0→1 增、(B) 0→3 增、(D) 0→1 增 → ΔS>0。",
+    "(C) 氣體 4→2 <b>減少</b> → <b>ΔS<0</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="某放熱反應 ΔH = −150 kJ/mol，在 300 K 進行。外界熵變 ΔS_外界 約為多少？"
+  options={["−500 J/K", "+500 J/K", "−0.5 J/K", "+0.5 J/K"]}
+  answer="(B) +500 J/K"
+  steps={[
+    "ΔS_外界 = −ΔH/T；放熱 ΔH<0 → ΔS_外界>0。",
+    "= −(−150000 J)/(300 K) = <b>+500 J/K</b>。",
+    "放熱把熱倒給外界，外界變亂 → 外界熵增。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="放熱反應 ΔH = −100 kJ/mol、ΔS_系統 = −200 J/(mol·K)，300 K 時 ΔS_宇宙 為多少？是否自發？"
+  options={["+133 J/K，自發", "−133 J/K，不自發", "+533 J/K，自發", "−533 J/K，不自發"]}
+  answer="(A) +133 J/K，自發"
+  steps={[
+    "ΔS_外界 = −ΔH/T = −(−100000 J)/(300 K) = <b>+333 J/K</b>。",
+    "ΔS_宇宙 = ΔS_系統 + ΔS_外界 = −200 + 333 = <b>+133 J/K</b>。",
+    "ΔS_宇宙 > 0 → <b>自發</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="承上題（ΔH = −100 kJ/mol、ΔS_系統 = −200 J/(mol·K)）。此反應在何種溫度下自發？臨界溫度為何？"
+  options={[
+    "高溫自發，T = 500 K",
+    "低溫自發，T = 500 K",
+    "任何溫度自發",
+    "任何溫度不自發"
+  ]}
+  answer="(B) 低溫自發，T = 500 K"
+  steps={[
+    "ΔH−（外界熵＋）、ΔS_系統− 同號 → 「低溫自發」：低溫時 −ΔH/T 大、蓋過系統熵減。",
+    "臨界溫度（ΔS_宇宙=0）：T = ΔH/ΔS_系統 = (−100000 J)/(−200 J/K) = <b>500 K</b>。",
+    "T < 500 K 時 ΔS_宇宙>0 自發；T > 500 K 反而不自發。"
+  ]}
+/>

@@ -5,7 +5,8 @@ import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
 
 export const prerender = false
 
-const CATS: AACategory[] = ['nonpolar', 'aromatic', 'polar', 'acidic', 'basic']
+// 依大綱順序：非極性脂肪族 → 極性不帶電 → 帶負電(酸性) → 帶正電(鹼性) → 芳香族
+const CATS: AACategory[] = ['nonpolar', 'polar', 'acidic', 'basic', 'aromatic']
 const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category === c) }))
 ---
 

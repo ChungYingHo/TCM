@@ -1,77 +1,92 @@
 ---
 layout: '@/layouts/NoteLayout.astro'
-title: 化學常用單位換算速查（Unit Factor）
-summary: 長度、質量、體積、壓力、溫度、能量、濃度——每一組換算都用 unit factor 完整分數寫出。
+title: 化學上重要的單位
+summary: 莫耳、amu／莫耳質量、unit factor 換算、長度／壓力／溫度／能量／濃度單位、化學常用數學與有效數字。
 ---
+import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import SigFig from '@/components/notes/SigFig.svelte'
 
-速查＋每日練手感用。所有換算都用 **unit factor**（已知量 × 分數）寫出，不省略分子分母。
+<NoteStats tag="化學計量" client:load />
 
----
+## 一、莫耳（mol）：兩種算法
 
-## 一、SI 詞頭（前綴）
+**1 mol＝ $6.022\times10^{23}$ 個粒子（亞弗加厥數 $N_A$）**。要算 mol，看題目給的是「**數量**」還是「**質量**」：
 
-背熟這張表，所有「公制單位互換」都是乘以 10 的幾次方：
+| 已知 | 公式 | 名稱 |
+|------|------|------|
+| 粒子數 $N$ | $n = \dfrac{N}{N_A}$ | 由**數量**求 mol |
+| 質量 $m$ | $n = \dfrac{m}{M}$ | 由**質量**求 mol |
 
-| 詞頭 | 符號 | 倍率 | 常見用途 |
-|------|------|------|---------|
-| kilo | k | $10^3$ | kg, kJ, kPa |
-| — | — | $10^0 = 1$ | g, J, L, m |
-| centi | c | $10^{-2}$ | cm |
-| milli | m | $10^{-3}$ | mL, mm, mg |
-| micro | μ | $10^{-6}$ | μm, μg, μL |
-| nano | n | $10^{-9}$ | nm |
-| pico | p | $10^{-12}$ | pm |
-
-> **unit factor 寫法**：$3.5\ \text{kg} \times \dfrac{10^3\ \text{g}}{1\ \text{kg}} = 3500\ \text{g}$
+> $M$＝莫耳質量（g/mol）。數值上：單一原子取**原子量 AW**、分子／化合物取**分子量 MW**（MW＝組成各原子 AW 之和）。
 
 ---
 
-## 二、長度
+## 二、amu 與莫耳質量 $M$
 
-| 換算 | 數值 |
+| 概念 | 定義 | 單位 |
+|------|------|------|
+| **原子質量單位 amu** | $^{12}\text{C}$ 質量的 $\frac{1}{12}$ | — |
+| **原子量／分子量** | 相對於 1 amu 的倍數（分子量＝各原子量總和） | amu |
+| **莫耳質量 $M$** | 1 mol 該物質的質量 | g/mol |
+
+$$
+1\ \text{amu} = \frac{1\ \text{g}}{6.022\times10^{23}}
+$$
+
+**關鍵橋接：$X$ amu ＝ $X$ g/mol（數值相同）**。以 O（16.00 amu）為例，$N_A$ 在分子分母約掉：
+
+$$
+\underbrace{16\ \text{amu}}_{\text{1 個 O}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23}\ \text{amu}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
+$$
+
+---
+
+## 三、Unit factor 換算法
+
+**核心：把每一步寫成「已知量 $\times \dfrac{\text{目標單位}}{\text{已知單位}}$」，分子分母帶單位，上下約分後只剩目標單位。** 多步驟一律橫著連乘到底再算。
+
+unit factor（把等價關係寫成分數）：
+
+$$
+\frac{30.7\ \text{NTD}}{1\ \text{USD}} \qquad \frac{60\ \text{s}}{1\ \text{min}} \qquad \frac{1\ \text{g}}{6.022\times10^{23}\ \text{amu}}
+$$
+
+### 莫耳換算速查
+
+| 換算方向 | Unit factor |
+|----------|-------------|
+| g → mol | $\times \dfrac{1\ \text{mol}}{M\ \text{g}}$ |
+| mol → g | $\times \dfrac{M\ \text{g}}{1\ \text{mol}}$ |
+| mol → 個 | $\times \dfrac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}$ |
+| 個 → mol | $\times \dfrac{1\ \text{mol}}{6.022\times10^{23}\ \text{個}}$ |
+| L (STP) → mol | $\times \dfrac{1\ \text{mol}}{22.4\ \text{L}}$ |
+| 跨物質 | $\times \dfrac{\text{目標係數}}{\text{已知係數}}$ |
+
+多步驟串連（質量 → mol → 個）：
+
+$$
+9\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}} \times \frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}} = 3.01\times10^{23}\ \text{個}
+$$
+
+---
+
+## 四、SI 詞頭與長度／質量／體積
+
+| 詞頭 | k | c | m | μ | n | p |
+|------|---|---|---|---|---|---|
+| 倍率 | $10^{3}$ | $10^{-2}$ | $10^{-3}$ | $10^{-6}$ | $10^{-9}$ | $10^{-12}$ |
+
+| 類別 | 換算 |
 |------|------|
-| 1 m | $10^2$ cm = $10^3$ mm = $10^6$ μm = $10^9$ nm = $10^{10}$ Å = $10^{12}$ pm |
-| **1 Å** | $10^{-10}$ m = $10^{-8}$ cm = **100 pm** = 0.1 nm |
-| 1 nm | $10^{-9}$ m = 10 Å |
+| **長度** | $1\ \text{Å} = 100\ \text{pm} = 0.1\ \text{nm} = 10^{-10}\ \text{m}$（原子半徑、鍵長常用） |
+| **質量** | $1\ \text{kg}=10^3\ \text{g}=10^6\ \text{mg}$ |
+| **體積** | $1\ \text{L}=1000\ \text{mL}=1\ \text{dm}^3$；$1\ \text{mL}=1\ \text{cm}^3$ |
 
-化學最常用 **Å（埃）** 和 **pm（皮米）** 標示原子半徑與鍵長。
-
-> unit factor 例：把 1.54 Å 換成 pm
->
-> $1.54\ \text{Å} \times \dfrac{100\ \text{pm}}{1\ \text{Å}} = 154\ \text{pm}$
-
----
-
-## 三、質量
-
-| 換算 | 數值 |
-|------|------|
-| 1 kg | $10^3$ g |
-| 1 g | $10^3$ mg = $10^6$ μg |
-| **1 amu (u)** | $\dfrac{1\ \text{g}}{6.022\times10^{23}} = 1.6605\times10^{-24}\ \text{g}$ |
-
-> unit factor 例：把 0.250 kg 換成 mg
->
-> $0.250\ \text{kg} \times \dfrac{10^3\ \text{g}}{1\ \text{kg}} \times \dfrac{10^3\ \text{mg}}{1\ \text{g}} = 2.50\times10^5\ \text{mg}$
-
----
-
-## 四、體積
-
-| 換算 | 數值 |
-|------|------|
-| **1 L** | **1000 mL** = **1 dm³** |
-| **1 mL** | **1 cm³** = 1 cc |
-| 1 m³ | $10^3$ L = $10^6$ mL |
-
-> **最常踩的坑**：溶液計算忘記把 mL 換成 L，莫耳濃度 $M = n/V$ 的 $V$ 要用 **L**。
-
-> unit factor 例：250 mL 換成 L
->
-> $250\ \text{mL} \times \dfrac{1\ \text{L}}{1000\ \text{mL}} = 0.250\ \text{L}$
+> 算莫耳濃度 $M=n/V$ 時，$V$ 一律用 **L**。
 
 ---
 
@@ -79,33 +94,38 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 | 換算 | 數值 |
 |------|------|
-| **1 atm** | **760 mmHg** = **760 torr** |
-| 1 atm | **101.325 kPa** = **101325 Pa** |
-| 1 atm | 1.01325 bar |
-| 1 bar | 100 kPa |
+| **1 atm** | $760\ \text{mmHg} = 760\ \text{torr} = 101325\ \text{Pa} = 101.325\ \text{kPa}$ |
+| 1 atm | $1.01325\ \text{bar} \approx 14.7\ \text{psi}$ |
+| 1 Torr | $\approx 133.3\ \text{Pa}$（＝1 mmHg） |
 
-> unit factor 例：把 380 mmHg 換成 atm
->
-> $380\ \text{mmHg} \times \dfrac{1\ \text{atm}}{760\ \text{mmHg}} = 0.500\ \text{atm}$
+**兩個計算公式**：
 
-> unit factor 例：把 2.5 atm 換成 kPa
->
-> $2.5\ \text{atm} \times \dfrac{101.325\ \text{kPa}}{1\ \text{atm}} = 253.3\ \text{kPa}$
+$$
+P = \frac{F}{A}\ (\text{力／面積}) \qquad P = \rho g h\ (\text{流體靜壓；氣壓計、U 形管})
+$$
 
 ---
 
 ## 六、溫度
 
-| 換算 | 公式 |
-|------|------|
-| °C → K | $T(\text{K}) = T(°\text{C}) + 273.15$ |
-| K → °C | $T(°\text{C}) = T(\text{K}) - 273.15$ |
-| °C → °F | $T(°\text{F}) = T(°\text{C}) \times \dfrac{9}{5} + 32$ |
-| °F → °C | $T(°\text{C}) = (T(°\text{F}) - 32) \times \dfrac{5}{9}$ |
+溫度標都是**線性**的 → **不必背公式**，只要知道任一溫標的**兩個參考點**（常用水的冰點、沸點），用「冰點到沸點之間**比例相同**」現推：
 
-> **溫度換算不能用 unit factor 的「乘法分數」**，因為它有加減（偏移量），不是純倍率關係。但 °C → K 很簡單——**直接加 273**（考試常取整數）。
+| 溫標 | 水冰點 | 水沸點 | 一格大小 |
+|------|:------:|:------:|:--------:|
+| 攝氏 °C | 0 | 100 | 基準 |
+| 華氏 °F | 32 | 212 | °C 的 9/5 |
+| 凱氏 K | 273.15 | 373.15 | 同 °C |
 
-> 最常踩的坑：$PV = nRT$ 的 $T$ 一定要用 **K**，忘記加 273 就全錯。
+對齊「在冰點→沸點之間的比例」：
+
+$$
+\frac{°\text{C}-0}{100} = \frac{°\text{F}-32}{180} = \frac{\text{K}-273.15}{100}
+$$
+
+- 由此現推 $°\text{F}=°\text{C}\times\frac{9}{5}+32$、$\text{K}=°\text{C}+273.15$（K 與 °C 一格一樣大，只差原點）。
+- 遇到**沒看過的溫標 °X**：把它的冰點、沸點代進同一條比例式即可，不用另背。
+
+> $PV=nRT$ 的 $T$ 一律用 **K**。
 
 ---
 
@@ -113,164 +133,242 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 | 換算 | 數值 |
 |------|------|
-| **1 cal** | **4.184 J** |
-| 1 kcal | 4.184 kJ = 4184 J |
-| 1 kJ | 1000 J |
-| 1 eV | $1.602\times10^{-19}$ J |
-
-> unit factor 例：把 500 cal 換成 kJ
->
-> $500\ \text{cal} \times \dfrac{4.184\ \text{J}}{1\ \text{cal}} \times \dfrac{1\ \text{kJ}}{10^3\ \text{J}} = 2.092\ \text{kJ}$
-
-> **注意**：營養學的「大卡（Cal / kcal）」= 1000 cal。題目寫 Cal（大寫 C）= kcal。
+| **1 cal** | $4.184\ \text{J}$ |
+| 1 kcal | $4184\ \text{J}$（營養學「大卡 Cal」＝kcal） |
+| 1 eV | $1.602\times10^{-19}\ \text{J}$ |
+| 1 L·atm | $101.325\ \text{J}$ |
 
 ---
 
 ## 八、濃度
 
-| 單位 | 定義 | 公式 |
-|------|------|------|
-| **莫耳濃度 M** (mol/L) | 每**公升溶液**含幾 mol 溶質 | $M = \dfrac{n}{V_\text{溶液}(\text{L})}$ |
-| **重量莫耳濃度 m** (mol/kg) | 每**公斤溶劑**含幾 mol 溶質 | $m = \dfrac{n}{W_\text{溶劑}(\text{kg})}$ |
-| **重量百分比 %(w/w)** | 溶質質量 ÷ 溶液總質量 × 100% | |
-| **體積百分比 %(v/v)** | 溶質體積 ÷ 溶液總體積 × 100% | |
-| **ppm** | 百萬分之一 | $= \dfrac{\text{mg}}{\text{L}}$（稀溶液）或 $\dfrac{\text{mg}}{\text{kg}}$ |
-| **ppb** | 十億分之一 | $= \dfrac{\mu\text{g}}{\text{L}}$ 或 $\dfrac{\mu\text{g}}{\text{kg}}$ |
+| 單位 | 定義 |
+|------|------|
+| **莫耳濃度 $M$** (mol/L) | $M = \dfrac{n}{V_\text{溶液}(\text{L})}$ |
+| **重量莫耳濃度 $m$** (mol/kg) | $m = \dfrac{n}{W_\text{溶劑}(\text{kg})}$ |
+| **重量百分比 %(w/w)** | 溶質質量 ÷ 溶液總質量 × 100% |
+| **ppm** | $\dfrac{\text{mg}}{\text{L}}$（稀水溶液，密度≈1）；ppb＝$\dfrac{\mu\text{g}}{\text{L}}$ |
 
-### %(w/w) + 密度 → M 的 unit factor 鏈
-
-鎖定 **1 L 溶液**，四步走（每步都是一個 unit factor）：
+**%(w/w) ＋ 密度 → $M$**（鎖定 1 L 溶液，四個 unit factor 串起來）：
 
 $$
-\underbrace{1\ \text{L 溶液}}_{\text{鎖定}} \times \underbrace{\frac{d\ \text{g}}{1\ \text{mL}} \times \frac{1000\ \text{mL}}{1\ \text{L}}}_{\text{溶液→質量}} \times \underbrace{\frac{w\%}{100}}_{\text{→溶質質量}} \times \underbrace{\frac{1\ \text{mol}}{M_w\ \text{g}}}_{\text{→莫耳}} = \frac{10\,d\,w}{M_w}\ \text{mol}
+1\ \text{L} \times \frac{1000\ \text{mL}}{1\ \text{L}} \times \frac{d\ \text{g}}{1\ \text{mL}} \times \frac{w\%}{100} \times \frac{1\ \text{mol}}{M_w\ \text{g}} = \frac{10\,d\,w}{M_w}\ \text{mol}
 $$
 
-所以 $M(\text{mol/L}) = \dfrac{10\,d\,w}{M_w}$（$d$ = 密度 g/mL、$w$ = 重量百分比、$M_w$ = 分子量 g/mol）。
-
-> unit factor 例：36.5%(w/w) HCl，密度 1.18 g/mL，HCl 分子量 36.5 g/mol，求 M
->
-> $M = \dfrac{10 \times 1.18 \times 36.5}{36.5} = \dfrac{10 \times 1.18 \times 36.5}{36.5} = 11.8\ \text{M}$
-
-### ppm 的 unit factor
-
-> 水中含鉛 50 ppm，換成 g/L：
->
-> $50\ \text{ppm} = 50\ \dfrac{\text{mg}}{\text{L}} \times \dfrac{1\ \text{g}}{10^3\ \text{mg}} = 0.050\ \dfrac{\text{g}}{\text{L}}$
+所以 $M = \dfrac{10\,d\,w}{M_w}$（$d$＝密度 g/mL、$w$＝重量百分比、$M_w$＝分子量）。
 
 ---
 
-## 九、氣體常數 R 的單位換算
+## 九、氣體常數 $R$
 
-$R$ 的值取決於壓力和能量的單位：
+| $R$ 值 | 單位 | 何時用 |
+|--------|------|--------|
+| **0.08206** | L·atm/(mol·K) | $P$ 用 atm、$V$ 用 L |
+| **8.314** | J/(mol·K) | 能量計算（$\Delta G$、$E_a$） |
+| 62.36 | L·mmHg/(mol·K) | $P$ 用 mmHg |
 
-| R 值 | 單位 | 搭配 |
-|------|------|------|
-| **0.08206** | L·atm/mol·K | $P$ 用 atm、$V$ 用 L |
-| **8.314** | J/mol·K | 能量計算（$\Delta G = -nFE$） |
-| 62.36 | L·mmHg/mol·K | $P$ 用 mmHg |
-
-> **R 之間的 unit factor 互換**：
->
-> $0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}} \times \dfrac{101.325\ \text{J}}{1\ \text{L·atm}} = 8.314\ \dfrac{\text{J}}{\text{mol·K}}$
+> 三個其實是同一個 $R$ 換單位：$0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}} \times \dfrac{101.325\ \text{J}}{1\ \text{L·atm}} = 8.314\ \dfrac{\text{J}}{\text{mol·K}}$。
 
 ---
 
-<Memorize client:visible>
-<b>1 atm = 760 mmHg = 101.325 kPa</b>。<br/>
-<b>1 L = 1000 mL = 1 dm³；1 mL = 1 cm³</b>。<br/>
-<b>1 cal = 4.184 J</b>；1 kcal = 4184 J。<br/>
-<b>K = °C + 273</b>（PV=nRT 一定用 K！）。<br/>
-<b>1 Å = 100 pm = 10⁻¹⁰ m</b>。<br/>
-%(w/w)→M 公式：<b>M = 10dw / Mw</b>（d=密度、w=%、Mw=分子量）。<br/>
-<b>ppm = mg/L</b>（稀溶液視密度≈1）。<br/>
-R = 0.08206 L·atm/mol·K = 8.314 J/mol·K。
-</Memorize>
+## 十、化學常用數學
 
-<KeyPoints client:visible items={[
-  "SI 詞頭：k=10³、c=10⁻²、m=10⁻³、μ=10⁻⁶、n=10⁻⁹、p=10⁻¹²。",
-  "<b>1 Å = 100 pm = 10⁻¹⁰ m</b>（原子半徑/鍵長常用）。",
-  "<b>1 L = 1000 mL = 1 dm³</b>；1 mL = 1 cm³。溶液 V 一定換成 L 再算 M。",
-  "<b>1 atm = 760 mmHg = 101.325 kPa</b>。",
-  "<b>K = °C + 273</b>；PV=nRT 的 T 必須用 K。",
-  "<b>1 cal = 4.184 J</b>；大卡 Cal = kcal = 1000 cal。",
-  "%(w/w) + 密度 → M：<b>M = 10dw/Mw</b>，記住鎖定 1 L 溶液推導。",
-  "<b>ppm = mg/L = mg/kg</b>（稀溶液）；ppb = μg/L。",
-  "R = <b>0.08206</b> L·atm/mol·K = <b>8.314</b> J/mol·K；看題目壓力單位選 R。"
-]} />
+### 直線方程式
+
+$$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
+
+化學把關係「**線性化**」後用斜率/截距求參數，例：Arrhenius $\ln k$ 對 $\frac{1}{T}$、比爾定律 $A$ 對濃度。
+
+### 微積分（只記目的）
+
+- **微分**：求**極值**（斜率＝0 處為最大／最小）。
+- **積分**：求**面積**（如速率對時間積分＝濃度變化量）。
+
+### 指數
+
+| 規則 | 公式 |
+|------|------|
+| 同底相乘／除 | $a^m a^n = a^{m+n}$；$\dfrac{a^m}{a^n}=a^{m-n}$ |
+| 冪的冪 | $(a^m)^n = a^{mn}$ |
+| 負／分數指數 | $a^{-n}=\dfrac{1}{a^n}$；$a^{1/n}=\sqrt[n]{a}$ |
+
+### 對數
+
+- 運算：$\log(AB)=\log A+\log B$（乘變加）、$\log\frac{A}{B}=\log A-\log B$（除變減）、$\log A^n=n\log A$（指數搬下）。
+- $\ln x = 2.303\ \log x$（所以 $\Delta G=-RT\ln K=-2.303\,RT\log K$）。
+
+**log 背值表**（只背 $\log 2$、$\log 3$，其餘可推）：
+
+| $x$ | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
+|-----|---|---|---|---|---|---|---|---|
+| $\log x$ | 0.301 | 0.477 | 0.602 | 0.699 | 0.778 | 0.845 | 0.903 | 0.954 |
+
+> 推法：$\log4=2\log2$、$\log5=1-\log2$、$\log6=\log2+\log3$、$\log8=3\log2$、$\log9=2\log3$。
+
+---
+
+## 十一、測量：準確度、精密度與有效數字
+
+| 名詞 | 意義 |
+|------|------|
+| **準確度** accuracy | 量測值**接近真值**的程度 |
+| **精密度** precision | 多次量測**彼此集中**的程度（不論離真值多遠） |
+
+**有效數字**——哪些位數算數：
+
+- 非零數字**都算**；夾在中間的 0 **算**（如 1**0**5 共 3 位）。
+- 小數點後**末尾的 0 算**（如 2.5**0** 共 3 位）；純前導 0 **不算**（如 0.00**25** 共 2 位）。
+
+**運算規則**：
+
+- **加減**看**小數位數**，取最少者（23.68＋4.12＝27.80，留 2 位小數）。
+- **乘除**看**有效數字位數**，取最少者（2.0×3.14＝6.3，留 2 位有效）。
+
+<SigFig client:visible />
+
+---
+
+<Memorize client:visible
+  items={[
+    "mol 兩算法：n＝N/N_A（由數量）、n＝m/M（由質量；M＝原子量 AW／分子量 MW）。",
+    "1 amu＝1 g÷N_A（多以分數計算）；<b>X amu＝X g/mol</b>（數值相同）。",
+    "unit factor：已知量×(目標單位/已知單位)，帶單位、約分只剩目標。",
+    "1 atm＝760 mmHg＝760 torr＝101325 Pa；1 Torr≈133.3 Pa。",
+    "溫度換算用『冰點→沸點比例』現推（不背公式，可解未知溫標）；K＝°C＋273，PV=nRT 一律用 K。",
+    "1 cal＝4.184 J；1 eV＝1.602×10⁻¹⁹ J；1 L·atm＝101.325 J。",
+    "1 Å＝100 pm＝10⁻¹⁰ m；1 L＝1000 mL＝1 dm³。",
+    "M＝10dw/M_w（d 密度、w 重量%、M_w 分子量）。",
+    "R＝0.08206 L·atm/mol·K＝8.314 J/mol·K。",
+    "ln x＝2.303 log x；log2＝0.301、log3＝0.477。",
+    "加減看小數位、乘除看有效位（皆取最少者）。"
+  ]}
+/>
+
+<KeyPoints client:visible
+  items={[
+    "算 M 前 V 換 L、算 PV=nRT 前 T 換 K——兩處最易漏的單位轉換。",
+    "X amu＝X g/mol 的關鍵是 N_A 在 amu→g 與 mol 兩步約掉。",
+    "選 R：題目壓力給 atm 用 0.08206、要能量用 8.314。",
+    "%(w/w)→M 記住「鎖定 1 L 溶液」推導，公式 M＝10dw/M_w。",
+    "有效數字：加減看小數位、乘除看有效位，別搞混。"
+  ]}
+/>
+
+<SolveApproach client:visible
+  steps={[
+    "先把題目所有量都用 unit factor 轉成 mol（看給的是數量 N 還是質量 m）。",
+    "需要時再用係數比跨到目標物質的 mol。",
+    "把 mol 轉成題目要的單位（質量／個數／體積／濃度）。",
+    "全程分數帶單位、上下約分，最後檢查只剩目標單位。",
+    "算完依有效數字規則歸整（加減看小數位、乘除看有效位）。"
+  ]}
+/>
 
 ## 例題
 
 <ExampleQuestion client:visible
   n={1}
-  q="將 0.5 atm 換成 mmHg。用 unit factor 完整列式。"
-  options={["38 mmHg", "152 mmHg", "380 mmHg", "760 mmHg"]}
-  answer="(C) 380 mmHg"
+  q="48 g 鎂（Mg，M＝24 g/mol）含多少個原子？用 unit factor 完整列式。（N<sub>A</sub>＝6.0×10²³）"
+  options={["6.0×10²³", "1.2×10²⁴", "2.4×10²⁴", "3.0×10²³"]}
+  answer="(B) 1.2×10²⁴"
   steps={[
-    "0.5 atm × <b>(760 mmHg / 1 atm)</b> = <b>380 mmHg</b>。",
-    "unit factor 分數：分母 atm 與已知 atm 約掉，只剩 mmHg。"
+    "48 g × <b>(1 mol / 24 g)</b> × <b>(6.0×10²³ 個 / 1 mol)</b>",
+    "g 約掉、mol 約掉，只剩「個」。",
+    "＝ 2 mol × 6.0×10²³ ＝ <b>1.2×10²⁴ 個</b>。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={2}
-  q="27°C、1 atm 下，某氣體體積 820 mL。求莫耳數。（R = 0.08206 L·atm/mol·K）"
-  options={["0.01 mol", "0.02 mol", "0.033 mol", "0.82 mol"]}
-  answer="(C) 0.033 mol"
+  q="STP 下 5.6 L O₂（M＝32 g/mol）質量為多少克？"
+  options={["4 g", "8 g", "16 g", "32 g"]}
+  answer="(B) 8 g"
   steps={[
-    "溫度：27 + 273 = <b>300 K</b>。",
-    "體積：820 mL × <b>(1 L / 1000 mL)</b> = <b>0.820 L</b>。",
-    "PV = nRT → n = PV/(RT) = (1 × 0.820) / (0.08206 × 300) = 0.820 / 24.62 ≈ <b>0.033 mol</b>。",
-    "常見錯誤：忘記 mL→L 或 °C→K，答案直接差 1000 倍或算出負值。"
+    "5.6 L × <b>(1 mol / 22.4 L)</b> × <b>(32 g / 1 mol)</b>",
+    "L→mol→g，上下約分只剩 g。",
+    "＝ 0.25 mol × 32 ＝ <b>8 g</b>。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={3}
-  q="98%(w/w) 濃硫酸，密度 1.84 g/mL，H₂SO₄ 分子量 98 g/mol。求莫耳濃度 M。用 unit factor 從 1 L 溶液推導。"
-  options={["9.2 M", "14.7 M", "18.4 M", "36.8 M"]}
-  answer="(C) 18.4 M"
+  q="將 0.5 atm 換成 mmHg。"
+  options={["38 mmHg", "152 mmHg", "380 mmHg", "760 mmHg"]}
+  answer="(C) 380 mmHg"
   steps={[
-    "鎖定 1 L 溶液。",
-    "溶液質量：1 L × <b>(1000 mL / 1 L)</b> × <b>(1.84 g / 1 mL)</b> = <b>1840 g</b>。",
-    "溶質質量：1840 g × <b>(98 / 100)</b> = <b>1803 g H₂SO₄</b>。",
-    "莫耳數：1803 g × <b>(1 mol / 98 g)</b> = <b>18.4 mol</b>。",
-    "M = 18.4 mol / 1 L = <b>18.4 M</b>。",
-    "驗算公式：M = 10 × 1.84 × 98 / 98 = <b>18.4</b> ✓"
+    "0.5 atm × <b>(760 mmHg / 1 atm)</b>＝<b>380 mmHg</b>。",
+    "分母 atm 與已知 atm 約掉，只剩 mmHg。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={4}
-  q="某反應放熱 2.5 kcal。換算成 kJ。（1 cal = 4.184 J）"
-  options={["1.046 kJ", "10.46 kJ", "104.6 kJ", "0.598 kJ"]}
-  answer="(B) 10.46 kJ"
+  q="27°C、1 atm 下某氣體體積 820 mL，求莫耳數。（R＝0.08206 L·atm/mol·K）"
+  options={["0.01 mol", "0.02 mol", "0.033 mol", "0.82 mol"]}
+  answer="(C) 0.033 mol"
   steps={[
-    "2.5 kcal × <b>(10³ cal / 1 kcal)</b> × <b>(4.184 J / 1 cal)</b> × <b>(1 kJ / 10³ J)</b>",
-    "= 2.5 × 4.184 = <b>10.46 kJ</b>。",
-    "捷徑：kcal→kJ 直接 ×4.184（因為 10³ 在分子分母約掉）。"
+    "T：27＋273＝<b>300 K</b>；V：820 mL × (1 L / 1000 mL)＝<b>0.820 L</b>。",
+    "n＝PV/RT＝(1 × 0.820)/(0.08206 × 300)＝0.820/24.62≈<b>0.033 mol</b>。",
+    "常見錯誤：忘記 mL→L 或 °C→K。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={5}
-  q="C–C 單鍵鍵長為 1.54 Å。換算成 pm 和 nm。"
-  options={["154 pm、0.154 nm", "15.4 pm、1.54 nm", "1540 pm、0.0154 nm", "154 pm、1.54 nm"]}
-  answer="(A) 154 pm、0.154 nm"
+  q="98%(w/w) 濃硫酸，密度 1.84 g/mL，H₂SO₄ 分子量 98。求莫耳濃度 M。"
+  options={["9.2 M", "14.7 M", "18.4 M", "36.8 M"]}
+  answer="(C) 18.4 M"
   steps={[
-    "Å → pm：1.54 Å × <b>(100 pm / 1 Å)</b> = <b>154 pm</b>。",
-    "Å → nm：1.54 Å × <b>(0.1 nm / 1 Å)</b> = <b>0.154 nm</b>。",
-    "記：1 Å = 100 pm = 0.1 nm。"
+    "鎖定 1 L：1 L ×(1000 mL/1 L)×(1.84 g/1 mL)＝<b>1840 g 溶液</b>。",
+    "溶質：1840 g ×(98/100)＝<b>1803 g H₂SO₄</b>；mol：1803 ×(1 mol/98 g)＝<b>18.4 mol</b>。",
+    "M＝18.4 mol / 1 L＝<b>18.4 M</b>。驗算 M＝10dw/M_w＝10×1.84×98/98＝18.4 ✓"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={6}
-  q="水中含氟化物 1.5 ppm。取 2.0 L 水樣，其中含氟化物多少 mg？"
-  options={["0.75 mg", "1.5 mg", "3.0 mg", "15 mg"]}
-  answer="(C) 3.0 mg"
+  q="某反應放熱 2.5 kcal，換算成 kJ。（1 cal＝4.184 J）"
+  options={["1.05 kJ", "10.46 kJ", "104.6 kJ", "0.60 kJ"]}
+  answer="(B) 10.46 kJ"
   steps={[
-    "ppm = mg/L（稀溶液中密度 ≈ 1 g/mL）。",
-    "1.5 ppm = 1.5 mg/L。",
-    "2.0 L × <b>(1.5 mg / 1 L)</b> = <b>3.0 mg</b>。"
+    "2.5 kcal ×(10³ cal/1 kcal)×(4.184 J/1 cal)×(1 kJ/10³ J)",
+    "10³ 在分子分母約掉 → 捷徑：kcal→kJ 直接 ×4.184。",
+    "＝ 2.5 × 4.184＝<b>10.46 kJ</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="log 12 ＝ ?（已知 log2＝0.301、log3＝0.477）"
+  options={["1.079", "0.845", "1.176", "0.903"]}
+  answer="(A) 1.079"
+  steps={[
+    "12＝2²×3 → log12＝2 log2＋log3",
+    "＝2×0.301＋0.477＝0.602＋0.477",
+    "＝<b>1.079</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="下列計算，有效數字處理正確的是？(1) 12.11＋3.2＝15.31 (2) 12.11＋3.2＝15.3 (3) 4.0×2.51＝10.04 (4) 4.0×2.51＝10"
+  options={["只有 (1)(3)", "只有 (2)(4)", "只有 (2)(3)", "只有 (1)(4)"]}
+  answer="(B) 只有 (2)(4)"
+  steps={[
+    "加減看<b>小數位</b>取最少：3.2 只有 1 位小數 → 15.31 須進位成 <b>15.3</b>。(2) 對。",
+    "乘除看<b>有效位</b>取最少：4.0 只有 2 位有效 → 10.04 須成 <b>10</b>（2 位有效）。(4) 對。",
+    "故 (2)(4) 正確。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={9}
+  q="某溫標 °X 定水的冰點為 10°X、沸點為 210°X。20°C 等於幾 °X？（用比例現推，不背公式）"
+  options={["40°X", "50°X", "130°X", "60°X"]}
+  answer="(B) 50°X"
+  steps={[
+    "各溫標在「冰點→沸點」之間的比例相同：(°X − 10)/(210 − 10) ＝ (°C − 0)/(100 − 0)。",
+    "代入 20°C：(°X − 10)/200 ＝ 20/100 ＝ 0.2 → °X − 10 ＝ 40。",
+    "<b>°X ＝ 50</b>。沒看過的溫標，套同一條比例式即可。"
   ]}
 />

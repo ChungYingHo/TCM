@@ -1,0 +1,242 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 化學反應方程式與化學計量
+summary: 平衡方程式（觀察法）、係數比的意義、化學計量總流程、限量試劑、理論產量、產率與原子經濟性，全程 unit factor。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import KeyPoints from '@/components/notes/KeyPoints.svelte'
+import SolveApproach from '@/components/notes/SolveApproach.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+
+<NoteStats tag="化學計量" client:load />
+
+## 一、平衡化學方程式（觀察法）
+
+原則：反應前後**各元素原子數守恆**（質量守恆）。**只能調係數，不能改化學式**。
+
+**觀察法步驟**：
+
+1. 先平衡**只出現一次**的元素（金屬、C、N…）。
+2. 多原子團（如 $\ce{SO4}$、$\ce{NO3}$）**當整體**一起平衡。
+3. 最後平衡 **H**，再用 **O** 收尾。
+4. 係數約成**最簡整數比**（必要時整條 ×2 去分數）。
+
+> 例：丙烷燃燒。先 C（3 個 → $3\ce{CO2}$）、再 H（8 個 → $4\ce{H2O}$）、最後數 O（右邊 $3\times2+4=10$ 個 → 左邊 $5\ce{O2}$）：
+>
+> $$ \ce{C3H8 + 5O2 -> 3CO2 + 4H2O} $$
+
+---
+
+## 二、平衡式告訴你的「比」
+
+以 $\ce{2H2 + O2 -> 2H2O}$ 為例：
+
+| 比較 | $\ce{2H2}$ | $\ce{O2}$ | $\ce{2H2O}$ | 是否＝係數比 |
+|------|:---:|:---:|:---:|:---:|
+| 分子數比 | 2 | 1 | 2 | ✅ |
+| 莫耳數比 | 2 mol | 1 mol | 2 mol | ✅ |
+| 質量比 | 4.04 g | 32 g | 36.04 g | ❌（＝1:8:9） |
+| 氣體體積比（同 T, P） | 2 V | 1 V | （液體不計） | ✅（亞佛加厥） |
+
+> **係數比 ＝ 分子數比 ＝ 莫耳數比 ＝ 氣體體積比**；但**質量比 ≠ 係數比**（質量比＝係數×式量）。
+
+---
+
+## 三、化學計量總流程（萬用骨架）
+
+任何計量題都走這條路——**先把已知換成 mol，用係數比跨到目標物，再換成要的單位**。每個箭頭都是一個 unit factor：
+
+$$
+\underbrace{\text{已知量}}_{\text{g／個／L／濃度}}
+\xrightarrow[\div M,\ \div N_A,\ \div 22.4\dots]{\text{公式轉換}}
+\underbrace{\text{mol}_\text{已知}}_{}
+\xrightarrow[\times \frac{\text{目標係數}}{\text{已知係數}}]{\text{係數比}}
+\underbrace{\text{mol}_\text{目標}}_{}
+\xrightarrow[\times M,\ \times N_A\dots]{\text{公式轉換}}
+\underbrace{\text{目標量}}_{}
+$$
+
+> 例：$\ce{CH4 + 2O2 -> CO2 + 2H2O}$，完全燃燒 8 g $\ce{CH4}$（M＝16）需多少克 $\ce{O2}$（M＝32）？
+>
+> $$ 8\ \text{g CH}_4 \times \frac{1\ \text{mol CH}_4}{16\ \text{g}} \times \frac{2\ \text{mol O}_2}{1\ \text{mol CH}_4} \times \frac{32\ \text{g}}{1\ \text{mol O}_2} = 32\ \text{g O}_2 $$
+
+---
+
+## 四、限量試劑（誰先用完）
+
+完全用盡、**限制產量**的反應物＝限量試劑（LR）；剩下的是過量試劑。**產量由 LR 決定**。
+
+**判斷步驟**：
+
+1. 各反應物**都先換成 mol**。
+2. 各 mol **÷ 自己的係數**。
+3. **比值最小**者 → **限量試劑**。
+
+$$
+\text{比較每個反應物的}\ \frac{n\ (\text{mol})}{\text{係數}}\ ，\ \text{最小者為限量試劑}
+$$
+
+> **不能只比 mol、更不能只比質量**——一定要先除以係數。
+>
+> 例：$\ce{N2 + 3H2 -> 2NH3}$，給 2 mol $\ce{N2}$、3 mol $\ce{H2}$。$\ce{N2}: \frac{2}{1}=2$、$\ce{H2}: \frac{3}{3}=1$ → 比值小 → **$\ce{H2}$ 限量**（$\ce{N2}$ 過量）。
+
+---
+
+## 五、理論產量、實際產量與產率
+
+| 名詞 | 意義 |
+|------|------|
+| **理論產量** | 由**限量試劑**算出的**最大**產量（反應完全、零損失） |
+| **實際產量** | 實驗真正得到的量（通常較少） |
+| **產率（%）** | 實際 ÷ 理論 |
+
+$$
+\text{產率} = \frac{\text{實際產量}}{\text{理論產量}} \times 100\%
+$$
+
+**流程**：限量試劑 mol $\xrightarrow{\times \frac{\text{產物係數}}{\text{LR 係數}}}$ 產物 mol $\xrightarrow{\times M}$ **理論產量(g)**；再用實際產量算產率。
+
+> 例：承上，$\ce{H2}$ 限量 3 mol → $3\times\frac{2}{3}=2$ mol $\ce{NH3}$ → $\times 17=34$ g（理論）。若實得 27.2 g：產率 $=\frac{27.2}{34}\times100\%=\mathbf{80\%}$。
+
+---
+
+## 六、原子經濟性
+
+衡量「反應物的原子有多少**進到目標產物**」——是**設計**效率（理論值，看原子去向），與產率不同。
+
+$$
+\text{原子經濟性} = \frac{\text{目標產物式量} \times \text{係數}}{\sum(\text{反應物式量} \times \text{係數})} \times 100\%
+$$
+
+> 例：$\ce{CaCO3 -> CaO + CO2}$ 製 $\ce{CaO}$（$\ce{CaCO3}$＝100、$\ce{CaO}$＝56）：原子經濟性 $=\dfrac{56\times1}{100\times1}\times100\%=\mathbf{56\%}$（$\ce{CO2}$ 是廢料）。
+>
+> **原子經濟性 vs 產率**：原子經濟性高＝路徑少廢料（理論）；產率高＝實際接近理論。兩者可一高一低。
+
+---
+
+<Memorize client:visible
+  items={[
+    "平衡：只調係數不改化學式；先平衡只出現一次的元素，H、O 最後。",
+    "係數比＝分子數比＝莫耳數比＝氣體體積比；<b>質量比≠係數比</b>。",
+    "計量總流程：已知→(÷M/N_A/22.4)→mol→(×目標係數/已知係數)→mol→(×M…)→目標。",
+    "限量試劑：各反應物 mol <b>÷自己係數，最小者</b>（不可只比 mol 或質量）。",
+    "理論產量由限量試劑決定；產率＝實際/理論×100%。",
+    "原子經濟性＝目標產物式量×係數 / Σ(反應物式量×係數) ×100%（理論設計效率）。"
+  ]}
+/>
+
+<KeyPoints client:visible
+  items={[
+    "判限量試劑一定先「換 mol、再除係數」，比值最小者才是——直接比質量會錯。",
+    "理論產量、剩餘過量試劑量，全部以<b>限量試劑</b>為基準往下算。",
+    "氣體體積比＝係數比（同溫同壓）；液體/固體不算進體積比。",
+    "產率描述「實際 vs 理論」；原子經濟性描述「原子有沒有浪費」，兩者不同。",
+    "多步驟一律 unit factor 橫著連乘，單位對消到只剩目標。"
+  ]}
+/>
+
+<SolveApproach client:visible
+  steps={[
+    "先把方程式平衡（觀察法），確定各物質係數。",
+    "把題目給的每個量換成 mol。",
+    "若給兩種以上反應物的量 → 各 mol÷係數，最小者為限量試劑。",
+    "以限量試劑 mol × (產物係數/LR 係數) → 產物 mol → ×M ＝ 理論產量。",
+    "要產率就用 實際/理論×100%；要原子經濟性就用式量比。"
+  ]}
+/>
+
+## 例題（由易到難）
+
+<ExampleQuestion client:visible
+  n={1}
+  q="平衡 C₃H₈ + O₂ → CO₂ + H₂O 後，O₂ 的係數為何？"
+  options={["3", "4", "5", "7"]}
+  answer="(C) 5"
+  steps={[
+    "先平衡 C：3 個 → 3CO₂；H：8 個 → 4H₂O。",
+    "數右邊 O：3×2 ＋ 4 ＝ 10 個 → 左邊需 5 個 O₂。",
+    "C₃H₈ ＋ <b>5</b>O₂ → 3CO₂ ＋ 4H₂O。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="反應 2H₂ + O₂ → 2H₂O 中，下列哪個比值<b>不等於</b>係數比 2:1:2？"
+  options={["分子數比", "莫耳數比", "質量比", "氣體體積比（同 T, P）"]}
+  answer="(C) 質量比"
+  steps={[
+    "係數比＝分子數比＝莫耳數比＝氣體體積比（亞佛加厥）。",
+    "質量比 ＝ 係數×式量 ＝ 4.04 : 32 : 36.04 ＝ <b>1:8:9</b>，不等於係數比。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="CH₄ + 2O₂ → CO₂ + 2H₂O。完全燃燒 8 g CH₄（M＝16）需多少克 O₂（M＝32）？用 unit factor。"
+  options={["16 g", "24 g", "32 g", "64 g"]}
+  answer="(C) 32 g"
+  steps={[
+    "8 g CH₄ × (1 mol/16 g) × <b>(2 mol O₂/1 mol CH₄)</b> × (32 g/1 mol)",
+    "＝ 0.5 mol × 2 × 32 g/mol ＝ <b>32 g</b>。",
+    "g→mol→(係數比)→mol→g，單位對消只剩 g。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="N₂ + 3H₂ → 2NH₃。混合 2 mol N₂ 與 3 mol H₂，限量試劑是誰？"
+  options={["N₂", "H₂", "兩者剛好", "無法判斷"]}
+  answer="(B) H₂"
+  steps={[
+    "各 mol ÷ 自己係數：N₂ ＝ 2/1 ＝ 2；H₂ ＝ 3/3 ＝ 1。",
+    "比值最小者先用完 → <b>H₂ 是限量試劑</b>（N₂ 過量）。",
+    "別只看 mol（N₂ 反而較少還不是限量）——一定要除係數。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="承上題（H₂ 限量、3 mol），理論上可生成多少克 NH₃（M＝17）？"
+  options={["17 g", "34 g", "51 g", "68 g"]}
+  answer="(B) 34 g"
+  steps={[
+    "以限量試劑 H₂ 為準：3 mol H₂ × (2 mol NH₃ / 3 mol H₂) ＝ 2 mol NH₃。",
+    "2 mol × 17 g/mol ＝ <b>34 g</b>（理論產量）。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="承上題，若實際只得到 27.2 g NH₃，產率為何？"
+  options={["64%", "75%", "80%", "90%"]}
+  answer="(C) 80%"
+  steps={[
+    "產率 ＝ 實際 / 理論 × 100%。",
+    "＝ 27.2 g / 34 g × 100% ＝ <b>80%</b>。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="工業煅燒石灰石 CaCO₃ → CaO + CO₂ 製取 CaO。此反應對 CaO 的原子經濟性為何？（CaCO₃＝100、CaO＝56）"
+  options={["44%", "56%", "78%", "100%"]}
+  answer="(B) 56%"
+  steps={[
+    "原子經濟性 ＝ 目標產物式量×係數 / Σ(反應物式量×係數) ×100%。",
+    "＝ (56×1) / (100×1) ×100% ＝ <b>56%</b>（CO₂ 是廢料、占掉 44%）。",
+    "注意這是理論設計效率，與『實際產率』是兩回事。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="N₂ + 3H₂ → 2NH₃。取 28 g N₂（M＝28）與 9 g H₂（M＝2）反應，理論可得多少克 NH₃（M＝17）？"
+  options={["17 g", "34 g", "51 g", "76.5 g"]}
+  answer="(B) 34 g"
+  steps={[
+    "換 mol：N₂ ＝ 28/28 ＝ 1 mol；H₂ ＝ 9/2 ＝ 4.5 mol。",
+    "÷ 係數：N₂ ＝ 1/1 ＝ 1；H₂ ＝ 4.5/3 ＝ 1.5 → <b>N₂ 限量</b>。",
+    "以 N₂：1 mol × (2 mol NH₃/1 mol N₂) × 17 g/mol ＝ <b>34 g</b>。"
+  ]}
+/>

@@ -8,6 +8,9 @@ import path from 'node:path'
 import remarkMath from 'remark-math'
 import remarkCjkFriendly from 'remark-cjk-friendly'
 import rehypeKatex from 'rehype-katex'
+// 註冊 mhchem 的 \ce{}（化學式/方程式）到 katex 單例；rehype-katex 在 SSR 用同一個
+// katex 實例，故化學式在「網頁」與「PDF」共用同一份輸出與 KaTeX CSS，呈現一致。
+import 'katex/contrib/mhchem'
 
 // Server output so middleware can enforce the password gate (incl. data/image routes).
 export default defineConfig({
