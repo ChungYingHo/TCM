@@ -9,17 +9,20 @@ export const prerender = false
 
 <Layout title="元素週期表 · TCM 題庫">
   <header class="mb-6 flex flex-col gap-1.5">
-    <p class="page-kicker">筆記 · 基礎</p>
+    <a href="/notes" class="page-kicker gap-1 transition-opacity hover:opacity-70">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      筆記 · 基礎
+    </a>
     <h1 class="page-title">元素週期表</h1>
     <p class="page-desc max-w-2xl">
-      老師畫重點的速查表、完整互動週期表（電子組態、電負度/半徑/游離能熱圖）。
+      必背速查表、完整互動週期表（電子組態、電負度/半徑/游離能熱圖）。
     </p>
   </header>
 
-  <!-- 老師畫重點 -->
+  <!-- 必背速查 -->
   <section class="mb-10">
     <header class="mb-4 flex flex-col gap-1.5">
-      <p class="page-kicker">老師畫重點</p>
+      <p class="page-kicker">速查</p>
       <h2 class="section-heading">必背速查表</h2>
     </header>
     <TeacherHighlights />
@@ -31,7 +34,7 @@ export const prerender = false
       <p class="page-kicker">自由練習</p>
       <h2 class="section-heading">元素測驗</h2>
       <p class="page-desc max-w-2xl">
-        選擇題型和範圍，自由練習。每日計畫則會強制練習老師重點。
+        選擇題型和範圍，自由練習。每日計畫會自動安排必背範圍。
       </p>
     </header>
     <ElementQuizPage client:load />

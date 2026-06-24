@@ -420,8 +420,8 @@ export const COMMON_MASS: Record<number, number> = {
 // 老師指定要背的 B 族欄位（6B、8B②③、1B、2B；考試範圍只到 5d，超重元素不列）。
 export const B_GROUP_HIGHLIGHT: { label: string; note: string; zs: number[] }[] = [
   { label: '6B', note: '', zs: [24, 42, 74] },
-  { label: '8B②', note: 'Co 開始', zs: [27, 45, 77] },
-  { label: '8B③', note: 'Ni 開始', zs: [28, 46, 78] },
+  { label: '8B②', note: '', zs: [27, 45, 77] },
+  { label: '8B③', note: '', zs: [28, 46, 78] },
   { label: '1B', note: '', zs: [29, 47, 79] },
   { label: '2B', note: '', zs: [30, 48, 80] },
 ]

@@ -7,7 +7,7 @@ export default [
   {
     ignores: [
       'dist/**', '.astro/**', '.vercel/**', 'node_modules/**',
-      'pipeline/**', '_archive/**', 'src/data/**', 'CMU/**', 'ISU/**', 'TCU/**',
+      'pipeline/**', '_archive/**', 'src/data/**', 'exams/**',
       'playwright-report/**', 'test-results/**',
     ],
   },

@@ -43,7 +43,18 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ## 三、amu 與原子量
 
-- **原子質量單位 (amu)**：${}^{12}\text{C}$ 質量的 $\dfrac{1}{12}$
+### 本篇常見元素
+
+| 元素 | Z | 原子量 (amu) | 備註 |
+|------|---|-----------|------|
+| H 氫 | 1 | 1.008 | 最輕元素 |
+| C 碳 | 6 | 12.01 | **amu 基準**（¹²C = 12.000） |
+| O 氧 | 8 | 16.00 | 分子量計算常用 |
+| Mg 鎂 | 12 | 24.31 | 例題 2 |
+| Cl 氯 | 17 | 35.45 | **同位素加權平均範例** |
+| Cu 銅 | 29 | 63.55 | **同位素加權平均範例**（例題 1） |
+
+- **原子質量單位 (amu)**：${}^{12}\text{C}$（Z=6）質量的 $\dfrac{1}{12}$
 
 $$
 1\ \text{amu} = \frac{1\ \text{g}}{6.022 \times 10^{23}} = 1.6605 \times 10^{-24}\ \text{g}
@@ -52,17 +63,17 @@ $$
 > 直接用 unit factor 理解：**1 g 裡有 $N_A$ 個 amu**，所以 1 amu 就是把 1 g 除以 $N_A$。
 
 - **原子量**：某原子質量相對於 1 amu 的倍數，單位 amu
-  - 例：$\text{O} = 16\ \text{amu}$ → 1 個氧原子質量 = $16 \times \dfrac{1\ \text{g}}{6.022\times10^{23}} = 2.657\times10^{-23}\ \text{g}$
+  - 例：O（Z=8）= 16.00 amu → 1 個氧原子質量 = $16 \times \dfrac{1\ \text{g}}{6.022\times10^{23}} = 2.657\times10^{-23}\ \text{g}$
 - **分子量**：分子中各原子量的總和
-  - 例：$\text{H}_2\text{O} = 1\times2 + 16 = 18\ \text{amu}$
+  - 例：H₂O = H（Z=1, 1.008）×2 + O（Z=8, 16.00）= **18.02 amu**
 - **平均原子量**（考慮同位素加權平均）：
 
 $$
 \bar{M} = \sum (\text{同位素質量} \times \text{天然存在比})
 $$
 
-> 例：Cl 有 ${}^{35}\text{Cl}$ (75.8%) 和 ${}^{37}\text{Cl}$ (24.2%)
-> $\bar{M} = 35 \times 0.758 + 37 \times 0.242 = 35.5\ \text{amu}$
+> 例：Cl（Z=17）有 ³⁵Cl (75.8%) 和 ³⁷Cl (24.2%)
+> $\bar{M} = 35 \times 0.758 + 37 \times 0.242 = \textbf{35.5 amu}$
 
 ---
 
@@ -74,7 +85,7 @@ $$
 | **莫耳質量 ($M$)** | 1 mol 該物質的質量 | g/mol |
 | **關鍵橋接** | **$X$ amu = $X$ g/mol**（數值相同） | — |
 
-為什麼「amu 的數字 ＝ g/mol 的數字」？
+為什麼「amu 的數字 ＝ g/mol 的數字」？以 O（Z=8, 16.00 amu）為例：
 
 $$
 \underbrace{16\ \text{amu}}_{\text{1 個 O 原子}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23}\ \text{amu}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
@@ -89,6 +100,8 @@ $$
 核心：**每一步都寫成「已知量 $\times \dfrac{\text{目標單位}}{\text{已知單位}}$」，分子分母帶單位、約分後只剩目標單位。**
 
 ### 5-1. 質量 → 莫耳
+
+> H₂O：H（Z=1, 1.008）×2 + O（Z=8, 16.00）→ M = **18.02 g/mol**
 
 $$
 36\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}} = 2\ \text{mol}
@@ -165,22 +178,22 @@ Unit factor：<b>每步寫完整分數帶單位，上下約分只剩目標</b>�
 
 <ExampleQuestion client:visible
   n={1}
-  q="銅有兩種同位素：⁶³Cu (69.2%) 和 ⁶⁵Cu (30.8%)。銅的平均原子量為多少？"
+  q="銅（Cu, Z=29）有兩種同位素：⁶³Cu (69.2%) 和 ⁶⁵Cu (30.8%)。銅的平均原子量為多少？"
   options={["63.0 amu", "63.6 amu", "64.0 amu", "65.0 amu"]}
   answer="(B) 63.6 amu"
   steps={[
-    "平均原子量 = Σ(質量 × 比例)。",
-    "= 63 × 0.692 + 65 × 0.308 = 43.60 + 20.02 = <b>63.6 amu</b>。"
+    "Cu（Z=29）平均原子量 = Σ(質量 × 比例)。",
+    "= 63 × 0.692 + 65 × 0.308 = 43.60 + 20.02 = <b>63.6 amu</b>（查表 63.55）。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={2}
-  q="48 g 的鎂（Mg = 24 g/mol）含有多少個鎂原子？用 unit factor 完整列式。（N<sub>A</sub> = 6.0×10²³）"
+  q="48 g 的鎂（Mg, Z=12, M=24.31 g/mol）含有多少個鎂原子？用 unit factor 完整列式。（N<sub>A</sub> = 6.0×10²³）"
   options={["6.0×10²³", "1.2×10²⁴", "2.4×10²⁴", "3.0×10²³"]}
   answer="(B) 1.2×10²⁴"
   steps={[
-    "Unit factor 列式：48 g × <b>(1 mol / 24 g)</b> × <b>(6.0×10²³ 個 / 1 mol)</b>",
+    "Mg（Z=12, M≈24 g/mol）列式：48 g × <b>(1 mol / 24 g)</b> × <b>(6.0×10²³ 個 / 1 mol)</b>",
     "= 2 mol × 6.0×10²³ 個/mol = <b>1.2×10²⁴ 個</b>。",
     "注意每步分數都帶單位：g 約掉、mol 約掉，只剩「個」。"
   ]}
@@ -188,23 +201,23 @@ Unit factor：<b>每步寫完整分數帶單位，上下約分只剩目標</b>�
 
 <ExampleQuestion client:visible
   n={3}
-  q="STP 下 5.6 L 的 O₂（M = 32 g/mol）質量為多少克？用 unit factor 完整列式。"
+  q="STP 下 5.6 L 的 O₂（O: Z=8, 原子量 16.00 → M<sub>O₂</sub> = 32 g/mol）質量為多少克？用 unit factor 完整列式。"
   options={["4 g", "8 g", "16 g", "32 g"]}
   answer="(B) 8 g"
   steps={[
-    "Unit factor 列式：5.6 L × <b>(1 mol / 22.4 L)</b> × <b>(32 g / 1 mol)</b>",
-    "= 0.25 mol × 32 g/mol = <b>8 g</b>。",
-    "兩個 unit factor 串連：L→mol→g，上下約分只剩 g。"
+    "O（Z=8, 16.00 amu）→ O₂ 分子量 = 16×2 = 32 g/mol。",
+    "列式：5.6 L × <b>(1 mol / 22.4 L)</b> × <b>(32 g / 1 mol)</b>",
+    "= 0.25 mol × 32 g/mol = <b>8 g</b>。L→mol→g，上下約分只剩 g。"
   ]}
 />
 
 <ExampleQuestion client:visible
   n={4}
-  q="碳（C）和氧（O）可形成 CO 和 CO₂ 兩種化合物。在 CO 中碳氧質量比為 3:4，在 CO₂ 中碳氧質量比為 3:8。固定碳的質量，兩化合物中氧的質量比為何？此現象符合哪條定律？"
+  q="碳（C, Z=6, 12.01 amu）和氧（O, Z=8, 16.00 amu）可形成 CO 和 CO₂ 兩種化合物。在 CO 中碳氧質量比為 3:4，在 CO₂ 中碳氧質量比為 3:8。固定碳的質量，兩化合物中氧的質量比為何？此現象符合哪條定律？"
   options={["1:2，質量守恆", "1:2，倍比定律", "3:4，定比定律", "2:1，倍比定律"]}
   answer="(B) 1:2，倍比定律"
   steps={[
-    "固定碳質量（都取 3 份）：CO 的氧 = 4 份，CO₂ 的氧 = 8 份。",
+    "C（Z=6）與 O（Z=8）組成 CO、CO₂。固定碳質量（都取 3 份）：CO 的氧 = 4 份，CO₂ 的氧 = 8 份。",
     "氧的質量比 = 4:8 = <b>1:2</b>（簡單整數比）。",
     "同兩元素組成多種化合物，固定一元素量後另一元素質量成整數比 → <b>倍比定律</b>。"
   ]}

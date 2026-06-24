@@ -1,0 +1,22 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import ReadingApp from '@/components/readings/ReadingApp.svelte'
+import { READING_R1, READING_R1_META } from '@/data/reading-r1'
+
+export const prerender = false
+---
+
+<Layout title={`${READING_R1_META.title} · TCM 題庫`}>
+  <header class="mb-6 flex flex-col gap-1.5">
+    <a href="/notes" class="page-kicker gap-1 transition-opacity hover:opacity-70">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      筆記 · 英文廣讀
+    </a>
+    <h1 class="page-title">{READING_R1_META.title}</h1>
+    <p class="page-desc max-w-2xl">
+      來源 <b class="font-semibold text-base-content/80">{READING_R1_META.source}</b>，{READING_R1_META.author}老師編授。共 {READING_R1_META.articleCount} 篇文章、{READING_R1_META.wordCount} 個重點字彙，<span class="border-b-2 border-primary/40">底線標示</span>為該篇重點單字。
+    </p>
+  </header>
+
+  <ReadingApp articles={READING_R1} client:load />
+</Layout>

@@ -30,7 +30,7 @@
 
 ## 結構
 
-- 資料 PDF：`<SCHOOL>/<YEAR>/pre-exams|answers/*.pdf`（見 [README.md](README.md)）。原始檔備份於 `_archive/`。
+- 資料 PDF：`exams/<SCHOOL>/<YEAR>/pre-exams|answers/*.pdf`（見 [README.md](README.md)）。原始檔備份於 `_archive/`。
 - 資料 pipeline：`pipeline/`（Python；PyMuPDF 渲染 + 切題、答案/釋疑解析、標籤）。
 - 網站：Astro 專案（`src/`），消費 pipeline 產出的靜態 JSON + 圖片，無資料庫。
 

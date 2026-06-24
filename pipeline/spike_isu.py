@@ -120,7 +120,7 @@ def parse_errata(path):
     return entries
 
 def main():
-    exam = os.path.join(ROOT, 'ISU', str(YEAR), 'pre-exams', 'exam_all.pdf')
+    exam = os.path.join(ROOT, 'exams', 'ISU', str(YEAR), 'pre-exams', 'exam_all.pdf')
     doc = fitz.open(exam)
     words = load_words(doc)
     anchors = find_question_anchors(words)
@@ -135,10 +135,10 @@ def main():
         if len(s) != 50:
             print(f'  section {si}: {len(s)} questions, nums {nums[0]}..{nums[-1]}, missing={missing}')
 
-    answers = parse_answers(os.path.join(ROOT, 'ISU', str(YEAR), 'answers', 'answer_all.pdf'))
+    answers = parse_answers(os.path.join(ROOT, 'exams', 'ISU', str(YEAR), 'answers', 'answer_all.pdf'))
     print('answer blocks:', [(b['subject'], len(b['answers'])) for b in answers])
 
-    errata = parse_errata(os.path.join(ROOT, 'ISU', str(YEAR), 'answers', 'clarification.pdf'))
+    errata = parse_errata(os.path.join(ROOT, 'exams', 'ISU', str(YEAR), 'answers', 'clarification.pdf'))
     print('errata entries:', len(errata))
     for e in errata[:12]:
         print('   ', e)

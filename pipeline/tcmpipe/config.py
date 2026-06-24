@@ -55,12 +55,15 @@ TOP_PAD_PT = 3
 BOTTOM_PAD_PT = 3
 
 
+EXAMS_DIR = os.path.join(ROOT, 'exams')
+
+
 def exam_dir(school: str, year: int) -> str:
-    return os.path.join(ROOT, school, str(year), 'pre-exams')
+    return os.path.join(EXAMS_DIR, school, str(year), 'pre-exams')
 
 
 def answer_dir(school: str, year: int) -> str:
-    return os.path.join(ROOT, school, str(year), 'answers')
+    return os.path.join(EXAMS_DIR, school, str(year), 'answers')
 
 
 def rel(path: str) -> str:

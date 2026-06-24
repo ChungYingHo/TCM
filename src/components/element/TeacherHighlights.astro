@@ -22,13 +22,14 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
 
   <!-- 8A 族（惰性氣體）原子序 -->
   <section>
-    <h3 class="section-heading mb-2">8A 族原子序 <span class="text-sm font-normal text-base-content/50">· 老師：尤其重要</span></h3>
+    <h3 class="section-heading mb-2">8A 族（惰性氣體）原子序</h3>
     <div class="grid grid-cols-3 gap-2 sm:grid-cols-6">
       {nobleGases.map((e) => (
         <div class="rounded-box flex flex-col items-center border border-primary/30 bg-primary/5 px-2 py-3 text-center">
-          <span class="text-xs tabular-nums text-base-content/50">Z = {e.z}</span>
+          <span class="text-xs font-medium tabular-nums text-primary">Z = {e.z}</span>
           <span class="font-display text-2xl font-bold text-primary">{e.sym}</span>
           <span class="text-sm">{e.zh || e.en}</span>
+          {COMMON_MASS[e.z] != null && <span class="text-xs tabular-nums text-base-content/35">{COMMON_MASS[e.z]}</span>}
         </div>
       ))}
     </div>
@@ -36,7 +37,7 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
 
   <!-- Z = 1–36 原子序對照表 -->
   <section>
-    <h3 class="section-heading mb-2">Z = 1–36 原子序對照 <span class="text-sm font-normal text-base-content/50">· 一定要記得</span></h3>
+    <h3 class="section-heading mb-2">Z = 1–36 原子序對照</h3>
     <div class="overflow-x-auto">
       <div class="grid grid-cols-4 gap-px rounded-box border border-base-300 bg-base-300 text-sm sm:grid-cols-6">
         {first36.map((e) => (
@@ -44,9 +45,10 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
             'flex items-center gap-1.5 bg-base-100 px-2 py-1.5',
             NOBLE_GAS_ZS.includes(e.z) && 'bg-primary/8',
           ]}>
-            <span class="w-5 shrink-0 text-right tabular-nums text-base-content/45">{e.z}</span>
+            <span class="w-5 shrink-0 text-right font-medium tabular-nums text-primary">{e.z}</span>
             <span class="font-semibold">{e.sym}</span>
             <span class="text-base-content/60">{e.zh}</span>
+            {COMMON_MASS[e.z] != null && <span class="ml-auto tabular-nums text-xs text-base-content/35">{COMMON_MASS[e.z]}</span>}
           </div>
         ))}
       </div>
@@ -55,11 +57,12 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
 
   <!-- 必背原子量 -->
   <section>
-    <h3 class="section-heading mb-2">必背原子量 <span class="text-sm font-normal text-base-content/50">· 24 個元素</span></h3>
+    <h3 class="section-heading mb-2">必背原子量 <span class="section-sub">24 個</span></h3>
     <div class="overflow-x-auto">
       <div class="grid grid-cols-3 gap-px rounded-box border border-base-300 bg-base-300 text-sm sm:grid-cols-4 lg:grid-cols-6">
         {massEntries.map(({ e, m }) => (
           <div class="flex items-center gap-1.5 bg-base-100 px-2 py-1.5">
+            <span class="w-5 shrink-0 text-right tabular-nums text-xs text-base-content/35">{e.z}</span>
             <span class="font-semibold">{e.sym}</span>
             <span class="text-base-content/50">{e.zh}</span>
             <span class="ml-auto tabular-nums font-bold text-primary">{m}</span>
@@ -71,7 +74,7 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
 
   <!-- B 族速查表 -->
   <section>
-    <h3 class="section-heading mb-2">B 族速查 <span class="text-sm font-normal text-base-content/50">· 6B、8B②③、1B、2B</span></h3>
+    <h3 class="section-heading mb-2">常考 B 族 <span class="section-sub">選背 · 6B、8B②③、1B、2B</span></h3>
     <div class="grid grid-cols-5 gap-2 text-center text-sm">
       {B_GROUP_HIGHLIGHT.map((col) => (
         <div class="flex flex-col gap-1">
@@ -85,6 +88,7 @@ const nobleGases = NOBLE_GAS_ZS.map((z) => elementByZ(z)!)
               <div class="rounded-box border border-base-300 bg-base-100 px-1 py-2">
                 <span class="block font-display text-lg font-bold">{e.sym}</span>
                 <span class="block text-xs text-base-content/55">{e.zh} · {e.z}</span>
+                {COMMON_MASS[z] != null && <span class="block text-xs tabular-nums text-base-content/35">{COMMON_MASS[z]}</span>}
               </div>
             )
           })}

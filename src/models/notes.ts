@@ -60,6 +60,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['基礎'],
     desc: 'log 背值表、對數指數運算、科學記號、化學常用數學場景',
   },
+  {
+    id: 'reading-r1',
+    href: '/readings/r1',
+    title: '增補廣讀 R1：VOA 字彙',
+    subject: '英文',
+    tags: ['廣讀'],
+    desc: '7 篇 VOA 中級文章 + 47 個重點字彙（旋元佑老師編授）',
+  },
 ]
 
 export function notesBySubject(subject: NoteSubject): NoteEntry[] {

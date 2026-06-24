@@ -6,7 +6,10 @@ const { frontmatter } = Astro.props
 
 <Layout title={`${frontmatter.title} · TCM 題庫`}>
   <header class="mb-6 flex flex-col gap-1.5">
-    <p class="page-kicker">筆記 · 基礎</p>
+    <a href="/notes" class="page-kicker gap-1 transition-opacity hover:opacity-70">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      筆記 · 基礎
+    </a>
     <h1 class="page-title">{frontmatter.title}</h1>
     {frontmatter.summary && <p class="page-desc max-w-2xl">{frontmatter.summary}</p>}
   </header>
