@@ -41,3 +41,6 @@ pipeline/_clean_report.txt
 # explanation rollout scratch (transient batch output + one-off apply scripts)
 pipeline/data/_batch.json
 pipeline/data/_batch_apply.py
+
+# 列印級 PDF 產出（可由 npm run pdf 重生）
+exports/

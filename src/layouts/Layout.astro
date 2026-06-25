@@ -50,8 +50,10 @@ const { title = 'TCM 考古題', gated = true } = Astro.props
     {
       gated ? (
         <>
-          <NavBar />
-          <BottomNav />
+          <div class="print:hidden">
+            <NavBar />
+            <BottomNav />
+          </div>
           <SyncBoot client:load />
           <AskAiSelection client:load />
           <main class="mx-auto w-full max-w-5xl px-4 py-7 pb-24 sm:px-6 sm:py-10 lg:pb-10">

@@ -50,7 +50,7 @@
   }
 </script>
 
-<div class="my-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-box border border-base-300 bg-base-200/50 px-3.5 py-2.5 text-sm">
+<div class="my-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-box border border-base-300 bg-base-200/50 px-3.5 py-2.5 text-sm print:hidden">
   {#if loading}
     <span class="opacity-60">統計載入中…</span>
   {:else}

@@ -75,7 +75,8 @@
   }
 </script>
 
-<div class="my-3 rounded-box border border-base-300 bg-base-100">
+<div class="my-3 rounded-box border border-base-300 bg-base-100 print:break-inside-avoid">
+  <div class="print:hidden">
   <div class="flex items-start gap-2 p-3.5">
     <span class="badge badge-secondary badge-sm shrink-0 font-bold">例 {n}</span>
     <div class="min-w-0 flex-1">
@@ -157,4 +158,26 @@
       {/if}
     </div>
   {/if}
+  </div>
+
+  <!-- 列印：題目＋全部選項＋手寫空白＋答案詳解 -->
+  <div class="hidden print:block p-3.5">
+    <p class="font-medium leading-relaxed"><span class="font-bold">例 {n}　</span>{@html q}</p>
+    {#if options.length}
+      <div class="mt-2 space-y-1 text-sm">
+        {#each options as opt, i (i)}
+          <div><span class="font-semibold">({letters[i]})</span> {@html opt}</div>
+        {/each}
+      </div>
+    {/if}
+    <div class="write-area mt-3"></div>
+    {#if answer}
+      <p class="mt-2 text-sm"><span class="font-bold">答案：</span>{@html answer}</p>
+    {/if}
+    {#if steps.length}
+      <ol class="mt-1 ml-5 list-decimal space-y-0.5 text-sm">
+        {#each steps as s, i (i)}<li>{@html s}</li>{/each}
+      </ol>
+    {/if}
+  </div>
 </div>

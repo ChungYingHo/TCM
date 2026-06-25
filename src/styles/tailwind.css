@@ -218,6 +218,8 @@ a.card:hover, .card-hover:hover {
   padding-left: 0.7rem; border-left: 4px solid color-mix(in oklab, var(--color-primary) 70%, transparent);
 }
 .prose > :first-child { margin-top: 0; }
+/* 內容被 rehypeNoteSections 包成 .note-sec 時，首段標題仍需歸零上邊距 */
+.prose > .note-sec:first-child > :first-child { margin-top: 0; }
 .prose h3 { margin-top: 1.8em; margin-bottom: 0.6em; }
 .prose p { margin-top: 0.9em; margin-bottom: 0.9em; }
 .prose :is(ul, ol) { margin-top: 0.7em; margin-bottom: 1em; padding-left: 1.4em; }
@@ -310,3 +312,96 @@ a.card:hover, .card-hover:hover {
   color: color-mix(in oklab, var(--color-primary) 60%, var(--color-base-content));
 }
 .prose .katex-display .katex { color: var(--color-base-content); }
+
+/* ════ 列印 / PDF（印成紙本筆記）════════════════════════════════════════
+   無互動、例題留大空白＋答案在下、表/圖/卡不跨頁切、週期表獨佔橫向頁，
+   內文改舒適襯線（思源宋體，字體由產生器於列印時注入）。 */
+/* 預設 A4 直向；只有 118 格表用「具名橫向頁」(@page pt-landscape)。
+   單一 PDF 內混排直/橫向靠產生器的 preferCSSPageSize:true。 */
+@page { size: A4 portrait; margin: 16mm 14mm; }
+@page pt-landscape { size: A4 landscape; margin: 8mm; }
+
+@media print {
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+    font-family: "Noto Serif TC", "Source Han Serif TC", Georgia, "Times New Roman", serif;
+    font-size: 11.5pt;
+    line-height: 1.7;
+  }
+  [data-reading="dim"] { color-scheme: light; }
+
+  /* 螢幕外框／導覽不印（元件另有 print:hidden，這裡是保險） */
+  nav, footer, a.page-kicker { display: none !important; }
+  main { max-width: none !important; margin: 0 !important; padding: 0 !important; }
+  .shadow-soft, .shadow-lift, .card { box-shadow: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+
+  /* 保留表頭／徽章／色塊 */
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* 列印密度：縮小字級＋收緊段距，讓內容盡量塞滿一頁、少留大空白
+     （計算/公式不被擠到下一頁）。 */
+  .prose { font-size: 10.5pt; line-height: 1.5; }
+  /* 標題/說明在紙本縮小，騰出首頁空間（讓表格等大塊塞得進來） */
+  .page-title { font-size: 1.5rem !important; line-height: 1.2; }
+  .page-desc { font-size: 0.8rem; line-height: 1.4; }
+  .prose h2 { margin-top: 1.1em; margin-bottom: 0.5em; }
+  .prose h3 { margin-top: 0.85em; margin-bottom: 0.4em; }
+  .prose p { margin: 0.5em 0; }
+  .prose :is(ul, ol) { margin: 0.45em 0; }
+  .prose li { margin: 0.2em 0; }
+  /* 表格收緊（縮短高度），整張表「不跨頁切」：放不下就整張移到次頁，寧留白也不切兩半 */
+  .prose table { margin: 0.5em 0; font-size: 0.82em; break-inside: avoid; break-before: avoid; }
+  .prose :is(th, td) { padding: 0.26rem 0.5rem; }
+  .prose blockquote { margin: 0.6em 0; padding: 0.45rem 0.8rem; }
+  .prose .katex-display { margin: 0.5rem 0; padding: 0.4rem 0.7rem; }
+
+  /* ── 核心：任何「一個閱讀單位」都不被分頁切開（切開＝得翻頁，極傷閱讀）──
+     rehypeNoteSections 把「標題＋其下內容」包成 .note-sec：整段不跨頁，放不下整段移次頁。
+     break-inside:avoid 是「盡力」；萬一某段比一整頁還高，瀏覽器只會在內部「葉級單位之間」
+     斷（不切進公式/例題/表格內部），故再加葉級保險。 */
+  .note-sec { break-inside: avoid; }
+  .prose :is(figure, svg, .katex-display, blockquote, li) { break-inside: avoid; }
+  /* 表格若真比一整頁還高（極少見）才退而在列間斷：單列不切、表頭每頁重複 */
+  .prose :is(thead, tr) { break-inside: avoid; }
+  .prose thead { display: table-header-group; }
+  /* 標題永遠跟著下一塊內容（含工具頁 .section-heading），不可獨自落在頁尾 */
+  :is(h1, h2, h3, h4), .section-heading { break-after: avoid; break-inside: avoid; }
+  /* 引言段（如「…約掉：」）與緊接的公式同頁：公式前不斷頁 */
+  .prose .katex-display { break-before: avoid; }
+  /* 段落（句子）整段不跨頁切——筆記段落都短，不會有「本身就很長」的例外 */
+  .prose p, .prose li { break-inside: avoid; }
+
+  /* display 公式在紙上不裁切、去螢幕底色 */
+  .prose .katex-display { overflow: visible !important; background: #fff !important; border: 1px solid #ccc !important; }
+  .prose .katex, .prose .katex-display .katex { color: #111 !important; }
+
+  /* 例題作答空白區（手寫） */
+  .write-area { min-height: 42mm; border: 1px dashed #bbb; border-radius: 4px; }
+
+  /* 卡片類不跨頁切：例題、必背、解題、胺基酸卡、工具頁面板等（整塊推到下一頁，
+     寧可留白也不切）。注意：分頁規則對 flex 子元素無效，故下方把容器改 block。 */
+  .rounded-box, .rounded-lg { break-inside: avoid; }
+
+  /* 胺基酸頁：root flex→block（否則分類小節不吃分頁規則）；
+     每個分類（標題＋整排卡片）整塊不跨頁切；每張結構卡也不切。 */
+  .aa-root { display: block !important; }
+  .aa-cat { break-inside: avoid; }
+  .aa-card { break-inside: avoid; }
+
+  /* 週期表工具：root 預設 flex（其子元素不吃分頁規則）→ 列印改 block，
+     整表縮放填滿、不水平捲動、整塊不跨頁切。 */
+  .pt-root { display: block !important; }
+  /* 118 格表獨佔一整頁、A4 橫向（具名頁）、整塊不切、滿版填寬 */
+  .pt-grid-wrap { overflow: visible !important; break-inside: avoid; break-before: page; page: pt-landscape; }
+  .pt-grid { width: 100% !important; grid-template-columns: repeat(18, 1fr) !important; }
+
+  /* 必背速查表（週期表頁）：root flex→block（否則小節不吃分頁規則），
+     每個小節整塊不跨頁切（放不下就整塊推下一頁），並略縮小以省空間。 */
+  .th-root { display: block !important; font-size: 0.9em; }
+  .th-root > section { break-inside: avoid; margin-bottom: 1.1rem; }
+}

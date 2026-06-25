@@ -189,9 +189,9 @@
   )
 </script>
 
-<div class="flex flex-col gap-5">
+<div class="flex flex-col gap-5 pt-root">
   <!-- 搜尋跳轉 -->
-  <form class="flex items-center gap-2" onsubmit={onSearch}>
+  <form class="flex items-center gap-2 print:hidden" onsubmit={onSearch}>
     <label class="input input-bordered input-sm flex flex-1 items-center gap-2 sm:max-w-xs">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-4 w-4 opacity-50" aria-hidden="true">
         <circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" stroke-linecap="round" />
@@ -208,7 +208,7 @@
   </form>
 
   <!-- 檢視切換 -->
-  <div role="group" aria-label="週期表檢視" class="flex flex-wrap gap-1.5">
+  <div role="group" aria-label="週期表檢視" class="flex flex-wrap gap-1.5 print:hidden">
     {#each MODES as m (m.key)}
       <button
         type="button"
@@ -222,7 +222,7 @@
   </div>
 
   <!-- 詳情 + 趨勢解說 -->
-  <div class="grid gap-3 lg:grid-cols-2">
+  <div class="grid gap-3 lg:grid-cols-2 print:hidden">
     <!-- 選定元素詳情 -->
     <div class="rounded-box border border-base-300 bg-base-100 p-4">
       <div class="flex gap-3.5">
@@ -410,8 +410,8 @@
   {/snippet}
 
   <!-- 週期表本體 -->
-  <div class="overflow-x-auto pb-1">
-    <div class="grid w-max gap-[3px]" style="grid-template-columns: repeat(18, 3.5rem);">
+  <div class="overflow-x-auto pb-1 pt-grid-wrap">
+    <div class="pt-grid grid w-max gap-[3px]" style="grid-template-columns: repeat(18, 3.5rem);">
       {#each mainCells as c (c.e.z)}
         {@render cellBtn(c, '')}
       {/each}
@@ -426,7 +426,7 @@
   </div>
 
   <!-- 鍵型判斷器：電負度差 → 鍵型 -->
-  <div class="rounded-box border border-base-300 bg-base-100 p-4">
+  <div class="rounded-box border border-base-300 bg-base-100 p-4 print:hidden">
     <div class="mb-2.5 flex items-center gap-2">
       <span aria-hidden="true">🔗</span>
       <span class="font-display font-bold">鍵型判斷器</span>
@@ -460,7 +460,7 @@
     {/if}
   </div>
 
-  <p class="text-xs text-base-content/45">
+  <p class="text-xs text-base-content/45 print:hidden">
     點元素看詳情・窄螢幕可左右滑動。數值為教科書標準值（電負度 Pauling／半徑為共價半徑 pm／游離能·電子親和力 kJ/mol，電子親和力取放熱為正／原子量為標準原子量，放射性元素取最穩定同位素質量數），不同資料來源末位略有差異；常見氧化態與離子顏色為考點導向、非窮舉（顏色為約略示意）；93 號以後為人造放射性元素，組態以理論值為準、不附中文名。
   </p>
 </div>

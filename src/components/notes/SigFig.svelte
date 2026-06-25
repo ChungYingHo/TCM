@@ -19,7 +19,7 @@
   })
 </script>
 
-<div class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+<div class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5 print:hidden">
   <div class="mb-3 flex items-center gap-2">
     <span aria-hidden="true">🔢</span>
     <span class="font-display font-bold">有效位數計算</span>
