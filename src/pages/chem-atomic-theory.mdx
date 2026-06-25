@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
 
 <NoteStats tag="原子結構與核化學" client:load />
 
@@ -97,6 +98,26 @@ $$
 | **異構物** isomer | 同**分子式**、不同**結構**（不同化合物） | 分子式同、**連法不同** | $\ce{C4H10}$ 正丁烷／異丁烷；$\ce{C2H6O}$ 乙醇／二甲醚 |
 
 > 口訣：**同位素**比「中子」、**同素異形體**比「單質結構」、**異構物**比「同分子式的化合物」。同位素是**同一種元素**；異構物是**同分子式但不同物質**。
+
+<WorkedExample source="中國醫 115・化學 36" answer="(D) 三者生成的 CO₂ 量相同" tags={["異構物", "分子式", "燃燒"]}>
+
+**題目**　比較正戊烷（$n$-pentane）、異戊烷（isopentane）、新戊烷（neopentane）分別與氧氣**完全燃燒**後生成 $\ce{CO2}$ 的量，下列何者正確？
+
+(A) 正戊烷最多　(B) 異戊烷最多　(C) 新戊烷最多　(D) 三者相同
+
+**解**　關鍵第一步是**辨認這三者都是 $\ce{C5H12}$ 的同分異構物**——分子式完全相同，差別只在碳骨架的連法（直鏈／單分支／雙分支），是「同分子式、不同結構」的異構物。
+
+完全燃燒方程式只由**分子式**決定，三者一模一樣：
+
+$$
+\ce{C5H12 + 8O2 -> 5CO2 + 6H2O}
+$$
+
+故「每 1 mol 戊烷 → 5 mol $\ce{CO2}$」對三者皆成立。又因分子式相同 → **莫耳質量也相同**（皆 $72\ \text{g/mol}$），所以無論**等莫耳或等質量**燃燒，生成的 $\ce{CO2}$ 必然相同 → (D)。
+
+> 異構物的**物理性質會不同**（沸點：正戊烷 36°C ＞ 異戊烷 28°C ＞ 新戊烷 9.5°C，分支越多、分子越「圓」、表面接觸面積越小、分子間吸引力越弱 → 沸點越低）；但**燃燒產物的「量」只看分子式，與結構無關**。
+
+</WorkedExample>
 
 ### 同位素與平均原子量
 

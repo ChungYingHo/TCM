@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
 
 <NoteStats tag="化學計量" client:load />
 
@@ -25,6 +26,38 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 > 例：丙烷燃燒。先 C（3 個 → $3\ce{CO2}$）、再 H（8 個 → $4\ce{H2O}$）、最後數 O（右邊 $3\times2+4=10$ 個 → 左邊 $5\ce{O2}$）：
 >
 > $$ \ce{C3H8 + 5O2 -> 3CO2 + 4H2O} $$
+
+<WorkedExample source="慈濟 115・化學 15" answer="(C) 74" tags={["平衡方程式", "多原子團"]}>
+
+**題目**　下式完全平衡後，反應物與生成物的**係數總和**為多少？
+
+$$
+\ce{Na3PO4 + (NH4)2MoO4 + HNO3 -> (NH4)3PO4.12MoO3 + NH4NO3 + NaNO3 + H2O}
+$$
+
+(A) 72　(B) 73　(C) 74　(D) 75
+
+**解**　遇到帶「複鹽／複合物」的大式子，把**最複雜的產物係數設為 1** 當基準，再讓**多原子團（$\ce{PO4}$、$\ce{NH4+}$、$\ce{NO3-}$）整團追蹤**：
+
+① 設 $\ce{(NH4)3PO4.12MoO3}=1$。
+
+② **P** 只在 $\ce{Na3PO4}$ 與複合物 → $\ce{Na3PO4}=1$；**Na** 隨之 $=3$ → $\ce{NaNO3}=3$。
+
+③ **Mo**：複合物含 12 個 → $\ce{(NH4)2MoO4}=12$。
+
+④ **$\ce{NH4+}$ 守恆**：來源 $12\times2=24$ 個，複合物用掉 3 個 → 剩 $24-3=21$ 個成 $\ce{NH4NO3}=21$。
+
+⑤ **$\ce{NO3-}$ 守恆**：$\ce{NaNO3}(3)+\ce{NH4NO3}(21)=24$ 個，全來自 $\ce{HNO3}$ → $\ce{HNO3}=24$。
+
+⑥ **H、O** 收尾 → $\ce{H2O}=12$（回頭驗 H、O 皆守恆）。
+
+$$
+\ce{Na3PO4 + 12(NH4)2MoO4 + 24HNO3 -> (NH4)3PO4.12MoO3 + 21NH4NO3 + 3NaNO3 + 12H2O}
+$$
+
+係數總和 $=1+12+24+1+21+3+12=\mathbf{74}$ → (C)。
+
+</WorkedExample>
 
 ---
 
@@ -61,6 +94,30 @@ $$
 >
 > $$ 8\ \text{g CH}_4 \times \frac{1\ \text{mol CH}_4}{16\ \text{g}} \times \frac{2\ \text{mol O}_2}{1\ \text{mol CH}_4} \times \frac{32\ \text{g}}{1\ \text{mol O}_2} = 32\ \text{g O}_2 $$
 
+<WorkedExample source="義守 115・化學 39" answer="(B) 65.4 g/mol（即鋅 Zn）" tags={["質量守恆", "莫耳質量"]}>
+
+**題目**　$1.164$ g 某金屬硫化物在空氣中焙燒，得 $0.972$ g 金屬氧化物。金屬氧化數為 $+2$，求該金屬莫耳質量。（O：16、S：32.1 g/mol）
+
+(A) 51.4　(B) 65.4　(C) 81.4　(D) 98.4　g/mol
+
+**解**　金屬為 $+2$ → 硫化物是 $\ce{MS}$（$\ce{M^2+}\,\ce{S^2-}$）、氧化物是 $\ce{MO}$。焙燒 $\ce{2MS + 3O2 -> 2MO + 2SO2}$ 中**金屬全程守恆，$\ce{MS}$ 與 $\ce{MO}$ 莫耳數 1∶1**。
+
+關鍵：每 1 mol 化合物由 $\ce{MS}\to\ce{MO}$，等於「拿掉 1 個 S、換上 1 個 O」，質量**減少** $32.1-16.0=16.1$ g。把總減少質量用 unit factor 換成莫耳：
+
+$$
+(1.164-0.972)\ \text{g} \times \frac{1\ \text{mol}}{(32.1-16.0)\ \text{g}} = \frac{0.192}{16.1} = 0.0119\ \text{mol}
+$$
+
+這就是化合物（也＝金屬）的莫耳數。再由氧化物質量回推莫耳質量、扣掉氧：
+
+$$
+M_{\ce{M}} = \frac{0.972\ \text{g}}{0.0119\ \text{mol}} - 16.0\ \text{g/mol} = 81.5 - 16.0 = \mathbf{65.5}\ \text{g/mol}
+$$
+
+（用硫化物驗算：$1.164/0.0119-32.1=65.5$ 一致；$\approx 65.4$ 即鋅 $\ce{Zn}$）→ (B)。
+
+</WorkedExample>
+
 ---
 
 ## 四、限量試劑（誰先用完）
@@ -81,6 +138,53 @@ $$
 >
 > 例：$\ce{N2 + 3H2 -> 2NH3}$，給 2 mol $\ce{N2}$、3 mol $\ce{H2}$。$\ce{N2}: \frac{2}{1}=2$、$\ce{H2}: \frac{3}{3}=1$ → 比值小 → **$\ce{H2}$ 限量**（$\ce{N2}$ 過量）。
 
+<WorkedExample source="義守 115・化學 8" answer="(B) 23.4 克" tags={["限量試劑"]}>
+
+**題目**　$\ce{MnO2 + 4HCl -> MnCl2 + Cl2 + 2H2O}$。$0.86$ mol $\ce{MnO2}$ 與 $48.2$ g $\ce{HCl}$ 反應，產生約幾克 $\ce{Cl2}$？（Mn：54.9、Cl：35.5、H：1.0 g/mol）
+
+(A) 11.7　(B) 23.4　(C) 35.1　(D) 46.8　克
+
+**解**　① 兩反應物**都換 mol、再各除自己的係數**：
+
+- $\ce{MnO2}$：已是 $0.86$ mol → $\dfrac{0.86}{1}=0.86$
+- $\ce{HCl}$：$48.2\ \text{g}\times\dfrac{1\ \text{mol}}{36.5\ \text{g}}=1.32$ mol → $\dfrac{1.32}{4}=0.33$
+
+$0.33<0.86$ → **$\ce{HCl}$ 限量**（$\ce{MnO2}$ 過量、用不完）。
+
+② 一律以限量試劑 $\ce{HCl}$ 往下算 $\ce{Cl2}$（$\ce{Cl2}$ 式量 $=71.0$）：
+
+$$
+48.2\ \text{g HCl} \times \frac{1\ \text{mol HCl}}{36.5\ \text{g}} \times \frac{1\ \text{mol Cl2}}{4\ \text{mol HCl}} \times \frac{71.0\ \text{g}}{1\ \text{mol Cl2}} \approx 23.4\ \text{g}
+$$
+
+→ (B)。（若誤把 $\ce{MnO2}$ 當限量、或忘了 $\ce{HCl}$ 係數是 4，就會落入其他選項。）
+
+</WorkedExample>
+
+<WorkedExample source="義守 115・化學 34" answer="(B) 不能，鹼量不足" tags={["限量試劑", "酸鹼中和"]}>
+
+**題目**　胃中有 $75$ mL 的 $0.20$ M $\ce{HCl}$。一錠制酸劑含 $500$ mg $\ce{CaCO3}$（$M\approx100$）。依 $\ce{CaCO3 + 2HCl -> CaCl2 + H2O + CO2}$，此錠能否中和所有胃酸？
+
+(A) 能且過量　(B) 不能，鹼量不足　(C) 剛好完全中和　(D) 無法計算
+
+**解**　把「胃酸的 mol」對上「這錠藥**能中和的** HCl mol」——本質就是限量試劑判斷。
+
+胃酸總量：
+
+$$
+0.075\ \text{L} \times \frac{0.20\ \text{mol HCl}}{1\ \text{L}} = 0.015\ \text{mol HCl}
+$$
+
+這錠 $\ce{CaCO3}$ 能中和的 HCl（用係數比 $1\ \ce{CaCO3}:2\ \ce{HCl}$）：
+
+$$
+0.500\ \text{g} \times \frac{1\ \text{mol CaCO3}}{100\ \text{g}} \times \frac{2\ \text{mol HCl}}{1\ \text{mol CaCO3}} = 0.010\ \text{mol HCl}
+$$
+
+$0.010 < 0.015$ → 只能中和 $0.010$ mol，仍剩 $0.005$ mol 胃酸 → **鹼量不足**，選 (B)。
+
+</WorkedExample>
+
 ---
 
 ## 五、理論產量、實際產量與產率
@@ -98,6 +202,47 @@ $$
 **流程**：限量試劑 mol $\xrightarrow{\times \frac{\text{產物係數}}{\text{LR 係數}}}$ 產物 mol $\xrightarrow{\times M}$ **理論產量(g)**；再用實際產量算產率。
 
 > 例：承上，$\ce{H2}$ 限量 3 mol → $3\times\frac{2}{3}=2$ mol $\ce{NH3}$ → $\times 17=34$ g（理論）。若實得 27.2 g：產率 $=\frac{27.2}{34}\times100\%=\mathbf{80\%}$。
+
+<WorkedExample source="中國醫 115・化學 34" answer="(A) FeCr₂O₄ 為限量試劑" tags={["限量試劑", "理論產量", "產率"]}>
+
+**題目**　某係數未平衡的反應式如下。將 120 kg $\ce{FeCr2O4}$、288 kg $\ce{K2CO3}$ 與 75 kg $\ce{O2}$ 置入容器反應，實際得 150 kg $\ce{K2CrO4}$。（原子量：Fe=55.85、Cr=52.00、O=16.00、C=12.01、K=39.10）下列何者正確？
+
+$$
+\ce{FeCr2O4 + K2CO3 + O2 -> K2CrO4 + Fe2O3 + CO2}
+$$
+
+(A) $\ce{FeCr2O4}$ 為限量試劑　(B) 理論產量為 253 kg $\ce{K2CrO4}$　(C) 實際產率為 82%　(D) $\ce{O2}$ 為催化劑
+
+**解** ① 先配平（Fe、Cr、K、C 各只出現一次先平，O 收尾，整條 ×4 去分數）：
+
+$$
+\ce{4FeCr2O4 + 8K2CO3 + 7O2 -> 8K2CrO4 + 2Fe2O3 + 8CO2}
+$$
+
+② 三種反應物**都換 mol、再各除自己的係數**，比值最小者為限量試劑（$\ce{FeCr2O4}$ 式量 $=55.85+2\times52.00+4\times16.00=223.85$）：
+
+$$
+\ce{FeCr2O4}:\ 120\ \text{kg} \times \frac{1000\ \text{g}}{1\ \text{kg}} \times \frac{1\ \text{mol}}{223.85\ \text{g}} = 536\ \text{mol} \;\Rightarrow\; \frac{536}{4} = \mathbf{134}
+$$
+
+$$
+\ce{K2CO3}:\ \frac{288{,}000\ \text{g}}{138.21\ \text{g/mol}} = 2084\ \text{mol} \Rightarrow \frac{2084}{8} = 260 \qquad
+\ce{O2}:\ \frac{75{,}000\ \text{g}}{32.00\ \text{g/mol}} = 2344\ \text{mol} \Rightarrow \frac{2344}{7} = 335
+$$
+
+$134 < 260 < 335$ → **$\ce{FeCr2O4}$ 比值最小，先用完 → 限量試劑**，故 **(A) 正確**。
+
+③ 順手驗證其餘選項（全部以限量試劑 $\ce{FeCr2O4}$ 為基準）：
+
+$$
+\text{理論產量} = 536\ \text{mol} \times \frac{8\ \text{mol K2CrO4}}{4\ \text{mol FeCr2O4}} \times \frac{194.2\ \text{g}}{1\ \text{mol}} \times \frac{1\ \text{kg}}{1000\ \text{g}} \approx 208\ \text{kg}
+$$
+
+- (B) 理論產量約 **208 kg**，不是 253 kg → ✗
+- (C) 產率 $=\dfrac{\text{實際}}{\text{理論}}=\dfrac{150}{208}\times100\% \approx \mathbf{72\%}$，不是 82% → ✗
+- (D) $\ce{O2}$ 被消耗、出現在反應式左邊，是**反應物**不是催化劑 → ✗
+
+</WorkedExample>
 
 ---
 

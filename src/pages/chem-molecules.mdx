@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
 import VseprShapes from '@/components/notes/VseprShapes.svelte'
 import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
 
@@ -91,6 +92,27 @@ $$
 
 > **鍵角壓縮**：孤對電子雲較「胖」，會壓縮鍵結對 → 孤對越多鍵角越小（$\ce{CH4}$ 109.5° → $\ce{NH3}$ 107° → $\ce{H2O}$ 104.5°）。
 > **SN=5** 孤對優先佔**赤道位**；**SN=6** 兩孤對佔**對位**（trans）。
+
+<WorkedExample source="義守 115・化學 18" answer="(D) BF₃" tags={["VSEPR", "分子形狀"]}>
+
+**題目**　依 VSEPR 理論，下列何者為**三角平面**結構？
+
+(A) $\ce{H2O}$　(B) $\ce{CH4}$　(C) $\ce{NH3}$　(D) $\ce{BF3}$
+
+**解**　「三角平面」＝中心原子 $\text{SN}=3$ 且**無孤對**，即 AX₃。逐一數中心原子的鍵結對 X 與孤對 E：
+
+| 分子 | 中心原子（價電子） | 鍵結對 X | 孤對 E | SN | AXₙEₘ | 形狀 |
+|------|:---:|:---:|:---:|:---:|:---:|------|
+| $\ce{H2O}$ | O（6） | 2 | 2 | 4 | AX₂E₂ | 角形 |
+| $\ce{CH4}$ | C（4） | 4 | 0 | 4 | AX₄ | 正四面體 |
+| $\ce{NH3}$ | N（5） | 3 | 1 | 4 | AX₃E | 三角錐 |
+| $\ce{BF3}$ | B（3） | 3 | 0 | **3** | **AX₃** | **三角平面** |
+
+$\ce{BF3}$ 的 B 只有 3 個價電子、全部用於鍵結、**無孤對** → AX₃ → 三角平面（鍵角 120°）→ (D)。
+
+> $\ce{BF3}$ 中 B 周圍僅 6 個電子，是典型「**缺電子**」化合物（不遵守八隅體）；其餘三者中心原子 SN 皆為 4，因孤對數不同而成角形／四面體／三角錐。
+
+</WorkedExample>
 
 ---
 

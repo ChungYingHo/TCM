@@ -1,0 +1,45 @@
+---
+// 重點解題範例（WorkedExample）——錨定真實考古題的完整示範解題卡。
+// 靜態無 hydration：題幹、選項、unit-factor 詳解全寫在 MDX children（slot），
+// 故 KaTeX／mhchem 公式在網頁與列印 PDF 完全一致。
+// 與互動式 ExampleQuestion（例題區「選→對→解析」）刻意區隔：此處答案與步驟
+// 「直接攤開」當教學示範，採暖琥珀（accent）色塊，視覺上與必背／例題不同。
+interface Props {
+  source: string // 出處，如「中國醫 115・化學 34」
+  answer: string // 答案，可含 HTML／unicode，如「(A) FeCr₂O₄ 為限量試劑」
+  tags?: string[] // 概念標籤，如 ['限量試劑', '產率']
+}
+
+const { source, answer, tags = [] } = Astro.props
+---
+
+<section
+  class="worked-example my-5 overflow-hidden rounded-box border border-accent/40 bg-accent/[0.05] print:break-inside-avoid"
+>
+  <header
+    class="flex flex-wrap items-center gap-x-2 gap-y-1 border-b border-accent/25 bg-accent/10 px-4 py-2.5"
+  >
+    <span class="badge badge-accent badge-sm border-none font-bold">📌 重點解題範例</span>
+    <span class="text-sm font-semibold text-base-content/80">{source}</span>
+    {
+      tags.length > 0 && (
+        <span class="ml-auto flex flex-wrap gap-1">
+          {tags.map((t) => <span class="badge badge-ghost badge-sm">{t}</span>)}
+        </span>
+      )
+    }
+  </header>
+
+  <div class="we-body px-4 py-1">
+    <slot />
+  </div>
+
+  <!-- 用 <div> 而非 <footer>：列印 CSS 有 `footer { display:none }`（隱藏站台頁尾），
+       會連帶吃掉答案列，導致 PDF 缺答案、且違反「網頁＝PDF 一致」。 -->
+  <div
+    class="we-answer flex flex-wrap items-center gap-2 border-t border-accent/25 bg-accent/[0.04] px-4 py-2.5 text-sm"
+  >
+    <span class="font-semibold text-base-content/70">答案</span>
+    <span class="badge badge-success badge-sm font-bold" set:html={answer}></span>
+  </div>
+</section>

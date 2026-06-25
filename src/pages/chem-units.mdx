@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
 import SigFig from '@/components/notes/SigFig.svelte'
 
 <NoteStats tag="化學計量" client:load />
@@ -168,6 +169,30 @@ $$
 | 62.36 | L·mmHg/(mol·K) | $P$ 用 mmHg |
 
 > 三個其實是同一個 $R$ 換單位：$0.08206\ \dfrac{\text{L·atm}}{\text{mol·K}} \times \dfrac{101.325\ \text{J}}{1\ \text{L·atm}} = 8.314\ \dfrac{\text{J}}{\text{mol·K}}$。
+
+<WorkedExample source="慈濟 115・化學 17" answer="(C) 1.35 atm" tags={["理想氣體", "亞佛加厥"]}>
+
+**題目**　$2.5$ L 密閉容器裝滿臭氧 $\ce{O3}$，$300$ K 時量得壓力 $0.90$ atm。若 $\ce{O3}$ 在同溫下全部轉成 $\ce{O2}$，容器內壓力為何？
+
+(A) 0.6　(B) 0.9　(C) 1.35　(D) 2.7　atm
+
+**解**　由 $PV=nRT$，**定溫定容**時 $\dfrac{RT}{V}$ 是定值 → $P \propto n$（壓力只隨莫耳數變）。先看反應的莫耳比：
+
+$$
+\ce{2O3 -> 3O2}
+$$
+
+每 2 mol $\ce{O3}$ 變成 3 mol $\ce{O2}$，氣體莫耳數變成原來的 $\frac{3}{2}$ 倍。$V$、$T$ 不變，壓力同比例放大——直接用莫耳比當 unit factor：
+
+$$
+P_2 = 0.90\ \text{atm} \times \frac{3\ \text{mol O2}}{2\ \text{mol O3}} = 1.35\ \text{atm}
+$$
+
+→ (C)。
+
+> $V=2.5$ L、$T=300$ K 是**干擾數據**：定溫定容下兩邊同時約掉，根本用不到。看到「同溫、同容器」就應該想到 $P\propto n$。
+
+</WorkedExample>
 
 ---
 
