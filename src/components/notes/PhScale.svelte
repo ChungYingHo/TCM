@@ -25,7 +25,7 @@
 
   <input type="range" min="0" max="14" step="0.1" bind:value={ph}
     class="range range-primary range-sm w-full"
-    style={`background:linear-gradient(90deg,oklch(0.6 0.15 25),oklch(0.85 0.07 95),oklch(0.6 0.12 232));`}
+    style="background:linear-gradient(90deg,oklch(0.6 0.15 25),oklch(0.85 0.07 95),oklch(0.6 0.12 232));"
     aria-label="調整 pH 值" />
   <div class="mt-1 flex justify-between text-[0.65rem] opacity-50"><span>0 強酸</span><span>7 中性</span><span>14 強鹼</span></div>
 
