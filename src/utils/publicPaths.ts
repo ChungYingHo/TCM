@@ -1,9 +1,8 @@
 // Pure path-gating rules for the auth middleware. Kept free of the
 // `astro:middleware` virtual module so it can be unit-tested directly.
 
-// Pages/endpoints reachable WITHOUT the cookie gate. /api/progress-summary is here
-// because it self-authenticates with the site password (x-tcm-key), so a headless
-// session can pull the learning summary without first unlocking a cookie.
+// Pages/endpoints reachable WITHOUT the cookie gate: the landing page and the
+// unlock endpoint itself. Everything else requires the auth cookie.
 const PUBLIC_PATHS = new Set(['/', '/api/unlock'])
 
 // Public static assets, served openly: Astro build output (/_astro/), the

@@ -35,7 +35,11 @@ const BODY: Record<School, string> = {
 }
 
 export const GET: APIRoute = ({ params }) => {
-  const body = BODY[params.school as School]
+  // Object.hasOwn guard: a bare `BODY[school]` lookup would resolve inherited
+  // keys like "__proto__"/"constructor" to truthy prototype objects and serve a
+  // garbage 200 instead of 404.
+  const school = params.school as string
+  const body = Object.hasOwn(BODY, school) ? BODY[school as School] : undefined
   if (!body) {
     return new Response(JSON.stringify({ error: 'unknown school' }), {
       status: 404,
