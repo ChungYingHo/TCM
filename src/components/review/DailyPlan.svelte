@@ -14,6 +14,7 @@
   import AminoAcidQuiz from '@/components/amino/AminoAcidQuiz.svelte'
   import UnitFactorQuiz from '@/components/unit/UnitFactorQuiz.svelte'
   import ClassicReader from '@/components/classics/ClassicReader.svelte'
+  import DailyDrill from '@/components/review/DailyDrill.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
   let classics = $state<ClassicsData | null>(null)
@@ -169,5 +170,8 @@
       </div>
     </section>
   {/if}
+
+  <!-- 8. 今日刷題（各科 10 題：筆記例題＋考古題混合） -->
+  <DailyDrill />
   {/if}
 </div>

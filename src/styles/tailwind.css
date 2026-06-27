@@ -221,8 +221,16 @@ a.card:hover, .card-hover:hover {
 /* 內容被 rehypeNoteSections 包成 .note-sec 時，首段標題仍需歸零上邊距 */
 .prose > .note-sec:first-child > :first-child { margin-top: 0; }
 .prose h3 { margin-top: 1.8em; margin-bottom: 0.6em; }
+/* h4（####）＝節內小分段（如微管的 ①中心體 ②纖毛鞭毛 ③MTOC）：比 h3 小、帶主色調 */
+.prose h4 { margin-top: 1.4em; margin-bottom: 0.4em; font-size: 1.02em; font-weight: 700;
+  color: color-mix(in oklab, var(--color-primary) 78%, var(--color-base-content)); }
 .prose p { margin-top: 0.9em; margin-bottom: 0.9em; }
 .prose :is(ul, ol) { margin-top: 0.7em; margin-bottom: 1em; padding-left: 1.4em; }
+/* 還原條列符號／編號（Tailwind reset 會清掉）；只套到 markdown 產生的 list（無 class），
+   不影響元件內自排版的 list（ExampleQuestion 選項格、Memorize…，那些自帶 class）。 */
+.prose ul:not([class]) { list-style-type: disc; }
+.prose ol:not([class]) { list-style-type: decimal; }
+.prose ul:not([class]) ul:not([class]) { list-style-type: circle; }
 .prose li { margin-top: 0.35em; margin-bottom: 0.35em; padding-left: 0.15em; }
 .prose li::marker { color: color-mix(in oklab, var(--color-primary) 55%, transparent); }
 .prose table { font-size: 0.92em; border-collapse: separate; border-spacing: 0; overflow: hidden;
@@ -243,6 +251,24 @@ a.card:hover, .card-hover:hover {
 }
 .prose blockquote p { margin: 0; }
 .prose blockquote p::before, .prose blockquote p::after { content: none; }
+
+/* 補充色塊（Supplement.astro）：大綱「補」的延伸知識，藍 info 框，和琥珀提示明確區隔 */
+.prose .supplement {
+  margin: 1em 0; overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--color-info) 35%, transparent);
+  border-radius: var(--radius-box);
+  background: color-mix(in oklab, var(--color-info) 6%, var(--color-base-100));
+}
+.prose .supplement-head {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem;
+  padding: 0.4rem 0.85rem; font-size: 0.85rem;
+  background: color-mix(in oklab, var(--color-info) 12%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-info) 22%, transparent);
+}
+.prose .supplement-body { padding: 0.55rem 0.9rem; font-size: 0.9rem; line-height: 1.65; }
+.prose .supplement-body > :first-child { margin-top: 0; }
+.prose .supplement-body > :last-child { margin-bottom: 0; }
+.prose .supplement-body :is(p, ul, ol) { margin: 0.35rem 0; }
 
 /* ── 深色模式（夜讀／護眼）：現代冷調深石板底＋柔白字，睡前手機刷題不刺眼。
    隨亮色一同翻新——拿掉舊版墨黛色偏，改乾淨 slate；強調色提亮保清晰。 ─────── */
@@ -351,6 +377,7 @@ a.card:hover, .card-hover:hover {
   .page-desc { font-size: 0.8rem; line-height: 1.4; }
   .prose h2 { margin-top: 1.1em; margin-bottom: 0.5em; }
   .prose h3 { margin-top: 0.85em; margin-bottom: 0.4em; }
+  .prose h4 { margin-top: 0.7em; margin-bottom: 0.3em; }
   .prose p { margin: 0.5em 0; }
   .prose :is(ul, ol) { margin: 0.45em 0; }
   .prose li { margin: 0.2em 0; }

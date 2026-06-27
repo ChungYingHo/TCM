@@ -1,0 +1,34 @@
+---
+// 筆記插圖卡：放教科書／自製示意圖，附說明與出處。
+// 靜態無 hydration；列印時整塊不被分頁切開（符合「閱讀單位不切頁」原則）。
+// 圖檔放 public/notes/<note>/，src 用絕對路徑如 /notes/bio-cell/animal-cell.webp。
+// maxW 限制「整張圖卡」寬度（含外框）並置中——外框會貼齊圖、不留兩側空白。
+// 寬幅、標籤密的圖請「不要」設 maxW（吃滿欄寬才看得清內部）；只有「直幅／很高」的
+// 圖才設 maxW 以免整張過高。
+interface Props {
+  src: string
+  alt: string
+  caption?: string // 圖說（可含 HTML）
+  source?: string // 出處，如「Campbell 生物學・上冊」
+  maxW?: string // 限制圖卡寬度，如 '32rem'；預設吃滿欄寬
+}
+
+const { src, alt, caption, source, maxW } = Astro.props
+---
+
+<figure
+  class="not-prose mx-auto my-5 print:break-inside-avoid"
+  style={maxW ? `max-width:${maxW}` : undefined}
+>
+  <div class="overflow-hidden rounded-box border border-base-300 bg-base-100">
+    <img src={src} alt={alt} loading="lazy" class="block h-auto w-full" />
+  </div>
+  {
+    (caption || source) && (
+      <figcaption class="mt-1.5 flex flex-wrap items-baseline gap-x-2 px-1 text-xs leading-relaxed text-base-content/60">
+        {caption && <span set:html={caption} />}
+        {source && <span class="ml-auto shrink-0 italic opacity-80">{source}</span>}
+      </figcaption>
+    )
+  }
+</figure>

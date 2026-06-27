@@ -1,4 +1,4 @@
-// 把化學七章渲染成「列印級 A4 PDF」到 exports/。
+// 把筆記渲染成「列印級 A4 PDF」到 exports/，依科目／分類分子資料夾。
 // 需先啟動 dev server（npm start，預設 port 4330）。用法：npm run pdf
 //
 // 機制：用 Playwright 開無頭 Chromium → POST 密碼到 /api/unlock 取得 cookie
@@ -14,16 +14,25 @@ const BASE = process.env.PDF_BASE_URL || 'http://localhost:4330'
 const OUT = path.join(ROOT, 'exports')
 const SERIF = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap'
 
-// 與 src/models/notes.ts 的化學七章同步（清單小且穩定，手動維護）
+// 與 src/models/notes.ts 同步（清單小且穩定，手動維護）。`dir`＝exports 下的子資料夾
+// ＝科目；快速複習類另置於「快速複習/」。
 const NOTES = [
-  { href: '/periodic-table', file: '1-元素週期表' },
-  { href: '/amino-acids', file: '2-胺基酸' },
-  { href: '/chem-atomic-theory', file: '3-學說與理論' },
-  { href: '/chem-units', file: '4-化學上重要的單位' },
-  { href: '/chem-molecules', file: '5-化學分子表達' },
-  { href: '/chem-stoichiometry', file: '6-化學反應方程式與化學計量' },
-  { href: '/chem-thermo', file: '7-簡單的熱力學' },
+  { dir: '化學', href: '/periodic-table', file: '1-元素週期表' },
+  { dir: '化學', href: '/amino-acids', file: '2-胺基酸' },
+  { dir: '化學', href: '/chem-atomic-theory', file: '3-學說與理論' },
+  { dir: '化學', href: '/chem-units', file: '4-化學上重要的單位' },
+  { dir: '化學', href: '/chem-molecules', file: '5-化學分子表達' },
+  { dir: '化學', href: '/chem-stoichiometry', file: '6-化學反應方程式與化學計量' },
+  { dir: '化學', href: '/chem-thermo', file: '7-簡單的熱力學' },
+  { dir: '生物', href: '/bio-cell-1', file: '1-細胞（一）概論顯微鏡原核真核' },
+  { dir: '生物', href: '/bio-cell-2', file: '2-細胞（二）細胞核內膜系統能量胞器' },
+  { dir: '生物', href: '/bio-cell-3', file: '3-細胞（三）細胞骨架與細胞外連結' },
+  { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
 ]
+
+// 只產指定子資料夾（如 `npm run pdf -- 生物`）；不給則全產。
+const ONLY = process.argv.slice(2)
+const SELECTED = ONLY.length ? NOTES.filter((n) => ONLY.includes(n.dir)) : NOTES
 
 function sitePassword() {
   if (process.env.SITE_PASSWORD) return process.env.SITE_PASSWORD
@@ -47,7 +56,9 @@ async function main() {
     process.exit(1)
   }
 
-  for (const note of NOTES) {
+  for (const note of SELECTED) {
+    const dir = path.join(OUT, note.dir)
+    if (!existsSync(dir)) mkdirSync(dir, { recursive: true })
     const page = await context.newPage()
     await page.emulateMedia({ media: 'print' })
     await page.goto(`${BASE}${note.href}`, { waitUntil: 'load' })
@@ -73,16 +84,16 @@ async function main() {
     // 直向為主；只有 118 格表在 CSS 標為具名橫向頁（@page pt-landscape）。
     // preferCSSPageSize 讓同一份 PDF 內單頁橫向、其餘直向，且套用各自的 @page 邊界。
     await page.pdf({
-      path: path.join(OUT, `${note.file}.pdf`),
+      path: path.join(dir, `${note.file}.pdf`),
       printBackground: true,
       preferCSSPageSize: true,
     })
-    console.log(`✓ ${note.file}.pdf`)
+    console.log(`✓ ${note.dir}/${note.file}.pdf`)
     await page.close()
   }
 
   await browser.close()
-  console.log(`\n完成：${NOTES.length} 份 PDF → ${OUT}`)
+  console.log(`\n完成：${SELECTED.length} 份 PDF → ${OUT}`)
 }
 
 main().catch((e) => {

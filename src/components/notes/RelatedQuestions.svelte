@@ -6,7 +6,9 @@
 
   // `also` lets a merged note (covers multiple concept tags) surface questions from all of
   // them — e.g. atomic-structure covers 週期性 + 化學鍵與分子結構.
-  let { tag, also = [], limit = 3 }: { tag: string; also?: string[]; limit?: number } = $props()
+  // `offset` lets a multi-part note series (細胞一/二/三 共用同一 concept tag) each show a
+  // different window of the same pool instead of repeating the first N.
+  let { tag, also = [], limit = 3, offset = 0 }: { tag: string; also?: string[]; limit?: number; offset?: number } = $props()
 
   let matches = $state<QuestionRecord[]>([])
   let loading = $state(true)
@@ -18,10 +20,14 @@
       .finally(() => { loading = false })
   })
 
-  const shown = $derived(matches.slice(0, limit))
+  // window into the pool; wrap so an over-large offset still yields questions
+  const start = $derived(matches.length ? offset % matches.length : 0)
+  const shown = $derived(matches.slice(start, start + limit))
 </script>
 
-<section class="my-4">
+<!-- 線上互動考古題：題幹是圖片、按鈕（看答案/錯題本/問AI）皆線上功能，列印無意義且
+     題幹圖在無頭列印不載入 → 整段不印（與只含例題的化學 PDF 風格一致）。 -->
+<section class="my-4 print:hidden">
   {#if loading}
     <p class="text-sm opacity-60">載入考古題中…</p>
   {:else if shown.length === 0}

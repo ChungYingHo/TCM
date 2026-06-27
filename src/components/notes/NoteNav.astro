@@ -1,0 +1,35 @@
+---
+// 黏性次導航：回清單＋同分類同科目上一篇/下一篇。MDX 筆記與 .astro 工具頁（週期表／胺基酸）
+// 共用，故抽成元件——靠 Astro.url 自己算當前篇，呼叫端只要 <NoteNav />。
+import { siblingNotes } from '@/models/notes'
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/'
+const { prev, next } = siblingNotes(path)
+---
+
+<nav
+  class="note-subnav sticky z-20 -mx-4 mb-5 flex items-center gap-2 border-b border-base-300/70 bg-base-100/80 px-4 py-2 backdrop-blur-xl sm:-mx-6 sm:px-6 print:hidden"
+  style="top: env(safe-area-inset-top)"
+  aria-label="筆記導航"
+>
+  <a href="/notes" class="flex shrink-0 items-center gap-1 rounded-full px-2.5 py-1 text-sm font-medium text-base-content/70 transition-colors hover:bg-base-content/5 hover:text-base-content">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    筆記
+  </a>
+  <div class="ml-auto flex min-w-0 items-center gap-1">
+    {prev && (
+      <a href={prev.href} title={prev.title} class="flex min-w-0 items-center gap-1 rounded-full px-2.5 py-1 text-sm text-base-content/65 transition-colors hover:bg-primary/10 hover:text-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 shrink-0"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <span class="hidden truncate sm:inline">{prev.title}</span>
+        <span class="sm:hidden">上一篇</span>
+      </a>
+    )}
+    {next && (
+      <a href={next.href} title={next.title} class="flex min-w-0 items-center gap-1 rounded-full px-2.5 py-1 text-sm text-base-content/65 transition-colors hover:bg-primary/10 hover:text-primary">
+        <span class="hidden truncate sm:inline">{next.title}</span>
+        <span class="sm:hidden">下一篇</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 shrink-0"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    )}
+  </div>
+</nav>
