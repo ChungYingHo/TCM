@@ -51,6 +51,9 @@
   const canStart = $derived(selectedTypes.length > 0 && maxQ > 0)
 
   function toggleMode(key: string) {
+    // transient builder for an immutable update of the reactive `selectedModes`,
+    // not reactive state itself — SvelteSet is unnecessary here.
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity
     const next = new Set(selectedModes)
     if (next.has(key)) {
       next.delete(key)

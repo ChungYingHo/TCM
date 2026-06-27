@@ -77,7 +77,7 @@
   {#if word.example}
     <div class="mt-1 rounded-lg bg-base-200/60 p-2.5 text-sm">
       <p class="leading-relaxed">
-        {#each segments as seg}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
+        {#each segments as seg, i (i)}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
               type="button"
               class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
               title="點看字義（考過的字）"

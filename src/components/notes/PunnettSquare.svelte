@@ -32,11 +32,11 @@
 <div class="my-4 rounded-box border border-base-300 bg-base-100 p-4">
   <div class="mb-3 flex flex-wrap items-center gap-3">
     <label class="flex items-center gap-1.5 text-sm">親代①
-      <select bind:value={p1} class="select select-bordered select-sm">{#each GENOS as g}<option>{g}</option>{/each}</select>
+      <select bind:value={p1} class="select select-bordered select-sm">{#each GENOS as g (g)}<option>{g}</option>{/each}</select>
     </label>
     <span class="opacity-50">×</span>
     <label class="flex items-center gap-1.5 text-sm">親代②
-      <select bind:value={p2} class="select select-bordered select-sm">{#each GENOS as g}<option>{g}</option>{/each}</select>
+      <select bind:value={p2} class="select select-bordered select-sm">{#each GENOS as g (g)}<option>{g}</option>{/each}</select>
     </label>
   </div>
 

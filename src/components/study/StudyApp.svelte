@@ -50,9 +50,13 @@
 
   const facets = $derived(deriveFacets(questions))
   const tagsBySubject = $derived.by(() => {
+    // transient locals inside a $derived — recomputed wholesale, never held as
+    // reactive state, so plain Map/Set are correct here.
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity
     const m = new Map<Subject, Set<string>>()
     for (const q of questions) {
       if (!q.concept_tags.length) continue
+      // eslint-disable-next-line svelte/prefer-svelte-reactivity
       const set = m.get(q.subject) ?? new Set<string>()
       q.concept_tags.forEach((t) => set.add(t))
       m.set(q.subject, set)

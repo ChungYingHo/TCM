@@ -60,11 +60,10 @@
   // study mode keeps its own selection + reveal; exam mode is parent-controlled.
   let localSelected = $state<OptionLetter | null>(null)
   let localRevealed = $state(false)
-  let inBook = $state(false)
-
-  $effect(() => {
-    inBook = isInWrongBook(question.id)
-  })
+  // Writable $derived: reflects wrong-book membership for the current question
+  // (recomputed when the question changes), but the toggle below can override it
+  // immediately. Avoids the $state+$effect first-render flash of `false`.
+  let inBook = $derived(isInWrongBook(question.id))
 
   const shownSelected = $derived(mode === 'exam' ? selected : localSelected)
   const shownRevealed = $derived(mode === 'exam' ? revealed : localRevealed)
