@@ -6,6 +6,7 @@
   import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type AAQuestion } from '@/utils/aminoAcidQuiz'
   import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
   import Icon from '@/components/common/Icon.svelte'
+  import { shuffle } from '@/utils/rng'
 
   let { count = 8, onfinish }: { count?: number; onfinish?: () => void } = $props()
 
@@ -23,11 +24,7 @@
   function build() {
     const due = dueIds().slice(0, count)
     const seen = new Set(due)
-    const fresh = QUIZ_ITEM_IDS.filter((id) => !getCard(id) && !seen.has(id))
-    for (let k = fresh.length - 1; k > 0; k--) {
-      const j = Math.floor(Math.random() * (k + 1))
-      ;[fresh[k], fresh[j]] = [fresh[j], fresh[k]]
-    }
+    const fresh = shuffle(QUIZ_ITEM_IDS.filter((id) => !getCard(id) && !seen.has(id)), Math.random)
     const ids = [...due, ...fresh].slice(0, count)
     const base = Math.floor(Math.random() * 1e9)
     deck = ids.map((id, idx) => makeQuestion(id, base + idx)).filter((q): q is AAQuestion => !!q)

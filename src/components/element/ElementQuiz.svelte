@@ -6,6 +6,7 @@
   import { dueIds, grade, learn, getCard } from '@/utils/elementSrs'
   import { makeQuestion, checkAnswer, QUIZ_ITEM_IDS, type ElementQuestion, type QuestionType } from '@/utils/elementQuiz'
   import Icon from '@/components/common/Icon.svelte'
+  import { shuffle } from '@/utils/rng'
 
   let {
     count = 8,
@@ -35,11 +36,7 @@
     const poolSet = new Set(pool)
     const due = dueIds().filter((id) => poolSet.has(id)).slice(0, count)
     const seen = new Set(due)
-    const fresh = pool.filter((id) => !getCard(id) && !seen.has(id))
-    for (let k = fresh.length - 1; k > 0; k--) {
-      const j = Math.floor(Math.random() * (k + 1))
-      ;[fresh[k], fresh[j]] = [fresh[j], fresh[k]]
-    }
+    const fresh = shuffle(pool.filter((id) => !getCard(id) && !seen.has(id)), Math.random)
     const ids = [...due, ...fresh].slice(0, count)
     const base = Math.floor(Math.random() * 1e9)
     deck = ids.map((id, idx) => makeQuestion(id, base + idx, questionTypes)).filter((q): q is ElementQuestion => !!q)

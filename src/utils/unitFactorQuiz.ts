@@ -1,3 +1,5 @@
+import { mulberry32, shuffle } from '@/utils/rng'
+
 export interface UnitFactorQuestion {
   prompt: string
   subject: string
@@ -20,13 +22,6 @@ function fmtDec(n: number): string {
   if (Number.isInteger(n)) return String(n)
   const s = n.toPrecision(4)
   return parseFloat(s).toString()
-}
-
-function fmtSci(n: number): string {
-  if (n === 0) return '0'
-  const exp = Math.floor(Math.log10(Math.abs(n)))
-  const coeff = n / 10 ** exp
-  return `${fmtDec(coeff)}×10^${exp}`
 }
 
 const SUBSTANCES: { name: string; formula: string; M: number }[] = [
@@ -218,28 +213,14 @@ function buildQuestion(
     const s = fmt(noise)
     if (s !== answerStr && !uniq.includes(s)) uniq.push(s)
   }
-  const choices = [answerStr, ...uniq.slice(0, 3)]
-  for (let k = choices.length - 1; k > 0; k--) {
-    const j = Math.floor(rand() * (k + 1))
-    ;[choices[k], choices[j]] = [choices[j], choices[k]]
-  }
+  const choices = shuffle([answerStr, ...uniq.slice(0, 3)], rand)
   return { prompt, subject, choices, answer: answerStr, explain }
 }
 
 export function makeQuestions(count: number): UnitFactorQuestion[] {
-  let seed = (Date.now() ^ (Math.random() * 0xffffffff)) >>> 0
-  const rand = () => {
-    seed = (seed + 0x6d2b79f5) | 0
-    let t = Math.imul(seed ^ (seed >>> 15), 1 | seed)
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t
-    return ((t ^ (t >>> 14)) >>> 0) / 4294967296
-  }
+  const rand = mulberry32((Date.now() ^ (Math.random() * 0xffffffff)) >>> 0)
 
-  const indices = Array.from({ length: TEMPLATES.length + 2 }, (_, k) => k)
-  for (let k = indices.length - 1; k > 0; k--) {
-    const j = Math.floor(rand() * (k + 1))
-    ;[indices[k], indices[j]] = [indices[j], indices[k]]
-  }
+  const indices = shuffle(Array.from({ length: TEMPLATES.length + 2 }, (_, k) => k), rand)
 
   const questions: UnitFactorQuestion[] = []
   for (const idx of indices.slice(0, count)) {

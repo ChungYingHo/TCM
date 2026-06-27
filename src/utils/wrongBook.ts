@@ -1,31 +1,12 @@
 import type { OptionLetter } from '@/models/question'
 import type { WrongEntry } from '@/models/progress'
+import { createJsonStore } from '@/utils/localStore'
 
 const KEY = 'tcm.wrongbook.v1'
 
 type Store = Record<string, WrongEntry>
 
-let _cache: Store | null = null
-
-function read(): Store {
-  if (typeof localStorage === 'undefined') return _cache ?? {}
-  if (_cache !== null && localStorage.getItem(KEY) !== null) return _cache
-  try {
-    _cache = JSON.parse(localStorage.getItem(KEY) || '{}') as Store
-  } catch {
-    _cache = {}
-  }
-  return _cache
-}
-
-function write(store: Store, silent = false): void {
-  _cache = store
-  if (typeof localStorage === 'undefined') return
-  try {
-    localStorage.setItem(KEY, JSON.stringify(store))
-  } catch { /* QuotaExceededError — data stays in memory, retries on next write */ }
-  if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
-}
+const { read, write } = createJsonStore<Store>(KEY)
 
 /** Raw snapshot / restore — used by the sync + backup layer. */
 export function dumpWrong(): Store {
@@ -38,6 +19,10 @@ export function replaceWrong(store: Store): void {
 // Leitner intervals (days) indexed by box (box 0 unused). Box 1 = due now; each
 // correct review promotes a box and pushes the next review further out. A wrong
 // answer (or failed review) resets to box 1, due now.
+// NOTE: intentionally NOT shared with the vocab Leitner (utils/leitner.ts). A
+// missed exam question should be reviewable immediately (box 1 = 0 days), whereas
+// a newly-learned vocab card waits until tomorrow — same interval sequence, but a
+// deliberately different starting cadence. Only the storage block is shared.
 const INTERVAL_DAYS = [0, 0, 1, 3, 7, 16, 35, 75]
 const DAY = 86_400_000
 

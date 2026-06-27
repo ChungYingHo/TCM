@@ -6,6 +6,7 @@
   import { recordWrong } from '@/utils/wrongBook'
   import { recordAttempt } from '@/utils/progress'
   import { primaryTag, tagShort } from '@/models/taxonomy'
+  import { sample } from '@/utils/rng'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
   import Segmented from '@/components/common/Segmented.svelte'
   import Icon from '@/components/common/Icon.svelte'
@@ -77,15 +78,6 @@
   )
   const fmtPts = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1))
 
-  function sample(arr: QuestionRecord[], n: number): QuestionRecord[] {
-    const a = arr.slice()
-    for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1))
-      ;[a[i], a[j]] = [a[j], a[i]]
-    }
-    return a.slice(0, n)
-  }
-
   const secondsLeft = $derived(
     minutes > 0 && stage === 'running' ? Math.max(0, Math.round((endAt - nowTs) / 1000)) : null,
   )
@@ -102,7 +94,7 @@
     paper =
       mode === 'past'
         ? subset.slice().sort((a, b) => a.question_number - b.question_number)
-        : sample(subset, count)
+        : sample(subset, count, Math.random)
     answers = {}
     timedOut = false
     current = 0
@@ -138,6 +130,9 @@
       : [],
   )
   const weakTags = $derived.by(() => {
+    // transient local inside a $derived — recomputed wholesale, never held as
+    // reactive state, so a plain Map is correct (SvelteMap would be pointless).
+    // eslint-disable-next-line svelte/prefer-svelte-reactivity
     const m = new Map<string, number>()
     for (const q of wrongQs) {
       const t = primaryTag(q.concept_tags)

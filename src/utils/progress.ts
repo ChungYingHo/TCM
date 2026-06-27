@@ -3,33 +3,14 @@
 // the user's curated review list).
 
 import type { Attempt } from '@/models/progress'
+import { createJsonStore } from '@/utils/localStore'
 export type { Attempt }
 
 type Store = Record<string, Attempt>
 
 const KEY = 'tcm.progress.v1'
 
-let _cache: Store | null = null
-
-function read(): Store {
-  if (typeof localStorage === 'undefined') return _cache ?? {}
-  if (_cache !== null && localStorage.getItem(KEY) !== null) return _cache
-  try {
-    _cache = JSON.parse(localStorage.getItem(KEY) || '{}') as Store
-  } catch {
-    _cache = {}
-  }
-  return _cache
-}
-
-function write(store: Store, silent = false): void {
-  _cache = store
-  if (typeof localStorage === 'undefined') return
-  try {
-    localStorage.setItem(KEY, JSON.stringify(store))
-  } catch { /* QuotaExceededError — data stays in memory, retries on next write */ }
-  if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
-}
+const { read, write } = createJsonStore<Store>(KEY)
 
 /** Raw restore — used by the sync + backup layer (getAttempts() is the snapshot). */
 export function replaceProgress(store: Store): void {

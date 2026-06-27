@@ -3,6 +3,7 @@
 // two previously held near-identical copies that could drift). Each instance owns its
 // own localStorage key; on write it fires `tcm:statechange` so cloud.ts can sync.
 import type { VocabSrsEntry } from '@/models/progress'
+import { createJsonStore } from '@/utils/localStore'
 
 // Days until next review, indexed by Leitner box (box 1 = tomorrow).
 const INTERVALS = [0, 1, 3, 7, 16, 35, 75]
@@ -28,31 +29,7 @@ export interface Leitner {
 }
 
 export function createLeitner(KEY: string): Leitner {
-  let _cache: LeitnerStore | null = null
-
-  function read(): LeitnerStore {
-    if (typeof localStorage === 'undefined') return _cache ?? {}
-    // Fast path: return cache if localStorage still holds the key (getItem is
-    // cheap; JSON.parse is not). Cache invalidates if localStorage.clear() or
-    // removeItem removed the key externally (e.g. between test runs).
-    if (_cache !== null && localStorage.getItem(KEY) !== null) return _cache
-    try {
-      const v = JSON.parse(localStorage.getItem(KEY) || '{}')
-      _cache = v && typeof v === 'object' ? (v as LeitnerStore) : {}
-    } catch {
-      _cache = {}
-    }
-    return _cache
-  }
-
-  function write(store: LeitnerStore, silent = false): void {
-    _cache = store
-    if (typeof localStorage === 'undefined') return
-    try {
-      localStorage.setItem(KEY, JSON.stringify(store))
-    } catch { /* QuotaExceededError — data stays in memory, retries on next write */ }
-    if (!silent && typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:statechange'))
-  }
+  const { read, write } = createJsonStore<LeitnerStore>(KEY)
 
   const dueAt = (box: number, now: number) => now + INTERVALS[Math.min(box, MAX_BOX)] * DAY_MS
 
