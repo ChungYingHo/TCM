@@ -24,6 +24,7 @@ const NOTES = [
   { dir: '化學', href: '/chem-molecules', file: '5-化學分子表達' },
   { dir: '化學', href: '/chem-stoichiometry', file: '6-化學反應方程式與化學計量' },
   { dir: '化學', href: '/chem-thermo', file: '7-簡單的熱力學' },
+  { dir: '化學', href: '/chem-quantum', file: '8-光電效應與量子論' },
   { dir: '生物', href: '/bio-cell-1', file: '1-細胞（一）概論顯微鏡原核真核' },
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞（二）細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞（三）細胞骨架與細胞外連結' },

@@ -82,6 +82,14 @@ export const NOTES: NoteEntry[] = [
     desc: '自發性、熵與亂度、系統/外界/宇宙熵（第二定律）、ΔH·ΔS 四種組合與臨界溫度',
   },
   {
+    id: 'chem-quantum',
+    href: '/chem-quantum',
+    title: '光電效應與量子論：黑體輻射、電磁輻射模型、物質波',
+    subject: '化學',
+    tags: ['量子力學'],
+    desc: '黑體輻射(只看溫度)與能量量子化、波動模型 c=νλ、光電效應(E_K=hν−Φ、低限頻率、功函數圖)、電磁波譜與化學用途、德布羅意物質波、波粒二象性與測不準',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '細胞（一）：概論、顯微鏡與原核／真核',
