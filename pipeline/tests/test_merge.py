@@ -84,3 +84,32 @@ def test_no_answer_anywhere_flags_needs_review():
     rec = build._merge_one('CMU', 110, 'chemistry', _ex(), {}, 'src.pdf', None)
     assert rec.correct_answer == []
     assert rec.needs_review is True
+
+
+# _ensure_answer_selectable: every correct letter must be a clickable option.
+# This is the mechanism that handles E answers whose 5th option is image-only.
+
+def test_ensure_selectable_pads_options_up_to_an_E_answer():
+    # card answer is E but only A–D options were extracted (the 5th is image-only):
+    # options must grow to A–E so the E answer is actually selectable in the UI.
+    rec = build._merge_one('CMU', 110, 'chemistry', _ex(letters='ABCD'), {1: 'E'}, 'src.pdf', None)
+    assert rec.correct_answer == ['E']
+    build._ensure_answer_selectable(rec)
+    assert [o.letter for o in rec.options] == ['A', 'B', 'C', 'D', 'E']
+    assert rec.options[-1].text == ''  # padded E carries no text (the image is the source of truth)
+
+
+def test_ensure_selectable_is_a_noop_when_answer_is_within_options():
+    rec = build._merge_one('CMU', 110, 'chemistry', _ex(letters='ABCD'), {1: 'B'}, 'src.pdf', None)
+    build._ensure_answer_selectable(rec)
+    assert [o.letter for o in rec.options] == ['A', 'B', 'C', 'D']
+
+
+def test_ensure_selectable_skips_award_all():
+    # 送分: the UI credits ANY rendered option (score.isChoiceCorrect short-circuits on
+    # award_all), so we must NOT invent a blank E on a genuine 4-option question — that
+    # would render an empty 5th button. Options stay exactly as extracted.
+    e = Errata(subject='chemistry', qnum=1, award_all=True)
+    rec = build._merge_one('CMU', 110, 'chemistry', _ex(letters='ABCD'), {1: 'B'}, 'src.pdf', e)
+    build._ensure_answer_selectable(rec)
+    assert [o.letter for o in rec.options] == ['A', 'B', 'C', 'D']

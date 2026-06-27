@@ -177,8 +177,14 @@ def run_school(school):
         # 科別未偵測的釋疑列只能落在 '?' 桶；不可跨科盲套（A 科第 N 題的送分/更正
         # 套到 B 科第 N 題會靜默改錯答案）。改記入 QA 供人工以 override 處理。
         if '?' in errata_by_subj:
+            undetected = sorted(errata_by_subj['?'])
             qa.append({'year': year, 'issue': 'errata_subject_undetected',
-                       'qnums': sorted(errata_by_subj['?'])})
+                       'qnums': undetected})
+            # Fail LOUD (like errata_parse_failed / override warnings): these
+            # corrections can't be auto-applied without guessing the subject, so
+            # they need a human override — don't let them pass unnoticed.
+            print(f'[{school} {year}] 釋疑有 {len(undetected)} 列無法判定科目，未自動套用'
+                  f'（需人工以 override 處理）：題號 {undetected}', file=sys.stderr)
 
         for subject, doc, anchors, src in _exam_sources(school, year):
             if subject is None:

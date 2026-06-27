@@ -9,7 +9,7 @@
 
 ## 執行
 ```bash
-python -m pip install pymupdf pillow pydantic
+python -m pip install -r requirements.txt   # 版本已釘選，見 requirements.txt
 python -m tcmpipe.build            # 全部三校
 python -m tcmpipe.build ISU        # 單一學校
 ```

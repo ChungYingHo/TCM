@@ -1,0 +1,11 @@
+# Pinned for reproducibility — see CLAUDE.md「正確性不可漂移」.
+# PyMuPDF's table extraction / get_image_info / crop APIs shift across MINOR
+# versions, which can silently change题切割、釋疑表解析與裁圖輸出 — so it is
+# capped to a single minor. Pydantic stays on v2 (model_dump / v2 validators).
+pymupdf>=1.27,<1.28
+pillow>=12,<13
+pydantic>=2.13,<3
+
+# Optional — NOT used by the core extraction pipeline. opencc (簡轉繁, s2twp) is
+# only needed when regenerating the vocab list via gen_vocab_ecdict.py:
+#   python -m pip install "opencc>=1.1,<2"
