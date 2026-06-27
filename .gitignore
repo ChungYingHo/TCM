@@ -21,8 +21,9 @@ Thumbs.db
 .DS_Store
 desktop.ini
 
-# local agent / editor session files — never commit
-.claude/
+# local agent / editor session files — never commit（專案 skills 例外，要版控）
+.claude/*
+!.claude/skills/
 
 # pipeline intermediates (committed outputs are src/data + public/q only)
 pipeline/out/
