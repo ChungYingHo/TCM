@@ -109,7 +109,8 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
    - `src/models/taxonomy.ts` 加 `{ tag:'本篇標籤', slug:'<src/pages id>', short:'…', claimed: true }`——**`claimed: true` 必加**（讓 `taxonomy.test` 改驗 `notes.ts`、不綁 deprecated 筆記）。
    - `src/models/solveTemplates.ts` 加 `'本篇標籤': [...3–4 步解題方向...]`（否則 `taxonomy.test` #7「每 tag 要解題步驟」失敗）。
    - `src/models/notes.ts` 該篇 `tags: ['本篇標籤']`。
-   - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、篇末 `<RelatedQuestions tag="本篇標籤" limit={10} client:visible />`。
+   - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、**篇末必放考古題區**（`## 考古題` ＋ `<RelatedQuestions tag="本篇標籤" limit={10} client:load />`，包在 `<div class="print:hidden">…</div>`）。題庫不足 10 就全放、0 題會自動顯示「尚未考過」。
+   - **工具頁（.astro，如週期表/胺基酸）也當正常筆記**：在 `<NotePager />` 前加同樣的「考古題」section（import RelatedQuestions、`client:load`），且 `page-kicker` 寫成 `筆記 · <本篇標籤>`（這類頁用 `Layout` 非 `NoteLayout`，kicker 是寫死的要手動改）。
 5. `cd pipeline && python -m retag` 重生 `src/data/<school>.json`＋index → **綠燈全跑**：`vitest`(含 taxonomy.test)、`cd pipeline && python -m pytest`、`npx astro check`、該篇 `fetch /<slug>` render 200。備份 `pipeline/overrides/concept_tags.json` 後再動。
 
 **誠實**：主題若考很少（如光電效應，三校近年實測≈0 題），認領完就是 0–幾題，NoteStats 顯示低頻/0——**這才對，勝過硬塞整桶超綱題**。

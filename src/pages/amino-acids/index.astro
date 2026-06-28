@@ -4,6 +4,7 @@ import NoteNav from '@/components/notes/NoteNav.astro'
 import NotePager from '@/components/notes/NotePager.astro'
 import { AMINO_ACIDS, AA_CATEGORY_LABEL, type AACategory } from '@/models/aminoAcids'
 import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 
 export const prerender = false
 
@@ -15,7 +16,7 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
 <Layout title="20 種胺基酸 · TCM 題庫">
   <NoteNav />
   <header class="mb-6 flex flex-col gap-1.5">
-    <p class="page-kicker">筆記 · 基礎</p>
+    <p class="page-kicker">筆記 · 基礎-胺基酸</p>
     <h1 class="page-title">20 種胺基酸</h1>
     <p class="page-desc max-w-2xl">
       每個胺基酸都是<b class="font-semibold text-base-content/80">共通的兩性離子骨架</b>（H₃N⁺–C(–COO⁻)–H）接上不同的<b class="font-semibold text-base-content/80">側鏈 R</b>——要背的就是那個 R。下圖<b class="font-semibold text-base-content/80">黑色為骨架、紅色為側鏈</b>，依側鏈的酸鹼極性分成五類。
@@ -60,6 +61,14 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
   <p class="mt-7 text-xs text-base-content/45">
     結構為兩性離子（生理 pH）畫法；側鏈以縮寫結構式呈現，酸性／鹼性側鏈在生理 pH 多帶電（此處畫中性式以利辨識官能基）。分類採 Lehninger 五大類。
   </p>
+
+  <section class="mt-10 border-t border-base-200 pt-8 print:hidden">
+    <header class="mb-4 flex flex-col gap-1.5">
+      <p class="page-kicker">歷屆</p>
+      <h2 class="section-heading">考古題</h2>
+    </header>
+    <RelatedQuestions tag="基礎-胺基酸" limit={10} client:load />
+  </section>
 
   <NotePager />
 </Layout>
