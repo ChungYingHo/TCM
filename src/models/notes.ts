@@ -30,7 +30,7 @@ export const NOTES: NoteEntry[] = [
     href: '/periodic-table',
     title: '元素週期表',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-週期表'],
     desc: '必背速查表、自由練習、完整互動週期表（電子組態、電負度/半徑/游離能熱圖）',
   },
   {
@@ -38,7 +38,7 @@ export const NOTES: NoteEntry[] = [
     href: '/amino-acids',
     title: '20 種胺基酸',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-胺基酸'],
     desc: '五大分類、側鏈結構圖、必需胺基酸、簡寫對照',
   },
   {
@@ -54,7 +54,7 @@ export const NOTES: NoteEntry[] = [
     href: '/chem-units',
     title: '化學上重要的單位',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-單位因次'],
     desc: '莫耳/amu/莫耳質量、unit factor、長度/壓力/溫度/能量/濃度/R、化學常用數學、有效數字',
   },
   {
@@ -62,7 +62,7 @@ export const NOTES: NoteEntry[] = [
     href: '/chem-molecules',
     title: '化學分子表達',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-化學鍵'],
     desc: 'AXₙEₘ 與八隅體電子數公式、VSEPR 形狀/鍵角、σ/π 鍵、極性、氫化物/含氧酸/自由基/官能基',
   },
   {
@@ -70,7 +70,7 @@ export const NOTES: NoteEntry[] = [
     href: '/chem-stoichiometry',
     title: '化學反應方程式與化學計量',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-化學計量'],
     desc: '平衡（觀察法）、係數比意義、計量總流程、限量試劑、理論產量、產率、原子經濟性',
   },
   {
@@ -78,7 +78,7 @@ export const NOTES: NoteEntry[] = [
     href: '/chem-thermo',
     title: '簡單的熱力學',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-熱力學'],
     desc: '自發性、熵與亂度、系統/外界/宇宙熵（第二定律）、ΔH·ΔS 四種組合與臨界溫度',
   },
   {
@@ -94,7 +94,7 @@ export const NOTES: NoteEntry[] = [
     href: '/bio-cell-1',
     title: '細胞（一）：概論、顯微鏡與原核／真核',
     subject: '生物',
-    tags: ['細胞'],
+    tags: ['細胞-原核與真核'],
     desc: '細胞學說與共同特徵、光學／電子／共軛焦顯微鏡與細胞大小、細胞分離、原核 vs 真核與細菌構造（質體、肽聚醣、內共生）',
   },
   {
@@ -102,7 +102,7 @@ export const NOTES: NoteEntry[] = [
     href: '/bio-cell-2',
     title: '細胞（二）：細胞核、內膜系統與能量胞器',
     subject: '生物',
-    tags: ['細胞'],
+    tags: ['細胞-細胞核與胞器'],
     desc: '動植物細胞全景、細胞核與核糖體、內膜系統七成員（ER／高基氏體／溶體／液泡）、分泌路徑、粒線體／葉綠體／過氧化體／蛋白酶體',
   },
   {
@@ -110,7 +110,7 @@ export const NOTES: NoteEntry[] = [
     href: '/bio-cell-3',
     title: '細胞（三）：細胞骨架與細胞外連結',
     subject: '生物',
-    tags: ['細胞'],
+    tags: ['細胞-骨架與連結'],
     desc: '微管・微絲・中間絲的直徑/組成/功能、中心粒與纖毛鞭毛的 9×3 與 9+2、細胞外基質與整聯蛋白、四種細胞間連結',
   },
   {
@@ -118,7 +118,7 @@ export const NOTES: NoteEntry[] = [
     href: '/bio-cell-summary',
     title: '細胞・一頁速查總表',
     subject: '生物',
-    tags: ['細胞'],
+    tags: ['細胞-總表'],
     desc: '三部曲考點濃縮純表格：原核 vs 真核、胞器速查、內膜系統、細胞骨架、細胞連結、動植物差異、顯微鏡與大小，考前 30 秒掃完',
     category: '快速複習',
   },

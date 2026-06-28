@@ -37,8 +37,14 @@ export interface TaxonomyEntry {
 export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   chemistry: [
     // ── note-claiming tags（一篇一個、認領自己範圍的考古題；基礎篇用「基礎-」、正課用主題名）──
+    { tag: '基礎-週期表', slug: 'periodic-table', short: '週期表', claimed: true },
+    { tag: '基礎-胺基酸', slug: 'amino-acids', short: '胺基酸', claimed: true },
     { tag: '基礎-原子結構', slug: 'chem-atomic-theory', short: '原子結構', claimed: true },
     { tag: '量子力學', slug: 'chem-quantum', short: '量子力學', claimed: true },
+    { tag: '基礎-單位因次', slug: 'chem-units', short: '單位因次', claimed: true },
+    { tag: '基礎-化學鍵', slug: 'chem-molecules', short: '化學鍵', claimed: true },
+    { tag: '基礎-化學計量', slug: 'chem-stoichiometry', short: '化學計量', claimed: true },
+    { tag: '基礎-熱力學', slug: 'chem-thermo', short: '熱力學', claimed: true },
     // ── legacy concept tags（過渡期保留；隨 backfill 逐桶認領後淘汰）──
     { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
     // 週期性 + 化學鍵的「閱讀」併入 atomic-structure（covers 三個 tag）；tag 本身保留供題庫/趨勢。
@@ -65,6 +71,11 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '化學綜合', slug: 'chem-misc', short: '綜合題' },
   ],
   biology: [
+    // ── note-claiming tags（細胞三篇）──
+    { tag: '細胞-原核與真核', slug: 'bio-cell-1', short: '原核真核', claimed: true },
+    { tag: '細胞-細胞核與胞器', slug: 'bio-cell-2', short: '細胞核胞器', claimed: true },
+    { tag: '細胞-骨架與連結', slug: 'bio-cell-3', short: '骨架連結', claimed: true },
+    // ── legacy concept tags ──
     { tag: '生命分子與生物化學', slug: 'biomolecules', short: '生命分子' },
     { tag: '細胞構造與胞器', slug: 'cell-structure', short: '細胞構造' },
     { tag: '細胞膜與物質運輸', slug: 'membrane-transport', short: '細胞膜運輸' },
