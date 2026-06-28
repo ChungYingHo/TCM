@@ -160,6 +160,13 @@ export function tagSlug(tag: string): string | null {
   return e ? (e.readIn ?? e.slug) : null
 }
 
+/** For a note-claiming tag (`claimed: true`), the note's route `/<slug>`; else null.
+ *  用於 /study 趨勢標籤標出「已有筆記」的考點並可點進去。 */
+export function claimedNoteHref(tag: string): string | null {
+  const e = TAG_TO_ENTRY.get(tag)
+  return e?.claimed ? `/${e.slug}` : null
+}
+
 /** Compact chip label for a tag (falls back to the tag itself). */
 export function tagShort(tag: string): string {
   return TAG_TO_ENTRY.get(tag)?.short ?? tag

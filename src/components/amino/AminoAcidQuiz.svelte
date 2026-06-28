@@ -146,7 +146,8 @@
           <Icon name={correct ? 'check' : 'x'} class="h-5 w-5" />
           {correct ? '答對了！' : '答錯了'}
         </p>
-        <p class="mt-1 break-words text-sm text-base-content/70">{current.explain}</p>
+        <div class="mt-2 flex justify-center rounded-box bg-base-100/60 py-2"><AminoAcidStructure code1={current.itemId.slice(3)} size={150} /></div>
+        <p class="mt-2 break-words text-center text-sm text-base-content/70">{current.explain}</p>
         <button class="btn btn-primary btn-sm mt-3 w-full" onclick={next}>{i + 1 >= deck.length ? '完成' : '下一題'}</button>
       </div>
     {/if}

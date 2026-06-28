@@ -2,7 +2,7 @@
   import type { QuestionRecord, School, Subject } from '@/models/question'
   import { SCHOOLS, SUBJECTS, SCHOOL_LABEL, SUBJECT_LABEL } from '@/models/question'
   import { loadSchools, deriveFacets } from '@/utils/dataset'
-  import { byTaxonomyOrder, tagShort } from '@/models/taxonomy'
+  import { byTaxonomyOrder, tagShort, claimedNoteHref } from '@/models/taxonomy'
   import { filterQuestions, searchQuestions } from '@/utils/query'
   import MultiSelect from '@/components/common/MultiSelect.svelte'
   import QuestionCard from '@/components/question/QuestionCard.svelte'
@@ -129,7 +129,7 @@
             </summary>
             <div class="flex max-h-[50vh] flex-col gap-3 overflow-y-auto border-t border-base-300 p-3 custom-scrollbar">
               {#each tagsBySubject as group (group.subject)}
-                <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} format={tagShort} />
+                <MultiSelect label={SUBJECT_LABEL[group.subject]} options={group.tags} bind:selected={tags} format={tagShort} noteHref={claimedNoteHref} />
               {/each}
             </div>
           </details>
