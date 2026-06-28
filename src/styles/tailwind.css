@@ -381,19 +381,25 @@ a.card:hover, .card-hover:hover {
   .prose p { margin: 0.5em 0; }
   .prose :is(ul, ol) { margin: 0.45em 0; }
   .prose li { margin: 0.2em 0; }
-  /* 表格收緊（縮短高度），整張表「不跨頁切」：放不下就整張移到次頁，寧留白也不切兩半 */
+  /* 表格收緊（縮短高度），整張表不被切成兩半（放不下就整張移到次頁）；break-before:avoid
+     讓表格緊跟其上方引言/標題。極少數比整頁還高的表才退而在列間斷（下方 tr/thead：單列不切、
+     表頭每頁重複）。 */
   .prose table { margin: 0.5em 0; font-size: 0.82em; break-inside: avoid; break-before: avoid; }
   .prose :is(th, td) { padding: 0.26rem 0.5rem; }
   .prose blockquote { margin: 0.6em 0; padding: 0.45rem 0.8rem; }
   .prose .katex-display { margin: 0.5rem 0; padding: 0.4rem 0.7rem; }
 
-  /* ── 核心：任何「一個閱讀單位」都不被分頁切開（切開＝得翻頁，極傷閱讀）──
-     rehypeNoteSections 把「標題＋其下內容」包成 .note-sec：整段不跨頁，放不下整段移次頁。
-     break-inside:avoid 是「盡力」；萬一某段比一整頁還高，瀏覽器只會在內部「葉級單位之間」
-     斷（不切進公式/例題/表格內部），故再加葉級保險。 */
-  .note-sec { break-inside: avoid; }
+  /* ── 分頁哲學（GoodNotes 版，2026-06-28 起）──
+     改用 iPad GoodNotes 看，換頁體驗優於紙本，故「正常輸出、允許段落自然跨頁」即可，
+     不再把整個 .note-sec（標題＋其下內容）綁成不可分割——那會讓含大圖的段落整塊跳次頁、
+     前頁大片留白。只保兩條底線：
+       ① 任何「葉級閱讀單位」（圖／公式／表列／卡片／單段）不被切成兩半；
+       ② 標題不孤懸頁尾：標題後不斷頁（break-after:avoid），落在頁尾就連同其後內容移到次頁。
+       ③ 新大節若目前被切到下一頁、但塞得進一頁，由 scripts/print-notes.mjs 量測真實分頁後對
+         該標題注入 break-before:page，整節挪到新頁（純 CSS 無法依「是否跨頁」條件分頁）。
+     注意：.note-sec 不再 break-inside:avoid（line 222 仍用它做首段邊距歸零，故保留 wrapper）。 */
   .prose :is(figure, svg, .katex-display, blockquote, li) { break-inside: avoid; }
-  /* 表格若真比一整頁還高（極少見）才退而在列間斷：單列不切、表頭每頁重複 */
+  /* 長表在列間斷：單列不切、表頭每頁重複 */
   .prose :is(thead, tr) { break-inside: avoid; }
   .prose thead { display: table-header-group; }
   /* 標題永遠跟著下一塊內容（含工具頁 .section-heading），不可獨自落在頁尾 */
@@ -415,9 +421,8 @@ a.card:hover, .card-hover:hover {
   .rounded-box, .rounded-lg { break-inside: avoid; }
 
   /* 胺基酸頁：root flex→block（否則分類小節不吃分頁規則）；
-     每個分類（標題＋整排卡片）整塊不跨頁切；每張結構卡也不切。 */
+     分類（標題＋整排卡片）允許在卡與卡之間斷頁，但每張結構卡不被切成兩半。 */
   .aa-root { display: block !important; }
-  .aa-cat { break-inside: avoid; }
   .aa-card { break-inside: avoid; }
 
   /* 週期表工具：root 預設 flex（其子元素不吃分頁規則）→ 列印改 block，

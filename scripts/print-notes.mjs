@@ -1,18 +1,26 @@
-// 把筆記渲染成「列印級 A4 PDF」到 exports/，依科目／分類分子資料夾。
+// 把筆記渲染成「列印級 A4 PDF」到桌面 TCM-exports/，依科目／分類分子資料夾。
 // 需先啟動 dev server（npm start，預設 port 4330）。用法：npm run pdf
 //
 // 機制：用 Playwright 開無頭 Chromium → POST 密碼到 /api/unlock 取得 cookie
 // → 逐章 emulateMedia('print') 套用列印 CSS → 注入思源宋體（僅產 PDF 時載入）
 // → 等字體就緒 → page.pdf({ preferCSSPageSize })，讓 @page 的 A4／橫向生效。
+//
+// 智慧分頁：純 CSS 無法依「頁面剩餘空間」條件分頁，故產完後用 PyMuPDF 量測真實分頁
+// （_pdf_lowsections.py），找出「起點落在頁面下半（剩<50%）」的大節標題，對其注入
+// break-before:page 後重產，反覆到收斂——讓擠在頁尾的新章節整節挪到新頁。
 import { chromium } from 'playwright'
+import { spawnSync } from 'node:child_process'
 import { readFileSync, mkdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
+import { homedir } from 'node:os'
 import path from 'node:path'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const BASE = process.env.PDF_BASE_URL || 'http://localhost:4330'
-const OUT = path.join(ROOT, 'exports')
+// 輸出到桌面的 TCM-exports/（用 iPad GoodNotes 看，不再印紙本）。可用 PDF_OUT_DIR 覆寫。
+const OUT = process.env.PDF_OUT_DIR || path.join(homedir(), 'Desktop', 'TCM-exports')
 const SERIF = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap'
+const PYTHON = process.env.PYTHON || 'python'
 
 // 與 src/models/notes.ts 同步（清單小且穩定，手動維護）。`dir`＝exports 下的子資料夾
 // ＝科目；快速複習類另置於「快速複習/」。
@@ -28,6 +36,7 @@ const NOTES = [
   { dir: '生物', href: '/bio-cell-1', file: '1-細胞（一）概論顯微鏡原核真核' },
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞（二）細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞（三）細胞骨架與細胞外連結' },
+  { dir: '英文', href: '/readings/r1', file: '1-增補廣讀R1-VOA字彙' },
   { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
 ]
 
@@ -42,6 +51,46 @@ function sitePassword() {
     if (m) return m[1].trim()
   } catch { /* 無 .env 就靠環境變數 */ }
   return ''
+}
+
+// 量測剛產出的 PDF，回傳「起點被擠在頁尾、又被切到下一頁、該挪到新頁」的標題文字陣列。
+// python/PyMuPDF 不可用時回傳 null（外層據此略過智慧分頁，仍輸出 PDF）。
+function analyzeLowSections(pdfPath, headings) {
+  if (!headings.length) return []
+  const res = spawnSync(
+    PYTHON,
+    [path.join(ROOT, 'scripts', '_pdf_lowsections.py'), pdfPath],
+    { input: JSON.stringify(headings), encoding: 'utf8' },
+  )
+  if (res.status !== 0) {
+    const why = (res.stderr || res.error?.message || '').split('\n')[0]
+    console.warn(`  （略過智慧分頁：PDF 分析不可用${why ? `——${why}` : ''}）`)
+    return null
+  }
+  try {
+    return JSON.parse(res.stdout.trim() || '[]')
+  } catch {
+    return null
+  }
+}
+
+// 對 forced 集合內的大節標題注入 break-before:page（並歸零上邊距避免頁首多一段空白）；
+// 不在集合內者清掉，確保 idempotent。回傳本頁所有 h2/h3 標題的 {t:文字, l:階層}（依文件順序）。
+function applyBreaksAndListHeadings(page, forced) {
+  return page.evaluate((texts) => {
+    const norm = (s) => s.replace(/\s+/g, '')
+    const set = new Set(texts.map(norm))
+    const headings = [...document.querySelectorAll('.prose h2, .prose h3')]
+    for (const h of headings) {
+      const on = set.has(norm(h.textContent || ''))
+      h.style.breakBefore = on ? 'page' : ''
+      h.style.marginTop = on ? '0' : ''
+    }
+    return headings.map((h) => ({
+      t: (h.textContent || '').replace(/\s+/g, ' ').trim(),
+      l: h.tagName === 'H2' ? 2 : 3,
+    }))
+  }, [...forced])
 }
 
 async function main() {
@@ -84,12 +133,26 @@ async function main() {
     })
     // 直向為主；只有 118 格表在 CSS 標為具名橫向頁（@page pt-landscape）。
     // preferCSSPageSize 讓同一份 PDF 內單頁橫向、其餘直向，且套用各自的 @page 邊界。
-    await page.pdf({
-      path: path.join(dir, `${note.file}.pdf`),
-      printBackground: true,
-      preferCSSPageSize: true,
-    })
-    console.log(`✓ ${note.dir}/${note.file}.pdf`)
+    const outPath = path.join(dir, `${note.file}.pdf`)
+    const render = () =>
+      page.pdf({ path: outPath, printBackground: true, preferCSSPageSize: true })
+
+    // 智慧分頁：產 → 量測 → 對「擠在頁尾又被切開的新章節」注入 break-before → 重產，反覆到收斂。
+    // forced 只增不減（單調收斂）；最多 10 輪保險。python 不可用則只產一次。
+    const forced = new Set()
+    let breaks = 0
+    for (let iter = 0; iter < 10; iter++) {
+      const headings = await applyBreaksAndListHeadings(page, forced)
+      await render()
+      const low = analyzeLowSections(outPath, headings)
+      if (!low) break // 分析不可用：保留這份正常輸出
+      const fresh = low.filter((t) => !forced.has(t))
+      if (process.env.PDF_DEBUG) console.error(`  [iter${iter}] low=${JSON.stringify(low)} fresh=${JSON.stringify(fresh)}`)
+      if (!fresh.length) break
+      fresh.forEach((t) => forced.add(t))
+      breaks = forced.size
+    }
+    console.log(`✓ ${note.dir}/${note.file}.pdf${breaks ? `（${breaks} 節挪新頁）` : ''}`)
     await page.close()
   }
 
