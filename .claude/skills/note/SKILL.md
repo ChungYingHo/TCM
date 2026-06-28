@@ -90,6 +90,8 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 
 **一篇筆記一個標籤，這個字串同時是三件事**：① `/notes` 的瀏覽分類（`notes.ts` 的 `tags`）② 考點統計（`NoteStats tag`）③ **本篇「認領」的考古題的 `concept_tag`**。**三者同一字串**——這就是 Aira 要的「考古題標籤跟筆記標籤同步」。（捨棄舊的「瀏覽 tag ≠ 概念 tag」兩套制。）
 
+**命名慣例（Aira 定案）**：基礎篇（自編）＝`基礎-<主題>`（如 `基礎-熱力學`、`基礎-化學鍵`）；正課篇＝`<主題>` 直接命名（如 `量子力學`，未來正課熱力學就叫 `熱力學`）；生物細胞系列＝`細胞-<子題>`（`細胞-原核與真核`/`細胞-細胞核與胞器`/`細胞-骨架與連結`）。一個 prefix 群一組相關筆記，避免「7 篇都叫基礎沒法分考古」。
+
 **認領模型**：
 - 每篇筆記去**該科考古題**裡認領屬於它範圍的題，把那些題的 `concept_tags` 標成**本篇標籤**；**沒被任何筆記認領的題維持無標籤**。
 - 認領是 **exclusive**（一題歸一篇、從舊粗標籤移除）→ 別篇不會超綱抓到。
@@ -100,9 +102,15 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 2. **逐題讀內容判斷**是否真屬本篇範圍。⚠️ **嚴格、勿用關鍵字硬湊**：沾邊但屬別篇的不算（寫「光電效應」篇時，波耳模型／氫原子光譜／量子數／軌域／核化學都**不是**這篇，留給各自的篇；「量子」二字會誤抓軌域/光譜題）。**逐題看內容是鐵則——只改標籤不看內容一樣超綱**（Aira 原話）。
    - ⚠️ **判準＝「解這題實際要用到哪一篇教的技能/概念」，不是題目表面包裝什麼**（Aira 2026-06-28）。大概念包裝的題，骨子裡可能只用一套基礎技能 → 歸那篇基礎篇。例：題目看似「酸鹼綜合反應」，但解題其實只需基礎 unit factor（不必真的處理酸鹼平衡）→ 歸 **chem-units（基礎單位/因次）**，不歸酸鹼。判每題時都先問：「真正解這題要動用哪篇教的東西？」，能用更基礎的篇解就歸更基礎那篇。
    - 一題若沒有任何現成筆記教它解法 → 維持無標籤（等那篇寫出來再認領）。
-3. 認領：在 `pipeline/overrides/concept_tags.json` 把該題 id 的值設成 `["本篇標籤"]`（curated、wins last，即使 tagger 重跑也蓋不掉）。
-4. `src/models/taxonomy.ts` 加本篇標籤條目；跑 `cd pipeline && python -m retag` 重生 `src/data/<school>.json`＋index。
-5. 筆記：`NoteStats tag="本篇標籤"`、篇末 `<RelatedQuestions tag="本篇標籤" limit={10} client:visible />`；`notes.ts` 的 `tags` 用同字串。
+3. 認領：在 `pipeline/overrides/concept_tags.json` 設 `id → ["本篇標籤"]`（curated、wins last，tagger 重跑也蓋不掉）。
+   - **大桶（>100 題）用平行 agent 逐題讀題幹+選項分類、你核對**（dump 到 scratchpad；每 agent 回 `{decisions:{id:{tag,reason}}}`）。
+   - **雙標籤題**：認領是 exclusive（設成單一 `[本篇標籤]`）。若該題還屬「尚無筆記」的概念（如光譜/配位），exclusive 會讓那 legacy 桶少算幾題——沒關係，之後那篇掃「無標籤」會撈回；但若要 legacy 桶完整給 /study 篩選，改用「只剝舊基礎桶、保留其他 legacy tag」（用 `tags_backup.json` 原 tag 減去要退役的桶）。
+4. **接系統（缺一就破測試/功能，務必全做）**：
+   - `src/models/taxonomy.ts` 加 `{ tag:'本篇標籤', slug:'<src/pages id>', short:'…', claimed: true }`——**`claimed: true` 必加**（讓 `taxonomy.test` 改驗 `notes.ts`、不綁 deprecated 筆記）。
+   - `src/models/solveTemplates.ts` 加 `'本篇標籤': [...3–4 步解題方向...]`（否則 `taxonomy.test` #7「每 tag 要解題步驟」失敗）。
+   - `src/models/notes.ts` 該篇 `tags: ['本篇標籤']`。
+   - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、篇末 `<RelatedQuestions tag="本篇標籤" limit={10} client:visible />`。
+5. `cd pipeline && python -m retag` 重生 `src/data/<school>.json`＋index → **綠燈全跑**：`vitest`(含 taxonomy.test)、`cd pipeline && python -m pytest`、`npx astro check`、該篇 `fetch /<slug>` render 200。備份 `pipeline/overrides/concept_tags.json` 後再動。
 
 **誠實**：主題若考很少（如光電效應，三校近年實測≈0 題），認領完就是 0–幾題，NoteStats 顯示低頻/0——**這才對，勝過硬塞整桶超綱題**。
 
