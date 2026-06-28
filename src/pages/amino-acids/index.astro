@@ -5,6 +5,7 @@ import NotePager from '@/components/notes/NotePager.astro'
 import { AMINO_ACIDS, AA_CATEGORY_LABEL, type AACategory } from '@/models/aminoAcids'
 import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 export const prerender = false
 
@@ -63,6 +64,17 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
   </p>
 
   <section class="mt-10 border-t border-base-200 pt-8 print:hidden">
+    <header class="mb-4 flex flex-col gap-1.5">
+      <p class="page-kicker">自測</p>
+      <h2 class="section-heading">例題</h2>
+    </header>
+    <ExampleQuestion n={1} q="下列胺基酸何者側鏈為鹼性（生理 pH 帶正電）？" options={['Asp (D)', 'Glu (E)', 'Lys (K)', 'Ser (S)']} answer="(C) Lys (K)" steps={['鹼性側鏈＝<b>Lys(K)、Arg(R)、His(H)</b>。', 'Asp(D)/Glu(E) 為酸性（帶負電）；Ser(S) 極性不帶電。']} client:visible />
+    <ExampleQuestion n={2} q="下列何者不是必需胺基酸？" options={['Leu 白胺酸', 'Lys 離胺酸', 'Ala 丙胺酸', 'Val 纈胺酸']} answer="(C) Ala 丙胺酸" steps={['9 個必需：His／Ile／Leu／Lys／Met／Phe／Thr／Trp／Val。', 'Ala 可由人體自行合成 → <b>非必需</b>。']} client:visible />
+    <ExampleQuestion n={3} q="兩個側鏈氧化可形成雙硫鍵（–S–S–）穩定蛋白質結構，靠哪個胺基酸？" options={['Cys 半胱胺酸', 'Met 甲硫胺酸', 'Gly 甘胺酸', 'Pro 脯胺酸']} answer="(A) Cys 半胱胺酸" steps={['Cys 側鏈含 <b>–SH</b>（硫醇），兩個 –SH 氧化 → –S–S– 雙硫鍵。', 'Met 雖含硫但為硫醚（–S–CH₃），不形成雙硫鍵。']} client:visible />
+    <ExampleQuestion n={4} q="20 種胺基酸中，唯一沒有掌性中心（非掌性）的是？" options={['Gly 甘胺酸', 'Ala 丙胺酸', 'Ser 絲胺酸', 'Cys 半胱胺酸']} answer="(A) Gly 甘胺酸" steps={['Gly 側鏈為 H，α 碳接兩個 H → 無四個不同取代基 → <b>無掌性</b>。', '其餘胺基酸 α 碳接四個不同基團 → 皆有掌性（天然為 L 型）。']} client:visible />
+  </section>
+
+  <section class="mt-10 print:hidden">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">歷屆</p>
       <h2 class="section-heading">考古題</h2>

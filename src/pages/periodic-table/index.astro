@@ -6,6 +6,7 @@ import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
 import TeacherHighlights from '@/components/element/TeacherHighlights.astro'
 import ElementQuizPage from '@/components/element/ElementQuizPage.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 export const prerender = false
 ---
@@ -80,6 +81,17 @@ export const prerender = false
   </section>
 
   <section class="mt-10 border-t border-base-200 pt-8 print:hidden">
+    <header class="mb-4 flex flex-col gap-1.5">
+      <p class="page-kicker">自測</p>
+      <h2 class="section-heading">例題</h2>
+    </header>
+    <ExampleQuestion n={1} q="下列原子半徑由大到小，何者正確？（皆第三週期）" options={['Na > Mg > Cl', 'Cl > Mg > Na', 'Mg > Na > Cl', 'Na > Cl > Mg']} answer="(A) Na > Mg > Cl" steps={['同週期向右半徑變小（有效核電荷增、電子層數不變）。', 'Na(11)、Mg(12)、Cl(17) 同第三週期 → <b>Na > Mg > Cl</b>。']} client:visible />
+    <ExampleQuestion n={2} q="下列何者第一游離能（IE₁）最大？" options={['B', 'C', 'N', 'O']} answer="(C) N" steps={['同週期向右 IE 增；但 N 的 2p³ <b>半滿較穩定</b>，IE₁(N) ＞ IE₁(O)。', '故 N ＞ O ＞ C ＞ B，最大為 <b>N</b>。']} client:visible />
+    <ExampleQuestion n={3} q="某主族元素電子組態為 [Ne]3s²3p⁴，下列敘述何者正確？" options={['屬於第二週期', '價電子 6、最高氧化態 +6', '為金屬元素', '位於 ⅣA 族']} answer="(B) 價電子 6、最高氧化態 +6" steps={['最大 n=3 → 第三週期；價電子 3s²3p⁴ ＝ 6 → <b>ⅥA 族</b>（如 S）。', '最高氧化態 ＝ 價電子數 ＝ <b>+6</b>；為非金屬。']} client:visible />
+    <ExampleQuestion n={4} q="不查週期表，用原子序估算溴（Br，Z=35）的原子量約為？" options={['35', '70', '80', '120']} answer="(C) 80" steps={['Z=35 落在 21–50 段 → AW ≈ 2.3Z。', '2.3 × 35 ≈ <b>80</b>（實際 79.9）。']} client:visible />
+  </section>
+
+  <section class="mt-10 print:hidden">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">歷屆</p>
       <h2 class="section-heading">考古題</h2>
