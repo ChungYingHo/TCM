@@ -110,7 +110,9 @@ async function main() {
     const dir = path.join(OUT, note.dir)
     if (!existsSync(dir)) mkdirSync(dir, { recursive: true })
     const page = await context.newPage()
-    await page.emulateMedia({ media: 'print' })
+    // 先在「螢幕媒體」載入並捲動，觸發 lazy 圖與 client:visible 島嶼——IntersectionObserver 在
+    // print 媒體／無捲動時不會觸發，會導致 Figure.astro(loading=lazy) 與 client:visible 圖空白。
+    // 全部載好/hydrate 完才切 print 出 PDF（已畫好的圖切媒體後保留）。
     await page.goto(`${BASE}${note.href}`, { waitUntil: 'load' })
     // 注入列印用襯線字體（思源宋體）——只在產 PDF 時載，平時頁面不受影響
     await page.evaluate((href) => {
@@ -119,6 +121,24 @@ async function main() {
       l.href = href
       document.head.appendChild(l)
     }, SERIF)
+    // 觸發載圖與島嶼：lazy 圖改 eager、逐段捲到底再回頂讓每個 IntersectionObserver 都觸發、
+    // 等所有 <img> 解碼完成（少一張圖都不行）。
+    await page.evaluate(async () => {
+      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+        img.loading = 'eager'
+      })
+      const step = Math.max(400, Math.floor(window.innerHeight * 0.8))
+      for (let y = 0; y <= document.body.scrollHeight; y += step) {
+        window.scrollTo(0, y)
+        await new Promise((r) => setTimeout(r, 150))
+      }
+      window.scrollTo(0, 0)
+      await Promise.all(
+        [...document.images].map((img) =>
+          img.complete && img.naturalWidth > 0 ? null : img.decode().catch(() => {}),
+        ),
+      )
+    })
     // 等字體與島嶼就緒，避免落字或 fallback metrics
     await page.evaluate(async () => {
       await document.fonts.ready
@@ -131,6 +151,9 @@ async function main() {
         await new Promise((r) => setTimeout(r, 100))
       }
     })
+    // 給 client:visible 的 canvas/svg 繪製時間，再切列印媒體出 PDF。
+    await page.waitForTimeout(500)
+    await page.emulateMedia({ media: 'print' })
     // 直向為主；只有 118 格表在 CSS 標為具名橫向頁（@page pt-landscape）。
     // preferCSSPageSize 讓同一份 PDF 內單頁橫向、其餘直向，且套用各自的 @page 邊界。
     const outPath = path.join(dir, `${note.file}.pdf`)

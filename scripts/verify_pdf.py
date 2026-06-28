@@ -95,15 +95,19 @@ def main():
         montage(doc, out)
         orphans = orphan_headings(doc)
         total_orphans += len(orphans)
+        # 內嵌點陣圖數：拿去跟 source 的 <Figure 數對（少了＝lazy 圖沒載出，會空白）。
+        imgs = len({xref for pg in doc for (xref, *_rest) in pg.get_images()})
         flag = ''
         if orphans:
             flag += '  ⚠ 孤懸標題 ' + '；'.join(f'p{pg}「{t}」' for pg, t in orphans)
-        print(f'{len(doc):2d}p  {rel}{flag}')
+        print(f'{len(doc):2d}p  內嵌圖{imgs:2d}  {rel}{flag}')
         print(f'      → {out}')
         doc.close()
 
     print(f'\n孤懸標題：{total_orphans}（須 0）。')
-    print('下一步：Read 上面每張縮圖逐份掃（切頁邊？半空白頁？挪頁章節開頭乾淨？）。')
+    print('下一步：① 每篇「內嵌圖」數要 ≥ 該篇 source 的 `<Figure` 數（少了＝lazy 圖沒載出）。')
+    print('        ② Read 每張縮圖逐份掃：切頁邊？半空白頁？挪頁章節乾淨？')
+    print('           **client:visible 圖（canvas/svg 非點陣，不計入「內嵌圖」）逐張確認不是空白框。**')
 
 
 if __name__ == '__main__':
