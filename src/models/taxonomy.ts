@@ -22,16 +22,24 @@ import { SUBJECTS } from '@/models/question'
 
 export interface TaxonomyEntry {
   tag: string // matches question.concept_tags[] and note frontmatter `tag`
-  slug: string // note filename (src/content/notes/<slug>.mdx)
+  slug: string // note filename (src/content/notes/<slug>.mdx), or src/pages id for `claimed`
   short: string // compact label for chips/filters
   parent?: string // note-only sub-topic: borrows this broad tag's quiz pool + stats
   // This tag's READING is merged into another note (that note `covers:` this tag). The tag
   // still exists for question-tagging / 考點趨勢; tagSlug resolves it to `readIn` for the page.
   readIn?: string
+  // note-claiming tag (2026-06-28): lives in a src/pages note registered in models/notes.ts,
+  // NOT the deprecated collection. `slug` is the src/pages id; questions are claimed per-note
+  // via pipeline/overrides/concept_tags.json. The taxonomy.test deprecated-note check is skipped.
+  claimed?: boolean
 }
 
 export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   chemistry: [
+    // ── note-claiming tags（一篇一個、認領自己範圍的考古題；基礎篇用「基礎-」、正課用主題名）──
+    { tag: '基礎-原子結構', slug: 'chem-atomic-theory', short: '原子結構', claimed: true },
+    { tag: '量子力學', slug: 'chem-quantum', short: '量子力學', claimed: true },
+    // ── legacy concept tags（過渡期保留；隨 backfill 逐桶認領後淘汰）──
     { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
     // 週期性 + 化學鍵的「閱讀」併入 atomic-structure（covers 三個 tag）；tag 本身保留供題庫/趨勢。
     { tag: '週期性', slug: 'periodicity', short: '週期性', readIn: 'atomic-structure' },

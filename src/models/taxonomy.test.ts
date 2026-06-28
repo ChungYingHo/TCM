@@ -11,6 +11,7 @@ import {
   primaryTag,
 } from '@/models/taxonomy'
 import { SOLVE_STEPS, solveSteps } from '@/models/solveTemplates'
+import { NOTES } from '@/models/notes'
 
 const NOTES_DIR = path.resolve('./_deprecated/notes')
 const DATA_DIR = path.resolve('./src/data')
@@ -61,6 +62,14 @@ describe('taxonomy ⇄ concept notes', () => {
   it('every taxonomy tag resolves to a note file (own or via readIn) with matching subject', () => {
     for (const s of SUBJECTS)
       for (const e of TAXONOMY[s]) {
+        if (e.claimed) {
+          // note-claiming tag: lives in a src/pages note registered in models/notes.ts
+          expect(
+            NOTES.some((n) => n.tags.includes(e.tag)),
+            `claimed tag "${e.tag}" not used by any note in models/notes.ts`,
+          ).toBe(true)
+          continue
+        }
         const file = e.readIn ?? e.slug
         expect(existsSync(path.join(NOTES_DIR, `${file}.mdx`)), `missing note ${file}`).toBe(true)
         const fm = noteFrontmatter(file)

@@ -46,7 +46,7 @@ export const NOTES: NoteEntry[] = [
     href: '/chem-atomic-theory',
     title: '學說與理論',
     subject: '化學',
-    tags: ['基礎'],
+    tags: ['基礎-原子結構'],
     desc: '原子模型演進（湯木生→密立根→拉塞福→莫色勒→質譜儀）、五大定律＋坎尼札洛、次原子粒子、同位素／同素異形體／異構物',
   },
   {
