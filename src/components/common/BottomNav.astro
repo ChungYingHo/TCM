@@ -15,7 +15,7 @@ const tabs: Tab[] = [
 ]
 ---
 
-<nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden" aria-label="主導覽列">
+<nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden print:hidden" aria-label="主導覽列">
   <div class="mx-auto grid max-w-lg grid-cols-5">
     {tabs.map((t) => {
       const active = isNavActive(path, t.href)

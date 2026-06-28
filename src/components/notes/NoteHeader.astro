@@ -1,0 +1,48 @@
+---
+// 筆記／工具頁共用頁首：麵包屑（‹ 筆記 · 主題，回列表）＋標題＋說明（slot）＋右側上一篇/下一篇圖示鈕。
+// 回列表「免捲到頂」靠全站導覽（桌機頂端 sticky、手機底部 BottomNav 的「筆記」），故此處不做黏性。
+// 主題與上下篇都由 siblingNotes(當前路徑) 自動帶出；說明走 slot 以容納含 HTML 的 desc。
+import { siblingNotes } from '@/models/notes'
+
+interface Props {
+  title: string
+}
+const { title } = Astro.props
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/'
+const { current, prev, next } = siblingNotes(path)
+const topic = current?.tags?.length ? current.tags.join('、') : ''
+
+const iconBtn =
+  'grid h-8 w-8 shrink-0 place-items-center rounded-full border border-base-300 text-base-content/50 transition-colors hover:border-primary/40 hover:bg-primary/10 hover:text-primary'
+---
+
+<header class="mb-6 flex flex-col gap-1.5">
+  <div class="flex items-center justify-between gap-3">
+    <p class="page-kicker min-w-0">
+      <a href="/notes" class="inline-flex items-center gap-1 transition-colors hover:text-base-content" aria-label="回筆記列表">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3.5 w-3.5 shrink-0"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        筆記
+      </a>
+      {topic && <span class="ml-1.5 truncate font-semibold tracking-normal text-base-content/40">· {topic}</span>}
+    </p>
+
+    {(prev || next) && (
+      <nav class="flex shrink-0 items-center gap-1.5 print:hidden" aria-label="上一篇下一篇">
+        {prev && (
+          <a href={prev.href} title={`上一篇：${prev.title}`} aria-label={`上一篇：${prev.title}`} class={iconBtn}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </a>
+        )}
+        {next && (
+          <a href={next.href} title={`下一篇：${next.title}`} aria-label={`下一篇：${next.title}`} class={iconBtn}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </a>
+        )}
+      </nav>
+    )}
+  </div>
+
+  <h1 class="page-title">{title}</h1>
+  <slot />
+</header>

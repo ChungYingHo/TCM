@@ -1,25 +1,15 @@
 ---
 import Layout from './Layout.astro'
-import NoteNav from '@/components/notes/NoteNav.astro'
+import NoteHeader from '@/components/notes/NoteHeader.astro'
 import NotePager from '@/components/notes/NotePager.astro'
-import { siblingNotes } from '@/models/notes'
 
 const { frontmatter } = Astro.props
-
-// kicker 動態顯示該篇的主題標籤（如「筆記 · 量子力學」）；查不到就退回「筆記」。
-const path = Astro.url.pathname.replace(/\/+$/, '') || '/'
-const { current } = siblingNotes(path)
-const kicker = current?.tags?.length ? `筆記 · ${current.tags.join('、')}` : '筆記'
 ---
 
 <Layout title={`${frontmatter.title} · TCM 題庫`}>
-  <NoteNav />
-
-  <header class="mb-6 flex flex-col gap-1.5">
-    <p class="page-kicker">{kicker}</p>
-    <h1 class="page-title">{frontmatter.title}</h1>
+  <NoteHeader title={frontmatter.title}>
     {frontmatter.summary && <p class="page-desc max-w-2xl">{frontmatter.summary}</p>}
-  </header>
+  </NoteHeader>
 
   <article class="prose max-w-none">
     <slot />
