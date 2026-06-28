@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import EntropySign from '@/components/notes/EntropySign.svelte'
 
 <NoteStats tag="基礎-熱力學" client:load />
@@ -189,3 +190,11 @@ $$
     "T < 500 K 時 ΔS_宇宙>0 自發；T > 500 K 反而不自發。"
   ]}
 />
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="基礎-熱力學" limit={10} offset={0} client:load />
+
+</div>

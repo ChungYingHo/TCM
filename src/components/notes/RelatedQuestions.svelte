@@ -31,7 +31,7 @@
   {#if loading}
     <p class="text-sm opacity-60">載入考古題中…</p>
   {:else if shown.length === 0}
-    <p class="text-sm opacity-60">目前題庫沒有標到「{tag}」的題目。</p>
+    <p class="rounded-box border border-base-300 bg-base-200/40 px-4 py-3 text-sm text-base-content/60">📭 此考點在三校歷年考古題中<b>尚未考過</b>（題庫無相關題目）。</p>
   {:else}
     <p class="mb-2 text-sm opacity-60">題庫中共 {matches.length} 題標到本考點，挑出 {shown.length} 題：</p>
     <div class="flex flex-col gap-3">

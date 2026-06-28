@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import BlackbodyCurve from '@/components/notes/BlackbodyCurve.svelte'
 import WaveBasics from '@/components/notes/WaveBasics.svelte'
@@ -352,3 +353,11 @@ $$
     "頻率越大、光子能量越大 → (C) 可。波長更長＝頻率更低 → (D) 更不行。"
   ]}
 />
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="量子力學" limit={10} offset={0} client:load />
+
+</div>

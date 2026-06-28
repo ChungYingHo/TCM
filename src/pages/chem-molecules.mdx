@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import VseprShapes from '@/components/notes/VseprShapes.svelte'
 import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
@@ -288,3 +289,11 @@ $$
     "P–H 的 H 不解離，這類要<b>直接記</b>。"
   ]}
 />
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="基礎-化學鍵" limit={10} offset={0} client:load />
+
+</div>

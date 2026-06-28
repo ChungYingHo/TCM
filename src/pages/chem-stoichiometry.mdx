@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 
 <NoteStats tag="基礎-化學計量" client:load />
@@ -385,3 +386,11 @@ $$
     "以 N₂：1 mol × (2 mol NH₃/1 mol N₂) × 17 g/mol ＝ <b>34 g</b>。"
   ]}
 />
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="基礎-化學計量" limit={10} offset={0} client:load />
+
+</div>

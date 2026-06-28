@@ -8,6 +8,7 @@ import Memorize from '@/components/notes/Memorize.svelte'
 import KeyPoints from '@/components/notes/KeyPoints.svelte'
 import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import SigFig from '@/components/notes/SigFig.svelte'
 
@@ -397,3 +398,11 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
     "<b>°X ＝ 50</b>。沒看過的溫標，套同一條比例式即可。"
   ]}
 />
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="基礎-單位因次" limit={10} offset={0} client:load />
+
+</div>
