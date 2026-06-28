@@ -68,7 +68,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 - **術語/符號首次出現即定義**（中文＋英文＋縮寫＋一句白話）；先講機制再套用。
 - 句子別講一半（補完因果）。
 - **大綱「例題指定」＝放在該段落當 inline 知識範例**（用 `WorkedExample`），不是丟最後例題區；自測練習才用互動 `ExampleQuestion`（選→對→解析，支援複選）。
-- 大綱說「圖解」就**做圖**（建小 Svelte 元件，`not-prose` 容器、Svelte 5 runes、`client:visible`）。
+- 大綱說「圖解」就**做圖**（建小 Svelte 元件，`not-prose` 容器、Svelte 5 runes）。**底線＝元件一定要在 PDF/GoodNotes 顯示完整資訊**（Aira 幾乎都看 PDF，互動在那邊無效）。**互動與否其次、該不該互動由 Claude 自己判斷**——兩條路任選：①**全畫成靜態**（不加 `client:`、純 SSR、最省事、首選）；②**要互動也沒關係**，但**必須附 `print:block` 靜態完整版**（範本＝`ExampleQuestion`）。**唯一禁忌：資訊只藏在互動後面又 `print:hidden`**（PDF 整片空白，如舊版 `VseprShapes`／`SigFig` 之坑，見 memory `pdf-print-pagination`）。
 
 **MDX 陷阱**：散文比較符號用 `&lt;`/`&gt;`（裸 `<字母` 會被當 JSX → SSR 500）；display math `$$` 獨立成行；含狀態/箭頭/電荷的化學式用 mhchem `\ce{}`，簡單下標用 Unicode。
 
