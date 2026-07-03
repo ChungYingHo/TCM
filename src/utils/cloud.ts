@@ -7,7 +7,7 @@
 import type { SyncState } from '@/models/progress'
 import { dumpWrong, replaceWrong } from '@/utils/wrongBook'
 import { getAttempts, replaceProgress } from '@/utils/progress'
-import { dumpVocabSrs, replaceVocabSrs } from '@/utils/vocabSrs'
+import { dumpVocabSrs, replaceVocabSrs, VOCAB_SRS_EPOCH } from '@/utils/vocabSrs'
 import { dumpElementSrs, replaceElementSrs } from '@/utils/elementSrs'
 import { dumpClassicSrs, replaceClassicSrs } from '@/utils/classicSrs'
 import { dumpAminoAcidSrs, replaceAminoAcidSrs } from '@/utils/aminoAcidSrs'
@@ -17,6 +17,7 @@ export function localSnapshot(): SyncState {
     wrongbook: dumpWrong(),
     progress: getAttempts(),
     vocabSrs: dumpVocabSrs(),
+    vocabSrsEpoch: VOCAB_SRS_EPOCH,
     elementSrs: dumpElementSrs(),
     classicSrs: dumpClassicSrs(),
     aminoAcidSrs: dumpAminoAcidSrs(),
@@ -27,7 +28,8 @@ export function localSnapshot(): SyncState {
 function applyServer(s: SyncState): void {
   replaceWrong(s.wrongbook ?? {})
   replaceProgress(s.progress ?? {})
-  replaceVocabSrs(s.vocabSrs ?? {})
+  // 複習進度世代閘：雲端 epoch 對不上（含舊 blob 無此欄）就丟棄舊 vocabSrs，讓單字從今天重排。
+  replaceVocabSrs(s.vocabSrsEpoch === VOCAB_SRS_EPOCH ? (s.vocabSrs ?? {}) : {})
   replaceElementSrs(s.elementSrs ?? {})
   replaceClassicSrs(s.classicSrs ?? {})
   replaceAminoAcidSrs(s.aminoAcidSrs ?? {})

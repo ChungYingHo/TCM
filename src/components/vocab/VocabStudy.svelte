@@ -1,7 +1,7 @@
 <script lang="ts">
   // Flashcard study with word-level spaced repetition. Due cards come first (calendar
   // SRS), then fresh words in frequency order. 認識 advances the box; 不熟 resets it.
-  import type { VocabWord } from '@/models/vocab'
+  import { prefixById, type VocabWord } from '@/models/vocab'
   import { onMount } from 'svelte'
   import { dueIds, grade, learn, getCard } from '@/utils/vocabSrs'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
@@ -65,6 +65,10 @@
       >
         <span class="font-display text-4xl font-bold tracking-tight">{current.word}</span>
         {#if current.phonetic}<span class="text-base-content/55">/{current.phonetic}/</span>{/if}
+        {#if current.prefixId}
+          {@const g = prefixById(current.prefixId)}
+          {#if g}<span class="rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary/80">字首 {g.forms.join('／')}</span>{/if}
+        {/if}
         <span class="mt-3 text-xs text-base-content/40">點一下看解釋與例句</span>
       </button>
     {:else}

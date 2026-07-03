@@ -1,0 +1,93 @@
+[
+  {
+    "word": "antipathy",
+    "prefixId": "anti",
+    "pos": "n.",
+    "phonetic": "ænˈtɪpəθɪ",
+    "zh": "反感、厭惡",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "path", "gloss": "感覺" }],
+    "etymology": "anti-（反）＋ path（pathos 感覺、受苦）——相對立的感受，即反感、厭惡。",
+    "derivatives": [{ "word": "antipathetic", "pos": "adj.", "zh": "有反感的" }],
+    "example": "The natives have a strong antipathy against all outsiders.",
+    "example_zh": "當地人對所有外來者都很反感。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antipathy", "ipa": "/ænˈtɪpəθi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y→ɪ）", "example": "photo" }
+  },
+  {
+    "word": "antibiotic",
+    "prefixId": "anti",
+    "pos": "n.",
+    "phonetic": "ˌæntaɪbaɪˈɑtɪk",
+    "zh": "抗生素",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "bio", "gloss": "生命" }],
+    "etymology": "anti-（反）＋ bio（bios 生命）——對抗微生物的生命，即抗生素。",
+    "derivatives": [],
+    "example": "The discovery of antibiotics is a milestone in medical history.",
+    "example_zh": "抗生素的發現是醫學史上的里程碑。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antibiotic", "ipa": "/ˌæn.taɪ.baɪˈɑ.tɪk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "antidote",
+    "prefixId": "anti",
+    "pos": "n.",
+    "phonetic": "ˈæntɪˌdot",
+    "zh": "解藥、解毒劑",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "dote", "gloss": "給予" }],
+    "etymology": "anti-（反）＋ dote（didonai 給予）——對抗毒物而給予之物，即解藥。",
+    "derivatives": [],
+    "example": "Gandhi's nonviolence is a potent antidote to the prevalent violence today.",
+    "example_zh": "甘地的非暴力是對抗當今普遍暴力的一帖良方。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antidote", "ipa": "/ˈæn.tɪ.doʊt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）；字根為 didonai「給予」（老師寫 dosis 為其名詞衍生）", "example": "photo" }
+  },
+  {
+    "word": "antonym",
+    "prefixId": "anti",
+    "pos": "n.",
+    "phonetic": "ˈæntəˌnɪm",
+    "zh": "反義字",
+    "parts": [{ "text": "ant-", "gloss": "反" }, { "text": "onym", "gloss": "名字" }],
+    "etymology": "ant-（反）＋ onym（onoma 名字）——意義相反的名字，即反義字。",
+    "derivatives": [],
+    "example": "You can look up synonyms and antonyms in the thesaurus.",
+    "example_zh": "你可以在同義詞辭典裡查同義字和反義字。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antonym", "ipa": "/ˈæn.təˌnɪm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "antibody",
+    "prefixId": "anti",
+    "pos": "n.",
+    "phonetic": "ˈæntɪˌbɑdɪ",
+    "zh": "抗體",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "body", "gloss": "體" }],
+    "etymology": "anti-（反）＋ body（體）——體內產生、對抗外來物的蛋白，即抗體。",
+    "derivatives": [],
+    "example": "The vaccine will produce antibodies in you to fight the virus.",
+    "example_zh": "疫苗會在你體內產生抗體來對抗病毒。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antibody", "ipa": "/ˈæn.tɪˌbɑ.di/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y→ɪ）", "example": "photo" }
+  },
+  {
+    "word": "anti-inflammatory",
+    "prefixId": "anti",
+    "pos": "adj. / n.",
+    "phonetic": "ˌæntiɪnˈflæmətɔrɪ",
+    "zh": "消炎的（藥）",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "inflammatory", "gloss": "發炎的" }],
+    "etymology": "anti-（反）＋ inflammatory（發炎的，in-＋flamma 火）——對抗發炎，即消炎的。",
+    "derivatives": [{ "word": "inflame", "pos": "v.", "zh": "使發炎、激怒" }, { "word": "inflammation", "pos": "n.", "zh": "發炎" }],
+    "example": "The doctor prescribed some non-steroidal anti-inflammatory drugs for her arthritis.",
+    "example_zh": "醫生開了一些非類固醇消炎藥治療她的關節炎。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/inflammation", "ipa": "/ˌæn.ti.ɪnˈflæm.ə.tɔr.i/", "ipaSource": "依組成推導（字典未列單一 IPA）", "phoneticNote": "KK 依 anti＋inflammatory 組成推導，待抽查", "example": "photo" }
+  },
+  {
+    "word": "antiseptic",
+    "prefixId": "anti",
+    "pos": "adj. / n.",
+    "phonetic": "ˌæntɪˈsɛptɪk",
+    "zh": "殺菌的、防腐的；殺菌劑",
+    "parts": [{ "text": "anti-", "gloss": "反" }, { "text": "septic", "gloss": "腐敗" }],
+    "etymology": "anti-（反）＋ septic（sēpein 使腐敗）——對抗腐敗、殺菌，即防腐的。",
+    "derivatives": [],
+    "example": "Antiseptic is used to sterilize the skin before an injection.",
+    "example_zh": "注射前會用殺菌劑為皮膚消毒。",
+    "sources": { "page": "IMG_1127", "etymonline": "https://www.etymonline.com/word/antiseptic", "ipa": "/ˌæn.tiˈsɛp.tɪk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  }
+]

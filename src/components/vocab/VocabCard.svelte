@@ -72,7 +72,34 @@
     {/each}
   </div>
 
-  <p class="text-[15px] leading-snug">{word.zh}</p>
+  {#if word.parts?.length}
+    <div class="flex flex-wrap items-center gap-1 text-sm">
+      {#each word.parts as p, i (i)}
+        {#if i > 0}<span class="text-base-content/30" aria-hidden="true">＋</span>{/if}
+        <span class="inline-flex items-baseline gap-1 rounded-md bg-primary/10 px-1.5 py-0.5">
+          <span class="font-semibold text-primary">{p.text}</span>
+          <span class="text-xs text-base-content/60">{p.gloss}</span>
+        </span>
+      {/each}
+    </div>
+  {/if}
+
+  <p class="leading-snug {word.parts?.length ? 'text-sm text-base-content/70' : 'text-[15px]'}">{word.zh}</p>
+
+  {#if word.etymology}
+    <p class="border-l-2 border-primary/25 pl-2 text-[13px] leading-relaxed text-base-content/70">
+      <span class="mr-1 font-medium text-primary/70">字源</span>{word.etymology}
+    </p>
+  {/if}
+
+  {#if word.derivatives?.length}
+    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 text-[13px] text-base-content/65">
+      <span class="font-medium text-base-content/45">衍</span>
+      {#each word.derivatives as d, i (i)}
+        <span><span class="font-medium text-base-content/85">{d.word}</span>{#if d.pos}&nbsp;<span class="text-base-content/45">{d.pos}</span>{/if}{#if d.zh}&nbsp;{d.zh}{/if}</span>
+      {/each}
+    </div>
+  {/if}
 
   {#if word.example}
     <div class="mt-1 rounded-lg bg-base-200/60 p-2.5 text-sm">

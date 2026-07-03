@@ -1,0 +1,80 @@
+[
+  {
+    "word": "nonprofit",
+    "prefixId": "non",
+    "pos": "adj.",
+    "phonetic": "ˌnɑnˈprɑfɪt",
+    "zh": "非營利的",
+    "parts": [{ "text": "non-", "gloss": "非" }, { "text": "profit", "gloss": "利潤" }],
+    "etymology": "non-（非）＋ profit（利潤，pro 向前＋facere 做）——不以營利為目的。",
+    "derivatives": [{ "word": "profit", "pos": "n./v.", "zh": "利潤；獲利" }],
+    "example": "The CFCT is a nonprofit, nongovernmental organization.",
+    "example_zh": "CFCT 是一個非營利的非政府組織。",
+    "sources": { "page": "IMG_1135", "etymonline": "https://www.etymonline.com/word/nonprofit", "ipa": "/ˌnɑnˈprɑfɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "nonalcoholic",
+    "prefixId": "non",
+    "pos": "adj.",
+    "phonetic": "ˌnɑnˌælkəˈhɔlɪk",
+    "zh": "不含酒精的",
+    "parts": [{ "text": "non-", "gloss": "不" }, { "text": "alcoholic", "gloss": "含酒精的" }],
+    "etymology": "non-（不）＋ alcoholic（含酒精的，alcohol 源自阿拉伯文 al-kuhul）——不含酒精的。",
+    "derivatives": [{ "word": "alcohol", "pos": "n.", "zh": "酒精" }, { "word": "alcoholic", "pos": "adj./n.", "zh": "酒精的；酒鬼" }],
+    "example": "Minors can buy only nonalcoholic drinks.",
+    "example_zh": "未成年人只能買不含酒精的飲料。",
+    "sources": { "page": "IMG_1135", "etymonline": "https://www.etymonline.com/word/alcoholic", "ipa": "/ˌnɑnˌælkəˈhɔlɪk/", "ipaSource": "Wiktionary（推自 alcoholic）", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "nonpartisan",
+    "prefixId": "non",
+    "pos": "adj.",
+    "phonetic": "ˌnɑnˈpɑrtɪzən",
+    "zh": "無黨派的、中立的",
+    "parts": [{ "text": "non-", "gloss": "無" }, { "text": "partisan", "gloss": "黨派的（pars 部分/派系）" }],
+    "etymology": "non-（無）＋ partisan（黨派的，pars 部分、派系）——不偏袒任何黨派、中立。",
+    "derivatives": [{ "word": "party", "pos": "n.", "zh": "政黨、黨派" }, { "word": "partisan", "pos": "adj./n.", "zh": "有黨派色彩的；黨派支持者" }],
+    "example": "The government has organized a nonpartisan committee to study the issue objectively.",
+    "example_zh": "政府組了一個無黨派委員會，客觀地研究這個議題。",
+    "sources": { "page": "IMG_1136", "etymonline": "https://www.etymonline.com/word/partisan", "ipa": "/ˌnɑnˈpɑɹtɪzən/", "ipaSource": "Wiktionary（推自 partisan）", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "nonfiction",
+    "prefixId": "non",
+    "pos": "n.",
+    "phonetic": "ˌnɑnˈfɪkʃən",
+    "zh": "非小說（作品）",
+    "parts": [{ "text": "non-", "gloss": "非" }, { "text": "fiction", "gloss": "虛構、小說（fingere 捏造）" }],
+    "etymology": "non-（非）＋ fiction（虛構，fingere 塑形、捏造）——非虛構的作品。",
+    "derivatives": [{ "word": "fiction", "pos": "n.", "zh": "小說、虛構" }, { "word": "fictional", "pos": "adj.", "zh": "虛構的" }],
+    "example": "Which do you prefer, fiction or nonfiction?",
+    "example_zh": "你比較喜歡小說還是非小說？",
+    "sources": { "page": "IMG_1136", "etymonline": "https://www.etymonline.com/word/fiction", "ipa": "/ˌnɑnˈfɪkʃən/", "ipaSource": "Wiktionary（推自 fiction）", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "nonstop",
+    "prefixId": "non",
+    "pos": "adj. / adv.",
+    "phonetic": "ˌnɑnˈstɑp",
+    "zh": "直達的；中途不停",
+    "parts": [{ "text": "non-", "gloss": "不" }, { "text": "stop", "gloss": "停" }],
+    "etymology": "non-（不）＋ stop（停）——中途不停的，即直達。",
+    "derivatives": [],
+    "example": "This is a nonstop flight to Tokyo.",
+    "example_zh": "這是一班直飛東京的班機。",
+    "sources": { "page": "IMG_1136", "etymonline": "https://www.etymonline.com/word/stop", "ipa": "/ˌnɑnˈstɑp/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "noncommittal",
+    "prefixId": "non",
+    "pos": "adj.",
+    "phonetic": "ˌnɑnkəˈmɪtəl",
+    "zh": "不置可否的、不表態的",
+    "parts": [{ "text": "non-", "gloss": "不" }, { "text": "committal", "gloss": "表態（mittere 送）" }],
+    "etymology": "non-（不）＋ committal（表態，commit ＜ com 一起＋mittere 送、投）——不表態、不承諾。",
+    "derivatives": [{ "word": "commit", "pos": "v.", "zh": "投入、承諾" }, { "word": "commitment", "pos": "n.", "zh": "投入、承諾" }],
+    "example": "When asked about his position on the bill, the chairman remained noncommittal.",
+    "example_zh": "被問到對這法案的立場時，主席仍不置可否。",
+    "sources": { "page": "IMG_1136", "etymonline": "https://www.etymonline.com/word/commit", "ipa": "/ˌnɑnkəˈmɪtl̩/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  }
+]

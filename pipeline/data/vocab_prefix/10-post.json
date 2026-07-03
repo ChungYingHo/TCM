@@ -1,0 +1,54 @@
+[
+  {
+    "word": "postgraduate",
+    "prefixId": "post",
+    "pos": "adj. / n.",
+    "phonetic": "ˌpostˈɡrædʒuət",
+    "zh": "大學畢業後的；研究生",
+    "parts": [{ "text": "post-", "gloss": "之後" }, { "text": "graduate", "gloss": "畢業（gradus 階梯）" }],
+    "etymology": "post-（之後）＋ graduate（畢業，gradus 階梯→學位）——取得學位之後，即研究所階段、研究生。",
+    "derivatives": [{ "word": "graduate", "pos": "n./v.", "zh": "畢業；畢業生" }, { "word": "undergraduate", "pos": "n.", "zh": "大學生" }],
+    "example": "As a postgraduate, I might be able to work as a teaching assistant.",
+    "example_zh": "身為研究生，我或許可以擔任助教。",
+    "sources": { "page": "IMG_1140", "etymonline": "https://www.etymonline.com/word/graduate", "ipa": "/ˌpoʊstˈɡrædʒuət/", "ipaSource": "Wiktionary（對應通用美式）", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）", "example": "photo" }
+  },
+  {
+    "word": "postmodern",
+    "prefixId": "post",
+    "pos": "adj.",
+    "phonetic": "ˌpostˈmɑdɚn",
+    "zh": "後現代的",
+    "parts": [{ "text": "post-", "gloss": "之後" }, { "text": "modern", "gloss": "現代（modo 剛才）" }],
+    "etymology": "post-（之後）＋ modern（現代，modo 剛才）——現代之後，即後現代。",
+    "derivatives": [{ "word": "modern", "pos": "adj.", "zh": "現代的" }],
+    "example": "Postmodern architecture is not completely utilitarian.",
+    "example_zh": "後現代建築並不完全講求實用。",
+    "sources": { "page": "IMG_1140", "etymonline": "https://www.etymonline.com/word/modern", "ipa": "/ˌpoʊstˈmɑdɚn/", "ipaSource": "Wiktionary（Mid-Atlantic US）", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）", "example": "photo" }
+  },
+  {
+    "word": "postpone",
+    "prefixId": "post",
+    "pos": "v.",
+    "phonetic": "postˈpon",
+    "zh": "延後、延期",
+    "parts": [{ "text": "post-", "gloss": "之後" }, { "text": "pone", "gloss": "放、置（ponere）" }],
+    "etymology": "post-（之後）＋ pone（ponere 放、置）——放到之後，即延期。",
+    "derivatives": [{ "word": "postponement", "pos": "n.", "zh": "延後" }],
+    "example": "The meeting had to be postponed for the typhoon.",
+    "example_zh": "會議因颱風不得不延期。",
+    "sources": { "page": "IMG_1140", "etymonline": "https://www.etymonline.com/word/postpone", "ipa": "/poʊstˈpoʊn/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）", "example": "photo" }
+  },
+  {
+    "word": "preposterous",
+    "prefixId": "post",
+    "pos": "adj.",
+    "phonetic": "prəˈpɑstərəs",
+    "zh": "荒謬的、可笑的",
+    "parts": [{ "text": "pre-", "gloss": "前（prae）" }, { "text": "poster", "gloss": "後（posterus）" }],
+    "etymology": "pre-（前）＋ poster（posterus 後）——該在前的在後、前後顛倒，引申為荒謬（此字同時含 pre 與 post）。",
+    "derivatives": [],
+    "example": "The claim that Confucius was Korean is simply preposterous.",
+    "example_zh": "說孔子是韓國人這種主張根本荒謬。",
+    "sources": { "page": "IMG_1140", "etymonline": "https://www.etymonline.com/word/preposterous", "ipa": "/pɹəˈpɑstərəs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  }
+]

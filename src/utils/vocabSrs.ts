@@ -1,12 +1,16 @@
 // Word-level spaced repetition (Leitner). Thin wrapper over the shared Leitner core
 // (utils/leitner.ts) — same algorithm as elementSrs, so the user holds ONE mental model
-// of "due for review". New-word PACE is progress-based (cursor, see studyCursor.ts);
-// review TIMING is calendar-based (forgetting is), so the two are intentionally separate.
-// Synced via cloud.ts under `vocabSrs`.
+// of "due for review". A new word gets no card until first studied; review TIMING is
+// calendar-based (forgetting is time-based). Synced via cloud.ts under `vocabSrs`.
 import type { VocabSrsStore } from '@/models/progress'
 import { createLeitner } from '@/utils/leitner'
 
-const srs = createLeitner('tcm.vocabSrs.v1')
+// 複習進度「世代」：整批換字庫時 +1，舊排程（含雲端 blob）一律作廢、單字從當天重新起算。
+// 同一個數字同時決定 localStorage key（tcm.vocabSrs.v<N>）與 cloud.ts 的 epoch gate。
+// v1→v2（2026-07-04）：舊 3240 GRE 字庫下架、改成老師字根字庫 132 字，複習全部歸零重排。
+export const VOCAB_SRS_EPOCH = 2
+
+const srs = createLeitner(`tcm.vocabSrs.v${VOCAB_SRS_EPOCH}`)
 
 export const learn = srs.learn
 export const grade = srs.grade

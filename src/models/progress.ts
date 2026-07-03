@@ -40,6 +40,7 @@ export interface SyncState {
   wrongbook: Record<string, WrongEntry>
   progress: Record<string, Attempt>
   vocabSrs?: VocabSrsStore
+  vocabSrsEpoch?: number // 複習進度世代；與 cloud.ts 對不上就丟棄舊 vocabSrs（見 vocabSrs.ts）
   elementSrs?: ElementSrsStore
   classicSrs?: ClassicSrsStore
   aminoAcidSrs?: AminoAcidSrsStore

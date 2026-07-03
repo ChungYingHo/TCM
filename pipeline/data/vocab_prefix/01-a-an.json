@@ -1,0 +1,305 @@
+[
+  {
+    "word": "apathetic",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "ˌæpəˈθɛtɪk",
+    "zh": "冷漠、不關心",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "path", "gloss": "感覺／受苦" }],
+    "etymology": "a-（無）＋ path（pathos 感覺、受苦）——沒有感覺，故對事物冷漠、無動於衷。",
+    "derivatives": [{ "word": "apathy", "pos": "n.", "zh": "冷漠" }],
+    "example": "You mustn't be apathetic about environmental protection.",
+    "example_zh": "你不該對環境保護漠不關心。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/apathy",
+      "ipa": "/ˌæpəˈθɛtɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "atheist",
+    "prefixId": "a-an",
+    "pos": "n.",
+    "phonetic": "ˈeθiɪst",
+    "zh": "無神論者",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "theo", "gloss": "神" }],
+    "etymology": "a-（無）＋ theo（theos 神）——沒有神，即不信神的人。",
+    "derivatives": [{ "word": "atheism", "pos": "n.", "zh": "無神論" }],
+    "example": "He's an atheist and doesn't pray.",
+    "example_zh": "他是無神論者，不禱告。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/atheist",
+      "ipa": "/ˈeɪθiɪst/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "amorphous",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "əˈmɔrfəs",
+    "zh": "無固定形狀的、亂七八糟的",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "morph", "gloss": "形狀" }],
+    "etymology": "a-（無）＋ morph（morphē 形狀）——沒有固定形狀。",
+    "derivatives": [{ "word": "morph", "pos": "v.", "zh": "變形" }, { "word": "morphology", "pos": "n.", "zh": "形態學" }],
+    "example": "There is an amorphous mass of jelly on the toast.",
+    "example_zh": "吐司上有一團形狀不定的果凍。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/amorphous",
+      "ipa": "/əˈmɔɹfəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "anonymous",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "əˈnɑnəməs",
+    "zh": "匿名的",
+    "parts": [{ "text": "an-", "gloss": "無" }, { "text": "onym", "gloss": "名字" }],
+    "etymology": "an-（無）＋ onym（onyma 名字）——沒有名字，即匿名。",
+    "derivatives": [{ "word": "anonymity", "pos": "n.", "zh": "匿名" }],
+    "example": "I never pay attention to anonymous letters.",
+    "example_zh": "我從不理會匿名信。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/anonymous",
+      "ipa": "/əˈnɑːnəməs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "analphabetic",
+    "prefixId": "a-an",
+    "pos": "adj. / n.",
+    "phonetic": "ˌænælfəˈbɛtɪk",
+    "zh": "不識字的；文盲",
+    "parts": [{ "text": "an-", "gloss": "不" }, { "text": "alphabet", "gloss": "字母" }],
+    "etymology": "an-（不）＋ alphabet（字母，源自希臘字母 alpha＋beta）——不識字母，即文盲。",
+    "derivatives": [{ "word": "alphabet", "pos": "n.", "zh": "字母" }, { "word": "alphabetical", "pos": "adj.", "zh": "字母順序的" }],
+    "example": "Fewer and fewer people are analphabetic nowadays.",
+    "example_zh": "如今不識字的人越來越少。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/an-",
+      "etymonlineNote": "Etymonline 無此複合字專頁，拆解取自其 an- 與 alphabet 詞條",
+      "ipa": "/ˌænælfəˈbɛtɪk/",
+      "ipaSource": "Oxford Learner's Dictionaries",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "anesthesia",
+    "prefixId": "a-an",
+    "pos": "n.",
+    "phonetic": "ˌænəsˈθiʒə",
+    "zh": "麻醉",
+    "parts": [{ "text": "an-", "gloss": "無" }, { "text": "esthes", "gloss": "感覺" }],
+    "etymology": "an-（無）＋ esthes（aisthēsis 感覺）——沒有感覺，即麻醉、失去知覺。（同根 aesthetic 美感的）",
+    "derivatives": [{ "word": "anesthetic", "pos": "n.", "zh": "麻醉藥" }, { "word": "anesthesiologist", "pos": "n.", "zh": "麻醉師" }, { "word": "aesthetic", "pos": "adj.", "zh": "美感的" }],
+    "example": "Under local anesthesia, the patient remains conscious.",
+    "example_zh": "在局部麻醉下，病人仍保持清醒。",
+    "sources": {
+      "page": "IMG_1125",
+      "etymonline": "https://www.etymonline.com/word/anesthesia",
+      "ipa": "/ˌænəsˈθiːʒə/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "abysmal",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "əˈbɪzməl",
+    "zh": "無底的；極糟的",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "byss", "gloss": "底" }],
+    "etymology": "a-（無）＋ byss（byssos 底）——深不見底；引申為糟糕透頂。",
+    "derivatives": [{ "word": "abyss", "pos": "n.", "zh": "深淵、無底洞" }],
+    "example": "Visitors to the slum were appalled by the abysmal living conditions they saw.",
+    "example_zh": "參觀貧民窟的人，被眼前糟糕透頂的居住環境嚇壞了。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/abyss",
+      "etymonlineNote": "byssos 為『底』但來源不確定（可能非希臘語），採傳統拆解",
+      "ipa": "/əˈbɪzməl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "atrophy",
+    "prefixId": "a-an",
+    "pos": "n. / v.",
+    "phonetic": "ˈætrəfɪ",
+    "zh": "萎縮",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "troph", "gloss": "營養" }],
+    "etymology": "a-（無）＋ troph（trophē 營養）——得不到營養，故肌肉、組織萎縮。",
+    "derivatives": [],
+    "example": "Astronauts returning from extended stays in zero gravity often suffer from muscular atrophy.",
+    "example_zh": "太空人在無重力環境長期停留後返回，常出現肌肉萎縮。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/atrophy",
+      "ipa": "/ˈætrəfi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y→ɪ）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "anemic",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "əˈnimɪk",
+    "zh": "貧血的、虛弱的",
+    "parts": [{ "text": "an-", "gloss": "無" }, { "text": "haem", "gloss": "血" }],
+    "etymology": "an-（無）＋ haem（haima 血）——血液不足，即貧血、虛弱。",
+    "derivatives": [{ "word": "anemia", "pos": "n.", "zh": "貧血症" }],
+    "example": "Sales in this quarter have been anemic.",
+    "example_zh": "這一季的銷售疲弱無力。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/anemic",
+      "ipa": "/əˈniːmɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "asymptomatic",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "ˌesɪmptəˈmætɪk",
+    "zh": "無症狀的",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "symptom", "gloss": "症狀" }],
+    "etymology": "a-（無，alpha privative）＋ symptomatic（有症狀的）——沒有症狀。",
+    "derivatives": [{ "word": "symptom", "pos": "n.", "zh": "症狀" }],
+    "example": "Research shows that many coronavirus infections are asymptomatic.",
+    "example_zh": "研究顯示，許多冠狀病毒感染是無症狀的。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/asymptomatic",
+      "ipa": "/ˌeɪsɪm(p)təˈmætɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "amoral",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "eˈmɔrəl",
+    "zh": "與道德無關的、道德中立的",
+    "parts": [{ "text": "a-", "gloss": "非" }, { "text": "moral", "gloss": "道德" }],
+    "etymology": "a-（非）＋ moral（道德）——與道德無關（有別於 immoral「不道德」）；1882 年由 R. L. Stevenson 造以資區別。",
+    "derivatives": [{ "word": "moral", "pos": "adj.", "zh": "道德的" }, { "word": "immoral", "pos": "adj.", "zh": "不道德的" }, { "word": "morality", "pos": "n.", "zh": "道德" }],
+    "example": "Science as a subject is amoral in nature.",
+    "example_zh": "科學這門學科本質上與道德無關。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/amoral",
+      "ipa": "/eɪˈmɔɹəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "analgesic",
+    "prefixId": "a-an",
+    "pos": "n. / adj.",
+    "phonetic": "ˌænəlˈdʒizɪk",
+    "zh": "止痛劑；止痛的",
+    "parts": [{ "text": "an-", "gloss": "無" }, { "text": "alges", "gloss": "痛" }],
+    "etymology": "an-（無）＋ alges（algos 痛，見 -algia）——沒有痛，即止痛。",
+    "derivatives": [],
+    "example": "The nurse gave the girl some analgesics for her pain.",
+    "example_zh": "護士給了女孩一些止痛藥來緩解疼痛。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/analgesic",
+      "ipa": "/ˌænəlˈdʒiːzɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "anemia",
+    "prefixId": "a-an",
+    "pos": "n.",
+    "phonetic": "əˈnimɪə",
+    "zh": "貧血症",
+    "parts": [{ "text": "an-", "gloss": "無" }, { "text": "haem", "gloss": "血" }],
+    "etymology": "an-（無）＋ haem（haima 血）——缺血，即貧血症。",
+    "derivatives": [{ "word": "anemic", "pos": "adj.", "zh": "貧血的" }],
+    "example": "Severe malnutrition may lead to anemia.",
+    "example_zh": "嚴重營養不良可能導致貧血。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/anemia",
+      "ipa": "/əˈniːmiə/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "arrhythmia",
+    "prefixId": "a-an",
+    "pos": "n.",
+    "phonetic": "əˈrɪðmɪə",
+    "zh": "心律不整",
+    "parts": [{ "text": "a-", "gloss": "無" }, { "text": "rhythm", "gloss": "節律" }],
+    "etymology": "a-（無，alpha privative）＋ rhythm（rhythmos 節律）——沒有節律，即心律不整。（課本拼作 arrythmia，正確拼法為 arrhythmia）",
+    "derivatives": [{ "word": "arrhythmic", "pos": "adj.", "zh": "心律不整的、無節奏的" }, { "word": "rhythm", "pos": "n.", "zh": "韻律、節奏" }],
+    "example": "Arrhythmia is among the side effects of this drug.",
+    "example_zh": "心律不整是這種藥物的副作用之一。",
+    "sources": {
+      "page": "IMG_1126",
+      "etymonline": "https://www.etymonline.com/word/arrhythmia",
+      "spellingNote": "課本拼作 arrythmia（單 r），正確拼法為 arrhythmia（-rrh-）",
+      "ipa": "/əˈrɪðmiə/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "anecdotal",
+    "prefixId": "a-an",
+    "pos": "adj.",
+    "phonetic": "ˌænɪkˈdotəl",
+    "zh": "軼事的、道聽塗說的",
+    "parts": [{ "text": "an-", "gloss": "不" }, { "text": "ec", "gloss": "出" }, { "text": "dot", "gloss": "給" }],
+    "etymology": "an-（不）＋ ec（ek 出）＋ dot（didonai 給）——「未被公開出來的事」，引申為軼事、道聽塗說。",
+    "derivatives": [{ "word": "anecdote", "pos": "n.", "zh": "軼事、小故事" }],
+    "example": "There is only anecdotal evidence that the medicine works.",
+    "example_zh": "這種藥有效的證據僅止於道聽塗說。",
+    "sources": {
+      "page": "IMG_1127",
+      "etymonline": "https://www.etymonline.com/word/anecdotal",
+      "ipa": "/ˌænɪkˈdoʊtl̩/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）",
+      "example": "photo"
+    }
+  }
+]

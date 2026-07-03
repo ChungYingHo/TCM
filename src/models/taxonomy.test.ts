@@ -124,7 +124,8 @@ describe('vocab dataset', () => {
   it('has the enriched shape and sane values', () => {
     const vocab = JSON.parse(readFileSync(path.join(DATA_DIR, 'vocab.json'), 'utf8'))
     expect(Array.isArray(vocab.words)).toBe(true)
-    expect(vocab.words.length).toBeGreaterThan(1000)
+    // 字根字彙為手工小字庫（試點 15 字，陸續擴充）；上界另由 vocab.test.ts 守。
+    expect(vocab.words.length).toBeGreaterThan(10)
     for (const w of vocab.words.slice(0, 30)) {
       expect(typeof w.word).toBe('string')
       expect(w.id).toBe(w.word) // the word itself is the stable id
