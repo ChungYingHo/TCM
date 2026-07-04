@@ -1,6 +1,6 @@
 ---
 layout: '@/layouts/NoteLayout.astro'
-title: 細胞（一）：概論、顯微鏡與原核／真核
+title: 概論、顯微鏡與原核／真核
 summary: 細胞學說與所有細胞的共同特徵、看細胞的工具（光學／電子／共軛焦顯微鏡、細胞大小尺度、細胞分離），以及原核 vs 真核的一刀切分界與細菌構造。
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
@@ -11,8 +11,6 @@ import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
 
 <NoteStats tag="細胞-原核與真核" client:load />
-
-> **細胞三部曲**：**（一）概論・顯微鏡・原核真核**（本篇）→（二）[細胞核・內膜系統・能量胞器](/bio-cell-2) →（三）[細胞骨架・細胞外連結](/bio-cell-3)　·　[📋 速查總表](/bio-cell-summary)
 
 ## 一、細胞是生命的基本單位
 
@@ -147,14 +145,14 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 <Memorize client:visible
   items={[
-    "共同特徵：細胞膜(plasma membrane)、細胞質液(cytosol)、DNA、核糖體(ribosome)。原核 vs 真核差在「DNA 有沒有被膜包成核 + 有沒有膜性胞器」。",
-    "顯微鏡：光學(LM)解析度極限約 0.2 µm（看得到細胞/核/粒線體/細菌），電子(EM)好約 100 倍（看核糖體/膜/病毒）。SEM 看表面立體、TEM 看內部剖面、共軛焦(confocal)用針孔做光學切片。",
-    "放大率≠解析度：放大率(magnification)高不等於清楚，解析度(resolution)才是關鍵，<b>數值越小越清晰</b>（油鏡因 NA 大而比乾鏡清楚）。",
-    "EM 只能看死樣本：電子顯微鏡解析度雖高但須真空，<b>只能看死樣本</b>，要看活細胞得用光學顯微鏡(LM)。",
-    "原核 prokaryote：1–5µm、環狀裸露DNA在類核(nucleoid)+質體(plasmid)、二分裂、壁為肽聚醣（青黴素抑制交聯，古菌偽肽聚醣故無效）。",
-    "真核 eukaryote：約大10倍、線狀DNA纏組蛋白、有膜性胞器。",
+    "共同特徵：細胞膜 (plasma membrane)、細胞質液 (cytosol)、DNA、核糖體 (ribosome)。原核 vs 真核差在「DNA 有沒有被膜包成核 ＋ 有沒有膜性胞器」。",
+    "顯微鏡：光學 (LM) 解析度極限約 0.2 µm（看得到細胞／核／粒線體／細菌），電子 (EM) 好約 100 倍（看核糖體／膜／病毒）。SEM 看表面立體、TEM 看內部剖面、共軛焦 (confocal) 用針孔做光學切片。",
+    "放大率 ≠ 解析度：放大率 (magnification) 高不等於清楚，解析度 (resolution) 才是關鍵，<b>數值越小越清晰</b>（油鏡因 NA 大而比乾鏡清楚）。",
+    "EM 只能看死樣本：電子顯微鏡解析度雖高但須真空，<b>只能看死樣本</b>，要看活細胞得用光學顯微鏡 (LM)。",
+    "原核 prokaryote：1–5 µm、環狀裸露 DNA 在類核 (nucleoid) ＋ 質體 (plasmid)、二分裂、壁為肽聚醣（青黴素抑制交聯，古菌偽肽聚醣故無效）。",
+    "真核 eukaryote：約大 10 倍、線狀 DNA 纏組蛋白、有膜性胞器。",
     "質體 plasmid：<b>主染色體以外</b>的小環狀 DNA，可獨立複製與傳遞，別當成細菌的主基因體。",
-    "雙層膜胞器：＝核、粒線體、葉綠體，三者都有自己的 DNA → 內共生(endosymbiosis)證據（雙層膜、環狀DNA、70S核糖體、二分裂）。"
+    "雙層膜胞器：＝核、粒線體、葉綠體，三者都有自己的 DNA → 內共生 (endosymbiosis) 證據（雙層膜、環狀 DNA、70S 核糖體、二分裂）。"
   ]}
 />
 
@@ -206,10 +204,38 @@ import Supplement from '@/components/notes/Supplement.astro'
   ]}
 />
 
-<div class="print:hidden">
+## 名詞統整
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 英文（縮寫） | 中文 | 一句話 |
+|---|---|---|
+| cell theory | 細胞學說 | 細胞是生命基本單位、皆來自既存細胞 |
+| plasma membrane | 細胞膜 | 隔開內外、選擇性管制進出的屏障 |
+| cytosol | 細胞質液 | 膜內半流動液體，化學反應場所 |
+| ribosome | 核糖體 | 把胺基酸接成蛋白質的工廠 |
+| magnification | 放大率 | 影像放大幾倍 |
+| resolution | 解析度 | 能分辨兩點的最短距離，數值越小越清晰 |
+| light microscope (LM) | 光學顯微鏡 | 可見光成像，解析度約 0.2 µm，可看活細胞 |
+| SEM | 掃描電子顯微鏡 | 電子束掃表面，呈立體形貌 |
+| TEM | 穿透電子顯微鏡 | 電子束穿透切片，看內部超微結構 |
+| confocal | 共軛焦顯微鏡 | 針孔擋焦外光，做光學切片疊成 3D |
+| cell fractionation | 細胞分離 | 打碎細胞後分出各胞器 |
+| differential centrifugation | 差速離心 | 由慢到快，重／大者先沉澱 |
+| prokaryote | 原核細胞 | 無膜核、無膜性胞器（細菌、古菌） |
+| eukaryote | 真核細胞 | 有膜核與膜性胞器 |
+| nucleoid | 類核區 | 原核細胞 DNA 集中的無膜區 |
+| plasmid | 質體 | 主染色體外的小環狀 DNA，可獨立複製傳遞 |
+| histone | 組蛋白 | 真核 DNA 纏繞其上的鹼性蛋白 |
+| endosymbiosis | 內共生 | 粒線體／葉綠體源自被吞的細菌 |
+| binary fission | 二分裂 | 原核複製環狀 DNA 後一分為二 |
+| peptidoglycan | 肽聚醣 | 細菌細胞壁的糖鏈＋短胜肽交聯網 |
+| pili | 線毛 | 細菌附著、接合傳遞質體的細絲 |
+| flagellum | 鞭毛 | 細菌運動的構造 |
+| penicillin | 青黴素 | 抑制肽聚醣交聯，脹破生長中的細菌 |
+
+</div>
 
 ## 考古題
 
 <RelatedQuestions tag="細胞-原核與真核" limit={10} offset={0} client:load />
-
-</div>

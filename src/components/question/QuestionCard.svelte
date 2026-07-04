@@ -18,6 +18,7 @@
     revealed = false,
     active = false,
     compact = false,
+    printable = false,
     onselect,
     onanswer,
   }: {
@@ -27,6 +28,7 @@
     revealed?: boolean
     active?: boolean
     compact?: boolean
+    printable?: boolean
     onselect?: (letter: OptionLetter) => void
     onanswer?: (correct: boolean) => void
   } = $props()
@@ -108,7 +110,7 @@
 
     {#if passageUrl}
       <!-- 題組共用文章（pipeline 裁切，永遠正確） -->
-      <div class="flex flex-col gap-2 rounded-box border border-info/30 bg-info/[0.05] p-2">
+      <div class="flex flex-col gap-2 rounded-box border border-info/30 bg-info/[0.05] p-2 print:hidden">
         <button type="button" class="btn btn-ghost btn-xs self-start" onclick={() => (showPassage = !showPassage)}>
           <Icon name="fileText" class="h-3.5 w-3.5" />
           題組閱讀文章（第 {question.group?.[0]}–{question.group?.[1]} 題共用）
@@ -119,7 +121,7 @@
         {/if}
       </div>
     {:else if groupish}
-      <div class="flex flex-col gap-2 rounded-box border border-dashed border-base-300 bg-base-200/30 p-2">
+      <div class="flex flex-col gap-2 rounded-box border border-dashed border-base-300 bg-base-200/30 p-2 print:hidden">
         {#if contextBack === 0}
           <button type="button" class="btn btn-ghost btn-xs self-start" onclick={() => (contextBack = 1)}>
             <Icon name="fileText" class="h-3.5 w-3.5" />
@@ -138,6 +140,11 @@
       </div>
     {/if}
 
+    {#if passageUrl && printable}
+      <!-- 列印用：題組共用文章靜態顯示（螢幕靠上方按鈕展開） -->
+      <img src={IMG_BASE + passageUrl} alt="題組閱讀文章" class="hidden w-full rounded-lg bg-white print:block" loading="lazy" decoding="async" />
+    {/if}
+
     {#if imgVisible}
       <QuestionImage {question} />
     {:else}
@@ -150,7 +157,7 @@
     <OptionButtons {question} selected={shownSelected} revealed={shownRevealed} onselect={handleSelect} />
 
     {#if mode === 'study'}
-      <div class="flex flex-wrap items-center gap-2">
+      <div class="flex flex-wrap items-center gap-2 print:hidden">
         {#if !localRevealed}
           <button type="button" class="btn btn-sm btn-primary" onclick={() => (localRevealed = true)}>
             一鍵看答案
@@ -169,6 +176,12 @@
 
     {#if shownRevealed}
       <AnswerReveal {question} />
+    {/if}
+    {#if printable}
+      <!-- 列印用：靜態顯示正解與詳解（螢幕隱藏、僅 PDF 顯示，不需點「看答案」） -->
+      <div class="hidden print:block">
+        <AnswerReveal {question} />
+      </div>
     {/if}
   </div>
 </article>

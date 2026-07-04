@@ -1,6 +1,6 @@
 ---
 layout: '@/layouts/NoteLayout.astro'
-title: 簡單的熱力學
+title: 熱力學
 summary: 自發性、熵與亂度、系統／外界／宇宙熵（第二定律），與 ΔH·ΔS 四種組合對自發性的影響。
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
@@ -16,13 +16,13 @@ import EntropySign from '@/components/notes/EntropySign.svelte'
 **自發變化**：不需持續外力，就會自己往某方向進行的變化。
 
 - **自發 ≠ 快**：熱力學只管「**方向**」，速率是動力學的事。
-- 判據：**宇宙熵增**（熱力學第二定律）—— $\Delta S_\text{宇宙} > 0$ 才自發。
+- 判據：**宇宙熵增**（熱力學第二定律）：$\Delta S_\text{宇宙} > 0$ 才自發。
 
 > 例：鐵生鏽、冰在室溫融化都是**自發**。但鑽石→石墨雖自發，速率極慢（千萬年）。「自發」不保證「看得到反應」。
 
 ---
 
-## 二、熵 $S$（亂度）與 $\Delta S_\text{系統}$ 的正負
+## 二、熵 S（亂度）與系統熵 ΔS 的正負
 
 **熵 $S$＝亂度**，越亂 $S$ 越大：**固體 ＜ 液體 ＜ 氣體**。
 
@@ -57,7 +57,7 @@ $$
 
 ---
 
-## 四、$\Delta H$ 與 $\Delta S_\text{系統}$ 的四種組合（用宇宙熵判斷）
+## 四、ΔH 與系統熵 ΔS 的四種組合（用宇宙熵判斷）
 
 把 $\Delta S_\text{外界}=-\dfrac{\Delta H}{T}$ 代入，自發與否就看：
 
@@ -170,10 +170,6 @@ $$
   ]}
 />
 
-<div class="print:hidden">
-
 ## 考古題
 
 <RelatedQuestions tag="基礎-熱力學" limit={10} offset={0} client:load />
-
-</div>

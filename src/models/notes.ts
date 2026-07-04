@@ -7,6 +7,8 @@ export interface NoteEntry {
   desc: string
   /** 筆記分類；省略視為「考點筆記」。「快速複習」放純表格速查/總表。 */
   category?: NoteCategory
+  /** 大分類/章：把相關筆記歸在同一標題下（如「細胞學」「量子論與原子結構」）。省略＝不分組。 */
+  group?: string
 }
 
 export type NoteSubject = '化學' | '生物' | '國文' | '英文'
@@ -31,6 +33,7 @@ export const NOTES: NoteEntry[] = [
     title: '元素週期表',
     subject: '化學',
     tags: ['基礎-週期表'],
+    group: '化學工具',
     desc: '必背速查表、自由練習、完整互動週期表（電子組態、電負度/半徑/游離能熱圖）',
   },
   {
@@ -39,6 +42,7 @@ export const NOTES: NoteEntry[] = [
     title: '20 種胺基酸',
     subject: '化學',
     tags: ['基礎-胺基酸'],
+    group: '化學工具',
     desc: '五大分類、側鏈結構圖、必需胺基酸、簡寫對照',
   },
   {
@@ -47,6 +51,7 @@ export const NOTES: NoteEntry[] = [
     title: '學說與理論',
     subject: '化學',
     tags: ['基礎-原子結構'],
+    group: '基礎化學',
     desc: '原子模型演進（湯木生→密立根→拉塞福→莫色勒→質譜儀）、五大定律＋坎尼札洛、次原子粒子、同位素／同素異形體／異構物',
   },
   {
@@ -55,7 +60,8 @@ export const NOTES: NoteEntry[] = [
     title: '化學上重要的單位',
     subject: '化學',
     tags: ['基礎-單位因次'],
-    desc: '莫耳/amu/莫耳質量、unit factor、長度/壓力/溫度/能量/濃度/R、化學常用數學、有效數字',
+    group: '基礎化學',
+    desc: '莫耳/amu/莫耳質量、unit factor、長度/壓力/溫度/能量/濃度、化學常用數學、有效數字',
   },
   {
     id: 'chem-molecules',
@@ -63,6 +69,7 @@ export const NOTES: NoteEntry[] = [
     title: '化學分子表達',
     subject: '化學',
     tags: ['基礎-化學鍵'],
+    group: '基礎化學',
     desc: 'AXₙEₘ 與八隅體電子數公式、VSEPR 形狀/鍵角、σ/π 鍵、極性、氫化物/含氧酸/自由基/官能基',
   },
   {
@@ -71,14 +78,16 @@ export const NOTES: NoteEntry[] = [
     title: '化學反應方程式與化學計量',
     subject: '化學',
     tags: ['基礎-化學計量'],
+    group: '基礎化學',
     desc: '平衡（觀察法）、係數比意義、計量總流程、限量試劑、理論產量、產率、原子經濟性',
   },
   {
     id: 'chem-thermo',
     href: '/chem-thermo',
-    title: '簡單的熱力學',
+    title: '熱力學',
     subject: '化學',
     tags: ['基礎-熱力學'],
+    group: '基礎化學',
     desc: '自發性、熵與亂度、系統/外界/宇宙熵（第二定律）、ΔH·ΔS 四種組合與臨界溫度',
   },
   {
@@ -87,6 +96,7 @@ export const NOTES: NoteEntry[] = [
     title: '光電效應與量子論：黑體輻射、電磁輻射模型、物質波',
     subject: '化學',
     tags: ['量子力學'],
+    group: '量子論與原子結構',
     desc: '黑體輻射(只看溫度)與能量量子化、波動模型 c=νλ、光電效應(E_K=hν−Φ、低限頻率、功函數圖)、電磁波譜與化學用途、德布羅意物質波、波粒二象性與測不準',
   },
   {
@@ -95,6 +105,7 @@ export const NOTES: NoteEntry[] = [
     title: '原子光譜與波耳模型',
     subject: '化學',
     tags: ['原子光譜'],
+    group: '量子論與原子結構',
     desc: '連續/線/吸收光譜、焰色試驗(IA/IIA)、氫原子發射光譜與五大系列、能量-頻率-波長計算(H 與類氫 Z²)、波耳能階與軌道半徑',
   },
   {
@@ -103,30 +114,34 @@ export const NOTES: NoteEntry[] = [
     title: '量子力學與原子軌域',
     subject: '化學',
     tags: ['原子軌域'],
+    group: '量子論與原子結構',
     desc: '一維/三維盒中質點與零點能量、氫原子波函數與軌域、s/p/d/f 形狀與節點(n−ℓ−1、ℓ)、徑向分布函數、四個量子數與 Pauli',
   },
   {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
-    title: '細胞（一）：概論、顯微鏡與原核／真核',
+    title: '概論、顯微鏡與原核／真核',
     subject: '生物',
     tags: ['細胞-原核與真核'],
+    group: '細胞學',
     desc: '細胞學說與共同特徵、光學／電子／共軛焦顯微鏡與細胞大小、細胞分離、原核 vs 真核與細菌構造（質體、肽聚醣、內共生）',
   },
   {
     id: 'bio-cell-2',
     href: '/bio-cell-2',
-    title: '細胞（二）：細胞核、內膜系統與能量胞器',
+    title: '細胞核、內膜系統與能量胞器',
     subject: '生物',
     tags: ['細胞-細胞核與胞器'],
+    group: '細胞學',
     desc: '動植物細胞全景、細胞核與核糖體、內膜系統七成員（ER／高基氏體／溶體／液泡）、分泌路徑、粒線體／葉綠體／過氧化體／蛋白酶體',
   },
   {
     id: 'bio-cell-3',
     href: '/bio-cell-3',
-    title: '細胞（三）：細胞骨架與細胞外連結',
+    title: '細胞骨架與細胞外連結',
     subject: '生物',
     tags: ['細胞-骨架與連結'],
+    group: '細胞學',
     desc: '微管・微絲・中間絲的直徑/組成/功能、中心粒與纖毛鞭毛的 9×3 與 9+2、細胞外基質與整聯蛋白、四種細胞間連結',
   },
   {
@@ -156,6 +171,26 @@ export function notesIn(category: NoteCategory, subject: NoteSubject): NoteEntry
 export function tagsIn(category: NoteCategory, subject: NoteSubject): string[] {
   const tags = new Set(notesIn(category, subject).flatMap((n) => n.tags))
   return [...tags]
+}
+
+/** 某分類＋科目下，依 group 分組（保 NOTES 順序）；無 group 者歸在 key '' 之下。 */
+export function noteGroupsIn(
+  category: NoteCategory,
+  subject: NoteSubject,
+): { group: string; notes: NoteEntry[] }[] {
+  const order: string[] = []
+  const map = new Map<string, NoteEntry[]>()
+  for (const n of notesIn(category, subject)) {
+    const g = n.group ?? ''
+    const arr = map.get(g)
+    if (arr) {
+      arr.push(n)
+    } else {
+      map.set(g, [n])
+      order.push(g)
+    }
+  }
+  return order.map((g) => ({ group: g, notes: map.get(g) ?? [] }))
 }
 
 /** 依 href 找出當前筆記與其「同分類同科目」的上一篇/下一篇（依 NOTES 排序＝閱讀順序）。 */

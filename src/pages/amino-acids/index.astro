@@ -60,7 +60,7 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
     結構為兩性離子（生理 pH）畫法；側鏈以縮寫結構式呈現，酸性／鹼性側鏈在生理 pH 多帶電（此處畫中性式以利辨識官能基）。分類採 Lehninger 五大類。
   </p>
 
-  <section class="mt-10 border-t border-base-200 pt-8 print:hidden">
+  <section class="mt-10 border-t border-base-200 pt-8">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">自測</p>
       <h2 class="section-heading">例題</h2>
@@ -71,7 +71,7 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
     <ExampleQuestion n={4} q="20 種胺基酸中，唯一沒有掌性中心（非掌性）的是？" options={['Gly 甘胺酸', 'Ala 丙胺酸', 'Ser 絲胺酸', 'Cys 半胱胺酸']} answer="(A) Gly 甘胺酸" steps={['Gly 側鏈為 H，α 碳接兩個 H → 無四個不同取代基 → <b>無掌性</b>。', '其餘胺基酸 α 碳接四個不同基團 → 皆有掌性（天然為 L 型）。']} client:visible />
   </section>
 
-  <section class="mt-10 print:hidden">
+  <section class="mt-10">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">歷屆</p>
       <h2 class="section-heading">考古題</h2>

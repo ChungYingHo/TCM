@@ -37,6 +37,7 @@ description: 把筆記重新匯出成 iPad GoodNotes 用的列印級 PDF（到�
 ### 4. 逐頁驗證（每次都做）
 - 跑 `python scripts/verify_pdf.py`（預設掃 `~/Desktop/TCM-exports`，只掃「科目/檔.pdf」一層）。它會：產各份 4 欄縮圖、印頁數＋**內嵌圖數**、跑孤懸標題檢查，並列出每張縮圖路徑。
 - **先對圖（最容易漏、過去就漏過，務必做）**：每篇「內嵌圖」數要 **≥ 該篇 source 的 `<Figure` 數**（`grep -c "<Figure" src/pages/<slug>.mdx`）。少了＝lazy 圖沒載出、PDF 會空白。
+- **2026-07-04 起考古題也印進 PDF**：每篇末多 ~10 張題幹圖（故內嵌圖數 ≈ `<Figure` 數 ＋ 該篇考古題數），且要**抽看幾題確認正解＋詳解有印出**（`QuestionCard` 的 `hidden print:block` 靜態版；題幹圖來自本機 `public/q/**`，空白＝webp 沒載）。互動按鈕（選項/看答案/問AI/看全部）維持 `print:hidden`。
 - **Read 它列出的每張縮圖 PNG**，逐份掃：
   1. **`client:visible` 圖（canvas/svg 非點陣、不計入「內嵌圖」）逐張確認不是空白框**——光電/量子/分子等篇 diagram 多，最容易整片空白且自動數抓不到。
   2. 圖／公式／表格／卡片**沒被切到頁邊**（整張表完整、公式不破圖）。

@@ -77,7 +77,7 @@ export const prerender = false
     <PeriodicTableTool client:load />
   </section>
 
-  <section class="mt-10 border-t border-base-200 pt-8 print:hidden">
+  <section class="mt-10 border-t border-base-200 pt-8">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">自測</p>
       <h2 class="section-heading">例題</h2>
@@ -88,7 +88,7 @@ export const prerender = false
     <ExampleQuestion n={4} q="不查週期表，用原子序估算溴（Br，Z=35）的原子量約為？" options={['35', '70', '80', '120']} answer="(C) 80" steps={['Z=35 落在 21–50 段 → AW ≈ 2.3Z。', '2.3 × 35 ≈ <b>80</b>（實際 79.9）。']} client:visible />
   </section>
 
-  <section class="mt-10 print:hidden">
+  <section class="mt-10">
     <header class="mb-4 flex flex-col gap-1.5">
       <p class="page-kicker">歷屆</p>
       <h2 class="section-heading">考古題</h2>

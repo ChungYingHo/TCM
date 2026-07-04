@@ -57,7 +57,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 - 用「**考前 30 秒速查＋忘光的初學者**」雙視角，整篇讀一遍：揪出敘事贅句、未定義術語、前向引用、分號串、講一半的句子、缺單位——**一次全修**（同類問題別被抓第二次）。
 
 ### 9. 註冊 + 回報
-- `src/models/notes.ts` 加 `NOTES` entry：`subject`、`tags`、`desc`。
+- `src/models/notes.ts` 加 `NOTES` entry：`subject`、`tags`、`desc`、`group`（**大分類/章**：把相關筆記歸同一標題下，如 `細胞學`／`量子論與原子結構`／`基礎化學`；/notes 依 group 分組顯示，見 `noteGroupsIn`）。
 - **本篇標籤＝認領標籤**（同一字串用於 `tags`／`NoteStats tag`／`RelatedQuestions tag`／被認領題的 `concept_tag`，見附錄 D）；`taxonomy.ts` 要有這個標籤。
 - **排序未經 Aira 允許不可擅自決定/更動。**
 - 工作摘要以「親愛的 Aira」開頭。
@@ -70,7 +70,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 
 **禁用語（出現＝退稿；2026-06-27 chem-quantum、2026-07-04 原子光譜/軌域 兩度因下列犯規被退稿，動筆與交稿前都逐條自檢）**：
 - 敘事性前言、故事（「這一節是…的源頭」「古典物理撞牆」）。
-- **開場「脈絡/roadmap」那一行也不要**（Aira 2026-07-04）：`NoteStats` 後**直接進 `## 一`**，連「脈絡：黑體→光電→…」都刪。
+- **開場「脈絡/roadmap」那一行也不要**（Aira 2026-07-04）：`NoteStats` 後**直接進 `## 一`**，連「脈絡：黑體→光電→…」或**跨篇導覽 blockquote**（如「細胞三部曲：一→二→三」）都刪——分組已由 notes.ts 的 `group` 呈現。
 - 元敘述開場白（「本篇考點集中…」「一次理清」「動手玩玩」）。
 - **任何引用大綱/課本/老師/照片的痕跡**（「大綱疑問…」「大綱提到」「照片裡那張」「老師用…」「課本合併寫法」「我打不出符號」「承接上一篇」）。大綱夾的問題要**乾淨地當內容回答**，不可寫「大綱問…」。你是在寫筆記，不是回覆大綱。
 - **標「考點/最常考/常考/超常考/(概念,考點少)/正是考點」**（Aira 2026-07-04）：Aira 放進大綱的**本來就都是考點**，不需你標，標了＝退稿。
@@ -90,8 +90,10 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 - **速查優先用表格、留白別擠**（Aira 2026-07-04）：能表格化就表格化，別堆項目符號牆。**「必背」只放一個 `Memorize`**（表格卡，每則「主題：內容」），不分兩塊、不放「解題方向」。
 - **大綱「例題指定」＝放在該段落當 inline 知識範例**（用 `WorkedExample`），不是丟最後例題區；自測練習才用互動 `ExampleQuestion`（選→對→解析，支援複選）。
 - 大綱說「圖解」就**做圖**（建小 Svelte 元件，`not-prose` 容器、Svelte 5 runes）。**底線＝元件一定要在 PDF/GoodNotes 顯示完整資訊**（Aira 幾乎都看 PDF，互動在那邊無效）。**互動與否其次、該不該互動由 Claude 自己判斷**——兩條路任選：①**全畫成靜態**（不加 `client:`、純 SSR、最省事、首選）；②**要互動也沒關係**，但**必須附 `print:block` 靜態完整版**（範本＝`ExampleQuestion`）。**唯一禁忌：資訊只藏在互動後面又 `print:hidden`**（PDF 整片空白，如舊版 `VseprShapes`／`SigFig` 之坑，見 memory `pdf-print-pagination`）。
+- **中英數字間距＋全形標點（新規範，Aira 2026-07-04）**：中文與英文/數字/符號之間，若非本來一個詞就**空一格**；中文散文一律**全形標點**（，。：、）。例 `微管(microtubule)25nm(最粗,tubulin α+β,中空)` → `微管 (microtubule) 25nm (最粗，tubulin α+β，中空)`。散文括號用全形（），`Memorize` 等密集標註沿用半形 `( )` 但前後空格＋內部逗號改全形。徹查 prose／Memorize／表格 cell／元件 props。
+- **生物筆記：名詞統整表（Aira 2026-07-04）**：篇末（`## 考古題` 之前）放一張 `## 名詞統整` 三欄表（`英文（縮寫）｜中文｜一句話`），把整篇專有名詞一次列出（生物多是**專有名詞不熟、非觀念不熟**）。包在 `overflow-x-auto print:overflow-visible`、PDF 會印出。範本＝bio-cell-1/2/3。
 
-**MDX 陷阱**：散文比較符號用 `&lt;`/`&gt;`（裸 `<字母` 會被當 JSX → SSR 500）；display math `$$` 獨立成行；含狀態/箭頭/電荷的化學式用 mhchem `\ce{}`，簡單下標用 Unicode。
+**MDX 陷阱**：散文比較符號用 `&lt;`/`&gt;`（裸 `<字母` 會被當 JSX → SSR 500）；display math `$$` 獨立成行；含狀態/箭頭/電荷的化學式用 mhchem `\ce{}`，簡單下標用 Unicode；**`##`/`###` 標題內不放 KaTeX `$...$`**（NoteToc 會把它疊成「RRR」重複字，2026-07-04 修）——標題的符號改用純 Unicode（R、M、ΔS）。
 
 ---
 
@@ -132,7 +134,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
    - `src/models/taxonomy.ts` 加 `{ tag:'本篇標籤', slug:'<src/pages id>', short:'…', claimed: true }`——**`claimed: true` 必加**（讓 `taxonomy.test` 改驗 `notes.ts`、不綁 deprecated 筆記）。
    - `src/models/solveTemplates.ts` 加 `'本篇標籤': [...3–4 步解題方向...]`（否則 `taxonomy.test` #7「每 tag 要解題步驟」失敗）。
    - `src/models/notes.ts` 該篇 `tags: ['本篇標籤']`。
-   - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、**篇末必放考古題區**（`## 考古題` ＋ `<RelatedQuestions tag="本篇標籤" limit={10} client:load />`，包在 `<div class="print:hidden">…</div>`）。題庫不足 10 就全放、0 題會自動顯示「尚未考過」。
+   - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、**篇末必放考古題區**（`## 考古題` ＋ `<RelatedQuestions tag="本篇標籤" limit={10} client:load />`）。**2026-07-04 起考古題會印進 PDF**（`QuestionCard` 內建 `hidden print:block` 靜態版：題幹圖＋選項＋正解＋詳解），故 `## 考古題` **不再包 `print:hidden`**。題庫不足 10 就全放、0 題會自動顯示「尚未考過」。
    - **工具頁（.astro，如週期表/胺基酸）也當正常筆記**：在 `<NotePager />` 前加「**例題**」section（`ExampleQuestion` 自測題、`client:visible`）＋「**考古題**」section（`RelatedQuestions` limit 10、`client:load`），且 `page-kicker` 寫成 `筆記 · <本篇標籤>`（這類頁用 `Layout` 非 `NoteLayout`，kicker 是寫死的要手動改）。即「claude 例題＋考古題」兩區跟 prose 筆記一致。
 5. `cd pipeline && python -m retag` 重生 `src/data/<school>.json`＋index → **綠燈全跑**：`vitest`(含 taxonomy.test)、`cd pipeline && python -m pytest`、`npx astro check`、該篇 `fetch /<slug>` render 200。備份 `pipeline/overrides/concept_tags.json` 後再動。
 
