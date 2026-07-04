@@ -8,8 +8,10 @@ import AskAiSelection from '@/components/common/AskAiSelection.svelte'
 interface Props {
   title?: string
   gated?: boolean
+  wide?: boolean
 }
-const { title = 'TCM 考古題', gated = true } = Astro.props
+const { title = 'TCM 考古題', gated = true, wide = false } = Astro.props
+const mainW = wide ? 'max-w-6xl' : 'max-w-5xl'
 ---
 
 <!doctype html>
@@ -54,10 +56,10 @@ const { title = 'TCM 考古題', gated = true } = Astro.props
           <BottomNav />
           <SyncBoot client:load />
           <AskAiSelection client:load />
-          <main class="mx-auto w-full max-w-5xl px-4 pt-6 pb-24 sm:px-6 sm:pt-10 lg:pb-10">
+          <main class={`mx-auto w-full ${mainW} px-4 pt-6 pb-24 sm:px-6 sm:pt-10 lg:pb-10`}>
             <slot />
           </main>
-          <footer class="mx-auto hidden w-full max-w-5xl px-4 pb-8 sm:px-6 lg:block">
+          <footer class={`mx-auto hidden w-full ${mainW} px-4 pb-8 sm:px-6 lg:block`}>
             <p class="border-t border-base-300 pt-5 text-center text-xs tracking-[0.18em] text-base-content/35">
               日拱一卒 · 功不唐捐
             </p>

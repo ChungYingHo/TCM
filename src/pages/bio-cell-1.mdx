@@ -5,8 +5,6 @@ summary: 細胞學說與所有細胞的共同特徵、看細胞的工具（光�
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import KeyPoints from '@/components/notes/KeyPoints.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
@@ -56,9 +54,9 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 | 顯微鏡 | 成像 | 解析度 | 看得到 ＆ 特點 |
 |--------|------|--------|----------------|
-| **光學 LM**（light） | 可見光穿透 | 約 **0.2 µm** | 細胞、核、粒線體、細菌；**可看活細胞** |
-| **電子 SEM**（scanning） | 電子束掃**表面** | 約 2 nm | **表面立體形貌**；只能看死樣本 |
-| **電子 TEM**（transmission） | 電子束**穿透**切片 | 約 2 nm | **內部超微剖面**；只能看死樣本 |
+| **光學 LM**（light） | 可見光穿透 | 約 **0.2 µm** | 細胞、核、粒線體、細菌、**可看活細胞** |
+| **電子 SEM**（scanning） | 電子束掃**表面** | 約 2 nm | **表面立體形貌**、只能看死樣本 |
+| **電子 TEM**（transmission） | 電子束**穿透**切片 | 約 2 nm | **內部超微剖面**、只能看死樣本 |
 | **共軛焦 confocal** | 雷射＋**針孔** | 光學等級 | 針孔擋掉焦外散光 → **光學切片**疊成 3D |
 
 </div>
@@ -107,7 +105,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 |---|---|---|
 | 物種 | 細菌、古菌 | 原生生物、真菌、植物、動物 |
 | 大小 | 小（1–5 µm） | 大（10–100 µm，約為原核 10 倍） |
-| 細胞核 | **無**膜性核；DNA 在**類核區**（nucleoid） | **有**膜性細胞核 |
+| 細胞核 | **無**膜性核，DNA 在**類核區**（nucleoid） | **有**膜性細胞核 |
 | 膜性胞器 | **無** | **有** |
 | DNA 位置 | 類核 ＋ 質體（plasmid） | 細胞核為主，**另在粒線體、葉綠體** |
 | DNA 形狀 | **環狀**、裸露 | **線狀**、纏**組蛋白**（histone） |
@@ -118,7 +116,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 - 可**獨立複製**。
 - 攜帶非必需但有用的基因（**抗藥性**、毒力、特殊代謝）。
-- 能在細菌間**傳遞**；基因工程拿它當**載體（vector）** 送基因。
+- 能在細菌間**傳遞**。基因工程拿它當**載體（vector）** 送基因。
 
 </Supplement>
 
@@ -137,7 +135,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 - **二分裂（binary fission）**：複製環狀 DNA、一分為二，快速增殖。
 - **細胞壁 ＝ 肽聚醣（peptidoglycan）**：糖鏈被短胜肽**交聯**成網。
-- **線毛（pili）** 附著與接合傳遞質體；**鞭毛（flagella）** 運動。兩者常是**毒力因子（virulence factor）**。
+- **線毛（pili）** 附著與接合傳遞質體。**鞭毛（flagella）** 運動。兩者常是**毒力因子（virulence factor）**。
 
 **青黴素（penicillin）為何殺菌又不傷人（常考）**：
 
@@ -149,26 +147,14 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 <Memorize client:visible
   items={[
-    "所有細胞共同特徵：細胞膜(plasma membrane)、細胞質液(cytosol)、DNA、核糖體(ribosome)。原核 vs 真核差在「DNA 有沒有被膜包成核 + 有沒有膜性胞器」。",
-    "光學顯微鏡(LM)解析度極限約 0.2 µm（看得到細胞/核/粒線體/細菌）；電子顯微鏡(EM)好約 100 倍（看核糖體/膜/病毒）。SEM 看表面立體、TEM 看內部剖面、共軛焦(confocal)用針孔做光學切片。",
-    "原核(prokaryote)：1–5µm、環狀裸露DNA在類核(nucleoid)+質體(plasmid)、二分裂、壁為肽聚醣(青黴素抑制交聯；古菌偽肽聚醣故無效)。真核(eukaryote)：約大10倍、線狀DNA纏組蛋白、有膜性胞器。",
-    "雙層膜胞器＝核、粒線體、葉綠體，三者都有自己的 DNA → 內共生(endosymbiosis)證據（雙層膜、環狀DNA、70S核糖體、二分裂）。"
-  ]}
-/>
-
-<KeyPoints client:visible
-  items={[
-    "放大率(magnification) ≠ 解析度(resolution)：解析度才是清不清楚的關鍵，<b>數值越小越清晰</b>。油鏡因 NA 大而比乾鏡清楚。",
-    "電子顯微鏡(EM)解析度雖高，但<b>只能看死樣本</b>（須真空）；要看活細胞得用光學顯微鏡(LM)。",
-    "質體(plasmid)是<b>主染色體以外</b>的小環狀 DNA、可獨立複製與傳遞；別當成細菌的主基因體。"
-  ]}
-/>
-
-<SolveApproach client:visible
-  steps={[
-    "顯微鏡題：要『表面立體』選 SEM、要『內部超微』選 TEM；要『分辨兩點』比解析度（數值小者佳）；放大率高 ≠ 清楚。",
-    "原核 vs 真核：先問『DNA 有沒有被膜包成核、有沒有膜性胞器』——兩者皆有→真核，皆無→原核。",
-    "細胞分離題：差速離心由慢到快，沉澱順序＝核 → 粒線體/葉綠體 → 內質網/核糖體（大重者先沉）。"
+    "共同特徵：細胞膜(plasma membrane)、細胞質液(cytosol)、DNA、核糖體(ribosome)。原核 vs 真核差在「DNA 有沒有被膜包成核 + 有沒有膜性胞器」。",
+    "顯微鏡：光學(LM)解析度極限約 0.2 µm（看得到細胞/核/粒線體/細菌），電子(EM)好約 100 倍（看核糖體/膜/病毒）。SEM 看表面立體、TEM 看內部剖面、共軛焦(confocal)用針孔做光學切片。",
+    "放大率≠解析度：放大率(magnification)高不等於清楚，解析度(resolution)才是關鍵，<b>數值越小越清晰</b>（油鏡因 NA 大而比乾鏡清楚）。",
+    "EM 只能看死樣本：電子顯微鏡解析度雖高但須真空，<b>只能看死樣本</b>，要看活細胞得用光學顯微鏡(LM)。",
+    "原核 prokaryote：1–5µm、環狀裸露DNA在類核(nucleoid)+質體(plasmid)、二分裂、壁為肽聚醣（青黴素抑制交聯，古菌偽肽聚醣故無效）。",
+    "真核 eukaryote：約大10倍、線狀DNA纏組蛋白、有膜性胞器。",
+    "質體 plasmid：<b>主染色體以外</b>的小環狀 DNA，可獨立複製與傳遞，別當成細菌的主基因體。",
+    "雙層膜胞器：＝核、粒線體、葉綠體，三者都有自己的 DNA → 內共生(endosymbiosis)證據（雙層膜、環狀DNA、70S核糖體、二分裂）。"
   ]}
 />
 
@@ -199,7 +185,7 @@ import Supplement from '@/components/notes/Supplement.astro'
   steps={[
     "清晰與否看『解析度』不是放大率，(A) 錯。",
     "光學顯微鏡解析度約 0.2 µm，看不清約 25 nm 的核糖體，(B) 錯。",
-    "EM 樣本須真空處理、無法看活細胞，(D) 錯；SEM 掃表面、TEM 看內部 → (C) 正確。"
+    "EM 樣本須真空處理、無法看活細胞，(D) 錯。SEM 掃表面、TEM 看內部 → (C) 正確。"
   ]}
 />
 
@@ -216,7 +202,7 @@ import Supplement from '@/components/notes/Supplement.astro'
   steps={[
     "原核 DNA 是<b>環狀裸露</b>、纏組蛋白的是真核，(A) 錯。",
     "古菌的壁是<b>偽肽聚醣</b>，青黴素對它無效，(C) 錯。",
-    "真核 DNA 還在粒線體、葉綠體，(D) 錯；雙層膜+自有DNA+70S核糖體+二分裂 → 內共生 → (B)。"
+    "真核 DNA 還在粒線體、葉綠體，(D) 錯。雙層膜+自有DNA+70S核糖體+二分裂 → 內共生 → (B)。"
   ]}
 />
 

@@ -42,6 +42,7 @@
     <span class="font-display font-bold">氫原子能階・電子跳階</span>
   </div>
 
+  <div class="print:hidden">
   <!-- 能階圖（依真實能量比例；越上面越擠＝游離極限） -->
   <div class="relative mr-1 h-80 rounded-lg bg-gradient-to-b from-primary/5 to-base-200/40">
     <!-- 游離極限 n→∞、E=0 -->
@@ -107,13 +108,43 @@
         {#if !absorb}
           電子落到 n={lower} → <b>{series.name}</b>，屬<b>{series.band}</b>。
         {:else}
-          吸收後跳到較高層；其逆向（放光）落到 n={lower} 屬<b>{series.band}</b>。
+          吸收後跳到較高層，其逆向（放光）落到 n={lower} 屬<b>{series.band}</b>。
         {/if}
       </div>
     {/if}
   </div>
   <p class="mt-2 text-xs leading-relaxed text-base-content/70">
-    看圖就懂：能階<b>越往下擠得越開</b>（Eₙ 與 n² 成反比）。所以相鄰兩層裡 <b class="text-primary">n=1↔2 的 ΔE 最大</b>，
-    n 越大、相鄰兩層越靠近、差越小（頂端那兩條淡線就是 n=4、5，已快並到游離線）。把電子拉到無限遠（n=∞、E=0）所需＝<b>游離能</b>。
+    能階<b>越往下擠得越開</b>（Eₙ 與 n² 成反比），相鄰兩層裡 <b class="text-primary">n=1↔2 的 ΔE 最大</b>。n 越大、相鄰兩層越靠近、差越小（頂端兩條淡線是 n=4、5，已快並到游離線）。把電子拉到無限遠（n=∞、E=0）所需＝<b>游離能</b>。
   </p>
+  </div>
+
+  <!-- PDF 靜態：氫原子能階＋光譜系列（互動版在 print 會被隱藏） -->
+  <div class="hidden print:block">
+    <svg viewBox="0 0 300 200" class="w-full" role="img" aria-label="氫原子能階與光譜系列">
+      <line x1="40" y1="18" x2="270" y2="18" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3 2" class="text-base-content/40" />
+      <text x="274" y="21" class="fill-base-content/50 text-[9px]">n=∞ (0 eV)</text>
+      <line x1="40" y1="24.3" x2="230" y2="24.3" stroke="currentColor" stroke-width="1" class="text-base-content/50" />
+      <text x="34" y="27" text-anchor="end" class="fill-base-content/50 text-[9px]">5</text>
+      <line x1="40" y1="27.9" x2="230" y2="27.9" stroke="currentColor" stroke-width="1" class="text-base-content/50" />
+      <text x="34" y="30.5" text-anchor="end" class="fill-base-content/50 text-[9px]">4</text>
+      <line x1="40" y1="35.6" x2="240" y2="35.6" stroke="currentColor" stroke-width="1" class="text-base-content/60" />
+      <text x="34" y="38" text-anchor="end" class="fill-base-content/60 text-[9px]">3</text>
+      <line x1="40" y1="57.5" x2="200" y2="57.5" stroke="currentColor" stroke-width="1.2" class="text-base-content/70" />
+      <text x="34" y="60" text-anchor="end" class="fill-base-content/70 text-[9px]">2</text>
+      <line x1="40" y1="176" x2="270" y2="176" stroke="currentColor" stroke-width="1.4" class="text-primary" />
+      <text x="34" y="179" text-anchor="end" class="fill-primary text-[9px] font-bold">1</text>
+      <line x1="95" y1="35.6" x2="95" y2="173" stroke="#7c3aed" stroke-width="1.6" />
+      <polygon points="92,171 98,171 95,176" fill="#7c3aed" />
+      <text x="95" y="192" text-anchor="middle" fill="#7c3aed" class="text-[8px] font-bold">Lyman 紫外</text>
+      <line x1="165" y1="27.9" x2="165" y2="55" stroke="#16a34a" stroke-width="1.6" />
+      <polygon points="162,53 168,53 165,57.5" fill="#16a34a" />
+      <text x="165" y="72" text-anchor="middle" fill="#16a34a" class="text-[8px] font-bold">Balmer 可見</text>
+      <line x1="228" y1="24.3" x2="228" y2="33" stroke="#dc2626" stroke-width="1.6" />
+      <polygon points="225,31 231,31 228,35.6" fill="#dc2626" />
+      <text x="228" y="48" text-anchor="middle" fill="#dc2626" class="text-[8px] font-bold">Paschen 紅外</text>
+    </svg>
+    <p class="mt-1 text-xs leading-relaxed text-base-content/70">
+      能階越往下（n 越小）間距越開，Eₙ 與 n² 成反比。電子落回 n=1 為 Lyman（紫外）、落回 n=2 為 Balmer（可見）、落回 n=3 為 Paschen（紅外）。n=1↔2 的 ΔE 最大。
+    </p>
+  </div>
 </div>

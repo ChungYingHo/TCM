@@ -1,0 +1,225 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 原子光譜與波耳模型
+summary: 連續/線/吸收光譜、焰色試驗、氫原子發射光譜與系列、能量-頻率-波長計算(H 與類氫)、波耳模型能階與半徑。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import FlameTest from '@/components/notes/FlameTest.svelte'
+import EnergyLevels from '@/components/notes/EnergyLevels.svelte'
+
+<NoteStats tag="原子光譜" client:load />
+
+## 一、連續光譜、線光譜與吸收光譜
+
+**發射光譜（emission spectrum）**＝物質受激發後放出的光，經稜鏡分光得到的波長分布。依來源分三種：
+
+| 光譜種類 | 怎麼產生 | 長相 |
+|----------|----------|------|
+| **連續光譜**（continuous spectrum） | 高溫**緻密**物體（白熾固體/液體，如鎢絲燈泡）放出**所有波長** | 紅到紫不間斷的色帶 |
+| **線光譜**（line spectrum，發射光譜） | **稀薄氣態原子**受激發，電子回落只放**特定波長** | 黑底上幾條分立亮線 |
+| **吸收光譜**（absorption spectrum） | 連續光**通過冷氣態原子**，特定波長被吸收 | 連續色帶上幾條暗線 |
+
+- 每種元素的線光譜是**獨一無二的指紋**。同一元素的吸收線與發射線出現在**相同波長**（同一組能階差，吸收是低到高、發射是高到低）。
+- 緻密高溫物體給連續光譜、稀薄氣態原子給線光譜。連續光譜來自**大量原子彼此擠壓、能階連成一片**，不是單一原子的能階變連續。
+
+### 焰色試驗（flame test）
+
+火焰加熱金屬鹽時，電子吸能躍遷成激發態，落回基態時放出**特定波長**的光，組成焰色。金屬離子放光多落在**可見光區**（肉眼可辨、可鑑定），非金屬多落在可見光區外。
+
+<FlameTest />
+
+| 族 | 離子與焰色 |
+|----|-----------|
+| **IA 鹼金屬** | $\ce{Li+}$ 深紅、$\ce{Na+}$ 金黃、$\ce{K+}$ 淺紫、$\ce{Rb+}$ 紫、$\ce{Cs+}$ 藍 |
+| **IIA 鹼土金屬** | $\ce{Mg^2+}$ 強烈白光、$\ce{Ca^2+}$ 橘紅、$\ce{Sr^2+}$ 磚紅、$\ce{Ba^2+}$ 黃綠 |
+
+> **記憶**　IA 由上而下（Li→Cs）焰色**紅→黃→紫→紫→藍**。$\ce{Na+}$ 金黃最強，微量鈉污染就蓋掉其他色，故觀察 $\ce{K+}$ 淺紫要透過**藍鈷玻璃**濾掉黃光。
+
+## 二、氫原子發射光譜
+
+氫原子受激發後放出分立線光譜。電子從高能階 $n$ 落回低能階 $m$，**落點 $m$ 決定系列與波段**：
+
+| 落回 $m$ | 系列 | 波段 |
+|:---:|------|------|
+| 1 | 來曼（Lyman） | 紫外光 |
+| 2 | 巴耳麥（Balmer） | **可見光** |
+| 3 | 帕申 | 紅外光 |
+| 4 | 布拉克 | 紅外光 |
+| 5 | 蒲芬德 | 紅外光 |
+
+- **落回 $m=2$（Balmer）是唯一在可見光的系列**。可見四線：Hα 656 nm 紅、Hβ 486 nm 藍綠、Hγ 434 nm 紫、Hδ 410 nm 紫。
+- 電子低到高能階要**吸收**光子、高到低則**放出**光子，兩者波長相同、方向相反。
+
+<EnergyLevels client:visible />
+
+## 三、能量、頻率、波長的計算
+
+電子在能階 $m$（低）與 $n$（高）之間躍遷。定義：$m$＝較低能階主量子數、$n$＝較高能階主量子數（$m \lt n$）、$Z$＝核電荷數（原子序）。
+
+**由 $n$ 變化看規律**（氫原子，電子從各能階游離到 $n=\infty$）：
+
+| 躍遷 | 能量 $\Delta E$ | 頻率 $\nu$ | 波長 $\lambda$ |
+|------|------|------|------|
+| $1\to\infty$ | $13.6$ eV | $3.3\times10^{15}$ Hz | $90$ nm |
+| $2\to\infty$ | $3.40$ eV | $8.25\times10^{14}$ Hz | $360$ nm |
+| $3\to\infty$ | $1.51$ eV | $3.67\times10^{14}$ Hz | $810$ nm |
+
+規律：$m$ 越大，$\tfrac1{m^2}$ 越小，能量與頻率 $\propto\tfrac1{m^2}$ 遞減、波長 $\propto m^2$ 遞增。
+
+**氫原子（$Z=1$）四種單位公式**：
+
+| 要算什麼 | 公式（帶單位） |
+|----------|---------------|
+| 能量（J/個） | $\Delta E = 2.178\times10^{-18}\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{J}$ |
+| 能量（eV/個） | $\Delta E = 13.6\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{eV}$ |
+| 能量（kJ/mol） | $\Delta E = 1311.6\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{kJ/mol}$ |
+| 能量（kcal/mol） | $\Delta E = 313.6\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{kcal/mol}$ |
+| 頻率（Hz） | $\nu = 3.3\times10^{15}\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{Hz}$ |
+| 波長（nm） | $\lambda = \dfrac{90}{\frac{1}{m^2}-\frac{1}{n^2}}\ \text{nm}$ |
+
+**類氫離子（$Z\ne1$，如 $\ce{He+}$、$\ce{Li^2+}$）**：上面每一條都乘一個 $Z^2$。
+
+| 要算什麼 | 公式（帶單位） |
+|----------|---------------|
+| 能量（J/個） | $\Delta E = 2.178\times10^{-18}\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{J}$ |
+| 能量（eV/個） | $\Delta E = 13.6\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{eV}$ |
+| 能量（kJ/mol） | $\Delta E = 1311.6\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{kJ/mol}$ |
+| 頻率（Hz） | $\nu = 3.3\times10^{15}\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)\ \text{Hz}$ |
+| 波長（nm） | $\lambda = \dfrac{90}{Z^2\left(\frac{1}{m^2}-\frac{1}{n^2}\right)}\ \text{nm}$ |
+
+<WorkedExample source="氫原子 Balmer Hα" answer="648 nm（紅光、可見光、Balmer 系列）" tags={["氫原子光譜", "波長計算"]}>
+
+**題目**　氫原子的電子由 $n=3$ 落到 $m=2$，放出光的波長約為多少？屬哪個系列、什麼顏色？
+
+**解**　落回 $m=2$，屬 Balmer 系列、可見光。用波長公式（$Z=1$），單位相消到只剩 nm：
+
+$$
+\lambda = \frac{90\ \text{nm}}{\dfrac{1}{2^2}-\dfrac{1}{3^2}} = \frac{90\ \text{nm}}{\dfrac{1}{4}-\dfrac{1}{9}} = \frac{90\ \text{nm}}{\dfrac{5}{36}} = 90\times\frac{36}{5}\ \text{nm} = 648\ \text{nm}
+$$
+
+即 Hα 紅線。躍遷差 $\left(\tfrac1{m^2}-\tfrac1{n^2}\right)$ 越小，$\lambda$ 越大、越偏紅。
+
+</WorkedExample>
+
+## 四、波耳氫原子模型
+
+**波耳模型（Bohr, 1913）**為解釋氫原子線光譜而提出，把電子想成在**固定半徑的圓形軌道**上繞核運行。
+
+- **定態（stationary state）**：電子只能待在特定半徑的軌道，在軌道上運行時**不輻射能量**。
+- **能量**（第 $n$ 層）：
+
+$$
+E_n = -2.178\times10^{-18}\,\frac{Z^2}{n^2}\ \text{J} = -13.6\,\frac{Z^2}{n^2}\ \text{eV}
+$$
+
+其中 $2.178\times10^{-18}$ J（$=13.6$ eV）是**氫原子基態的游離能**（把 $n=1$ 電子移到 $n=\infty$ 所需能量）。$\Delta E$ 公式就是兩層能量相減。
+
+- **軌道半徑**：
+
+$$
+r_n = n^2\,\frac{a_0}{Z},\qquad a_0 = 0.529\ \text{Å} = 5.29\times10^{-11}\ \text{m}
+$$
+
+$a_0$ 稱**波耳半徑（Bohr radius）**，即氫原子基態（$n=1,\,Z=1$）電子軌道半徑。
+
+- **能階特性**：$E_n$ 是負值。$n$ 越大 $E_n$ 越大（越接近 0，束縛越弱），且相鄰能階間距越密。$n=1$ 能量最低、最穩定（基態）。
+- **只適用單電子系統**：H、$\ce{He+}$、$\ce{Li^2+}$ 這類類氫。多電子原子因電子間排斥而失效。
+- 能量與半徑都跟 $Z$ 走：$\ce{He+}$（$Z=2$）基態游離能 $=13.6\times2^2=54.4$ eV（H 的 4 倍），軌道半徑則是 H 的一半。
+
+<Memorize client:visible
+  items={[
+    "三種光譜：連續(緻密熱體，全波長)、線光譜(稀薄氣態原子，分立亮線)、吸收(冷氣體，連續帶上暗線)。同元素的吸收線波長＝發射線波長。",
+    "焰色：IA 由上而下 Li深紅→Na金黃→K淺紫→Rb紫→Cs藍。IIA 為 Mg白、Ca橘紅、Sr磚紅、Ba黃綠。Na金黃最強，觀察 K 要用藍鈷玻璃濾黃。",
+    "光譜系列：看電子<b>落回</b>的低能階 m。m=1 來曼<b>紫外</b>、m=2 巴耳麥<b>可見</b>、m=3/4/5 皆<b>紅外</b>。問可見譜線一律鎖 Balmer。",
+    "能量式：ΔE＝13.6·Z²(1/m²−1/n²) eV＝2.178×10⁻¹⁸·Z²(…) J＝1311.6·Z²(…) kJ/mol＝313.6·Z²(…) kcal/mol。",
+    "頻率波長：ν＝3.3×10¹⁵·Z²(1/m²−1/n²) Hz、λ＝90/[Z²(1/m²−1/n²)] nm。四者是<b>同一式換常數</b>，核心 (1/m²−1/n²)·Z²。",
+    "n 的規律：游離到 n=∞ 時，m 越大，能量與頻率 ∝1/m² 遞減、波長 ∝m² 遞增。",
+    "波耳量：Eₙ＝−13.6·Z²/n² eV(負值，n 越大越接近 0、束縛越弱)、rₙ＝n²a₀/Z、a₀＝0.529 Å＝5.29×10⁻¹¹ m。游離＝從某 n 移到 n=∞。",
+    "類氫離子：先抓 Z，能量∝Z²、半徑∝1/Z，套同一式。He⁺(Z=2)基態游離能＝13.6×4＝54.4 eV(H的4倍)、半徑為 H 的一半。",
+    "連續光譜：不代表能階連續，它來自大量原子交互作用把能階撐成連續帶。"
+  ]}
+/>
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="關於連續光譜、線光譜與吸收光譜，下列敘述何者<b>正確</b>？"
+  options={[
+    "白熾鎢絲燈泡放出分立的線光譜",
+    "稀薄氫氣受激發放出連續光譜",
+    "同一元素的吸收線與發射線出現在相同波長",
+    "吸收光譜是黑底上的分立亮線"
+  ]}
+  answer="(C) 同一元素的吸收線與發射線出現在相同波長"
+  steps={[
+    "鎢絲燈泡是緻密熱固體，給<b>連續</b>光譜，(A) 錯。",
+    "稀薄氣態原子能階分立，給<b>線</b>光譜，(B) 錯。",
+    "吸收與發射對應同一組能階差，只是方向相反，波長相同，(C) 對。",
+    "吸收光譜是連續色帶上的<b>暗</b>線。黑底亮線才是發射(線)光譜，(D) 錯。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="氫原子發射光譜中，落在<b>可見光</b>區的譜線屬於哪一系列？"
+  options={["來曼 Lyman（n→1）", "巴耳麥 Balmer（n→2）", "帕申 Paschen（n→3）", "布拉克 Brackett（n→4）"]}
+  answer="(B) 巴耳麥 Balmer（n→2）"
+  steps={[
+    "系列看電子<b>落回</b>的低能階：m=1 紫外、m=2 可見、m≥3 紅外。",
+    "落回 m=2 是 Balmer 系列，落在可見光(Hα 紅、Hβ 藍綠)，(B)。",
+    "Lyman 落回 n=1 是紫外、Paschen 落回 n=3 是紅外。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="氫原子電子由 n=4 落到 m=2，放出光的波長約為？（λ＝90÷(1/m²−1/n²) nm）"
+  options={["480 nm", "656 nm", "122 nm", "1875 nm"]}
+  answer="(A) 480 nm"
+  steps={[
+    "落回 m=2 是 Balmer(可見)。1/2²−1/4²＝1/4−1/16＝<b>3/16</b>。",
+    "λ＝90÷(3/16)＝90×16/3＝<b>480 nm</b>(藍綠 Hβ)。",
+    "656 nm 是 n=3→2、122 nm 是 Lyman、1875 nm 是 Paschen，皆非。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="He⁺（Z=2）為類氫離子，其基態（n=1）的游離能約為氫原子的幾倍？"
+  options={["2 倍", "4 倍", "8 倍", "相同"]}
+  answer="(B) 4 倍"
+  steps={[
+    "類氫游離能 ∝ Z²(同一 n)。",
+    "He⁺ 的 Z=2，Z²＝4，游離能是 H 的 <b>4 倍</b>(13.6×4＝54.4 eV)。",
+    "半徑則 ∝1/Z，He⁺ 軌道半徑是 H 的一半。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="關於波耳氫原子模型，下列何者<b>錯誤</b>？"
+  options={[
+    "電子在定態軌道上運行時不輻射能量",
+    "能階能量 Eₙ 為負值，n 越大能量越接近 0",
+    "此模型可準確描述多電子原子（如碳）的光譜",
+    "電子由高能階落到低能階時放出光子"
+  ]}
+  answer="(C) 此模型可準確描述多電子原子（如碳）的光譜"
+  steps={[
+    "波耳只適用<b>單電子</b>系統(H、He⁺、Li²⁺)，多電子因電子間排斥而失效，(C) 錯(本題選它)。",
+    "定態不輻射、Eₙ＝−13.6Z²/n²(負值，n↑越接近0)、高到低放光，(A)(B)(D) 皆對。"
+  ]}
+/>
+
+<div class="print:hidden">
+
+## 考古題
+
+<RelatedQuestions tag="原子光譜" limit={10} offset={0} client:load />
+
+</div>

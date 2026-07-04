@@ -24,7 +24,7 @@
   const mlText = $derived(ml > 0 ? `+${ml}` : `${ml}`)
 </script>
 
-<div class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+<div class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5 print:hidden">
   <div class="mb-3 flex items-center gap-2">
     <span aria-hidden="true">🏠</span>
     <span class="font-display font-bold">電子的住址：四個量子數</span>
@@ -102,7 +102,7 @@
     </div>
     <p class="text-sm leading-relaxed">
       這四碼指到：<b class="text-primary">{subLabel}</b> 副層（{SUB_NAME[l]}）中、方向 m<sub>ℓ</sub>={mlText} 的那條軌域，
-      <b>{msLabel}</b> 的電子 —— 唯一對應一個電子的位置。
+      <b>{msLabel}</b> 的電子，唯一對應一個電子的位置。
     </p>
   </div>
 
@@ -110,6 +110,6 @@
   <div class="mt-3 rounded-lg border border-accent/30 bg-accent/10 p-3 text-sm leading-relaxed">
     <span class="font-bold text-accent">🔑 包立不相容＝四碼不能全同</span><br />
     同一原子裡，<b>沒有任何兩個電子的 (n, ℓ, m<sub>ℓ</sub>, m<sub>s</sub>) 會完全一樣</b>。
-    所以每條軌域（前三碼相同）最多住 <b>2 個</b>電子，靠第四碼 m<sub>s</sub>（一個 ↑、一個 ↓）區分 —— 上鋪下鋪各一人，不能再擠。
+    所以每條軌域（前三碼相同）最多住 <b>2 個</b>電子，靠第四碼 m<sub>s</sub>（一個 ↑、一個 ↓）區分，上鋪下鋪各一人，不能再擠。
   </div>
 </div>

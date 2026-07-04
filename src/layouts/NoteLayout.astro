@@ -1,19 +1,23 @@
 ---
 import Layout from './Layout.astro'
 import NoteHeader from '@/components/notes/NoteHeader.astro'
+import NoteToc from '@/components/notes/NoteToc.astro'
 import NotePager from '@/components/notes/NotePager.astro'
 
-const { frontmatter } = Astro.props
+const { frontmatter, headings } = Astro.props
 ---
 
-<Layout title={`${frontmatter.title} · TCM 題庫`}>
+<Layout title={`${frontmatter.title} · TCM 題庫`} wide>
   <NoteHeader title={frontmatter.title}>
     {frontmatter.summary && <p class="page-desc max-w-2xl">{frontmatter.summary}</p>}
   </NoteHeader>
 
-  <article class="prose max-w-none">
-    <slot />
-  </article>
+  <div class="note-body-grid lg:grid lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-10 xl:grid-cols-[minmax(0,1fr)_15rem]">
+    <article class="prose min-w-0 max-w-none">
+      <slot />
+    </article>
+    <NoteToc headings={headings} />
+  </div>
 
   <NotePager />
 </Layout>

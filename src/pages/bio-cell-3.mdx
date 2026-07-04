@@ -5,8 +5,6 @@ summary: 細胞骨架三大纖維（微管・微絲・中間絲）的直徑、�
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import KeyPoints from '@/components/notes/KeyPoints.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
@@ -23,7 +21,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 - **支撐細胞、維持形狀**。
 - **當胞器與酵素停靠、附著的位置**。
 - **動態**：拆解再組裝以改變形狀。
-- **配合運動蛋白（motor protein）運輸**：**小泡（內膜系統）** 把運動蛋白當「腳」沿骨架行走（**耗 ATP**）——裝**神經傳遞物質（neurotransmitter）** 的**突觸小泡（synaptic vesicle）** 沿軸突（axon）微管運到末梢；ER→Golgi 小泡也沿骨架走。
+- **配合運動蛋白（motor protein）運輸**：**小泡（內膜系統）** 把運動蛋白當「腳」沿骨架行走（**耗 ATP**）——裝**神經傳遞物質（neurotransmitter）** 的**突觸小泡（synaptic vesicle）** 沿軸突（axon）微管運到末梢。ER→Golgi 小泡也沿骨架走。
 - **吞噬作用（phagocytosis）** 時操控細胞膜內凹成**食泡（food vacuole）**。
 - **機械轉導（mechanotransduction）＝把機械刺激（外力）轉成細胞反應**：外力經 ECM → 整聯蛋白（integrin） → 骨架 → 核，改變基因表現與活性。
 
@@ -47,7 +45,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 ### A. 微管（microtubule）
 
-- **構成**：最粗（25 nm）、**中空管**；由**微管蛋白（tubulin）** 的 α＋β 雙體堆疊而成。
+- **構成**：最粗（25 nm）、**中空管**。由**微管蛋白（tubulin）** 的 α＋β 雙體堆疊而成。
 - **「正（＋）端」增長或縮短都比「負（−）端」快**。
 - **當運動蛋白的軌道**：**運動蛋白（motor protein）** 沿微管「行走」（耗 ATP），把**胞器、小泡運送到定位**。
 - 分裂時組成**紡錘絲（spindle fiber，也是微管）** 拉染色體。
@@ -56,8 +54,8 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 #### ① 中心體（centrosome）
 
-- **結構**：由**一對中心粒（centriole）** 構成；每個中心粒 ＝ **9 組三聯體微管（9×3）** 環繞而成（這就是中心體和微管的關係）。
-- **功能**：是**微管組織中心（MTOC）**，紡錘絲由此長出；動物細胞**分裂前中心粒先複製**。
+- **結構**：由**一對中心粒（centriole）** 構成。每個中心粒 ＝ **9 組三聯體微管（9×3）** 環繞而成（這就是中心體和微管的關係）。
+- **功能**：是**微管組織中心（MTOC）**，紡錘絲由此長出。動物細胞**分裂前中心粒先複製**。
 - 微管協助染色體排列**但非必要**——真菌與多數植物細胞**沒有中心體**、仍有健全微管。
 
 #### ② 纖毛（cilia）與鞭毛（flagella）
@@ -72,7 +70,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 - **先看懂橫切面的微管**：**雙體（doublet）＝2 根微管黏在一起**、**三聯體（triplet）＝3 根**、**單微管（singlet）＝1 根**。下面 9＋2／9×3／9＋0 就是在數「**外圈幾組、中間幾根**」。
 - **「9＋2」＝會動的纖毛／鞭毛軸絲**：外圈 **9 組雙體**圍一圈 ＋ 中央 **2 根單微管** → 寫成「9＋2」。外圈的**動力蛋白（dynein）** 行走、讓相鄰雙體互相滑動 → 整根彎曲擺動。
 - **「9＋0」＝不會動的纖毛**：外圈 9 組還在、但**中央 2 根沒了**（如腎小管的初級纖毛）。
-- **「9×3」＝中心粒／基體（basal body）**：外圈 **9 組三聯體、中間沒有**。基體就是纖毛／鞭毛根部的中心粒；受精時精子基體進卵 → 成受精卵中心粒。
+- **「9×3」＝中心粒／基體（basal body）**：外圈 **9 組三聯體、中間沒有**。基體就是纖毛／鞭毛根部的中心粒。受精時精子基體進卵 → 成受精卵中心粒。
 
 | | **中心粒／基體**（9×3） | **纖毛／鞭毛軸絲**（9+2） |
 |---|---|---|
@@ -85,14 +83,14 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 真核細胞**微管的「組裝起點」**（微管從這裡開始長出來）。**MTOC 有兩種**：
 
-- **中心體（centrosome）**：動物細胞主要的 MTOC；長出**紡錘體**（分裂時拉染色體）與細胞質微管。
-- **基體（basal body）**：長在**纖毛／鞭毛根部**的 MTOC；纖毛／鞭毛的軸絲（9＋2）就是從它長出來的。
+- **中心體（centrosome）**：動物細胞主要的 MTOC。長出**紡錘體**（分裂時拉染色體）與細胞質微管。
+- **基體（basal body）**：長在**纖毛／鞭毛根部**的 MTOC。纖毛／鞭毛的軸絲（9＋2）就是從它長出來的。
 
-> **別搞混**：MTOC 指的是**中心體**和**基體**這兩個；**纖毛／鞭毛本身不是 MTOC**，它們是被基體「長出來的產物」。
+> **別搞混**：MTOC 指的是**中心體**和**基體**這兩個。**纖毛／鞭毛本身不是 MTOC**，它們是被基體「長出來的產物」。
 
 ### B. 微絲（microfilament，肌動蛋白絲）
 
-- **構成**：最細（7 nm）、**實心**；由**肌動蛋白（actin）** 兩股螺旋纏成；**所有真核細胞都有**。
+- **構成**：最細（7 nm）、**實心**。由**肌動蛋白（actin）** 兩股螺旋纏成。**所有真核細胞都有**。
 - **維持形狀**：**皮層微絲（cortical microfilament）** 在膜內側結成膠網。
 - **肌肉收縮**：actin 與**肌凝蛋白（myosin）** 互動（**肌絲滑動學說 sliding filament theory**）。
 - **微絨毛（microvilli）**：小腸上皮的指狀突起（內有 actin 束）→ **增加吸收面積**。
@@ -102,7 +100,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 ### C. 中間絲（intermediate filament）
 
-- **構成**：直徑 **8–12 nm**；由**角蛋白（keratin）** 等纖維蛋白組成。
+- **構成**：直徑 **8–12 nm**。由**角蛋白（keratin）** 等纖維蛋白組成。
 - **最穩定、最不易消失**：細胞死後仍在。
 - **固定胞器與核**：核膜內襯的**核纖層（nuclear lamina）** 就是中間絲。
 - 撐特殊形狀：**神經細胞軸突（axon）**——形狀靠中間絲（IF）、物質沿微管（MT）運輸。
@@ -128,7 +126,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 ### 細胞外基質（extracellular matrix，ECM）
 
-<Figure src="/notes/bio-cell/ecm.webp" alt="細胞外基質：膠原蛋白、蛋白聚醣複合體、纖連蛋白，以及跨膜的整聯蛋白連到細胞內微絲" caption="ECM 主成分為醣蛋白；整聯蛋白（integrin）跨膜，外接纖連蛋白與 ECM、內接微絲。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/ecm.webp" alt="細胞外基質：膠原蛋白、蛋白聚醣複合體、纖連蛋白，以及跨膜的整聯蛋白連到細胞內微絲" caption="ECM 主成分為醣蛋白。整聯蛋白（integrin）跨膜，外接纖連蛋白與 ECM、內接微絲。" source="Campbell 生物學・上冊" />
 
 - **意義**：動物細胞分泌到外面的網狀支持物，**相當於植物的細胞壁**（成分不同）。
 - **成分（醣蛋白為主）**：
@@ -140,7 +138,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 <Supplement title="植物細胞壁（對照 ECM）">
 
-主成分**纖維素（cellulose）**；由外到內三層：
+主成分**纖維素（cellulose）**。由外到內三層：
 
 - **中膠層（middle lamella）**：黏住相鄰細胞。
 - **初生細胞壁（primary wall）**：幼嫩、可伸展。
@@ -158,7 +156,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 | **胞橋小體**（desmosome） | 像**鉚釘**鉚牢、內接**中間絲**，**抗拉扯** | 皮膚、心肌 |
 | **裂隙接合**（gap junction） | 小通道（連接子 connexon），**離子／小分子直接互通** | 心肌同步收縮 |
 
-> **植物細胞沒有上面這三種動物連結**；植物改靠**胞間連絲（plasmodesmata）** 互通（見下）。
+> **植物細胞沒有上面這三種動物連結**。植物改靠**胞間連絲（plasmodesmata）** 互通（見下）。
 
 <Supplement title="胞間連絲 plasmodesmata（植物）">
 
@@ -181,29 +179,13 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 <Memorize client:visible
   items={[
-    "細胞骨架直徑：微管(microtubule)25nm(最粗,tubulin α+β,中空)、微絲(microfilament)7nm(最細,actin,實心)、中間絲(intermediate filament)8–12nm(keratin,最穩定)。",
-    "微管：紡錘絲、運輸軌道、纖毛鞭毛。微絲：肌肉收縮(actin+myosin)、胞質分裂分割溝、變形蟲偽足、微絨毛、胞質循流。中間絲：固定核(核纖層nuclear lamina)與胞器、軸突。",
-    "纖毛/鞭毛軸絲＝9+2(9對雙體+2中央,dynein驅動)；中心粒/基體(centriole/basal body)＝9×3(三聯體,無中央)。可動為9+2、不動纖毛為9+0。",
-    "ECM(extracellular matrix)：醣蛋白(膠原collagen/蛋白聚醣/纖連蛋白fibronectin)+整聯蛋白(integrin)跨膜連微絲；經 ECM→integrin→骨架→核 行機械轉導。",
-    "細胞連結：緊密接合(tight junction,防滲漏)、胞橋小體(desmosome,鉚釘接中間絲)、裂隙接合(gap junction,小分子直通)；植物用胞間連絲(plasmodesmata,相當於gap junction)。"
-  ]}
-/>
-
-<KeyPoints client:visible
-  items={[
-    "中心粒/基體是 <b>9×3 三聯體、無中央微管</b>；纖毛/鞭毛軸絲是 <b>9+2</b>。這是最常設的陷阱。",
-    "三大纖維直徑與組成別記反：微管 25nm/tubulin、微絲 7nm/actin、中間絲 8–12nm/keratin；最穩定的是中間絲。",
-    "胞橋小體接<b>中間絲</b>抗拉、整聯蛋白接<b>微絲</b>連ECM——兩個都接骨架但接的纖維不同。",
-    "植物特有：細胞壁、葉綠體、中央液胞、胞間連絲；動物特有/為主：中心體、發達溶體、ECM、三種細胞連結。"
-  ]}
-/>
-
-<SolveApproach client:visible
-  steps={[
-    "細胞骨架題：先定位直徑（25/7/8–12）與組成（tubulin/actin/keratin），再對功能。",
-    "遇 9+2 / 9×3：先分清是『纖毛鞭毛軸絲(9+2)』還是『中心粒/基體(9×3)』；可動 9+2、不動 9+0。",
-    "細胞連結題：要『防滲漏屏障』→緊密接合；『抗拉鉚釘』→胞橋小體；『小分子直通』→裂隙接合/植物胞間連絲。",
-    "動植物差異題：把『植物特有(壁/葉綠體/中央液胞/胞間連絲)』與『動物特有(中心體/ECM/三種接合)』兩張清單背熟，對號入座。"
+    "骨架直徑：微管(microtubule)25nm(最粗,tubulin α+β,中空)、微絲(microfilament)7nm(最細,actin,實心)、中間絲(intermediate filament)8–12nm(keratin,最穩定)。三者直徑與組成別記反。",
+    "三纖維功能：微管做紡錘絲、運輸軌道、纖毛鞭毛。微絲做肌肉收縮(actin+myosin)、胞質分裂分割溝、變形蟲偽足、微絨毛、胞質循流。中間絲固定核(核纖層nuclear lamina)與胞器、軸突。",
+    "9+2 vs 9×3：纖毛/鞭毛軸絲＝9+2(9對雙體+2中央,dynein驅動)、中心粒/基體(centriole/basal body)＝9×3(三聯體,無中央)，可動為9+2、不動纖毛為9+0。這是最常設的陷阱。",
+    "ECM：extracellular matrix，醣蛋白(膠原collagen/蛋白聚醣/纖連蛋白fibronectin)+整聯蛋白(integrin)跨膜連微絲，經 ECM→integrin→骨架→核 行機械轉導。",
+    "細胞連結：緊密接合(tight junction,防滲漏)、胞橋小體(desmosome,鉚釘接中間絲)、裂隙接合(gap junction,小分子直通)，植物用胞間連絲(plasmodesmata,相當於gap junction)。",
+    "接骨架但纖維不同：胞橋小體接<b>中間絲</b>抗拉、整聯蛋白接<b>微絲</b>連ECM，兩個都接骨架但接的纖維不同。",
+    "動植物特有：植物特有＝細胞壁、葉綠體、中央液胞、胞間連絲，動物特有/為主＝中心體、發達溶體、ECM、三種細胞連結。"
   ]}
 />
 
@@ -239,7 +221,7 @@ import Supplement from '@/components/notes/Supplement.astro'
   steps={[
     "胞間連絲是『植物』的構造，(A) 錯。",
     "細胞壁是植物特有、中心體才偏動物，(C) 把細胞壁歸給動物 → 錯。",
-    "緊密接合是動物上皮的連結、植物用胞間連絲，(D) 錯；葉綠體與中央液胞為植物特有 → (B)。"
+    "緊密接合是動物上皮的連結、植物用胞間連絲，(D) 錯。葉綠體與中央液胞為植物特有 → (B)。"
   ]}
 />
 

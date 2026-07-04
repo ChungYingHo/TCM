@@ -1,0 +1,136 @@
+---
+// 本篇目錄（table of contents，仿 Jeremy-and-Aira）：
+//   桌機（lg+）＝右側 sticky 側欄＋scroll-spy（讀到哪一節就高亮哪一條、側欄自動捲到中間）。
+//   手機（<lg）＝底部滑出抽屜，疊在 BottomNav 之上；點按開合、點任一節跳段並收起。
+// 單一根 <div>（.note-toc-root）＝ NoteLayout 的 grid 右欄；sticky rail 是它的直接子層，
+// 靠 grid 拉伸出完整欄高才有捲動空間。標題 slug 由 Astro 生成；跳段偏移見 tailwind.css。print:hidden。
+interface Heading {
+  depth: number
+  slug: string
+  text: string
+}
+const { headings = [] } = Astro.props as { headings?: Heading[] }
+const items = headings.filter((h) => h.depth === 2 || h.depth === 3)
+const show = items.filter((h) => h.depth === 2).length >= 3
+const padL = (d: number, base: number, step: number) => `padding-left:${Math.max(0, d - 2) * step + base}rem`
+---
+
+{
+  show && (
+    <div class="note-toc-root print:hidden">
+      {/* 桌機：右側 sticky 側欄（grid 右欄的直接子層，sticky 才有捲動空間） */}
+      <div
+        id="note-toc-scroll"
+        class="note-toc-scroll sticky top-24 hidden max-h-[calc(100vh-7rem)] overflow-y-auto lg:block print:hidden"
+        aria-label="本篇目錄"
+      >
+        <div class="mb-3 pl-3 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-base-content/40">本篇目錄</div>
+        <nav>
+          <ul class="border-l border-base-300">
+            {items.map((h) => (
+              <li>
+                <a
+                  href={`#${h.slug}`}
+                  data-depth={h.depth}
+                  style={padL(h.depth, 0.85, 0.7)}
+                  class="toc-link block py-1.5 pr-2 text-[0.8rem] leading-snug transition-colors"
+                >
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      {/* 手機：底部滑出抽屜（疊在 BottomNav 之上） */}
+      <div
+        id="note-toc-sheet"
+        class="note-toc-sheet fixed left-0 right-0 z-30 border-t border-base-300 bg-base-100/97 backdrop-blur-xl lg:hidden print:hidden"
+        style="bottom:calc(3.8rem + env(safe-area-inset-bottom))"
+      >
+        <button
+          id="note-toc-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="note-toc-list"
+          class="flex h-[2.9rem] w-full items-center justify-between px-5"
+        >
+          <span class="flex items-center gap-1.5 text-[0.8rem] font-bold tracking-wide text-base-content/80">
+            <span aria-hidden="true">📑</span>本篇目錄
+          </span>
+          <svg
+            id="note-toc-icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="h-4 w-4 text-base-content/50 transition-transform duration-300"
+          >
+            <path d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+        <div id="note-toc-list" class="note-toc-scroll max-h-[55vh] overflow-y-auto px-5 pb-6">
+          <ul class="border-l border-base-300">
+            {items.map((h) => (
+              <li>
+                <a
+                  href={`#${h.slug}`}
+                  data-depth={h.depth}
+                  style={padL(h.depth, 0.9, 0.85)}
+                  class="toc-link mobile-toc-link block py-2 pr-2 text-sm leading-snug transition-colors"
+                >
+                  {h.text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <script>
+        // scroll-spy：讀到哪一節就高亮，側欄自動捲到中間
+        const links = Array.from(document.querySelectorAll('.toc-link'))
+        const railScroll = document.getElementById('note-toc-scroll')
+        const heads = Array.from(document.querySelectorAll('.prose h2, .prose h3'))
+        if (heads.length && links.length) {
+          const spy = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((e) => {
+                if (!e.isIntersecting) return
+                const id = e.target.id
+                links.forEach((l) => l.classList.toggle('toc-link-active', l.getAttribute('href') === '#' + id))
+                const active = document.querySelector('#note-toc-scroll .toc-link[href="#' + id + '"]') as HTMLElement | null
+                if (active && railScroll && railScroll.scrollHeight > railScroll.clientHeight) {
+                  railScroll.scrollTo({
+                    top: active.offsetTop - railScroll.clientHeight / 2 + active.offsetHeight / 2,
+                    behavior: 'smooth',
+                  })
+                }
+              })
+            },
+            { rootMargin: '-90px 0px -68% 0px' },
+          )
+          heads.forEach((h) => spy.observe(h))
+        }
+
+        // 手機抽屜開合
+        const sheet = document.getElementById('note-toc-sheet')
+        const toggle = document.getElementById('note-toc-toggle')
+        const icon = document.getElementById('note-toc-icon')
+        const setOpen = (v: boolean) => {
+          sheet && sheet.classList.toggle('is-open', v)
+          icon && icon.classList.toggle('rotate-180', v)
+          toggle && toggle.setAttribute('aria-expanded', String(v))
+        }
+        toggle &&
+          toggle.addEventListener('click', () => setOpen(!(sheet && sheet.classList.contains('is-open'))))
+        document
+          .querySelectorAll('.mobile-toc-link')
+          .forEach((l) => l.addEventListener('click', () => setOpen(false)))
+      </script>
+    </div>
+  )
+}

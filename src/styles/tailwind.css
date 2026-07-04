@@ -339,6 +339,88 @@ a.card:hover, .card-hover:hover {
 }
 .prose .katex-display .katex { color: var(--color-base-content); }
 
+/* ── 筆記尾部必背卡（Memorize）不在 .prose 內，但仍需 KaTeX 公式著色 ── */
+.note-summary-card .katex {
+  font-size: 1.05em;
+  color: color-mix(in oklab, var(--color-primary) 60%, var(--color-base-content));
+}
+
+/* ── 本篇目錄 NoteToc ─────────────────────────────────────────── */
+/* 跳段時標題不被桌機 sticky 導覽列蓋住 */
+.prose :is(h2, h3) {
+  scroll-margin-top: 5.5rem;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* 手機底部抽屜：預設只露出標題列、點開才滑上來 */
+.note-toc-sheet {
+  transform: translateY(calc(100% - 2.9rem));
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1);
+  box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.1);
+}
+.note-toc-sheet.is-open {
+  transform: translateY(0);
+}
+/* 目錄連結：狀態與左側高亮條 */
+.toc-link {
+  position: relative;
+  color: color-mix(in oklab, var(--color-base-content) 55%, transparent);
+  text-decoration: none;
+}
+.toc-link[data-depth='2'] {
+  color: color-mix(in oklab, var(--color-base-content) 78%, transparent);
+  font-weight: 500;
+}
+.note-toc-rail .toc-link[data-depth='3'] {
+  font-size: 0.72rem;
+}
+.mobile-toc-link[data-depth='3'] {
+  font-size: 0.8125rem;
+}
+.toc-link:hover {
+  color: var(--color-primary);
+}
+.toc-link::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 2px;
+  height: 0;
+  background: var(--color-primary);
+  border-radius: 1px;
+  transition:
+    height 0.25s ease,
+    top 0.25s ease;
+}
+.toc-link-active {
+  color: var(--color-primary) !important;
+  font-weight: 600;
+  background: linear-gradient(to right, color-mix(in oklab, var(--color-primary) 9%, transparent), transparent);
+}
+.toc-link-active::before {
+  top: 18%;
+  height: 64%;
+}
+/* 細捲軸（側欄與抽屜共用） */
+.note-toc-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.note-toc-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.note-toc-scroll::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--color-base-content) 18%, transparent);
+  border-radius: 4px;
+}
+/* 列印時目錄整個拿掉、內文回單欄滿版（headless 視窗 1280 會誤觸發 lg:grid） */
+@media print {
+  .note-body-grid {
+    display: block !important;
+  }
+}
+
 /* ════ 列印 / PDF（印成紙本筆記）════════════════════════════════════════
    無互動、例題留大空白＋答案在下、表/圖/卡不跨頁切、週期表獨佔橫向頁，
    內文改舒適襯線（思源宋體，字體由產生器於列印時注入）。 */

@@ -90,6 +90,22 @@ export const NOTES: NoteEntry[] = [
     desc: '黑體輻射(只看溫度)與能量量子化、波動模型 c=νλ、光電效應(E_K=hν−Φ、低限頻率、功函數圖)、電磁波譜與化學用途、德布羅意物質波、波粒二象性與測不準',
   },
   {
+    id: 'chem-atomic-spectra',
+    href: '/chem-atomic-spectra',
+    title: '原子光譜與波耳模型',
+    subject: '化學',
+    tags: ['原子光譜'],
+    desc: '連續/線/吸收光譜、焰色試驗(IA/IIA)、氫原子發射光譜與五大系列、能量-頻率-波長計算(H 與類氫 Z²)、波耳能階與軌道半徑',
+  },
+  {
+    id: 'chem-orbitals',
+    href: '/chem-orbitals',
+    title: '量子力學與原子軌域',
+    subject: '化學',
+    tags: ['原子軌域'],
+    desc: '一維/三維盒中質點與零點能量、氫原子波函數與軌域、s/p/d/f 形狀與節點(n−ℓ−1、ℓ)、徑向分布函數、四個量子數與 Pauli',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '細胞（一）：概論、顯微鏡與原核／真核',

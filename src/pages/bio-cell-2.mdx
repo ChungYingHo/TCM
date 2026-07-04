@@ -5,8 +5,6 @@ summary: 真核細胞的胞器巡禮——細胞核與核糖體、內膜系統�
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import KeyPoints from '@/components/notes/KeyPoints.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
@@ -20,22 +18,22 @@ import SecretoryPathway from '@/components/notes/SecretoryPathway.svelte'
 
 ## 真核細胞全景：動物 vs 植物
 
-<Figure src="/notes/bio-cell/animal-cell.webp" alt="動物細胞 3D 剖面總覽圖，標示細胞核、內質網、高基氏體、粒線體、溶體、核糖體、中心體、細胞骨架、微絨毛、細胞膜等" caption="動物細胞：有<b>中心體、發達的溶體</b>、外有 ECM；<b>沒有</b>細胞壁、葉綠體、中央液胞。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/animal-cell.webp" alt="動物細胞 3D 剖面總覽圖，標示細胞核、內質網、高基氏體、粒線體、溶體、核糖體、中心體、細胞骨架、微絨毛、細胞膜等" caption="動物細胞：有<b>中心體、發達的溶體</b>、外有 ECM。<b>沒有</b>細胞壁、葉綠體、中央液胞。" source="Campbell 生物學・上冊" />
 
-<Figure src="/notes/bio-cell/plant-cell.webp" alt="植物細胞 3D 剖面總覽圖，標示細胞壁、中央液胞、葉綠體、胞間連絲、細胞核、內質網、高基氏體、粒線體等" caption="植物細胞：<b>特有</b>細胞壁、葉綠體、中央液胞、胞間連絲；一般<b>沒有</b>中心體。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/plant-cell.webp" alt="植物細胞 3D 剖面總覽圖，標示細胞壁、中央液胞、葉綠體、胞間連絲、細胞核、內質網、高基氏體、粒線體等" caption="植物細胞：<b>特有</b>細胞壁、葉綠體、中央液胞、胞間連絲。一般<b>沒有</b>中心體。" source="Campbell 生物學・上冊" />
 
 ## 四、細胞核與核糖體
 
 ### 細胞核（nucleus）
 
-<Figure src="/notes/bio-cell/nucleus.webp" alt="細胞核構造：雙層核膜、核孔與孔複合體、核仁、染色質，以及核膜與內質網相連" caption="核套膜雙層、佈滿核孔、與粗糙內質網相連；核內有核仁與染色質。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/nucleus.webp" alt="細胞核構造：雙層核膜、核孔與孔複合體、核仁、染色質，以及核膜與內質網相連" caption="核套膜雙層、佈滿核孔、與粗糙內質網相連。核內有核仁與染色質。" source="Campbell 生物學・上冊" />
 
 | 構造 | 重點 |
 |------|------|
 | **核套膜**（nuclear envelope） | **雙層膜**、與**粗糙 ER 相連**（核套膜與 ER **都是內膜系統成員**） |
-| **核孔**（nuclear pore）＋孔複合體 | 管大分子進出——**出** mRNA、核糖體次單位；**進**蛋白質。小分子自由通過 |
+| **核孔**（nuclear pore）＋孔複合體 | 管大分子進出——**出** mRNA、核糖體次單位、**進**蛋白質。小分子自由通過 |
 | **核纖層／核蛋白片層**（nuclear lamina） | 核膜內襯的**中間絲（lamin）** 網，撐核形、固定核 |
-| **染色質／染色體**（chromatin / chromosome） | 平時鬆散為染色質、分裂時凝聚成染色體；每物種染色體數固定（人類體細胞 46、生殖細胞 23） |
+| **染色質／染色體**（chromatin / chromosome） | 平時鬆散為染色質、分裂時凝聚成染色體。每物種染色體數固定（人類體細胞 46、生殖細胞 23） |
 | **核仁**（nucleolus） | 合成 **rRNA**、組裝核糖體大、小次單位 |
 
 真核基因多在核，少數在**粒線體、葉綠體、色質體（plastid）**。
@@ -67,15 +65,15 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 <Supplement title="核糖體：大小次單位與 70S／80S">
 
-- **所有細胞都有核糖體**。**原核 70S** ＝ 大 **50S** ＋ 小 **30S**；**真核 80S** ＝ 大 **60S** ＋ 小 **40S**。
+- **所有細胞都有核糖體**。**原核 70S** ＝ 大 **50S** ＋ 小 **30S**。**真核 80S** ＝ 大 **60S** ＋ 小 **40S**。
 - **60S＋40S＝80S 而非 100S 的原因**：S（Svedberg）是**沉降係數**——量離心時沉降的快慢，同時受**質量與形狀**影響、不是純質量，所以**不能直接相加**（兩次單位合體後形狀更緊實）。
-- 小次單位**讀 mRNA**、大次單位**催化胜肽鍵**；兩次單位在核仁做好 → 經核孔出核 → 在細胞質才合體。
+- 小次單位**讀 mRNA**、大次單位**催化胜肽鍵**。兩次單位在核仁做好 → 經核孔出核 → 在細胞質才合體。
 
 </Supplement>
 
 ### 核糖體（ribosome）
 
-成分 ＝ **rRNA ＋ 蛋白質**（rRNA 由核仁做；**核糖體蛋白、組蛋白都在細胞質做好、再運進核**）。依位置分兩種：
+成分 ＝ **rRNA ＋ 蛋白質**（rRNA 由核仁做。**核糖體蛋白、組蛋白都在細胞質做好、再運進核**）。依位置分兩種：
 
 | | **游離核糖體**（free） | **黏附核糖體**（bound） |
 |---|---|---|
@@ -104,7 +102,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 <Supplement title="瘦瘦針的原理">
 
 - **是什麼**：**GLP-1 受體致效劑**（如 semaglutide），是腸泌素 **GLP-1** 的長效類似物（胜肽激素）。
-- **怎麼控糖減重**：促**胰島素**、抑**升糖素（glucagon）** → 肝臟多把血糖合成**肝糖（glycogen）儲存**、少分解肝糖 → 血糖降；再加抑食慾、延緩胃排空。
+- **怎麼控糖減重**：促**胰島素**、抑**升糖素（glucagon）** → 肝臟多把血糖合成**肝糖（glycogen）儲存**、少分解肝糖 → 血糖降。再加抑食慾、延緩胃排空。
 - **跟內膜系統的關係**：GLP-1、胰島素這類**分泌型胜肽激素**都走「核糖體 → 粗糙 ER → Golgi → 分泌小泡 → 胞吐（exocytosis）」這條分泌路徑。
 
 </Supplement>
@@ -113,9 +111,9 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 ### 內質網（endoplasmic reticulum，ER）：平滑 vs 粗糙
 
-<Figure src="/notes/bio-cell/er.webp" alt="內質網構造：粗糙內質網表面有核糖體、平滑內質網無核糖體、過渡區掐出運輸小泡" caption="ER 由核膜延伸；有核糖體者為粗糙 ER、無者為平滑 ER。" source="Campbell 生物學・上冊" maxW="32rem" />
+<Figure src="/notes/bio-cell/er.webp" alt="內質網構造：粗糙內質網表面有核糖體、平滑內質網無核糖體、過渡區掐出運輸小泡" caption="ER 由核膜延伸。有核糖體者為粗糙 ER、無者為平滑 ER。" source="Campbell 生物學・上冊" maxW="32rem" />
 
-**ER 占真核細胞「總膜量」的一半以上**（不只是內膜系統，是全細胞的膜；由核套膜延伸而來）：
+**ER 占真核細胞「總膜量」的一半以上**（不只是內膜系統，是全細胞的膜，由核套膜延伸而來）：
 
 - **構造**：膜圍成**扁囊（cisternae，扁平囊狀）** 與內腔（ER 內腔 lumen）。
 - **動態**：可擴張、**掐出運輸小泡**，或延伸**變成其他內膜系統構造**（ER 是內膜系統的膜來源）。
@@ -132,7 +130,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 - **合成脂質**：油脂、磷脂質、**固醇類（sterol，含膽固醇 cholesterol）**。
 - **代謝肝醣（glycogen）**：肝細胞 SER 分解肝醣、釋出葡萄糖入血。
-- **解毒**：肝細胞 SER（**細胞色素 P450**）代謝藥物／毒物；常吃藥 → SER 增生 → **耐藥性**。
+- **解毒**：肝細胞 SER（**細胞色素 P450**）代謝藥物／毒物。常吃藥 → SER 增生 → **耐藥性**。
 - **儲鈣（Ca²⁺）**：肌肉細胞特化成「肌漿網（sarcoplasmic reticulum）」，釋 Ca²⁺ 觸發**肌肉收縮**與訊號。
 
 <Supplement title="膽固醇、固醇與性激素／皮質激素">
@@ -152,7 +150,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 **RER 重點**：
 
 - **合成蛋白質 ＝ 合成胜肽鍵（peptide bond）**：核糖體在轉譯時把胺基酸接成胜肽鍵。
-- **醣基化（glycosylation）→ 糖蛋白（glycoprotein）**：多胜肽在 RER 內腔加**醣鏈**；**修飾順序「ER 先、Golgi 後」**。
+- **醣基化（glycosylation）→ 糖蛋白（glycoprotein）**：多胜肽在 RER 內腔加**醣鏈**。**修飾順序「ER 先、Golgi 後」**。
 - **包裝送出**：分泌蛋白裝進運輸小泡送往 Golgi。
 - **製膜工廠**：自己合成磷脂質（磷脂質主要由 ER 做）、把新膜加上身再分送。
 
@@ -175,7 +173,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 - **錯誤蛋白堆積**：摺疊錯誤的蛋白在 ER 內**大量累積** → 引發 **ER 壓力（ER stress）**。
 - **未摺疊蛋白反應（unfolded protein response，UPR）**：細胞踩煞車——減少蛋白合成、加強摺疊與清除。
 - **清除**：ER 有品管，摺錯的蛋白送去**蛋白酶體（proteasome）** 降解。
-- **後果**：清不掉、壓力太大 → 細胞凋亡；與多種疾病（神經退化、糖尿病…）有關。
+- **後果**：清不掉、壓力太大 → 細胞凋亡。與多種疾病（神經退化、糖尿病…）有關。
 
 </Supplement>
 
@@ -187,10 +185,10 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 ### 高基氏體（Golgi apparatus）
 
-<Figure src="/notes/bio-cell/golgi.webp" alt="高基氏體：一疊扁囊，順面接收來自內質網的小泡、反面送出分泌小泡" caption="一疊扁囊；順面 cis 收貨、反面 trans 出貨。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/golgi.webp" alt="高基氏體：一疊扁囊，順面接收來自內質網的小泡、反面送出分泌小泡" caption="一疊扁囊。順面 cis 收貨、反面 trans 出貨。" source="Campbell 生物學・上冊" />
 
 - **由誰產生**：ER 來的運輸小泡**融合堆疊**。
-- **構造**：一疊扁囊，**順面（cis face）**（朝 ER、收貨）↔ **反面（trans face）**（朝細胞膜、出貨）；動態。
+- **構造**：一疊扁囊，**順面（cis face）**（朝 ER、收貨）↔ **反面（trans face）**（朝細胞膜、出貨），動態。
 - **功能**：修飾糖蛋白醣鏈、**分類、包裝、貼地址、出貨**。
 
 <Supplement title="醣基化：糖蛋白與 ER／Golgi 分工">
@@ -198,7 +196,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 - **醣基化（glycosylation）**：蛋白在 RER 內腔合成、摺疊時被接上一段**醣鏈** → 變成**糖蛋白（glycoprotein）**。
 - **ER 先、Golgi 後**：RER 先接「核心醣鏈」，送到 Golgi 再**修剪掉部分單糖、改接**特定醣。
 - **Golgi 修剪／改接醣的目的**：做出不同「醣鏈標籤」＝不同的**郵遞地址**，決定這蛋白送去溶體、嵌進膜、還是分泌出去。
-- **不一定都經兩者**：**N-連結（N-linked）** 是「ER 起頭、Golgi 修整」；**O-連結（O-linked）只在 Golgi**；不進 ER 的胞質蛋白完全不走這條。
+- **不一定都經兩者**：**N-連結（N-linked）** 是「ER 起頭、Golgi 修整」、**O-連結（O-linked）只在 Golgi**、不進 ER 的胞質蛋白完全不走這條。
 
 </Supplement>
 
@@ -206,9 +204,9 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 <Figure src="/notes/bio-cell/lysosome.webp" alt="溶體進行吞噬作用與自噬作用：與食泡或自噬體融合並消化內容物" caption="溶體與食泡融合消化外來顆粒（吞噬），或包住老舊胞器形成自噬體再分解（自噬）。" source="Campbell 生物學・上冊" />
 
-- **由誰產生**：由**高基氏體反面（trans face）** 掐出的小泡而來——水解酶在 RER 合成、Golgi 修飾打包成小泡；小泡再與內體（endosome）／食泡融合，**成熟為溶體**。
+- **由誰產生**：由**高基氏體反面（trans face）** 掐出的小泡而來——水解酶在 RER 合成、Golgi 修飾打包成小泡。小泡再與內體（endosome）／食泡融合，**成熟為溶體**。
 - **內容**：**酸性水解酶（hydrolase）**。
-- **酸性水解酶在 pH≈5 最活躍**：膜上質子泵打 H⁺ 維持酸性，使溶體成為**細胞內最酸的隔間之一**；這也是保險——萬一酶漏到接近中性的細胞質就**失活**、不會自我消化。
+- **酸性水解酶在 pH≈5 最活躍**：膜上質子泵打 H⁺ 維持酸性，使溶體成為**細胞內最酸的隔間之一**。這也是保險——萬一酶漏到接近中性的細胞質就**失活**、不會自我消化。
 
 **兩種「把東西送進溶體消化」的方式**——差在消化「外來物」還是「自己」：
 
@@ -259,34 +257,34 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 ### 粒線體（mitochondrion）
 
-<Figure src="/notes/bio-cell/mitochondrion.webp" alt="粒線體構造：平滑外膜、向內摺成皺褶的內膜、基質、膜間隙" caption="雙層膜：內膜摺成皺褶（cristae）放電子傳遞鏈；基質含 DNA、核糖體與酵素。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/mitochondrion.webp" alt="粒線體構造：平滑外膜、向內摺成皺褶的內膜、基質、膜間隙" caption="雙層膜：內膜摺成皺褶（cristae）放電子傳遞鏈。基質含 DNA、核糖體與酵素。" source="Campbell 生物學・上冊" />
 
-- 把食物化學能轉成 **ATP**（細胞呼吸 cellular respiration）；幾乎所有真核細胞都有。
-- **數量看需氧量／代謝率**（心肌、肝特別多）、**不是年齡**；可移動、變形、融合、分裂。
+- 把食物化學能轉成 **ATP**（細胞呼吸 cellular respiration）。幾乎所有真核細胞都有。
+- **數量看需氧量／代謝率**（心肌、肝特別多）、**不是年齡**。可移動、變形、融合、分裂。
 
 <Supplement title="肌肉、粒線體與失智的關聯">
 
-肌肉是**粒線體大戶、耗能高**；肌肉量下降與代謝、認知退化在流行病學上**有相關**（屬關聯、非單一因果）。
+肌肉是**粒線體大戶、耗能高**。肌肉量下降與代謝、認知退化在流行病學上**有相關**（屬關聯、非單一因果）。
 
 </Supplement>
 
 | 構造（雙層膜） | 重點 |
 |----------------|------|
 | **外膜**（outer membrane） | 平滑 |
-| **內膜＋皺褶**（inner membrane / cristae） | **電子傳遞鏈＋ATP 合成酶**在此（＝**氧化磷酸化 oxidative phosphorylation**，產生大部分 ATP）；皺褶增大面積 |
+| **內膜＋皺褶**（inner membrane / cristae） | **電子傳遞鏈＋ATP 合成酶**在此（＝**氧化磷酸化 oxidative phosphorylation**，產生大部分 ATP）。皺褶增大面積 |
 | **基質**（matrix） | 含 **DNA、核糖體、酵素**（檸檬酸循環） |
 | **膜間隙**（intermembrane space） | 內外膜之間，質子堆積 |
 
 <Supplement title="細胞呼吸／氰化物中毒">
 
 - **細胞呼吸（cellular respiration）**：大致 $\ce{C6H12O6 + 6O2 -> 6CO2 + 6H2O}$ 並放能（合成 ATP）。
-- **氰化物中毒（cyanide poisoning）**：氰化物**結合並抑制複合體 IV（細胞色素 c 氧化酶 cytochrome c oxidase）** → 電子無法傳給 O₂ → 電子傳遞鏈停擺、**氧化磷酸化與 ATP 合成全卡住**。關鍵是**抑制複合體 IV**（不是「累積」）；細胞「有氧卻不能用」＝組織缺氧（histotoxic hypoxia）。
+- **氰化物中毒（cyanide poisoning）**：氰化物**結合並抑制複合體 IV（細胞色素 c 氧化酶 cytochrome c oxidase）** → 電子無法傳給 O₂ → 電子傳遞鏈停擺、**氧化磷酸化與 ATP 合成全卡住**。關鍵是**抑制複合體 IV**（不是「累積」）。細胞「有氧卻不能用」＝組織缺氧（histotoxic hypoxia）。
 
 </Supplement>
 
 ### 葉綠體（chloroplast）
 
-<Figure src="/notes/bio-cell/chloroplast.webp" alt="葉綠體構造：外膜、內膜、基質、類囊體堆疊成基粒" caption="雙層膜外另有類囊體（thylakoid）疊成基粒（granum）行光反應；基質（stroma）行卡爾文循環。" source="Campbell 生物學・上冊" />
+<Figure src="/notes/bio-cell/chloroplast.webp" alt="葉綠體構造：外膜、內膜、基質、類囊體堆疊成基粒" caption="雙層膜外另有類囊體（thylakoid）疊成基粒（granum）行光反應。基質（stroma）行卡爾文循環。" source="Campbell 生物學・上冊" />
 
 行**光合作用（photosynthesis）**（光能→醣），植物與藻類特有，屬**色質體（plastid）** 家族。
 
@@ -306,8 +304,8 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 ### 過氧化體與蛋白酶體（都不屬內膜系統）
 
-- **過氧化體（peroxisome）**：**單層膜**；含**過氧化氫酶（catalase）** 分解 **H₂O₂**；做脂肪酸代謝與肝腎解毒。
-- **蛋白酶體（proteasome）**：**非膜性**的桶狀蛋白；降解**被泛素（ubiquitin）標記**的壞蛋白（＝**泛素-蛋白酶體系統 UPS**）。
+- **過氧化體（peroxisome）**：**單層膜**、含**過氧化氫酶（catalase）** 分解 **H₂O₂**、做脂肪酸代謝與肝腎解毒。
+- **蛋白酶體（proteasome）**：**非膜性**的桶狀蛋白。降解**被泛素（ubiquitin）標記**的壞蛋白（＝**泛素-蛋白酶體系統 UPS**）。
 
 <Supplement title="溶體 vs 蛋白酶體（都分解，分工不同）">
 
@@ -322,30 +320,16 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 <Memorize client:visible
   items={[
-    "內膜系統(endomembrane system)七成員：核套膜、內質網(ER)、高基氏體(Golgi)、溶體(lysosome)、液泡(vacuole)、運輸小泡、細胞膜。粒線體/葉綠體/過氧化體/核糖體 不屬內膜系統。",
+    "內膜系統七成員：核套膜、內質網(ER)、高基氏體(Golgi)、溶體(lysosome)、液泡(vacuole)、運輸小泡、細胞膜。粒線體/葉綠體/過氧化體/核糖體 不屬內膜系統。",
     "核：核套膜(nuclear envelope)雙層+與RER相連、核孔(nuclear pore)管進出（出mRNA/次單位、進蛋白）、核仁(nucleolus)做rRNA與大小次單位。核糖體蛋白與組蛋白在細胞質做、再進核。",
-    "SER：合成脂質與固醇（性激素/皮質激素原料）、代謝肝醣、解毒(P450)、儲鈣。RER：合成分泌/膜/溶體蛋白、醣基化(glycosylation)、製膜。修飾順序 ER 先、Golgi 後。",
-    "分泌路徑：核糖體→粗糙ER→高基氏體→分泌小泡→胞吐(exocytosis)。溶體酶在RER合成、Golgi打包，pH≈5最酸；儲積症＝酶缺→受質堆積（Pompe缺GAA堆肝醣、Tay-Sachs缺Hex-A堆GM2）。",
-    "粒線體(mitochondrion)：外膜/內膜(皺褶cristae,電子傳遞鏈)/基質(matrix,DNA,檸檬酸循環)/膜間隙；氰化物抑制複合體IV。葉綠體(chloroplast)：類囊體(thylakoid)疊成基粒(光反應)+基質(stroma,卡爾文循環)。",
-    "過氧化體(peroxisome)：單層膜、catalase 解 H₂O₂、脂肪酸β-氧化（不屬內膜系統）。蛋白酶體(proteasome)：桶狀非膜、降解被泛素(ubiquitin)標記的蛋白（UPS）。"
-  ]}
-/>
-
-<KeyPoints client:visible
-  items={[
-    "「雙層膜且有自己 DNA」是核、粒線體、葉綠體的共同點；過氧化體(peroxisome)是<b>單層膜</b>、且<b>不屬</b>內膜系統。",
-    "溶體(lysosome，膜包大塊/吞入物) vs 蛋白酶體(proteasome，單一被泛素標記的蛋白) 分工不同，別混為一談。",
-    "粒線體數量看「需氧量/代謝率」不是看年齡；氰化物是『抑制複合體IV』不是『累積在粒線體』。",
-    "糖蛋白的醣基化是『ER 先、Golgi 後』；分泌蛋白由<b>黏附</b>核糖體（粗糙ER上）合成，不是游離核糖體。"
-  ]}
-/>
-
-<SolveApproach client:visible
-  steps={[
-    "胞器題先問兩刀：①有沒有膜？②是不是內膜系統？→ 快速排除粒線體/葉綠體/過氧化體/核糖體/蛋白酶體。",
-    "分泌蛋白路徑題：一律 核糖體→粗糙ER→高基氏體→小泡→胞外；修飾『ER 先、Golgi 後』。",
-    "SER vs RER：問『代謝/脂質/解毒/儲鈣』選 SER；問『分泌/膜/溶體蛋白、醣基化』選 RER。",
-    "雙層膜胞器只有三個（核、粒線體、葉綠體）且都含 DNA——這是判斷『誰有自己 DNA / 誰是內共生來的』的快速線索。"
+    "SER：合成脂質與固醇（性激素/皮質激素原料）、代謝肝醣、解毒(P450)、儲鈣。",
+    "RER：合成分泌/膜/溶體蛋白、醣基化(glycosylation)、製膜。修飾順序 ER 先、Golgi 後。分泌蛋白由<b>黏附</b>核糖體合成、不是游離核糖體。",
+    "分泌路徑：核糖體→粗糙ER→高基氏體→分泌小泡→胞吐(exocytosis)。溶體酶在RER合成、Golgi打包，pH≈5最酸。儲積症＝酶缺→受質堆積（Pompe缺GAA堆肝醣、Tay-Sachs缺Hex-A堆GM2）。",
+    "粒線體：外膜/內膜(皺褶cristae,電子傳遞鏈)/基質(matrix,DNA,檸檬酸循環)/膜間隙。數量看需氧量/代謝率不是看年齡，氰化物是抑制複合體IV、不是累積在粒線體。",
+    "葉綠體：類囊體(thylakoid)疊成基粒(光反應)+基質(stroma,卡爾文循環)。",
+    "雙層膜且有自己DNA：＝核、粒線體、葉綠體三者共同點，過氧化體是<b>單層膜</b>、且<b>不屬</b>內膜系統。",
+    "過氧化體 peroxisome：單層膜、catalase 解 H₂O₂、脂肪酸β-氧化（不屬內膜系統）。",
+    "蛋白酶體 proteasome：桶狀非膜、降解被泛素(ubiquitin)標記的蛋白（UPS）。溶體(膜包大塊/吞入物) vs 蛋白酶體(單一被泛素標記的蛋白) 分工不同、別混為一談。"
   ]}
 />
 
@@ -363,7 +347,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
   answer="(B) 粒線體、葉綠體、過氧化體"
   steps={[
     "內膜系統：核套膜、內質網、高基氏體、溶體、液泡、運輸小泡、細胞膜。",
-    "粒線體、葉綠體為內共生來源、不由內膜系統長出；過氧化體也獨立。",
+    "粒線體、葉綠體為內共生來源、不由內膜系統長出。過氧化體也獨立。",
     "故 (B) 三者都不屬內膜系統。"
   ]}
 />
@@ -413,7 +397,7 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
   ]}
   answer="(C) 葉綠體的光反應發生在類囊體膜、卡爾文循環在基質"
   steps={[
-    "兩者皆<b>雙層膜</b>，(A) 錯；粒線體電子傳遞鏈在<b>內膜（皺褶）</b>不是外膜，(B) 錯。",
+    "兩者皆<b>雙層膜</b>，(A) 錯。粒線體電子傳遞鏈在<b>內膜（皺褶）</b>不是外膜，(B) 錯。",
     "氰化物是<b>抑制複合體IV</b>不是累積，(D) 錯。",
     "葉綠體：類囊體膜行光反應、基質行卡爾文循環 → (C) 正確。"
   ]}

@@ -41,6 +41,8 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '基礎-胺基酸', slug: 'amino-acids', short: '胺基酸', claimed: true },
     { tag: '基礎-原子結構', slug: 'chem-atomic-theory', short: '原子結構', claimed: true },
     { tag: '量子力學', slug: 'chem-quantum', short: '量子力學', claimed: true },
+    { tag: '原子光譜', slug: 'chem-atomic-spectra', short: '原子光譜', claimed: true },
+    { tag: '原子軌域', slug: 'chem-orbitals', short: '原子軌域', claimed: true },
     { tag: '基礎-單位因次', slug: 'chem-units', short: '單位因次', claimed: true },
     { tag: '基礎-化學鍵', slug: 'chem-molecules', short: '化學鍵', claimed: true },
     { tag: '基礎-化學計量', slug: 'chem-stoichiometry', short: '化學計量', claimed: true },

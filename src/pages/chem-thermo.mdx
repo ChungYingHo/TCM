@@ -5,8 +5,6 @@ summary: 自發性、熵與亂度、系統／外界／宇宙熵（第二定律�
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import KeyPoints from '@/components/notes/KeyPoints.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import EntropySign from '@/components/notes/EntropySign.svelte'
@@ -20,7 +18,7 @@ import EntropySign from '@/components/notes/EntropySign.svelte'
 - **自發 ≠ 快**：熱力學只管「**方向**」，速率是動力學的事。
 - 判據：**宇宙熵增**（熱力學第二定律）—— $\Delta S_\text{宇宙} > 0$ 才自發。
 
-> 例：鐵生鏽、冰在室溫融化都是**自發**；但鑽石→石墨雖自發，速率極慢（千萬年）。「自發」不保證「看得到反應」。
+> 例：鐵生鏽、冰在室溫融化都是**自發**。但鑽石→石墨雖自發，速率極慢（千萬年）。「自發」不保證「看得到反應」。
 
 ---
 
@@ -30,12 +28,12 @@ import EntropySign from '@/components/notes/EntropySign.svelte'
 
 判斷 $\Delta S_\text{系統}$ 符號**最快的方法：數反應前後的氣體莫耳數**（氣體亂度遠大於固液）：
 
-- 氣體**變多** → $\Delta S > 0$；**變少** → $\Delta S < 0$。
+- 氣體**變多** → $\Delta S > 0$，**變少** → $\Delta S < 0$。
 - 固→液→氣、溶解、混合、升溫，也都使 $\Delta S$ 增加。
 
 <EntropySign client:visible />
 
-> 例：$\ce{CaCO3(s) -> CaO(s) + CO2(g)}$ 氣體 0→1 → $\Delta S>0$；$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ 氣體 4→2 → $\Delta S<0$。
+> 例：$\ce{CaCO3(s) -> CaO(s) + CO2(g)}$ 氣體 0→1 → $\Delta S>0$。$\ce{N2(g) + 3H2(g) -> 2NH3(g)}$ 氣體 4→2 → $\Delta S<0$。
 
 ---
 
@@ -86,31 +84,12 @@ $$
 
 <Memorize client:visible
   items={[
-    "自發 ⟺ ΔS_宇宙 > 0（第二定律）；自發≠快（方向是熱力學、速率是動力學）。",
-    "熵＝亂度：固＜液＜氣。ΔS_系統 符號看『氣體莫耳數』增減最快。",
-    "ΔS_宇宙 ＝ ΔS_系統 ＋ ΔS_外界；ΔS_外界 ＝ −ΔH/T（放熱→外界熵增）。<b>ΔS_宇宙>0 才自發</b>。",
-    "四組合：ΔH−ΔS+ 恆自發；ΔH+ΔS− 恆不自發；同號看溫度（−−低溫、++高溫）。",
-    "臨界溫度（宇宙熵=0）：T＝ΔH/ΔS_系統（ΔH、ΔS 同用 J）。"
-  ]}
-/>
-
-<KeyPoints client:visible
-  items={[
-    "「自發」只說會不會往那個方向、不說多快——鑽石→石墨自發卻極慢。",
-    "判 ΔS 符號先數氣體莫耳數變化；固→液→氣、溶解皆增熵。",
-    "放熱使外界熵增（−ΔH/T），所以放熱通常有利自發、但非絕對（要看 ΔS_宇宙）。",
-    "算 ΔS_宇宙＝ΔS_系統−ΔH/T 時，ΔH 與 ΔS 單位要一致（都用 J）。",
-    "ΔH、ΔS 同號才有臨界溫度 T＝ΔH/ΔS_系統；異號則與溫度無關。"
-  ]}
-/>
-
-<SolveApproach client:visible
-  steps={[
-    "判 ΔS_系統 符號：數反應前後氣體莫耳數（變多為正）。",
-    "判 ΔH 符號：放熱負、吸熱正 → 得 ΔS_外界 = −ΔH/T 的正負。",
-    "合起來算 ΔS_宇宙 = ΔS_系統 + ΔS_外界（單位都用 J）。",
-    "ΔS_宇宙 > 0 自發、= 0 平衡、< 0 不自發。",
-    "ΔH、ΔS 同號時用臨界溫度 T＝ΔH/ΔS_系統 找自發的溫度範圍。"
+    "自發判據：⟺ ΔS_宇宙 > 0（第二定律）。自發≠快，只說會不會往那個方向、不說多快（方向是熱力學、速率是動力學，如鑽石→石墨自發卻極慢）。",
+    "熵＝亂度：固＜液＜氣。判 ΔS_系統 符號先數反應前後『氣體莫耳數』增減最快，固→液→氣、溶解、混合、升溫皆增熵。",
+    "宇宙熵：ΔS_宇宙 ＝ ΔS_系統 ＋ ΔS_外界。ΔS_外界 ＝ −ΔH/T，放熱使外界熵增（有利自發但非絕對，仍要看 ΔS_宇宙）。<b>ΔS_宇宙>0 才自發</b>。",
+    "四種組合：ΔH−ΔS+ 恆自發，ΔH+ΔS− 恆不自發，同號才看溫度（−−低溫自發、++高溫自發）。",
+    "單位一致：算 ΔS_宇宙＝ΔS_系統−ΔH/T 時 ΔH 與 ΔS 都用 J。",
+    "臨界溫度：ΔH、ΔS 同號才有 T＝ΔH/ΔS_系統（宇宙熵=0 的分界），異號則與溫度無關。"
   ]}
 />
 
@@ -156,7 +135,7 @@ $$
   options={["−500 J/K", "+500 J/K", "−0.5 J/K", "+0.5 J/K"]}
   answer="(B) +500 J/K"
   steps={[
-    "ΔS_外界 = −ΔH/T；放熱 ΔH<0 → ΔS_外界>0。",
+    "ΔS_外界 = −ΔH/T。放熱 ΔH<0 → ΔS_外界>0。",
     "= −(−150000 J)/(300 K) = <b>+500 J/K</b>。",
     "放熱把熱倒給外界，外界變亂 → 外界熵增。"
   ]}
@@ -187,7 +166,7 @@ $$
   steps={[
     "ΔH−（外界熵＋）、ΔS_系統− 同號 → 「低溫自發」：低溫時 −ΔH/T 大、蓋過系統熵減。",
     "臨界溫度（ΔS_宇宙=0）：T = ΔH/ΔS_系統 = (−100000 J)/(−200 J/K) = <b>500 K</b>。",
-    "T < 500 K 時 ΔS_宇宙>0 自發；T > 500 K 反而不自發。"
+    "T < 500 K 時 ΔS_宇宙>0 自發。T > 500 K 反而不自發。"
   ]}
 />
 

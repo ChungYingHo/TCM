@@ -5,8 +5,6 @@ summary: 莫耳、amu／莫耳質量、unit factor 換算、長度／壓力／�
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
-import KeyPoints from '@/components/notes/KeyPoints.svelte'
-import SolveApproach from '@/components/notes/SolveApproach.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
@@ -86,7 +84,7 @@ $$
 |------|------|
 | **長度** | $1\ \text{Å} = 100\ \text{pm} = 0.1\ \text{nm} = 10^{-10}\ \text{m}$（原子半徑、鍵長常用） |
 | **質量** | $1\ \text{kg}=10^3\ \text{g}=10^6\ \text{mg}$ |
-| **體積** | $1\ \text{L}=1000\ \text{mL}=1\ \text{dm}^3$；$1\ \text{mL}=1\ \text{cm}^3$ |
+| **體積** | $1\ \text{L}=1000\ \text{mL}=1\ \text{dm}^3$、$1\ \text{mL}=1\ \text{cm}^3$ |
 
 > 算莫耳濃度 $M=n/V$ 時，$V$ 一律用 **L**。
 
@@ -103,7 +101,7 @@ $$
 **兩個計算公式**：
 
 $$
-P = \frac{F}{A}\ (\text{力／面積}) \qquad P = \rho g h\ (\text{流體靜壓；氣壓計、U 形管})
+P = \frac{F}{A}\ (\text{力／面積}) \qquad P = \rho g h\ (\text{流體靜壓、氣壓計、U 形管})
 $$
 
 ---
@@ -149,7 +147,7 @@ $$
 | **莫耳濃度 $M$** (mol/L) | $M = \dfrac{n}{V_\text{溶液}(\text{L})}$ |
 | **重量莫耳濃度 $m$** (mol/kg) | $m = \dfrac{n}{W_\text{溶劑}(\text{kg})}$ |
 | **重量百分比 %(w/w)** | 溶質質量 ÷ 溶液總質量 × 100% |
-| **ppm** | $\dfrac{\text{mg}}{\text{L}}$（稀水溶液，密度≈1）；ppb＝$\dfrac{\mu\text{g}}{\text{L}}$ |
+| **ppm** | $\dfrac{\text{mg}}{\text{L}}$（稀水溶液，密度≈1）、ppb＝$\dfrac{\mu\text{g}}{\text{L}}$ |
 
 **%(w/w) ＋ 密度 → $M$**（鎖定 1 L 溶液，四個 unit factor 串起來）：
 
@@ -214,9 +212,9 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 | 規則 | 公式 |
 |------|------|
-| 同底相乘／除 | $a^m a^n = a^{m+n}$；$\dfrac{a^m}{a^n}=a^{m-n}$ |
+| 同底相乘／除 | $a^m a^n = a^{m+n}$、$\dfrac{a^m}{a^n}=a^{m-n}$ |
 | 冪的冪 | $(a^m)^n = a^{mn}$ |
-| 負／分數指數 | $a^{-n}=\dfrac{1}{a^n}$；$a^{1/n}=\sqrt[n]{a}$ |
+| 負／分數指數 | $a^{-n}=\dfrac{1}{a^n}$、$a^{1/n}=\sqrt[n]{a}$ |
 
 ### 對數
 
@@ -242,8 +240,8 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 **有效數字**——哪些位數算數：
 
-- 非零數字**都算**；夾在中間的 0 **算**（如 1**0**5 共 3 位）。
-- 小數點後**末尾的 0 算**（如 2.5**0** 共 3 位）；純前導 0 **不算**（如 0.00**25** 共 2 位）。
+- 非零數字**都算**。夾在中間的 0 **算**（如 1**0**5 共 3 位）。
+- 小數點後**末尾的 0 算**（如 2.5**0** 共 3 位）。純前導 0 **不算**（如 0.00**25** 共 2 位）。
 
 **運算規則**：
 
@@ -256,37 +254,18 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 <Memorize client:visible
   items={[
-    "mol 兩算法：n＝N/N_A（由數量）、n＝m/M（由質量；M＝原子量 AW／分子量 MW）。",
-    "1 amu＝1 g÷N_A（多以分數計算）；<b>X amu＝X g/mol</b>（數值相同）。",
-    "unit factor：已知量×(目標單位/已知單位)，帶單位、約分只剩目標。",
-    "1 atm＝760 mmHg＝760 torr＝101325 Pa；1 Torr≈133.3 Pa。",
-    "溫度換算用『冰點→沸點比例』現推（不背公式，可解未知溫標）；K＝°C＋273，PV=nRT 一律用 K。",
-    "1 cal＝4.184 J；1 eV＝1.602×10⁻¹⁹ J；1 L·atm＝101.325 J。",
-    "1 Å＝100 pm＝10⁻¹⁰ m；1 L＝1000 mL＝1 dm³。",
-    "M＝10dw/M_w（d 密度、w 重量%、M_w 分子量）。",
-    "R＝0.08206 L·atm/mol·K＝8.314 J/mol·K。",
-    "ln x＝2.303 log x；log2＝0.301、log3＝0.477。",
-    "加減看小數位、乘除看有效位（皆取最少者）。"
-  ]}
-/>
-
-<KeyPoints client:visible
-  items={[
-    "算 M 前 V 換 L、算 PV=nRT 前 T 換 K——兩處最易漏的單位轉換。",
-    "X amu＝X g/mol 的關鍵是 N_A 在 amu→g 與 mol 兩步約掉。",
-    "選 R：題目壓力給 atm 用 0.08206、要能量用 8.314。",
-    "%(w/w)→M 記住「鎖定 1 L 溶液」推導，公式 M＝10dw/M_w。",
-    "有效數字：加減看小數位、乘除看有效位，別搞混。"
-  ]}
-/>
-
-<SolveApproach client:visible
-  steps={[
-    "先把題目所有量都用 unit factor 轉成 mol（看給的是數量 N 還是質量 m）。",
-    "需要時再用係數比跨到目標物質的 mol。",
-    "把 mol 轉成題目要的單位（質量／個數／體積／濃度）。",
-    "全程分數帶單位、上下約分，最後檢查只剩目標單位。",
-    "算完依有效數字規則歸整（加減看小數位、乘除看有效位）。"
+    "mol 兩算法：n＝N/N_A（由數量）、n＝m/M（由質量，M＝原子量 AW／分子量 MW）。",
+    "amu 橋接：1 amu＝1 g÷N_A（多以分數計算），<b>X amu＝X g/mol</b>（數值相同），關鍵是 N_A 在 amu→g 與 mol 兩步約掉。",
+    "unit factor：已知量×(目標單位/已知單位)，帶單位、上下約分只剩目標。",
+    "壓力換算：1 atm＝760 mmHg＝760 torr＝101325 Pa，1 Torr≈133.3 Pa。",
+    "溫度換算：用『冰點→沸點比例』現推（不背公式，可解未知溫標），K＝°C＋273，PV=nRT 一律用 K。",
+    "能量換算：1 cal＝4.184 J，1 eV＝1.602×10⁻¹⁹ J，1 L·atm＝101.325 J。",
+    "長度體積：1 Å＝100 pm＝10⁻¹⁰ m，1 L＝1000 mL＝1 dm³。",
+    "%(w/w)→M：鎖定 1 L 溶液推導，得 M＝10dw/M_w（d 密度、w 重量%、M_w 分子量）。",
+    "氣體常數：R＝0.08206 L·atm/mol·K＝8.314 J/mol·K，壓力給 atm 用 0.08206、要能量用 8.314。",
+    "對數換底：ln x＝2.303 log x，log2＝0.301、log3＝0.477。",
+    "有效數字：加減看小數位、乘除看有效位，皆取最少者。",
+    "易漏單位：算 M 前 V 換 L、算 PV=nRT 前 T 換 K，兩處最常漏的單位轉換。"
   ]}
 />
 
@@ -333,7 +312,7 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
   options={["0.01 mol", "0.02 mol", "0.033 mol", "0.82 mol"]}
   answer="(C) 0.033 mol"
   steps={[
-    "T：27＋273＝<b>300 K</b>；V：820 mL × (1 L / 1000 mL)＝<b>0.820 L</b>。",
+    "T：27＋273＝<b>300 K</b>、V：820 mL × (1 L / 1000 mL)＝<b>0.820 L</b>。",
     "n＝PV/RT＝(1 × 0.820)/(0.08206 × 300)＝0.820/24.62≈<b>0.033 mol</b>。",
     "常見錯誤：忘記 mL→L 或 °C→K。"
   ]}
@@ -346,7 +325,7 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
   answer="(C) 18.4 M"
   steps={[
     "鎖定 1 L：1 L ×(1000 mL/1 L)×(1.84 g/1 mL)＝<b>1840 g 溶液</b>。",
-    "溶質：1840 g ×(98/100)＝<b>1803 g H₂SO₄</b>；mol：1803 ×(1 mol/98 g)＝<b>18.4 mol</b>。",
+    "溶質：1840 g ×(98/100)＝<b>1803 g H₂SO₄</b>、mol：1803 ×(1 mol/98 g)＝<b>18.4 mol</b>。",
     "M＝18.4 mol / 1 L＝<b>18.4 M</b>。驗算 M＝10dw/M_w＝10×1.84×98/98＝18.4 ✓"
   ]}
 />
