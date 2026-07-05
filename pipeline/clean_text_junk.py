@@ -41,16 +41,27 @@ _JUNK_RES = [
     re.compile(r'[（(]?\s*請勿翻[面頁].*$'),                       # 請勿翻面
     re.compile(r'\s*(?:作答無效|測驗結束).*$'),
 ]
+# 題組（reading-group）的下一段閱讀短文常被貼進「前一題的末選項」尾巴（D/E 之後）。
+# 只套用到選項、不套用到題幹——合法題組題幹本來就有「閱讀下列文字…」指示，不可誤刪。
+_OPT_ONLY_RES = [
+    re.compile(r'\s*[※*﹡·]*\s*閱讀[^。]{0,25}?回答第?\s*\d+.*$'),               # 閱讀(下文/後/甲乙兩詩/以下短文…),回答第N題 + 整段文章
+    re.compile(r'\s*[※*﹡·]?\s*\d+\s*[-~〜–至]\s*\d+\s*題組.*$'),               # ※35~36題組題 + 整段文章（多為生物）
+    re.compile(r'\s*[※*﹡·]*\s*(?:請根據所附資料[，,]?\s*)?回答下列第\s*\d+.*$'),   # 根據所附資料,回答下列第N~M題 + 附圖說明
+    re.compile(r'\s*Questions?\s+\d+\s*[-–—~〜]\s*\d+\b.*$', re.I),            # Questions 16-20 + English passage
+]
 # a stripped suffix is "expected junk" only if it contains one of these
-_JUNK_KW = re.compile(r'缺頁|毀損|舉手|補發|背面|請勿|作答無效|測驗結束|頁之第|頁，共|頁,共|作文題|非選擇題|寫作測驗|問答題|簡答題|申論題|Cloze|Reading|【[A-D]】', re.I)
+_JUNK_KW = re.compile(r'缺頁|毀損|舉手|補發|背面|請勿|作答無效|測驗結束|頁之第|頁，共|頁,共|作文題|非選擇題|寫作測驗|問答題|簡答題|申論題|Cloze|Reading|【[A-D]】|閱讀|回答第?\s*\d|回答下列第|題組|Questions?\s+\d', re.I)
 
 
-def clean(text: str | None) -> str:
+def clean(text: str | None, is_option: bool = False) -> str:
     if not text:
         return text or ''
     t = text
     for r in _JUNK_RES:
         t = r.sub('', t)
+    if is_option:                       # 題組閱讀短文只滲進選項，題幹不動
+        for r in _OPT_ONLY_RES:
+            t = r.sub('', t)
     return t.strip()
 
 
@@ -77,7 +88,7 @@ def run(apply: bool) -> None:
                 r['question_text'] = ns
             for o in (r.get('options') or []):
                 old = o.get('text') or ''
-                nt = clean(old)
+                nt = clean(old, is_option=True)
                 if nt == old:
                     continue
                 g['opt'] += 1
