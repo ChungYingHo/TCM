@@ -32,6 +32,8 @@ pipeline/out_spike/
 pipeline/_audit/
 pipeline/_verify/
 pipeline/_guwen/
+# 部首查字：萌典原始辭典下載快取（可由 build_chars.py 重下，never commit ~15MB）
+pipeline/_chars/
 
 # large vendored dictionary — download per pipeline/README, never commit (~66MB)
 pipeline/data/ecdict.csv

@@ -4,10 +4,13 @@ title: 部首總表
 summary: 康熙 214 部首一頁速查——部首、讀音、意思、例字，並標出變形、難讀、自成與形近部首。
 ---
 import NoteStats from '@/components/notes/NoteStats.svelte'
+import CharLookup from '@/components/notes/CharLookup.svelte'
 import RadicalTable from '@/components/notes/RadicalTable.svelte'
 import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 
 <NoteStats tag="部首" client:load />
+
+<CharLookup client:load />
 
 <RadicalTable />
 
