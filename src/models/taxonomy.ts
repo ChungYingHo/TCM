@@ -106,6 +106,9 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '生物學綜合', slug: 'bio-misc', short: '綜合題' },
   ],
   chinese: [
+    // ── note-claiming tag（認領自己範圍的考古題；slug＝src/pages id）──
+    { tag: '部首', slug: 'cn-radicals', short: '部首', claimed: true },
+    // ── legacy concept tags ──
     { tag: '字音字形', slug: 'cn-phonetics', short: '字音字形' },
     { tag: '字詞義訓詁', slug: 'cn-word-meaning', short: '字詞義' },
     { tag: '通假字與古今字', slug: 'cn-loan-characters', short: '通假字', parent: '古典散文文言閱讀' },

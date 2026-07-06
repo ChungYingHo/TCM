@@ -154,6 +154,15 @@ export const NOTES: NoteEntry[] = [
     category: '快速複習',
   },
   {
+    id: 'cn-radicals',
+    href: '/cn-radicals',
+    title: '部首總表',
+    subject: '國文',
+    tags: ['部首'],
+    group: '字詞基礎',
+    desc: '康熙 214 部首一頁速查：部首、讀音、意思、例字，標出變形／難讀／自成／形近部首',
+  },
+  {
     id: 'reading-r1',
     href: '/readings/r1',
     title: '增補廣讀 R1：VOA 字彙',
