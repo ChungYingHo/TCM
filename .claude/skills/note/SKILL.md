@@ -7,14 +7,14 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 
 過去同一篇被退稿 4 次，根因都是**執行面**：動筆前沒讀透、沒照大綱、收工前沒自審。這個 skill 把「該做的檢查」變成**非做不可的順序**。**每一步都要真的做，不可跳。**
 
-權威內容規則在 `CLAUDE.md`「筆記撰寫規範 5–9」與 memory `notes-writing-style`、`notes-revision-style-feedback`、`unit-factor-notes-standard`、`pdf-print-pagination`。本檔是**流程＋硬 checklist＋各科查證＋技術備忘**，不重複那些規則的細節，但動筆前要一起讀。
+**權威內容規則在 `CLAUDE.md`「筆記撰寫規範 1–9」**（unit-factor 是規範 1、prose 風格是 5–9）；memory（`notes-writing-style`、`notes-revision-style-feedback`、`unit-factor-notes-standard`、`pdf-print-pagination`）只是**詳例與背景指標**，與 CLAUDE.md 衝突時以 CLAUDE.md 為準。本檔是**流程＋硬 checklist＋各科查證＋技術備忘**，不重複那些規則的細節，但動筆前要一起讀。
 
 ---
 
 ## 流程（九步，依序）
 
 ### 1. 讀透大綱 → 逐項列清單
-- **Aira 下 skill 時會附上大綱文件**（檔案/路徑/貼上內容）→ 直接讀他附的那份；他沒附才去 `…/學士後中醫補充資料/<科目>筆記/.content/筆記大綱/` 找。
+- **Aira 下 skill 時會附上大綱文件**（檔案/路徑/貼上內容）→ 直接讀他附的那份；他沒附才去 `C:\Users\User\Desktop\TCM-pre\<科目>筆記\.content\筆記大綱\` 找。
 - 若有課本照片/PDF，**逐張/逐頁讀**。
 - 產出一份**「大綱指定項清單」**：每個編號、每個「補：」「例題指定」「圖解」「公式寫法」「(誰發現?)」都列成一條 todo。第 7 步要逐條打勾。
 - **嚴格沿用大綱的章節結構與順序**，不可自行重排版型。
@@ -49,7 +49,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 
 ### 7. 驗證（每次都做）
 - **Render**：preview_start `tcm-dev`(4330) → 讀 `.env` 取 `SITE_PASSWORD` → POST `/api/unlock` → `fetch /<slug>` 必須 **200 ＋ 0 個 `katex-error`**（astro check 綠不代表 SSR 不 500，見 memory `mdx-notes-render-verification`）。
-- **綠燈**：`npx astro check`(0 error)、`npx eslint <改的.svelte/.ts>`、`npx vitest run`(全綠)。
+- **綠燈**：跑 CLAUDE.md「驗法（綠燈）」表的完整指令（`npm run lint`＋`npm run typecheck`＋`npm test` 三者零錯誤；動到 pipeline 再加 pytest），不要只 lint 改的單檔。
 - ⚠️ 互動點擊/截圖在本機 headless 常因 `client:visible`＋IntersectionObserver 失效而測不到（連既有元件都一樣），非 bug；用 SSR 結構檢查＋請 Aira 實機點。
 
 ### 8. 收工自審（堵最後破口）
@@ -74,6 +74,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 - 元敘述開場白（「本篇考點集中…」「一次理清」「動手玩玩」）。
 - **任何引用大綱/課本/老師/照片的痕跡**（「大綱疑問…」「大綱提到」「照片裡那張」「老師用…」「課本合併寫法」「我打不出符號」「承接上一篇」）。大綱夾的問題要**乾淨地當內容回答**，不可寫「大綱問…」。你是在寫筆記，不是回覆大綱。
 - **標「考點/最常考/常考/超常考/(概念,考點少)/正是考點」**（Aira 2026-07-04）：Aira 放進大綱的**本來就都是考點**，不需你標，標了＝退稿。
+- **編輯口吻／hype 副標**（Aira 2026-07-06 部首總表退稿）：節標題或段落**不加評語式括號/副標**——「（最常考）」「（會唸就贏一半）」「（長得像一定要分清）」「（考最兇）」全刪；筆記直接給內容與表格，不放「這段很重要」式旁白。標題只寫該節主題本身。
 - **破折號 `——`／`--`**（Aira 明講「討厭」）：一律改成。，：或斷句。
 - **部落格語氣、反問句、口語鋪陳**（「為什麼會量子化？…就能看懂」「其實」「跟著走就會」）：直接敘述、句子要**通順完整**。
 - **補「精確值/多餘資訊」**（Aira 2026-07-04「不在乎精確值」）：如取 90 nm 就 90，不要旁白「精確值 91.2」這種考試用不到的精度。
@@ -99,9 +100,11 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 
 ## 附錄 B — 各科正確性查證（一律先查證，勿信 LLM）
 
-- **生物**：**權威＝Campbell 生物學中文版**（`…/生物筆記/.content/課本原檔/Campbell生物學中文版_上冊/下冊_壓縮版.pdf`），**優先對照 Campbell、其次才網路**。Campbell 是掃描檔無文字層 → 用 Read tool 開指定 `pages`（會 render 成圖供視覺判讀），或 PyMuPDF 裁圖；**勿用文字抽取、勿由 LLM 判讀結構**（見 memory `bio-campbell-figures`）。
+- **生物**：**權威＝Campbell 生物學中文版**（`C:\Users\User\Desktop\TCM-pre\生物筆記\.content\課本原檔\Campbell生物學中文版上冊_壓縮版.pdf`、`…下冊_壓縮版.pdf`），**優先對照 Campbell、其次才網路**。Campbell 是掃描檔無文字層 → 用 Read tool 開指定 `pages`（會 render 成圖供視覺判讀），或 PyMuPDF 裁圖；**勿用文字抽取、勿由 LLM 判讀結構**（見 memory `bio-campbell-figures`）。
 - **化學**：事實/數據對照課本＋上網查可靠來源（教科書、NIST、IUPAC）；結構/圖一律對照不由 LLM 判讀；計算走 unit factor。
 - **國文**：**注音、字形、原文、平仄、斷句、作者一律上網查證**，勿憑記憶杜撰；agent 的建議也要查證（常假陽性）；需具體字詞事實卻查不到的，列「待查證」交人工，不硬寫。
+  - **權威分工（Aira 2026-07-06）**：**字義／釋義／原文查《重編國語辭典修訂本》**(dict.revised.moe.edu.tw，考題字義咬重編版原文)；**讀音／注音查《國語辭典簡編本》**(dict.concised.moe.edu.tw，因重編版常列多個異讀)；**部首注音查《國語小字典·部首字音讀表》**(dict.mini.moe.edu.tw)，部首歸屬對照康熙部首＋教育部辭典部首索引。見 memory `chinese-dict-authority-split`。
+  - ⚠ **大批查證勿用 `general-purpose` agent**（2026-07-06 部首查證踩過：它會遞迴自派子 agent、最終回空話）：改派**不能再分身的 `Explore` agent**，或讓 agent 寫檔到 scratchpad（實料留檔可救回）；權威整表（如部首字音讀表）由主對話直接 WebFetch 最穩。
 - **英文**：用法/搭配/字源對照可靠來源。
 
 ## 附錄 C — 元件 reuse 清單

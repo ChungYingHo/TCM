@@ -9,13 +9,14 @@
 3. **UI/UX 與 RWD 是一級要求**：所有畫面從一開始就以 **mobile-first 響應式**與設計品質開發，不留到最後補。每天會用 4–6 小時、且常在手機/平板上刷題。
 4. **正確性不可依賴 LLM**：題目「正確答案」只由答案卡 + 釋疑（errata）決定；LLM 只做非關鍵的概念標籤與筆記草稿，且不得用來辨識化學結構/圖表。
 5. **學校資料隔離**：資料、圖片、索引、overrides 一律 per-school 分片，一校資料壞掉不可汙染其他校。
+6. **例行工作走強制 skill 入口**：寫新筆記、或改動筆記的節結構／新增節／重寫整節以上 → `/note`；上架字首單字 → `/vocab`；重產列印 PDF → `/export-pdf`。先跑 skill 再動手，不憑記憶重建流程。（只改單一表格／錯字／一句話這類局部修補不必走 skill，但仍照下方驗法表驗證。）
 
 ## 筆記撰寫規範（務必遵守）
 
-1. **所有數值計算一律用 unit factor（因次分析）**：寫成「已知量 × (目標單位 / 已知單位)」的連乘分數，分子分母都帶單位，標出上下相消，最後只剩目標單位。**不可只寫「代入公式得答案」**；多步驟一律橫著連乘到底再算。溫度有偏移量（+273）不適用乘法因子，需特別標註。範例風格見 `學士後中醫補充資料/化學筆記/.content/普化基礎/` 之附圖（紅血球→鐵原子、H₂SO₄ g→mol、能量/壓力單位互換）。
+1. **所有數值計算一律用 unit factor（因次分析）**：寫成「已知量 × (目標單位 / 已知單位)」的連乘分數，分子分母都帶單位，標出上下相消，最後只剩目標單位。**不可只寫「代入公式得答案」**；多步驟一律橫著連乘到底再算。溫度有偏移量（+273）不適用乘法因子，需特別標註。典型範例：紅血球→鐵原子、H₂SO₄ g→mol、能量／壓力單位互換（詳見 memory `unit-factor-notes-standard`）。
 2. **化學式/算式/公式：網頁與 PDF 必須一致且都正確**。統一用 KaTeX；含狀態/箭頭/電荷的化學方程式用 **mhchem `\ce{}`**（已於 `astro.config.mjs` 啟用），輸出純 HTML+CSS、兩邊共用同一份 KaTeX CSS。簡單下標（H₂O）可用 Unicode。每篇改完都要**真的 render**（筆記是 SSR）確認無 `katex-error`、公式無破圖。
 3. **知識正確性**：化學事實/數據對照課本＋自行搜尋網路可靠來源（教科書、NIST、IUPAC…）逐項查證，**不以 LLM 記憶為準**；結構/圖一律對照、不由 LLM 判讀。可依教學判斷主動補充常考/易混淆內容。
-4. **列印 PDF 分頁（2026-06-28 起改 GoodNotes 版）**：改用 iPad GoodNotes 看（不再印紙本），換頁體驗優於紙本，故 PDF **正常輸出、允許段落自然跨頁**即可，不再把整個 `.note-sec`（標題＋內文）綁成不可分割（那會讓含大圖的段落整塊跳次頁、前頁大片留白）。保**三條**：①任何「葉級閱讀單位」（圖／公式／例題卡／單段／**整張表**）不被切成兩半；②**標題不孤懸頁尾**（`break-after: avoid`，落頁尾就連同其後內容移次頁）；③**新章節若被擠在頁尾又被切到下一頁，整節挪到新頁**（如「標題＋引言在 A 頁尾、表格落 B 頁」這種）。機制：`tailwind.css` 的 `@media print` 對 `figure/svg/.katex-display/卡片/單段/.prose table` 留 `break-inside: avoid`、標題留 `break-after: avoid`，`.note-sec` **不再** `break-inside: avoid`；③純 CSS 做不到（無法依「剩餘空間／是否跨頁」條件分頁），由 `scripts/print-notes.mjs` 產後用 PyMuPDF（`_pdf_lowsections.py`）量測真實分頁，找出「起點剩<~42% 且整節被切」的 h2/h3 注入 `break-before:page` 重產、反覆到收斂（只挪「擠＋切」者，短而塞得下的不挪、免製造半空白頁）。輸出到**桌面 `TCM-exports/`**（依科目／快速複習分子資料夾，非 repo 內 `exports/`）。改完用 `npm run pdf` 重產，並用 PyMuPDF 把每頁 render 成 PNG **逐頁全檢查**（Read 內建的 pdftoppm 在本機不可用）。
+4. **列印 PDF（2026-06-28 起 GoodNotes 版，不印紙本）**：PDF 正常輸出、允許段落自然跨頁（`.note-sec` 不綁 `break-inside: avoid`），只保三條：①葉級閱讀單位（圖／公式／例題卡／單段／**整張表**）不被切成兩半；②標題不孤懸頁尾（`break-after: avoid`）；③新章節擠在頁尾又被切到下頁時，整節挪到新頁（純 CSS 做不到，由腳本量測真實分頁後注入 `break-before: page`）。輸出到**桌面 `TCM-exports/`**（依科目／快速複習分子資料夾，非 repo 內）。**重產與逐頁驗證一律走 `/export-pdf` skill**（產生機制、常見雷、驗證 checklist 的完整細節都在該 skill 檔），不可只產不驗。
 
 **以下 5–9 為 prose 寫作風格**（對象是「忘光的初學者」；完整版與範例見 memory `notes-writing-style`）：
 
@@ -32,6 +33,18 @@
 - `tsconfig` 繼承 `astro/tsconfigs/strict`，alias `@/*` → `src/*`。共用型別放 `src/models/`、共用函數放 `src/utils/`，能抽就抽。
 - 平時以 **`npm start`** 啟動開發伺服器（= `astro dev`）。
 - 需有 **unit test（Vitest / pytest）** 與 **E2E（Playwright）**。
+
+## 驗法（綠燈，改動後必跑）
+
+| 改動類型 | 必跑 |
+| :--- | :--- |
+| 任何前端／TS 改動 | `npm run lint`＋`npm run typecheck`＋`npm test`（三者零錯誤） |
+| pipeline（Python）改動 | `cd pipeline && python -m pytest` |
+| 筆記／MDX 改動 | 真的 SSR render：dev server（port 4330）→ 用 `.env` 的 `SITE_PASSWORD` POST `/api/unlock` → fetch 該頁須 **200 且 0 個 `katex-error`**。`astro check` 全綠**不代表**不會 SSR 500（裸 `<字母` 會被當 JSX），散文比較符號寫 `&lt;`/`&gt;` |
+| UI／版面改動 | 375px 手機寬＋最極端真實資料（長字串、空資料、超多筆）實際 render，不可只 code review |
+| 列印 PDF 相關改動 | 走 `/export-pdf` skill 的逐頁驗證步驟 |
+
+驗收對照「當初的驗收條件」逐條打勾，不是對照「自己做了什麼」。
 
 ## 進站密碼
 

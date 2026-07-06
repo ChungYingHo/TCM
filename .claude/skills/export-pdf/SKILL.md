@@ -5,7 +5,7 @@ description: 把筆記重新匯出成 iPad GoodNotes 用的列印級 PDF（到�
 
 # /export-pdf — 匯出列印級筆記 PDF（強制流程）
 
-本專案 PDF 改用 **iPad GoodNotes 看（不印紙本）**。權威規則在 `CLAUDE.md`「列印 PDF 分頁（GoodNotes 版）」與 memory `pdf-print-pagination`；本檔是**流程＋驗證 checklist**，不重複規則細節，但動手前要一起讀。
+本專案 PDF 改用 **iPad GoodNotes 看（不印紙本）**。**權威規則在 `CLAUDE.md`「列印 PDF（GoodNotes 版）」規範**；memory `pdf-print-pagination` 只是機制演化史的背景指標，與 CLAUDE.md 衝突時以 CLAUDE.md 為準。本檔是**流程＋驗證 checklist**，不重複規則細節，但動手前要一起讀。
 
 每一步都要真的做，尤其**第 4 步逐頁驗證不可跳**（pdftoppm 在本機不可用，過去靠肉眼看縮圖抓到所有分頁問題）。
 
