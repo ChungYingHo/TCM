@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte'
-  import type { VocabData } from '@/models/vocab'
+  import { prefixById, type PrefixGroup, type VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
-  import { prefixGroupForDay, vocabForDay } from '@/utils/vocabSchedule'
+  import { vocabForDay } from '@/utils/vocabSchedule'
   import type { ClassicsData } from '@/models/classics'
   import { loadClassics } from '@/utils/classicsData'
   import { dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
@@ -60,8 +60,12 @@
     }
   })
 
-  const todayGroup = $derived(prefixGroupForDay(today))
   const todayWords = $derived(vocab ? vocabForDay(vocab.words, today) : [])
+  const todayGroups = $derived(
+    [...new Set(todayWords.map((w) => w.prefixId))]
+      .map((id) => (id === undefined ? undefined : prefixById(id)))
+      .filter((g): g is PrefixGroup => g !== undefined),
+  )
 
   const reviewWords = $derived(
     reviewIds.map((id) => wordById.get(id)).filter(Boolean),
@@ -86,11 +90,11 @@
     <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
   {:else}
 
-  <!-- 1. 今日單字（依老師字首順序，每天一組） -->
+  <!-- 1. 今日單字（依字根順序，每天 20 個、字根組跨日連續） -->
   {#if todayWords.length}
     <section class="rounded-box border border-base-300 border-l-[3px] border-l-primary bg-base-100 p-4 shadow-soft sm:p-5">
-      <h2 class="section-heading mb-1">今日單字 · 字首 {todayGroup.forms.join('／')} · {todayWords.length} 個</h2>
-      <p class="mb-3 text-sm text-base-content/55">{todayGroup.meaning}，依老師字首順序每天帶一組（非隨機）。</p>
+      <h2 class="section-heading mb-1">今日單字 · {todayWords.length} 個</h2>
+      <p class="mb-3 text-sm text-base-content/55">涵蓋字首 {todayGroups.map((g) => g.forms.join('／')).join('、')}；依字根順序每天 {todayWords.length} 個、字根組跨日連續（非隨機）。</p>
       <div class="grid gap-2.5 sm:grid-cols-2">
         {#each todayWords as w (w.id)}<VocabCard word={w} />{/each}
       </div>
