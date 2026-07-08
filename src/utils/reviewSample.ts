@@ -34,7 +34,9 @@ export function seededSample<T>(items: T[], n: number, seedKey: string): T[] {
  *  slice is shown (the rest roll to following days, so it varies day to day instead of dumping
  *  everything). When the due queue fits, all due come first (most-overdue first) and a random
  *  draw from learned-but-not-due words fills the spare capacity. Seeded by date → stable within
- *  a day, rotating across days. (Today's brand-new words are due tomorrow, so they never appear.) */
+ *  a day, rotating across days. NOTE: the spare-capacity fill draws from learned-but-not-due cards,
+ *  so words learned today (due tomorrow) CAN surface here — a caller that already lists "today's new
+ *  words" elsewhere must exclude those ids itself to avoid showing them twice (see DailyPlan.svelte). */
 export function composeReview(
   dueIds: string[],
   learnedIds: string[],

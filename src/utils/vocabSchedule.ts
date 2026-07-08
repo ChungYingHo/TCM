@@ -42,3 +42,15 @@ export function vocabForDay(words: VocabWord[], dayKey: string, start: string = 
   for (let i = 0; i < take; i++) out.push(list[(base + i) % n])
   return out
 }
+
+/**
+ * 起算日到 dayKey（含）之間，每天「今日單字」聯集後的 id 清單（去重、依字根順序）。
+ * ＝使用者到 dayKey 為止「看過」的所有字——用來一次把它們種進 SRS 複習排程（回填 + 每日新字）。
+ * 因每天連續取 VOCAB_PER_DAY 個、跑到底繞回，聯集恰為排序清單前 min((天數+1)×20, 全部) 個。
+ */
+export function seenVocabIds(words: VocabWord[], dayKey: string, start: string = VOCAB_SCHEDULE_START): string[] {
+  const list = orderedVocab(words)
+  if (list.length === 0) return []
+  const size = Math.min((vocabDayIndex(dayKey, start) + 1) * VOCAB_PER_DAY, list.length)
+  return list.slice(0, size).map((w) => w.id)
+}

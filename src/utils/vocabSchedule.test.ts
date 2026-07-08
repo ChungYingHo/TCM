@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { type VocabWord } from '@/models/vocab'
-import { vocabDayIndex, orderedVocab, vocabForDay, VOCAB_PER_DAY } from '@/utils/vocabSchedule'
+import { vocabDayIndex, orderedVocab, vocabForDay, seenVocabIds, VOCAB_PER_DAY } from '@/utils/vocabSchedule'
 
 const mk = (id: string, prefixId: string | undefined): VocabWord =>
   ({
@@ -55,5 +55,24 @@ describe('vocab daily schedule (字根順序、每天 20 個、繞回循環，fr
     const later = vocabForDay(few, '2026-07-09')
     expect(later).toHaveLength(3)
     expect(new Set(later.map((w) => w.id)).size).toBe(3)
+  })
+})
+
+describe('seenVocabIds（起算日至今看過的字，用於回填 SRS 種子）', () => {
+  it('day 0 = 只有第一天那 20 個字', () => {
+    expect(seenVocabIds(scrambled, '2026-07-06')).toEqual([...aIds, ...bIds.slice(0, 5)])
+  })
+
+  it('跨日累積聯集去重；第二天即涵蓋全部 25 字、之後恆為全部', () => {
+    expect(seenVocabIds(scrambled, '2026-07-07')).toEqual([...aIds, ...bIds])
+    expect(seenVocabIds(scrambled, '2026-08-01')).toEqual([...aIds, ...bIds])
+  })
+
+  it('起算日之前一律當 day 0（只有第一天的字）', () => {
+    expect(seenVocabIds(scrambled, '2026-07-04')).toEqual([...aIds, ...bIds.slice(0, 5)])
+  })
+
+  it('空字庫回空陣列', () => {
+    expect(seenVocabIds([], '2026-07-09')).toEqual([])
   })
 })

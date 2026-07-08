@@ -2,10 +2,10 @@
   import { onMount } from 'svelte'
   import { prefixById, type PrefixGroup, type VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
-  import { vocabForDay } from '@/utils/vocabSchedule'
+  import { seenVocabIds, vocabForDay } from '@/utils/vocabSchedule'
   import type { ClassicsData } from '@/models/classics'
   import { loadClassics } from '@/utils/classicsData'
-  import { dueIds, dumpVocabSrs } from '@/utils/vocabSrs'
+  import { dueIds, dumpVocabSrs, learn } from '@/utils/vocabSrs'
   import { dueIds as classicDueIds, grade as gradeClassic } from '@/utils/classicSrs'
   import { composeReview, seededSample } from '@/utils/reviewSample'
   import { todayKey } from '@/utils/date'
@@ -27,6 +27,8 @@
     const [v, c] = await Promise.allSettled([loadVocab(), loadClassics()])
     if (v.status === 'fulfilled') vocab = v.value
     if (c.status === 'fulfilled') classics = c.value
+    seedSchedule()
+    refresh()
   })
 
   const today = todayKey()
@@ -38,10 +40,20 @@
   let showUnitFactor = $state(false)
   let reviewClassicId = $state<string | null>(null)
 
+  // 把「到今天為止看過的今日單字」種進 SRS 排程（含回填起算日至今）。冪等：learn 只補新卡、
+  // 不動已學的（見 leitner.ts）。這步是為了打破 bootstrap 死結——複習清單只撈排程內的字，新字
+  // 若從沒被種過，複習區永遠是空的，那個唯一能造卡的複習流程也就永遠開不了。也扛住 cloud 把
+  // 本地排程覆寫成空（cloud.ts）後的重新種子：learn 若沒補到新卡不寫入、不會迴圈。
+  function seedSchedule() {
+    if (vocab) learn(seenVocabIds(vocab.words, today))
+  }
+
   function refresh() {
+    // 今日單字已單獨列在上方，複習區把它們濾掉，避免同一天上下重複同 20 個字。
+    const todayIds = new Set(vocab ? vocabForDay(vocab.words, today).map((w) => w.id) : [])
     reviewIds = composeReview(
-      dueIds(),
-      Object.keys(dumpVocabSrs()),
+      dueIds().filter((id) => !todayIds.has(id)),
+      Object.keys(dumpVocabSrs()).filter((id) => !todayIds.has(id)),
       60,
       60,
       today,
@@ -51,7 +63,10 @@
 
   $effect(() => {
     refresh()
-    const on = () => refresh()
+    const on = () => {
+      seedSchedule()
+      refresh()
+    }
     window.addEventListener('tcm:statechange', on)
     window.addEventListener('tcm:cloudloaded', on)
     return () => {
