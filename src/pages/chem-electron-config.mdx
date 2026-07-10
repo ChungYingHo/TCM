@@ -1,0 +1,320 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 原子軌域能階與電子組態
+summary: 單電子與多電子原子的軌域能階（n 與 n+l 規則、穿透遮蔽），填電子三大規則，電中性原子與過渡金屬（Cr、Cu 例外）電子組態的書寫。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import OrbitalEnergyLevels from '@/components/notes/OrbitalEnergyLevels.svelte'
+import RadialProbability from '@/components/notes/RadialProbability.svelte'
+import FillingOrder from '@/components/notes/FillingOrder.svelte'
+import OrbitalEnergyVsZ from '@/components/notes/OrbitalEnergyVsZ.svelte'
+import OrbitalShape3dVs4s from '@/components/notes/OrbitalShape3dVs4s.svelte'
+import OrbitalDiagram from '@/components/notes/OrbitalDiagram.svelte'
+import ConfigDecoder from '@/components/notes/ConfigDecoder.svelte'
+
+<NoteStats tag="電子組態" client:load />
+
+## 一、單電子與多電子原子的軌域能階
+
+先定義三個一直會用到的詞。
+
+- **軌域 (orbital)**：電子在原子核外可能出現的區域，每個軌域最多裝 2 個電子。
+- **主量子數 (n)**：軌域所在的殼層層數，$n = 1, 2, 3\ldots$，n 愈大離核愈遠。
+- **角動量子數 (l)**：決定副層的形狀，$l = 0, 1, 2, 3$ 分別對應 s, p, d, f 副層。
+
+**單電子原子**指核外只有 1 個電子的原子或離子。
+
+- H、He⁺、Li²⁺ 都只有 1 個電子，都算單電子原子。看的是電子數是不是 1，與質子數無關。
+- 能量**只由 n 決定**。n 相同的軌域能量相同，稱為**能階簡併 (degeneracy)**，例如 H 的 2s 與 2p 能量相同，3s、3p、3d 三者也相同。
+- 只有 1s 不具簡併性。
+- 電子待在最低的 1s 時稱為**基態 (ground state)**。
+- 吸收恰當能量後電子躍遷到較高能量的軌域，稱為**激發態 (excited state)**。
+
+<OrbitalEnergyLevels />
+
+**多電子原子**指核外有 2 個以上電子，也就是絕大多數的原子。此時能量由 n 和 l 共同決定，用 **n+l 規則**判斷。
+
+- $n+l$ 愈大，能量愈高、軌域愈不穩定。
+- $n+l$ 相同時，n 愈大能量愈高。
+
+l 為什麼也會影響能量，來自**穿透 (penetration)** 與**遮蔽 (shielding)**。
+
+- 遮蔽：內層電子離核近，會擋掉外層電子感受到的一部分核電荷。
+- 穿透：同一個 n 之下，s 最能鑽到近核處感受完整核電荷，其次 p，再其次 d。穿透愈深，感受核電荷愈多，能量愈低。
+- 結果是同一個 n 的能量順序為 $E_{ns} < E_{np} < E_{nd} < E_{nf}$。
+
+<RadialProbability />
+
+<WorkedExample source="私醫 108・化學 31" answer="(D) n=3, l=1" tags={["n+l 規則", "軌域能階"]}>
+
+**題目**　一原子中某個電子的四個量子數如下，何者能量最低？(A) n=4, l=0　(B) n=3, l=2　(C) n=3, l=2　(D) n=3, l=1
+
+**解法**　多電子原子比能量的口訣是先看 $n+l$，再看 n。
+
+| 選項 | n | l | $n+l$ |
+| :-: | :-: | :-: | :-: |
+| (A) | 4 | 0 | 4 |
+| (B) | 3 | 2 | 5 |
+| (C) | 3 | 2 | 5 |
+| (D) | 3 | 1 | 4 |
+
+(A) 與 (D) 的 $n+l = 4$ 最小，能量最低的落在這兩個。再比 n，(D) 的 n=3 比 (A) 的 n=4 小，能量更低。故選 (D)。
+
+</WorkedExample>
+
+<WorkedExample source="私醫 94・化學 34" answer="(D) 穿透力和遮蔽力" tags={["穿透遮蔽", "4s 與 3d"]}>
+
+**題目**　鉀原子的 4s 電子能量小於 3d 電子，是由哪一個因素造成的？(A) 3d 軌域的形狀　(B) 3d 有五個軌域　(C) 鉀原子的低游離能　(D) 穿透力和遮蔽力
+
+**解法**　鉀原子是多電子系統，直接比 $n+l$ 即可，4s 的 $n+l = 4$ 小於 3d 的 $n+l = 5$，所以 4s 能量較低。而 $n+l$ 規則背後的原因正是穿透與遮蔽。故選 (D)。
+
+</WorkedExample>
+
+## 二、填電子的三大規則
+
+**電子組態 (electron configuration)** 是把原子的電子依規則填入各軌域後的排列寫法。
+
+先講會用到的**電子自旋 (electron spin)**。
+
+- 電子自旋是電子本身帶有的一種性質，不是它真的在自轉。
+- 用自旋量子數 $m_s$ 描述，只有兩個值，$m_s = +\tfrac12$ 畫成箭頭向上 ↑，$m_s = -\tfrac12$ 畫成箭頭向下 ↓。
+- 兩個電子擠在同一個軌域時，自旋一定相反，寫成 ↑↓，叫成對，這正是包利要求的。
+- 兩個電子分在不同軌域時，自旋可以相同，寫成 ↑↑，叫平行，這是罕德偏好的。
+
+填電子的三大規則。
+
+- **構築原理 (Aufbau principle)**：從能量最低的軌域開始一顆一顆往上填。
+- **罕德定則 (Hund's rule)**：填同能量的簡併軌域時，先在每個軌域各佔 1 個且自旋同向，全部單佔後才開始配對，這樣電子斥力最小。
+- **包利不相容原理 (Pauli exclusion principle)**：同一軌域最多 2 個電子且自旋相反，同一原子沒有兩個電子的四個量子數完全相同。
+
+由此判斷一個電子組態是基態還是激發態。
+
+- 違反構築或罕德 → 是**激發態**，能量偏高、真實存在。
+- 違反包利 → **不存在**。
+
+下面拖原子序或按逐顆填入，可以看三大規則怎麼運作。
+
+<OrbitalDiagram client:visible />
+
+<WorkedExample source="指考 103・21" answer="(A)(B) 放出能量" tags={["基態與激發態", "吸放能"]}>
+
+**題目**　下列哪些原子的電子組態變化會**放出**能量？(A) H 由 4s¹ 變成 3d¹　(B) Cu 由 [Ar]3d⁹4s² 變成 [Ar]3d¹⁰4s¹　(C) V 由 [Ar]3d³4s² 變成 [Ar]3d⁵4s⁰　(D) C 由 [He]2s²2p² 變成 [He]2s¹2p³
+
+**解法**　放能就是由高能量狀態掉到低能量狀態，也就是激發態回到基態。
+
+- (A) H 是單電子原子，能量只看 n。4s（n=4）變成 3d（n=3），n 變小、能量變低，**放能**。
+- (B) Cu 的基態是 [Ar]3d¹⁰4s¹。由激發態 3d⁹4s² 回到基態，**放能**。
+- (C) V 由基態變成 3d⁵4s⁰ 的激發態，是吸能。
+- (D) C 由基態 2s²2p² 變成 2s¹2p³ 的激發態，是吸能。
+
+故選 (A)(B)。
+
+</WorkedExample>
+
+## 三、電中性原子的電子組態
+
+書寫電子組態有三個約定。
+
+- 依三大規則建構。
+- 通常照能量由低到高書寫。
+- 內層電子用惰性氣體符號簡寫，例如 [Ne]、[Ar]。被簡寫掉的內層電子叫**核心電子 (core)**，最外層參與化學反應的電子叫**價電子 (valence)**。
+
+<FillingOrder />
+
+電子組態通式，絕大多數電子組態都適用，不是只有過渡金屬能用。
+
+$$[\text{core}]\ ns^2\,(n-2)f^{14}\,(n-1)d^{10}\,np^6$$
+
+連 A 族有時也會填到 d¹⁰，例如 As ＝ [Ar]4s²3d¹⁰4p³、Se ＝ [Ar]4s²3d¹⁰4p⁴。
+
+<div class="my-4 rounded-box border-l-4 border-info/60 bg-info/10 px-4 py-3 text-sm">
+
+**哪個副層從第幾層才開始出現，由 $l \le n-1$ 決定**
+
+- s 副層 $l = 0$，任何 n 都成立，從 n＝1 起。
+- p 副層 $l = 1$，要 $n \ge 2$，從 2p 起，沒有 1p。
+- d 副層 $l = 2$，要 $n \ge 3$，從 3d 起，沒有 1d、2d。
+- f 副層 $l = 3$，要 $n \ge 4$，從 4f 起，沒有 1f、2f、3f。
+
+</div>
+
+第一到第三週期的電子組態如下，注意 N 的 2p³ 依罕德定則是三個各佔一個。
+
+| 元素 | 組態 | 元素 | 組態 |
+| :-: | :-- | :-: | :-- |
+| ₁H | 1s¹ | ₁₀Ne | 1s²2s²2p⁶ |
+| ₂He | 1s² | ₁₁Na | [Ne]3s¹ |
+| ₃Li | 1s²2s¹ | ₁₂Mg | [Ne]3s² |
+| ₄Be | 1s²2s² | ₁₃Al | [Ne]3s²3p¹ |
+| ₅B | 1s²2s²2p¹ | ₁₄Si | [Ne]3s²3p² |
+| ₆C | 1s²2s²2p² | ₁₅P | [Ne]3s²3p³ |
+| ₇N | 1s²2s²2p³ | ₁₆S | [Ne]3s²3p⁴ |
+| ₈O | 1s²2s²2p⁴ | ₁₇Cl | [Ne]3s²3p⁵ |
+| ₉F | 1s²2s²2p⁵ | ₁₈Ar | [Ne]3s²3p⁶ |
+
+<ConfigDecoder client:visible />
+
+<WorkedExample source="中山 113・65" answer="(A) 3s²3p⁴" tags={["價電子組態", "陷阱題"]}>
+
+**題目**　硫（S）的**價電子**組態為何？(A) 3s²3p⁴　(B) 4s²4p⁴　(C) 1s²2s²2p⁶3s²3p⁴　(D) 1s²2s²2p⁴
+
+**解法**　S 原子序 16，完整組態是 1s²2s²2p⁶3s²3p⁴ ＝ [Ne]3s²3p⁴。題目只要價電子，也就是最外層 n＝3 的電子 3s²3p⁴。選項 (C) 把核心電子也寫進去，不是題目要的。故選 (A)。
+
+</WorkedExample>
+
+<WorkedExample source="中山 113・87" answer="(D) [Xe]6s²" tags={["電子組態", "惰氣簡寫"]}>
+
+**題目**　鋇（Ba）的電子組態為何？(A) …3s²3p⁶4s²　(B) …3s²3p⁶4s¹　(C) …3s²3p⁶3d¹⁰4s²　(D) [Xe]6s²
+
+**解法**　Ba 原子序 56，在第六週期、2A 族。前一個惰性氣體是 Xe（原子序 54），再填 6s²。故 Ba ＝ [Xe]6s²，選 (D)。
+
+</WorkedExample>
+
+### 第四週期：A 族與過渡金屬
+
+第四週期有 18 種元素，要分兩群看，A 族不是過渡金屬。
+
+- **A 族**：K、Ca 把電子填入 4s，Ga、Ge、As、Se、Br、Kr 把電子填入 4p。
+- **過渡金屬**：Sc 到 Zn 把電子填入 3d，屬 B 族。
+
+為什麼先填 4s 再填 3d。
+
+- 對 K、Ca 這種電中性原子，4s 能量比 3d 低，$n+l$ 是 4s ＝ 4 小於 3d ＝ 5，加上 4s 穿透較深。
+
+<OrbitalEnergyVsZ />
+
+Cr、Cu 是例外，這和電子斥力有關。
+
+- 第一列過渡金屬中，4s²3dⁿ 與 4s¹3dⁿ⁺¹ 兩種組態的總能量其實很接近。
+
+<OrbitalShape3dVs4s />
+
+- 多數元素是 4s²3dⁿ 較低，但 Cr、Cu 反而是 4s¹3dⁿ⁺¹ 較低，因為半滿的 3d⁵、全滿的 3d¹⁰ 特別穩定。
+- **Cr ＝ [Ar]4s¹3d⁵、Cu ＝ [Ar]4s¹3d¹⁰**，務必記。
+
+同族的電子組態規律整理如下。
+
+| 同族 | 電子組態 | 規律 |
+| :-- | :-- | :-- |
+| Cr、Mo、W | Cr ＝ [Ar]4s¹3d⁵，Mo ＝ [Kr]5s¹4d⁵，W ＝ [Xe]6s²4f¹⁴5d⁴ | Cr、Mo 是 s¹d⁵，W 破例成 s²d⁴ |
+| Cu、Ag、Au | Cu ＝ [Ar]4s¹3d¹⁰，Ag ＝ [Kr]5s¹4d¹⁰，Au ＝ [Xe]6s¹4f¹⁴5d¹⁰ | 都 s¹d¹⁰，規律相同 |
+| Ni、Pd、Pt | Ni ＝ [Ar]4s²3d⁸，Pd ＝ [Kr]4d¹⁰，Pt ＝ [Xe]6s¹4f¹⁴5d⁹ | 規律不同，Pd 是 4d¹⁰5s⁰ |
+
+4d 系列不用背，跳脫規律的太多。
+
+<WorkedExample source="私醫 98・37／中國醫 110・37" answer="(D) …3d⁵4s¹" tags={["過渡金屬組態", "Cr 例外"]}>
+
+**題目**　下列何者為 ₂₄Cr 的基態電子組態？(A) …3s²3p⁶3d⁶　(B) …3s²3p⁶3d⁴4s²　(C) …3s²3p⁶3d¹⁰4s¹　(D) …3s²3p⁶3d⁵4s¹
+
+**解法**　Cr 原子序 24，照構築原理直接填會得到 4s²3d⁴，但 Cr 是例外，半滿的 3d⁵ 較穩定，所以一個 4s 電子跳去 3d，變成 4s¹3d⁵。完整寫成 1s²2s²2p⁶3s²3p⁶3d⁵4s¹，選 (D)。
+
+</WorkedExample>
+
+<WorkedExample source="中國醫 95・17" answer="(A) [Ar]4s²3d⁷" tags={["過渡金屬組態", "鈷"]}>
+
+**題目**　下列何者為基態鈷原子（Co）的電子組態？(A) [Ar]4s²3d⁷　(B) 1s²2s²2p⁶3s²3d⁹　(C) [Ne]3s²3d⁷　(D) [Ar]4s¹3d⁵
+
+**解法**　Co 原子序 27，不是例外元素，照構築原理填。填滿 [Ar]（18 個電子）後，先填 4s²，再填 3d⁷，共 9 個。故 Co ＝ [Ar]4s²3d⁷，選 (A)。
+
+</WorkedExample>
+
+<WorkedExample source="私醫 88・41" answer="(A) 18" tags={["電子組態", "數 p 電子"]}>
+
+**題目**　₄₀Zr 的電子組態中，所有 p 軌域總共有多少個電子？(A) 18　(B) 21　(C) 31　(D) 41
+
+**解法**　Zr 原子序 40，組態為 [₃₆Kr]5s²4d²。5p 還沒填入任何電子，已填滿的 p 軌域是 2p、3p、4p。
+
+$$2p^6 + 3p^6 + 4p^6 = 6 + 6 + 6 = 18\ \text{個}$$
+
+故選 (A)。
+
+</WorkedExample>
+
+## 必背
+
+<Memorize client:visible items={[
+  "單電子原子（電子數 1，如 H、He⁺、Li²⁺）：能量<b>只由 n 決定</b>，同 n 簡併",
+  "多電子原子：<b>n+l 規則</b>，n+l 大能量高，n+l 相同則 n 大能量高",
+  "同 n 能量序：<b>ns < np < nd < nf</b>，穿透 s>p>d、穿透深能量低",
+  "電子自旋：只有 ↑（ms=+½）、↓（ms=−½）兩向，同軌域必 ↑↓、不同軌域可 ↑↑",
+  "三大規則：構築（能量低先填）、罕德（簡併軌域先各佔 1 個、自旋同向）、包利（同軌域 2 電子自旋相反）",
+  "違反構築或罕德＝<b>激發態</b>，違反包利＝<b>不存在</b>",
+  "填入順序：1s 2s 2p 3s 3p <b>4s 3d</b> 4p 5s 4d 5p 6s 4f 5d 6p 7s 5f 6d 7p",
+  "軌域起始：s 從 n=1、p 從 n=2、d 從 n=3、f 從 n=4，因 l ≤ n−1",
+  "通式 <b>[core] ns² (n-2)f¹⁴ (n-1)d¹⁰ np⁶</b>，絕大多數適用，A 族也可到 d¹⁰",
+  "第四週期先填 4s 再填 3d：A 族 K、Ca 起，過渡金屬 Sc 起",
+  "例外務必記：<b>Cr ＝ [Ar]4s¹3d⁵</b>、<b>Cu ＝ [Ar]4s¹3d¹⁰</b>（半滿、全滿較穩）",
+  "同族規律：Cr/Mo/W（W 破例 s²d⁴）、Cu/Ag/Au 相同、Ni/Pd/Pt 不同、4d 系列不用背",
+]} />
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="在氫原子主量子數 n=3 的殼層中，3s、3p、3d 軌域能量的高低順序為何？"
+  options={["3s ＝ 3p ＝ 3d", "3s < 3p < 3d", "3s < 3p ＝ 3d", "3s > 3p > 3d"]}
+  answer="(A) 3s ＝ 3p ＝ 3d"
+  steps={[
+    "氫原子是<b>單電子原子</b>，軌域能量<b>只由 n 決定</b>。",
+    "n 相同（都是 n=3）的軌域能量相同，也就是簡併。",
+    "故 3s ＝ 3p ＝ 3d。若是多電子原子才會 3s < 3p < 3d。",
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="溴（Br，原子序 35）的基態電子組態為何？"
+  options={["[Ar]4s²3d¹⁰4p⁵", "[Ar]4s¹3d¹⁰4p⁶", "[Ar]4s²3d⁹4p⁶", "[Ar]3d¹⁰4p⁷"]}
+  answer="(A) [Ar]4s²3d¹⁰4p⁵"
+  steps={[
+    "Br 原子序 35，先填滿 [Ar]（18 個電子）。",
+    "接著依序填 4s²、3d¹⁰、4p，剩下 35−18−2−10 ＝ 5 個進 4p。",
+    "故 Br ＝ [Ar]4s²3d¹⁰4p⁵。注意 A 族的 Br 也填到 3d¹⁰。",
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="下列元素的電子組態，何者正確？"
+  options={["Cu：[Ar]4s²3d⁹", "Br：[Ar]4s¹3d¹⁰4p⁶", "Mn：[Ar]4s²3d⁵", "Pd：[Kr]5s²4d⁸"]}
+  answer="(C) Mn：[Ar]4s²3d⁵"
+  steps={[
+    "(A) Cu 是例外，應為 [Ar]4s¹3d¹⁰。",
+    "(B) Br 原子序 35，應為 [Ar]4s²3d¹⁰4p⁵。",
+    "(C) Mn 原子序 25，[Ar]4s²3d⁵，<b>正確</b>。",
+    "(D) Pd 是例外，應為 [Kr]4d¹⁰，5s 是空的。",
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="下列哪些電子組態變化會放出能量？（複選）"
+  options={["H 由 4s¹ 變成 3d¹", "Cu 由 [Ar]3d⁹4s² 變成 [Ar]3d¹⁰4s¹", "V 由 [Ar]3d³4s² 變成 [Ar]3d⁵4s⁰", "C 由 [He]2s²2p² 變成 [He]2s¹2p³"]}
+  answer="(A)(B)"
+  steps={[
+    "放能＝由激發態掉回基態（高能到低能）。",
+    "(A) H 是單電子原子，只看 n，4s（n=4）到 3d（n=3）能量降，<b>放能</b>。",
+    "(B) 由激發態 3d⁹4s² 回到基態 3d¹⁰4s¹，<b>放能</b>。",
+    "(C)(D) 都是基態變激發態，屬吸能。",
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="下列何者為鎢（W）的基態電子組態？"
+  options={["[Xe]6s²4f¹⁴5d⁴", "[Ar]4s²3d³", "[Xe]6s²4f⁷", "[Ne]3s¹"]}
+  answer="(A) [Xe]6s²4f¹⁴5d⁴"
+  steps={[
+    "W 與 Cr、Mo 同族，但 5d 系列不照 Cr 的 s¹d⁵ 規律。",
+    "W 的基態是 6s²5d⁴，完整寫成 [Xe]6s²4f¹⁴5d⁴。",
+    "故選 (A)。",
+  ]}
+/>
+
+## 考古題
+
+<RelatedQuestions tag="電子組態" limit={10} offset={0} client:load />

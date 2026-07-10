@@ -38,13 +38,17 @@ const NOTES = [
   { dir: '生物', href: '/bio-cell-1', file: '1-概論顯微鏡原核真核' },
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞骨架與細胞外連結' },
+  { dir: '生物', href: '/bio-cell-4', file: '4-細胞膜構造與功能' },
   { dir: '英文', href: '/readings/r1', file: '1-增補廣讀R1-VOA字彙' },
   { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
 ]
 
-// 只產指定子資料夾（如 `npm run pdf -- 生物`）；不給則全產。
+// 參數可為 dir（科目，如 `npm run pdf -- 生物`）或單篇 href／檔名（如 `npm run pdf -- /bio-cell-4`），
+// 皆精確比對；不給則全產。
 const ONLY = process.argv.slice(2)
-const SELECTED = ONLY.length ? NOTES.filter((n) => ONLY.includes(n.dir)) : NOTES
+const SELECTED = ONLY.length
+  ? NOTES.filter((n) => ONLY.includes(n.dir) || ONLY.includes(n.href) || ONLY.includes(n.file))
+  : NOTES
 
 function sitePassword() {
   if (process.env.SITE_PASSWORD) return process.env.SITE_PASSWORD

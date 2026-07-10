@@ -77,18 +77,18 @@
   <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
     <span class="font-display font-bold">軌域填充箱圖</span>
     <span class="badge badge-primary badge-lg font-bold">{SYM[z] ?? '?'}</span>
-    <button type="button" class="btn btn-sm btn-outline ml-auto gap-1" onclick={play} disabled={playing}>
+    <button type="button" class="btn btn-sm btn-outline ml-auto gap-1 print:hidden" onclick={play} disabled={playing}>
       ▶ 逐顆填入
     </button>
   </div>
 
-  <label class="mb-1 flex items-center gap-2 text-sm">
+  <label class="mb-1 flex items-center gap-2 text-sm print:hidden">
     原子序 Z
     <input type="number" min="1" max="36" bind:value={z} oninput={onSlide} class="input input-bordered input-sm w-20" />
     <span class="text-base-content/55">（1–36）</span>
   </label>
   <input type="range" min="1" max="36" step="1" bind:value={z} oninput={onSlide}
-    class="range range-primary range-sm w-full" aria-label="調整原子序" />
+    class="range range-primary range-sm w-full print:hidden" aria-label="調整原子序" />
 
   <!-- 箱圖 -->
   <div class="mt-4 flex flex-wrap items-end gap-x-3 gap-y-3">
@@ -112,7 +112,7 @@
   </div>
   <p class="mt-2 text-xs leading-relaxed text-base-content/70">
     最外層（價電子）共 <b class="text-accent">{valence}</b> 個。
-    第四週期注意 <b>4s 先於 3d 填入</b>；同副層 <b>先各放一個 ↑（洪德）</b>，排滿才回頭配 ↓。
+    第四週期注意 <b>4s 先於 3d 填入</b>。同副層 <b>先各放一個 ↑（洪德）</b>，排滿才回頭配 ↓。
   </p>
   {#if isException}
     <p class="mt-2 rounded-lg border border-accent/30 bg-accent/10 p-2.5 text-xs leading-relaxed text-accent">

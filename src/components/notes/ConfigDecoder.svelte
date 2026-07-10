@@ -21,7 +21,7 @@
   <div class="mb-3 flex items-center gap-2">
     <span aria-hidden="true">🔢</span>
     <span class="font-display font-bold">電子組態怎麼讀</span>
-    <div class="join ml-auto">
+    <div class="join ml-auto print:hidden">
       {#each EXAMPLES as e, i (e.sym)}
         <button type="button" class={`btn btn-xs join-item ${idx === i ? 'btn-primary' : 'btn-outline'}`} onclick={() => (idx = i)}>{e.sym}</button>
       {/each}

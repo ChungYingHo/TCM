@@ -43,14 +43,16 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '量子力學', slug: 'chem-quantum', short: '量子力學', claimed: true },
     { tag: '原子光譜', slug: 'chem-atomic-spectra', short: '原子光譜', claimed: true },
     { tag: '原子軌域', slug: 'chem-orbitals', short: '原子軌域', claimed: true },
+    { tag: '電子組態', slug: 'chem-electron-config', short: '電子組態', claimed: true },
+    { tag: '離子與電子行為', slug: 'chem-ions-magnetism', short: '離子與磁光', claimed: true },
     { tag: '基礎-單位因次', slug: 'chem-units', short: '單位因次', claimed: true },
     { tag: '基礎-化學鍵', slug: 'chem-molecules', short: '化學鍵', claimed: true },
     { tag: '基礎-化學計量', slug: 'chem-stoichiometry', short: '化學計量', claimed: true },
     { tag: '基礎-熱力學', slug: 'chem-thermo', short: '熱力學', claimed: true },
     // ── legacy concept tags（過渡期保留；隨 backfill 逐桶認領後淘汰）──
     { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
-    // 週期性 + 化學鍵的「閱讀」併入 atomic-structure（covers 三個 tag）；tag 本身保留供題庫/趨勢。
-    { tag: '週期性', slug: 'periodicity', short: '週期性', readIn: 'atomic-structure' },
+    // 化學鍵的「閱讀」併入 atomic-structure。週期性 已由 chem-periodicity 認領（正課篇）。
+    { tag: '週期性', slug: 'chem-periodicity', short: '週期性', claimed: true },
     { tag: '化學鍵與分子結構', slug: 'chem-bonding', short: '化學鍵', readIn: 'atomic-structure' },
     { tag: '化學計量', slug: 'stoichiometry', short: '化學計量' },
     { tag: '氣體', slug: 'gas-laws', short: '氣體' },
@@ -77,6 +79,7 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '細胞-原核與真核', slug: 'bio-cell-1', short: '原核真核', claimed: true },
     { tag: '細胞-細胞核與胞器', slug: 'bio-cell-2', short: '細胞核胞器', claimed: true },
     { tag: '細胞-骨架與連結', slug: 'bio-cell-3', short: '骨架連結', claimed: true },
+    { tag: '細胞-細胞膜', slug: 'bio-cell-4', short: '細胞膜', claimed: true },
     // ── legacy concept tags ──
     { tag: '生命分子與生物化學', slug: 'biomolecules', short: '生命分子' },
     { tag: '細胞構造與胞器', slug: 'cell-structure', short: '細胞構造' },
