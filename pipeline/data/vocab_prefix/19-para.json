@@ -1,0 +1,80 @@
+[
+  {
+    "word": "parallel",
+    "prefixId": "para",
+    "pos": "n. / a. / v.",
+    "phonetic": "ˈpærəˌlɛl",
+    "zh": "平行；平行的；與…平行、與…相似",
+    "parts": [{ "text": "para-", "gloss": "在旁" }, { "text": "allel", "gloss": "彼此（allelon）" }],
+    "etymology": "para-（在旁）＋ allel（allelon 彼此）——彼此並排、互不相交，即平行；引申為相似、相對應。",
+    "derivatives": [],
+    "example": "I'm trying to see if there's any parallel between the two cases. Two parallel lines never meet. This election closely parallels the one four years ago.",
+    "example_zh": "我想看看這兩起案件之間有沒有相似之處。兩條平行線永不相交。這場選舉與四年前那場如出一轍。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/parallel", "ipa": "/ˈpæɹəˌlɛl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "example": "photo" }
+  },
+  {
+    "word": "parasite",
+    "prefixId": "para",
+    "pos": "n.",
+    "phonetic": "ˈpærəˌsaɪt",
+    "zh": "寄生蟲",
+    "parts": [{ "text": "para-", "gloss": "在旁" }, { "text": "sit", "gloss": "食物、穀糧（sitos）" }],
+    "etymology": "para-（在旁）＋ sit（sitos 食物）——在旁吃白食；原指靠奉承蹭飯的食客，後引申為生物學的寄生物。",
+    "derivatives": [{ "word": "parasitic", "pos": "a.", "zh": "寄生的" }],
+    "example": "Financial speculators are parasites on the national economy.",
+    "example_zh": "金融投機客是國家經濟的寄生蟲。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/parasite", "ipa": "/ˈpæɹəˌsaɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "example": "photo" }
+  },
+  {
+    "word": "paramedic",
+    "prefixId": "para",
+    "pos": "n.",
+    "phonetic": "ˌpærəˈmɛdɪk",
+    "zh": "醫務輔助人員、救護技術員",
+    "parts": [{ "text": "para-", "gloss": "輔助、附屬" }, { "text": "medic", "gloss": "醫療" }],
+    "etymology": "para-（輔助、附屬）＋ medic（醫療）——以輔助身分從事醫療者，即救護技術員；由 paramedical 逆構而來。",
+    "derivatives": [],
+    "example": "Two paramedics came with the ambulance.",
+    "example_zh": "兩名救護技術員隨救護車前來。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/paramedic", "ipa": "/ˌpæɹəˈmɛdɪk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）；此 para- 取「輔助／附屬」義", "example": "photo" }
+  },
+  {
+    "word": "parasol",
+    "prefixId": "para",
+    "pos": "n.",
+    "phonetic": "ˈpɛrəˌsɑl",
+    "zh": "陽傘",
+    "parts": [{ "text": "para", "gloss": "抵擋（義大利 parare）" }, { "text": "sol", "gloss": "太陽（sol）" }],
+    "etymology": "陷阱字：此 para 為義大利 parare（抵擋、防範），非希臘「在旁」。para（擋）＋ sol（sol 太陽）——擋太陽的東西，即陽傘。",
+    "derivatives": [],
+    "example": "The lady in red is carrying a pink parasol.",
+    "example_zh": "那位穿紅衣的女士撐著一把粉紅色陽傘。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/parasol", "ipa": "/ˈpɛɹəˌsɑl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）；陷阱字：para＝義大利 parare 抵擋，非希臘『在旁』", "example": "photo" }
+  },
+  {
+    "word": "paralysis",
+    "prefixId": "para",
+    "pos": "n.",
+    "phonetic": "pəˈræləsɪs",
+    "zh": "癱瘓（複數 paralyses）",
+    "parts": [{ "text": "para-", "gloss": "在旁" }, { "text": "lys", "gloss": "鬆開（lyein）" }],
+    "etymology": "para-（在旁）＋ lys（lyein 鬆開）——身體一側鬆脫失能，即癱瘓。",
+    "derivatives": [{ "word": "paralyze", "pos": "v.", "zh": "使癱瘓、使動彈不得" }],
+    "example": "A sudden snowstorm paralyzed the city.",
+    "example_zh": "一場突如其來的暴風雪癱瘓了這座城市。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/paralysis", "ipa": "/pəˈɹæləsəs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，字尾 -sis 依 KK 慣例作 -sɪs）", "example": "photo" }
+  },
+  {
+    "word": "paraphernalia",
+    "prefixId": "para",
+    "pos": "n.",
+    "phonetic": "ˌpɛrəfɚˈnelɪə",
+    "zh": "全套設備、器材",
+    "parts": [{ "text": "para-", "gloss": "在旁、之外" }, { "text": "phern", "gloss": "嫁妝（pherne，源自 pherein 攜帶）" }],
+    "etymology": "para-（在旁、之外）＋ phern（pherne 嫁妝，同 pherein 攜帶）——原指妻子嫁妝以外的私人財物，後擴大為零星器物、全套設備。",
+    "derivatives": [],
+    "example": "You can find gloves, seeds, and other gardening paraphernalia on the fifth floor.",
+    "example_zh": "你可以在五樓找到手套、種子和其他園藝器材。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/paraphernalia", "ipa": "/ˌpɛɹəfɚˈneɪliə/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，eɪ→e，li→lɪ）", "example": "photo" }
+  }
+]

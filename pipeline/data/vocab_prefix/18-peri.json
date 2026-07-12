@@ -1,0 +1,54 @@
+[
+  {
+    "word": "periphery",
+    "prefixId": "peri",
+    "pos": "n.",
+    "phonetic": "pəˈrɪfərɪ",
+    "zh": "周邊、外圍",
+    "parts": [{ "text": "peri-", "gloss": "周圍" }, { "text": "pher", "gloss": "帶、運（pherein）" }],
+    "etymology": "peri-（周圍）＋ pher（pherein 帶、運）——繞著帶動一圈，即外緣、周邊。",
+    "derivatives": [{ "word": "peripheral", "pos": "a.", "zh": "外圍的、次要的" }],
+    "example": "The ring road runs around the periphery of the city center.",
+    "example_zh": "環城道路繞行市中心的外圍。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/periphery", "ipa": "/pəˈɹɪfəɹi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，字尾 -y i→ɪ）", "example": "photo" }
+  },
+  {
+    "word": "periscope",
+    "prefixId": "peri",
+    "pos": "n.",
+    "phonetic": "ˈpɛrɪˌskop",
+    "zh": "潛望鏡",
+    "parts": [{ "text": "peri-", "gloss": "周圍" }, { "text": "scop", "gloss": "看（skopein）" }],
+    "etymology": "peri-（周圍）＋ scop（skopein 看）——能環顧四周的觀看儀器，即潛望鏡。",
+    "derivatives": [],
+    "example": "Modern submarines still rely on periscopes, although to a lesser extent.",
+    "example_zh": "現代潛艇仍仰賴潛望鏡，儘管程度已較低。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/periscope", "ipa": "/ˈpɛɹɪskoʊp/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，oʊ→o）", "example": "photo" }
+  },
+  {
+    "word": "periodical",
+    "prefixId": "peri",
+    "pos": "n.",
+    "phonetic": "ˌpɪrɪˈɑdɪkəl",
+    "zh": "期刊",
+    "parts": [{ "text": "peri-", "gloss": "周圍" }, { "text": "od", "gloss": "路、行（hodos）" }],
+    "etymology": "peri-（周圍）＋ od（hodos 路、行走）——繞行一圈、周而復始，即週期；定期出刊者即期刊。",
+    "derivatives": [{ "word": "period", "pos": "n.", "zh": "週期、時期、句點" }, { "word": "periodic", "pos": "a.", "zh": "週期的、定期的" }],
+    "example": "The paper was published in a leading periodical in the field.",
+    "example_zh": "這篇論文發表在該領域一流的期刊上。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/periodical", "ipa": "/ˌpɪɹiˈɑdɪkl̩/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，音節性 l→əl）；字根 od 考證自 period 頁", "example": "photo" }
+  },
+  {
+    "word": "periodontal",
+    "prefixId": "peri",
+    "pos": "a.",
+    "phonetic": "ˌpɛrɪəˈdɑntəl",
+    "zh": "牙周的",
+    "parts": [{ "text": "peri-", "gloss": "周圍" }, { "text": "odont", "gloss": "牙齒（odous/odont-）" }],
+    "etymology": "peri-（周圍）＋ odont（odous/odont- 牙齒）——牙齒周圍（的組織），即牙周的。",
+    "derivatives": [],
+    "example": "Poor oral hygiene may lead to periodontal diseases.",
+    "example_zh": "口腔衛生不良可能導致牙周疾病。",
+    "sources": { "page": "IMG_1227", "etymonline": "https://www.etymonline.com/word/periodontal", "ipa": "/ˌpɛɹiəˈdɑntəl/", "ipaSource": "詞典 GenAm（Wiktionary 無英語音）", "phoneticNote": "KK 自標準 GenAm 詞典音轉寫（ɹ→r）；Wiktionary periodontal/periodontitis 皆無英語 IPA", "example": "photo" }
+  }
+]

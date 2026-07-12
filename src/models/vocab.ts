@@ -74,6 +74,18 @@ export const PREFIX_GROUPS: PrefixGroup[] = [
   { id: 'pre', forms: ['pre-'], meaning: '之前（before）', order: 9 },
   { id: 'post', forms: ['post-'], meaning: '之後（after）', order: 10 },
   { id: 'ad', forms: ['ad-'], meaning: '朝向、去（to, toward）', order: 11 },
+  { id: 'epi', forms: ['epi-'], meaning: '在上、在旁（upon, on）', order: 12 },
+  { id: 'ob', forms: ['ob-', 'oc-', 'of-', 'op-'], meaning: '朝向、對抗（toward, against）', order: 13 },
+  { id: 'pro', forms: ['pro-'], meaning: '之前、向前、贊成（before, forward, for）', order: 14 },
+  { id: 're', forms: ['re-'], meaning: '回、再（back, again）', order: 15 },
+  { id: 'ana', forms: ['ana-'], meaning: '再、往上、回（again, up, back）', order: 16 },
+  { id: 'ambi', forms: ['ambi-', 'amphi-'], meaning: '兩者、周圍（both, around）', order: 17 },
+  { id: 'peri', forms: ['peri-'], meaning: '周圍、環繞（around）', order: 18 },
+  { id: 'para', forms: ['para-'], meaning: '在旁、並列（beside）', order: 19 },
+  { id: 'super', forms: ['sur-', 'super-'], meaning: '在上、超過（over, above）', order: 20 },
+  { id: 'sub', forms: ['sub-', 'suc-', 'sup-'], meaning: '在下、之後（under, after）', order: 21 },
+  { id: 'cata', forms: ['cata-'], meaning: '向下（down）', order: 22 },
+  { id: 'ex', forms: ['ex-', 'e-', 'ec-', 'ef-'], meaning: '向外、加強（out, intensifier）', order: 23 },
 ]
 
 const PREFIX_BY_ID: Record<string, PrefixGroup> = Object.fromEntries(

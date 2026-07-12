@@ -1,0 +1,54 @@
+[
+  {
+    "word": "epilogue",
+    "prefixId": "epi",
+    "pos": "n.",
+    "phonetic": "ˈɛpɪˌlɔɡ",
+    "zh": "結尾語、尾聲、跋",
+    "parts": [{ "text": "epi-", "gloss": "在上、附加" }, { "text": "logue", "gloss": "話語（logos）" }],
+    "etymology": "epi-（在上、附加）＋ logue（logos 說話）——加在最後說的話，即收場白、尾聲；對比 prologue（序）。",
+    "derivatives": [],
+    "example": "In the epilogue the author describes how the main characters were doing 20 years later.",
+    "example_zh": "作者在尾聲裡描述主要角色 20 年後的近況。",
+    "sources": { "page": "IMG_1218", "etymonline": "https://www.etymonline.com/word/epilogue", "ipa": "/ˈɛpɪlɔɡ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "epidemic",
+    "prefixId": "epi",
+    "pos": "n. / a.",
+    "phonetic": "ˌɛpɪˈdɛmɪk",
+    "zh": "疫情、傳染病；會傳染的",
+    "parts": [{ "text": "epi-", "gloss": "在…之中" }, { "text": "dem", "gloss": "人民（demos）" }],
+    "etymology": "epi-（在…之中）＋ dem（demos 人民、地區）——遍及全體人民之間，即（疾病）流行、傳染。",
+    "derivatives": [],
+    "example": "There is an epidemic of dengue fever going on in the South. Tuberculosis is an epidemic disease.",
+    "example_zh": "南部正爆發登革熱疫情。肺結核是一種會傳染的疾病。",
+    "sources": { "page": "IMG_1219", "etymonline": "https://www.etymonline.com/word/epidemic", "ipa": "/ˌɛpɪˈdɛmɪk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "epigram",
+    "prefixId": "epi",
+    "pos": "n.",
+    "phonetic": "ˈɛpɪˌɡræm",
+    "zh": "警句、格言",
+    "parts": [{ "text": "epi-", "gloss": "在上" }, { "text": "gram", "gloss": "書寫（gramma）" }],
+    "etymology": "epi-（在上）＋ gram（gramma 所書寫者，同 graphein 寫）——刻寫其上的短韻文，即警句、格言。",
+    "derivatives": [{ "word": "epigrammatic", "pos": "a.", "zh": "警句式的" }],
+    "example": "\"A stitch in time saves nine\" is an epigram that you should remember.",
+    "example_zh": "「及時一針省九針」是一句你該記住的格言。",
+    "sources": { "page": "IMG_1219", "etymonline": "https://www.etymonline.com/word/epigram", "ipa": "/ˈɛpɪɡɹæm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "example": "photo" }
+  },
+  {
+    "word": "epitome",
+    "prefixId": "epi",
+    "pos": "n.",
+    "phonetic": "ɪˈpɪtəmɪ",
+    "zh": "縮影、典型、摘要",
+    "parts": [{ "text": "epi-", "gloss": "在上" }, { "text": "tom", "gloss": "切（temnein）" }],
+    "etymology": "epi-（在上）＋ tom（temnein 切）——切取要點即摘要，引申為濃縮的縮影、典型。",
+    "derivatives": [{ "word": "epitomize", "pos": "v.", "zh": "成為…的縮影、摘要" }],
+    "example": "The lady is the epitome of French elegance.",
+    "example_zh": "這位女士是法式優雅的典型化身。",
+    "sources": { "page": "IMG_1219", "etymonline": "https://www.etymonline.com/word/epitome", "ipa": "/ɪˈpɪtəmi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y i→ɪ）", "example": "photo" }
+  }
+]

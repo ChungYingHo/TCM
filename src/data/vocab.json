@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-04",
-  "count": 132,
-  "withExamples": 132,
+  "generated_at": "2026-07-12",
+  "count": 252,
+  "withExamples": 252,
   "words": [
     {
       "id": "apathetic",
@@ -4548,6 +4548,4043 @@
           "word": "appraisal",
           "pos": "n.",
           "zh": "估價、評估"
+        }
+      ]
+    },
+    {
+      "id": "appreciate",
+      "word": "appreciate",
+      "phonetic": "əˈpriʃɪˌet",
+      "zh": "升值、欣賞、感激",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Euro has appreciated a lot against the dollar. I really appreciate your help.",
+      "example_zh": "歐元對美元大幅升值。我真的很感謝你的幫忙。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "ap-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "preci",
+          "gloss": "價值（pretium＝price）"
+        }
+      ],
+      "etymology": "ap-（向，＝ad 在 p 前）＋ preci（pretium 價值、價格）——為某物定價，引申為珍視、賞識；亦指增值。",
+      "derivatives": [
+        {
+          "word": "appreciation",
+          "pos": "n.",
+          "zh": "升值、欣賞、感激"
+        },
+        {
+          "word": "depreciate",
+          "pos": "v.",
+          "zh": "貶值"
+        },
+        {
+          "word": "depreciation",
+          "pos": "n.",
+          "zh": "貶值"
+        }
+      ]
+    },
+    {
+      "id": "ascertain",
+      "word": "ascertain",
+      "phonetic": "ˌæsɚˈten",
+      "zh": "確定、查明",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The information can be easily ascertained on the Web.",
+      "example_zh": "這項資訊在網路上很容易查證。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "as-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "certain",
+          "gloss": "確定（certus）"
+        }
+      ],
+      "etymology": "as-（向，＝ad）＋ certain（certus 確定、無疑）——使確信、弄確實，即查明、確定。",
+      "derivatives": [
+        {
+          "word": "certain",
+          "pos": "a.",
+          "zh": "確定的"
+        }
+      ]
+    },
+    {
+      "id": "array",
+      "word": "array",
+      "phonetic": "əˈre",
+      "zh": "一系列、大批",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In the buffet there is an array of delicious food to choose from.",
+      "example_zh": "自助餐檯上有一整排美味佳餚可供選擇。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "ar-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "ray",
+          "gloss": "準備、排列（日耳曼 ræd-）"
+        }
+      ],
+      "etymology": "陷阱字：-ray 與「光線 ray」無關。ar-（向，＝ad）＋ ray（日耳曼 ræd- 準備、排列，同 ready）——使就緒、排列成陣，即一系列、大批。",
+      "derivatives": []
+    },
+    {
+      "id": "asset",
+      "word": "asset",
+      "phonetic": "ˈæsɛt",
+      "zh": "資產",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Knowledge of languages is a great asset in this sort of work.",
+      "example_zh": "在這類工作中，語言能力是一大資產。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "as-",
+          "gloss": "到（＝ad）"
+        },
+        {
+          "text": "set",
+          "gloss": "足夠（satis）"
+        }
+      ],
+      "etymology": "陷阱字：-set 非英語「放置」，而是拉丁 satis（足夠）的殘留。as-（到，＝ad）＋ set（satis 足夠）——原為法律用語「足以清償債務的財產」，即資產。（asset 為 assets 反推的人造單數。）",
+      "derivatives": []
+    },
+    {
+      "id": "assimilate",
+      "word": "assimilate",
+      "phonetic": "əˈsɪməˌlet",
+      "zh": "吸收、同化",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Second-generation immigrants are quickly assimilated into the new culture.",
+      "example_zh": "第二代移民很快就融入了新文化。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "as-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "simil",
+          "gloss": "相似、相同（similis）"
+        }
+      ],
+      "etymology": "as-（向，＝ad）＋ simil（similis 相似）——使變得相似，即吸收、同化。",
+      "derivatives": [
+        {
+          "word": "assimilation",
+          "pos": "n.",
+          "zh": "吸收、同化"
+        },
+        {
+          "word": "similar",
+          "pos": "a.",
+          "zh": "相似的"
+        }
+      ]
+    },
+    {
+      "id": "assortment",
+      "word": "assortment",
+      "phonetic": "əˈsɔrtmənt",
+      "zh": "各式各樣、什錦",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The room is filled with an assortment of antique furniture.",
+      "example_zh": "這個房間擺滿了各式各樣的古董家具。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "as-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "sort",
+          "gloss": "種類（sors／sort-）"
+        }
+      ],
+      "etymology": "as-（向，＝ad）＋ sort（sors／sortem 籤、份、種類）——分門別類，引申為各式各樣的一批、什錦。",
+      "derivatives": [
+        {
+          "word": "assort",
+          "pos": "v.",
+          "zh": "分類"
+        },
+        {
+          "word": "sort",
+          "pos": "n. / v.",
+          "zh": "種類；分類"
+        }
+      ]
+    },
+    {
+      "id": "attest",
+      "word": "attest",
+      "phonetic": "əˈtɛst",
+      "zh": "證明、作證",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The number of old German cars still on the road attests (to) the excellence of their manufacture.",
+      "example_zh": "路上仍有這麼多老德國車，證明了它們製造工藝的精良。",
+      "draft": false,
+      "prefixId": "ad",
+      "parts": [
+        {
+          "text": "at-",
+          "gloss": "向（＝ad）"
+        },
+        {
+          "text": "test",
+          "gloss": "作證（testari）"
+        }
+      ],
+      "etymology": "at-（向，＝ad 在 t 前）＋ test（testari 作證，出自 testis 證人）——為某事作證、證實，即證明。",
+      "derivatives": [
+        {
+          "word": "testament",
+          "pos": "n.",
+          "zh": "證明、證據"
+        },
+        {
+          "word": "testimony",
+          "pos": "n.",
+          "zh": "證詞"
+        }
+      ]
+    },
+    {
+      "id": "epilogue",
+      "word": "epilogue",
+      "phonetic": "ˈɛpɪˌlɔɡ",
+      "zh": "結尾語、尾聲、跋",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In the epilogue the author describes how the main characters were doing 20 years later.",
+      "example_zh": "作者在尾聲裡描述主要角色 20 年後的近況。",
+      "draft": false,
+      "prefixId": "epi",
+      "parts": [
+        {
+          "text": "epi-",
+          "gloss": "在上、附加"
+        },
+        {
+          "text": "logue",
+          "gloss": "話語（logos）"
+        }
+      ],
+      "etymology": "epi-（在上、附加）＋ logue（logos 說話）——加在最後說的話，即收場白、尾聲；對比 prologue（序）。",
+      "derivatives": []
+    },
+    {
+      "id": "epidemic",
+      "word": "epidemic",
+      "phonetic": "ˌɛpɪˈdɛmɪk",
+      "zh": "疫情、傳染病；會傳染的",
+      "pos": "n. / a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There is an epidemic of dengue fever going on in the South. Tuberculosis is an epidemic disease.",
+      "example_zh": "南部正爆發登革熱疫情。肺結核是一種會傳染的疾病。",
+      "draft": false,
+      "prefixId": "epi",
+      "parts": [
+        {
+          "text": "epi-",
+          "gloss": "在…之中"
+        },
+        {
+          "text": "dem",
+          "gloss": "人民（demos）"
+        }
+      ],
+      "etymology": "epi-（在…之中）＋ dem（demos 人民、地區）——遍及全體人民之間，即（疾病）流行、傳染。",
+      "derivatives": []
+    },
+    {
+      "id": "epigram",
+      "word": "epigram",
+      "phonetic": "ˈɛpɪˌɡræm",
+      "zh": "警句、格言",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "\"A stitch in time saves nine\" is an epigram that you should remember.",
+      "example_zh": "「及時一針省九針」是一句你該記住的格言。",
+      "draft": false,
+      "prefixId": "epi",
+      "parts": [
+        {
+          "text": "epi-",
+          "gloss": "在上"
+        },
+        {
+          "text": "gram",
+          "gloss": "書寫（gramma）"
+        }
+      ],
+      "etymology": "epi-（在上）＋ gram（gramma 所書寫者，同 graphein 寫）——刻寫其上的短韻文，即警句、格言。",
+      "derivatives": [
+        {
+          "word": "epigrammatic",
+          "pos": "a.",
+          "zh": "警句式的"
+        }
+      ]
+    },
+    {
+      "id": "epitome",
+      "word": "epitome",
+      "phonetic": "ɪˈpɪtəmɪ",
+      "zh": "縮影、典型、摘要",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The lady is the epitome of French elegance.",
+      "example_zh": "這位女士是法式優雅的典型化身。",
+      "draft": false,
+      "prefixId": "epi",
+      "parts": [
+        {
+          "text": "epi-",
+          "gloss": "在上"
+        },
+        {
+          "text": "tom",
+          "gloss": "切（temnein）"
+        }
+      ],
+      "etymology": "epi-（在上）＋ tom（temnein 切）——切取要點即摘要，引申為濃縮的縮影、典型。",
+      "derivatives": [
+        {
+          "word": "epitomize",
+          "pos": "v.",
+          "zh": "成為…的縮影、摘要"
+        }
+      ]
+    },
+    {
+      "id": "obligatory",
+      "word": "obligatory",
+      "phonetic": "əˈblɪɡəˌtɔrɪ",
+      "zh": "義務性的、必須的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I did 13 months of obligatory military service.",
+      "example_zh": "我服了 13 個月的義務兵役。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "朝向"
+        },
+        {
+          "text": "lig",
+          "gloss": "綁、束縛（ligare）"
+        }
+      ],
+      "etymology": "ob-（朝向）＋ lig（ligare 綁）——把人綁住、加以拘束，引申為使人負有義務，即義務性的。",
+      "derivatives": [
+        {
+          "word": "obligation",
+          "pos": "n.",
+          "zh": "義務"
+        }
+      ]
+    },
+    {
+      "id": "oblong",
+      "word": "oblong",
+      "phonetic": "ˈɑblɑŋ",
+      "zh": "長方形（的）、橢圓形（的）",
+      "pos": "a. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "An American football is oblong in shape. Size A4 printing paper is an oblong.",
+      "example_zh": "美式足球的形狀是橢圓形的。A4 影印紙是長方形的。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "long",
+          "gloss": "長（longus）"
+        }
+      ],
+      "etymology": "ob-（此處作加強）＋ long（longus 長）——長多於寬的，即長方形、橢圓形。此處 ob- 為加強前綴，非群組義『對抗』。",
+      "derivatives": []
+    },
+    {
+      "id": "obstacle",
+      "word": "obstacle",
+      "phonetic": "ˈɑbstəkəl",
+      "zh": "阻礙、障礙",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We encountered many obstacles on the way but overcame every one of them.",
+      "example_zh": "我們一路遇上許多障礙，但一一克服了。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "擋在前、對抗"
+        },
+        {
+          "text": "sta",
+          "gloss": "站立（stare）"
+        }
+      ],
+      "etymology": "ob-（擋在前）＋ sta（stare 站立）——站在前面擋路，即障礙、阻礙。",
+      "derivatives": []
+    },
+    {
+      "id": "obstinate",
+      "word": "obstinate",
+      "phonetic": "ˈɑbstənɪt",
+      "zh": "固執的、頑固的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It will be very hard to persuade him for he is an obstinate man.",
+      "example_zh": "要說服他很難，因為他是個固執的人。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "對抗、抵住"
+        },
+        {
+          "text": "stin",
+          "gloss": "站立（stare）"
+        }
+      ],
+      "etymology": "ob-（抵住）＋ stin（stare 站立）——頑強站定、頂住不退，即固執的。",
+      "derivatives": [
+        {
+          "word": "obstinacy",
+          "pos": "n.",
+          "zh": "固執"
+        }
+      ]
+    },
+    {
+      "id": "objection",
+      "word": "objection",
+      "phonetic": "əbˈdʒɛkʃən",
+      "zh": "反對",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Are there any objections to the proposal?",
+      "example_zh": "對這項提案有任何反對意見嗎？",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "對抗、擋在前"
+        },
+        {
+          "text": "ject",
+          "gloss": "投擲（jacere）"
+        }
+      ],
+      "etymology": "ob-（對抗）＋ ject（jacere 投擲）——擲於前以相抗，即反對。",
+      "derivatives": [
+        {
+          "word": "object",
+          "pos": "v. / n.",
+          "zh": "反對；物體"
+        }
+      ]
+    },
+    {
+      "id": "objective",
+      "word": "objective",
+      "phonetic": "əbˈdʒɛktɪv",
+      "zh": "目標；客觀的",
+      "pos": "n. / a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In his Statement of Purpose, the student listed his goal and short-term objectives. Do you want my objective opinion?",
+      "example_zh": "在讀書計畫裡，這名學生列出了他的目標與短期目標。你想聽我客觀的意見嗎？",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "在前"
+        },
+        {
+          "text": "ject",
+          "gloss": "投擲（jacere）"
+        }
+      ],
+      "etymology": "ob-（在前）＋ ject（jacere 投擲）——擺在（心、眼）前之物，即目標；不受主觀左右者即客觀的。",
+      "derivatives": [
+        {
+          "word": "objectivity",
+          "pos": "n.",
+          "zh": "客觀性"
+        }
+      ]
+    },
+    {
+      "id": "obsolete",
+      "word": "obsolete",
+      "phonetic": "ˌɑbsəˈlit",
+      "zh": "被淘汰的、過時的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Cassette recorders are obsolete.",
+      "example_zh": "卡帶錄音機已經被淘汰了。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "脫離（away）"
+        },
+        {
+          "text": "sole",
+          "gloss": "慣常（solere）"
+        }
+      ],
+      "etymology": "陷阱字：此處 ob- 為『離開 away』，非群組義『對抗』。ob-（脫離）＋ sole（solere 習以為常）——脫離慣常使用而廢，即過時、被淘汰的。（字根為 solere 習慣，非 sol 太陽。）",
+      "derivatives": [
+        {
+          "word": "obsolescence",
+          "pos": "n.",
+          "zh": "淘汰、過時"
+        }
+      ]
+    },
+    {
+      "id": "occident",
+      "word": "occident",
+      "phonetic": "ˈɑksɪdənt",
+      "zh": "西方",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some say East and West will never meet, meaning the Orient and the Occident will always remain incompatible.",
+      "example_zh": "有人說東西方永難交會，意指東方與西方永遠格格不入。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "oc-",
+          "gloss": "向下、離去（down/away）"
+        },
+        {
+          "text": "cid",
+          "gloss": "落下（cadere）"
+        }
+      ],
+      "etymology": "oc-（ob 同化，向下）＋ cid（cadere 落下）——太陽西沉之方，即西方；與 Orient（東方）相對。此處 oc-＝down/away 非『對抗』。",
+      "derivatives": [
+        {
+          "word": "Occidental",
+          "pos": "a.",
+          "zh": "西方的"
+        }
+      ]
+    },
+    {
+      "id": "opaque",
+      "word": "opaque",
+      "phonetic": "oˈpek",
+      "zh": "不透明的、難理解的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The university culture is opaque to entering students.",
+      "example_zh": "對剛入學的學生而言，大學文化令人摸不透。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "opac-",
+          "gloss": "陰暗、有陰影（opacus，不可再拆）"
+        }
+      ],
+      "etymology": "陷阱字：此字並無 ob-／op- 前綴。源自拉丁 opacus「陰暗、遮蔽」（來源不明），op- 屬詞根本體，不帶『朝向／對抗』義。引申為不透明的、難理解的。",
+      "derivatives": [
+        {
+          "word": "opaqueness",
+          "pos": "n.",
+          "zh": "不透明、難理解"
+        },
+        {
+          "word": "opacity",
+          "pos": "n.",
+          "zh": "不透明、難理解"
+        }
+      ]
+    },
+    {
+      "id": "offend",
+      "word": "offend",
+      "phonetic": "əˈfɛnd",
+      "zh": "冒犯、得罪",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The woman felt offended when she failed to receive an invitation to the big party.",
+      "example_zh": "這名女子沒收到那場盛大派對的邀請，覺得受了冒犯。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "of-",
+          "gloss": "對抗、擋在前"
+        },
+        {
+          "text": "fend",
+          "gloss": "打擊、撞擊（fendere）"
+        }
+      ],
+      "etymology": "of-（ob 同化，對抗）＋ fend（fendere 打擊）——迎面撞上、抵觸，即冒犯、得罪。",
+      "derivatives": [
+        {
+          "word": "offense",
+          "pos": "n.",
+          "zh": "冒犯、進攻"
+        },
+        {
+          "word": "offensive",
+          "pos": "a. / n.",
+          "zh": "令人不快的；進攻"
+        },
+        {
+          "word": "defend",
+          "pos": "v.",
+          "zh": "防守、捍衛"
+        },
+        {
+          "word": "defense",
+          "pos": "n.",
+          "zh": "防守、捍衛、辯護"
+        },
+        {
+          "word": "defensive",
+          "pos": "a.",
+          "zh": "防衛性的"
+        }
+      ]
+    },
+    {
+      "id": "oppress",
+      "word": "oppress",
+      "phonetic": "əˈprɛs",
+      "zh": "壓迫",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The tyrant oppressed his people brutally.",
+      "example_zh": "這名暴君殘暴地壓迫他的人民。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "op-",
+          "gloss": "對抗、壓向"
+        },
+        {
+          "text": "press",
+          "gloss": "壓（premere）"
+        }
+      ],
+      "etymology": "op-（ob 同化，壓向）＋ press（premere 壓）——由上往下緊壓，即壓迫。",
+      "derivatives": [
+        {
+          "word": "oppression",
+          "pos": "n.",
+          "zh": "壓迫"
+        }
+      ]
+    },
+    {
+      "id": "oblivious",
+      "word": "oblivious",
+      "phonetic": "əˈblɪvɪəs",
+      "zh": "渾然不覺的、不知道的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Absorbed in her work, she was totally oblivious of her surroundings.",
+      "example_zh": "她全神貫注在工作上，對周遭渾然不覺。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "越過（over）"
+        },
+        {
+          "text": "liv",
+          "gloss": "遺忘（oblivisci）"
+        }
+      ],
+      "etymology": "此處 ob- 為『越過 over』。出自 oblivisci（遺忘）——把事情整個抹去、渾然不記，即渾然不覺的。（Etymonline 對其字根另有『抹平』的不確定推測。）",
+      "derivatives": [
+        {
+          "word": "oblivion",
+          "pos": "n.",
+          "zh": "被遺忘、湮沒"
+        }
+      ]
+    },
+    {
+      "id": "obscure",
+      "word": "obscure",
+      "phonetic": "əbˈskjʊr",
+      "zh": "模糊不清的、不知名的；遮掩、使失色",
+      "pos": "a. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Official policy has changed, for reasons that remain obscure. The sun was obscured by dark clouds.",
+      "example_zh": "官方政策變了，原因仍不清楚。太陽被烏雲遮蔽了。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "覆於其上（over）"
+        },
+        {
+          "text": "scur",
+          "gloss": "遮蓋（＊(s)keu-）"
+        }
+      ],
+      "etymology": "此處 ob- 為『覆於其上 over』。ob-（覆上）＋ scur（(s)keu- 遮蓋）——蓋住看不清，即模糊、不知名的；作動詞為遮掩、使失色。",
+      "derivatives": [
+        {
+          "word": "obscurity",
+          "pos": "n.",
+          "zh": "陰暗、含糊、沒沒無聞"
+        }
+      ]
+    },
+    {
+      "id": "obtrusive",
+      "word": "obtrusive",
+      "phonetic": "əbˈtrusɪv",
+      "zh": "突出的、顯眼的、唐突的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The guards wore civilian clothes to make their presence less obtrusive.",
+      "example_zh": "警衛穿著便服，好讓自己不那麼顯眼。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "朝向、在前"
+        },
+        {
+          "text": "trus",
+          "gloss": "推、戳（trudere）"
+        }
+      ],
+      "etymology": "ob-（在前）＋ trus（trudere 推、戳）——向前硬推、強行顯露，即突出、唐突的。",
+      "derivatives": [
+        {
+          "word": "unobtrusive",
+          "pos": "a.",
+          "zh": "不唐突的、不引人注意的"
+        },
+        {
+          "word": "obtrude",
+          "pos": "v.",
+          "zh": "打擾、強加"
+        }
+      ]
+    },
+    {
+      "id": "obliterate",
+      "word": "obliterate",
+      "phonetic": "əˈblɪtəˌret",
+      "zh": "擦掉、消除、抹除",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The downpour obliterated any traces of movement.",
+      "example_zh": "這場傾盆大雨抹去了一切行動的痕跡。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "劃過、對抗（against）"
+        },
+        {
+          "text": "liter",
+          "gloss": "字母（littera）"
+        }
+      ],
+      "etymology": "ob-（劃過）＋ liter（littera 字母）——在字上劃過把它抹掉，即擦除、消滅。",
+      "derivatives": [
+        {
+          "word": "obliteration",
+          "pos": "n.",
+          "zh": "擦掉、消除"
+        }
+      ]
+    },
+    {
+      "id": "observe",
+      "word": "observe",
+      "phonetic": "əbˈzɝv",
+      "zh": "觀察、遵守、慶祝",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The role of scientists is to observe and describe the world, not to try to control it. Visitors to the park are expected to strictly observe the regulations. Most Jews observe Passover.",
+      "example_zh": "科學家的職責是觀察並描述世界，而非試圖控制它。遊客進入公園須嚴格遵守規定。大多數猶太人都慶祝逾越節。",
+      "draft": false,
+      "prefixId": "ob",
+      "parts": [
+        {
+          "text": "ob-",
+          "gloss": "在前、面對"
+        },
+        {
+          "text": "serv",
+          "gloss": "守望、看守（servare）"
+        }
+      ],
+      "etymology": "ob-（面對）＋ serv（servare 守望）——留意看守，即觀察；引申為遵守（規則）、紀念慶祝（節日）。",
+      "derivatives": [
+        {
+          "word": "observation",
+          "pos": "n.",
+          "zh": "觀察、遵守"
+        },
+        {
+          "word": "observant",
+          "pos": "a.",
+          "zh": "觀察入微的、嚴格遵守的"
+        },
+        {
+          "word": "observance",
+          "pos": "n.",
+          "zh": "遵守、紀念、慶祝"
+        }
+      ]
+    },
+    {
+      "id": "process",
+      "word": "process",
+      "phonetic": "ˈprɑsɛs",
+      "zh": "過程、程序；加工、處理",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The application process takes about three months. This plant processes nearly one thousand tons of sewage a day.",
+      "example_zh": "申請程序大約需要三個月。這座廠每天處理將近一千噸污水。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前"
+        },
+        {
+          "text": "cess",
+          "gloss": "走（cedere）"
+        }
+      ],
+      "etymology": "pro-（向前）＋ cess（cedere 走）——向前推進的一連串步驟，即過程、程序；引申為加工、處理。",
+      "derivatives": []
+    },
+    {
+      "id": "progenitor",
+      "word": "progenitor",
+      "phonetic": "proˈdʒɛnɪtɚ",
+      "zh": "祖先、前輩、先驅",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Humans and monkeys share the same progenitor. Sigmund Freud was the progenitor of modern psychology.",
+      "example_zh": "人類與猴子有共同的祖先。佛洛伊德是現代心理學的先驅。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "在前"
+        },
+        {
+          "text": "gen",
+          "gloss": "生育（gignere）"
+        }
+      ],
+      "etymology": "pro-（在前）＋ gen（gignere 生育）——在你之前生出你的人，即祖先、先驅。",
+      "derivatives": [
+        {
+          "word": "progeny",
+          "pos": "n.",
+          "zh": "後代、子孫"
+        }
+      ]
+    },
+    {
+      "id": "prologue",
+      "word": "prologue",
+      "phonetic": "ˈproˌlɔɡ",
+      "zh": "序、開場白",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I often skip over the prologue while reading stories.",
+      "example_zh": "我讀故事時常跳過序言。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "在…之前"
+        },
+        {
+          "text": "logue",
+          "gloss": "話語（logos）"
+        }
+      ],
+      "etymology": "pro-（之前）＋ logue（logos 話語）——正戲之前先說的話，即序言、開場白。",
+      "derivatives": []
+    },
+    {
+      "id": "prolong",
+      "word": "prolong",
+      "phonetic": "proˈlɑŋ",
+      "zh": "延長",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Modern medicine has managed to prolong human life substantially.",
+      "example_zh": "現代醫學已能大幅延長人類壽命。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前"
+        },
+        {
+          "text": "long",
+          "gloss": "長（longus）"
+        }
+      ],
+      "etymology": "pro-（向前）＋ long（longus 長）——向前拉長，即延長。",
+      "derivatives": [
+        {
+          "word": "prolongation",
+          "pos": "n.",
+          "zh": "延長"
+        }
+      ]
+    },
+    {
+      "id": "pro-life",
+      "word": "pro-life",
+      "phonetic": "ˌproˈlaɪf",
+      "zh": "反墮胎的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There's a pro-life demonstration on the square.",
+      "example_zh": "廣場上有一場反墮胎示威。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "贊成、支持"
+        },
+        {
+          "text": "life",
+          "gloss": "生命"
+        }
+      ],
+      "etymology": "pro-（贊成、支持）＋ life（生命）——「支持胎兒生命」的立場，即反墮胎的；與 pro-choice 相對。",
+      "derivatives": [
+        {
+          "word": "pro-choice",
+          "pos": "a.",
+          "zh": "支持墮胎權的"
+        }
+      ]
+    },
+    {
+      "id": "procrastinate",
+      "word": "procrastinate",
+      "phonetic": "proˈkræstəˌnet",
+      "zh": "拖延",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "When it comes to housework, I tend to procrastinate.",
+      "example_zh": "一碰到家事，我就容易拖延。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前"
+        },
+        {
+          "text": "cras",
+          "gloss": "明天（cras）"
+        }
+      ],
+      "etymology": "pro-（向前）＋ cras（cras 明天）——把事情往明天推，即拖延。",
+      "derivatives": [
+        {
+          "word": "procrastination",
+          "pos": "n.",
+          "zh": "拖延"
+        }
+      ]
+    },
+    {
+      "id": "propagate",
+      "word": "propagate",
+      "phonetic": "ˈprɑpəˌɡet",
+      "zh": "繁殖、使…普及",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Plants need certain conditions to propagate.",
+      "example_zh": "植物需要特定條件才能繁殖。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前"
+        },
+        {
+          "text": "pag",
+          "gloss": "插枝、固定（pangere）"
+        }
+      ],
+      "etymology": "pro-（向前）＋ pag（pangere 釘牢、固定）——源自園藝壓條插枝的繁殖法，引申為繁殖、使普及。",
+      "derivatives": [
+        {
+          "word": "propagation",
+          "pos": "n.",
+          "zh": "繁殖、普及化"
+        }
+      ]
+    },
+    {
+      "id": "prosthetic",
+      "word": "prosthetic",
+      "phonetic": "ˌprɑsˈθɛtɪk",
+      "zh": "義肢的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The patient can walk again, on prosthetic legs.",
+      "example_zh": "這位病人靠義肢又能走路了。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pros-",
+          "gloss": "加上（希臘，非拉丁 pro-）"
+        },
+        {
+          "text": "thet",
+          "gloss": "放置（tithenai）"
+        }
+      ],
+      "etymology": "陷阱字：字首為希臘 pros-（向、加上），非拉丁 pro-。pros-（加上）＋ thet（tithenai 放置）——加補上去的部件，即義肢的。",
+      "derivatives": [
+        {
+          "word": "prosthesis",
+          "pos": "n.",
+          "zh": "義肢、補綴術（複數 prostheses）"
+        }
+      ]
+    },
+    {
+      "id": "profile",
+      "word": "profile",
+      "phonetic": "ˈproˌfaɪl",
+      "zh": "輪廓、簡介；畫側面像、做簡介",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He didn't put much in his Facebook profile. The article profiles two new singers.",
+      "example_zh": "他的臉書簡介沒寫多少。這篇報導介紹了兩位新歌手。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前"
+        },
+        {
+          "text": "fil",
+          "gloss": "線、絲（filum）"
+        }
+      ],
+      "etymology": "pro-（向前）＋ fil（filum 線）——向前抽出一條線勾出側面，即輪廓、側面像；引申為簡介、剖析。",
+      "derivatives": []
+    },
+    {
+      "id": "protest",
+      "word": "protest",
+      "phonetic": "ˈproˌtɛst",
+      "zh": "抗議",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The villagers marched in protest of the new factory. Many workers protested against longer hours.",
+      "example_zh": "村民遊行抗議那座新工廠。許多勞工抗議工時延長。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前、當眾"
+        },
+        {
+          "text": "test",
+          "gloss": "作證（testari）"
+        }
+      ],
+      "etymology": "pro-（當眾）＋ test（testari 作證）——公開表態，本為當眾宣告，引申為表達反對、抗議。",
+      "derivatives": []
+    },
+    {
+      "id": "promulgate",
+      "word": "promulgate",
+      "phonetic": "ˈprɑməlˌɡet",
+      "zh": "頒布、宣告、散布",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The new law was promulgated last summer.",
+      "example_zh": "這條新法於去年夏天頒布。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "向前、公開"
+        },
+        {
+          "text": "mulg",
+          "gloss": "擠出→使湧現（mulgere）"
+        }
+      ],
+      "etymology": "pro-（公開）＋ mulg（mulgere 擠奶）——如擠出乳汁般把消息「引出」公之於眾，即頒布、宣告。",
+      "derivatives": [
+        {
+          "word": "promulgation",
+          "pos": "n.",
+          "zh": "頒布、宣告"
+        }
+      ]
+    },
+    {
+      "id": "proactive",
+      "word": "proactive",
+      "phonetic": "proˈæktɪv",
+      "zh": "積極主動的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company has decided to take a proactive approach toward environmental protection.",
+      "example_zh": "公司決定對環境保護採取積極主動的作法。",
+      "draft": false,
+      "prefixId": "pro",
+      "parts": [
+        {
+          "text": "pro-",
+          "gloss": "事先、向前"
+        },
+        {
+          "text": "act",
+          "gloss": "做、行動（agere）"
+        }
+      ],
+      "etymology": "pro-（事先）＋ act（agere 做）——事先主動出手，即積極主動的；與 reactive（被動反應）相對。",
+      "derivatives": [
+        {
+          "word": "reactive",
+          "pos": "a.",
+          "zh": "回應的、被動反應的"
+        }
+      ]
+    },
+    {
+      "id": "reserve",
+      "word": "reserve",
+      "phonetic": "rɪˈzɝv",
+      "zh": "預留、預訂、保留",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can go online to reserve a ticket to the opera. I recommend Mr. Lin fully, without any reservation.",
+      "example_zh": "你可以上網預訂歌劇的門票。我毫無保留地全力推薦林先生。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "serv",
+          "gloss": "保存（servare）"
+        }
+      ],
+      "etymology": "re-（回）＋ serv（servare 保存）——留存以備日後使用，即預留、保留、預訂。",
+      "derivatives": [
+        {
+          "word": "reservation",
+          "pos": "n.",
+          "zh": "預訂、保留"
+        }
+      ]
+    },
+    {
+      "id": "recuperation",
+      "word": "recuperation",
+      "phonetic": "rɪˌkupəˈreʃən",
+      "zh": "康復、療養",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "After the surgery, the man went to the countryside for recuperation.",
+      "example_zh": "手術後，這名男子到鄉下療養。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "cuper",
+          "gloss": "取回（recuperare）"
+        }
+      ],
+      "etymology": "re-（回）＋ cuper（recuperare 取回，與 capere 取相關）——把健康取回來，即康復、療養。",
+      "derivatives": [
+        {
+          "word": "recuperate",
+          "pos": "v.",
+          "zh": "療養、康復"
+        }
+      ]
+    },
+    {
+      "id": "regenerate",
+      "word": "regenerate",
+      "phonetic": "riˈdʒɛnəˌret",
+      "zh": "再生",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A lizard can regenerate a tail easily.",
+      "example_zh": "蜥蜴能輕易地再生出尾巴。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "gen",
+          "gloss": "生（generare）"
+        }
+      ],
+      "etymology": "re-（再）＋ gen（generare 生）——重新長出來，即再生。",
+      "derivatives": [
+        {
+          "word": "regeneration",
+          "pos": "n.",
+          "zh": "再生"
+        }
+      ]
+    },
+    {
+      "id": "reconcile",
+      "word": "reconcile",
+      "phonetic": "ˈrɛkənˌsaɪl",
+      "zh": "調解、和解、使一致",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It is sometimes difficult to reconcile science with religion.",
+      "example_zh": "有時很難使科學與宗教相容一致。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "concile",
+          "gloss": "使和好（conciliare）"
+        }
+      ],
+      "etymology": "re-（再）＋ concile（conciliare 使親善，源自 concilium 聚會）——使雙方再度和好，即調解、和解；引申為使（兩事）相容一致。",
+      "derivatives": [
+        {
+          "word": "reconciliation",
+          "pos": "n.",
+          "zh": "調解、和解"
+        }
+      ]
+    },
+    {
+      "id": "rehabilitation",
+      "word": "rehabilitation",
+      "phonetic": "ˌriəˌbɪlɪˈteʃən",
+      "zh": "復健、恢復",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The drug addict was sent to the rehabilitation center.",
+      "example_zh": "這名毒癮者被送進了勒戒復健中心。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "habilit",
+          "gloss": "能、合適（habilis）"
+        }
+      ],
+      "etymology": "re-（再）＋ habilit（habilis 合適、能，源自 habere 持有）——使再度回到有能力／原有的狀態，即復健、恢復。",
+      "derivatives": [
+        {
+          "word": "rehab",
+          "pos": "n. / v.",
+          "zh": "復健、恢復"
+        },
+        {
+          "word": "rehabilitate",
+          "pos": "v.",
+          "zh": "復健、使恢復"
+        }
+      ]
+    },
+    {
+      "id": "reimburse",
+      "word": "reimburse",
+      "phonetic": "ˌriɪmˈbɝs",
+      "zh": "償還、補償",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company will reimburse your travel expenses on your return.",
+      "example_zh": "公司會在你回來後報銷你的差旅費。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "im-",
+          "gloss": "入"
+        },
+        {
+          "text": "burse",
+          "gloss": "錢包（bursa）"
+        }
+      ],
+      "etymology": "re-（回）＋ im-（入）＋ burse（bursa 錢包）——把錢放回對方錢包裡，即償還、補償。",
+      "derivatives": [
+        {
+          "word": "reimbursement",
+          "pos": "n.",
+          "zh": "償還、補償"
+        }
+      ]
+    },
+    {
+      "id": "reincarnation",
+      "word": "reincarnation",
+      "phonetic": "ˌriɪnkɑrˈneʃən",
+      "zh": "輪迴、轉世",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Tibetan Buddhists believe in the reincarnation of the soul.",
+      "example_zh": "藏傳佛教徒相信靈魂的輪迴轉世。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "in-",
+          "gloss": "入"
+        },
+        {
+          "text": "carn",
+          "gloss": "肉（caro/carnis）"
+        }
+      ],
+      "etymology": "re-（再）＋ in-（入）＋ carn（caro/carnis 肉）——靈魂再度化為肉身，即輪迴、轉世。",
+      "derivatives": [
+        {
+          "word": "reincarnate",
+          "pos": "v. / a.",
+          "zh": "轉世；轉世的"
+        },
+        {
+          "word": "incarnation",
+          "pos": "n.",
+          "zh": "典型、化身"
+        }
+      ]
+    },
+    {
+      "id": "relay",
+      "word": "relay",
+      "phonetic": "ˈrile",
+      "zh": "轉達、傳遞、接力",
+      "pos": "v. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I relayed the news to the others. Volunteers worked in relays to rescue trapped victims.",
+      "example_zh": "我把消息轉達給其他人。志工們輪班接力搶救受困的災民。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "lay",
+          "gloss": "放開、留下（laxare）"
+        }
+      ],
+      "etymology": "re-（回）＋ lay（laxare 放開，源自古法 relaier）——原指以生力獵犬替換疲累者，引申為接力、轉達、傳遞。此 lay 源自 laxare，非英語 lay（放置）。",
+      "derivatives": []
+    },
+    {
+      "id": "remedy",
+      "word": "remedy",
+      "phonetic": "ˈrɛmədɪ",
+      "zh": "治療、補救、療方",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This herbal tea is an effective remedy for headaches. This mistake must be remedied immediately.",
+      "example_zh": "這種花草茶是治頭痛的有效療方。這個錯誤必須立即補救。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "加強／再"
+        },
+        {
+          "text": "medy",
+          "gloss": "醫治（mederi）"
+        }
+      ],
+      "etymology": "re-（加強，或字面『再』）＋ medy（mederi 醫治）——用心醫治、匡正，即治療、補救。（Etymonline 指此 re- 可能為加強語氣。）",
+      "derivatives": [
+        {
+          "word": "remedial",
+          "pos": "a.",
+          "zh": "治療的、補救的"
+        }
+      ]
+    },
+    {
+      "id": "represent",
+      "word": "represent",
+      "phonetic": "ˌrɛprɪˈzɛnt",
+      "zh": "代表、表現",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Chinese-American athlete decided to represent China in the Olympics.",
+      "example_zh": "這名美籍華裔運動員決定在奧運代表中國出賽。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "加強"
+        },
+        {
+          "text": "present",
+          "gloss": "呈現（praesentare）"
+        }
+      ],
+      "etymology": "re-（加強）＋ present（praesentare 呈現）——把事物擺到眼前重現，即代表、表現。（Etymonline 指此 re- 或為加強語氣。）",
+      "derivatives": [
+        {
+          "word": "representation",
+          "pos": "n.",
+          "zh": "代表、表現"
+        },
+        {
+          "word": "representative",
+          "pos": "n.",
+          "zh": "代表人"
+        }
+      ]
+    },
+    {
+      "id": "retrospect",
+      "word": "retrospect",
+      "phonetic": "ˈrɛtrəˌspɛkt",
+      "zh": "回顧",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In retrospect, maybe we shouldn't have invested so much into the project.",
+      "example_zh": "現在回頭看，也許我們不該在這項計畫投入那麼多。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "retro-",
+          "gloss": "向後"
+        },
+        {
+          "text": "spect",
+          "gloss": "看（specere）"
+        }
+      ],
+      "etymology": "陷阱字：前綴是 retro-（向後）而非 re-，但同屬『向後 back』一族。retro-（向後）＋ spect（specere 看）——回頭看，即回顧。",
+      "derivatives": [
+        {
+          "word": "retrospective",
+          "pos": "a. / n.",
+          "zh": "回顧性的；回顧展"
+        }
+      ]
+    },
+    {
+      "id": "retaliation",
+      "word": "retaliation",
+      "phonetic": "rɪˌtælɪˈeʃən",
+      "zh": "報復",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The bombing was in retaliation for an air strike.",
+      "example_zh": "這起轟炸是為了報復一次空襲。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "tali",
+          "gloss": "同樣（talis）"
+        }
+      ],
+      "etymology": "re-（回）＋ tali（talis 同樣，見 lex talionis 以牙還牙）——以同樣方式回敬，即報復。",
+      "derivatives": [
+        {
+          "word": "retaliate",
+          "pos": "v.",
+          "zh": "報復"
+        },
+        {
+          "word": "retaliatory",
+          "pos": "a.",
+          "zh": "報復性的"
+        }
+      ]
+    },
+    {
+      "id": "reveal",
+      "word": "reveal",
+      "phonetic": "rɪˈvil",
+      "zh": "透露、顯示、揭曉",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The police didn't reveal the man's identity.",
+      "example_zh": "警方沒有透露這名男子的身分。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "相反、逆轉"
+        },
+        {
+          "text": "veal",
+          "gloss": "面紗（velum）"
+        }
+      ],
+      "etymology": "此處 re- 表『相反、逆轉』。re-（去掉）＋ veal（velum 面紗）——把遮蓋的面紗揭去，即揭露、透露。",
+      "derivatives": [
+        {
+          "word": "revelation",
+          "pos": "n.",
+          "zh": "啟示、揭露"
+        }
+      ]
+    },
+    {
+      "id": "redress",
+      "word": "redress",
+      "phonetic": "rɪˈdrɛs",
+      "zh": "糾正、矯正、補救；賠償",
+      "pos": "v. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It is time to redress the injustices of the past. He went to court to seek redress for being discriminated against.",
+      "example_zh": "是時候糾正過去的不公了。他為了受到歧視而上法院尋求賠償。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "dress",
+          "gloss": "弄直（directus）"
+        }
+      ],
+      "etymology": "re-（再）＋ dress（directus 弄直）——重新弄直、整頓，即糾正、匡正、補救。",
+      "derivatives": []
+    },
+    {
+      "id": "reciprocate",
+      "word": "reciprocate",
+      "phonetic": "rɪˈsɪprəˌket",
+      "zh": "回報、互惠",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Having received a gift, he reciprocated in kind.",
+      "example_zh": "收到禮物後，他也回贈了同樣的禮。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "pro",
+          "gloss": "往前（pro-）"
+        }
+      ],
+      "etymology": "reciprocus（往返、交替）＝古拉丁 re-（回）＋ pro-（往前）——一來一往、互相往復，即回報、互惠。",
+      "derivatives": [
+        {
+          "word": "reciprocal",
+          "pos": "a.",
+          "zh": "互相的、互惠的"
+        },
+        {
+          "word": "reciprocation",
+          "pos": "n.",
+          "zh": "交換、報答"
+        }
+      ]
+    },
+    {
+      "id": "replace",
+      "word": "replace",
+      "phonetic": "rɪˈples",
+      "zh": "取代、替換",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Typewriters have long been replaced by computers.",
+      "example_zh": "打字機早已被電腦取代了。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "place",
+          "gloss": "放置"
+        }
+      ],
+      "etymology": "re-（回）＋ place（放置）——放回原位，引申為以新的頂替舊的，即取代、替換。",
+      "derivatives": [
+        {
+          "word": "replacement",
+          "pos": "n.",
+          "zh": "替代、替代品"
+        }
+      ]
+    },
+    {
+      "id": "reproach",
+      "word": "reproach",
+      "phonetic": "rɪˈprotʃ",
+      "zh": "責備、指摘",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "What he did was beyond reproach. The manager reproached him for failing to meet his quota.",
+      "example_zh": "他的所作所為無可指摘。經理責備他沒能達成配額。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回、相反"
+        },
+        {
+          "text": "proach",
+          "gloss": "近（prope）"
+        }
+      ],
+      "etymology": "re-（相反）＋ proach（prope 近）——把過失逼近到某人面前，即當面斥責、指摘。",
+      "derivatives": []
+    },
+    {
+      "id": "restoration",
+      "word": "restoration",
+      "phonetic": "ˌrɛstəˈreʃən",
+      "zh": "恢復、復原、修復",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The restoration of the historic site was concluded successfully.",
+      "example_zh": "這處古蹟的修復工程圓滿完成了。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "再"
+        },
+        {
+          "text": "stor",
+          "gloss": "建立、使穩固（staurare）"
+        }
+      ],
+      "etymology": "re-（再）＋ stor（staurare 建立、使穩固）——重新建立回原狀，即恢復、復原、修復。",
+      "derivatives": [
+        {
+          "word": "restore",
+          "pos": "v.",
+          "zh": "恢復、復原"
+        }
+      ]
+    },
+    {
+      "id": "rebate",
+      "word": "rebate",
+      "phonetic": "ˈribet",
+      "zh": "退還、退款、折扣",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The sooner you file your taxes, the earlier you can get a rebate. All overpayments will be rebated to taxpayers.",
+      "example_zh": "你越早報稅，就能越早拿到退稅。所有溢繳的款項都會退還給納稅人。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "bate",
+          "gloss": "打（battre）"
+        }
+      ],
+      "etymology": "re-（回）＋ bate（battre 打，源自古法 rabattre 打下）——把數額打下來退回，即退款、折扣。",
+      "derivatives": []
+    },
+    {
+      "id": "refugee",
+      "word": "refugee",
+      "phonetic": "ˌrɛfjʊˈdʒi",
+      "zh": "難民",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The war has produced millions of refugees.",
+      "example_zh": "這場戰爭製造了數以百萬計的難民。",
+      "draft": false,
+      "prefixId": "re",
+      "parts": [
+        {
+          "text": "re-",
+          "gloss": "回"
+        },
+        {
+          "text": "fug",
+          "gloss": "逃（fugere）"
+        }
+      ],
+      "etymology": "re-（回）＋ fug（fugere 逃）——逃離家園去避難的人，即難民。",
+      "derivatives": [
+        {
+          "word": "refuge",
+          "pos": "n.",
+          "zh": "庇護、庇護所"
+        }
+      ]
+    },
+    {
+      "id": "anatomy",
+      "word": "anatomy",
+      "phonetic": "əˈnætəmɪ",
+      "zh": "解剖學、構造",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The paper deals with the anatomy and behavior of cats.",
+      "example_zh": "這篇論文探討貓的構造與行為。",
+      "draft": false,
+      "prefixId": "ana",
+      "parts": [
+        {
+          "text": "ana-",
+          "gloss": "往上、徹底"
+        },
+        {
+          "text": "tom",
+          "gloss": "切（temnein）"
+        }
+      ],
+      "etymology": "ana-（往上、徹底）＋ tom（temnein 切）——徹底切開來看，即解剖（學）、構造。",
+      "derivatives": [
+        {
+          "word": "anatomical",
+          "pos": "a.",
+          "zh": "解剖學的、構造的"
+        }
+      ]
+    },
+    {
+      "id": "analysis",
+      "word": "analysis",
+      "phonetic": "əˈnæləsɪs",
+      "zh": "分析（複數 analyses）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Chemical analysis shows that the water is contaminated with lead.",
+      "example_zh": "化學分析顯示這水受到鉛污染。",
+      "draft": false,
+      "prefixId": "ana",
+      "parts": [
+        {
+          "text": "ana-",
+          "gloss": "徹底、回"
+        },
+        {
+          "text": "lys",
+          "gloss": "鬆開（lyein）"
+        }
+      ],
+      "etymology": "ana-（徹底、回）＋ lys（lyein 鬆開、解開）——把複雜之物一一拆解開，即分析。",
+      "derivatives": [
+        {
+          "word": "analyze",
+          "pos": "v.",
+          "zh": "分析"
+        },
+        {
+          "word": "analytic",
+          "pos": "a.",
+          "zh": "分析的"
+        },
+        {
+          "word": "analytical",
+          "pos": "a.",
+          "zh": "分析的"
+        }
+      ]
+    },
+    {
+      "id": "anachronism",
+      "word": "anachronism",
+      "phonetic": "əˈnækrəˌnɪzəm",
+      "zh": "時代錯置、不合時宜（者）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The movie is set in the 16th century, so it's an anachronism to hear the characters discussing gravity. That misogynistic judge is an anachronism.",
+      "example_zh": "這部電影設定在 16 世紀，聽到角色談論重力便是時代錯置。那位歧視女性的法官根本是不合時宜的老古董。",
+      "draft": false,
+      "prefixId": "ana",
+      "parts": [
+        {
+          "text": "ana-",
+          "gloss": "相反、逆"
+        },
+        {
+          "text": "chron",
+          "gloss": "時間（khronos）"
+        }
+      ],
+      "etymology": "ana-（相反、逆）＋ chron（khronos 時間）——把事物錯置於不對的時代，即時代錯置、不合時宜。",
+      "derivatives": [
+        {
+          "word": "anachronistic",
+          "pos": "a.",
+          "zh": "時代錯置的、不合時宜的"
+        }
+      ]
+    },
+    {
+      "id": "ambitious",
+      "word": "ambitious",
+      "phonetic": "æmˈbɪʃəs",
+      "zh": "野心勃勃的、企圖心旺盛的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Three Gorges Dam is a very ambitious civil engineering project.",
+      "example_zh": "三峽大壩是一項野心極大的土木工程。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "ambi-",
+          "gloss": "環繞、四處（around）"
+        },
+        {
+          "text": "it",
+          "gloss": "走（ire）"
+        }
+      ],
+      "etymology": "ambi-（環繞、四處）＋ it（ire 走）——羅馬候選人四處奔走拉票，故引申為有野心、渴求功名的。此處 ambi- 為「四處」非「兩者」。",
+      "derivatives": [
+        {
+          "word": "ambition",
+          "pos": "n.",
+          "zh": "野心、企圖心"
+        }
+      ]
+    },
+    {
+      "id": "ambience",
+      "word": "ambience",
+      "phonetic": "ˈæmbɪəns",
+      "zh": "氣氛、周圍環境",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I like the ambience of this coffee shop.",
+      "example_zh": "我喜歡這家咖啡廳的氛圍。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "ambi-",
+          "gloss": "環繞（around）"
+        },
+        {
+          "text": "i",
+          "gloss": "走（ire）"
+        }
+      ],
+      "etymology": "ambi-（環繞）＋ i（ire 走）——環繞四周者，即周遭的氣氛、環境。",
+      "derivatives": [
+        {
+          "word": "ambiance",
+          "pos": "n.",
+          "zh": "氣氛、周圍環境"
+        },
+        {
+          "word": "ambient",
+          "pos": "a.",
+          "zh": "周圍的"
+        }
+      ]
+    },
+    {
+      "id": "ambiguous",
+      "word": "ambiguous",
+      "phonetic": "æmˈbɪɡjuəs",
+      "zh": "模稜兩可的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "All ambiguous sentences should be corrected or deleted from your composition.",
+      "example_zh": "作文裡所有模稜兩可的句子都該修正或刪除。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "ambi-",
+          "gloss": "來回、兩邊"
+        },
+        {
+          "text": "ig",
+          "gloss": "驅趕、行（agere）"
+        }
+      ],
+      "etymology": "ambi-（來回）＋ ig（agere 驅趕）——往兩邊來回遊走、拿不定，即模稜兩可。Etymonline 標 ambi- 本義為『四處/about』，『兩可』是由此引申。",
+      "derivatives": [
+        {
+          "word": "ambiguity",
+          "pos": "n.",
+          "zh": "模稜兩可"
+        }
+      ]
+    },
+    {
+      "id": "ambivalent",
+      "word": "ambivalent",
+      "phonetic": "æmˈbɪvələnt",
+      "zh": "（情感）矛盾的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The girl had ambivalent feelings about her boyfriend and couldn't decide whether to leave him.",
+      "example_zh": "這女孩對男友的感情很矛盾，拿不定主意要不要離開他。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "ambi-",
+          "gloss": "兩者、兩邊（both）"
+        },
+        {
+          "text": "val",
+          "gloss": "力量、價值（valere）"
+        }
+      ],
+      "etymology": "ambi-（兩者）＋ val（valere 強、有力）——對同一對象同時懷有兩股相反的力量／情感，即感情矛盾的。此處 ambi- 確為『兩者』。",
+      "derivatives": [
+        {
+          "word": "ambivalence",
+          "pos": "n.",
+          "zh": "（情感）矛盾"
+        }
+      ]
+    },
+    {
+      "id": "amphibian",
+      "word": "amphibian",
+      "phonetic": "æmˈfɪbɪən",
+      "zh": "兩棲類（的）、水陸兩用的",
+      "pos": "n. / a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Frogs are amphibians. Amphibian vehicles are very convenient.",
+      "example_zh": "青蛙是兩棲動物。水陸兩用車非常方便。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "amphi-",
+          "gloss": "兩種、兩邊（both）"
+        },
+        {
+          "text": "bi",
+          "gloss": "生命（bios）"
+        }
+      ],
+      "etymology": "amphi-（兩種）＋ bi（bios 生命）——過著水陸雙重生活者，即兩棲動物；引申為水陸兩用的。",
+      "derivatives": []
+    },
+    {
+      "id": "amphitheater",
+      "word": "amphitheater",
+      "phonetic": "ˈæmpəˌθiətɚ",
+      "zh": "圓形劇場",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The playwright staged her new play in an amphitheater.",
+      "example_zh": "這位劇作家在圓形劇場上演她的新劇。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "amphi-",
+          "gloss": "兩側、周圍"
+        },
+        {
+          "text": "theater",
+          "gloss": "劇場（theatron）"
+        }
+      ],
+      "etymology": "amphi-（兩側、周圍）＋ theater（theatron 觀看場）——座位環繞中央，猶如兩個半圓劇場相合，即圓形劇場。",
+      "derivatives": []
+    },
+    {
+      "id": "amputate",
+      "word": "amputate",
+      "phonetic": "ˈæmpjʊˌtet",
+      "zh": "截肢、切斷",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man bitten by a rattlesnake had his leg amputated.",
+      "example_zh": "那名被響尾蛇咬傷的男子截去了一條腿。",
+      "draft": false,
+      "prefixId": "ambi",
+      "parts": [
+        {
+          "text": "amb-",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "put",
+          "gloss": "修剪、切（putare）"
+        }
+      ],
+      "etymology": "amb-（環繞）＋ put（putare 修剪、切）——繞著肢體切一圈而截斷，即截肢。此處 amb- 為『環繞』非『兩者』。",
+      "derivatives": [
+        {
+          "word": "amputation",
+          "pos": "n.",
+          "zh": "截肢、切斷"
+        }
+      ]
+    },
+    {
+      "id": "periphery",
+      "word": "periphery",
+      "phonetic": "pəˈrɪfərɪ",
+      "zh": "周邊、外圍",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The ring road runs around the periphery of the city center.",
+      "example_zh": "環城道路繞行市中心的外圍。",
+      "draft": false,
+      "prefixId": "peri",
+      "parts": [
+        {
+          "text": "peri-",
+          "gloss": "周圍"
+        },
+        {
+          "text": "pher",
+          "gloss": "帶、運（pherein）"
+        }
+      ],
+      "etymology": "peri-（周圍）＋ pher（pherein 帶、運）——繞著帶動一圈，即外緣、周邊。",
+      "derivatives": [
+        {
+          "word": "peripheral",
+          "pos": "a.",
+          "zh": "外圍的、次要的"
+        }
+      ]
+    },
+    {
+      "id": "periscope",
+      "word": "periscope",
+      "phonetic": "ˈpɛrɪˌskop",
+      "zh": "潛望鏡",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Modern submarines still rely on periscopes, although to a lesser extent.",
+      "example_zh": "現代潛艇仍仰賴潛望鏡，儘管程度已較低。",
+      "draft": false,
+      "prefixId": "peri",
+      "parts": [
+        {
+          "text": "peri-",
+          "gloss": "周圍"
+        },
+        {
+          "text": "scop",
+          "gloss": "看（skopein）"
+        }
+      ],
+      "etymology": "peri-（周圍）＋ scop（skopein 看）——能環顧四周的觀看儀器，即潛望鏡。",
+      "derivatives": []
+    },
+    {
+      "id": "periodical",
+      "word": "periodical",
+      "phonetic": "ˌpɪrɪˈɑdɪkəl",
+      "zh": "期刊",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The paper was published in a leading periodical in the field.",
+      "example_zh": "這篇論文發表在該領域一流的期刊上。",
+      "draft": false,
+      "prefixId": "peri",
+      "parts": [
+        {
+          "text": "peri-",
+          "gloss": "周圍"
+        },
+        {
+          "text": "od",
+          "gloss": "路、行（hodos）"
+        }
+      ],
+      "etymology": "peri-（周圍）＋ od（hodos 路、行走）——繞行一圈、周而復始，即週期；定期出刊者即期刊。",
+      "derivatives": [
+        {
+          "word": "period",
+          "pos": "n.",
+          "zh": "週期、時期、句點"
+        },
+        {
+          "word": "periodic",
+          "pos": "a.",
+          "zh": "週期的、定期的"
+        }
+      ]
+    },
+    {
+      "id": "periodontal",
+      "word": "periodontal",
+      "phonetic": "ˌpɛrɪəˈdɑntəl",
+      "zh": "牙周的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Poor oral hygiene may lead to periodontal diseases.",
+      "example_zh": "口腔衛生不良可能導致牙周疾病。",
+      "draft": false,
+      "prefixId": "peri",
+      "parts": [
+        {
+          "text": "peri-",
+          "gloss": "周圍"
+        },
+        {
+          "text": "odont",
+          "gloss": "牙齒（odous/odont-）"
+        }
+      ],
+      "etymology": "peri-（周圍）＋ odont（odous/odont- 牙齒）——牙齒周圍（的組織），即牙周的。",
+      "derivatives": []
+    },
+    {
+      "id": "parallel",
+      "word": "parallel",
+      "phonetic": "ˈpærəˌlɛl",
+      "zh": "平行；平行的；與…平行、與…相似",
+      "pos": "n. / a. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I'm trying to see if there's any parallel between the two cases. Two parallel lines never meet. This election closely parallels the one four years ago.",
+      "example_zh": "我想看看這兩起案件之間有沒有相似之處。兩條平行線永不相交。這場選舉與四年前那場如出一轍。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para-",
+          "gloss": "在旁"
+        },
+        {
+          "text": "allel",
+          "gloss": "彼此（allelon）"
+        }
+      ],
+      "etymology": "para-（在旁）＋ allel（allelon 彼此）——彼此並排、互不相交，即平行；引申為相似、相對應。",
+      "derivatives": []
+    },
+    {
+      "id": "parasite",
+      "word": "parasite",
+      "phonetic": "ˈpærəˌsaɪt",
+      "zh": "寄生蟲",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Financial speculators are parasites on the national economy.",
+      "example_zh": "金融投機客是國家經濟的寄生蟲。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para-",
+          "gloss": "在旁"
+        },
+        {
+          "text": "sit",
+          "gloss": "食物、穀糧（sitos）"
+        }
+      ],
+      "etymology": "para-（在旁）＋ sit（sitos 食物）——在旁吃白食；原指靠奉承蹭飯的食客，後引申為生物學的寄生物。",
+      "derivatives": [
+        {
+          "word": "parasitic",
+          "pos": "a.",
+          "zh": "寄生的"
+        }
+      ]
+    },
+    {
+      "id": "paramedic",
+      "word": "paramedic",
+      "phonetic": "ˌpærəˈmɛdɪk",
+      "zh": "醫務輔助人員、救護技術員",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Two paramedics came with the ambulance.",
+      "example_zh": "兩名救護技術員隨救護車前來。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para-",
+          "gloss": "輔助、附屬"
+        },
+        {
+          "text": "medic",
+          "gloss": "醫療"
+        }
+      ],
+      "etymology": "para-（輔助、附屬）＋ medic（醫療）——以輔助身分從事醫療者，即救護技術員；由 paramedical 逆構而來。",
+      "derivatives": []
+    },
+    {
+      "id": "parasol",
+      "word": "parasol",
+      "phonetic": "ˈpɛrəˌsɑl",
+      "zh": "陽傘",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The lady in red is carrying a pink parasol.",
+      "example_zh": "那位穿紅衣的女士撐著一把粉紅色陽傘。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para",
+          "gloss": "抵擋（義大利 parare）"
+        },
+        {
+          "text": "sol",
+          "gloss": "太陽（sol）"
+        }
+      ],
+      "etymology": "陷阱字：此 para 為義大利 parare（抵擋、防範），非希臘「在旁」。para（擋）＋ sol（sol 太陽）——擋太陽的東西，即陽傘。",
+      "derivatives": []
+    },
+    {
+      "id": "paralysis",
+      "word": "paralysis",
+      "phonetic": "pəˈræləsɪs",
+      "zh": "癱瘓（複數 paralyses）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A sudden snowstorm paralyzed the city.",
+      "example_zh": "一場突如其來的暴風雪癱瘓了這座城市。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para-",
+          "gloss": "在旁"
+        },
+        {
+          "text": "lys",
+          "gloss": "鬆開（lyein）"
+        }
+      ],
+      "etymology": "para-（在旁）＋ lys（lyein 鬆開）——身體一側鬆脫失能，即癱瘓。",
+      "derivatives": [
+        {
+          "word": "paralyze",
+          "pos": "v.",
+          "zh": "使癱瘓、使動彈不得"
+        }
+      ]
+    },
+    {
+      "id": "paraphernalia",
+      "word": "paraphernalia",
+      "phonetic": "ˌpɛrəfɚˈnelɪə",
+      "zh": "全套設備、器材",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can find gloves, seeds, and other gardening paraphernalia on the fifth floor.",
+      "example_zh": "你可以在五樓找到手套、種子和其他園藝器材。",
+      "draft": false,
+      "prefixId": "para",
+      "parts": [
+        {
+          "text": "para-",
+          "gloss": "在旁、之外"
+        },
+        {
+          "text": "phern",
+          "gloss": "嫁妝（pherne，源自 pherein 攜帶）"
+        }
+      ],
+      "etymology": "para-（在旁、之外）＋ phern（pherne 嫁妝，同 pherein 攜帶）——原指妻子嫁妝以外的私人財物，後擴大為零星器物、全套設備。",
+      "derivatives": []
+    },
+    {
+      "id": "survive",
+      "word": "survive",
+      "phonetic": "sɚˈvaɪv",
+      "zh": "生存、存活、倖存",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We teach students how to survive in the society. The man survived the war and lived to be 90 years old.",
+      "example_zh": "我們教學生如何在社會上生存。這名男子熬過戰爭，活到 90 歲。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "sur-",
+          "gloss": "越過（＝super）"
+        },
+        {
+          "text": "vive",
+          "gloss": "活（vivere）"
+        }
+      ],
+      "etymology": "sur-（super 越過）＋ vive（vivere 活）——活得比…久、繼續存在，即生存、倖存。sur- 為 super- 的法語形式。",
+      "derivatives": [
+        {
+          "word": "survival",
+          "pos": "n.",
+          "zh": "生存、存活"
+        }
+      ]
+    },
+    {
+      "id": "survey",
+      "word": "survey",
+      "phonetic": "sɚˈve",
+      "zh": "概論、導論；測量；調查",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This is a survey course on biology. Engineers surveyed the land thoroughly before building a railroad.",
+      "example_zh": "這是一門生物學概論課。工程師在鋪設鐵路前徹底勘測了這片土地。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "sur-",
+          "gloss": "在上、綜觀（＝super）"
+        },
+        {
+          "text": "vey",
+          "gloss": "看（videre）"
+        }
+      ],
+      "etymology": "sur-（super 在上）＋ vey（videre 看）——從高處綜觀、俯視查看，即概觀、測量、調查。",
+      "derivatives": [
+        {
+          "word": "surveillance",
+          "pos": "n.",
+          "zh": "監督、監視"
+        }
+      ]
+    },
+    {
+      "id": "superb",
+      "word": "superb",
+      "phonetic": "suˈpɝb",
+      "zh": "卓越的、極好的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The performance last night was superb.",
+      "example_zh": "昨晚的表演棒極了。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "super-",
+          "gloss": "在上（above）"
+        },
+        {
+          "text": "-b",
+          "gloss": "傑出、宏偉（superbus，第二成分不確定）"
+        }
+      ],
+      "etymology": "拉丁 superbus「宏偉、壯麗；高傲」——由 super（在上）構成，本指建築高貴宏偉，1729 年起引申為「極佳、卓越」。",
+      "derivatives": []
+    },
+    {
+      "id": "superficial",
+      "word": "superficial",
+      "phonetic": "ˌsupɚˈfɪʃəl",
+      "zh": "表面的、膚淺的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are only superficial similarities between these very different species.",
+      "example_zh": "這些差異極大的物種之間只有表面上的相似。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "super-",
+          "gloss": "在上、表面"
+        },
+        {
+          "text": "fic",
+          "gloss": "面（facies）"
+        }
+      ],
+      "etymology": "super-（在上）＋ fic（facies 面、外觀）——僅在表層的，即表面的；引申為膚淺、不深入。",
+      "derivatives": [
+        {
+          "word": "surface",
+          "pos": "n.",
+          "zh": "表面"
+        }
+      ]
+    },
+    {
+      "id": "supervise",
+      "word": "supervise",
+      "phonetic": "ˈsupɚˌvaɪz",
+      "zh": "監督",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The team leader supervises five people at work.",
+      "example_zh": "組長在工作上監督五個人。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "super-",
+          "gloss": "在上、越過（over）"
+        },
+        {
+          "text": "vise",
+          "gloss": "看（videre）"
+        }
+      ],
+      "etymology": "super-（在上）＋ vise（videre 看）——由上往下看管，即監督、督導。",
+      "derivatives": [
+        {
+          "word": "supervision",
+          "pos": "n.",
+          "zh": "監督"
+        },
+        {
+          "word": "supervisor",
+          "pos": "n.",
+          "zh": "監督者、上司"
+        }
+      ]
+    },
+    {
+      "id": "supremacy",
+      "word": "supremacy",
+      "phonetic": "suˈprɛməsɪ",
+      "zh": "優勢、霸主地位、至高",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The US has enjoyed nuclear supremacy ever since the collapse of the USSR.",
+      "example_zh": "自蘇聯解體以來，美國一直享有核子優勢。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "suprem-",
+          "gloss": "至高（super 的最高級 supremus）"
+        },
+        {
+          "text": "-acy",
+          "gloss": "…的地位、狀態"
+        }
+      ],
+      "etymology": "supreme（拉丁 supremus「最高的」，為 superus「在上」的最高級）＋ -acy——最高的地位，即優勢、霸主地位。super 之義嵌在最高級 supremus 中。",
+      "derivatives": [
+        {
+          "word": "supreme",
+          "pos": "a.",
+          "zh": "最高的、至高的"
+        }
+      ]
+    },
+    {
+      "id": "surplus",
+      "word": "surplus",
+      "phonetic": "ˈsɝpləs",
+      "zh": "盈餘、剩餘；過剩的",
+      "pos": "n. / a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Japan enjoys huge amounts of trade surplus. The government sells surplus weapons abroad.",
+      "example_zh": "日本享有巨額貿易順差。政府把剩餘軍火賣到國外。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "sur-",
+          "gloss": "超過（＝super）"
+        },
+        {
+          "text": "plus",
+          "gloss": "更多（more）"
+        }
+      ],
+      "etymology": "sur-（super 超過）＋ plus（更多）——超出所需之餘，即盈餘、過剩。sur- 即拉丁 super- 的羅曼語形式。",
+      "derivatives": []
+    },
+    {
+      "id": "surcharge",
+      "word": "surcharge",
+      "phonetic": "ˈsɝtʃɑrdʒ",
+      "zh": "附加費、超收費用",
+      "pos": "n. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A surcharge may be made for deliveries outside of normal hours. If you require express service, you may be surcharged.",
+      "example_zh": "非正常時段的配送可能加收附加費。若需要快遞服務，可能被加收費用。",
+      "draft": false,
+      "prefixId": "super",
+      "parts": [
+        {
+          "text": "sur-",
+          "gloss": "額外（＝super）"
+        },
+        {
+          "text": "charge",
+          "gloss": "裝載、收費"
+        }
+      ],
+      "etymology": "sur-（super 額外）＋ charge（chargier 裝載）——在原費上額外加收，即附加費、超收費用。",
+      "derivatives": []
+    },
+    {
+      "id": "sublime",
+      "word": "sublime",
+      "phonetic": "səˈblaɪm",
+      "zh": "宏偉的、壯麗的、崇高的；昇華",
+      "pos": "a. / v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The visitor is awed by the sublime beauty of Grand Canyon.",
+      "example_zh": "遊客為大峽谷壯麗的美景所震懾。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "向上"
+        },
+        {
+          "text": "lim",
+          "gloss": "門檻、門楣（limen，不確定）"
+        }
+      ],
+      "etymology": "拉丁 sublimis「高聳、崇高」，可能為 sub（向上）＋ limen（門楣）——向上斜伸至門楣般高。作動詞指固體直接昇華為氣態。（第二字根 Etymonline 標為推測。）",
+      "derivatives": []
+    },
+    {
+      "id": "submarine",
+      "word": "submarine",
+      "phonetic": "ˌsʌbməˈrin",
+      "zh": "水下的；潛水艇",
+      "pos": "a. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The biologist is an expert on submarine plants. A nuclear submarine is a powerful weapon of deterrence.",
+      "example_zh": "這位生物學家是海底植物的專家。核子潛艇是強大的嚇阻武器。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "在下"
+        },
+        {
+          "text": "mar",
+          "gloss": "海（mare）"
+        }
+      ],
+      "etymology": "sub-（在下）＋ mar（mare 海）——海面之下的，即水下的；名詞指潛水艇。",
+      "derivatives": []
+    },
+    {
+      "id": "subterranean",
+      "word": "subterranean",
+      "phonetic": "ˌsʌbtəˈrenɪən",
+      "zh": "地下的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are many subterranean caves in this area.",
+      "example_zh": "這一帶有許多地下洞穴。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "在下"
+        },
+        {
+          "text": "terr",
+          "gloss": "土地（terra）"
+        }
+      ],
+      "etymology": "sub-（在下）＋ terr（terra 土地）——地面之下的，即地下的。",
+      "derivatives": [
+        {
+          "word": "terrestrial",
+          "pos": "a.",
+          "zh": "陸地的、地球的"
+        }
+      ]
+    },
+    {
+      "id": "successor",
+      "word": "successor",
+      "phonetic": "səkˈsɛsɚ",
+      "zh": "繼任者、繼承人",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Octavius was Caesar's successor.",
+      "example_zh": "屋大維是凱撒的繼承人。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "suc-",
+          "gloss": "接續、在後（＝sub）"
+        },
+        {
+          "text": "cess",
+          "gloss": "走（cedere）"
+        }
+      ],
+      "etymology": "suc-（sub 在後）＋ cess（cedere 走）——接著前人走上來的人，即繼任者、繼承人。",
+      "derivatives": [
+        {
+          "word": "succeed",
+          "pos": "v.",
+          "zh": "繼任、繼承；成功"
+        }
+      ]
+    },
+    {
+      "id": "supple",
+      "word": "supple",
+      "phonetic": "ˈsʌpəl",
+      "zh": "柔軟的、有彈性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The gymnast's limbs are very supple.",
+      "example_zh": "這名體操選手的四肢非常柔軟。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sup-",
+          "gloss": "在下、俯伏（＝sub）"
+        },
+        {
+          "text": "ple",
+          "gloss": "彎、折（不確定）"
+        }
+      ],
+      "etymology": "拉丁 supplex「俯首、屈膝、柔順」——sub（在下）＋ 一個『彎折』義字根；由屈身柔順引申為柔軟、有彈性的。（中間字根 Etymonline 稱眾說紛紜。）",
+      "derivatives": [
+        {
+          "word": "suppleness",
+          "pos": "n.",
+          "zh": "柔軟、彈性"
+        }
+      ]
+    },
+    {
+      "id": "subdue",
+      "word": "subdue",
+      "phonetic": "səbˈdu",
+      "zh": "征服、制伏、壓制",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The forest fire raged on for 10 days before it was finally subdued.",
+      "example_zh": "這場森林大火延燒了 10 天才終於被撲滅控制住。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "在下"
+        },
+        {
+          "text": "due",
+          "gloss": "引導、帶領（ducere）"
+        }
+      ],
+      "etymology": "sub-（在下）＋ due（ducere 引導）——把對方引壓到下位，即征服、制伏。",
+      "derivatives": [
+        {
+          "word": "due",
+          "pos": "a.",
+          "zh": "應當的、到期的、應支付的"
+        }
+      ]
+    },
+    {
+      "id": "subservient",
+      "word": "subservient",
+      "phonetic": "səbˈsɝvɪənt",
+      "zh": "順從的、卑屈的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She is always subservient to her parents.",
+      "example_zh": "她對父母總是百依百順。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "在下、輔助"
+        },
+        {
+          "text": "serv",
+          "gloss": "服侍（servire）"
+        }
+      ],
+      "etymology": "sub-（在下）＋ serv（servire 服侍）——在下位聽命服侍，即順從的、卑屈的。",
+      "derivatives": [
+        {
+          "word": "subservience",
+          "pos": "n.",
+          "zh": "順從、卑屈"
+        }
+      ]
+    },
+    {
+      "id": "subtropical",
+      "word": "subtropical",
+      "phonetic": "ˌsʌbˈtrɑpɪkəl",
+      "zh": "亞熱帶的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Southern Taiwan lies in the subtropical zone.",
+      "example_zh": "台灣南部位於亞熱帶地區。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "近、略低於"
+        },
+        {
+          "text": "tropical",
+          "gloss": "熱帶的（tropikos 轉）"
+        }
+      ],
+      "etymology": "sub-（近、略低）＋ tropical（熱帶的）——鄰接熱帶、略低於熱帶的，即亞熱帶的。",
+      "derivatives": [
+        {
+          "word": "tropical",
+          "pos": "a.",
+          "zh": "熱帶的"
+        },
+        {
+          "word": "tropics",
+          "pos": "n.",
+          "zh": "熱帶（地區）"
+        }
+      ]
+    },
+    {
+      "id": "submerge",
+      "word": "submerge",
+      "phonetic": "səbˈmɝdʒ",
+      "zh": "浸入、淹沒",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some 90% of the bulk of an iceberg is submerged in the sea.",
+      "example_zh": "冰山約有九成的體積沉沒在海面之下。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sub-",
+          "gloss": "在下"
+        },
+        {
+          "text": "merg",
+          "gloss": "浸、沉（mergere）"
+        }
+      ],
+      "etymology": "sub-（在下）＋ merg（mergere 浸、沉）——沉入水面之下，即浸入、淹沒。",
+      "derivatives": [
+        {
+          "word": "submergence",
+          "pos": "n.",
+          "zh": "浸入、淹沒"
+        },
+        {
+          "word": "emerge",
+          "pos": "v.",
+          "zh": "浮現、出現"
+        },
+        {
+          "word": "emergence",
+          "pos": "n.",
+          "zh": "浮現、出現"
+        }
+      ]
+    },
+    {
+      "id": "succumb",
+      "word": "succumb",
+      "phonetic": "səˈkʌm",
+      "zh": "屈服",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The witness succumbed to pressure and refused to testify in court.",
+      "example_zh": "這名證人屈服於壓力，拒絕出庭作證。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "suc-",
+          "gloss": "在下（＝sub）"
+        },
+        {
+          "text": "cumb",
+          "gloss": "躺下（cubare）"
+        }
+      ],
+      "etymology": "suc-（sub 在下）＋ cumb（cubare 躺下）——臥倒於其下、頂不住，即屈服。",
+      "derivatives": []
+    },
+    {
+      "id": "supplant",
+      "word": "supplant",
+      "phonetic": "səˈplænt",
+      "zh": "取代",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Printed books may eventually be supplanted by e-books.",
+      "example_zh": "紙本書最終可能被電子書取代。",
+      "draft": false,
+      "prefixId": "sub",
+      "parts": [
+        {
+          "text": "sup-",
+          "gloss": "在下（＝sub）"
+        },
+        {
+          "text": "plant",
+          "gloss": "腳掌（planta）"
+        }
+      ],
+      "etymology": "sup-（sub 在下）＋ plant（planta 腳掌）——由絆腳跟使跌，引申為把對方擠下位而取代。",
+      "derivatives": []
+    },
+    {
+      "id": "catalogue",
+      "word": "catalogue",
+      "phonetic": "ˈkætəˌlɔɡ",
+      "zh": "目錄",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "All our current products are listed in this catalogue.",
+      "example_zh": "我們目前所有產品都列在這份目錄裡。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "逐條、完全"
+        },
+        {
+          "text": "log",
+          "gloss": "說、數（legein）"
+        }
+      ],
+      "etymology": "cata-（逐條、完全）＋ log（legein 說、數）——把每一項逐一數說列出，即目錄。",
+      "derivatives": []
+    },
+    {
+      "id": "cataract",
+      "word": "cataract",
+      "phonetic": "ˈkætəˌrækt",
+      "zh": "大瀑布；白內障",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Internet search engines provide cataracts of information that must be screened. A cataract is a clouding of the lens of the eye that can result in blindness.",
+      "example_zh": "網路搜尋引擎提供如瀑布般大量、須經篩選的資訊。白內障是眼球水晶體混濁，可能導致失明。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "向下"
+        },
+        {
+          "text": "ract",
+          "gloss": "猛擊、衝撞（arassein）"
+        }
+      ],
+      "etymology": "cata-（向下）＋ ract（arassein 猛擊）——向下猛衝傾瀉的水，即大瀑布；由「閘門阻擋」的意象轉指眼球水晶體混濁的白內障。",
+      "derivatives": []
+    },
+    {
+      "id": "cataclysm",
+      "word": "cataclysm",
+      "phonetic": "ˈkætəˌklɪzəm",
+      "zh": "洪水、災難、大變動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some believe that the end of a century is always accompanied by floods, earthquakes, and other cataclysms.",
+      "example_zh": "有些人相信每逢世紀末總伴隨洪水、地震等大災變。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "向下"
+        },
+        {
+          "text": "clysm",
+          "gloss": "沖洗（klyzein）"
+        }
+      ],
+      "etymology": "cata-（向下）＋ clysm（klyzein 沖洗）——向下沖刷的大水，原特指諾亞洪水，引申為大災變。",
+      "derivatives": [
+        {
+          "word": "cataclysmic",
+          "pos": "a.",
+          "zh": "天翻地覆的、劇變的"
+        }
+      ]
+    },
+    {
+      "id": "catastrophe",
+      "word": "catastrophe",
+      "phonetic": "kəˈtæstrəfɪ",
+      "zh": "大災難",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The oil spill was an environmental catastrophe.",
+      "example_zh": "這起漏油事件是一場環境大災難。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "向下"
+        },
+        {
+          "text": "stroph",
+          "gloss": "轉（strephein）"
+        }
+      ],
+      "etymology": "cata-（向下）＋ stroph（strephein 轉）——向下翻轉、傾覆；原指戲劇突然的劇情逆轉，後泛指突發大災難。",
+      "derivatives": [
+        {
+          "word": "catastrophic",
+          "pos": "a.",
+          "zh": "災難性的"
+        }
+      ]
+    },
+    {
+      "id": "catapult",
+      "word": "catapult",
+      "phonetic": "ˈkætəˌpʌlt",
+      "zh": "彈射、快速推動；投石機",
+      "pos": "v. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The hit song catapulted the singer to stardom.",
+      "example_zh": "這首熱門歌曲將這名歌手一舉推上巨星地位。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "向著、穿透"
+        },
+        {
+          "text": "pult",
+          "gloss": "投擲（pallein）"
+        }
+      ],
+      "etymology": "陷阱字：此 cata- 非「向下」，而是「向著（城牆）／穿透（盔甲）」。cata-（向著）＋ pult（pallein 投擲）——向城牆拋射彈丸的攻城機械，引申為彈射、一舉推升。",
+      "derivatives": []
+    },
+    {
+      "id": "catalyst",
+      "word": "catalyst",
+      "phonetic": "ˈkætəlɪst",
+      "zh": "催化劑",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The President's speech acted as a catalyst for national debate.",
+      "example_zh": "總統的演說成了全國辯論的催化劑。",
+      "draft": false,
+      "prefixId": "cata",
+      "parts": [
+        {
+          "text": "cata-",
+          "gloss": "完全（分解）"
+        },
+        {
+          "text": "lys",
+          "gloss": "鬆開、溶解（lyein）"
+        }
+      ],
+      "etymology": "cata-（完全）＋ lys（lyein 鬆開）——使徹底鬆開分解者，即催化劑；化學義由 Berzelius 於 1836 年提出。",
+      "derivatives": [
+        {
+          "word": "catalyze",
+          "pos": "v.",
+          "zh": "催化、促成"
+        }
+      ]
+    },
+    {
+      "id": "express",
+      "word": "express",
+      "phonetic": "ɪkˈsprɛs",
+      "zh": "表達、表示",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Opponents are welcome to express their opinions in nonviolent ways.",
+      "example_zh": "歡迎反對者以非暴力的方式表達意見。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "向外"
+        },
+        {
+          "text": "press",
+          "gloss": "壓（premere）"
+        }
+      ],
+      "etymology": "ex-（向外）＋ press（premere 壓）——把心意壓擠出來，如受壓的黏土成形，即表達。",
+      "derivatives": [
+        {
+          "word": "expression",
+          "pos": "n.",
+          "zh": "表達、表情"
+        }
+      ]
+    },
+    {
+      "id": "expatriate",
+      "word": "expatriate",
+      "phonetic": "ɛksˈpætrɪˌet",
+      "zh": "移居國外者；流放；僑居國外的",
+      "pos": "n. / v. / a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "US expatriates in this country mostly stick together. The criminal was expatriated and not allowed to return. Expatriate Chinese often live in Chinatowns.",
+      "example_zh": "在這個國家的美國僑民大多群聚在一起。這名罪犯被驅逐出境，不准返國。僑居海外的華人常住在唐人街。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "離、出於"
+        },
+        {
+          "text": "patri",
+          "gloss": "父、祖國（patria）"
+        }
+      ],
+      "etymology": "ex-（離）＋ patri（patria 祖國，源自 pater 父）——逐出或離開故土，即流放、僑居國外（者）。",
+      "derivatives": []
+    },
+    {
+      "id": "efficacious",
+      "word": "efficacious",
+      "phonetic": "ˌɛfəˈkeʃəs",
+      "zh": "有效的、靈驗的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Taking a cookie break while studying is one of the most efficacious ways of refreshing the mind that I have ever discovered.",
+      "example_zh": "讀書時吃塊餅乾休息一下，是我所發現最有效提神的方法之一。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ef-",
+          "gloss": "出（＝ex-）"
+        },
+        {
+          "text": "fic",
+          "gloss": "做、製造（facere）"
+        }
+      ],
+      "etymology": "ef-（ex 同化）＋ fic（facere 做）——能把事情做成、生出效果的，即有效的。",
+      "derivatives": [
+        {
+          "word": "efficacy",
+          "pos": "n.",
+          "zh": "效力、功效"
+        }
+      ]
+    },
+    {
+      "id": "enervate",
+      "word": "enervate",
+      "phonetic": "ˈɛnɚˌvet",
+      "zh": "使無力、使衰弱",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The summer heat enervates all the students in class.",
+      "example_zh": "夏日的暑氣使班上所有學生都提不起勁。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "e-",
+          "gloss": "去除（＝ex-）"
+        },
+        {
+          "text": "nerv",
+          "gloss": "筋腱（nervus）"
+        }
+      ],
+      "etymology": "陷阱字：此處 e-（＝ex-）作『抽除』。e-（抽除）＋ nerv（nervus 筋腱）——抽掉筋腱般使人癱軟，即使無力、使衰弱。",
+      "derivatives": [
+        {
+          "word": "enervating",
+          "pos": "a.",
+          "zh": "令人無力的"
+        },
+        {
+          "word": "enervation",
+          "pos": "n.",
+          "zh": "無力、衰弱"
+        }
+      ]
+    },
+    {
+      "id": "enumerate",
+      "word": "enumerate",
+      "phonetic": "ɪˈnjuməˌret",
+      "zh": "列舉、細數",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The newspaper article enumerates the many good deeds that the man has done.",
+      "example_zh": "這篇報紙文章一一列舉了這名男子做過的許多善行。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "e-",
+          "gloss": "出（＝ex-）"
+        },
+        {
+          "text": "numer",
+          "gloss": "數目（numerus）"
+        }
+      ],
+      "etymology": "e-（ex 出）＋ numer（numerus 數目）——把項目一一數出來，即列舉、細數。",
+      "derivatives": [
+        {
+          "word": "enumeration",
+          "pos": "n.",
+          "zh": "列舉"
+        }
+      ]
+    },
+    {
+      "id": "exclaim",
+      "word": "exclaim",
+      "phonetic": "ɪkˈsklem",
+      "zh": "驚呼、大叫",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "\"I won the lottery!\" exclaimed the excited winner.",
+      "example_zh": "「我中樂透了！」那名興奮的中獎者驚呼道。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "向外、加強"
+        },
+        {
+          "text": "claim",
+          "gloss": "呼喊（clamare）"
+        }
+      ],
+      "etymology": "ex-（向外、加強）＋ claim（clamare 喊）——大聲喊出來，即驚呼、大叫。",
+      "derivatives": [
+        {
+          "word": "exclamation",
+          "pos": "n.",
+          "zh": "驚呼、感嘆"
+        }
+      ]
+    },
+    {
+      "id": "exorbitant",
+      "word": "exorbitant",
+      "phonetic": "ɪɡˈzɔrbətənt",
+      "zh": "過高的、離譜的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The exorbitant prices scared off customers.",
+      "example_zh": "離譜的高價把顧客都嚇跑了。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "出於、脫離"
+        },
+        {
+          "text": "orbit",
+          "gloss": "軌道（orbita）"
+        }
+      ],
+      "etymology": "ex-（脫離）＋ orbit（orbita 車轍、軌道）——脫離常軌的，即過度、過高、離譜的。",
+      "derivatives": [
+        {
+          "word": "orbit",
+          "pos": "n. / v.",
+          "zh": "軌道；環繞軌道運行"
+        }
+      ]
+    },
+    {
+      "id": "exotic",
+      "word": "exotic",
+      "phonetic": "ɪɡˈzɑtɪk",
+      "zh": "外來的、異國情調的、珍奇的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The zoo has recently acquired many exotic tropical birds.",
+      "example_zh": "這座動物園最近引進了許多珍奇的熱帶鳥類。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "exo-",
+          "gloss": "外面（希臘語，非拉丁 ex-）"
+        }
+      ],
+      "etymology": "陷阱字：源自希臘 exo（外面），非拉丁 ex- 前綴。exotikos「外來的」——來自外面的，即異國情調的、珍奇的。",
+      "derivatives": [
+        {
+          "word": "exoticism",
+          "pos": "n.",
+          "zh": "異國風味、異國情調"
+        }
+      ]
+    },
+    {
+      "id": "expire",
+      "word": "expire",
+      "phonetic": "ɪkˈspaɪɚ",
+      "zh": "死亡、到期、失效",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "\"The patient expired at 3 a.m.,\" said the doctor. The contract is going to expire at midnight today.",
+      "example_zh": "「病人於凌晨三點過世，」醫生說。這份合約將於今晚午夜到期。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "向外"
+        },
+        {
+          "text": "spir",
+          "gloss": "呼吸（spirare）"
+        }
+      ],
+      "etymology": "ex-（向外）＋ spir（spirare 呼吸）——呼出最後一口氣，即斷氣、死亡；引申為（期限）屆滿、失效。",
+      "derivatives": [
+        {
+          "word": "expiration",
+          "pos": "n.",
+          "zh": "死亡、到期"
+        }
+      ]
+    },
+    {
+      "id": "exhilarate",
+      "word": "exhilarate",
+      "phonetic": "ɪɡˈzɪləˌret",
+      "zh": "使振奮、使高興",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The children were exhilarated by the roller coaster rides.",
+      "example_zh": "孩子們因搭雲霄飛車而興奮不已。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "徹底、加強"
+        },
+        {
+          "text": "hilar",
+          "gloss": "愉快（hilaris）"
+        }
+      ],
+      "etymology": "此處 ex- 作加強（徹底）。ex-（加強）＋ hilar（hilaris 愉快）——使人徹底歡欣，即使振奮、使高興。",
+      "derivatives": [
+        {
+          "word": "exhilaration",
+          "pos": "n.",
+          "zh": "振奮、興奮"
+        }
+      ]
+    },
+    {
+      "id": "elicit",
+      "word": "elicit",
+      "phonetic": "ɪˈlɪsɪt",
+      "zh": "引出、誘出",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The project elicited enormous public interest.",
+      "example_zh": "這項計畫引發了廣大的公眾興趣。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "e-",
+          "gloss": "出（＝ex-）"
+        },
+        {
+          "text": "licit",
+          "gloss": "引誘（lacere）"
+        }
+      ],
+      "etymology": "e-（ex 出）＋ licit（lacere 引誘）——把（反應、資訊）引誘出來，即引出、誘出。",
+      "derivatives": [
+        {
+          "word": "elicitation",
+          "pos": "n.",
+          "zh": "引出、誘出"
+        }
+      ]
+    },
+    {
+      "id": "explore",
+      "word": "explore",
+      "phonetic": "ɪkˈsplor",
+      "zh": "探索、探測",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Let's explore the issue more thoroughly.",
+      "example_zh": "讓我們更徹底地探討這個議題。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "向外"
+        },
+        {
+          "text": "plor",
+          "gloss": "呼喊（plorare）"
+        }
+      ],
+      "etymology": "ex-（向外）＋ plor（plorare 呼喊）——相傳原為獵人術語，以呼喊聲外探、驚起獵物，引申為探索、探測。",
+      "derivatives": [
+        {
+          "word": "exploration",
+          "pos": "n.",
+          "zh": "探索、探測"
+        },
+        {
+          "word": "explorer",
+          "pos": "n.",
+          "zh": "探險家"
+        }
+      ]
+    },
+    {
+      "id": "evaporate",
+      "word": "evaporate",
+      "phonetic": "ɪˈvæpəˌret",
+      "zh": "蒸發",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Water evaporates faster when humidity is low.",
+      "example_zh": "濕度低時，水蒸發得更快。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "e-",
+          "gloss": "出（＝ex-）"
+        },
+        {
+          "text": "vapor",
+          "gloss": "蒸氣（vapor）"
+        }
+      ],
+      "etymology": "e-（ex 出）＋ vapor（蒸氣）——化為蒸氣散逸出去，即蒸發。",
+      "derivatives": [
+        {
+          "word": "evaporation",
+          "pos": "n.",
+          "zh": "蒸發"
+        },
+        {
+          "word": "vapor",
+          "pos": "n.",
+          "zh": "蒸氣"
+        }
+      ]
+    },
+    {
+      "id": "exasperated",
+      "word": "exasperated",
+      "phonetic": "ɪɡˈzæspəˌretɪd",
+      "zh": "惱火的、大為光火的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The patron is feeling increasingly exasperated with the endless waiting.",
+      "example_zh": "這位顧客對沒完沒了的等待越來越惱火。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "徹底、加強"
+        },
+        {
+          "text": "asper",
+          "gloss": "粗糙（asper）"
+        }
+      ],
+      "etymology": "此處 ex- 作加強。ex-（加強）＋ asper（asper 粗糙）——把人激得徹底『毛躁』起來，即惱火的。",
+      "derivatives": [
+        {
+          "word": "exasperation",
+          "pos": "n.",
+          "zh": "惱火、怒火"
+        }
+      ]
+    },
+    {
+      "id": "exhaust",
+      "word": "exhaust",
+      "phonetic": "ɪɡˈzɔst",
+      "zh": "耗盡、用光；廢氣",
+      "pos": "v. / n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The climb to the mountaintop exhausted everybody. Automobile exhaust is the main cause of air pollution in the city.",
+      "example_zh": "攻上山頂的攀爬讓每個人都精疲力盡。汽車廢氣是這座城市空氣污染的主因。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "出、盡"
+        },
+        {
+          "text": "haust",
+          "gloss": "汲取（haurire）"
+        }
+      ],
+      "etymology": "ex-（出、盡）＋ haust（haurire 汲取）——把裡頭的東西全汲乾，即耗盡、用光；名詞指排出的廢氣。",
+      "derivatives": [
+        {
+          "word": "exhausted",
+          "pos": "a.",
+          "zh": "精疲力盡的、已耗盡的"
+        },
+        {
+          "word": "exhaustion",
+          "pos": "n.",
+          "zh": "耗盡、精疲力竭"
+        },
+        {
+          "word": "exhaustive",
+          "pos": "a.",
+          "zh": "徹底的、無遺漏的"
+        }
+      ]
+    },
+    {
+      "id": "external",
+      "word": "external",
+      "phonetic": "ɛkˈstɝnəl",
+      "zh": "外在的、外部的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The cream is for external use only.",
+      "example_zh": "這款乳膏僅供外用。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "向外"
+        },
+        {
+          "text": "ter",
+          "gloss": "外面（exter）"
+        }
+      ],
+      "etymology": "ex-（向外）＋ ter（exter 在外的）——位於外部的，即外在的、外部的；與 internal 相對。",
+      "derivatives": [
+        {
+          "word": "internal",
+          "pos": "a.",
+          "zh": "內在的、內部的"
         }
       ]
     }

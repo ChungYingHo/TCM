@@ -1,0 +1,93 @@
+[
+  {
+    "word": "ambitious",
+    "prefixId": "ambi",
+    "pos": "a.",
+    "phonetic": "æmˈbɪʃəs",
+    "zh": "野心勃勃的、企圖心旺盛的",
+    "parts": [{ "text": "ambi-", "gloss": "環繞、四處（around）" }, { "text": "it", "gloss": "走（ire）" }],
+    "etymology": "ambi-（環繞、四處）＋ it（ire 走）——羅馬候選人四處奔走拉票，故引申為有野心、渴求功名的。此處 ambi- 為「四處」非「兩者」。",
+    "derivatives": [{ "word": "ambition", "pos": "n.", "zh": "野心、企圖心" }],
+    "example": "The Three Gorges Dam is a very ambitious civil engineering project.",
+    "example_zh": "三峽大壩是一項野心極大的土木工程。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/ambitious", "ipa": "/æmˈbɪʃəs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；ambi- 此處為『四處/around』", "example": "photo" }
+  },
+  {
+    "word": "ambience",
+    "prefixId": "ambi",
+    "pos": "n.",
+    "phonetic": "ˈæmbɪəns",
+    "zh": "氣氛、周圍環境",
+    "parts": [{ "text": "ambi-", "gloss": "環繞（around）" }, { "text": "i", "gloss": "走（ire）" }],
+    "etymology": "ambi-（環繞）＋ i（ire 走）——環繞四周者，即周遭的氣氛、環境。",
+    "derivatives": [{ "word": "ambiance", "pos": "n.", "zh": "氣氛、周圍環境" }, { "word": "ambient", "pos": "a.", "zh": "周圍的" }],
+    "example": "I like the ambience of this coffee shop.",
+    "example_zh": "我喜歡這家咖啡廳的氛圍。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/ambience", "ipa": "/ˈæm.bi.əns/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "ambiguous",
+    "prefixId": "ambi",
+    "pos": "a.",
+    "phonetic": "æmˈbɪɡjuəs",
+    "zh": "模稜兩可的",
+    "parts": [{ "text": "ambi-", "gloss": "來回、兩邊" }, { "text": "ig", "gloss": "驅趕、行（agere）" }],
+    "etymology": "ambi-（來回）＋ ig（agere 驅趕）——往兩邊來回遊走、拿不定，即模稜兩可。Etymonline 標 ambi- 本義為『四處/about』，『兩可』是由此引申。",
+    "derivatives": [{ "word": "ambiguity", "pos": "n.", "zh": "模稜兩可" }],
+    "example": "All ambiguous sentences should be corrected or deleted from your composition.",
+    "example_zh": "作文裡所有模稜兩可的句子都該修正或刪除。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/ambiguous", "ipa": "/æmˈbɪɡ.ju.əs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；ambi- 本義『四處』，『兩者』為引申", "example": "photo" }
+  },
+  {
+    "word": "ambivalent",
+    "prefixId": "ambi",
+    "pos": "a.",
+    "phonetic": "æmˈbɪvələnt",
+    "zh": "（情感）矛盾的",
+    "parts": [{ "text": "ambi-", "gloss": "兩者、兩邊（both）" }, { "text": "val", "gloss": "力量、價值（valere）" }],
+    "etymology": "ambi-（兩者）＋ val（valere 強、有力）——對同一對象同時懷有兩股相反的力量／情感，即感情矛盾的。此處 ambi- 確為『兩者』。",
+    "derivatives": [{ "word": "ambivalence", "pos": "n.", "zh": "（情感）矛盾" }],
+    "example": "The girl had ambivalent feelings about her boyfriend and couldn't decide whether to leave him.",
+    "example_zh": "這女孩對男友的感情很矛盾，拿不定主意要不要離開他。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/ambivalent", "ipa": "/æmˈbɪv.ə.lənt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；ambi- 此處確為『兩者/both』", "example": "photo" }
+  },
+  {
+    "word": "amphibian",
+    "prefixId": "ambi",
+    "pos": "n. / a.",
+    "phonetic": "æmˈfɪbɪən",
+    "zh": "兩棲類（的）、水陸兩用的",
+    "parts": [{ "text": "amphi-", "gloss": "兩種、兩邊（both）" }, { "text": "bi", "gloss": "生命（bios）" }],
+    "etymology": "amphi-（兩種）＋ bi（bios 生命）——過著水陸雙重生活者，即兩棲動物；引申為水陸兩用的。",
+    "derivatives": [],
+    "example": "Frogs are amphibians. Amphibian vehicles are very convenient.",
+    "example_zh": "青蛙是兩棲動物。水陸兩用車非常方便。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/amphibian", "ipa": "/æmˈfɪbɪən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "amphitheater",
+    "prefixId": "ambi",
+    "pos": "n.",
+    "phonetic": "ˈæmpəˌθiətɚ",
+    "zh": "圓形劇場",
+    "parts": [{ "text": "amphi-", "gloss": "兩側、周圍" }, { "text": "theater", "gloss": "劇場（theatron）" }],
+    "etymology": "amphi-（兩側、周圍）＋ theater（theatron 觀看場）——座位環繞中央，猶如兩個半圓劇場相合，即圓形劇場。",
+    "derivatives": [],
+    "example": "The playwright staged her new play in an amphitheater.",
+    "example_zh": "這位劇作家在圓形劇場上演她的新劇。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/amphitheater", "ipa": "/ˈæm.pəˌθi.ə.tɚ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（略去 (j) 滑音）；另有變體 ˈæmfə-", "example": "photo" }
+  },
+  {
+    "word": "amputate",
+    "prefixId": "ambi",
+    "pos": "v.",
+    "phonetic": "ˈæmpjʊˌtet",
+    "zh": "截肢、切斷",
+    "parts": [{ "text": "amb-", "gloss": "環繞、周圍" }, { "text": "put", "gloss": "修剪、切（putare）" }],
+    "etymology": "amb-（環繞）＋ put（putare 修剪、切）——繞著肢體切一圈而截斷，即截肢。此處 amb- 為『環繞』非『兩者』。",
+    "derivatives": [{ "word": "amputation", "pos": "n.", "zh": "截肢、切斷" }],
+    "example": "The man bitten by a rattlesnake had his leg amputated.",
+    "example_zh": "那名被響尾蛇咬傷的男子截去了一條腿。",
+    "sources": { "page": "IMG_1226", "etymonline": "https://www.etymonline.com/word/amputate", "ipa": "/ˈæmpjʊteɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）；amb- 此處為『環繞/around』", "example": "photo" }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "word": "anatomy",
+    "prefixId": "ana",
+    "pos": "n.",
+    "phonetic": "əˈnætəmɪ",
+    "zh": "解剖學、構造",
+    "parts": [{ "text": "ana-", "gloss": "往上、徹底" }, { "text": "tom", "gloss": "切（temnein）" }],
+    "etymology": "ana-（往上、徹底）＋ tom（temnein 切）——徹底切開來看，即解剖（學）、構造。",
+    "derivatives": [{ "word": "anatomical", "pos": "a.", "zh": "解剖學的、構造的" }],
+    "example": "The paper deals with the anatomy and behavior of cats.",
+    "example_zh": "這篇論文探討貓的構造與行為。",
+    "sources": { "page": "IMG_1225", "etymonline": "https://www.etymonline.com/word/anatomy", "ipa": "/əˈnætəmi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y i→ɪ）", "example": "photo" }
+  },
+  {
+    "word": "analysis",
+    "prefixId": "ana",
+    "pos": "n.",
+    "phonetic": "əˈnæləsɪs",
+    "zh": "分析（複數 analyses）",
+    "parts": [{ "text": "ana-", "gloss": "徹底、回" }, { "text": "lys", "gloss": "鬆開（lyein）" }],
+    "etymology": "ana-（徹底、回）＋ lys（lyein 鬆開、解開）——把複雜之物一一拆解開，即分析。",
+    "derivatives": [{ "word": "analyze", "pos": "v.", "zh": "分析" }, { "word": "analytic", "pos": "a.", "zh": "分析的" }, { "word": "analytical", "pos": "a.", "zh": "分析的" }],
+    "example": "Chemical analysis shows that the water is contaminated with lead.",
+    "example_zh": "化學分析顯示這水受到鉛污染。",
+    "sources": { "page": "IMG_1225", "etymonline": "https://www.etymonline.com/word/analysis", "ipa": "/əˈnæləsɪs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "example": "photo" }
+  },
+  {
+    "word": "anachronism",
+    "prefixId": "ana",
+    "pos": "n.",
+    "phonetic": "əˈnækrəˌnɪzəm",
+    "zh": "時代錯置、不合時宜（者）",
+    "parts": [{ "text": "ana-", "gloss": "相反、逆" }, { "text": "chron", "gloss": "時間（khronos）" }],
+    "etymology": "ana-（相反、逆）＋ chron（khronos 時間）——把事物錯置於不對的時代，即時代錯置、不合時宜。",
+    "derivatives": [{ "word": "anachronistic", "pos": "a.", "zh": "時代錯置的、不合時宜的" }],
+    "example": "The movie is set in the 16th century, so it's an anachronism to hear the characters discussing gravity. That misogynistic judge is an anachronism.",
+    "example_zh": "這部電影設定在 16 世紀，聽到角色談論重力便是時代錯置。那位歧視女性的法官根本是不合時宜的老古董。",
+    "sources": { "page": "IMG_1225", "etymonline": "https://www.etymonline.com/word/anachronism", "ipa": "/əˈnækɹənɪz(ə)m/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，音節性 m→əm）", "example": "photo" }
+  }
+]

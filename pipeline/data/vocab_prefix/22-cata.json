@@ -1,0 +1,80 @@
+[
+  {
+    "word": "catalogue",
+    "prefixId": "cata",
+    "pos": "n.",
+    "phonetic": "ˈkætəˌlɔɡ",
+    "zh": "目錄",
+    "parts": [{ "text": "cata-", "gloss": "逐條、完全" }, { "text": "log", "gloss": "說、數（legein）" }],
+    "etymology": "cata-（逐條、完全）＋ log（legein 說、數）——把每一項逐一數說列出，即目錄。",
+    "derivatives": [],
+    "example": "All our current products are listed in this catalogue.",
+    "example_zh": "我們目前所有產品都列在這份目錄裡。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/catalogue", "ipa": "/ˈkætəˌlɔɡ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；此 cata- 取「逐條、完全」義", "example": "photo" }
+  },
+  {
+    "word": "cataract",
+    "prefixId": "cata",
+    "pos": "n.",
+    "phonetic": "ˈkætəˌrækt",
+    "zh": "大瀑布；白內障",
+    "parts": [{ "text": "cata-", "gloss": "向下" }, { "text": "ract", "gloss": "猛擊、衝撞（arassein）" }],
+    "etymology": "cata-（向下）＋ ract（arassein 猛擊）——向下猛衝傾瀉的水，即大瀑布；由「閘門阻擋」的意象轉指眼球水晶體混濁的白內障。",
+    "derivatives": [],
+    "example": "Internet search engines provide cataracts of information that must be screened. A cataract is a clouding of the lens of the eye that can result in blindness.",
+    "example_zh": "網路搜尋引擎提供如瀑布般大量、須經篩選的資訊。白內障是眼球水晶體混濁，可能導致失明。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/cataract", "ipa": "/ˈkætəˌɹækt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "example": "photo" }
+  },
+  {
+    "word": "cataclysm",
+    "prefixId": "cata",
+    "pos": "n.",
+    "phonetic": "ˈkætəˌklɪzəm",
+    "zh": "洪水、災難、大變動",
+    "parts": [{ "text": "cata-", "gloss": "向下" }, { "text": "clysm", "gloss": "沖洗（klyzein）" }],
+    "etymology": "cata-（向下）＋ clysm（klyzein 沖洗）——向下沖刷的大水，原特指諾亞洪水，引申為大災變。",
+    "derivatives": [{ "word": "cataclysmic", "pos": "a.", "zh": "天翻地覆的、劇變的" }],
+    "example": "Some believe that the end of a century is always accompanied by floods, earthquakes, and other cataclysms.",
+    "example_zh": "有些人相信每逢世紀末總伴隨洪水、地震等大災變。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/cataclysm", "ipa": "/ˈkætəˌklɪzəm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（音節性 m→əm）", "example": "photo" }
+  },
+  {
+    "word": "catastrophe",
+    "prefixId": "cata",
+    "pos": "n.",
+    "phonetic": "kəˈtæstrəfɪ",
+    "zh": "大災難",
+    "parts": [{ "text": "cata-", "gloss": "向下" }, { "text": "stroph", "gloss": "轉（strephein）" }],
+    "etymology": "cata-（向下）＋ stroph（strephein 轉）——向下翻轉、傾覆；原指戲劇突然的劇情逆轉，後泛指突發大災難。",
+    "derivatives": [{ "word": "catastrophic", "pos": "a.", "zh": "災難性的" }],
+    "example": "The oil spill was an environmental catastrophe.",
+    "example_zh": "這起漏油事件是一場環境大災難。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/catastrophe", "ipa": "/kəˈtæstɹəfi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，字尾 -e i→ɪ）", "example": "photo" }
+  },
+  {
+    "word": "catapult",
+    "prefixId": "cata",
+    "pos": "v. / n.",
+    "phonetic": "ˈkætəˌpʌlt",
+    "zh": "彈射、快速推動；投石機",
+    "parts": [{ "text": "cata-", "gloss": "向著、穿透" }, { "text": "pult", "gloss": "投擲（pallein）" }],
+    "etymology": "陷阱字：此 cata- 非「向下」，而是「向著（城牆）／穿透（盔甲）」。cata-（向著）＋ pult（pallein 投擲）——向城牆拋射彈丸的攻城機械，引申為彈射、一舉推升。",
+    "derivatives": [],
+    "example": "The hit song catapulted the singer to stardom.",
+    "example_zh": "這首熱門歌曲將這名歌手一舉推上巨星地位。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/catapult", "ipa": "/ˈkætəˌpʌlt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；陷阱字：cata- 此處為『向著/穿透』非『向下』", "example": "photo" }
+  },
+  {
+    "word": "catalyst",
+    "prefixId": "cata",
+    "pos": "n.",
+    "phonetic": "ˈkætəlɪst",
+    "zh": "催化劑",
+    "parts": [{ "text": "cata-", "gloss": "完全（分解）" }, { "text": "lys", "gloss": "鬆開、溶解（lyein）" }],
+    "etymology": "cata-（完全）＋ lys（lyein 鬆開）——使徹底鬆開分解者，即催化劑；化學義由 Berzelius 於 1836 年提出。",
+    "derivatives": [{ "word": "catalyze", "pos": "v.", "zh": "催化、促成" }],
+    "example": "The President's speech acted as a catalyst for national debate.",
+    "example_zh": "總統的演說成了全國辯論的催化劑。",
+    "sources": { "page": "IMG_1230", "etymonline": "https://www.etymonline.com/word/catalyst", "ipa": "/ˈkætəlɪst/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；此 cata- 取「完全（徹底分解）」義", "example": "photo" }
+  }
+]
