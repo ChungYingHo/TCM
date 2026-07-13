@@ -2,7 +2,8 @@
   // 週期表三大趨勢互動：切換 原子半徑／第一游離能／電負度，看「往右、往下」各是增還是減、
   // 以及最大者在哪一角。把 Zeff（核拉力）vs 電子層數 兩股力量的結果一眼視覺化。
   type Prop = 'radius' | 'ie' | 'en'
-  let prop = $state<Prop>('radius')
+  let { initial = 'radius' }: { initial?: Prop } = $props()
+  let prop = $state<Prop>(initial)
 
   const META: Record<Prop, {
     name: string; right: string; down: string; maxAt: 'tr' | 'bl'; maxText: string; note: string

@@ -53,6 +53,7 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
     // 化學鍵的「閱讀」併入 atomic-structure。週期性 已由 chem-periodicity 認領（正課篇）。
     { tag: '週期性', slug: 'chem-periodicity', short: '週期性', claimed: true },
+    { tag: '週期趨勢', slug: 'chem-periodic-trends', short: '週期趨勢', claimed: true },
     { tag: '化學鍵與分子結構', slug: 'chem-bonding', short: '化學鍵', readIn: 'atomic-structure' },
     { tag: '化學計量', slug: 'stoichiometry', short: '化學計量' },
     { tag: '氣體', slug: 'gas-laws', short: '氣體' },

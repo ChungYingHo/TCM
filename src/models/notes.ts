@@ -145,6 +145,15 @@ export const NOTES: NoteEntry[] = [
     desc: '週期表結構與元素分類、各週期填入的軌域、金屬與非金屬性、有效核電荷 Zeff、游離能定義與逐步游離能、週期趨勢與 Be→B/N→O 兩個例外',
   },
   {
+    id: 'chem-periodic-trends',
+    href: '/chem-periodic-trends',
+    title: '週期性趨勢：原子半徑、電子親和力與電負度',
+    subject: '化學',
+    tags: ['週期趨勢'],
+    group: '量子論與原子結構',
+    desc: '原子半徑（A 族與過渡金屬、鑭系收縮、波耳半徑）、電子親和力（正負符號與三例外）、離子半徑四結論、電負度趨勢，以及 Zeff／IE／EA／電負度綜合複習與週期性綜合考題',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '概論、顯微鏡與原核／真核',
