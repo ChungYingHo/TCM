@@ -1,17 +1,4 @@
-export interface ReadingWord {
-  word: string
-  pos: string
-  en: string
-  zh: string
-}
-
-export interface ReadingArticle {
-  id: number
-  title: string
-  topic: string
-  content: string
-  words: ReadingWord[]
-}
+import type { ReadingArticle } from '@/models/reading'
 
 export const READING_R1_META = {
   code: 'R1',

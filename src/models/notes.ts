@@ -206,6 +206,14 @@ export const NOTES: NoteEntry[] = [
     tags: ['廣讀'],
     desc: '7 篇 VOA 中級文章 + 47 個重點字彙（旋元佑老師編授）',
   },
+  {
+    id: 'reading-r2',
+    href: '/readings/r2',
+    title: '增補廣讀 R2：VOA 字彙',
+    subject: '英文',
+    tags: ['廣讀'],
+    desc: '4 篇 VOA 進階短篇小說 + 26 個重點字彙（旋元佑老師編授）',
+  },
 ]
 
 /** 某分類底下、某科目的筆記（分類省略視為「考點筆記」）。 */

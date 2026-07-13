@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { ReadingArticle } from '@/data/reading-r1'
+  import type { ReadingArticle } from '@/models/reading'
 
   interface Props {
     articles: ReadingArticle[]
@@ -12,9 +12,8 @@
   let showZh = $state(true)
   let vocabOpen = $state(true)
 
-  const wordSet = $derived(
-    new Set(article.words.map((w) => w.word.toLowerCase())),
-  )
+  // 需標底線的表面形（屈折形用 word.match，預設用詞條原形）；去重避免同形重複包 <mark>
+  const forms = $derived([...new Set(article.words.flatMap((w) => w.match ?? [w.word]))])
 
   function parseContent(raw: string) {
     return raw.split('\n\n').map((block) => {
@@ -27,11 +26,11 @@
   const blocks = $derived(parseContent(article.content))
 
   function highlightWords(text: string): string {
-    if (wordSet.size === 0) return text
-    const sorted = [...article.words].sort((a, b) => b.word.length - a.word.length)
+    if (forms.length === 0) return text
+    const sorted = [...forms].sort((a, b) => b.length - a.length)
     let result = text
-    for (const w of sorted) {
-      const escaped = w.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    for (const f of sorted) {
+      const escaped = f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
       const re = new RegExp(`\\b(${escaped})\\b`, 'gi')
       result = result.replace(re, '<mark class="vocab-hl">$1</mark>')
     }
@@ -65,6 +64,9 @@
       {article.topic}
     </span>
     <h2 class="font-display text-lg font-bold leading-snug sm:text-xl">{article.title}</h2>
+    {#if article.author}
+      <p class="mt-0.5 text-sm italic text-base-content/55">by {article.author}</p>
+    {/if}
     <p class="mt-1 text-xs text-base-content/45">
       Article {article.id} of {articles.length} · {article.words.length} vocabulary words
     </p>
