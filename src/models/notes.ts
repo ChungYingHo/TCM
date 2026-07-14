@@ -208,6 +208,15 @@ export const NOTES: NoteEntry[] = [
     desc: '康熙 214 部首一頁速查：部首、讀音、意思、例字，標出變形／難讀／自成／形近部首',
   },
   {
+    id: 'cn-shijing-qiyue',
+    href: '/cn-shijing-qiyue',
+    title: '詩經・七月',
+    subject: '國文',
+    tags: ['詩經'],
+    group: '韻文',
+    desc: '《詩經・豳風・七月》農事詩：夏曆與周曆兩套曆法、七月流火正解，加詩經六義、四家詩等常考重點',
+  },
+  {
     id: 'reading-r1',
     href: '/readings/r1',
     title: '增補廣讀 R1：VOA 字彙',
