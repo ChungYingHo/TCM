@@ -1,0 +1,537 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 化學鍵與分子結構
+summary: 化學鍵、離子性、Lewis 結構、形式電荷、共振、混成、VSEPR、分子偶極與分子間作用力。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
+import MoleculePolarity from '@/components/notes/MoleculePolarity.svelte'
+import BondPotentialCurve from '@/components/notes/BondPotentialCurve.svelte'
+import AlleneGeometry from '@/components/notes/AlleneGeometry.svelte'
+import VseprGeometryTable from '@/components/notes/VseprGeometryTable.svelte'
+
+<NoteStats tag="基礎-化學鍵" client:load />
+
+## 一、化學鍵與離子化合物
+
+化學鍵是使粒子結合的吸引作用，鍵能通常大於 $100\ \mathrm{kJ\,mol^{-1}}$。
+
+| 鍵結 | 判斷方式與形成條件 | 方向性 | 相對強度 | 例子 |
+|---|---|---|---|---|
+| 離子鍵 | 金屬與非金屬形成的陽、陰離子之靜電吸引 | 無 | 強 | $\ce{NaCl}$、$\ce{MgO}$ |
+| 共價鍵 | 非金屬原子共享電子 | 有 | 強 | $\ce{H2}$、$\ce{H2O}$ |
+| 金屬鍵 | 金屬原子核與自由電子海的吸引 | 無 | 較弱 | $\ce{Cu}$、$\ce{Fe}$ |
+
+考場先依元素類別判斷：金屬＋非金屬先判離子鍵，非金屬＋非金屬判共價鍵，全為金屬判金屬鍵。再檢查例外。
+
+- $\ce{NH4Cl}$ 中，$\ce{NH4+}$ 與 $\ce{Cl-}$ 間是離子鍵，$\ce{N-H}$ 是共價鍵。
+- $\ce{BeCl2}$ 中，$\ce{Be^2+}$ 半徑小、極化力強，鍵結偏共價。
+
+### 主族與過渡金屬價數
+
+| 族 | 常見離子價數 | 形成離子的方向 |
+|---|---:|---|
+| 1A | $+1$ | 失去 1 電子 |
+| 2A | $+2$ | 失去 2 電子 |
+| 3A | $+3$ | 失去 3 電子 |
+| 4A | 通常不固定 | 不易單純形成離子 |
+| 5A | $-3$ | 得到 3 電子 |
+| 6A | $-2$ | 得到 2 電子 |
+| 7A | $-1$ | 得到 1 電子 |
+| 8A | $0$ | 價殼層已滿 |
+
+B 族的陽離子價數由陰離子總電荷反推，名稱中的羅馬數字就是陽離子價數。
+
+| 化學式 | 名稱 | 陽離子 |
+|---|---|---|
+| $\ce{FeCl2}$ | 氯化鐵 (II) | $\ce{Fe^2+}$ |
+| $\ce{FeCl3}$ | 氯化鐵 (III) | $\ce{Fe^3+}$ |
+| $\ce{CuI}$ | 碘化銅 (I) | $\ce{Cu+}$ |
+| $\ce{CuI2}$ | 碘化銅 (II) | $\ce{Cu^2+}$ |
+| $\ce{PbCl2}$ | 氯化鉛 (II) | $\ce{Pb^2+}$ |
+| $\ce{PbCl4}$ | 氯化鉛 (IV) | $\ce{Pb^4+}$ |
+
+### 離子半徑與庫倫定律
+
+- 同元素形成陽離子後，半徑變小。形成陰離子後，半徑變大。
+- 正電越多，半徑越小。負電越多，半徑越大。
+- 同族由上往下，主量子數 $n$ 增大，半徑增大。
+
+$$
+F=k\dfrac{|q_1q_2|}{r^2}
+$$
+
+> 解題順序：電量優先，半徑其次。
+
+$\ce{MgO}$ 的 $|q_1q_2|=4$，大於 $\ce{NaF}$ 的 1，因此離子間吸引更強。$\ce{NaF}$ 與 $\ce{NaCl}$ 電量相同，但 $\ce{F-}$ 較小，所以 $\ce{NaF}$ 吸引更強。
+
+<ExampleQuestion client:load n={1}
+  q="下列何者熔點最高？"
+  options={['$\\ce{NaI}$', '$\\ce{NaF}$', '$\\ce{MgO}$', '$\\ce{MgCl2}$']}
+  answer="(C) $\\ce{MgO}$"
+  steps={[
+    '先比電量乘積。',
+    '$\\ce{MgO}$ 的 $|q_1q_2|=4$，其餘選項較小。',
+    '答案是 $\\ce{MgO}$。'
+  ]}
+/>
+
+<ExampleQuestion client:load n={2}
+  q="$\\ce{Na+}$ 分別與 $\\ce{F-}$、$\\ce{Cl-}$、$\\ce{Br-}$、$\\ce{I-}$ 形成鹽類，何者庫倫吸引與熔點最高？"
+  options={['$\\ce{NaF}$', '$\\ce{NaCl}$', '$\\ce{NaBr}$', '$\\ce{NaI}$']}
+  answer="(A) $\\ce{NaF}$"
+  steps={[
+    '四組離子的電量相同，固定 $\\ce{Na+}$ 後只比較陰離子半徑。',
+    '$\\ce{F-}$ 半徑最小，離子間距 $r$ 最小。',
+    '庫倫吸引力隨 $1/r^2$ 增大，因此 $\\ce{NaF}$ 最大。'
+  ]}
+/>
+
+<ExampleQuestion client:load n={3}
+  q="下列鹽類熔點由高到低的正確排序為何？"
+  options={['$\\ce{MgO > LiF > NaCl > RbI}$', '$\\ce{LiF > MgO > NaCl > RbI}$', '$\\ce{MgO > NaCl > LiF > RbI}$', '$\\ce{RbI > NaCl > LiF > MgO}$']}
+  answer="(A) $\\ce{MgO > LiF > NaCl > RbI}$"
+  steps={[
+    '先比電量乘積，$\\ce{MgO}$ 的 $|q_1q_2|=4$，最大。',
+    '其餘皆為 $1^+:1^-$，再比離子半徑。',
+    '$\\ce{LiF}$ 的離子間距最小，$\\ce{RbI}$ 最大。'
+  ]}
+/>
+
+### 多原子離子
+
+<div class="not-prose my-5 rounded-box border border-primary/25 bg-primary/10 p-4 print:break-inside-avoid">
+  <h3 class="mb-3 font-display text-lg font-bold text-primary">常用多原子離子</h3>
+  <div class="grid gap-x-6 gap-y-2 text-sm sm:grid-cols-2 lg:grid-cols-3">
+    <p><b>銨根</b> $\ce{NH4+}$</p><p><b>氫氧根</b> $\ce{OH-}$</p><p><b>醋酸根</b> $\ce{CH3CO2-}$</p>
+    <p><b>過氧根</b> $\ce{O2^2-}$</p><p><b>氰根</b> $\ce{CN-}$</p><p><b>碳酸根</b> $\ce{CO3^2-}$</p>
+    <p><b>碳酸氫根</b> $\ce{HCO3-}$</p><p><b>磷酸根</b> $\ce{PO4^3-}$</p><p><b>硫酸根</b> $\ce{SO4^2-}$</p>
+    <p><b>亞硫酸根</b> $\ce{SO3^2-}$</p><p><b>硝酸根</b> $\ce{NO3-}$</p><p><b>亞硝酸根</b> $\ce{NO2-}$</p>
+    <p><b>次氯酸根</b> $\ce{ClO-}$</p><p><b>亞氯酸根</b> $\ce{ClO2-}$</p><p><b>氯酸根</b> $\ce{ClO3-}$</p>
+    <p><b>過氯酸根</b> $\ce{ClO4-}$</p><p><b>磷酸氫根</b> $\ce{HPO4^2-}$</p><p><b>磷酸二氫根</b> $\ce{H2PO4-}$</p>
+  </div>
+  <p class="mt-3 text-sm">同一多原子離子出現兩個以上時要加括號，例如 $\ce{Ca(OH)2}$、$\ce{(NH4)2SO4}$、$\ce{Ca3(PO4)2}$。</p>
+</div>
+
+<ExampleQuestion client:load n={4}
+  q="Al 與 $\\ce{P4}$ 反應，最可能生成何物？"
+  options={['$\\ce{AlP}$', '$\\ce{Al2P}$', '$\\ce{Al3P}$', '$\\ce{Al2P3}$', '$\\ce{AlP3}$']}
+  answer="(A) $\\ce{AlP}$"
+  steps={['$\\ce{Al}$ 形成 $\\ce{Al^3+}$，P 形成 $\\ce{P^3-}$。', '正負電荷大小相同，最簡比為 $1:1$。', '化學式為 $\\ce{AlP}$。']}
+/>
+
+<ExampleQuestion client:load n={5}
+  q="下列何者同時具有離子鍵與共價鍵？"
+  options={['$\\ce{CCl4}$', '$\\ce{H2CO3}$', '$\\ce{BaCO3}$', '$\\ce{K3N}$']}
+  answer="(C) $\\ce{BaCO3}$"
+  steps={['$\\ce{Ba^2+}$ 與 $\\ce{CO3^2-}$ 之間為離子作用。', '$\\ce{CO3^2-}$ 內部 C—O 為共價鍵。', '多原子離子化合物要同時辨認兩種鍵結。']}
+/>
+
+## 二、鍵極性與共價鍵離子性
+
+兩個 H 原子接近時，電子與原子核的吸引先使系統能量降低。靠得過近時，核核斥力快速增加。最低位能的位置就是鍵長。
+
+### 鍵長、鍵能與位能曲線
+
+雙原子分子的位能曲線把兩原子核距離 $r$ 與系統位能連起來。曲線最低點對應平衡鍵長；由最低點到 $E=0$ 的深度是鍵解離能。距離太短時核間排斥急升，太遠時吸引力逐漸消失。
+
+<BondPotentialCurve />
+
+鍵極性是鍵中電荷分離的情形。偶極矩 $\mu$ 是電荷分離程度與距離的乘積。
+
+$$
+\mu=Qr
+$$
+
+正負電荷完全分離且距離為 $1\ \text{Å}$ 時：
+
+$$
+\mu=4.8\ \mathrm{D}
+$$
+
+### 三種判斷順序
+
+| 方法 | 適用題型 | 判斷 |
+|---|---|---|
+| 1. 電負度差 $\Delta EN$ | 非金屬＋非金屬 | $\Delta EN$ 大，鍵極性通常大 |
+| 2. 極化力 | 離子化合物比較 | 小且高正電的陽離子、大陰離子，共價性較高 |
+| 3. 偶極矩計算 | 題目給 $\mu$ 與鍵長 | 算離子性百分比 |
+
+$\Delta EN$ 是最快的第一步。通常 $\Delta EN>2$ 離子性較高，$\Delta EN<2$ 共價性較重要。$\ce{LiI}$ 是例外，雖然 $\Delta EN\approx1.5$，仍偏離子鍵。
+
+鍵偶極矩不能只看 $\Delta EN$。例如：
+
+$$
+\mu_{\ce{C-Cl}}=1.56\ \mathrm{D}>\mu_{\ce{C-F}}=1.51\ \mathrm{D}
+$$
+
+極化力的規則：
+
+- 陽離子越小、正電越多，極化力越強。
+- 陰離子越大、負電越多，可極化性越高。
+- 電子雲扭曲越明顯，離子鍵的共價性越高。
+
+<WorkedExample source="課本例題" answer="55.5%" tags={['偶極矩', '離子性']}>
+
+**題目**　$\ce{AgCl(g)}$ 的 $\mu=6.08\ \mathrm{D}$，鍵長為 $228.1\ \mathrm{pm}$。求離子性。
+
+$$
+228.1\ \mathrm{pm}\times\dfrac{1\ \text{Å}}{100\ \mathrm{pm}}
+=2.281\ \text{Å}
+$$
+
+$$
+\dfrac{6.08\ \mathrm{D}}{4.8\ \mathrm{D\,Å^{-1}}\times2.281\ \text{Å}}
+\times100\%
+=55.5\%
+$$
+
+</WorkedExample>
+
+<ExampleQuestion client:load n={6}
+  q="下列何者共價性較高？"
+  options={['$\\ce{NaBr}$', '$\\ce{MgBr2}$']}
+  answer="(B) $\\ce{MgBr2}$"
+  steps={[
+    '陰離子固定為 $\\ce{Br-}$。',
+    '$\\ce{Mg^2+}$ 半徑較小且正電較高，極化力較強。',
+    '$\\ce{MgBr2}$ 的共價性較高。'
+  ]}
+/>
+
+<ExampleQuestion client:load n={7}
+  q="已知 $\\ce{H}=2.2$、$\\ce{N}=3.0$、$\\ce{O}=3.5$、$\\ce{P}=2.1$、$\\ce{S}=2.5$。下列何鍵的極性最小？"
+  options={['$\\ce{N-H}$', '$\\ce{O-H}$', '$\\ce{P-H}$', '$\\ce{S-H}$']}
+  answer="(C) $\\ce{P-H}$"
+  steps={[
+    '先做 $\\Delta EN=|EN_A-EN_B|$；題目未給偶極矩時，這是最快的第一步。',
+    '$\\ce{P-H}$ 的 $\\Delta EN=|2.1-2.2|=0.1$，四者最小。',
+    '所以它的鍵極性最小。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={8}
+  q="已知 $\\mu_{\\ce{C-F}}=1.51\\ \\mathrm{D}$、$\\mu_{\\ce{C-Cl}}=1.56\\ \\mathrm{D}$。在 $\\ce{C-F}$、$\\ce{C-Cl}$、$\\ce{C-Br}$、$\\ce{C-I}$ 中，何者鍵偶極矩最大？"
+  options={['$\\ce{C-F}$', '$\\ce{C-Cl}$', '$\\ce{C-Br}$', '$\\ce{C-I}$']}
+  answer="(B) $\\ce{C-Cl}$"
+  steps={[
+    '本題直接給了偶極矩數據，優先比 $\\mu$，不要只用 $\\Delta EN$。',
+    '$\\mu=Qr$：部分電荷與鍵長共同決定偶極矩。',
+    '已知數據中 $1.56\\ \\mathrm{D}>1.51\\ \\mathrm{D}$，答案為 $\\ce{C-Cl}$。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={9}
+  q="下列哪一組中，前者的離子化合物共價性較高？"
+  options={['$\\ce{NaBr}$ 比 $\\ce{MgBr2}$', '$\\ce{MgBr2}$ 比 $\\ce{NaBr}$', '相同']}
+  answer="(B) $\\ce{MgBr2}$ 比 $\\ce{NaBr}$"
+  steps={[
+    '陰離子同為 $\\ce{Br-}$，比較陽離子的極化力。',
+    '$\\ce{Mg^2+}$ 比 $\\ce{Na+}$ 電荷高且半徑小，極化力更強。',
+    '它會拉扯 $\ce{Br-}$ 的電子雲，使鍵的共價性增加。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={10}
+  q="$\\ce{CaS}$ 與 $\\ce{CaO}$ 相比，何者共價性較高？"
+  options={['$\\ce{CaS}$', '$\\ce{CaO}$', '相同']}
+  answer="(A) $\\ce{CaS}$"
+  steps={[
+    '陽離子同為 $\\ce{Ca^2+}$，比較陰離子可極化性。',
+    '$\\ce{S^2-}$ 半徑比 $\\ce{O^2-}$ 大，電子雲較鬆、較容易被極化。',
+    '因此 $\\ce{CaS}$ 的共價性較高。',
+  ]}
+/>
+
+## 三、Lewis 結構、含氧酸與形式電荷
+
+對含非 H 外圍原子的分子，先用電子計算式求中心原子的孤對電子數：
+
+$$
+E=\dfrac{(V_{\text{總}}\pm q)-8(\#X)}{2}
+$$
+
+$V_{\text{總}}$ 是總價電子數，$q$ 是電荷修正，$\#X$ 是非 H 外圍原子數。陰離子加電荷數，陽離子減電荷數。外圍若是 H，每個 H 只扣 2 電子。
+
+### 含氧酸
+
+| 酸名 | 化學式 | 真實鍵結骨架 | 可解離 H 數 |
+|---|---|---|---:|
+| 醋酸 | $\ce{CH3CO2H}$ | $\ce{CH3-C(=O)-OH}$ | 1 |
+| 硫酸 | $\ce{H2SO4}$ | $\ce{HO-S(=O)2-OH}$ | 2 |
+| 亞硫酸 | $\ce{H2SO3}$ | $\ce{HO-S(=O)-OH}$ | 2 |
+| 硝酸 | $\ce{HNO3}$ | $\ce{O=N+(-O-)-OH}$ | 1 |
+| 亞硝酸 | $\ce{HNO2}$ | $\ce{O=N-OH}$ | 1 |
+| 磷酸 | $\ce{H3PO4}$ | $\ce{O=P(OH)3}$ | 3 |
+| 亞磷酸 | $\ce{H3PO3}$ | $\ce{O=P(H)(OH)2}$ | 2 |
+| 次磷酸 | $\ce{H3PO2}$ | $\ce{O=P(H)2-OH}$ | 1 |
+| 過氯酸 | $\ce{HClO4}$ | $\ce{HO-Cl(=O)3}$ | 1 |
+| 氯酸 | $\ce{HClO3}$ | $\ce{HO-Cl(=O)2}$ | 1 |
+| 亞氯酸 | $\ce{HClO2}$ | $\ce{HO-Cl=O}$ | 1 |
+| 次氯酸 | $\ce{HClO}$ | $\ce{HO-Cl}$ | 1 |
+
+只有接在 O 上的 H 可解離。接在 P 上的 H 不算酸性 H。
+
+### 八隅體例外
+
+| 類型 | 特徵 | 代表物種 |
+|---|---|---|
+| 不足八隅 | 中心原子少於 8 電子 | $\ce{BeCl2}$、$\ce{BeH2}$、$\ce{BF3}$、$\ce{CH3+}$ |
+| 擴張八隅 | 第 3 週期以後中心原子可超過 8 電子 | $\ce{PCl5}$、$\ce{SF4}$、$\ce{SF6}$、$\ce{XeF4}$ |
+| 奇數電子 | 總價電子為奇數 | $\ce{NO}$、$\ce{NO2}$、$\ce{^.CH3}$ |
+
+### 形式電荷的三種解法
+
+$$
+\mathrm{FC}=V-\dfrac{B}{2}-N
+$$
+
+$V$ 是價電子數，$B$ 是鍵結電子總數，$N$ 是非鍵結電子總數。
+
+| 方法 | 操作 | 使用時機 |
+|---|---|---|
+| 公式解 | $V-B/2-N$ | 所有結構都可用 |
+| 圖像解 | 鍵電子平分，孤對電子全歸原子 | 用來理解形式電荷來源 |
+| 目視法 | 多一鍵為 $+1$，少一鍵為 $-1$ | 中心原子符合八隅時 |
+
+目視法不適用於 2A、3A 中心原子、中心原子不足八隅或擴張八隅。
+
+形式電荷把鍵電子平分。氧化數把鍵電子全部給電負度較高的原子。兩者都是記帳數字，不是真實電荷。
+
+<ExampleQuestion client:load n={11}
+  q="$\\ce{NO2-}$ 共有幾對孤對電子？"
+  options={['4 對', '5 對', '6 對', '7 對', '8 對']}
+  answer="(C) 6 對"
+  steps={[
+    '總價電子數為 $5+2(6)+1=18$。',
+    '一個 $\\ce{N=O}$、一個 $\\ce{N-O}$ 的 Lewis 式中：雙鍵 O 有 2 對、單鍵 O 有 3 對、中心 N 有 1 對。',
+    '$2+3+1=6$ 對；另一個共振式的總數相同。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={12}
+  q="在 $\\ce{O3}$ 的主要 Lewis 結構中，中心 O 的形式電荷為何？"
+  options={['$-1$', '$+1$', '$0$', '$+2$']}
+  answer="(B) $+1$"
+  steps={[
+    '中心 O 有 $V=6$、一對孤對電子 $N=2$，並參與一個單鍵與一個雙鍵，$B=6$。',
+    '$\\mathrm{FC}=V-B/2-N=6-6/2-2=+1$。',
+    '負電荷在單鍵端 O；另一個共振式左右對調。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={13}
+  q="若 $\\ce{BrO3-}$ 的 Br 強制遵守八隅體，Br 的形式電荷為何？"
+  options={['$+1$', '$+2$', '$0$', '$-1$']}
+  answer="(B) $+2$"
+  steps={[
+    '強制八隅體時，Br 與三個 O 都畫單鍵，Br 留一對孤對電子。',
+    'Br 有 $V=7$、$B=6$、$N=2$。',
+    '$\\mathrm{FC}=7-6/2-2=+2$；題目的「強制八隅體」是關鍵限制。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={14}
+  q="下列何分子的孤對電子總數最多？"
+  options={['$\\ce{CH3CHO}$', '$\\ce{CO2}$', '$\\ce{CH3Cl}$', '$\\ce{C2H6}$']}
+  answer="(B) $\\ce{CO2}$"
+  steps={[
+    '$\\ce{CO2}$ 的兩個 O 各有兩對孤對電子，共 4 對。',
+    '$\\ce{CH3CHO}$ 有 2 對、$\\ce{CH3Cl}$ 有 3 對、$\\ce{C2H6}$ 為 0 對。',
+    '因此 $\\ce{CO2}$ 最多。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={15}
+  q="下列何分子的孤對電子總數最多？"
+  options={['$\\ce{CH4}$', '$\\ce{HF}$', '$\\ce{H2O}$', '$\\ce{F2}$']}
+  answer="(D) $\\ce{F2}$"
+  steps={[
+    '$\\ce{CH4}$ 為 0 對，$\\ce{HF}$ 為 3 對，$\\ce{H2O}$ 為 2 對。',
+    '$\\ce{F2}$ 的兩個 F 各有 3 對孤對電子。',
+    '總共 6 對，最多。',
+  ]}
+/>
+
+## 四、共振結構
+
+共振結構的原子位置不變，只移動孤對電子、$\pi$ 電子與形式電荷。真實分子是電子離域後的共振混成體，不是在不同結構間快速切換。
+
+畫共振式的兩個線索：
+
+- 電負度不同原子的多重鍵旁，有可以移動的孤對電子。
+- 有共軛雙鍵或三鍵。
+
+貢獻度依序比較：八隅體是否完整、形式電荷是否分散、負電荷是否放在高 EN 原子。
+
+$$
+\text{平均鍵級}
+=\dfrac{\text{各共振式中該鍵級總和}}{\text{共振式數}}
+$$
+
+| 物種 | 共振式數 | 平均鍵級 |
+|---|---:|---:|
+| $\ce{O3}$、$\ce{SO2}$、$\ce{NO2-}$ | 2 | 1.5 |
+| $\ce{CO3^2-}$、$\ce{NO3-}$、$\ce{SO3}$ | 3 | 1.33 |
+
+下表列出題目常拿來考形式電荷與共振的骨架；各式都先滿足總價電子數與總電荷。
+
+| 物種 | 主要 Lewis 式 | 判斷重點 |
+|---|---|---|
+| $\ce{CNO-}$ | $\ce{^-C#N^+-O^-}$ | 左端 C 必須帶 $-1$，不可漏寫。 |
+| $\ce{NCO-}$ | $\ce{N#C-O^-}$ | 負電荷在電負度較高的 O 較合理。 |
+| $\ce{N2O}$ | $\ce{N#N^+-O^-}$ | 三原子的連接順序固定為 N–N–O。 |
+| $\ce{N3-}$ | $\ce{^-N=N^+=N^-}$ | 對稱式的形式電荷較小，貢獻最大。 |
+| $\ce{CO2}$ | $\ce{O=C=O}$ | 無需畫成電荷分離式。 |
+
+<ExampleQuestion client:load n={16}
+  q="$\\ce{N3-}$ 的三個共振式中，何者貢獻最大？"
+  options={['$\\ce{N}\\equiv\\ce{N}^{+}-\\ce{N}^{2-}$', '$\\ce{-N=N+=N-}$', '$\\ce{N}^{2-}-\\ce{N}^{+}\\equiv\\ce{N}$']}
+  answer="(B) $\\ce{-N=N+=N-}$"
+  steps={[
+    '三式皆符合八隅體。',
+    '中央式將兩個 $-1$ 分散在兩端，避免單一原子帶 $-2$。',
+    '中央式貢獻最大。'
+  ]}
+/>
+
+<ExampleQuestion client:load n={17}
+  q="在所有原子都遵守八隅體的畫法中，下列何者的 $\\ce{S-O}$ 鍵最短？"
+  options={['$\\ce{SO2}$', '$\\ce{SO3}$', '$\\ce{SO4^2-}$', '$\\ce{SO3^2-}$']}
+  answer="(A) $\\ce{SO2}$"
+  steps={[
+    '鍵級越大，鍵越短。',
+    '強制八隅體時，$\\ce{SO2}$ 有兩個等價共振式，平均 $\\ce{S-O}$ 鍵級為 $(2+1)/2=1.5$。',
+    '$\\ce{SO3}$、$\\ce{SO4^2-}$、$\\ce{SO3^2-}$ 的平均鍵級較低，故 $\\ce{SO2}$ 最短。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={18}
+  q="下列何者具有共振結構？"
+  options={['$\\ce{H2O}$', '$\\ce{CO3^2-}$', '$\\ce{NH3}$', '$\\ce{HCN}$', '$\\ce{NH4+}$']}
+  answer="(B) $\\ce{CO3^2-}$"
+  steps={[
+    '共振時原子連接不變，但 $\\pi$ 電子或孤對電子的位置可改變。',
+    '$\\ce{CO3^2-}$ 的雙鍵可在三個 O 之間移動，三條 $\\ce{C-O}$ 因而等長。',
+    '其餘選項沒有可互換的等價 Lewis 式。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={19}
+  q="下列關於 $\\ce{HCO3-}$ 的敘述，何者錯誤？"
+  options={['$\\ce{C-OH}$ 鍵比另兩條 $\\ce{C-O}$ 鍵長', '兩條未質子化的 $\\ce{C-O}$ 鍵等長', '室溫下有一條未質子化的 $\\ce{C-O}$ 鍵特別短', '未質子化的兩個 O 之間有共振']}
+  answer="(C) 室溫下有一條未質子化的 $\\ce{C-O}$ 鍵特別短"
+  steps={[
+    '$\\ce{HCO3-}$ 的 $\\ce{OH}$ 端不能和另兩個 O 完全等價。',
+    '負電荷與 $\\pi$ 鍵在另外兩個未質子化 O 間離域。',
+    '因此那兩條鍵彼此等長；$\\ce{C-OH}$ 則較長。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={20}
+  q="下列八個物種中：$\\ce{NO2-}$、$\\ce{O3}$、$\\ce{OCl2}$、$\\ce{NF3}$、$\\ce{N2O}$、$\\ce{CCl4}$、$\\ce{CNO-}$、$\\ce{O3F2}$，共有幾個具有共振？"
+  options={['2 個', '3 個', '5 個', '4 個']}
+  answer="(D) 4 個"
+  steps={[
+    '有共振者為 $\\ce{NO2-}$、$\\ce{O3}$、$\\ce{N2O}$、$\\ce{CNO-}$。',
+    '$\\ce{OCl2}$、$\\ce{NF3}$、$\\ce{CCl4}$ 沒有可移動的 $\\pi$ 電子或相鄰孤對電子；$\\ce{O3F2}$ 亦無等價的電子重排。',
+    '因此共有 4 個。先固定原子骨架再判斷，不能把構造異構當作共振。',
+  ]}
+/>
+
+## 五、價鍵理論與混成
+
+共價鍵由原子軌域重疊形成。沿核間軸正面重疊的是 $\sigma$ 鍵，p 軌域側向重疊的是 $\pi$ 鍵。
+
+| 鍵 | 組成 |
+|---|---|
+| 單鍵 | $1\sigma$ |
+| 雙鍵 | $1\sigma+1\pi$ |
+| 三鍵 | $1\sigma+2\pi$ |
+
+| $X+E$ | 混成 | 電子域幾何 | 未混成 p 軌域 |
+|---:|---|---|---:|
+| 2 | sp | 直線 | 2 |
+| 3 | sp² | 三角平面 | 1 |
+| 4 | sp³ | 四面體 | 0 |
+| 5 | sp³d | 三角雙錐 | 0 |
+| 6 | sp³d² | 八面體 | 0 |
+
+| 結構 | 混成 | 理由 |
+|---|---|---|
+| $\ce{CH3+}$ | sp² | 三個鍵與空 p 軌域 |
+| $\ce{^.CH3}$ | sp² | 未成對電子在 p 軌域 |
+| $\ce{CH3-}$ | sp³ | 三個鍵與一孤對 |
+| 吡啶 N | sp² | 孤對電子位於 sp² 軌域 |
+| 醯胺 N | 通常 sp² | 孤對電子與 $\ce{C=O}$ 共振 |
+
+<AlleneGeometry />
+
+## 六、VSEPR 與分子幾何
+
+價殼層電子對排斥理論 (VSEPR) 以電子域盡量相隔最遠來預測形狀。
+
+$$
+\mathrm{LP-LP}>\mathrm{LP-BP}>\mathrm{BP-BP}
+$$
+
+LP 是孤對電子，BP 是鍵結電子對。電子幾何包含孤對電子。分子幾何只看原子的位置。
+
+<VseprGeometryTable />
+
+三角雙錐中，孤對電子優先放赤道向，因為赤道向只產生兩個 $90^\circ$ 排斥。配位化合物不可直接套用 VSEPR，四配位配合物可能是四面體或平面正方形。
+
+<ExampleQuestion client:load n={21}
+  q="$\\ce{ClF3}$ 的電子幾何與分子幾何為何？"
+  options={['三角平面、折線形', '四面體、三角錐', '三角雙錐、T 形', '八面體、平面正方形']}
+  answer="(C) 三角雙錐、T 形"
+  steps={[
+    'Cl 有 3 個鍵結電子對與 2 個孤對電子。',
+    '電子域數為 5，電子幾何是三角雙錐。',
+    'AX₃E₂ 扣掉孤對後，分子幾何為 T 形。'
+  ]}
+/>
+
+## 七、分子偶極與分子間作用力
+
+鍵偶極由電負度差造成。分子偶極是所有鍵偶極與孤對電子效應的向量和。
+
+<MoleculePolarity client:visible />
+
+判斷順序：先畫 Lewis 結構，再用 VSEPR 判形狀，最後看鍵偶極是否因對稱而抵銷。
+
+| 非極性分子 | 極性分子 |
+|---|---|
+| $\ce{CO2}$、$\ce{BF3}$、$\ce{CCl4}$、$\ce{PCl5}$、$\ce{SO3}$、$\ce{XeF4}$ | $\ce{CO}$、$\ce{NH3}$、$\ce{H2O}$、$\ce{SF4}$、$\ce{O3}$、$\ce{ICl3}$ |
+
+| 作用力 | 出現條件 |
+|---|---|
+| London 色散力 | 所有分子都有，瞬時偶極誘導鄰分子偶極 |
+| 偶極－偶極力 | 分子有淨偶極 |
+| 氫鍵 | H 直接接 F、O、N，鄰分子有 F、O、N 孤對 |
+| 離子－偶極力 | 離子溶於極性溶劑 |
+| 離子－離子力 | 離子晶體 |
+
+London 力 &lt; 偶極－偶極力 &lt; 氫鍵 &lt; 離子－離子力
+
+比較沸點時，先比作用力種類，再比分子量，最後比接觸面積。官能基與分子量接近時，直鏈通常比支鏈沸點高。
+
+<WorkedExample source="高醫 93" answer="丙酸 > 醋酸，正戊烷 > 新戊烷，氯甲烷 > 甲烷" tags={['分子間作用力', '沸點']}>
+
+**題目**　比較丙酸與醋酸、正戊烷與新戊烷、氯甲烷與甲烷的沸點。
+
+- 丙酸與醋酸官能基相同，丙酸分子量較大。
+- 正戊烷與新戊烷分子式相同，正戊烷接觸面積較大。
+- 氯甲烷比甲烷分子量大，且有較強偶極。
+
+</WorkedExample>
+
+<FunctionalGroups client:visible />
+
+<h2 class="print:hidden">考古題</h2>
+<div class="print:hidden">
+  <RelatedQuestions tag="基礎-化學鍵" limit={10} offset={0} client:load />
+</div>

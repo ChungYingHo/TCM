@@ -154,6 +154,15 @@ export const NOTES: NoteEntry[] = [
     desc: '原子半徑（A 族與過渡金屬、鑭系收縮、波耳半徑）、電子親和力（正負符號與三例外）、離子半徑四結論、電負度趨勢，以及 Zeff／IE／EA／電負度綜合複習與週期性綜合考題',
   },
   {
+    id: 'chem-chemical-bonding',
+    href: '/chem-chemical-bonding',
+    title: '化學鍵與分子結構',
+    subject: '化學',
+    tags: ['基礎-化學鍵'],
+    group: '化學鍵與分子結構',
+    desc: '離子化合物、多原子離子、Lewis 結構、形式電荷、共振、混成、VSEPR、分子偶極與分子間作用力',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '概論、顯微鏡與原核／真核',

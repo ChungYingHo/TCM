@@ -17,6 +17,7 @@ import path from 'node:path'
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const BASE = process.env.PDF_BASE_URL || 'http://localhost:4330'
+const BROWSER_EXECUTABLE = process.env.PDF_CHROME_PATH
 // 輸出到桌面的 TCM-exports/（用 iPad GoodNotes 看，不再印紙本）。可用 PDF_OUT_DIR 覆寫。
 const OUT = process.env.PDF_OUT_DIR || path.join(homedir(), 'Desktop', 'TCM-exports')
 const SERIF = 'https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&display=swap'
@@ -39,6 +40,7 @@ const NOTES = [
   { dir: '化學', href: '/chem-ions-magnetism', file: '12-帶電離子的電子組態與磁光行為' },
   { dir: '化學', href: '/chem-periodicity', file: '13-週期表與週期性' },
   { dir: '化學', href: '/chem-periodic-trends', file: '14-週期性趨勢-半徑親和力電負度' },
+  { dir: '化學', href: '/chem-chemical-bonding', file: '15-化學鍵與分子結構' },
   { dir: '生物', href: '/bio-cell-1', file: '1-概論顯微鏡原核真核' },
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞骨架與細胞外連結' },
@@ -106,7 +108,9 @@ function applyBreaksAndListHeadings(page, forced) {
 async function main() {
   if (!existsSync(OUT)) mkdirSync(OUT, { recursive: true })
 
-  const browser = await chromium.launch()
+  const browser = await chromium.launch(
+    BROWSER_EXECUTABLE ? { executablePath: BROWSER_EXECUTABLE } : undefined,
+  )
   const context = await browser.newContext()
 
   const res = await context.request.post(`${BASE}/api/unlock`, { data: { password: sitePassword() } })

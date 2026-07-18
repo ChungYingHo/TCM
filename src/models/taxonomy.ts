@@ -46,7 +46,7 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     { tag: '電子組態', slug: 'chem-electron-config', short: '電子組態', claimed: true },
     { tag: '離子與電子行為', slug: 'chem-ions-magnetism', short: '離子與磁光', claimed: true },
     { tag: '基礎-單位因次', slug: 'chem-units', short: '單位因次', claimed: true },
-    { tag: '基礎-化學鍵', slug: 'chem-molecules', short: '化學鍵', claimed: true },
+    { tag: '基礎-化學鍵', slug: 'chem-chemical-bonding', short: '化學鍵', claimed: true },
     { tag: '基礎-化學計量', slug: 'chem-stoichiometry', short: '化學計量', claimed: true },
     { tag: '基礎-熱力學', slug: 'chem-thermo', short: '熱力學', claimed: true },
     // ── legacy concept tags（過渡期保留；隨 backfill 逐桶認領後淘汰）──
