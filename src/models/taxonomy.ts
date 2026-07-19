@@ -84,7 +84,8 @@ export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
     // ── legacy concept tags ──
     { tag: '生命分子與生物化學', slug: 'biomolecules', short: '生命分子' },
     { tag: '細胞構造與胞器', slug: 'cell-structure', short: '細胞構造' },
-    { tag: '細胞膜與物質運輸', slug: 'membrane-transport', short: '細胞膜運輸' },
+    { tag: '細胞膜與物質運輸', slug: 'membrane-transport', short: '細胞膜運輸', claimed: true },
+    { tag: '細胞訊號傳遞', slug: 'cell-signaling', short: '訊號傳遞', claimed: true },
     { tag: '酵素', slug: 'enzymes', short: '酵素' },
     { tag: '細胞呼吸與能量代謝', slug: 'cell-respiration', short: '細胞呼吸' },
     { tag: '光合作用與C4/CAM', slug: 'photosynthesis', short: '光合作用' },

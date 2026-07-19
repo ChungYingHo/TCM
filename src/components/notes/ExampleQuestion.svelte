@@ -28,7 +28,10 @@
 
   function renderRichText(value: string) {
     return value.replace(/\$([^$]+)\$/g, (_, formula: string) =>
-      katex.renderToString(formula, { throwOnError: false, strict: 'ignore' }),
+      // MDX serialises prop strings with doubled backslashes during SSR. KaTeX
+      // reads `\\\\ce{...}` as a line break followed by plain "ce", so normalise
+      // it before rendering; hydrated client props already contain one slash.
+      katex.renderToString(formula.replace(/\\\\/g, '\\'), { throwOnError: false, strict: 'ignore' }),
     )
   }
 

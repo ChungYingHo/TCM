@@ -1,0 +1,158 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 細胞訊號傳遞
+summary: 細胞間溝通、接收與轉導、GPCR、cAMP、IP₃、DAG、Ca²⁺ 與常見受體路徑。
+---
+import NoteStats from '@/components/notes/NoteStats.svelte'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
+import Supplement from '@/components/notes/Supplement.astro'
+import Figure from '@/components/notes/Figure.astro'
+
+<NoteStats tag="細胞訊號傳遞" client:load />
+
+## 一、細胞如何辨識鄰居與傳遞遠距訊息
+
+
+
+細胞訊號傳遞（cell signaling）是細胞接收外界訊號、在細胞內轉換訊號，最後產生特定反應的過程。只有具備相應受體的標的細胞才會回應配體。
+
+### 相鄰細胞的兩種直接溝通不可混為一談
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 機制 | 訊息如何通過 | 例子 |
+|---|---|---|
+| 細胞質直接連通 | 小分子與離子直接跨入相鄰細胞 | 間隙連接、胞間連絲 |
+| 膜表面分子辨識 | 兩細胞膜上的配體與受體直接接觸 | 胚胎發育、免疫辨識 |
+
+</div>
+
+**間隙連接**（gap junction）是動物相鄰細胞間的蛋白通道。**胞間連絲**（plasmodesmata）是植物細胞穿過細胞壁的細胞質通道。
+
+膜表面分子辨識則不需要讓分子跨入鄰居細胞的細胞質。它是由一個細胞表面的配體接觸另一個細胞表面的受體後，啟動訊號。
+
+抗原呈現細胞（antigen-presenting cell，APC）包括樹突細胞、巨噬細胞與 B 細胞。它們可用主要組織相容性複合體第二類（major histocompatibility complex class II，MHC II）呈現抗原片段，讓帶 CD4 的輔助型 T 細胞辨識。
+
+### 局部、突觸與遠距訊息
+
+**細胞外液**（extracellular fluid，ECF）是細胞周圍的液體環境。細胞分泌的局部調節物進入 ECF 後，若只在附近擴散並作用於鄰近細胞，即為旁分泌。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 類型 | 傳遞範圍 | 例子 |
+|---|---|---|
+| 旁分泌 paracrine | 附近細胞 | 生長因子刺激鄰近細胞 |
+| 自分泌 autocrine | 分泌細胞本身 | 部分腫瘤細胞回應自身生長訊號 |
+| 突觸傳遞 synaptic signaling | 突觸間隙 | 神經傳遞物質作用於靶細胞 |
+| 內分泌 endocrine | 經血液遠距傳遞 | 激素作用於遠處標的細胞 |
+
+</div>
+
+神經衝動可沿神經元傳很遠，但神經傳遞物質在突觸間隙的化學作用屬局部訊號。內分泌將激素釋放至血液，外分泌則經導管把分泌物送到體表或器官腔。
+
+植物激素可經維管束長距離運輸，乙烯等氣體訊號也可在組織間擴散。酵母菌利用費洛蒙辨識交配型，細菌則能以群體感應（quorum sensing）感測密度並共同調控基因表現，例如形成生物膜。牙菌斑是生物膜的例子。
+
+## 二、接收、轉導與反應
+
+**配體**（ligand）是可與受體結合的訊號分子。**受體**（receptor）是辨識特定配體的蛋白質。專一性來自兩者在形狀、電荷與作用位置上的匹配。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 階段 | 發生的事 |
+|---|---|
+| 接收 reception | 配體與受體結合，使受體活化 |
+| 訊息轉導 transduction | 多個中繼分子傳遞、放大、整合或關閉訊號 |
+| 細胞反應 response | 改變酵素、離子通道、細胞骨架或基因表現 |
+
+</div>
+
+多步驟訊號路徑的重點不是單純加快訊號，而是讓少量細胞外訊號可被放大，也能在不同節點整合、分流或停止。
+
+<Figure src="/notes/bio-cell-signaling/gpcr-cycle.webp" alt="G 蛋白偶聯受體活化 G 蛋白與下游酵素的循環" caption="G 蛋白偶聯受體活化後，使 G 蛋白由 GDP 結合狀態轉成 GTP 結合狀態，接著調節下游效應蛋白。" source="Campbell 生物學・上冊，第 11 章" maxW="48rem" />
+
+### β 受體與 cAMP
+
+β 腎上腺素受體受腎上腺素或正腎上腺素刺激後，典型地經 Gs 活化腺苷酸環化酶（adenylyl cyclase，AC）。AC 使 ATP 形成 cAMP，cAMP 再活化蛋白激酶 A（protein kinase A，PKA）。PKA 可磷酸化目標蛋白的絲胺酸或蘇胺酸殘基。
+
+<Figure src="/notes/bio-cell-signaling/camp-cascade.webp" alt="G 蛋白偶聯受體經腺苷酸環化酶製造 cAMP，再活化 PKA 的訊號傳遞圖" caption="cAMP 是常見第二訊使。受體經 G 蛋白活化腺苷酸環化酶後，cAMP 可啟動蛋白激酶 A。" source="Campbell 生物學・上冊，第 11 章" maxW="36rem" />
+
+### α₁ 受體與 IP₃、DAG、Ca²⁺
+
+α₁ 腎上腺素受體典型地經 Gq 活化磷脂酶 C（phospholipase C，PLC）。PLC 切開膜上的 PIP₂，形成 IP₃ 與 DAG。IP₃ 促使內質網釋放 Ca²⁺，DAG 留在膜上並和 Ca²⁺ 一起促進蛋白激酶 C（protein kinase C，PKC）活性。
+
+<Figure src="/notes/bio-cell-signaling/ip3-dag-cascade.webp" alt="G 蛋白活化磷脂酶 C 後，PIP2 分成 IP3 與 DAG，並引起內質網釋放 Ca2+ 的訊號傳遞圖" caption="PLC 路徑的共同骨架。IP₃ 釋放內質網的 Ca²⁺，DAG 留在細胞膜。受體亞型與下游激酶需由題幹判讀。" source="Campbell 生物學・上冊，第 11 章" maxW="42rem" />
+
+<Supplement title="黑板上的兩條 GPCR 路徑怎麼分">
+
+| 受體 | G 蛋白與效應酶 | 第二訊使 | 下游激酶 |
+|---|---|---|---|
+| β 受體 | Gs → AC | cAMP | PKA |
+| α₁ 受體 | Gq → PLC | IP₃、DAG、Ca²⁺ | PKC |
+| α₂ 受體 | Gi 抑制 AC | cAMP 下降 | 依細胞而異 |
+
+兩條路徑最後都可藉蛋白質磷酸化改變細胞反應，但不要把 cAMP、PKA 路徑與 IP₃、DAG、Ca²⁺、PKC 路徑混在一起。
+
+</Supplement>
+
+毒蕈鹼型乙醯膽鹼受體中的 M₂ 受體可透過 G 蛋白 βγ 次單元增加心臟細胞 K⁺ 通道活性，使膜電位更負並降低節律細胞興奮性。
+
+視紫質（rhodopsin）是視網膜感光細胞中的 GPCR。光活化視紫質後，訊號依序經 transducin、磷酸二酯酶（phosphodiesterase，PDE）與 cGMP 濃度下降，使 cGMP 門控的 Na⁺、Ca²⁺ 陽離子通道關閉，感光細胞超極化。
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="下列何者不是一種鈣離子通道？"
+  options={[
+    "副甲狀腺細胞膜上的 calcium-sensing receptor，CaSR",
+    "肌肉細胞肌質網膜上的 ryanodine receptor，RyR",
+    "多數細胞內質網膜上的 inositol trisphosphate receptor，IP₃R",
+    "T 淋巴細胞膜上的 calcium release-activated channel，CRAC"
+  ]}
+  answer="(A) 副甲狀腺細胞膜上的 calcium-sensing receptor，CaSR"
+  steps={[
+    "題目問的是『不是通道』。",
+    "CaSR 是偵測細胞外 Ca²⁺ 的 GPCR，不是讓 Ca²⁺ 通過的孔道。",
+    "RyR、IP₃R 與 CRAC 都是與 Ca²⁺ 流動相關的通道，因此選 (A)。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="HER2 屬於受體酪胺酸激酶家族。當這類受體過度表現或活化時，細胞膜上最直接的分子反應為何？"
+  options={[
+    "受體形成二聚體並互相磷酸化細胞內酪胺酸殘基",
+    "受體打開離子通道讓 Ca²⁺ 大量流入",
+    "受體直接進入細胞核結合 DNA",
+    "受體活化 G 蛋白並產生 cAMP"
+  ]}
+  answer="(A) 受體形成二聚體並互相磷酸化細胞內酪胺酸殘基"
+  steps={[
+    "HER2 是受體酪胺酸激酶，不是 GPCR 或離子通道。",
+    "受體酪胺酸激酶活化時先二聚化。",
+    "兩個受體的細胞質側酪胺酸殘基互相磷酸化，形成下游訊號蛋白的結合位點，因此選 (A)。"
+  ]}
+/>
+
+## 名詞統整
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 中文 | English | 一句話定義 |
+|---|---|---|
+| 旁分泌 | paracrine signaling | 分泌訊號作用於附近細胞 |
+| 自分泌 | autocrine signaling | 細胞回應自己分泌的訊號 |
+| 第二訊使 | second messenger | 在細胞內傳遞或放大受體訊號的小分子或離子 |
+| 配體 | ligand | 能與受體結合的訊號分子 |
+| G 蛋白偶聯受體 | G protein-coupled receptor | 藉由活化 G 蛋白傳遞訊號的膜受體 |
+| 受體酪胺酸激酶 | receptor tyrosine kinase | 二聚化後磷酸化 Tyr 殘基的膜受體 |
+| cAMP | cyclic AMP | 可活化 PKA 的第二訊使 |
+| IP₃ | inositol trisphosphate | 促使內質網釋放 Ca²⁺ 的第二訊使 |
+| DAG | diacylglycerol | 留在膜上並協助活化 PKC 的第二訊使 |
+
+</div>
+
+## 考古題
+
+<RelatedQuestions tag="細胞訊號傳遞" limit={10} offset={0} client:load />

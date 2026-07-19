@@ -1,1 +1,5201 @@
-{"CMU-109-chemistry-14":[],"CMU-109-chemistry-38":[],"CMU-109-chemistry-40":["有機反應與機構"],"CMU-110-chemistry-8":["有機反應與機構"],"CMU-110-chemistry-19":["氣體"],"CMU-110-chemistry-24":["基礎-化學鍵"],"CMU-110-chemistry-36":["配位化合物"],"CMU-110-chemistry-38":["基礎-單位因次"],"CMU-110-chemistry-45":["化學綜合"],"CMU-111-chemistry-5":["反應速率"],"CMU-111-chemistry-13":["基礎-單位因次"],"CMU-112-chemistry-12":["有機反應與機構"],"CMU-112-chemistry-17":["氣體"],"CMU-112-chemistry-20":[],"CMU-112-chemistry-48":["基礎-化學鍵"],"CMU-112-chemistry-50":["配位化合物"],"CMU-113-chemistry-17":["酸鹼平衡"],"CMU-113-chemistry-22":["氧化還原"],"CMU-113-chemistry-28":["配位化合物"],"CMU-114-chemistry-36":["基礎-單位因次"],"CMU-115-chemistry-40":["基礎-週期表"],"CMU-115-chemistry-47":["基礎-化學鍵"],"CMU-115-chemistry-48":[],"ISU-104-chemistry-1":["水溶液離子平衡"],"ISU-104-chemistry-11":["基礎-化學鍵"],"ISU-104-chemistry-19":["基礎-熱力學"],"ISU-104-chemistry-40":["立體化學"],"ISU-105-chemistry-36":["相變與分子間作用力"],"ISU-105-chemistry-37":["光譜分析"],"ISU-105-chemistry-38":["基礎-單位因次"],"ISU-106-chemistry-2":["基礎-原子結構"],"ISU-106-chemistry-4":["化學平衡"],"ISU-106-chemistry-5":["氣體"],"ISU-106-chemistry-8":["基礎-化學鍵"],"ISU-106-chemistry-13":["配位化合物"],"ISU-106-chemistry-14":["反應速率"],"ISU-106-chemistry-20":["基礎-熱力學"],"ISU-107-chemistry-2":["基礎-單位因次"],"ISU-107-chemistry-12":["化學平衡"],"ISU-107-chemistry-14":["基礎-熱力學"],"ISU-107-chemistry-48":["氧化還原"],"ISU-108-chemistry-3":["有機反應與機構"],"ISU-108-chemistry-7":["光譜分析"],"ISU-108-chemistry-9":["基礎-化學鍵"],"ISU-108-chemistry-21":["化學綜合"],"ISU-108-chemistry-22":["水溶液離子平衡"],"ISU-108-chemistry-23":["水溶液離子平衡"],"ISU-108-chemistry-41":["有機命名與官能基"],"ISU-108-chemistry-50":["芳香族化學"],"ISU-109-chemistry-7":["光譜分析"],"ISU-109-chemistry-15":["有機反應與機構"],"ISU-109-chemistry-20":["化學綜合"],"ISU-109-chemistry-21":["有機反應與機構"],"ISU-109-chemistry-22":["有機反應與機構"],"ISU-109-chemistry-24":["化學綜合"],"ISU-109-chemistry-28":["基礎-熱力學"],"ISU-109-chemistry-37":["芳香族化學"],"ISU-109-chemistry-39":["立體化學"],"ISU-109-chemistry-41":["有機反應與機構"],"ISU-110-chemistry-9":["基礎-單位因次"],"ISU-110-chemistry-12":["有機反應與機構"],"ISU-110-chemistry-19":["有機反應與機構"],"ISU-110-chemistry-24":["有機反應與機構"],"ISU-111-chemistry-1-d1":["週期性"],"ISU-111-chemistry-2-d1":["週期性"],"ISU-111-chemistry-5":["有機命名與官能基"],"ISU-111-chemistry-34":["化學綜合"],"ISU-111-chemistry-36":["化學綜合"],"ISU-111-chemistry-37":["化學綜合"],"ISU-111-chemistry-38":["化學綜合"],"ISU-111-chemistry-39":["芳香族化學"],"ISU-112-chemistry-1":["基礎-化學鍵"],"ISU-112-chemistry-8":["配位化合物"],"ISU-112-chemistry-20":[],"ISU-112-chemistry-31":["配位化合物"],"ISU-112-chemistry-39":["基礎-週期表"],"ISU-113-chemistry-1-d2":["有機反應與機構"],"ISU-113-chemistry-10":["立體化學"],"ISU-113-chemistry-20":["基礎-化學鍵"],"ISU-113-chemistry-29":["有機命名與官能基"],"ISU-113-chemistry-41":["有機反應與機構"],"ISU-114-chemistry-23":["有機反應與機構"],"ISU-115-chemistry-32":["有機反應與機構"],"TCU-104-chemistry-2":["化學綜合"],"TCU-104-chemistry-18":["基礎-化學計量"],"TCU-104-chemistry-19":["水溶液離子平衡"],"TCU-104-chemistry-28":["有機命名與官能基"],"TCU-104-chemistry-38":["有機反應與機構"],"TCU-104-chemistry-43":["有機反應與機構"],"TCU-105-chemistry-1":["基礎-原子結構"],"TCU-105-chemistry-2":["週期趨勢"],"TCU-105-chemistry-4":["基礎-化學鍵"],"TCU-105-chemistry-8":["氣體"],"TCU-105-chemistry-12":["氣體"],"TCU-106-chemistry-6":[],"TCU-106-chemistry-8":["配位化合物"],"TCU-106-chemistry-11":[],"TCU-107-chemistry-9":["基礎-原子結構"],"TCU-107-chemistry-23":["氣體"],"TCU-107-chemistry-24":["酸鹼平衡"],"TCU-108-chemistry-22":["水溶液離子平衡"],"TCU-108-chemistry-32":["有機反應與機構"],"TCU-108-chemistry-33":["光譜分析"],"TCU-109-chemistry-8":["化學綜合"],"TCU-109-chemistry-14":["化學綜合"],"TCU-109-chemistry-15":["光譜分析"],"TCU-109-chemistry-26":["基礎-化學鍵"],"TCU-109-chemistry-46":["光譜分析"],"TCU-110-chemistry-16":[],"TCU-110-chemistry-17":["氣體"],"TCU-110-chemistry-18":["反應速率"],"TCU-110-chemistry-25":["氧化還原"],"TCU-110-chemistry-50":["氧化還原"],"TCU-111-chemistry-40":["基礎-熱力學"],"TCU-111-chemistry-42":["週期趨勢"],"TCU-111-chemistry-43":["週期趨勢"],"TCU-111-chemistry-47":["基礎-原子結構"],"TCU-113-chemistry-9":["基礎-單位因次"],"TCU-113-chemistry-40":["光譜分析"],"TCU-113-chemistry-42":["有機命名與官能基"],"TCU-114-chemistry-1":["基礎-單位因次"],"TCU-114-chemistry-11":["基礎-熱力學"],"TCU-114-chemistry-25":["有機反應與機構"],"TCU-114-chemistry-32":["基礎-單位因次"],"TCU-114-chemistry-45":["基礎-熱力學"],"TCU-115-chemistry-23":["週期趨勢"],"TCU-115-chemistry-41":["立體化學"],"CMU-104-biology-7":["生態學"],"CMU-104-biology-11":["生命分子與生物化學"],"CMU-105-biology-23":["生命分子與生物化學"],"CMU-108-biology-28":["植物構造與組織"],"CMU-108-biology-45":["植物生理"],"CMU-110-biology-2":["分子遺傳：DNA複製與染色體"],"CMU-110-biology-16":["植物生理"],"CMU-114-biology-37":["微生物"],"ISU-105-biology-44":["微生物"],"ISU-106-biology-1":["孟德爾遺傳"],"ISU-106-biology-9":["分子遺傳：DNA複製與染色體"],"ISU-106-biology-12":["循環與呼吸"],"ISU-106-biology-15":["循環與呼吸"],"ISU-106-biology-23":["細胞膜與物質運輸"],"ISU-106-biology-30":["生命分子與生物化學"],"ISU-107-biology-7":["基因表現：轉錄轉譯與調控"],"ISU-107-biology-11":["細胞呼吸與能量代謝"],"ISU-107-biology-13":["神經系統與行為"],"ISU-107-biology-20":["排泄與滲透調節"],"ISU-107-biology-23":["生命分子與生物化學"],"ISU-107-biology-40":["循環與呼吸"],"ISU-107-biology-48":["分子遺傳：DNA複製與染色體"],"ISU-107-biology-50":["基因表現：轉錄轉譯與調控"],"ISU-108-biology-25":["免疫系統"],"ISU-108-biology-32":["孟德爾遺傳"],"ISU-108-biology-50":["神經系統與行為"],"ISU-109-biology-4":["植物生理"],"ISU-109-biology-22":["排泄與滲透調節"],"ISU-109-biology-39":["神經系統與行為"],"ISU-110-biology-8":["生命分子與生物化學"],"ISU-110-biology-21":["演化與生命起源"],"ISU-110-biology-22":["演化與生命起源"],"ISU-111-biology-6":["消化與營養"],"ISU-111-biology-14":["生態學"],"ISU-111-biology-15":["神經系統與行為"],"ISU-111-biology-24":["生物技術與分子工具"],"ISU-111-biology-36":[],"ISU-111-biology-39":["神經系統與行為"],"ISU-111-biology-44":["細胞膜與物質運輸"],"ISU-112-biology-10":["演化與生命起源"],"ISU-112-biology-30":["分子遺傳：DNA複製與染色體"],"ISU-112-biology-40":["分子遺傳：DNA複製與染色體"],"ISU-113-biology-17":["免疫系統"],"ISU-113-biology-19":["神經系統與行為"],"ISU-113-biology-20":["細胞呼吸與能量代謝"],"ISU-113-biology-44":["細胞膜與物質運輸"],"ISU-114-biology-31":["神經系統與行為"],"ISU-114-biology-38":["神經系統與行為"],"ISU-114-biology-39":["神經系統與行為"],"ISU-115-biology-6":["細胞膜與物質運輸"],"ISU-115-biology-36":["植物構造與組織"],"TCU-104-biology-2":["細胞膜與物質運輸"],"TCU-104-biology-11":["分類與生物多樣性"],"TCU-104-biology-13":["分類與生物多樣性"],"TCU-104-biology-19":["神經系統與行為"],"TCU-104-biology-21":["生態學"],"TCU-104-biology-23":["細胞膜與物質運輸"],"TCU-105-biology-3":["細胞膜與物質運輸"],"TCU-105-biology-7":["植物生理"],"TCU-105-biology-12":["神經系統與行為"],"TCU-105-biology-37":["生命分子與生物化學"],"TCU-105-biology-43":["分子遺傳：DNA複製與染色體"],"TCU-107-biology-4":["生物學綜合"],"TCU-107-biology-4-d1":["植物生理"],"TCU-107-biology-5-d1":["植物生理"],"TCU-108-biology-2":["孟德爾遺傳"],"TCU-108-biology-8":["神經系統與行為"],"TCU-109-biology-14":["微生物"],"TCU-109-biology-24":["分類與生物多樣性"],"TCU-111-biology-3":["植物生理"],"TCU-111-biology-4":["分類與生物多樣性"],"TCU-111-biology-41":["分類與生物多樣性"],"TCU-113-biology-1":["植物生理"],"TCU-114-biology-6":["植物生理"],"TCU-114-biology-8":["植物生理"],"TCU-114-biology-9":["分子遺傳：DNA複製與染色體"],"TCU-114-biology-11":["分子遺傳：DNA複製與染色體"],"TCU-114-biology-12":["生物技術與分子工具"],"TCU-114-biology-13":["演化與生命起源"],"TCU-114-biology-16":["生態學"],"TCU-114-biology-18":["演化與生命起源"],"TCU-114-biology-25":["細胞-骨架與連結"],"TCU-114-biology-35":["細胞呼吸與能量代謝"],"TCU-115-biology-1-d1":["生物學綜合"],"TCU-115-biology-3-d1":["生物學綜合"],"TCU-115-biology-5-d2":["植物生理"],"TCU-115-biology-12":["神經系統與行為"],"TCU-115-biology-20":["神經系統與行為"],"CMU-104-biology-1":["孟德爾遺傳","演化與生命起源"],"CMU-104-biology-5":["排泄與滲透調節"],"CMU-104-biology-6":["排泄與滲透調節"],"CMU-104-biology-13":["細胞呼吸與能量代謝"],"CMU-104-biology-14":["孟德爾遺傳"],"CMU-104-biology-15":["孟德爾遺傳"],"CMU-104-biology-16":["孟德爾遺傳"],"CMU-104-biology-22":["微生物"],"CMU-104-biology-26":["生物學綜合"],"CMU-104-biology-29":["消化與營養"],"CMU-104-biology-37":["消化與營養","植物生理"],"CMU-104-biology-38":["植物生理"],"CMU-104-biology-39":["光合作用與C4/CAM"],"CMU-104-biology-41":["植物生理"],"CMU-104-biology-48":["細胞呼吸與能量代謝"],"CMU-104-biology-49":["分子遺傳：DNA複製與染色體","微生物"],"CMU-104-biology-50":["內分泌系統","細胞膜與物質運輸"],"CMU-105-biology-2":["細胞膜與物質運輸"],"CMU-105-biology-5":["光合作用與C4/CAM"],"CMU-105-biology-7":["生物技術與分子工具"],"CMU-105-biology-8":["分子遺傳：DNA複製與染色體"],"CMU-105-biology-10":["生物學綜合"],"CMU-105-biology-13":["分子遺傳：DNA複製與染色體"],"CMU-105-biology-16":["細胞呼吸與能量代謝"],"CMU-105-biology-18":[],"CMU-105-biology-21":["微生物"],"CMU-105-biology-27":["免疫系統"],"CMU-105-biology-28":["微生物"],"CMU-105-biology-29":["微生物"],"CMU-105-biology-30":["內分泌系統","消化與營養"],"CMU-105-biology-31":["消化與營養"],"CMU-105-biology-35":["內分泌系統"],"CMU-105-biology-37":["神經系統與行為"],"CMU-105-biology-39":["內分泌系統"],"CMU-105-biology-41":["生物技術與分子工具"],"CMU-105-biology-44":["演化與生命起源"],"CMU-105-biology-46":["神經系統與行為","免疫系統"],"CMU-105-biology-49":["內分泌系統"],"CMU-106-biology-2":["生態學"],"CMU-106-biology-8":["生命分子與生物化學","分子遺傳：DNA複製與染色體"],"CMU-106-biology-12":["演化與生命起源"],"CMU-106-biology-13":["植物生理"],"CMU-106-biology-17":["孟德爾遺傳"],"CMU-106-biology-20":["微生物"],"CMU-106-biology-30":["內分泌系統"],"CMU-106-biology-31":["細胞呼吸與能量代謝"],"CMU-106-biology-35":["基因表現：轉錄轉譯與調控"],"CMU-106-biology-38":["生命分子與生物化學"],"CMU-106-biology-39":["循環與呼吸"],"CMU-106-biology-48":["循環與呼吸"],"CMU-106-biology-49":["免疫系統","微生物"],"CMU-106-biology-50":["動物生殖與發育","內分泌系統"],"CMU-107-biology-1":["植物生理"],"CMU-107-biology-3":["植物生理"],"CMU-107-biology-10":["內分泌系統","動物生殖與發育"],"CMU-107-biology-11":["消化與營養"],"CMU-107-biology-15":["循環與呼吸"],"CMU-107-biology-25":["生態學"],"CMU-107-biology-30":["微生物"],"CMU-107-biology-32":["植物生理","免疫系統"],"CMU-107-biology-38":["神經系統與行為","植物生理"],"CMU-107-biology-39":["分子遺傳：DNA複製與染色體"],"CMU-107-biology-41":["基因表現：轉錄轉譯與調控"],"CMU-107-biology-42":["神經系統與行為","生態學"],"CMU-107-biology-43":["生物技術與分子工具"],"CMU-107-biology-45":["細胞呼吸與能量代謝","微生物"],"CMU-107-biology-48":["細胞-細胞膜"],"CMU-108-biology-7":["演化與生命起源"],"CMU-108-biology-8":["演化與生命起源"],"CMU-108-biology-13":["演化與生命起源"],"CMU-108-biology-14":["植物生理"],"CMU-108-biology-16":["分子遺傳：DNA複製與染色體","孟德爾遺傳"],"CMU-108-biology-18":["演化與生命起源"],"CMU-108-biology-19":["免疫系統"],"CMU-108-biology-20":["生態學"],"CMU-108-biology-22":[],"CMU-108-biology-23":["內分泌系統"],"CMU-108-biology-27":["孟德爾遺傳","演化與生命起源"],"CMU-108-biology-33":["微生物","酵素"],"CMU-108-biology-36":["植物生理"],"CMU-108-biology-38":["生物技術與分子工具","生態學"],"CMU-108-biology-43":["植物生理"],"CMU-108-biology-44":["植物生理","細胞膜與物質運輸"],"CMU-108-biology-46":["植物生理","細胞膜與物質運輸"],"CMU-108-biology-47":["細胞膜與物質運輸"],"CMU-108-biology-49":["排泄與滲透調節","細胞呼吸與能量代謝"],"CMU-109-biology-3":["動物生殖與發育"],"CMU-109-biology-6":["植物構造與組織"],"CMU-109-biology-13":["分類與生物多樣性"],"CMU-109-biology-15":["植物生理","微生物"],"CMU-109-biology-17":["細胞呼吸與能量代謝"],"CMU-109-biology-23":["生態學"],"CMU-109-biology-30":["植物生理"],"CMU-109-biology-33":["細胞分裂"],"CMU-109-biology-35":["細胞膜與物質運輸"],"CMU-109-biology-36":["細胞分裂"],"CMU-109-biology-37":["生物技術與分子工具"],"CMU-109-biology-39":["骨骼與肌肉運動","神經系統與行為"],"CMU-109-biology-42":["循環與呼吸","分類與生物多樣性"],"CMU-109-biology-45":["植物構造與組織"],"CMU-109-biology-47":["生物學綜合"],"CMU-109-biology-48":["孟德爾遺傳","演化與生命起源"],"CMU-110-biology-3":["生物學綜合"],"CMU-110-biology-8":["植物生理"],"CMU-110-biology-9":["演化與生命起源"],"CMU-110-biology-14":["免疫系統","循環與呼吸"],"CMU-110-biology-15":["植物生理"],"CMU-110-biology-17":["植物生理"],"CMU-110-biology-19":["內分泌系統"],"CMU-110-biology-29":["細胞呼吸與能量代謝","生命分子與生物化學"],"CMU-110-biology-31":["細胞膜與物質運輸"],"CMU-110-biology-35":["分子遺傳：DNA複製與染色體","酵素"],"CMU-110-biology-36":["基因表現：轉錄轉譯與調控"],"CMU-110-biology-37":["消化與營養"],"CMU-110-biology-41":["生物技術與分子工具"],"CMU-110-biology-42":["生態學"],"CMU-110-biology-47":["內分泌系統","動物生殖與發育"],"CMU-110-biology-49":["神經系統與行為"],"CMU-111-biology-1":["微生物"],"CMU-111-biology-4":["免疫系統"],"CMU-111-biology-5":["免疫系統"],"CMU-111-biology-7":["內分泌系統"],"CMU-111-biology-13":["細胞膜與物質運輸"],"CMU-111-biology-18":["免疫系統"],"CMU-111-biology-21":["微生物"],"CMU-111-biology-24":["微生物"],"CMU-111-biology-25":["微生物"],"CMU-111-biology-26":["微生物","神經系統與行為"],"CMU-111-biology-27":["動物生殖與發育"],"CMU-111-biology-28":["演化與生命起源","分類與生物多樣性"],"CMU-111-biology-30":["細胞-細胞核與胞器"],"CMU-111-biology-31":["植物生理","細胞分裂"],"CMU-111-biology-33":["植物構造與組織"],"CMU-111-biology-37":["細胞-細胞核與胞器"],"CMU-111-biology-43":["基因表現：轉錄轉譯與調控"],"CMU-111-biology-44":["基因表現：轉錄轉譯與調控","演化與生命起源"],"CMU-111-biology-47":["孟德爾遺傳","演化與生命起源"],"CMU-111-biology-48":["孟德爾遺傳","演化與生命起源"],"CMU-111-biology-49":["演化與生命起源"],"CMU-111-biology-50":["演化與生命起源","植物構造與組織"],"CMU-112-biology-1":["生態學"],"CMU-112-biology-9":["細胞膜與物質運輸"],"CMU-112-biology-14":["動物生殖與發育","分子遺傳：DNA複製與染色體"],"CMU-112-biology-21":["分子遺傳：DNA複製與染色體"],"CMU-112-biology-23":["植物生理"],"CMU-112-biology-26":["微生物","酵素"],"CMU-112-biology-27":["微生物"],"CMU-112-biology-28":["生態學"],"CMU-112-biology-29":["孟德爾遺傳"],"CMU-112-biology-36":["演化與生命起源","分子遺傳：DNA複製與染色體"],"CMU-112-biology-44":["免疫系統"],"CMU-112-biology-45":["生態學"],"CMU-112-biology-50":["演化與生命起源"],"CMU-113-biology-1":["演化與生命起源"],"CMU-113-biology-4":["演化與生命起源"],"CMU-113-biology-11":["神經系統與行為","內分泌系統"],"CMU-113-biology-13":["基因表現：轉錄轉譯與調控","微生物"],"CMU-113-biology-14":["細胞-細胞核與胞器"],"CMU-113-biology-15":["消化與營養","循環與呼吸"],"CMU-113-biology-20":["免疫系統"],"CMU-113-biology-22":[],"CMU-113-biology-23":["免疫系統"],"CMU-113-biology-26":["孟德爾遺傳","細胞分裂"],"CMU-113-biology-27":["孟德爾遺傳"],"CMU-113-biology-31":["基因表現：轉錄轉譯與調控"],"CMU-113-biology-32":["生物技術與分子工具","基因表現：轉錄轉譯與調控"],"CMU-113-biology-34":["生命分子與生物化學"],"CMU-113-biology-35":["生命分子與生物化學"],"CMU-113-biology-36":["微生物","分子遺傳：DNA複製與染色體"],"CMU-113-biology-38":["免疫系統","微生物"],"CMU-113-biology-39":["基因表現：轉錄轉譯與調控","生物技術與分子工具"],"CMU-113-biology-40":["內分泌系統","生命分子與生物化學"],"CMU-113-biology-43":["免疫系統"],"CMU-113-biology-44":["生物學綜合"],"CMU-113-biology-48":["生命分子與生物化學","細胞呼吸與能量代謝"],"CMU-114-biology-12":["基因表現：轉錄轉譯與調控"],"CMU-114-biology-13":["孟德爾遺傳","演化與生命起源"],"CMU-114-biology-15":["細胞-細胞膜"],"CMU-114-biology-25":["生態學"],"CMU-114-biology-28":["細胞呼吸與能量代謝","微生物"],"CMU-114-biology-30":["生態學"],"CMU-114-biology-35":["微生物"],"CMU-114-biology-38":["生物技術與分子工具"],"CMU-114-biology-40":["微生物"],"CMU-114-biology-41":["微生物"],"CMU-114-biology-42":["生物技術與分子工具"],"CMU-114-biology-50":["內分泌系統","神經系統與行為"],"CMU-115-biology-3":["光合作用與C4/CAM"],"CMU-115-biology-8":["神經系統與行為","骨骼與肌肉運動"],"CMU-115-biology-15":["細胞-細胞膜"],"CMU-115-biology-28":["微生物","生命分子與生物化學"],"CMU-115-biology-29":["酵素"],"CMU-115-biology-32":["基因表現：轉錄轉譯與調控"],"CMU-115-biology-33":["細胞-細胞核與胞器"],"CMU-115-biology-34":["免疫系統"],"CMU-115-biology-36":["細胞膜與物質運輸","酵素"],"CMU-115-biology-39":["生命分子與生物化學","酵素"],"CMU-115-biology-42":["生態學","微生物"],"CMU-115-biology-48":["細胞呼吸與能量代謝"],"CMU-115-biology-49":["生態學"],"CMU-104-chemistry-2":["反應速率"],"CMU-104-chemistry-7":[],"CMU-104-chemistry-16":["基礎-單位因次"],"CMU-104-chemistry-24":["基礎-熱力學"],"CMU-104-chemistry-30":["有機反應與機構"],"CMU-104-chemistry-32":["有機反應與機構"],"CMU-104-chemistry-36":["有機反應與機構"],"CMU-104-chemistry-48":[],"CMU-105-chemistry-3":[],"CMU-105-chemistry-13":["酸鹼平衡"],"CMU-105-chemistry-34":["基礎-熱力學"],"CMU-105-chemistry-35":["反應速率"],"CMU-105-chemistry-37":["基礎-化學鍵"],"CMU-105-chemistry-39":["氣體"],"CMU-105-chemistry-40":["氧化還原","酸鹼平衡"],"CMU-105-chemistry-42":["酸鹼平衡","芳香族化學"],"CMU-105-chemistry-47":["光譜分析","有機命名與官能基"],"CMU-105-chemistry-48":[],"CMU-105-chemistry-49":[],"CMU-105-chemistry-50":[],"CMU-106-chemistry-3":[],"CMU-106-chemistry-13":["有機反應與機構"],"CMU-106-chemistry-18":["基礎-化學鍵"],"CMU-106-chemistry-19":["基礎-單位因次"],"CMU-106-chemistry-20":["基礎-單位因次"],"CMU-106-chemistry-28":["化學綜合"],"CMU-106-chemistry-31":["基礎-化學鍵"],"CMU-106-chemistry-42":[],"CMU-107-chemistry-2":["基礎-化學計量"],"CMU-107-chemistry-17":["有機反應與機構"],"CMU-107-chemistry-25":[],"CMU-108-chemistry-10":["配位化合物"],"CMU-108-chemistry-15":[],"CMU-108-chemistry-23":["配位化合物","立體化學"],"CMU-108-chemistry-25":["酸鹼平衡"],"CMU-108-chemistry-43":[],"CMU-109-chemistry-1":["基礎-化學鍵"],"CMU-109-chemistry-9":["基礎-化學計量"],"CMU-109-chemistry-42":["酸鹼平衡"],"CMU-110-chemistry-4":["有機反應與機構"],"CMU-110-chemistry-6":[],"CMU-110-chemistry-50":["有機反應與機構"],"CMU-111-chemistry-1":["基礎-化學計量"],"CMU-111-chemistry-7":["基礎-化學計量"],"CMU-111-chemistry-21":[],"CMU-112-chemistry-13":[],"CMU-112-chemistry-23":["基礎-單位因次"],"CMU-112-chemistry-26":["芳香族化學","有機反應與機構"],"CMU-112-chemistry-31":["酸鹼平衡"],"CMU-114-chemistry-10":["配位化合物"],"CMU-114-chemistry-39":["氣體"],"CMU-115-chemistry-13":["有機反應與機構"],"CMU-115-chemistry-14":["有機反應與機構","立體化學"],"CMU-115-chemistry-31":["酸鹼平衡"],"CMU-115-chemistry-34":["基礎-化學計量"],"CMU-104-chinese-6":["閱讀理解綜合"],"CMU-104-chinese-9":["古典散文文言閱讀"],"CMU-104-chinese-14":["文學史常識"],"CMU-104-chinese-20":["字詞義訓詁"],"CMU-104-chinese-22":["文學史常識"],"CMU-104-chinese-25":["文化教材思想"],"CMU-104-chinese-32":["文學史常識"],"CMU-104-chinese-44":["文學史常識"],"CMU-104-chinese-50":["修辭格"],"CMU-105-chinese-14":["文學史常識"],"CMU-105-chinese-24":["閱讀理解綜合"],"CMU-105-chinese-25":["字詞義訓詁"],"CMU-105-chinese-26":["閱讀理解綜合"],"CMU-105-chinese-43":["修辭格"],"CMU-106-chinese-9":["成語熟語"],"CMU-106-chinese-12":["詞性語法句構"],"CMU-106-chinese-13":["文學史常識"],"CMU-106-chinese-21":["文學史常識"],"CMU-106-chinese-23":["文學史常識"],"CMU-106-chinese-27":["字詞義訓詁"],"CMU-106-chinese-45":["修辭格"],"CMU-107-chinese-3":["古典散文文言閱讀"],"CMU-107-chinese-18":["詞性語法句構"],"CMU-107-chinese-19":["成語熟語"],"CMU-107-chinese-20":["詞性語法句構"],"CMU-107-chinese-24":["閱讀理解綜合"],"CMU-107-chinese-32":["詞性語法句構"],"CMU-107-chinese-35":["字詞義訓詁"],"CMU-107-chinese-37":["文化教材思想"],"CMU-107-chinese-44":["古典韻文"],"CMU-107-chinese-48":["古典韻文"],"CMU-108-chinese-4":["古典韻文"],"CMU-108-chinese-12":["閱讀理解綜合"],"CMU-108-chinese-13":["字音字形"],"CMU-108-chinese-25":["詞性語法句構","古典散文文言閱讀"],"CMU-108-chinese-29":["字詞義訓詁"],"CMU-108-chinese-32":["文化教材思想"],"CMU-108-chinese-35":["成語熟語"],"CMU-108-chinese-40":["閱讀理解綜合"],"CMU-108-chinese-47":["閱讀理解綜合"],"CMU-108-chinese-49":["字詞義訓詁"],"CMU-109-chinese-12":["古典韻文"],"CMU-109-chinese-25":["古典韻文"],"CMU-109-chinese-31":["古典散文文言閱讀","文化教材思想"],"CMU-109-chinese-34":["應用文書信"],"CMU-109-chinese-40":["閱讀理解綜合"],"CMU-109-chinese-41":["閱讀理解綜合"],"CMU-109-chinese-42":["閱讀理解綜合"],"CMU-109-chinese-45":["成語熟語"],"CMU-110-chinese-6":["閱讀理解綜合"],"CMU-110-chinese-18":["閱讀理解綜合"],"CMU-110-chinese-21":["閱讀理解綜合"],"CMU-110-chinese-24":["文學史常識"],"CMU-110-chinese-31":["閱讀理解綜合"],"CMU-110-chinese-45":["閱讀理解綜合"],"CMU-110-chinese-48":["閱讀理解綜合"],"CMU-111-chinese-9":["國學常識"],"CMU-111-chinese-13":["應用文書信"],"CMU-111-chinese-17":["閱讀理解綜合"],"CMU-111-chinese-18":["閱讀理解綜合"],"CMU-111-chinese-19":["閱讀理解綜合"],"CMU-111-chinese-20":["閱讀理解綜合"],"CMU-111-chinese-37":["閱讀理解綜合"],"CMU-111-chinese-43":["文化教材思想"],"CMU-112-chinese-8":["文化教材思想"],"CMU-112-chinese-11":["國學常識"],"CMU-112-chinese-17":["閱讀理解綜合"],"CMU-112-chinese-18":["閱讀理解綜合"],"CMU-112-chinese-24":["閱讀理解綜合"],"CMU-112-chinese-26":["閱讀理解綜合"],"CMU-112-chinese-30":["國學常識"],"CMU-112-chinese-32":["字詞義訓詁"],"CMU-112-chinese-33":["詞性語法句構"],"CMU-112-chinese-40":["閱讀理解綜合"],"CMU-113-chinese-12":["修辭格","古典韻文"],"CMU-113-chinese-16":["閱讀理解綜合"],"CMU-113-chinese-23":["閱讀理解綜合"],"CMU-113-chinese-28":["成語熟語"],"CMU-113-chinese-32":["閱讀理解綜合"],"CMU-113-chinese-33":["閱讀理解綜合"],"CMU-113-chinese-39":["詞性語法句構"],"CMU-113-chinese-47":["古典韻文"],"CMU-114-chinese-3":["詞性語法句構"],"CMU-114-chinese-9":["古典散文文言閱讀"],"CMU-114-chinese-13":["國學常識"],"CMU-114-chinese-19":["閱讀理解綜合"],"CMU-114-chinese-21":["閱讀理解綜合"],"CMU-114-chinese-22":["閱讀理解綜合"],"CMU-114-chinese-23":["閱讀理解綜合"],"CMU-114-chinese-28":["古典韻文"],"CMU-114-chinese-33":["古典韻文","修辭格"],"CMU-114-chinese-37":["字詞義訓詁"],"CMU-114-chinese-48":["國學常識"],"CMU-114-chinese-49":["成語熟語"],"CMU-115-chinese-6":["成語熟語"],"CMU-115-chinese-13":["字詞義訓詁"],"CMU-115-chinese-15":["閱讀理解綜合"],"CMU-115-chinese-16":["閱讀理解綜合"],"CMU-115-chinese-17":["古典韻文"],"CMU-115-chinese-18":["古典韻文"],"CMU-115-chinese-22":["文學史常識"],"CMU-115-chinese-34":["字音字形","字詞義訓詁"],"CMU-115-chinese-44":["古典韻文","修辭格"],"CMU-104-english-7":["同義反義與字根字首"],"CMU-104-english-8":["同義反義與字根字首"],"CMU-104-english-9":["同義反義與字根字首"],"CMU-104-english-10":["同義反義與字根字首"],"CMU-104-english-11":["同義反義與字根字首"],"CMU-104-english-12":["同義反義與字根字首"],"CMU-104-english-13":["同義反義與字根字首"],"CMU-104-english-14":["同義反義與字根字首"],"CMU-104-english-15":["同義反義與字根字首"],"CMU-105-english-8":["同義反義與字根字首"],"CMU-105-english-9":["同義反義與字根字首"],"CMU-105-english-10":["同義反義與字根字首"],"CMU-105-english-11":["同義反義與字根字首"],"CMU-105-english-12":["同義反義與字根字首"],"CMU-105-english-13":["同義反義與字根字首"],"CMU-105-english-14":["同義反義與字根字首"],"CMU-105-english-15":["同義反義與字根字首"],"CMU-106-english-8":["同義反義與字根字首"],"CMU-106-english-9":["同義反義與字根字首"],"CMU-106-english-10":["同義反義與字根字首"],"CMU-106-english-11":["同義反義與字根字首"],"CMU-106-english-12":["同義反義與字根字首"],"CMU-106-english-13":["同義反義與字根字首"],"CMU-106-english-14":["同義反義與字根字首"],"CMU-106-english-15":["同義反義與字根字首"],"CMU-107-english-9":["同義反義與字根字首"],"CMU-107-english-10":["同義反義與字根字首"],"CMU-107-english-11":["同義反義與字根字首"],"CMU-107-english-12":["同義反義與字根字首"],"CMU-107-english-13":["同義反義與字根字首"],"CMU-107-english-14":["同義反義與字根字首"],"CMU-107-english-15":["同義反義與字根字首"],"CMU-108-english-7":["同義反義與字根字首"],"CMU-108-english-8":["同義反義與字根字首"],"CMU-108-english-9":["同義反義與字根字首"],"CMU-108-english-10":["同義反義與字根字首"],"CMU-109-english-38":["同義反義與字根字首"],"CMU-109-english-43":["同義反義與字根字首"],"CMU-109-english-48":["同義反義與字根字首"],"CMU-111-english-47":["同義反義與字根字首"],"CMU-113-english-48":["同義反義與字根字首"],"CMU-105-english-44":["閱讀測驗"],"CMU-105-english-45":["閱讀測驗"],"CMU-105-english-16":["句構與語意連貫"],"CMU-105-english-17":["句構與語意連貫"],"CMU-105-english-19":["句構與語意連貫"],"CMU-106-english-16":["文法：子句與關係代名詞"],"CMU-106-english-17":["句構與語意連貫"],"CMU-106-english-18":["文法：時態與語態"],"CMU-106-english-19":["句構與語意連貫"],"CMU-106-english-20":["文法：子句與關係代名詞"],"CMU-107-english-16":["句構與語意連貫"],"CMU-107-english-17":["文法：時態與語態"],"CMU-107-english-18":["文法：時態與語態"],"CMU-107-english-19":["句構與語意連貫"],"CMU-107-english-20":["文法：時態與語態"],"CMU-108-english-12":["句構與語意連貫"],"CMU-108-english-13":["句構與語意連貫"],"CMU-108-english-15":["文法：時態與語態"],"CMU-108-english-16":["句構與語意連貫"],"CMU-108-english-17":["句構與語意連貫"],"CMU-108-english-18":["句構與語意連貫"],"CMU-108-english-19":["句構與語意連貫"],"CMU-108-english-20":["句構與語意連貫"],"CMU-109-english-11":["文法：子句與關係代名詞"],"CMU-109-english-12":["句構與語意連貫"],"CMU-109-english-14":["句構與語意連貫"],"CMU-109-english-15":["文法：時態與語態"],"CMU-109-english-17":["文法：時態與語態"],"CMU-109-english-18":["句構與語意連貫"],"CMU-109-english-19":["文法：子句與關係代名詞"],"CMU-109-english-20":["文法：子句與關係代名詞"],"CMU-110-english-11":["文法：介系詞與片語"],"CMU-110-english-12":["字彙"],"CMU-110-english-13":["片語動詞與慣用語"],"CMU-110-english-16":["文法：子句與關係代名詞"],"CMU-110-english-17":["句構與語意連貫"],"CMU-110-english-19":["文法：時態與語態"],"CMU-110-english-20":["字彙"],"CMU-111-english-7":["字彙"],"CMU-111-english-13":["片語動詞與慣用語"],"CMU-111-english-16":["句構與語意連貫"],"CMU-111-english-19":["句構與語意連貫"],"CMU-111-english-20":["文法：時態與語態"],"CMU-112-english-11":["文法：時態與語態"],"CMU-112-english-12":["句構與語意連貫"],"CMU-112-english-13":["文法：時態與語態"],"CMU-112-english-14":["文法：子句與關係代名詞"],"CMU-112-english-15":["句構與語意連貫"],"CMU-112-english-16":["片語動詞與慣用語"],"CMU-112-english-17":["片語動詞與慣用語"],"CMU-112-english-18":["字彙"],"CMU-112-english-19":["片語動詞與慣用語"],"CMU-112-english-20":["片語動詞與慣用語"],"CMU-113-english-14":["句構與語意連貫"],"CMU-113-english-15":["句構與語意連貫"],"CMU-113-english-16":["字彙"],"CMU-113-english-17":["字彙"],"CMU-114-english-9":["文法：子句與關係代名詞"],"CMU-114-english-10":["文法：子句與關係代名詞"],"CMU-114-english-11":["文法：時態與語態"],"CMU-114-english-13":["文法：時態與語態"],"CMU-114-english-14":["句構與語意連貫"],"CMU-114-english-15":["文法：子句與關係代名詞"],"CMU-104-english-24":["克漏字","文法：時態與語態"],"CMU-104-english-25":["克漏字","文法：時態與語態"],"CMU-105-english-26":["克漏字","文法：時態與語態"],"CMU-105-english-30":["克漏字","文法：時態與語態"],"CMU-107-english-28":["克漏字","字彙"],"CMU-110-english-29":["克漏字","文法：時態與語態"],"CMU-112-english-27":["克漏字","文法：子句與關係代名詞"],"CMU-112-english-31":["克漏字","字彙"],"CMU-113-english-22":["克漏字","文法：時態與語態"],"CMU-113-english-30":["克漏字","字彙"],"ISU-104-biology-5":["基因表現：轉錄轉譯與調控"],"ISU-104-biology-49":["循環與呼吸","消化與營養"],"ISU-105-biology-5":["細胞呼吸與能量代謝","骨骼與肌肉運動"],"ISU-105-biology-39":["生物技術與分子工具"],"ISU-105-biology-40":["基因表現：轉錄轉譯與調控"],"ISU-105-biology-48":["動物生殖與發育"],"ISU-105-biology-49":["基因表現：轉錄轉譯與調控","動物生殖與發育"],"ISU-106-biology-13":["神經系統與行為"],"ISU-106-biology-27":["細胞分裂"],"ISU-106-biology-29":["微生物","生物技術與分子工具"],"ISU-107-biology-3":["循環與呼吸"],"ISU-111-biology-7":["孟德爾遺傳"],"ISU-111-biology-35":["分類與生物多樣性"],"ISU-112-biology-34":["消化與營養"],"ISU-114-biology-15":["神經系統與行為","微生物"],"ISU-114-biology-27":["免疫系統","生物技術與分子工具"],"ISU-115-biology-45":["細胞呼吸與能量代謝"],"ISU-104-chemistry-2":["基礎-化學計量"],"ISU-104-chemistry-3":["反應速率"],"ISU-104-chemistry-16":["基礎-化學計量"],"ISU-104-chemistry-22":["電化學"],"ISU-104-chemistry-34":["光譜分析"],"ISU-104-chemistry-44":["立體化學"],"ISU-104-chemistry-50":["有機反應與機構"],"ISU-105-chemistry-3":["有機命名與官能基"],"ISU-105-chemistry-11":["有機命名與官能基","芳香族化學"],"ISU-105-chemistry-41":[],"ISU-106-chemistry-9":["基礎-化學鍵"],"ISU-106-chemistry-10":["基礎-化學計量"],"ISU-106-chemistry-26":["有機命名與官能基"],"ISU-106-chemistry-29":["有機反應與機構"],"ISU-106-chemistry-34":["有機命名與官能基"],"ISU-106-chemistry-41":["芳香族化學","有機反應與機構"],"ISU-107-chemistry-7":[],"ISU-107-chemistry-15":["有機反應與機構"],"ISU-107-chemistry-25":["有機命名與官能基"],"ISU-107-chemistry-41":["氧化還原"],"ISU-107-chemistry-50":["有機反應與機構","反應速率"],"ISU-108-chemistry-15":["基礎-化學鍵"],"ISU-108-chemistry-47":["有機反應與機構"],"ISU-109-chemistry-12":["光譜分析"],"ISU-110-chemistry-2":["有機命名與官能基"],"ISU-110-chemistry-3":["氧化還原"],"ISU-110-chemistry-4":["酸鹼平衡"],"ISU-110-chemistry-18":["相變與分子間作用力"],"ISU-110-chemistry-29":["化學綜合"],"ISU-110-chemistry-48":["有機命名與官能基"],"ISU-111-chemistry-6":["有機反應與機構"],"ISU-111-chemistry-20":["基礎-熱力學"],"ISU-111-chemistry-42":["有機反應與機構"],"ISU-111-chemistry-50":["有機反應與機構","反應速率"],"ISU-112-chemistry-13":["相變與分子間作用力"],"ISU-112-chemistry-23":["化學綜合"],"ISU-112-chemistry-33":["氧化還原"],"ISU-113-chemistry-1-d1":["有機反應與機構"],"ISU-113-chemistry-2":["基礎-熱力學"],"ISU-113-chemistry-8":["反應速率"],"ISU-113-chemistry-28":["氣體"],"ISU-113-chemistry-30":["有機反應與機構"],"ISU-113-chemistry-49":["水溶液離子平衡"],"ISU-114-chemistry-7":["有機命名與官能基"],"ISU-114-chemistry-30":["立體化學"],"ISU-115-chemistry-46":["立體化學"],"ISU-104-chinese-4":["字詞義訓詁"],"ISU-104-chinese-5":["古典散文文言閱讀","文化教材思想"],"ISU-104-chinese-6":["古典韻文"],"ISU-104-chinese-16":["古典散文文言閱讀"],"ISU-105-chinese-2":["古典韻文"],"ISU-105-chinese-6":["字詞義訓詁"],"ISU-105-chinese-7":["文化教材思想","國學常識"],"ISU-105-chinese-8":["修辭格"],"ISU-105-chinese-9":["文化教材思想"],"ISU-105-chinese-18":["詞性語法句構"],"ISU-105-chinese-25":["字詞義訓詁"],"ISU-105-chinese-28":["古典散文文言閱讀"],"ISU-106-chinese-8":["古典散文文言閱讀"],"ISU-106-chinese-24":["古典韻文"],"ISU-106-chinese-35":["古典散文文言閱讀"],"ISU-107-chinese-9":["古典散文文言閱讀"],"ISU-107-chinese-10":["古典散文文言閱讀"],"ISU-107-chinese-16":["文學史常識","國學常識"],"ISU-107-chinese-21":["文學史常識"],"ISU-107-chinese-28":["古典散文文言閱讀"],"ISU-107-chinese-30":["文學史常識"],"ISU-107-chinese-35":["閱讀理解綜合"],"ISU-108-chinese-6":["閱讀理解綜合"],"ISU-108-chinese-9":["古典散文文言閱讀","文化教材思想"],"ISU-108-chinese-14":["詞性語法句構"],"ISU-108-chinese-15":["詞性語法句構"],"ISU-108-chinese-23":["古典韻文"],"ISU-108-chinese-35":["閱讀理解綜合"],"ISU-109-chinese-20":["古典散文文言閱讀","文化教材思想"],"ISU-109-chinese-31":["古典散文文言閱讀","國學常識"],"ISU-109-chinese-32":["古典散文文言閱讀","國學常識"],"ISU-109-chinese-33":["古典散文文言閱讀"],"ISU-109-chinese-34":["古典散文文言閱讀"],"ISU-109-chinese-35":["古典散文文言閱讀","國學常識"],"ISU-110-chinese-9":["古典散文文言閱讀"],"ISU-110-chinese-19":["字詞義訓詁"],"ISU-110-chinese-21":["成語熟語"],"ISU-111-chinese-9":["國學常識"],"ISU-111-chinese-16":["詞性語法句構"],"ISU-111-chinese-18":["詞性語法句構"],"ISU-111-chinese-20":["閱讀理解綜合"],"ISU-111-chinese-24":["詞性語法句構"],"ISU-111-chinese-37":["古典韻文"],"ISU-111-chinese-42":["古典韻文","文化教材思想"],"ISU-111-chinese-47":["字詞義訓詁"],"ISU-112-chinese-1":["字詞義訓詁"],"ISU-112-chinese-3":["閱讀理解綜合"],"ISU-112-chinese-8":["字音字形"],"ISU-112-chinese-16":["國學常識"],"ISU-112-chinese-18":["詞性語法句構"],"ISU-112-chinese-20":["閱讀理解綜合"],"ISU-112-chinese-24":["成語熟語"],"ISU-112-chinese-28":["文學史常識"],"ISU-112-chinese-35":["文學史常識"],"ISU-112-chinese-42":["文學史常識"],"ISU-112-chinese-47":["古典韻文"],"ISU-112-chinese-49":["字詞義訓詁"],"ISU-113-chinese-1":["字詞義訓詁"],"ISU-113-chinese-2":["字詞義訓詁"],"ISU-113-chinese-15":["文學史常識"],"ISU-113-chinese-19":["文化教材思想"],"ISU-113-chinese-20":["古典散文文言閱讀"],"ISU-113-chinese-21":["古典散文文言閱讀"],"ISU-113-chinese-23":["古典散文文言閱讀"],"ISU-113-chinese-34":["字詞義訓詁"],"ISU-113-chinese-39":["閱讀理解綜合"],"ISU-113-chinese-42":["古典韻文"],"ISU-113-chinese-43":["閱讀理解綜合","古典韻文"],"ISU-113-chinese-44":["修辭格"],"ISU-113-chinese-46":["修辭格"],"ISU-114-chinese-2":["文學史常識"],"ISU-114-chinese-3":["詞性語法句構"],"ISU-114-chinese-5":["國學常識"],"ISU-114-chinese-13":["文化教材思想"],"ISU-114-chinese-15":["古典韻文"],"ISU-114-chinese-17":["古典韻文"],"ISU-114-chinese-19":["詞性語法句構"],"ISU-114-chinese-20":["文學史常識"],"ISU-114-chinese-25":["字詞義訓詁"],"ISU-114-chinese-26":["文學史常識"],"ISU-114-chinese-32":["文學史常識"],"ISU-114-chinese-36":["閱讀理解綜合"],"ISU-114-chinese-37":["修辭格"],"ISU-114-chinese-41":["成語熟語"],"ISU-114-chinese-42":["閱讀理解綜合"],"ISU-114-chinese-45":["古典韻文"],"ISU-115-chinese-15":["古典韻文"],"ISU-115-chinese-16":["字詞義訓詁"],"ISU-115-chinese-17":["成語熟語"],"ISU-115-chinese-20":["字詞義訓詁"],"ISU-115-chinese-21":["國學常識"],"ISU-115-chinese-22":["古典散文文言閱讀"],"ISU-115-chinese-24":["字詞義訓詁"],"ISU-115-chinese-25":["字詞義訓詁"],"ISU-115-chinese-28":["文學史常識"],"ISU-115-chinese-30":["字詞義訓詁"],"ISU-115-chinese-33":["字詞義訓詁"],"ISU-115-chinese-34":["古典韻文"],"ISU-115-chinese-44":["字音字形","字詞義訓詁"],"ISU-104-english-26":["閱讀測驗"],"ISU-104-english-30":["閱讀測驗"],"ISU-104-english-31":["閱讀測驗"],"ISU-105-english-33":["閱讀測驗"],"ISU-106-english-1":["字彙"],"ISU-106-english-6":["字彙"],"ISU-106-english-13":["文法：時態與語態"],"ISU-107-english-6":["字彙"],"ISU-107-english-11":["字彙"],"ISU-107-english-18":["文法：子句與關係代名詞"],"ISU-108-english-9":["字彙"],"ISU-109-english-7":["字彙"],"ISU-109-english-14":["文法：子句與關係代名詞"],"ISU-109-english-19":["文法：時態與語態"],"ISU-110-english-8":["字彙"],"ISU-110-english-16":["文法：時態與語態"],"ISU-110-english-19":["文法：子句與關係代名詞"],"ISU-110-english-20":["句構與語意連貫"],"ISU-111-english-12":["文法：時態與語態"],"ISU-112-english-3":["字彙"],"ISU-112-english-7":["字彙"],"ISU-112-english-11":["字彙"],"ISU-112-english-19":["文法：子句與關係代名詞"],"ISU-113-english-6":["字彙"],"ISU-115-english-13":["字彙"],"ISU-115-english-14":["字彙"],"ISU-115-english-15":["字彙"],"ISU-115-english-16":["句構與語意連貫"],"ISU-115-english-23":["文法：子句與關係代名詞"],"ISU-104-english-28":["同義反義與字根字首"],"ISU-109-english-40":["同義反義與字根字首"],"ISU-104-english-6":["片語動詞與慣用語"],"ISU-104-english-7":["片語動詞與慣用語"],"ISU-107-english-17":["片語動詞與慣用語"],"ISU-108-english-3":["片語動詞與慣用語"],"ISU-108-english-10":["片語動詞與慣用語"],"ISU-115-english-10":["片語動詞與慣用語"],"ISU-104-english-12":["句構與語意連貫"],"ISU-104-english-13":["句構與語意連貫"],"ISU-104-english-14":["句構與語意連貫"],"ISU-104-english-16":["句構與語意連貫"],"ISU-105-english-14":["句構與語意連貫"],"ISU-106-english-15":["句構與語意連貫"],"ISU-108-english-13":["句構與語意連貫"],"ISU-111-english-16":["句構與語意連貫"],"ISU-113-english-17":["句構與語意連貫"],"ISU-105-english-11":["文法：時態與語態"],"ISU-105-english-16":["文法：時態與語態"],"ISU-105-english-17":["文法：時態與語態"],"ISU-106-english-11":["文法：時態與語態"],"ISU-106-english-12":["文法：時態與語態"],"ISU-106-english-14":["文法：時態與語態"],"ISU-106-english-16":["文法：時態與語態"],"ISU-106-english-17":["文法：時態與語態"],"ISU-106-english-18":["文法：時態與語態"],"ISU-106-english-19":["文法：時態與語態"],"ISU-106-english-20":["文法：時態與語態"],"ISU-107-english-12":["文法：時態與語態"],"ISU-107-english-14":["文法：時態與語態"],"ISU-107-english-15":["文法：時態與語態"],"ISU-107-english-16":["文法：時態與語態"],"ISU-107-english-19":["文法：時態與語態"],"ISU-108-english-11":["文法：時態與語態"],"ISU-108-english-12":["文法：時態與語態"],"ISU-108-english-14":["文法：時態與語態"],"ISU-108-english-15":["文法：時態與語態"],"ISU-108-english-18":["文法：時態與語態"],"ISU-108-english-19":["文法：時態與語態"],"ISU-108-english-20":["文法：時態與語態"],"ISU-109-english-11":["文法：時態與語態"],"ISU-109-english-12":["文法：時態與語態"],"ISU-109-english-13":["文法：時態與語態"],"ISU-109-english-15":["文法：時態與語態"],"ISU-109-english-17":["文法：時態與語態"],"ISU-110-english-13":["文法：時態與語態"],"ISU-110-english-15":["文法：時態與語態"],"ISU-111-english-13":["文法：時態與語態"],"ISU-111-english-14":["文法：時態與語態"],"ISU-111-english-15":["文法：時態與語態"],"ISU-111-english-17":["文法：時態與語態"],"ISU-112-english-18":["文法：時態與語態"],"ISU-112-english-20":["文法：時態與語態"],"ISU-112-english-21":["文法：時態與語態"],"ISU-112-english-22":["文法：時態與語態"],"ISU-112-english-25":["文法：時態與語態"],"ISU-113-english-16":["文法：時態與語態"],"ISU-113-english-19":["文法：時態與語態"],"ISU-113-english-22":["文法：時態與語態"],"ISU-113-english-24":["文法：時態與語態"],"ISU-114-english-19":["文法：時態與語態"],"ISU-114-english-21":["文法：時態與語態"],"ISU-114-english-24":["句構與語意連貫"],"ISU-115-english-17":["文法：時態與語態"],"ISU-115-english-20":["文法：時態與語態"],"ISU-115-english-21":["文法：時態與語態"],"ISU-115-english-24":["文法：時態與語態"],"ISU-105-english-13":["句構與語意連貫"],"ISU-105-english-19":["句構與語意連貫"],"ISU-109-english-20":["句構與語意連貫"],"ISU-111-english-11":["句構與語意連貫"],"ISU-111-english-18":["句構與語意連貫"],"ISU-112-english-17":["句構與語意連貫"],"ISU-114-english-16":["句構與語意連貫"],"ISU-114-english-18":["文法：子句與關係代名詞"],"ISU-114-english-20":["句構與語意連貫"],"ISU-114-english-22":["句構與語意連貫"],"ISU-114-english-25":["句構與語意連貫"],"ISU-115-english-22":["句構與語意連貫"],"ISU-115-english-25":["句構與語意連貫"],"TCU-104-biology-29":["內分泌系統"],"TCU-104-biology-34":["細胞膜與物質運輸","細胞分裂"],"TCU-104-biology-44":["植物生理","植物構造與組織"],"TCU-105-biology-5":["基因表現：轉錄轉譯與調控"],"TCU-105-biology-13":["循環與呼吸"],"TCU-106-biology-38":["生命分子與生物化學"],"TCU-108-biology-12":["孟德爾遺傳","演化與生命起源"],"TCU-108-biology-23":["植物生理"],"TCU-108-biology-41":["演化與生命起源","孟德爾遺傳"],"TCU-109-biology-1":["細胞呼吸與能量代謝"],"TCU-109-biology-18":["演化與生命起源","孟德爾遺傳"],"TCU-109-biology-19":["孟德爾遺傳","演化與生命起源"],"TCU-109-biology-31":["植物生理"],"TCU-110-biology-26":["演化與生命起源","孟德爾遺傳"],"TCU-110-biology-48":["植物生理","內分泌系統"],"TCU-111-biology-5":["細胞分裂"],"TCU-111-biology-43":["植物生理"],"TCU-113-biology-5":["細胞-骨架與連結"],"TCU-113-biology-22":["植物生理"],"TCU-104-chemistry-1":["反應速率"],"TCU-104-chemistry-4":["配位化合物"],"TCU-104-chemistry-17":["相變與分子間作用力"],"TCU-104-chemistry-24":["基礎-熱力學"],"TCU-104-chemistry-26":["有機命名與官能基"],"TCU-104-chemistry-29":["有機命名與官能基"],"TCU-104-chemistry-32":["有機反應與機構","立體化學"],"TCU-104-chemistry-44":["有機反應與機構"],"TCU-105-chemistry-11":[],"TCU-105-chemistry-21":["相變與分子間作用力"],"TCU-105-chemistry-23":["相變與分子間作用力"],"TCU-105-chemistry-30":["立體化學"],"TCU-105-chemistry-38":["有機反應與機構"],"TCU-105-chemistry-39":["有機反應與機構"],"TCU-105-chemistry-40":["光譜分析"],"TCU-106-chemistry-0":["反應速率"],"TCU-106-chemistry-1":["相變與分子間作用力"],"TCU-106-chemistry-2-d1":["電化學"],"TCU-106-chemistry-4-d2":["有機反應與機構"],"TCU-106-chemistry-7":[],"TCU-106-chemistry-12":[],"TCU-107-chemistry-7":["基礎-化學鍵"],"TCU-107-chemistry-25":["光譜分析"],"TCU-108-chemistry-9":["反應速率"],"TCU-108-chemistry-23":["配位化合物"],"TCU-108-chemistry-39":["有機反應與機構"],"TCU-108-chemistry-44":["基礎-熱力學"],"TCU-108-chemistry-45":[],"TCU-109-chemistry-12":["化學綜合"],"TCU-109-chemistry-20":["光譜分析"],"TCU-109-chemistry-43":["溶液與依數性質"],"TCU-110-chemistry-2":["溶液與依數性質"],"TCU-110-chemistry-7":[],"TCU-110-chemistry-44":["有機反應與機構","芳香族化學"],"TCU-111-chemistry-1":[],"TCU-111-chemistry-3":["有機命名與官能基"],"TCU-111-chemistry-22":[],"TCU-111-chemistry-39":["基礎-化學計量"],"TCU-111-chemistry-45":["溶液與依數性質","相變與分子間作用力"],"TCU-113-chemistry-28":["光譜分析"],"TCU-113-chemistry-38":[],"TCU-114-chemistry-36":["立體化學"],"TCU-114-chemistry-46":["基礎-化學鍵"],"TCU-114-chemistry-50":["有機命名與官能基"],"TCU-115-chemistry-4":[],"TCU-115-chemistry-15":["基礎-化學計量"],"TCU-115-chemistry-30":["化學綜合"],"TCU-115-chemistry-47":["反應速率"],"TCU-115-chemistry-50":[],"TCU-104-chinese-2":["字音字形"],"TCU-104-chinese-3":["成語熟語"],"TCU-104-chinese-4":["成語熟語"],"TCU-104-chinese-9":["閱讀理解綜合"],"TCU-104-chinese-10":["古典韻文"],"TCU-104-chinese-13":["字音字形"],"TCU-104-chinese-19":["詞性語法句構"],"TCU-104-chinese-23":["古典散文文言閱讀"],"TCU-104-chinese-29":["詞性語法句構"],"TCU-104-chinese-32":["修辭格"],"TCU-104-chinese-34":["成語熟語"],"TCU-105-chinese-6":["字詞義訓詁"],"TCU-105-chinese-9":["字詞義訓詁"],"TCU-105-chinese-15":["修辭格"],"TCU-105-chinese-21":["古典韻文"],"TCU-105-chinese-33":["閱讀理解綜合"],"TCU-106-chinese-3":["成語熟語"],"TCU-106-chinese-11":["修辭格"],"TCU-106-chinese-15":["字詞義訓詁","字音字形"],"TCU-106-chinese-17":["文化教材思想"],"TCU-106-chinese-21":["閱讀理解綜合"],"TCU-107-chinese-3":["字詞義訓詁"],"TCU-107-chinese-19":["閱讀理解綜合"],"TCU-107-chinese-22":["古典韻文"],"TCU-107-chinese-27":["閱讀理解綜合"],"TCU-108-chinese-2":["閱讀理解綜合"],"TCU-108-chinese-6":["字詞義訓詁"],"TCU-108-chinese-11":["詞性語法句構"],"TCU-108-chinese-16":["字詞義訓詁","應用文書信"],"TCU-108-chinese-19":["字詞義訓詁"],"TCU-108-chinese-22":["字詞義訓詁"],"TCU-108-chinese-30":["修辭格"],"TCU-108-chinese-31":["古典散文文言閱讀"],"TCU-108-chinese-35":["古典韻文"],"TCU-109-chinese-17":["古典散文文言閱讀"],"TCU-109-chinese-26":["字詞義訓詁"],"TCU-109-chinese-27":["文化教材思想"],"TCU-109-chinese-32":["閱讀理解綜合"],"TCU-109-chinese-33":["閱讀理解綜合"],"TCU-109-chinese-34":["閱讀理解綜合"],"TCU-110-chinese-3":["字音字形"],"TCU-110-chinese-16":["字音字形"],"TCU-110-chinese-28":["閱讀理解綜合"],"TCU-110-chinese-33":["閱讀理解綜合"],"TCU-110-chinese-41":["閱讀理解綜合"],"TCU-110-chinese-44":["閱讀理解綜合"],"TCU-110-chinese-48":["閱讀理解綜合"],"TCU-111-chinese-14":["文化教材思想"],"TCU-111-chinese-16":["修辭格"],"TCU-111-chinese-33":["古典散文文言閱讀"],"TCU-111-chinese-45":["閱讀理解綜合"],"TCU-111-chinese-46":["古典散文文言閱讀"],"TCU-112-chinese-6":["成語熟語"],"TCU-112-chinese-13":["修辭格"],"TCU-113-chinese-5":["字音字形"],"TCU-113-chinese-8":["字詞義訓詁"],"TCU-113-chinese-9":["字詞義訓詁"],"TCU-113-chinese-13":["文化教材思想"],"TCU-113-chinese-25":["閱讀理解綜合"],"TCU-113-chinese-27":["字詞義訓詁"],"TCU-113-chinese-28":["字詞義訓詁"],"TCU-113-chinese-31":["古典散文文言閱讀"],"TCU-113-chinese-49":["閱讀理解綜合"],"TCU-113-chinese-50":["古典韻文"],"TCU-114-chinese-1":["字音字形"],"TCU-114-chinese-8":["成語熟語"],"TCU-114-chinese-10":["文化教材思想"],"TCU-114-chinese-16":["字詞義訓詁","成語熟語"],"TCU-114-chinese-18":["古典韻文"],"TCU-114-chinese-21":["古典散文文言閱讀"],"TCU-114-chinese-24":["文化教材思想"],"TCU-114-chinese-37":["閱讀理解綜合"],"TCU-114-chinese-38":["閱讀理解綜合"],"TCU-115-chinese-1":["字音字形"],"TCU-115-chinese-7":["字詞義訓詁"],"TCU-115-chinese-11":["古典韻文"],"TCU-115-chinese-13":["古典韻文"],"TCU-115-chinese-17":["古典散文文言閱讀"],"TCU-115-chinese-20":["古典散文文言閱讀"],"TCU-115-chinese-21":["字詞義訓詁"],"TCU-115-chinese-25":["閱讀理解綜合"],"TCU-115-chinese-27":["古典韻文"],"TCU-115-chinese-37":["閱讀理解綜合"],"TCU-115-chinese-49":["閱讀理解綜合"],"TCU-104-english-9":["字彙"],"TCU-104-english-10":["字彙"],"TCU-104-english-11":["字彙"],"TCU-104-english-15":["字彙"],"TCU-104-english-18":["克漏字","句構與語意連貫"],"TCU-104-english-19":["克漏字","文法：時態與語態"],"TCU-104-english-20":["克漏字","片語動詞與慣用語"],"TCU-104-english-34":["同義反義與字根字首"],"TCU-104-english-38":["同義反義與字根字首"],"TCU-104-english-40":["閱讀測驗"],"TCU-105-english-6":["字彙"],"TCU-105-english-14":["句構與語意連貫"],"TCU-105-english-15":["文法：時態與語態"],"TCU-105-english-18":["克漏字","文法：時態與語態"],"TCU-105-english-19":["克漏字","句構與語意連貫"],"TCU-106-english-4":["字彙"],"TCU-106-english-11":["文法：時態與語態"],"TCU-106-english-12":["句構與語意連貫"],"TCU-106-english-13":["句構與語意連貫"],"TCU-106-english-15":["文法：子句與關係代名詞"],"TCU-106-english-16":["句構與語意連貫"],"TCU-106-english-17":["文法：時態與語態"],"TCU-106-english-18":["句構與語意連貫"],"TCU-106-english-19":["句構與語意連貫"],"TCU-106-english-20":["文法：時態與語態"],"TCU-106-english-26":["克漏字","文法：介系詞與片語"],"TCU-107-english-5":["字彙"],"TCU-107-english-8":["片語動詞與慣用語"],"TCU-107-english-9":["片語動詞與慣用語"],"TCU-107-english-10":["文法：時態與語態"],"TCU-107-english-11":["文法：時態與語態"],"TCU-107-english-12":["文法：時態與語態"],"TCU-107-english-13":["同義反義與字根字首"],"TCU-107-english-14":["同義反義與字根字首"],"TCU-107-english-15":["同義反義與字根字首"],"TCU-107-english-16":["同義反義與字根字首"],"TCU-107-english-17":["同義反義與字根字首"],"TCU-107-english-18":["同義反義與字根字首"],"TCU-107-english-19":["同義反義與字根字首"],"TCU-107-english-20":["同義反義與字根字首"],"TCU-107-english-27":["克漏字","文法：子句與關係代名詞"],"TCU-107-english-28":["克漏字","文法：介系詞與片語"],"TCU-107-english-30":["克漏字","文法：時態與語態"],"TCU-107-english-33":["閱讀測驗"],"TCU-108-english-11":["同義反義與字根字首"],"TCU-108-english-12":["同義反義與字根字首"],"TCU-108-english-13":["同義反義與字根字首"],"TCU-108-english-14":["同義反義與字根字首"],"TCU-108-english-15":["同義反義與字根字首"],"TCU-108-english-16":["文法：時態與語態"],"TCU-108-english-17":["文法：子句與關係代名詞"],"TCU-108-english-18":["文法：時態與語態"],"TCU-108-english-19":["文法：時態與語態"],"TCU-108-english-20":["句構與語意連貫"],"TCU-109-english-2":["字彙"],"TCU-109-english-4":["字彙"],"TCU-109-english-12":["句構與語意連貫"],"TCU-109-english-16":["句構與語意連貫"],"TCU-109-english-17":["文法：時態與語態"],"TCU-109-english-18":["句構與語意連貫"],"TCU-109-english-19":["句構與語意連貫"],"TCU-109-english-20":["句構與語意連貫"],"TCU-110-english-1":["字彙"],"TCU-110-english-5":["字彙"],"TCU-110-english-7":["字彙"],"TCU-110-english-14":["字彙"],"TCU-110-english-16":["同義反義與字根字首"],"TCU-110-english-17":["同義反義與字根字首"],"TCU-110-english-18":["同義反義與字根字首"],"TCU-110-english-19":["同義反義與字根字首"],"TCU-110-english-20":["同義反義與字根字首"],"TCU-110-english-26":["克漏字","片語動詞與慣用語"],"TCU-110-english-29":["克漏字","片語動詞與慣用語"],"TCU-110-english-31":["克漏字","片語動詞與慣用語"],"TCU-110-english-35":["克漏字","文法：介系詞與片語"],"TCU-111-english-1":["字彙"],"TCU-111-english-8":["字彙"],"TCU-111-english-47":["閱讀測驗"],"TCU-112-english-7":["字彙"],"TCU-112-english-9":["字彙"],"TCU-113-english-6":["字彙"],"TCU-113-english-7":["字彙"],"TCU-113-english-13":["字彙"],"TCU-113-english-14":["字彙"],"TCU-113-english-16":["克漏字","句構與語意連貫"],"TCU-113-english-17":["克漏字","句構與語意連貫"],"TCU-114-english-1":["字彙"],"TCU-114-english-4":["字彙"],"TCU-114-english-7":["字彙"],"TCU-114-english-11":["字彙"],"TCU-114-english-12":["字彙"],"TCU-114-english-15":["字彙"],"TCU-114-english-22":["克漏字","字彙"],"TCU-114-english-29":["克漏字","字彙"],"TCU-114-english-39":["閱讀測驗"],"TCU-115-english-7":["字彙"],"TCU-115-english-8":["字彙"],"TCU-115-english-13":["字彙"],"TCU-115-english-16":["克漏字","字彙"],"TCU-115-english-22":["克漏字","句構與語意連貫"],"TCU-115-english-27":["克漏字","句構與語意連貫"],"TCU-115-english-28":["克漏字","句構與語意連貫"],"TCU-115-english-30":["克漏字","文法：時態與語態"],"TCU-115-english-35":["句構與語意連貫"],"CMU-104-chemistry-3":["原子軌域"],"CMU-104-chemistry-12":[],"CMU-104-chemistry-13":["原子光譜"],"CMU-105-chemistry-1":["原子光譜"],"CMU-105-chemistry-2":["原子軌域"],"CMU-105-chemistry-10":["基礎-化學鍵"],"CMU-105-chemistry-27":["基礎-原子結構"],"CMU-105-chemistry-32":[],"CMU-106-chemistry-27":[],"CMU-106-chemistry-33":[],"CMU-106-chemistry-41":[],"CMU-107-chemistry-3":["基礎-化學鍵"],"CMU-107-chemistry-4":[],"CMU-107-chemistry-9":[],"CMU-108-chemistry-1":["基礎-原子結構"],"CMU-108-chemistry-2":[],"CMU-108-chemistry-4":["基礎-原子結構"],"CMU-108-chemistry-6":["基礎-化學鍵"],"CMU-108-chemistry-7":["電子組態"],"CMU-108-chemistry-21":[],"CMU-109-chemistry-2":["配位化合物"],"CMU-109-chemistry-7":["週期性"],"CMU-109-chemistry-11":["原子軌域"],"CMU-109-chemistry-19":[],"CMU-109-chemistry-21":["原子軌域"],"CMU-109-chemistry-23":["基礎-單位因次"],"CMU-110-chemistry-5":[],"CMU-110-chemistry-21":["原子光譜"],"CMU-110-chemistry-25":["原子光譜"],"CMU-110-chemistry-29":["配位化合物"],"CMU-110-chemistry-37":[],"CMU-111-chemistry-6":["原子軌域"],"CMU-111-chemistry-8":["基礎-化學鍵"],"CMU-111-chemistry-39":[],"CMU-112-chemistry-15":[],"CMU-112-chemistry-16":["配位化合物"],"CMU-112-chemistry-22":["配位化合物"],"CMU-112-chemistry-33":["基礎-化學鍵"],"CMU-112-chemistry-34":["酸鹼平衡"],"CMU-112-chemistry-38":["週期性"],"CMU-113-chemistry-39":["基礎-化學鍵"],"CMU-114-chemistry-5":[],"CMU-114-chemistry-20":[],"CMU-114-chemistry-29":["配位化合物"],"CMU-114-chemistry-31":["原子軌域"],"CMU-114-chemistry-40":["基礎-原子結構","氣體"],"CMU-114-chemistry-42":["電子組態"],"CMU-114-chemistry-45":[],"CMU-115-chemistry-11":["立體化學","相變與分子間作用力"],"CMU-115-chemistry-28":[],"CMU-115-chemistry-42":[],"CMU-115-chemistry-43":["配位化合物"],"CMU-115-chemistry-50":["基礎-熱力學"],"ISU-104-chemistry-9":["基礎-化學鍵"],"ISU-104-chemistry-10":["基礎-化學鍵"],"ISU-104-chemistry-25":["基礎-原子結構"],"ISU-106-chemistry-7":["基礎-化學鍵"],"ISU-106-chemistry-11":["原子軌域"],"ISU-106-chemistry-12":["離子與電子行為"],"ISU-106-chemistry-15":[],"ISU-106-chemistry-48":["酸鹼平衡"],"ISU-106-chemistry-49":[],"ISU-107-chemistry-8":["基礎-化學鍵"],"ISU-107-chemistry-10":[],"ISU-107-chemistry-17":["光譜分析"],"ISU-107-chemistry-39":["原子軌域"],"ISU-108-chemistry-29":["基礎-原子結構"],"ISU-108-chemistry-34":["反應速率","酸鹼平衡"],"ISU-109-chemistry-8":[],"ISU-109-chemistry-11":[],"ISU-109-chemistry-18":[],"ISU-109-chemistry-29":["原子軌域"],"ISU-109-chemistry-50":["立體化學","光譜分析"],"ISU-110-chemistry-1":["基礎-化學鍵"],"ISU-110-chemistry-14":[],"ISU-111-chemistry-3":["反應速率"],"ISU-111-chemistry-21":["基礎-單位因次"],"ISU-111-chemistry-24":["基礎-原子結構"],"ISU-111-chemistry-25":["基礎-化學鍵"],"ISU-111-chemistry-27":[],"ISU-111-chemistry-31":["基礎-原子結構"],"ISU-112-chemistry-5":["光譜分析"],"ISU-112-chemistry-7":["基礎-化學鍵"],"ISU-112-chemistry-11":["光譜分析"],"ISU-112-chemistry-12":["原子軌域"],"ISU-112-chemistry-15":["配位化合物"],"ISU-112-chemistry-24":["電子組態"],"ISU-112-chemistry-30":[],"ISU-112-chemistry-45":[],"ISU-113-chemistry-4":[],"ISU-113-chemistry-19":["光譜分析"],"ISU-113-chemistry-22":["週期趨勢"],"ISU-113-chemistry-47":[],"ISU-114-chemistry-4":[],"ISU-114-chemistry-26":["光譜分析"],"ISU-114-chemistry-50":[],"ISU-115-chemistry-5":[],"ISU-115-chemistry-40":[],"ISU-115-chemistry-41":[],"TCU-104-chemistry-5":["配位化合物"],"TCU-104-chemistry-7":[],"TCU-105-chemistry-3":["原子軌域"],"TCU-105-chemistry-9":["離子與電子行為"],"TCU-105-chemistry-14":[],"TCU-105-chemistry-50":["酸鹼平衡"],"TCU-107-chemistry-3":[],"TCU-107-chemistry-4":["原子軌域"],"TCU-107-chemistry-12":[],"TCU-107-chemistry-19":[],"TCU-107-chemistry-21":["原子軌域"],"TCU-108-chemistry-7":["配位化合物"],"TCU-108-chemistry-15":[],"TCU-108-chemistry-25":["配位化合物"],"TCU-108-chemistry-27":["有機命名與官能基","芳香族化學"],"TCU-108-chemistry-36":[],"TCU-108-chemistry-40":["基礎-原子結構"],"TCU-108-chemistry-46":["基礎-週期表"],"TCU-108-chemistry-47":["週期趨勢"],"TCU-109-chemistry-7":[],"TCU-109-chemistry-13":[],"TCU-109-chemistry-17":["光譜分析"],"TCU-109-chemistry-33":[],"TCU-110-chemistry-1":[],"TCU-110-chemistry-4":[],"TCU-110-chemistry-15":["原子光譜"],"TCU-110-chemistry-19":["光譜分析"],"TCU-110-chemistry-26":["週期趨勢"],"TCU-110-chemistry-41":["基礎-化學鍵"],"TCU-111-chemistry-16":[],"TCU-111-chemistry-36":["原子軌域"],"TCU-111-chemistry-41":[],"TCU-111-chemistry-44":[],"TCU-113-chemistry-7":["原子光譜"],"TCU-113-chemistry-22":[],"TCU-113-chemistry-25":[],"TCU-114-chemistry-8":["基礎-原子結構"],"TCU-114-chemistry-9":["基礎-化學鍵"],"TCU-114-chemistry-19":["原子軌域"],"TCU-115-chemistry-5":[],"TCU-115-chemistry-7":["立體化學","配位化合物"],"TCU-115-chemistry-9":[],"TCU-115-chemistry-21":["原子軌域"],"TCU-115-chemistry-35":[],"CMU-104-chemistry-19":[],"CMU-104-chemistry-21":["基礎-化學鍵"],"CMU-104-chemistry-22":["基礎-熱力學"],"CMU-104-chemistry-23":[],"CMU-104-chemistry-27":[],"CMU-105-chemistry-5":[],"CMU-105-chemistry-8":[],"CMU-105-chemistry-15":["基礎-熱力學"],"CMU-105-chemistry-28":["基礎-化學鍵"],"CMU-105-chemistry-29":["基礎-化學鍵"],"CMU-105-chemistry-33":[],"CMU-106-chemistry-16":["基礎-熱力學"],"CMU-106-chemistry-17":["基礎-化學鍵"],"CMU-106-chemistry-29":[],"CMU-106-chemistry-40":["基礎-化學鍵"],"CMU-106-chemistry-46":["基礎-化學鍵"],"CMU-106-chemistry-48":[],"CMU-106-chemistry-50":[],"CMU-107-chemistry-8":[],"CMU-107-chemistry-10":[],"CMU-107-chemistry-40":["基礎-化學鍵"],"CMU-107-chemistry-45":[],"CMU-108-chemistry-24":[],"CMU-108-chemistry-28":["基礎-化學鍵"],"CMU-108-chemistry-29":[],"CMU-109-chemistry-5":[],"CMU-109-chemistry-8":["基礎-化學鍵"],"CMU-109-chemistry-12":[],"CMU-109-chemistry-13":[],"CMU-109-chemistry-17":[],"CMU-109-chemistry-20":[],"CMU-110-chemistry-10":["基礎-化學鍵"],"CMU-110-chemistry-13":[],"CMU-110-chemistry-18":["基礎-化學鍵"],"CMU-110-chemistry-26":[],"CMU-110-chemistry-30":["基礎-熱力學"],"CMU-110-chemistry-34":[],"CMU-111-chemistry-3":[],"CMU-111-chemistry-19":["基礎-化學鍵"],"CMU-112-chemistry-6":[],"CMU-112-chemistry-27":[],"CMU-112-chemistry-39":[],"CMU-112-chemistry-42":[],"CMU-112-chemistry-43":[],"CMU-112-chemistry-45":["基礎-化學鍵"],"CMU-112-chemistry-47":[],"CMU-112-chemistry-49":["基礎-化學鍵"],"CMU-113-chemistry-24":["基礎-化學鍵"],"CMU-113-chemistry-41":["基礎-化學鍵"],"CMU-114-chemistry-18":[],"CMU-114-chemistry-27":[],"CMU-114-chemistry-28":[],"CMU-114-chemistry-30":["基礎-化學鍵"],"CMU-114-chemistry-33":["基礎-化學鍵"],"CMU-114-chemistry-34":[],"CMU-114-chemistry-43":["基礎-化學鍵"],"CMU-115-chemistry-1":[],"CMU-115-chemistry-2":[],"CMU-115-chemistry-6":[],"CMU-115-chemistry-29":["基礎-化學鍵"],"ISU-104-chemistry-12":[],"ISU-104-chemistry-13":[],"ISU-105-chemistry-35":["基礎-化學鍵"],"ISU-106-chemistry-23":[],"ISU-106-chemistry-39":[],"ISU-107-chemistry-22":[],"ISU-107-chemistry-46":["基礎-化學鍵"],"ISU-108-chemistry-5":["基礎-化學鍵"],"ISU-108-chemistry-13":[],"ISU-108-chemistry-24":[],"ISU-109-chemistry-2":[],"ISU-109-chemistry-6":[],"ISU-109-chemistry-44":[],"ISU-109-chemistry-47":[],"ISU-110-chemistry-8":[],"ISU-110-chemistry-30":[],"ISU-110-chemistry-31":["基礎-化學鍵"],"ISU-110-chemistry-37":[],"ISU-111-chemistry-26":["基礎-化學鍵"],"ISU-111-chemistry-28":[],"ISU-111-chemistry-32":[],"ISU-112-chemistry-28":[],"ISU-112-chemistry-36":[],"ISU-113-chemistry-3":["基礎-熱力學"],"ISU-114-chemistry-22":["基礎-化學鍵"],"ISU-114-chemistry-32":[],"ISU-114-chemistry-36":["基礎-化學鍵"],"ISU-115-chemistry-18":["基礎-化學鍵"],"TCU-104-chemistry-15":["基礎-化學鍵"],"TCU-104-chemistry-16":["基礎-化學鍵"],"TCU-105-chemistry-10":[],"TCU-105-chemistry-13":["基礎-化學鍵"],"TCU-105-chemistry-19":["基礎-化學鍵"],"TCU-105-chemistry-20":["基礎-化學鍵"],"TCU-105-chemistry-22":["基礎-化學鍵"],"TCU-105-chemistry-25":["基礎-化學鍵"],"TCU-105-chemistry-29":[],"TCU-107-chemistry-2":["基礎-熱力學"],"TCU-107-chemistry-5":["基礎-週期表"],"TCU-107-chemistry-11":[],"TCU-107-chemistry-13":[],"TCU-107-chemistry-33":["基礎-化學鍵"],"TCU-107-chemistry-39":[],"TCU-108-chemistry-17":[],"TCU-108-chemistry-29":[],"TCU-109-chemistry-11":["基礎-化學鍵"],"TCU-110-chemistry-11":[],"TCU-110-chemistry-27":[],"TCU-110-chemistry-49":["基礎-熱力學"],"TCU-111-chemistry-6":["基礎-化學鍵"],"TCU-111-chemistry-48":["基礎-熱力學"],"TCU-113-chemistry-20":[],"TCU-113-chemistry-21":[],"TCU-113-chemistry-33":[],"TCU-113-chemistry-36":[],"TCU-114-chemistry-3":[],"TCU-114-chemistry-27":["基礎-化學鍵"],"TCU-114-chemistry-30":[],"TCU-114-chemistry-34":["基礎-化學鍵"],"TCU-114-chemistry-38":["基礎-化學鍵"],"TCU-114-chemistry-39":[],"TCU-115-chemistry-14":["基礎-化學鍵"],"TCU-115-chemistry-36":["基礎-化學鍵"],"TCU-115-chemistry-43":["基礎-化學鍵"],"TCU-115-chemistry-44":[],"CMU-104-chemistry-1":["基礎-單位因次"],"CMU-104-chemistry-5":["基礎-單位因次"],"CMU-104-chemistry-10":["基礎-單位因次"],"CMU-104-chemistry-11":["基礎-化學計量"],"CMU-104-chemistry-26":[],"CMU-104-chemistry-34":[],"CMU-105-chemistry-4":[],"CMU-105-chemistry-41":[],"CMU-106-chemistry-14":["基礎-化學計量"],"CMU-106-chemistry-30":["基礎-單位因次"],"CMU-108-chemistry-3":["基礎-單位因次"],"CMU-110-chemistry-28":["基礎-單位因次"],"CMU-111-chemistry-11":[],"CMU-111-chemistry-12":["基礎-單位因次"],"CMU-111-chemistry-14":["基礎-單位因次"],"CMU-111-chemistry-18":[],"CMU-111-chemistry-24":["基礎-單位因次"],"CMU-111-chemistry-41":["基礎-熱力學"],"CMU-112-chemistry-14":["基礎-單位因次"],"CMU-112-chemistry-18":["基礎-單位因次"],"CMU-112-chemistry-21":["基礎-化學計量"],"CMU-112-chemistry-25":["基礎-化學計量"],"CMU-112-chemistry-46":["基礎-單位因次"],"CMU-113-chemistry-11":[],"CMU-113-chemistry-12":[],"CMU-113-chemistry-16":["基礎-化學計量"],"CMU-113-chemistry-18":["基礎-單位因次"],"CMU-113-chemistry-19":[],"CMU-113-chemistry-30":["基礎-熱力學"],"CMU-113-chemistry-33":[],"CMU-113-chemistry-42":[],"CMU-114-chemistry-13":[],"CMU-114-chemistry-37":["基礎-化學計量"],"CMU-114-chemistry-44":["基礎-化學計量"],"CMU-115-chemistry-3":[],"CMU-115-chemistry-32":[],"CMU-115-chemistry-35":[],"ISU-104-chemistry-6":[],"ISU-104-chemistry-7":[],"ISU-104-chemistry-14":["基礎-單位因次"],"ISU-104-chemistry-15":["基礎-單位因次"],"ISU-104-chemistry-17":["基礎-單位因次"],"ISU-104-chemistry-32":[],"ISU-104-chemistry-47":[],"ISU-105-chemistry-15":[],"ISU-105-chemistry-25":[],"ISU-106-chemistry-1":["基礎-單位因次"],"ISU-106-chemistry-18":[],"ISU-106-chemistry-19":["基礎-單位因次"],"ISU-106-chemistry-32":[],"ISU-107-chemistry-1":["基礎-化學計量"],"ISU-107-chemistry-30":[],"ISU-107-chemistry-33":[],"ISU-107-chemistry-40":["基礎-化學計量"],"ISU-107-chemistry-42":[],"ISU-108-chemistry-4":[],"ISU-108-chemistry-28":["基礎-單位因次"],"ISU-108-chemistry-30":["基礎-化學計量"],"ISU-109-chemistry-17":["基礎-單位因次"],"ISU-109-chemistry-27":["基礎-化學計量"],"ISU-109-chemistry-31":["基礎-單位因次"],"ISU-111-chemistry-1":["基礎-單位因次"],"ISU-111-chemistry-17":[],"ISU-111-chemistry-22":["基礎-化學計量"],"ISU-111-chemistry-23":["基礎-單位因次"],"ISU-111-chemistry-35":[],"ISU-112-chemistry-37":["基礎-單位因次"],"ISU-112-chemistry-48":[],"ISU-113-chemistry-1":["基礎-單位因次"],"ISU-113-chemistry-6":["基礎-單位因次"],"ISU-113-chemistry-24":["基礎-單位因次"],"ISU-114-chemistry-1":["基礎-單位因次"],"ISU-114-chemistry-3":["基礎-單位因次"],"ISU-114-chemistry-20":["基礎-單位因次"],"ISU-114-chemistry-33":["基礎-化學計量"],"ISU-115-chemistry-1":["基礎-單位因次"],"ISU-115-chemistry-2":["基礎-單位因次"],"ISU-115-chemistry-3":["基礎-單位因次"],"ISU-115-chemistry-4":["基礎-單位因次"],"ISU-115-chemistry-8":["基礎-化學計量"],"ISU-115-chemistry-23":[],"ISU-115-chemistry-34":["基礎-化學計量"],"ISU-115-chemistry-35":[],"ISU-115-chemistry-38":[],"ISU-115-chemistry-39":["基礎-化學計量"],"TCU-105-chemistry-16":["基礎-單位因次"],"TCU-107-chemistry-10":["基礎-化學計量"],"TCU-108-chemistry-12":[],"TCU-108-chemistry-14":[],"TCU-108-chemistry-37":[],"TCU-109-chemistry-24":[],"TCU-109-chemistry-38":[],"TCU-110-chemistry-10":[],"TCU-110-chemistry-21":[],"TCU-110-chemistry-43":[],"TCU-110-chemistry-48":["基礎-單位因次"],"TCU-111-chemistry-17":["基礎-熱力學"],"TCU-111-chemistry-24":[],"TCU-111-chemistry-28":[],"TCU-111-chemistry-50":["基礎-熱力學"],"TCU-113-chemistry-14":[],"TCU-113-chemistry-18":["基礎-單位因次"],"TCU-113-chemistry-34":[],"TCU-114-chemistry-18":["基礎-化學計量"],"TCU-114-chemistry-20":[],"TCU-114-chemistry-40":["基礎-單位因次"],"TCU-114-chemistry-42":["基礎-化學計量"],"TCU-115-chemistry-2":[],"TCU-115-chemistry-8":["基礎-單位因次"],"TCU-115-chemistry-10":["基礎-熱力學"],"TCU-115-chemistry-38":["基礎-單位因次"],"TCU-115-chemistry-45":["基礎-單位因次"],"CMU-104-chemistry-6":[],"CMU-105-chemistry-26":["基礎-熱力學"],"CMU-105-chemistry-30":["基礎-熱力學"],"CMU-106-chemistry-32":["基礎-熱力學"],"CMU-106-chemistry-34":["基礎-熱力學"],"CMU-107-chemistry-5":["基礎-週期表"],"CMU-107-chemistry-12":["基礎-熱力學"],"CMU-107-chemistry-15":[],"CMU-107-chemistry-19":["週期趨勢"],"CMU-108-chemistry-5":["基礎-週期表"],"CMU-108-chemistry-16":["基礎-熱力學"],"CMU-108-chemistry-17":["基礎-熱力學"],"CMU-108-chemistry-18":["基礎-熱力學"],"CMU-108-chemistry-20":["基礎-熱力學"],"CMU-110-chemistry-17":["基礎-熱力學"],"CMU-111-chemistry-29":[],"CMU-113-chemistry-47":["週期趨勢"],"CMU-114-chemistry-35":["基礎-熱力學"],"CMU-114-chemistry-38":["基礎-週期表"],"CMU-114-chemistry-46":["基礎-熱力學"],"CMU-115-chemistry-26":["基礎-熱力學"],"CMU-115-chemistry-30":["基礎-熱力學"],"CMU-115-chemistry-41":["基礎-週期表"],"CMU-115-chemistry-45":[],"CMU-115-chemistry-49":["基礎-熱力學"],"ISU-104-chemistry-18":["基礎-熱力學"],"ISU-104-chemistry-24":["基礎-週期表"],"ISU-105-chemistry-32":["基礎-熱力學"],"ISU-105-chemistry-44":["基礎-熱力學"],"ISU-106-chemistry-6":["基礎-熱力學"],"ISU-106-chemistry-21":["基礎-熱力學"],"ISU-106-chemistry-22":["基礎-熱力學"],"ISU-107-chemistry-23":[],"ISU-108-chemistry-37":["基礎-熱力學"],"ISU-109-chemistry-1":["基礎-週期表"],"ISU-109-chemistry-5":["基礎-熱力學"],"ISU-110-chemistry-16":["基礎-熱力學"],"ISU-110-chemistry-17":["基礎-熱力學"],"ISU-110-chemistry-35":["基礎-熱力學"],"ISU-111-chemistry-29":["基礎-熱力學"],"ISU-112-chemistry-40":["基礎-熱力學"],"ISU-113-chemistry-21":["基礎-熱力學"],"ISU-114-chemistry-6":["基礎-熱力學"],"ISU-114-chemistry-34":["週期趨勢"],"ISU-114-chemistry-43":[],"ISU-115-chemistry-21":["基礎-熱力學"],"ISU-115-chemistry-22":[],"ISU-115-chemistry-24":["基礎-熱力學"],"ISU-115-chemistry-36":["基礎-熱力學"],"TCU-104-chemistry-8":["基礎-熱力學"],"TCU-104-chemistry-9":["基礎-熱力學"],"TCU-104-chemistry-13":["基礎-熱力學"],"TCU-105-chemistry-6":["基礎-熱力學"],"TCU-105-chemistry-7":["基礎-熱力學"],"TCU-105-chemistry-15":[],"TCU-107-chemistry-14":["基礎-熱力學"],"TCU-107-chemistry-18":["基礎-熱力學"],"TCU-108-chemistry-3":["基礎-熱力學"],"TCU-108-chemistry-26":[],"TCU-109-chemistry-6":["基礎-熱力學"],"TCU-109-chemistry-9":["基礎-熱力學"],"TCU-109-chemistry-25":["基礎-週期表"],"TCU-110-chemistry-22":[],"TCU-110-chemistry-42":["基礎-熱力學"],"TCU-111-chemistry-11":[],"TCU-111-chemistry-31":["基礎-熱力學"],"TCU-111-chemistry-32":["基礎-熱力學"],"TCU-113-chemistry-10":["基礎-熱力學"],"TCU-113-chemistry-27":["基礎-熱力學"],"TCU-114-chemistry-2":["週期趨勢"],"TCU-114-chemistry-7":["基礎-熱力學"],"TCU-114-chemistry-10":["基礎-熱力學"],"TCU-114-chemistry-13":[],"TCU-114-chemistry-22":["基礎-熱力學"],"TCU-114-chemistry-23":["基礎-熱力學"],"TCU-115-chemistry-3":["基礎-熱力學"],"TCU-115-chemistry-11":["基礎-熱力學"],"TCU-115-chemistry-18":["基礎-熱力學"],"TCU-115-chemistry-39":[],"CMU-104-chemistry-4":[],"CMU-104-chemistry-39":[],"CMU-105-chemistry-20":[],"CMU-114-chemistry-14":[],"CMU-114-chemistry-15":[],"CMU-114-chemistry-47":[],"CMU-115-chemistry-27":[],"CMU-115-chemistry-38":[],"ISU-105-chemistry-45":[],"ISU-106-chemistry-37":[],"ISU-107-chemistry-28":["基礎-胺基酸"],"ISU-107-chemistry-38":[],"ISU-108-chemistry-1":["基礎-胺基酸"],"ISU-108-chemistry-33":[],"ISU-109-chemistry-26":[],"ISU-110-chemistry-36":[],"ISU-111-chemistry-19":[],"ISU-111-chemistry-41":[],"TCU-104-chemistry-27":[],"TCU-107-chemistry-28":[],"TCU-108-chemistry-20":[],"TCU-108-chemistry-50":["基礎-胺基酸"],"TCU-110-chemistry-9":["基礎-胺基酸"],"TCU-110-chemistry-13":[],"TCU-111-chemistry-13":["基礎-胺基酸"],"TCU-111-chemistry-14":[],"TCU-113-chemistry-3":[],"TCU-113-chemistry-4":["基礎-胺基酸"],"TCU-113-chemistry-23":[],"TCU-113-chemistry-41":["基礎-胺基酸"],"TCU-113-chemistry-46":[],"TCU-113-chemistry-47":[],"TCU-113-chemistry-49":["基礎-胺基酸"],"TCU-115-chemistry-46":[],"CMU-104-biology-8":[],"CMU-104-biology-35":[],"CMU-106-biology-14":["細胞-骨架與連結"],"CMU-106-biology-26":[],"CMU-106-biology-27":["細胞-細胞核與胞器"],"CMU-107-biology-9":[],"CMU-107-biology-29":["細胞-細胞膜"],"CMU-107-biology-44":["細胞-細胞核與胞器"],"CMU-108-biology-10":[],"CMU-108-biology-29":["細胞-細胞核與胞器"],"CMU-108-biology-30":["細胞-骨架與連結"],"CMU-108-biology-41":["細胞-細胞核與胞器"],"CMU-109-biology-8":["細胞-原核與真核"],"CMU-109-biology-44":[],"CMU-110-biology-10":[],"CMU-110-biology-13":[],"CMU-110-biology-22":["細胞-骨架與連結"],"CMU-110-biology-28":["細胞-細胞核與胞器"],"CMU-110-biology-33":[],"CMU-110-biology-39":["細胞-細胞核與胞器"],"CMU-111-biology-35":["細胞-細胞核與胞器"],"CMU-111-biology-40":["細胞-細胞核與胞器"],"CMU-112-biology-24":["細胞-骨架與連結"],"CMU-112-biology-48":["細胞-骨架與連結"],"CMU-113-biology-2":["細胞-細胞核與胞器"],"CMU-113-biology-41":[],"CMU-114-biology-16":[],"CMU-114-biology-29":["細胞-細胞核與胞器"],"CMU-114-biology-43":[],"CMU-114-biology-47":["細胞-原核與真核"],"CMU-114-biology-49":["細胞-骨架與連結"],"CMU-115-biology-2":[],"CMU-115-biology-4":[],"CMU-115-biology-5":["細胞-細胞核與胞器"],"CMU-115-biology-14":["細胞-細胞核與胞器"],"CMU-115-biology-46":[],"CMU-115-biology-47":[],"ISU-104-biology-3":[],"ISU-104-biology-48":[],"ISU-105-biology-3":[],"ISU-105-biology-14":[],"ISU-105-biology-18":[],"ISU-105-biology-33":[],"ISU-105-biology-34":[],"ISU-105-biology-36":[],"ISU-106-biology-6":["細胞-細胞核與胞器"],"ISU-106-biology-20":["細胞-細胞核與胞器"],"ISU-106-biology-31":[],"ISU-106-biology-35":["細胞-原核與真核"],"ISU-107-biology-9":["細胞-細胞核與胞器"],"ISU-107-biology-14":[],"ISU-107-biology-24":["細胞-骨架與連結"],"ISU-107-biology-26":["細胞-骨架與連結"],"ISU-107-biology-28":[],"ISU-107-biology-36":["細胞-原核與真核"],"ISU-107-biology-49":["細胞-細胞核與胞器"],"ISU-108-biology-12":[],"ISU-108-biology-13":["細胞-細胞核與胞器"],"ISU-108-biology-16":[],"ISU-108-biology-19":[],"ISU-108-biology-28":[],"ISU-108-biology-30":[],"ISU-108-biology-43":["細胞-原核與真核"],"ISU-109-biology-1":["細胞-原核與真核"],"ISU-110-biology-14":["細胞-骨架與連結"],"ISU-110-biology-46":[],"ISU-111-biology-11":["細胞-細胞核與胞器"],"ISU-111-biology-26":["細胞-原核與真核"],"ISU-111-biology-32":["細胞-原核與真核"],"ISU-111-biology-46":[],"ISU-112-biology-20":["細胞-細胞核與胞器"],"ISU-112-biology-23":[],"ISU-112-biology-39":[],"ISU-112-biology-45":["細胞-細胞核與胞器"],"ISU-112-biology-49":[],"ISU-113-biology-2":["細胞-細胞核與胞器"],"ISU-113-biology-26":["細胞-細胞核與胞器"],"ISU-113-biology-35":["細胞-原核與真核"],"ISU-113-biology-42":[],"ISU-114-biology-16":["細胞-細胞核與胞器"],"ISU-114-biology-17":["細胞-細胞核與胞器"],"ISU-114-biology-24":[],"ISU-114-biology-29":["細胞-原核與真核"],"ISU-115-biology-7":["細胞-原核與真核"],"ISU-115-biology-8":["細胞-細胞核與胞器"],"ISU-115-biology-14":[],"ISU-115-biology-17":[],"ISU-115-biology-18":["細胞-細胞核與胞器"],"ISU-115-biology-19":[],"ISU-115-biology-20":["細胞-細胞核與胞器"],"ISU-115-biology-23":[],"ISU-115-biology-29":["細胞-細胞核與胞器"],"ISU-115-biology-40":[],"TCU-104-biology-10":["細胞-原核與真核"],"TCU-104-biology-22":["細胞-細胞核與胞器"],"TCU-105-biology-1":["細胞-細胞核與胞器"],"TCU-105-biology-30":[],"TCU-105-biology-41":["細胞-骨架與連結"],"TCU-105-biology-42":["細胞-細胞核與胞器"],"TCU-105-biology-47":[],"TCU-106-biology-3":["細胞-細胞核與胞器"],"TCU-106-biology-4":[],"TCU-106-biology-12":[],"TCU-106-biology-14":["細胞-細胞核與胞器"],"TCU-106-biology-19":[],"TCU-106-biology-22":[],"TCU-106-biology-28":[],"TCU-106-biology-37":[],"TCU-107-biology-39":[],"TCU-108-biology-13":[],"TCU-108-biology-14":[],"TCU-108-biology-18":["細胞-細胞核與胞器"],"TCU-108-biology-42":[],"TCU-108-biology-45":["細胞-原核與真核"],"TCU-109-biology-3":[],"TCU-109-biology-4":[],"TCU-109-biology-5":[],"TCU-109-biology-7":["細胞-細胞核與胞器"],"TCU-109-biology-10":["細胞-骨架與連結"],"TCU-109-biology-12":["細胞-細胞核與胞器"],"TCU-109-biology-26":["細胞-原核與真核"],"TCU-109-biology-30":[],"TCU-109-biology-44":["細胞-細胞核與胞器"],"TCU-109-biology-45":["細胞-細胞核與胞器"],"TCU-109-biology-46":[],"TCU-110-biology-1":[],"TCU-110-biology-15":["細胞-細胞核與胞器"],"TCU-110-biology-34":[],"TCU-110-biology-41":[],"TCU-110-biology-44":[],"TCU-111-biology-6":["細胞-細胞核與胞器"],"TCU-111-biology-10":[],"TCU-111-biology-17":[],"TCU-111-biology-29":["細胞-原核與真核"],"TCU-113-biology-6":[],"TCU-113-biology-11":[],"TCU-113-biology-16":["細胞-骨架與連結"],"TCU-114-biology-10":["細胞-原核與真核"],"TCU-114-biology-19":["細胞-骨架與連結"],"TCU-114-biology-21":[],"TCU-114-biology-23":["細胞-骨架與連結"],"TCU-114-biology-26":["細胞-細胞核與胞器"],"TCU-114-biology-27":[],"TCU-114-biology-38":[],"TCU-114-biology-44":[],"TCU-114-biology-46":[],"TCU-115-biology-1":[],"TCU-115-biology-23":[],"TCU-115-biology-42":[],"CMU-106-chinese-7":["部首"],"ISU-110-chinese-18":["部首"],"ISU-111-chinese-3":["部首"],"ISU-115-chinese-3":["部首"],"ISU-115-chinese-14":["部首"],"CMU-115-biology-22":["細胞-細胞膜"],"CMU-106-biology-36":["細胞-細胞膜"],"ISU-105-biology-11":["細胞-細胞膜"],"ISU-105-biology-17":["細胞-細胞膜"],"ISU-106-biology-2":["細胞-細胞膜"],"CMU-105-chinese-13":["詩經"],"ISU-105-chinese-26":["詩經"]}
+{
+  "CMU-106-chemistry-39": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-44": [
+    "基礎-化學鍵"
+  ],
+  "CMU-107-chemistry-23": [
+    "基礎-化學鍵"
+  ],
+  "CMU-108-chemistry-44": [
+    "基礎-化學鍵"
+  ],
+  "CMU-109-chemistry-6": [
+    "基礎-化學鍵"
+  ],
+  "CMU-109-chemistry-18": [
+    "基礎-化學鍵"
+  ],
+  "CMU-111-chemistry-25": [
+    "基礎-化學鍵"
+  ],
+  "CMU-113-chemistry-37": [
+    "基礎-化學鍵"
+  ],
+  "CMU-113-chemistry-38": [
+    "基礎-化學鍵"
+  ],
+  "CMU-114-chemistry-25": [
+    "基礎-化學鍵"
+  ],
+  "CMU-115-chemistry-46": [
+    "基礎-化學鍵"
+  ],
+  "ISU-105-chemistry-2": [
+    "基礎-化學鍵"
+  ],
+  "ISU-105-chemistry-26": [
+    "基礎-化學鍵"
+  ],
+  "ISU-107-chemistry-9": [
+    "基礎-化學鍵"
+  ],
+  "ISU-107-chemistry-47": [
+    "基礎-化學鍵"
+  ],
+  "ISU-109-chemistry-23": [
+    "基礎-化學鍵"
+  ],
+  "ISU-111-chemistry-46": [
+    "基礎-化學鍵"
+  ],
+  "ISU-112-chemistry-6": [
+    "基礎-化學鍵"
+  ],
+  "ISU-112-chemistry-47": [
+    "基礎-化學鍵"
+  ],
+  "TCU-104-chemistry-3": [
+    "基礎-化學鍵"
+  ],
+  "TCU-107-chemistry-8": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-17": [
+    "基礎-化學鍵"
+  ],
+  "CMU-109-chemistry-14": [],
+  "CMU-109-chemistry-38": [],
+  "CMU-109-chemistry-40": [
+    "有機反應與機構"
+  ],
+  "CMU-110-chemistry-8": [
+    "有機反應與機構"
+  ],
+  "CMU-110-chemistry-19": [
+    "氣體"
+  ],
+  "CMU-110-chemistry-24": [
+    "基礎-化學鍵"
+  ],
+  "CMU-110-chemistry-36": [
+    "配位化合物"
+  ],
+  "CMU-110-chemistry-38": [
+    "基礎-單位因次"
+  ],
+  "CMU-110-chemistry-45": [
+    "化學綜合"
+  ],
+  "CMU-111-chemistry-5": [
+    "反應速率"
+  ],
+  "CMU-111-chemistry-13": [
+    "基礎-單位因次"
+  ],
+  "CMU-112-chemistry-12": [
+    "有機反應與機構"
+  ],
+  "CMU-112-chemistry-17": [
+    "氣體"
+  ],
+  "CMU-112-chemistry-20": [],
+  "CMU-112-chemistry-48": [
+    "基礎-化學鍵"
+  ],
+  "CMU-112-chemistry-50": [
+    "配位化合物"
+  ],
+  "CMU-113-chemistry-17": [
+    "酸鹼平衡"
+  ],
+  "CMU-113-chemistry-22": [
+    "氧化還原"
+  ],
+  "CMU-113-chemistry-28": [
+    "配位化合物"
+  ],
+  "CMU-114-chemistry-36": [
+    "基礎-單位因次"
+  ],
+  "CMU-115-chemistry-40": [
+    "基礎-週期表"
+  ],
+  "CMU-115-chemistry-47": [
+    "基礎-化學鍵"
+  ],
+  "CMU-115-chemistry-48": [],
+  "ISU-104-chemistry-1": [
+    "水溶液離子平衡"
+  ],
+  "ISU-104-chemistry-11": [
+    "基礎-化學鍵"
+  ],
+  "ISU-104-chemistry-19": [
+    "基礎-熱力學"
+  ],
+  "ISU-104-chemistry-40": [
+    "立體化學"
+  ],
+  "ISU-105-chemistry-36": [
+    "相變與分子間作用力"
+  ],
+  "ISU-105-chemistry-37": [
+    "光譜分析"
+  ],
+  "ISU-105-chemistry-38": [
+    "基礎-單位因次"
+  ],
+  "ISU-106-chemistry-2": [
+    "基礎-原子結構"
+  ],
+  "ISU-106-chemistry-4": [
+    "化學平衡"
+  ],
+  "ISU-106-chemistry-5": [
+    "氣體"
+  ],
+  "ISU-106-chemistry-8": [
+    "基礎-化學鍵"
+  ],
+  "ISU-106-chemistry-13": [
+    "配位化合物"
+  ],
+  "ISU-106-chemistry-14": [
+    "反應速率"
+  ],
+  "ISU-106-chemistry-20": [
+    "基礎-熱力學"
+  ],
+  "ISU-107-chemistry-2": [
+    "基礎-單位因次"
+  ],
+  "ISU-107-chemistry-12": [
+    "化學平衡"
+  ],
+  "ISU-107-chemistry-14": [
+    "基礎-熱力學"
+  ],
+  "ISU-107-chemistry-48": [
+    "氧化還原"
+  ],
+  "ISU-108-chemistry-3": [
+    "有機反應與機構"
+  ],
+  "ISU-108-chemistry-7": [
+    "光譜分析"
+  ],
+  "ISU-108-chemistry-9": [
+    "基礎-化學鍵"
+  ],
+  "ISU-108-chemistry-21": [
+    "化學綜合"
+  ],
+  "ISU-108-chemistry-22": [
+    "水溶液離子平衡"
+  ],
+  "ISU-108-chemistry-23": [
+    "水溶液離子平衡"
+  ],
+  "ISU-108-chemistry-41": [
+    "有機命名與官能基"
+  ],
+  "ISU-108-chemistry-50": [
+    "芳香族化學"
+  ],
+  "ISU-109-chemistry-7": [
+    "光譜分析"
+  ],
+  "ISU-109-chemistry-15": [
+    "有機反應與機構"
+  ],
+  "ISU-109-chemistry-20": [
+    "化學綜合"
+  ],
+  "ISU-109-chemistry-21": [
+    "有機反應與機構"
+  ],
+  "ISU-109-chemistry-22": [
+    "有機反應與機構"
+  ],
+  "ISU-109-chemistry-24": [
+    "化學綜合"
+  ],
+  "ISU-109-chemistry-28": [
+    "基礎-熱力學"
+  ],
+  "ISU-109-chemistry-37": [
+    "芳香族化學"
+  ],
+  "ISU-109-chemistry-39": [
+    "立體化學"
+  ],
+  "ISU-109-chemistry-41": [
+    "有機反應與機構"
+  ],
+  "ISU-110-chemistry-9": [
+    "基礎-單位因次"
+  ],
+  "ISU-110-chemistry-12": [
+    "有機反應與機構"
+  ],
+  "ISU-110-chemistry-19": [
+    "有機反應與機構"
+  ],
+  "ISU-110-chemistry-24": [
+    "有機反應與機構"
+  ],
+  "ISU-111-chemistry-1-d1": [
+    "週期性"
+  ],
+  "ISU-111-chemistry-2-d1": [
+    "週期性"
+  ],
+  "ISU-111-chemistry-5": [
+    "有機命名與官能基"
+  ],
+  "ISU-111-chemistry-34": [
+    "化學綜合"
+  ],
+  "ISU-111-chemistry-36": [
+    "化學綜合"
+  ],
+  "ISU-111-chemistry-37": [
+    "化學綜合"
+  ],
+  "ISU-111-chemistry-38": [
+    "化學綜合"
+  ],
+  "ISU-111-chemistry-39": [
+    "芳香族化學"
+  ],
+  "ISU-112-chemistry-1": [
+    "基礎-化學鍵"
+  ],
+  "ISU-112-chemistry-8": [
+    "配位化合物"
+  ],
+  "ISU-112-chemistry-20": [],
+  "ISU-112-chemistry-31": [
+    "配位化合物"
+  ],
+  "ISU-112-chemistry-39": [
+    "基礎-週期表"
+  ],
+  "ISU-113-chemistry-1-d2": [
+    "有機反應與機構"
+  ],
+  "ISU-113-chemistry-10": [
+    "立體化學"
+  ],
+  "ISU-113-chemistry-20": [
+    "基礎-化學鍵"
+  ],
+  "ISU-113-chemistry-29": [
+    "有機命名與官能基"
+  ],
+  "ISU-113-chemistry-41": [
+    "有機反應與機構"
+  ],
+  "ISU-114-chemistry-23": [
+    "有機反應與機構"
+  ],
+  "ISU-115-chemistry-32": [
+    "有機反應與機構"
+  ],
+  "TCU-104-chemistry-2": [
+    "化學綜合"
+  ],
+  "TCU-104-chemistry-18": [
+    "基礎-化學計量"
+  ],
+  "TCU-104-chemistry-19": [
+    "水溶液離子平衡"
+  ],
+  "TCU-104-chemistry-28": [
+    "有機命名與官能基"
+  ],
+  "TCU-104-chemistry-38": [
+    "有機反應與機構"
+  ],
+  "TCU-104-chemistry-43": [
+    "有機反應與機構"
+  ],
+  "TCU-105-chemistry-1": [
+    "基礎-原子結構"
+  ],
+  "TCU-105-chemistry-2": [
+    "週期趨勢"
+  ],
+  "TCU-105-chemistry-4": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-8": [
+    "氣體"
+  ],
+  "TCU-105-chemistry-12": [
+    "氣體"
+  ],
+  "TCU-106-chemistry-6": [],
+  "TCU-106-chemistry-8": [
+    "配位化合物"
+  ],
+  "TCU-106-chemistry-11": [],
+  "TCU-107-chemistry-9": [
+    "基礎-原子結構"
+  ],
+  "TCU-107-chemistry-23": [
+    "氣體"
+  ],
+  "TCU-107-chemistry-24": [
+    "酸鹼平衡"
+  ],
+  "TCU-108-chemistry-22": [
+    "水溶液離子平衡"
+  ],
+  "TCU-108-chemistry-32": [
+    "有機反應與機構"
+  ],
+  "TCU-108-chemistry-33": [
+    "光譜分析"
+  ],
+  "TCU-109-chemistry-8": [
+    "化學綜合"
+  ],
+  "TCU-109-chemistry-14": [
+    "化學綜合"
+  ],
+  "TCU-109-chemistry-15": [
+    "光譜分析"
+  ],
+  "TCU-109-chemistry-26": [
+    "基礎-化學鍵"
+  ],
+  "TCU-109-chemistry-46": [
+    "光譜分析"
+  ],
+  "TCU-110-chemistry-16": [],
+  "TCU-110-chemistry-17": [
+    "氣體"
+  ],
+  "TCU-110-chemistry-18": [
+    "反應速率"
+  ],
+  "TCU-110-chemistry-25": [
+    "氧化還原"
+  ],
+  "TCU-110-chemistry-50": [
+    "氧化還原"
+  ],
+  "TCU-111-chemistry-40": [
+    "基礎-熱力學"
+  ],
+  "TCU-111-chemistry-42": [
+    "週期趨勢"
+  ],
+  "TCU-111-chemistry-43": [
+    "週期趨勢"
+  ],
+  "TCU-111-chemistry-47": [
+    "基礎-原子結構"
+  ],
+  "TCU-113-chemistry-9": [
+    "基礎-單位因次"
+  ],
+  "TCU-113-chemistry-40": [
+    "光譜分析"
+  ],
+  "TCU-113-chemistry-42": [
+    "有機命名與官能基"
+  ],
+  "TCU-114-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "TCU-114-chemistry-11": [
+    "基礎-熱力學"
+  ],
+  "TCU-114-chemistry-25": [
+    "有機反應與機構"
+  ],
+  "TCU-114-chemistry-32": [
+    "基礎-單位因次"
+  ],
+  "TCU-114-chemistry-45": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-23": [
+    "週期趨勢"
+  ],
+  "TCU-115-chemistry-41": [
+    "立體化學"
+  ],
+  "CMU-104-biology-7": [
+    "生態學"
+  ],
+  "CMU-104-biology-11": [
+    "生命分子與生物化學"
+  ],
+  "CMU-105-biology-23": [
+    "生命分子與生物化學"
+  ],
+  "CMU-108-biology-28": [
+    "植物構造與組織"
+  ],
+  "CMU-108-biology-45": [
+    "植物生理"
+  ],
+  "CMU-110-biology-2": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-110-biology-16": [
+    "植物生理"
+  ],
+  "CMU-114-biology-37": [
+    "微生物"
+  ],
+  "ISU-105-biology-44": [
+    "微生物"
+  ],
+  "ISU-106-biology-1": [
+    "孟德爾遺傳"
+  ],
+  "ISU-106-biology-9": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "ISU-106-biology-12": [
+    "循環與呼吸"
+  ],
+  "ISU-106-biology-15": [
+    "循環與呼吸"
+  ],
+  "ISU-106-biology-23": [
+    "細胞膜與物質運輸"
+  ],
+  "ISU-106-biology-30": [
+    "生命分子與生物化學"
+  ],
+  "ISU-107-biology-7": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "ISU-107-biology-11": [
+    "細胞呼吸與能量代謝"
+  ],
+  "ISU-107-biology-13": [
+    "神經系統與行為"
+  ],
+  "ISU-107-biology-20": [
+    "排泄與滲透調節"
+  ],
+  "ISU-107-biology-23": [
+    "生命分子與生物化學"
+  ],
+  "ISU-107-biology-40": [
+    "循環與呼吸"
+  ],
+  "ISU-107-biology-48": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "ISU-107-biology-50": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "ISU-108-biology-25": [
+    "免疫系統"
+  ],
+  "ISU-108-biology-32": [
+    "孟德爾遺傳"
+  ],
+  "ISU-108-biology-50": [
+    "神經系統與行為"
+  ],
+  "ISU-109-biology-4": [
+    "植物生理"
+  ],
+  "ISU-109-biology-22": [
+    "排泄與滲透調節"
+  ],
+  "ISU-109-biology-39": [
+    "神經系統與行為"
+  ],
+  "ISU-110-biology-8": [
+    "生命分子與生物化學"
+  ],
+  "ISU-110-biology-21": [
+    "演化與生命起源"
+  ],
+  "ISU-110-biology-22": [
+    "演化與生命起源"
+  ],
+  "ISU-111-biology-6": [
+    "消化與營養"
+  ],
+  "ISU-111-biology-14": [
+    "生態學"
+  ],
+  "ISU-111-biology-15": [
+    "神經系統與行為"
+  ],
+  "ISU-111-biology-24": [
+    "生物技術與分子工具"
+  ],
+  "ISU-111-biology-36": [],
+  "ISU-111-biology-39": [
+    "神經系統與行為"
+  ],
+  "ISU-111-biology-44": [
+    "細胞膜與物質運輸"
+  ],
+  "ISU-112-biology-10": [
+    "演化與生命起源"
+  ],
+  "ISU-112-biology-30": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "ISU-112-biology-40": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "ISU-113-biology-17": [
+    "免疫系統"
+  ],
+  "ISU-113-biology-19": [
+    "神經系統與行為"
+  ],
+  "ISU-113-biology-20": [
+    "細胞呼吸與能量代謝"
+  ],
+  "ISU-113-biology-44": [
+    "細胞訊號傳遞"
+  ],
+  "ISU-114-biology-31": [
+    "神經系統與行為"
+  ],
+  "ISU-114-biology-38": [
+    "神經系統與行為"
+  ],
+  "ISU-114-biology-39": [
+    "神經系統與行為"
+  ],
+  "ISU-115-biology-6": [
+    "細胞訊號傳遞"
+  ],
+  "ISU-115-biology-36": [
+    "植物構造與組織"
+  ],
+  "TCU-104-biology-2": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-104-biology-11": [
+    "分類與生物多樣性"
+  ],
+  "TCU-104-biology-13": [
+    "分類與生物多樣性"
+  ],
+  "TCU-104-biology-19": [
+    "神經系統與行為"
+  ],
+  "TCU-104-biology-21": [
+    "生態學"
+  ],
+  "TCU-104-biology-23": [
+    "細胞膜與物質運輸"
+  ],
+  "TCU-105-biology-3": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-105-biology-7": [
+    "植物生理"
+  ],
+  "TCU-105-biology-12": [
+    "神經系統與行為"
+  ],
+  "TCU-105-biology-37": [
+    "生命分子與生物化學"
+  ],
+  "TCU-105-biology-43": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "TCU-107-biology-4": [
+    "生物學綜合"
+  ],
+  "TCU-107-biology-4-d1": [
+    "植物生理"
+  ],
+  "TCU-107-biology-5-d1": [
+    "植物生理"
+  ],
+  "TCU-108-biology-2": [
+    "孟德爾遺傳"
+  ],
+  "TCU-108-biology-8": [
+    "神經系統與行為"
+  ],
+  "TCU-109-biology-14": [
+    "微生物"
+  ],
+  "TCU-109-biology-24": [
+    "分類與生物多樣性"
+  ],
+  "TCU-111-biology-3": [
+    "植物生理"
+  ],
+  "TCU-111-biology-4": [
+    "分類與生物多樣性"
+  ],
+  "TCU-111-biology-41": [
+    "分類與生物多樣性"
+  ],
+  "TCU-113-biology-1": [
+    "植物生理"
+  ],
+  "TCU-114-biology-6": [
+    "植物生理"
+  ],
+  "TCU-114-biology-8": [
+    "植物生理"
+  ],
+  "TCU-114-biology-9": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "TCU-114-biology-11": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "TCU-114-biology-12": [
+    "生物技術與分子工具"
+  ],
+  "TCU-114-biology-13": [
+    "演化與生命起源"
+  ],
+  "TCU-114-biology-16": [
+    "生態學"
+  ],
+  "TCU-114-biology-18": [
+    "演化與生命起源"
+  ],
+  "TCU-114-biology-25": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-114-biology-35": [
+    "細胞呼吸與能量代謝"
+  ],
+  "TCU-115-biology-1-d1": [
+    "生物學綜合"
+  ],
+  "TCU-115-biology-3-d1": [
+    "生物學綜合"
+  ],
+  "TCU-115-biology-5-d2": [
+    "植物生理"
+  ],
+  "TCU-115-biology-12": [
+    "神經系統與行為"
+  ],
+  "TCU-115-biology-20": [
+    "神經系統與行為"
+  ],
+  "CMU-104-biology-1": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-104-biology-5": [
+    "排泄與滲透調節"
+  ],
+  "CMU-104-biology-6": [
+    "排泄與滲透調節"
+  ],
+  "CMU-104-biology-13": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-104-biology-14": [
+    "孟德爾遺傳"
+  ],
+  "CMU-104-biology-15": [
+    "孟德爾遺傳"
+  ],
+  "CMU-104-biology-16": [
+    "孟德爾遺傳"
+  ],
+  "CMU-104-biology-22": [
+    "微生物"
+  ],
+  "CMU-104-biology-26": [
+    "生物學綜合"
+  ],
+  "CMU-104-biology-29": [
+    "消化與營養"
+  ],
+  "CMU-104-biology-37": [
+    "消化與營養",
+    "植物生理"
+  ],
+  "CMU-104-biology-38": [
+    "植物生理"
+  ],
+  "CMU-104-biology-39": [
+    "光合作用與C4/CAM"
+  ],
+  "CMU-104-biology-41": [
+    "植物生理"
+  ],
+  "CMU-104-biology-48": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-104-biology-49": [
+    "分子遺傳：DNA複製與染色體",
+    "微生物"
+  ],
+  "CMU-104-biology-50": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-105-biology-2": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-105-biology-5": [
+    "光合作用與C4/CAM"
+  ],
+  "CMU-105-biology-7": [
+    "生物技術與分子工具"
+  ],
+  "CMU-105-biology-8": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-105-biology-10": [
+    "生物學綜合"
+  ],
+  "CMU-105-biology-13": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-105-biology-16": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-105-biology-18": [],
+  "CMU-105-biology-21": [
+    "微生物"
+  ],
+  "CMU-105-biology-27": [
+    "免疫系統"
+  ],
+  "CMU-105-biology-28": [
+    "微生物"
+  ],
+  "CMU-105-biology-29": [
+    "微生物"
+  ],
+  "CMU-105-biology-30": [
+    "內分泌系統",
+    "消化與營養"
+  ],
+  "CMU-105-biology-31": [
+    "消化與營養"
+  ],
+  "CMU-105-biology-35": [
+    "內分泌系統"
+  ],
+  "CMU-105-biology-37": [
+    "神經系統與行為"
+  ],
+  "CMU-105-biology-39": [
+    "內分泌系統"
+  ],
+  "CMU-105-biology-41": [
+    "生物技術與分子工具"
+  ],
+  "CMU-105-biology-44": [
+    "演化與生命起源"
+  ],
+  "CMU-105-biology-46": [
+    "神經系統與行為",
+    "免疫系統"
+  ],
+  "CMU-105-biology-49": [
+    "內分泌系統"
+  ],
+  "CMU-106-biology-2": [
+    "生態學"
+  ],
+  "CMU-106-biology-8": [
+    "生命分子與生物化學",
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-106-biology-12": [
+    "演化與生命起源"
+  ],
+  "CMU-106-biology-13": [
+    "植物生理"
+  ],
+  "CMU-106-biology-17": [
+    "孟德爾遺傳"
+  ],
+  "CMU-106-biology-20": [
+    "微生物"
+  ],
+  "CMU-106-biology-30": [
+    "內分泌系統"
+  ],
+  "CMU-106-biology-31": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-106-biology-35": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-106-biology-38": [
+    "生命分子與生物化學"
+  ],
+  "CMU-106-biology-39": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-106-biology-48": [
+    "循環與呼吸"
+  ],
+  "CMU-106-biology-49": [
+    "免疫系統",
+    "微生物"
+  ],
+  "CMU-106-biology-50": [
+    "動物生殖與發育",
+    "內分泌系統"
+  ],
+  "CMU-107-biology-1": [
+    "植物生理"
+  ],
+  "CMU-107-biology-3": [
+    "植物生理"
+  ],
+  "CMU-107-biology-10": [
+    "內分泌系統",
+    "動物生殖與發育"
+  ],
+  "CMU-107-biology-11": [
+    "消化與營養"
+  ],
+  "CMU-107-biology-15": [
+    "循環與呼吸"
+  ],
+  "CMU-107-biology-25": [
+    "生態學"
+  ],
+  "CMU-107-biology-30": [
+    "微生物"
+  ],
+  "CMU-107-biology-32": [
+    "植物生理",
+    "免疫系統"
+  ],
+  "CMU-107-biology-38": [
+    "神經系統與行為",
+    "植物生理"
+  ],
+  "CMU-107-biology-39": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-107-biology-41": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-107-biology-42": [
+    "神經系統與行為",
+    "生態學"
+  ],
+  "CMU-107-biology-43": [
+    "生物技術與分子工具"
+  ],
+  "CMU-107-biology-45": [
+    "細胞呼吸與能量代謝",
+    "微生物"
+  ],
+  "CMU-107-biology-48": [
+    "細胞-細胞膜"
+  ],
+  "CMU-108-biology-7": [
+    "演化與生命起源"
+  ],
+  "CMU-108-biology-8": [
+    "演化與生命起源"
+  ],
+  "CMU-108-biology-13": [
+    "演化與生命起源"
+  ],
+  "CMU-108-biology-14": [
+    "植物生理"
+  ],
+  "CMU-108-biology-16": [
+    "分子遺傳：DNA複製與染色體",
+    "孟德爾遺傳"
+  ],
+  "CMU-108-biology-18": [
+    "演化與生命起源"
+  ],
+  "CMU-108-biology-19": [
+    "免疫系統"
+  ],
+  "CMU-108-biology-20": [
+    "生態學"
+  ],
+  "CMU-108-biology-22": [],
+  "CMU-108-biology-23": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-108-biology-27": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-108-biology-33": [
+    "微生物",
+    "酵素"
+  ],
+  "CMU-108-biology-36": [
+    "植物生理"
+  ],
+  "CMU-108-biology-38": [
+    "生物技術與分子工具",
+    "生態學"
+  ],
+  "CMU-108-biology-43": [
+    "植物生理"
+  ],
+  "CMU-108-biology-44": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-108-biology-46": [
+    "植物生理",
+    "細胞膜與物質運輸"
+  ],
+  "CMU-108-biology-47": [
+    "細胞膜與物質運輸"
+  ],
+  "CMU-108-biology-49": [
+    "排泄與滲透調節",
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-109-biology-3": [
+    "動物生殖與發育"
+  ],
+  "CMU-109-biology-6": [
+    "植物構造與組織"
+  ],
+  "CMU-109-biology-13": [
+    "分類與生物多樣性"
+  ],
+  "CMU-109-biology-15": [
+    "植物生理",
+    "微生物"
+  ],
+  "CMU-109-biology-17": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-109-biology-23": [
+    "生態學"
+  ],
+  "CMU-109-biology-30": [
+    "植物生理"
+  ],
+  "CMU-109-biology-33": [
+    "細胞分裂"
+  ],
+  "CMU-109-biology-35": [
+    "細胞膜與物質運輸"
+  ],
+  "CMU-109-biology-36": [
+    "細胞分裂"
+  ],
+  "CMU-109-biology-37": [
+    "生物技術與分子工具"
+  ],
+  "CMU-109-biology-39": [
+    "骨骼與肌肉運動",
+    "神經系統與行為"
+  ],
+  "CMU-109-biology-42": [
+    "循環與呼吸",
+    "分類與生物多樣性"
+  ],
+  "CMU-109-biology-45": [
+    "植物構造與組織"
+  ],
+  "CMU-109-biology-47": [
+    "生物學綜合"
+  ],
+  "CMU-109-biology-48": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-110-biology-3": [
+    "生物學綜合"
+  ],
+  "CMU-110-biology-8": [
+    "植物生理"
+  ],
+  "CMU-110-biology-9": [
+    "演化與生命起源"
+  ],
+  "CMU-110-biology-14": [
+    "免疫系統",
+    "循環與呼吸"
+  ],
+  "CMU-110-biology-15": [
+    "植物生理"
+  ],
+  "CMU-110-biology-17": [
+    "植物生理"
+  ],
+  "CMU-110-biology-19": [
+    "內分泌系統"
+  ],
+  "CMU-110-biology-29": [
+    "細胞呼吸與能量代謝",
+    "生命分子與生物化學"
+  ],
+  "CMU-110-biology-31": [
+    "細胞膜與物質運輸"
+  ],
+  "CMU-110-biology-35": [
+    "分子遺傳：DNA複製與染色體",
+    "酵素"
+  ],
+  "CMU-110-biology-36": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-110-biology-37": [
+    "消化與營養"
+  ],
+  "CMU-110-biology-41": [
+    "生物技術與分子工具"
+  ],
+  "CMU-110-biology-42": [
+    "生態學"
+  ],
+  "CMU-110-biology-47": [
+    "內分泌系統",
+    "動物生殖與發育"
+  ],
+  "CMU-110-biology-49": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-111-biology-1": [
+    "微生物"
+  ],
+  "CMU-111-biology-4": [
+    "免疫系統"
+  ],
+  "CMU-111-biology-5": [
+    "免疫系統"
+  ],
+  "CMU-111-biology-7": [
+    "內分泌系統"
+  ],
+  "CMU-111-biology-13": [
+    "細胞膜與物質運輸"
+  ],
+  "CMU-111-biology-18": [
+    "免疫系統"
+  ],
+  "CMU-111-biology-21": [
+    "微生物"
+  ],
+  "CMU-111-biology-24": [
+    "微生物"
+  ],
+  "CMU-111-biology-25": [
+    "微生物"
+  ],
+  "CMU-111-biology-26": [
+    "微生物",
+    "神經系統與行為"
+  ],
+  "CMU-111-biology-27": [
+    "動物生殖與發育"
+  ],
+  "CMU-111-biology-28": [
+    "演化與生命起源",
+    "分類與生物多樣性"
+  ],
+  "CMU-111-biology-30": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-111-biology-31": [
+    "植物生理",
+    "細胞分裂"
+  ],
+  "CMU-111-biology-33": [
+    "植物構造與組織"
+  ],
+  "CMU-111-biology-37": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-111-biology-43": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-111-biology-44": [
+    "基因表現：轉錄轉譯與調控",
+    "演化與生命起源"
+  ],
+  "CMU-111-biology-47": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-111-biology-48": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-111-biology-49": [
+    "演化與生命起源"
+  ],
+  "CMU-111-biology-50": [
+    "演化與生命起源",
+    "植物構造與組織"
+  ],
+  "CMU-112-biology-1": [
+    "生態學"
+  ],
+  "CMU-112-biology-9": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-112-biology-14": [
+    "動物生殖與發育",
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-112-biology-21": [
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-112-biology-23": [
+    "植物生理"
+  ],
+  "CMU-112-biology-26": [
+    "微生物",
+    "酵素"
+  ],
+  "CMU-112-biology-27": [
+    "微生物"
+  ],
+  "CMU-112-biology-28": [
+    "生態學"
+  ],
+  "CMU-112-biology-29": [
+    "孟德爾遺傳"
+  ],
+  "CMU-112-biology-36": [
+    "演化與生命起源",
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-112-biology-44": [
+    "免疫系統"
+  ],
+  "CMU-112-biology-45": [
+    "生態學"
+  ],
+  "CMU-112-biology-50": [
+    "演化與生命起源"
+  ],
+  "CMU-113-biology-1": [
+    "演化與生命起源"
+  ],
+  "CMU-113-biology-4": [
+    "演化與生命起源"
+  ],
+  "CMU-113-biology-11": [
+    "神經系統與行為",
+    "內分泌系統"
+  ],
+  "CMU-113-biology-13": [
+    "基因表現：轉錄轉譯與調控",
+    "微生物"
+  ],
+  "CMU-113-biology-14": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-113-biology-15": [
+    "消化與營養",
+    "循環與呼吸"
+  ],
+  "CMU-113-biology-20": [
+    "免疫系統"
+  ],
+  "CMU-113-biology-22": [],
+  "CMU-113-biology-23": [
+    "免疫系統"
+  ],
+  "CMU-113-biology-26": [
+    "孟德爾遺傳",
+    "細胞分裂"
+  ],
+  "CMU-113-biology-27": [
+    "孟德爾遺傳"
+  ],
+  "CMU-113-biology-31": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-113-biology-32": [
+    "生物技術與分子工具",
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-113-biology-34": [
+    "生命分子與生物化學"
+  ],
+  "CMU-113-biology-35": [
+    "生命分子與生物化學"
+  ],
+  "CMU-113-biology-36": [
+    "微生物",
+    "分子遺傳：DNA複製與染色體"
+  ],
+  "CMU-113-biology-38": [
+    "免疫系統",
+    "微生物"
+  ],
+  "CMU-113-biology-39": [
+    "基因表現：轉錄轉譯與調控",
+    "生物技術與分子工具"
+  ],
+  "CMU-113-biology-40": [
+    "內分泌系統",
+    "生命分子與生物化學"
+  ],
+  "CMU-113-biology-43": [
+    "免疫系統"
+  ],
+  "CMU-113-biology-44": [
+    "生物學綜合"
+  ],
+  "CMU-113-biology-48": [
+    "生命分子與生物化學",
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-114-biology-12": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-114-biology-13": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "CMU-114-biology-15": [
+    "細胞-細胞膜"
+  ],
+  "CMU-114-biology-25": [
+    "生態學"
+  ],
+  "CMU-114-biology-28": [
+    "細胞呼吸與能量代謝",
+    "微生物"
+  ],
+  "CMU-114-biology-30": [
+    "生態學"
+  ],
+  "CMU-114-biology-35": [
+    "微生物"
+  ],
+  "CMU-114-biology-38": [
+    "生物技術與分子工具"
+  ],
+  "CMU-114-biology-40": [
+    "微生物"
+  ],
+  "CMU-114-biology-41": [
+    "微生物"
+  ],
+  "CMU-114-biology-42": [
+    "生物技術與分子工具"
+  ],
+  "CMU-114-biology-50": [
+    "內分泌系統",
+    "神經系統與行為"
+  ],
+  "CMU-115-biology-3": [
+    "光合作用與C4/CAM"
+  ],
+  "CMU-115-biology-8": [
+    "神經系統與行為",
+    "骨骼與肌肉運動"
+  ],
+  "CMU-115-biology-15": [
+    "細胞-細胞膜"
+  ],
+  "CMU-115-biology-28": [
+    "微生物",
+    "生命分子與生物化學"
+  ],
+  "CMU-115-biology-29": [
+    "酵素"
+  ],
+  "CMU-115-biology-32": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "CMU-115-biology-33": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-115-biology-34": [
+    "免疫系統"
+  ],
+  "CMU-115-biology-36": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-115-biology-39": [
+    "生命分子與生物化學",
+    "酵素"
+  ],
+  "CMU-115-biology-42": [
+    "生態學",
+    "微生物"
+  ],
+  "CMU-115-biology-48": [
+    "細胞呼吸與能量代謝"
+  ],
+  "CMU-115-biology-49": [
+    "生態學"
+  ],
+  "CMU-104-chemistry-2": [
+    "反應速率"
+  ],
+  "CMU-104-chemistry-7": [],
+  "CMU-104-chemistry-16": [
+    "基礎-單位因次"
+  ],
+  "CMU-104-chemistry-24": [
+    "基礎-熱力學"
+  ],
+  "CMU-104-chemistry-30": [
+    "有機反應與機構"
+  ],
+  "CMU-104-chemistry-32": [
+    "有機反應與機構"
+  ],
+  "CMU-104-chemistry-36": [
+    "有機反應與機構"
+  ],
+  "CMU-104-chemistry-48": [
+    "基礎-化學鍵"
+  ],
+  "CMU-105-chemistry-3": [],
+  "CMU-105-chemistry-13": [
+    "酸鹼平衡"
+  ],
+  "CMU-105-chemistry-34": [
+    "基礎-熱力學"
+  ],
+  "CMU-105-chemistry-35": [
+    "反應速率"
+  ],
+  "CMU-105-chemistry-37": [
+    "基礎-化學鍵"
+  ],
+  "CMU-105-chemistry-39": [
+    "氣體"
+  ],
+  "CMU-105-chemistry-40": [
+    "氧化還原",
+    "酸鹼平衡"
+  ],
+  "CMU-105-chemistry-42": [
+    "酸鹼平衡",
+    "芳香族化學"
+  ],
+  "CMU-105-chemistry-47": [
+    "光譜分析",
+    "有機命名與官能基"
+  ],
+  "CMU-105-chemistry-48": [],
+  "CMU-105-chemistry-49": [],
+  "CMU-105-chemistry-50": [],
+  "CMU-106-chemistry-3": [],
+  "CMU-106-chemistry-13": [
+    "有機反應與機構"
+  ],
+  "CMU-106-chemistry-18": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-19": [
+    "基礎-單位因次"
+  ],
+  "CMU-106-chemistry-20": [
+    "基礎-單位因次"
+  ],
+  "CMU-106-chemistry-28": [
+    "化學綜合"
+  ],
+  "CMU-106-chemistry-31": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-42": [],
+  "CMU-107-chemistry-2": [
+    "基礎-化學計量"
+  ],
+  "CMU-107-chemistry-17": [
+    "有機反應與機構"
+  ],
+  "CMU-107-chemistry-25": [],
+  "CMU-108-chemistry-10": [
+    "配位化合物"
+  ],
+  "CMU-108-chemistry-15": [],
+  "CMU-108-chemistry-23": [
+    "配位化合物",
+    "立體化學"
+  ],
+  "CMU-108-chemistry-25": [
+    "酸鹼平衡"
+  ],
+  "CMU-108-chemistry-43": [],
+  "CMU-109-chemistry-1": [
+    "基礎-化學鍵"
+  ],
+  "CMU-109-chemistry-9": [
+    "基礎-化學計量"
+  ],
+  "CMU-109-chemistry-42": [
+    "酸鹼平衡"
+  ],
+  "CMU-110-chemistry-4": [
+    "有機反應與機構"
+  ],
+  "CMU-110-chemistry-6": [],
+  "CMU-110-chemistry-50": [
+    "有機反應與機構"
+  ],
+  "CMU-111-chemistry-1": [
+    "基礎-化學計量"
+  ],
+  "CMU-111-chemistry-7": [
+    "基礎-化學計量"
+  ],
+  "CMU-111-chemistry-21": [],
+  "CMU-112-chemistry-13": [],
+  "CMU-112-chemistry-23": [
+    "基礎-單位因次"
+  ],
+  "CMU-112-chemistry-26": [
+    "芳香族化學",
+    "有機反應與機構"
+  ],
+  "CMU-112-chemistry-31": [
+    "酸鹼平衡"
+  ],
+  "CMU-114-chemistry-10": [
+    "配位化合物"
+  ],
+  "CMU-114-chemistry-39": [
+    "氣體"
+  ],
+  "CMU-115-chemistry-13": [
+    "有機反應與機構"
+  ],
+  "CMU-115-chemistry-14": [
+    "有機反應與機構",
+    "立體化學"
+  ],
+  "CMU-115-chemistry-31": [
+    "酸鹼平衡"
+  ],
+  "CMU-115-chemistry-34": [
+    "基礎-化學計量"
+  ],
+  "CMU-104-chinese-6": [
+    "閱讀理解綜合"
+  ],
+  "CMU-104-chinese-9": [
+    "古典散文文言閱讀"
+  ],
+  "CMU-104-chinese-14": [
+    "文學史常識"
+  ],
+  "CMU-104-chinese-20": [
+    "字詞義訓詁"
+  ],
+  "CMU-104-chinese-22": [
+    "文學史常識"
+  ],
+  "CMU-104-chinese-25": [
+    "文化教材思想"
+  ],
+  "CMU-104-chinese-32": [
+    "文學史常識"
+  ],
+  "CMU-104-chinese-44": [
+    "文學史常識"
+  ],
+  "CMU-104-chinese-50": [
+    "修辭格"
+  ],
+  "CMU-105-chinese-14": [
+    "文學史常識"
+  ],
+  "CMU-105-chinese-24": [
+    "閱讀理解綜合"
+  ],
+  "CMU-105-chinese-25": [
+    "字詞義訓詁"
+  ],
+  "CMU-105-chinese-26": [
+    "閱讀理解綜合"
+  ],
+  "CMU-105-chinese-43": [
+    "修辭格"
+  ],
+  "CMU-106-chinese-9": [
+    "成語熟語"
+  ],
+  "CMU-106-chinese-12": [
+    "詞性語法句構"
+  ],
+  "CMU-106-chinese-13": [
+    "文學史常識"
+  ],
+  "CMU-106-chinese-21": [
+    "文學史常識"
+  ],
+  "CMU-106-chinese-23": [
+    "文學史常識"
+  ],
+  "CMU-106-chinese-27": [
+    "字詞義訓詁"
+  ],
+  "CMU-106-chinese-45": [
+    "修辭格"
+  ],
+  "CMU-107-chinese-3": [
+    "古典散文文言閱讀"
+  ],
+  "CMU-107-chinese-18": [
+    "詞性語法句構"
+  ],
+  "CMU-107-chinese-19": [
+    "成語熟語"
+  ],
+  "CMU-107-chinese-20": [
+    "詞性語法句構"
+  ],
+  "CMU-107-chinese-24": [
+    "閱讀理解綜合"
+  ],
+  "CMU-107-chinese-32": [
+    "詞性語法句構"
+  ],
+  "CMU-107-chinese-35": [
+    "字詞義訓詁"
+  ],
+  "CMU-107-chinese-37": [
+    "文化教材思想"
+  ],
+  "CMU-107-chinese-44": [
+    "古典韻文"
+  ],
+  "CMU-107-chinese-48": [
+    "古典韻文"
+  ],
+  "CMU-108-chinese-4": [
+    "古典韻文"
+  ],
+  "CMU-108-chinese-12": [
+    "閱讀理解綜合"
+  ],
+  "CMU-108-chinese-13": [
+    "字音字形"
+  ],
+  "CMU-108-chinese-25": [
+    "詞性語法句構",
+    "古典散文文言閱讀"
+  ],
+  "CMU-108-chinese-29": [
+    "字詞義訓詁"
+  ],
+  "CMU-108-chinese-32": [
+    "文化教材思想"
+  ],
+  "CMU-108-chinese-35": [
+    "成語熟語"
+  ],
+  "CMU-108-chinese-40": [
+    "閱讀理解綜合"
+  ],
+  "CMU-108-chinese-47": [
+    "閱讀理解綜合"
+  ],
+  "CMU-108-chinese-49": [
+    "字詞義訓詁"
+  ],
+  "CMU-109-chinese-12": [
+    "古典韻文"
+  ],
+  "CMU-109-chinese-25": [
+    "古典韻文"
+  ],
+  "CMU-109-chinese-31": [
+    "古典散文文言閱讀",
+    "文化教材思想"
+  ],
+  "CMU-109-chinese-34": [
+    "應用文書信"
+  ],
+  "CMU-109-chinese-40": [
+    "閱讀理解綜合"
+  ],
+  "CMU-109-chinese-41": [
+    "閱讀理解綜合"
+  ],
+  "CMU-109-chinese-42": [
+    "閱讀理解綜合"
+  ],
+  "CMU-109-chinese-45": [
+    "成語熟語"
+  ],
+  "CMU-110-chinese-6": [
+    "閱讀理解綜合"
+  ],
+  "CMU-110-chinese-18": [
+    "閱讀理解綜合"
+  ],
+  "CMU-110-chinese-21": [
+    "閱讀理解綜合"
+  ],
+  "CMU-110-chinese-24": [
+    "文學史常識"
+  ],
+  "CMU-110-chinese-31": [
+    "閱讀理解綜合"
+  ],
+  "CMU-110-chinese-45": [
+    "閱讀理解綜合"
+  ],
+  "CMU-110-chinese-48": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-9": [
+    "國學常識"
+  ],
+  "CMU-111-chinese-13": [
+    "應用文書信"
+  ],
+  "CMU-111-chinese-17": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-18": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-19": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-20": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-37": [
+    "閱讀理解綜合"
+  ],
+  "CMU-111-chinese-43": [
+    "文化教材思想"
+  ],
+  "CMU-112-chinese-8": [
+    "文化教材思想"
+  ],
+  "CMU-112-chinese-11": [
+    "國學常識"
+  ],
+  "CMU-112-chinese-17": [
+    "閱讀理解綜合"
+  ],
+  "CMU-112-chinese-18": [
+    "閱讀理解綜合"
+  ],
+  "CMU-112-chinese-24": [
+    "閱讀理解綜合"
+  ],
+  "CMU-112-chinese-26": [
+    "閱讀理解綜合"
+  ],
+  "CMU-112-chinese-30": [
+    "國學常識"
+  ],
+  "CMU-112-chinese-32": [
+    "字詞義訓詁"
+  ],
+  "CMU-112-chinese-33": [
+    "詞性語法句構"
+  ],
+  "CMU-112-chinese-40": [
+    "閱讀理解綜合"
+  ],
+  "CMU-113-chinese-12": [
+    "修辭格",
+    "古典韻文"
+  ],
+  "CMU-113-chinese-16": [
+    "閱讀理解綜合"
+  ],
+  "CMU-113-chinese-23": [
+    "閱讀理解綜合"
+  ],
+  "CMU-113-chinese-28": [
+    "成語熟語"
+  ],
+  "CMU-113-chinese-32": [
+    "閱讀理解綜合"
+  ],
+  "CMU-113-chinese-33": [
+    "閱讀理解綜合"
+  ],
+  "CMU-113-chinese-39": [
+    "詞性語法句構"
+  ],
+  "CMU-113-chinese-47": [
+    "古典韻文"
+  ],
+  "CMU-114-chinese-3": [
+    "詞性語法句構"
+  ],
+  "CMU-114-chinese-9": [
+    "古典散文文言閱讀"
+  ],
+  "CMU-114-chinese-13": [
+    "國學常識"
+  ],
+  "CMU-114-chinese-19": [
+    "閱讀理解綜合"
+  ],
+  "CMU-114-chinese-21": [
+    "閱讀理解綜合"
+  ],
+  "CMU-114-chinese-22": [
+    "閱讀理解綜合"
+  ],
+  "CMU-114-chinese-23": [
+    "閱讀理解綜合"
+  ],
+  "CMU-114-chinese-28": [
+    "古典韻文"
+  ],
+  "CMU-114-chinese-33": [
+    "古典韻文",
+    "修辭格"
+  ],
+  "CMU-114-chinese-37": [
+    "字詞義訓詁"
+  ],
+  "CMU-114-chinese-48": [
+    "國學常識"
+  ],
+  "CMU-114-chinese-49": [
+    "成語熟語"
+  ],
+  "CMU-115-chinese-6": [
+    "成語熟語"
+  ],
+  "CMU-115-chinese-13": [
+    "字詞義訓詁"
+  ],
+  "CMU-115-chinese-15": [
+    "閱讀理解綜合"
+  ],
+  "CMU-115-chinese-16": [
+    "閱讀理解綜合"
+  ],
+  "CMU-115-chinese-17": [
+    "古典韻文"
+  ],
+  "CMU-115-chinese-18": [
+    "古典韻文"
+  ],
+  "CMU-115-chinese-22": [
+    "文學史常識"
+  ],
+  "CMU-115-chinese-34": [
+    "字音字形",
+    "字詞義訓詁"
+  ],
+  "CMU-115-chinese-44": [
+    "古典韻文",
+    "修辭格"
+  ],
+  "CMU-104-english-7": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-8": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-9": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-10": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-11": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-12": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-13": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-14": [
+    "同義反義與字根字首"
+  ],
+  "CMU-104-english-15": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-8": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-9": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-10": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-11": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-12": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-13": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-14": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-15": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-8": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-9": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-10": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-11": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-12": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-13": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-14": [
+    "同義反義與字根字首"
+  ],
+  "CMU-106-english-15": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-9": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-10": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-11": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-12": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-13": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-14": [
+    "同義反義與字根字首"
+  ],
+  "CMU-107-english-15": [
+    "同義反義與字根字首"
+  ],
+  "CMU-108-english-7": [
+    "同義反義與字根字首"
+  ],
+  "CMU-108-english-8": [
+    "同義反義與字根字首"
+  ],
+  "CMU-108-english-9": [
+    "同義反義與字根字首"
+  ],
+  "CMU-108-english-10": [
+    "同義反義與字根字首"
+  ],
+  "CMU-109-english-38": [
+    "同義反義與字根字首"
+  ],
+  "CMU-109-english-43": [
+    "同義反義與字根字首"
+  ],
+  "CMU-109-english-48": [
+    "同義反義與字根字首"
+  ],
+  "CMU-111-english-47": [
+    "同義反義與字根字首"
+  ],
+  "CMU-113-english-48": [
+    "同義反義與字根字首"
+  ],
+  "CMU-105-english-44": [
+    "閱讀測驗"
+  ],
+  "CMU-105-english-45": [
+    "閱讀測驗"
+  ],
+  "CMU-105-english-16": [
+    "句構與語意連貫"
+  ],
+  "CMU-105-english-17": [
+    "句構與語意連貫"
+  ],
+  "CMU-105-english-19": [
+    "句構與語意連貫"
+  ],
+  "CMU-106-english-16": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-106-english-17": [
+    "句構與語意連貫"
+  ],
+  "CMU-106-english-18": [
+    "文法：時態與語態"
+  ],
+  "CMU-106-english-19": [
+    "句構與語意連貫"
+  ],
+  "CMU-106-english-20": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-107-english-16": [
+    "句構與語意連貫"
+  ],
+  "CMU-107-english-17": [
+    "文法：時態與語態"
+  ],
+  "CMU-107-english-18": [
+    "文法：時態與語態"
+  ],
+  "CMU-107-english-19": [
+    "句構與語意連貫"
+  ],
+  "CMU-107-english-20": [
+    "文法：時態與語態"
+  ],
+  "CMU-108-english-12": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-13": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-15": [
+    "文法：時態與語態"
+  ],
+  "CMU-108-english-16": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-17": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-18": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-19": [
+    "句構與語意連貫"
+  ],
+  "CMU-108-english-20": [
+    "句構與語意連貫"
+  ],
+  "CMU-109-english-11": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-109-english-12": [
+    "句構與語意連貫"
+  ],
+  "CMU-109-english-14": [
+    "句構與語意連貫"
+  ],
+  "CMU-109-english-15": [
+    "文法：時態與語態"
+  ],
+  "CMU-109-english-17": [
+    "文法：時態與語態"
+  ],
+  "CMU-109-english-18": [
+    "句構與語意連貫"
+  ],
+  "CMU-109-english-19": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-109-english-20": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-110-english-11": [
+    "文法：介系詞與片語"
+  ],
+  "CMU-110-english-12": [
+    "字彙"
+  ],
+  "CMU-110-english-13": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-110-english-16": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-110-english-17": [
+    "句構與語意連貫"
+  ],
+  "CMU-110-english-19": [
+    "文法：時態與語態"
+  ],
+  "CMU-110-english-20": [
+    "字彙"
+  ],
+  "CMU-111-english-7": [
+    "字彙"
+  ],
+  "CMU-111-english-13": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-111-english-16": [
+    "句構與語意連貫"
+  ],
+  "CMU-111-english-19": [
+    "句構與語意連貫"
+  ],
+  "CMU-111-english-20": [
+    "文法：時態與語態"
+  ],
+  "CMU-112-english-11": [
+    "文法：時態與語態"
+  ],
+  "CMU-112-english-12": [
+    "句構與語意連貫"
+  ],
+  "CMU-112-english-13": [
+    "文法：時態與語態"
+  ],
+  "CMU-112-english-14": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-112-english-15": [
+    "句構與語意連貫"
+  ],
+  "CMU-112-english-16": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-112-english-17": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-112-english-18": [
+    "字彙"
+  ],
+  "CMU-112-english-19": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-112-english-20": [
+    "片語動詞與慣用語"
+  ],
+  "CMU-113-english-14": [
+    "句構與語意連貫"
+  ],
+  "CMU-113-english-15": [
+    "句構與語意連貫"
+  ],
+  "CMU-113-english-16": [
+    "字彙"
+  ],
+  "CMU-113-english-17": [
+    "字彙"
+  ],
+  "CMU-114-english-9": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-114-english-10": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-114-english-11": [
+    "文法：時態與語態"
+  ],
+  "CMU-114-english-13": [
+    "文法：時態與語態"
+  ],
+  "CMU-114-english-14": [
+    "句構與語意連貫"
+  ],
+  "CMU-114-english-15": [
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-104-english-24": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-104-english-25": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-105-english-26": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-105-english-30": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-107-english-28": [
+    "克漏字",
+    "字彙"
+  ],
+  "CMU-110-english-29": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-112-english-27": [
+    "克漏字",
+    "文法：子句與關係代名詞"
+  ],
+  "CMU-112-english-31": [
+    "克漏字",
+    "字彙"
+  ],
+  "CMU-113-english-22": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "CMU-113-english-30": [
+    "克漏字",
+    "字彙"
+  ],
+  "ISU-104-biology-5": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "ISU-104-biology-49": [
+    "循環與呼吸",
+    "消化與營養"
+  ],
+  "ISU-105-biology-5": [
+    "細胞呼吸與能量代謝",
+    "骨骼與肌肉運動"
+  ],
+  "ISU-105-biology-39": [
+    "生物技術與分子工具"
+  ],
+  "ISU-105-biology-40": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "ISU-105-biology-48": [
+    "動物生殖與發育"
+  ],
+  "ISU-105-biology-49": [
+    "基因表現：轉錄轉譯與調控",
+    "動物生殖與發育"
+  ],
+  "ISU-106-biology-13": [
+    "神經系統與行為"
+  ],
+  "ISU-106-biology-27": [
+    "細胞分裂"
+  ],
+  "ISU-106-biology-29": [
+    "微生物",
+    "生物技術與分子工具"
+  ],
+  "ISU-107-biology-3": [
+    "循環與呼吸"
+  ],
+  "ISU-111-biology-7": [
+    "孟德爾遺傳"
+  ],
+  "ISU-111-biology-35": [
+    "分類與生物多樣性"
+  ],
+  "ISU-112-biology-34": [
+    "消化與營養"
+  ],
+  "ISU-114-biology-15": [
+    "神經系統與行為",
+    "微生物"
+  ],
+  "ISU-114-biology-27": [
+    "免疫系統",
+    "生物技術與分子工具"
+  ],
+  "ISU-115-biology-45": [
+    "細胞呼吸與能量代謝"
+  ],
+  "ISU-104-chemistry-2": [
+    "基礎-化學計量"
+  ],
+  "ISU-104-chemistry-3": [
+    "反應速率"
+  ],
+  "ISU-104-chemistry-16": [
+    "基礎-化學計量"
+  ],
+  "ISU-104-chemistry-22": [
+    "電化學"
+  ],
+  "ISU-104-chemistry-34": [
+    "光譜分析"
+  ],
+  "ISU-104-chemistry-44": [
+    "立體化學"
+  ],
+  "ISU-104-chemistry-50": [
+    "有機反應與機構"
+  ],
+  "ISU-105-chemistry-3": [
+    "有機命名與官能基"
+  ],
+  "ISU-105-chemistry-11": [
+    "有機命名與官能基",
+    "芳香族化學"
+  ],
+  "ISU-105-chemistry-41": [],
+  "ISU-106-chemistry-9": [
+    "基礎-化學鍵"
+  ],
+  "ISU-106-chemistry-10": [
+    "基礎-化學計量"
+  ],
+  "ISU-106-chemistry-26": [
+    "有機命名與官能基"
+  ],
+  "ISU-106-chemistry-29": [
+    "有機反應與機構"
+  ],
+  "ISU-106-chemistry-34": [
+    "有機命名與官能基"
+  ],
+  "ISU-106-chemistry-41": [
+    "芳香族化學",
+    "有機反應與機構"
+  ],
+  "ISU-107-chemistry-7": [],
+  "ISU-107-chemistry-15": [
+    "有機反應與機構"
+  ],
+  "ISU-107-chemistry-25": [
+    "有機命名與官能基"
+  ],
+  "ISU-107-chemistry-41": [
+    "氧化還原"
+  ],
+  "ISU-107-chemistry-50": [
+    "有機反應與機構",
+    "反應速率"
+  ],
+  "ISU-108-chemistry-15": [
+    "基礎-化學鍵"
+  ],
+  "ISU-108-chemistry-47": [
+    "有機反應與機構"
+  ],
+  "ISU-109-chemistry-12": [
+    "光譜分析"
+  ],
+  "ISU-110-chemistry-2": [
+    "有機命名與官能基"
+  ],
+  "ISU-110-chemistry-3": [
+    "氧化還原"
+  ],
+  "ISU-110-chemistry-4": [
+    "酸鹼平衡"
+  ],
+  "ISU-110-chemistry-18": [
+    "相變與分子間作用力"
+  ],
+  "ISU-110-chemistry-29": [
+    "化學綜合"
+  ],
+  "ISU-110-chemistry-48": [
+    "有機命名與官能基"
+  ],
+  "ISU-111-chemistry-6": [
+    "有機反應與機構"
+  ],
+  "ISU-111-chemistry-20": [
+    "基礎-熱力學"
+  ],
+  "ISU-111-chemistry-42": [
+    "有機反應與機構"
+  ],
+  "ISU-111-chemistry-50": [
+    "有機反應與機構",
+    "反應速率"
+  ],
+  "ISU-112-chemistry-13": [
+    "相變與分子間作用力"
+  ],
+  "ISU-112-chemistry-23": [
+    "化學綜合"
+  ],
+  "ISU-112-chemistry-33": [
+    "氧化還原"
+  ],
+  "ISU-113-chemistry-1-d1": [
+    "有機反應與機構"
+  ],
+  "ISU-113-chemistry-2": [
+    "基礎-熱力學"
+  ],
+  "ISU-113-chemistry-8": [
+    "反應速率"
+  ],
+  "ISU-113-chemistry-28": [
+    "氣體"
+  ],
+  "ISU-113-chemistry-30": [
+    "有機反應與機構"
+  ],
+  "ISU-113-chemistry-49": [
+    "水溶液離子平衡"
+  ],
+  "ISU-114-chemistry-7": [
+    "有機命名與官能基"
+  ],
+  "ISU-114-chemistry-30": [
+    "立體化學"
+  ],
+  "ISU-115-chemistry-46": [
+    "立體化學"
+  ],
+  "ISU-104-chinese-4": [
+    "字詞義訓詁"
+  ],
+  "ISU-104-chinese-5": [
+    "古典散文文言閱讀",
+    "文化教材思想"
+  ],
+  "ISU-104-chinese-6": [
+    "古典韻文"
+  ],
+  "ISU-104-chinese-16": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-105-chinese-2": [
+    "古典韻文"
+  ],
+  "ISU-105-chinese-6": [
+    "字詞義訓詁"
+  ],
+  "ISU-105-chinese-7": [
+    "文化教材思想",
+    "國學常識"
+  ],
+  "ISU-105-chinese-8": [
+    "修辭格"
+  ],
+  "ISU-105-chinese-9": [
+    "文化教材思想"
+  ],
+  "ISU-105-chinese-18": [
+    "詞性語法句構"
+  ],
+  "ISU-105-chinese-25": [
+    "字詞義訓詁"
+  ],
+  "ISU-105-chinese-28": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-106-chinese-8": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-106-chinese-24": [
+    "古典韻文"
+  ],
+  "ISU-106-chinese-35": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-107-chinese-9": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-107-chinese-10": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-107-chinese-16": [
+    "文學史常識",
+    "國學常識"
+  ],
+  "ISU-107-chinese-21": [
+    "文學史常識"
+  ],
+  "ISU-107-chinese-28": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-107-chinese-30": [
+    "文學史常識"
+  ],
+  "ISU-107-chinese-35": [
+    "閱讀理解綜合"
+  ],
+  "ISU-108-chinese-6": [
+    "閱讀理解綜合"
+  ],
+  "ISU-108-chinese-9": [
+    "古典散文文言閱讀",
+    "文化教材思想"
+  ],
+  "ISU-108-chinese-14": [
+    "詞性語法句構"
+  ],
+  "ISU-108-chinese-15": [
+    "詞性語法句構"
+  ],
+  "ISU-108-chinese-23": [
+    "古典韻文"
+  ],
+  "ISU-108-chinese-35": [
+    "閱讀理解綜合"
+  ],
+  "ISU-109-chinese-20": [
+    "古典散文文言閱讀",
+    "文化教材思想"
+  ],
+  "ISU-109-chinese-31": [
+    "古典散文文言閱讀",
+    "國學常識"
+  ],
+  "ISU-109-chinese-32": [
+    "古典散文文言閱讀",
+    "國學常識"
+  ],
+  "ISU-109-chinese-33": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-109-chinese-34": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-109-chinese-35": [
+    "古典散文文言閱讀",
+    "國學常識"
+  ],
+  "ISU-110-chinese-9": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-110-chinese-19": [
+    "字詞義訓詁"
+  ],
+  "ISU-110-chinese-21": [
+    "成語熟語"
+  ],
+  "ISU-111-chinese-9": [
+    "國學常識"
+  ],
+  "ISU-111-chinese-16": [
+    "詞性語法句構"
+  ],
+  "ISU-111-chinese-18": [
+    "詞性語法句構"
+  ],
+  "ISU-111-chinese-20": [
+    "閱讀理解綜合"
+  ],
+  "ISU-111-chinese-24": [
+    "詞性語法句構"
+  ],
+  "ISU-111-chinese-37": [
+    "古典韻文"
+  ],
+  "ISU-111-chinese-42": [
+    "古典韻文",
+    "文化教材思想"
+  ],
+  "ISU-111-chinese-47": [
+    "字詞義訓詁"
+  ],
+  "ISU-112-chinese-1": [
+    "字詞義訓詁"
+  ],
+  "ISU-112-chinese-3": [
+    "閱讀理解綜合"
+  ],
+  "ISU-112-chinese-8": [
+    "字音字形"
+  ],
+  "ISU-112-chinese-16": [
+    "國學常識"
+  ],
+  "ISU-112-chinese-18": [
+    "詞性語法句構"
+  ],
+  "ISU-112-chinese-20": [
+    "閱讀理解綜合"
+  ],
+  "ISU-112-chinese-24": [
+    "成語熟語"
+  ],
+  "ISU-112-chinese-28": [
+    "文學史常識"
+  ],
+  "ISU-112-chinese-35": [
+    "文學史常識"
+  ],
+  "ISU-112-chinese-42": [
+    "文學史常識"
+  ],
+  "ISU-112-chinese-47": [
+    "古典韻文"
+  ],
+  "ISU-112-chinese-49": [
+    "字詞義訓詁"
+  ],
+  "ISU-113-chinese-1": [
+    "字詞義訓詁"
+  ],
+  "ISU-113-chinese-2": [
+    "字詞義訓詁"
+  ],
+  "ISU-113-chinese-15": [
+    "文學史常識"
+  ],
+  "ISU-113-chinese-19": [
+    "文化教材思想"
+  ],
+  "ISU-113-chinese-20": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-113-chinese-21": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-113-chinese-23": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-113-chinese-34": [
+    "字詞義訓詁"
+  ],
+  "ISU-113-chinese-39": [
+    "閱讀理解綜合"
+  ],
+  "ISU-113-chinese-42": [
+    "古典韻文"
+  ],
+  "ISU-113-chinese-43": [
+    "閱讀理解綜合",
+    "古典韻文"
+  ],
+  "ISU-113-chinese-44": [
+    "修辭格"
+  ],
+  "ISU-113-chinese-46": [
+    "修辭格"
+  ],
+  "ISU-114-chinese-2": [
+    "文學史常識"
+  ],
+  "ISU-114-chinese-3": [
+    "詞性語法句構"
+  ],
+  "ISU-114-chinese-5": [
+    "國學常識"
+  ],
+  "ISU-114-chinese-13": [
+    "文化教材思想"
+  ],
+  "ISU-114-chinese-15": [
+    "古典韻文"
+  ],
+  "ISU-114-chinese-17": [
+    "古典韻文"
+  ],
+  "ISU-114-chinese-19": [
+    "詞性語法句構"
+  ],
+  "ISU-114-chinese-20": [
+    "文學史常識"
+  ],
+  "ISU-114-chinese-25": [
+    "字詞義訓詁"
+  ],
+  "ISU-114-chinese-26": [
+    "文學史常識"
+  ],
+  "ISU-114-chinese-32": [
+    "文學史常識"
+  ],
+  "ISU-114-chinese-36": [
+    "閱讀理解綜合"
+  ],
+  "ISU-114-chinese-37": [
+    "修辭格"
+  ],
+  "ISU-114-chinese-41": [
+    "成語熟語"
+  ],
+  "ISU-114-chinese-42": [
+    "閱讀理解綜合"
+  ],
+  "ISU-114-chinese-45": [
+    "古典韻文"
+  ],
+  "ISU-115-chinese-15": [
+    "古典韻文"
+  ],
+  "ISU-115-chinese-16": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-17": [
+    "成語熟語"
+  ],
+  "ISU-115-chinese-20": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-21": [
+    "國學常識"
+  ],
+  "ISU-115-chinese-22": [
+    "古典散文文言閱讀"
+  ],
+  "ISU-115-chinese-24": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-25": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-28": [
+    "文學史常識"
+  ],
+  "ISU-115-chinese-30": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-33": [
+    "字詞義訓詁"
+  ],
+  "ISU-115-chinese-34": [
+    "古典韻文"
+  ],
+  "ISU-115-chinese-44": [
+    "字音字形",
+    "字詞義訓詁"
+  ],
+  "ISU-104-english-26": [
+    "閱讀測驗"
+  ],
+  "ISU-104-english-30": [
+    "閱讀測驗"
+  ],
+  "ISU-104-english-31": [
+    "閱讀測驗"
+  ],
+  "ISU-105-english-33": [
+    "閱讀測驗"
+  ],
+  "ISU-106-english-1": [
+    "字彙"
+  ],
+  "ISU-106-english-6": [
+    "字彙"
+  ],
+  "ISU-106-english-13": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-6": [
+    "字彙"
+  ],
+  "ISU-107-english-11": [
+    "字彙"
+  ],
+  "ISU-107-english-18": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-108-english-9": [
+    "字彙"
+  ],
+  "ISU-109-english-7": [
+    "字彙"
+  ],
+  "ISU-109-english-14": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-109-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-110-english-8": [
+    "字彙"
+  ],
+  "ISU-110-english-16": [
+    "文法：時態與語態"
+  ],
+  "ISU-110-english-19": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-110-english-20": [
+    "句構與語意連貫"
+  ],
+  "ISU-111-english-12": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-3": [
+    "字彙"
+  ],
+  "ISU-112-english-7": [
+    "字彙"
+  ],
+  "ISU-112-english-11": [
+    "字彙"
+  ],
+  "ISU-112-english-19": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-113-english-6": [
+    "字彙"
+  ],
+  "ISU-115-english-13": [
+    "字彙"
+  ],
+  "ISU-115-english-14": [
+    "字彙"
+  ],
+  "ISU-115-english-15": [
+    "字彙"
+  ],
+  "ISU-115-english-16": [
+    "句構與語意連貫"
+  ],
+  "ISU-115-english-23": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-104-english-28": [
+    "同義反義與字根字首"
+  ],
+  "ISU-109-english-40": [
+    "同義反義與字根字首"
+  ],
+  "ISU-104-english-6": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-104-english-7": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-107-english-17": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-108-english-3": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-108-english-10": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-115-english-10": [
+    "片語動詞與慣用語"
+  ],
+  "ISU-104-english-12": [
+    "句構與語意連貫"
+  ],
+  "ISU-104-english-13": [
+    "句構與語意連貫"
+  ],
+  "ISU-104-english-14": [
+    "句構與語意連貫"
+  ],
+  "ISU-104-english-16": [
+    "句構與語意連貫"
+  ],
+  "ISU-105-english-14": [
+    "句構與語意連貫"
+  ],
+  "ISU-106-english-15": [
+    "句構與語意連貫"
+  ],
+  "ISU-108-english-13": [
+    "句構與語意連貫"
+  ],
+  "ISU-111-english-16": [
+    "句構與語意連貫"
+  ],
+  "ISU-113-english-17": [
+    "句構與語意連貫"
+  ],
+  "ISU-105-english-11": [
+    "文法：時態與語態"
+  ],
+  "ISU-105-english-16": [
+    "文法：時態與語態"
+  ],
+  "ISU-105-english-17": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-11": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-12": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-14": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-16": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-17": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-18": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-106-english-20": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-12": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-14": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-15": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-16": [
+    "文法：時態與語態"
+  ],
+  "ISU-107-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-11": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-12": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-14": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-15": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-18": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-108-english-20": [
+    "文法：時態與語態"
+  ],
+  "ISU-109-english-11": [
+    "文法：時態與語態"
+  ],
+  "ISU-109-english-12": [
+    "文法：時態與語態"
+  ],
+  "ISU-109-english-13": [
+    "文法：時態與語態"
+  ],
+  "ISU-109-english-15": [
+    "文法：時態與語態"
+  ],
+  "ISU-109-english-17": [
+    "文法：時態與語態"
+  ],
+  "ISU-110-english-13": [
+    "文法：時態與語態"
+  ],
+  "ISU-110-english-15": [
+    "文法：時態與語態"
+  ],
+  "ISU-111-english-13": [
+    "文法：時態與語態"
+  ],
+  "ISU-111-english-14": [
+    "文法：時態與語態"
+  ],
+  "ISU-111-english-15": [
+    "文法：時態與語態"
+  ],
+  "ISU-111-english-17": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-18": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-20": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-21": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-22": [
+    "文法：時態與語態"
+  ],
+  "ISU-112-english-25": [
+    "文法：時態與語態"
+  ],
+  "ISU-113-english-16": [
+    "文法：時態與語態"
+  ],
+  "ISU-113-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-113-english-22": [
+    "文法：時態與語態"
+  ],
+  "ISU-113-english-24": [
+    "文法：時態與語態"
+  ],
+  "ISU-114-english-19": [
+    "文法：時態與語態"
+  ],
+  "ISU-114-english-21": [
+    "文法：時態與語態"
+  ],
+  "ISU-114-english-24": [
+    "句構與語意連貫"
+  ],
+  "ISU-115-english-17": [
+    "文法：時態與語態"
+  ],
+  "ISU-115-english-20": [
+    "文法：時態與語態"
+  ],
+  "ISU-115-english-21": [
+    "文法：時態與語態"
+  ],
+  "ISU-115-english-24": [
+    "文法：時態與語態"
+  ],
+  "ISU-105-english-13": [
+    "句構與語意連貫"
+  ],
+  "ISU-105-english-19": [
+    "句構與語意連貫"
+  ],
+  "ISU-109-english-20": [
+    "句構與語意連貫"
+  ],
+  "ISU-111-english-11": [
+    "句構與語意連貫"
+  ],
+  "ISU-111-english-18": [
+    "句構與語意連貫"
+  ],
+  "ISU-112-english-17": [
+    "句構與語意連貫"
+  ],
+  "ISU-114-english-16": [
+    "句構與語意連貫"
+  ],
+  "ISU-114-english-18": [
+    "文法：子句與關係代名詞"
+  ],
+  "ISU-114-english-20": [
+    "句構與語意連貫"
+  ],
+  "ISU-114-english-22": [
+    "句構與語意連貫"
+  ],
+  "ISU-114-english-25": [
+    "句構與語意連貫"
+  ],
+  "ISU-115-english-22": [
+    "句構與語意連貫"
+  ],
+  "ISU-115-english-25": [
+    "句構與語意連貫"
+  ],
+  "TCU-104-biology-29": [
+    "內分泌系統"
+  ],
+  "TCU-104-biology-34": [
+    "細胞膜與物質運輸",
+    "細胞分裂"
+  ],
+  "TCU-104-biology-44": [
+    "植物生理",
+    "植物構造與組織"
+  ],
+  "TCU-105-biology-5": [
+    "基因表現：轉錄轉譯與調控"
+  ],
+  "TCU-105-biology-13": [
+    "循環與呼吸"
+  ],
+  "TCU-106-biology-38": [
+    "生命分子與生物化學"
+  ],
+  "TCU-108-biology-12": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "TCU-108-biology-23": [
+    "植物生理"
+  ],
+  "TCU-108-biology-41": [
+    "演化與生命起源",
+    "孟德爾遺傳"
+  ],
+  "TCU-109-biology-1": [
+    "細胞呼吸與能量代謝"
+  ],
+  "TCU-109-biology-18": [
+    "演化與生命起源",
+    "孟德爾遺傳"
+  ],
+  "TCU-109-biology-19": [
+    "孟德爾遺傳",
+    "演化與生命起源"
+  ],
+  "TCU-109-biology-31": [
+    "植物生理"
+  ],
+  "TCU-110-biology-26": [
+    "演化與生命起源",
+    "孟德爾遺傳"
+  ],
+  "TCU-110-biology-48": [
+    "植物生理",
+    "內分泌系統"
+  ],
+  "TCU-111-biology-5": [
+    "細胞分裂"
+  ],
+  "TCU-111-biology-43": [
+    "植物生理"
+  ],
+  "TCU-113-biology-5": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-113-biology-22": [
+    "植物生理"
+  ],
+  "TCU-104-chemistry-1": [
+    "反應速率"
+  ],
+  "TCU-104-chemistry-4": [
+    "配位化合物"
+  ],
+  "TCU-104-chemistry-17": [
+    "相變與分子間作用力"
+  ],
+  "TCU-104-chemistry-24": [
+    "基礎-熱力學"
+  ],
+  "TCU-104-chemistry-26": [
+    "有機命名與官能基"
+  ],
+  "TCU-104-chemistry-29": [
+    "有機命名與官能基"
+  ],
+  "TCU-104-chemistry-32": [
+    "有機反應與機構",
+    "立體化學"
+  ],
+  "TCU-104-chemistry-44": [
+    "有機反應與機構"
+  ],
+  "TCU-105-chemistry-11": [],
+  "TCU-105-chemistry-21": [
+    "相變與分子間作用力"
+  ],
+  "TCU-105-chemistry-23": [
+    "相變與分子間作用力"
+  ],
+  "TCU-105-chemistry-30": [
+    "立體化學"
+  ],
+  "TCU-105-chemistry-38": [
+    "有機反應與機構"
+  ],
+  "TCU-105-chemistry-39": [
+    "有機反應與機構"
+  ],
+  "TCU-105-chemistry-40": [
+    "光譜分析"
+  ],
+  "TCU-106-chemistry-0": [
+    "反應速率"
+  ],
+  "TCU-106-chemistry-1": [
+    "相變與分子間作用力"
+  ],
+  "TCU-106-chemistry-2-d1": [
+    "電化學"
+  ],
+  "TCU-106-chemistry-4-d2": [
+    "有機反應與機構"
+  ],
+  "TCU-106-chemistry-7": [],
+  "TCU-106-chemistry-12": [],
+  "TCU-107-chemistry-7": [
+    "基礎-化學鍵"
+  ],
+  "TCU-107-chemistry-25": [
+    "光譜分析"
+  ],
+  "TCU-108-chemistry-9": [
+    "反應速率"
+  ],
+  "TCU-108-chemistry-23": [
+    "配位化合物"
+  ],
+  "TCU-108-chemistry-39": [
+    "有機反應與機構"
+  ],
+  "TCU-108-chemistry-44": [
+    "基礎-熱力學"
+  ],
+  "TCU-108-chemistry-45": [
+    "基礎-化學鍵"
+  ],
+  "TCU-109-chemistry-12": [
+    "化學綜合"
+  ],
+  "TCU-109-chemistry-20": [
+    "光譜分析"
+  ],
+  "TCU-109-chemistry-43": [
+    "溶液與依數性質"
+  ],
+  "TCU-110-chemistry-2": [
+    "溶液與依數性質"
+  ],
+  "TCU-110-chemistry-7": [],
+  "TCU-110-chemistry-44": [
+    "有機反應與機構",
+    "芳香族化學"
+  ],
+  "TCU-111-chemistry-1": [],
+  "TCU-111-chemistry-3": [
+    "有機命名與官能基"
+  ],
+  "TCU-111-chemistry-22": [],
+  "TCU-111-chemistry-39": [
+    "基礎-化學計量"
+  ],
+  "TCU-111-chemistry-45": [
+    "溶液與依數性質",
+    "相變與分子間作用力"
+  ],
+  "TCU-113-chemistry-28": [
+    "光譜分析"
+  ],
+  "TCU-113-chemistry-38": [],
+  "TCU-114-chemistry-36": [
+    "立體化學"
+  ],
+  "TCU-114-chemistry-46": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-50": [
+    "有機命名與官能基"
+  ],
+  "TCU-115-chemistry-4": [],
+  "TCU-115-chemistry-15": [
+    "基礎-化學計量"
+  ],
+  "TCU-115-chemistry-30": [
+    "化學綜合"
+  ],
+  "TCU-115-chemistry-47": [
+    "反應速率"
+  ],
+  "TCU-115-chemistry-50": [],
+  "TCU-104-chinese-2": [
+    "字音字形"
+  ],
+  "TCU-104-chinese-3": [
+    "成語熟語"
+  ],
+  "TCU-104-chinese-4": [
+    "成語熟語"
+  ],
+  "TCU-104-chinese-9": [
+    "閱讀理解綜合"
+  ],
+  "TCU-104-chinese-10": [
+    "古典韻文"
+  ],
+  "TCU-104-chinese-13": [
+    "字音字形"
+  ],
+  "TCU-104-chinese-19": [
+    "詞性語法句構"
+  ],
+  "TCU-104-chinese-23": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-104-chinese-29": [
+    "詞性語法句構"
+  ],
+  "TCU-104-chinese-32": [
+    "修辭格"
+  ],
+  "TCU-104-chinese-34": [
+    "成語熟語"
+  ],
+  "TCU-105-chinese-6": [
+    "字詞義訓詁"
+  ],
+  "TCU-105-chinese-9": [
+    "字詞義訓詁"
+  ],
+  "TCU-105-chinese-15": [
+    "修辭格"
+  ],
+  "TCU-105-chinese-21": [
+    "古典韻文"
+  ],
+  "TCU-105-chinese-33": [
+    "閱讀理解綜合"
+  ],
+  "TCU-106-chinese-3": [
+    "成語熟語"
+  ],
+  "TCU-106-chinese-11": [
+    "修辭格"
+  ],
+  "TCU-106-chinese-15": [
+    "字詞義訓詁",
+    "字音字形"
+  ],
+  "TCU-106-chinese-17": [
+    "文化教材思想"
+  ],
+  "TCU-106-chinese-21": [
+    "閱讀理解綜合"
+  ],
+  "TCU-107-chinese-3": [
+    "字詞義訓詁"
+  ],
+  "TCU-107-chinese-19": [
+    "閱讀理解綜合"
+  ],
+  "TCU-107-chinese-22": [
+    "古典韻文"
+  ],
+  "TCU-107-chinese-27": [
+    "閱讀理解綜合"
+  ],
+  "TCU-108-chinese-2": [
+    "閱讀理解綜合"
+  ],
+  "TCU-108-chinese-6": [
+    "字詞義訓詁"
+  ],
+  "TCU-108-chinese-11": [
+    "詞性語法句構"
+  ],
+  "TCU-108-chinese-16": [
+    "字詞義訓詁",
+    "應用文書信"
+  ],
+  "TCU-108-chinese-19": [
+    "字詞義訓詁"
+  ],
+  "TCU-108-chinese-22": [
+    "字詞義訓詁"
+  ],
+  "TCU-108-chinese-30": [
+    "修辭格"
+  ],
+  "TCU-108-chinese-31": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-108-chinese-35": [
+    "古典韻文"
+  ],
+  "TCU-109-chinese-17": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-109-chinese-26": [
+    "字詞義訓詁"
+  ],
+  "TCU-109-chinese-27": [
+    "文化教材思想"
+  ],
+  "TCU-109-chinese-32": [
+    "閱讀理解綜合"
+  ],
+  "TCU-109-chinese-33": [
+    "閱讀理解綜合"
+  ],
+  "TCU-109-chinese-34": [
+    "閱讀理解綜合"
+  ],
+  "TCU-110-chinese-3": [
+    "字音字形"
+  ],
+  "TCU-110-chinese-16": [
+    "字音字形"
+  ],
+  "TCU-110-chinese-28": [
+    "閱讀理解綜合"
+  ],
+  "TCU-110-chinese-33": [
+    "閱讀理解綜合"
+  ],
+  "TCU-110-chinese-41": [
+    "閱讀理解綜合"
+  ],
+  "TCU-110-chinese-44": [
+    "閱讀理解綜合"
+  ],
+  "TCU-110-chinese-48": [
+    "閱讀理解綜合"
+  ],
+  "TCU-111-chinese-14": [
+    "文化教材思想"
+  ],
+  "TCU-111-chinese-16": [
+    "修辭格"
+  ],
+  "TCU-111-chinese-33": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-111-chinese-45": [
+    "閱讀理解綜合"
+  ],
+  "TCU-111-chinese-46": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-112-chinese-6": [
+    "成語熟語"
+  ],
+  "TCU-112-chinese-13": [
+    "修辭格"
+  ],
+  "TCU-113-chinese-5": [
+    "字音字形"
+  ],
+  "TCU-113-chinese-8": [
+    "字詞義訓詁"
+  ],
+  "TCU-113-chinese-9": [
+    "字詞義訓詁"
+  ],
+  "TCU-113-chinese-13": [
+    "文化教材思想"
+  ],
+  "TCU-113-chinese-25": [
+    "閱讀理解綜合"
+  ],
+  "TCU-113-chinese-27": [
+    "字詞義訓詁"
+  ],
+  "TCU-113-chinese-28": [
+    "字詞義訓詁"
+  ],
+  "TCU-113-chinese-31": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-113-chinese-49": [
+    "閱讀理解綜合"
+  ],
+  "TCU-113-chinese-50": [
+    "古典韻文"
+  ],
+  "TCU-114-chinese-1": [
+    "字音字形"
+  ],
+  "TCU-114-chinese-8": [
+    "成語熟語"
+  ],
+  "TCU-114-chinese-10": [
+    "文化教材思想"
+  ],
+  "TCU-114-chinese-16": [
+    "字詞義訓詁",
+    "成語熟語"
+  ],
+  "TCU-114-chinese-18": [
+    "古典韻文"
+  ],
+  "TCU-114-chinese-21": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-114-chinese-24": [
+    "文化教材思想"
+  ],
+  "TCU-114-chinese-37": [
+    "閱讀理解綜合"
+  ],
+  "TCU-114-chinese-38": [
+    "閱讀理解綜合"
+  ],
+  "TCU-115-chinese-1": [
+    "字音字形"
+  ],
+  "TCU-115-chinese-7": [
+    "字詞義訓詁"
+  ],
+  "TCU-115-chinese-11": [
+    "古典韻文"
+  ],
+  "TCU-115-chinese-13": [
+    "古典韻文"
+  ],
+  "TCU-115-chinese-17": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-115-chinese-20": [
+    "古典散文文言閱讀"
+  ],
+  "TCU-115-chinese-21": [
+    "字詞義訓詁"
+  ],
+  "TCU-115-chinese-25": [
+    "閱讀理解綜合"
+  ],
+  "TCU-115-chinese-27": [
+    "古典韻文"
+  ],
+  "TCU-115-chinese-37": [
+    "閱讀理解綜合"
+  ],
+  "TCU-115-chinese-49": [
+    "閱讀理解綜合"
+  ],
+  "TCU-104-english-9": [
+    "字彙"
+  ],
+  "TCU-104-english-10": [
+    "字彙"
+  ],
+  "TCU-104-english-11": [
+    "字彙"
+  ],
+  "TCU-104-english-15": [
+    "字彙"
+  ],
+  "TCU-104-english-18": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-104-english-19": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "TCU-104-english-20": [
+    "克漏字",
+    "片語動詞與慣用語"
+  ],
+  "TCU-104-english-34": [
+    "同義反義與字根字首"
+  ],
+  "TCU-104-english-38": [
+    "同義反義與字根字首"
+  ],
+  "TCU-104-english-40": [
+    "閱讀測驗"
+  ],
+  "TCU-105-english-6": [
+    "字彙"
+  ],
+  "TCU-105-english-14": [
+    "句構與語意連貫"
+  ],
+  "TCU-105-english-15": [
+    "文法：時態與語態"
+  ],
+  "TCU-105-english-18": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "TCU-105-english-19": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-4": [
+    "字彙"
+  ],
+  "TCU-106-english-11": [
+    "文法：時態與語態"
+  ],
+  "TCU-106-english-12": [
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-13": [
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-15": [
+    "文法：子句與關係代名詞"
+  ],
+  "TCU-106-english-16": [
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-17": [
+    "文法：時態與語態"
+  ],
+  "TCU-106-english-18": [
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-19": [
+    "句構與語意連貫"
+  ],
+  "TCU-106-english-20": [
+    "文法：時態與語態"
+  ],
+  "TCU-106-english-26": [
+    "克漏字",
+    "文法：介系詞與片語"
+  ],
+  "TCU-107-english-5": [
+    "字彙"
+  ],
+  "TCU-107-english-8": [
+    "片語動詞與慣用語"
+  ],
+  "TCU-107-english-9": [
+    "片語動詞與慣用語"
+  ],
+  "TCU-107-english-10": [
+    "文法：時態與語態"
+  ],
+  "TCU-107-english-11": [
+    "文法：時態與語態"
+  ],
+  "TCU-107-english-12": [
+    "文法：時態與語態"
+  ],
+  "TCU-107-english-13": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-14": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-15": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-16": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-17": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-18": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-19": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-20": [
+    "同義反義與字根字首"
+  ],
+  "TCU-107-english-27": [
+    "克漏字",
+    "文法：子句與關係代名詞"
+  ],
+  "TCU-107-english-28": [
+    "克漏字",
+    "文法：介系詞與片語"
+  ],
+  "TCU-107-english-30": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "TCU-107-english-33": [
+    "閱讀測驗"
+  ],
+  "TCU-108-english-11": [
+    "同義反義與字根字首"
+  ],
+  "TCU-108-english-12": [
+    "同義反義與字根字首"
+  ],
+  "TCU-108-english-13": [
+    "同義反義與字根字首"
+  ],
+  "TCU-108-english-14": [
+    "同義反義與字根字首"
+  ],
+  "TCU-108-english-15": [
+    "同義反義與字根字首"
+  ],
+  "TCU-108-english-16": [
+    "文法：時態與語態"
+  ],
+  "TCU-108-english-17": [
+    "文法：子句與關係代名詞"
+  ],
+  "TCU-108-english-18": [
+    "文法：時態與語態"
+  ],
+  "TCU-108-english-19": [
+    "文法：時態與語態"
+  ],
+  "TCU-108-english-20": [
+    "句構與語意連貫"
+  ],
+  "TCU-109-english-2": [
+    "字彙"
+  ],
+  "TCU-109-english-4": [
+    "字彙"
+  ],
+  "TCU-109-english-12": [
+    "句構與語意連貫"
+  ],
+  "TCU-109-english-16": [
+    "句構與語意連貫"
+  ],
+  "TCU-109-english-17": [
+    "文法：時態與語態"
+  ],
+  "TCU-109-english-18": [
+    "句構與語意連貫"
+  ],
+  "TCU-109-english-19": [
+    "句構與語意連貫"
+  ],
+  "TCU-109-english-20": [
+    "句構與語意連貫"
+  ],
+  "TCU-110-english-1": [
+    "字彙"
+  ],
+  "TCU-110-english-5": [
+    "字彙"
+  ],
+  "TCU-110-english-7": [
+    "字彙"
+  ],
+  "TCU-110-english-14": [
+    "字彙"
+  ],
+  "TCU-110-english-16": [
+    "同義反義與字根字首"
+  ],
+  "TCU-110-english-17": [
+    "同義反義與字根字首"
+  ],
+  "TCU-110-english-18": [
+    "同義反義與字根字首"
+  ],
+  "TCU-110-english-19": [
+    "同義反義與字根字首"
+  ],
+  "TCU-110-english-20": [
+    "同義反義與字根字首"
+  ],
+  "TCU-110-english-26": [
+    "克漏字",
+    "片語動詞與慣用語"
+  ],
+  "TCU-110-english-29": [
+    "克漏字",
+    "片語動詞與慣用語"
+  ],
+  "TCU-110-english-31": [
+    "克漏字",
+    "片語動詞與慣用語"
+  ],
+  "TCU-110-english-35": [
+    "克漏字",
+    "文法：介系詞與片語"
+  ],
+  "TCU-111-english-1": [
+    "字彙"
+  ],
+  "TCU-111-english-8": [
+    "字彙"
+  ],
+  "TCU-111-english-47": [
+    "閱讀測驗"
+  ],
+  "TCU-112-english-7": [
+    "字彙"
+  ],
+  "TCU-112-english-9": [
+    "字彙"
+  ],
+  "TCU-113-english-6": [
+    "字彙"
+  ],
+  "TCU-113-english-7": [
+    "字彙"
+  ],
+  "TCU-113-english-13": [
+    "字彙"
+  ],
+  "TCU-113-english-14": [
+    "字彙"
+  ],
+  "TCU-113-english-16": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-113-english-17": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-114-english-1": [
+    "字彙"
+  ],
+  "TCU-114-english-4": [
+    "字彙"
+  ],
+  "TCU-114-english-7": [
+    "字彙"
+  ],
+  "TCU-114-english-11": [
+    "字彙"
+  ],
+  "TCU-114-english-12": [
+    "字彙"
+  ],
+  "TCU-114-english-15": [
+    "字彙"
+  ],
+  "TCU-114-english-22": [
+    "克漏字",
+    "字彙"
+  ],
+  "TCU-114-english-29": [
+    "克漏字",
+    "字彙"
+  ],
+  "TCU-114-english-39": [
+    "閱讀測驗"
+  ],
+  "TCU-115-english-7": [
+    "字彙"
+  ],
+  "TCU-115-english-8": [
+    "字彙"
+  ],
+  "TCU-115-english-13": [
+    "字彙"
+  ],
+  "TCU-115-english-16": [
+    "克漏字",
+    "字彙"
+  ],
+  "TCU-115-english-22": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-115-english-27": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-115-english-28": [
+    "克漏字",
+    "句構與語意連貫"
+  ],
+  "TCU-115-english-30": [
+    "克漏字",
+    "文法：時態與語態"
+  ],
+  "TCU-115-english-35": [
+    "句構與語意連貫"
+  ],
+  "CMU-104-chemistry-3": [
+    "原子軌域"
+  ],
+  "CMU-104-chemistry-12": [],
+  "CMU-104-chemistry-13": [
+    "原子光譜"
+  ],
+  "CMU-105-chemistry-1": [
+    "原子光譜"
+  ],
+  "CMU-105-chemistry-2": [
+    "原子軌域"
+  ],
+  "CMU-105-chemistry-10": [
+    "基礎-化學鍵"
+  ],
+  "CMU-105-chemistry-27": [
+    "基礎-原子結構"
+  ],
+  "CMU-105-chemistry-32": [],
+  "CMU-106-chemistry-27": [],
+  "CMU-106-chemistry-33": [],
+  "CMU-106-chemistry-41": [],
+  "CMU-107-chemistry-3": [
+    "基礎-化學鍵"
+  ],
+  "CMU-107-chemistry-4": [],
+  "CMU-107-chemistry-9": [],
+  "CMU-108-chemistry-1": [
+    "基礎-原子結構"
+  ],
+  "CMU-108-chemistry-2": [],
+  "CMU-108-chemistry-4": [
+    "基礎-原子結構"
+  ],
+  "CMU-108-chemistry-6": [
+    "基礎-化學鍵"
+  ],
+  "CMU-108-chemistry-7": [
+    "電子組態"
+  ],
+  "CMU-108-chemistry-21": [],
+  "CMU-109-chemistry-2": [
+    "配位化合物"
+  ],
+  "CMU-109-chemistry-7": [
+    "週期性"
+  ],
+  "CMU-109-chemistry-11": [
+    "原子軌域"
+  ],
+  "CMU-109-chemistry-19": [],
+  "CMU-109-chemistry-21": [
+    "原子軌域"
+  ],
+  "CMU-109-chemistry-23": [
+    "基礎-單位因次"
+  ],
+  "CMU-110-chemistry-5": [],
+  "CMU-110-chemistry-21": [
+    "原子光譜"
+  ],
+  "CMU-110-chemistry-25": [
+    "原子光譜"
+  ],
+  "CMU-110-chemistry-29": [
+    "配位化合物"
+  ],
+  "CMU-110-chemistry-37": [],
+  "CMU-111-chemistry-6": [
+    "原子軌域"
+  ],
+  "CMU-111-chemistry-8": [
+    "基礎-化學鍵"
+  ],
+  "CMU-111-chemistry-39": [],
+  "CMU-112-chemistry-15": [],
+  "CMU-112-chemistry-16": [
+    "配位化合物"
+  ],
+  "CMU-112-chemistry-22": [
+    "配位化合物"
+  ],
+  "CMU-112-chemistry-33": [
+    "基礎-化學鍵"
+  ],
+  "CMU-112-chemistry-34": [
+    "酸鹼平衡"
+  ],
+  "CMU-112-chemistry-38": [
+    "週期性"
+  ],
+  "CMU-113-chemistry-39": [
+    "基礎-化學鍵"
+  ],
+  "CMU-114-chemistry-5": [],
+  "CMU-114-chemistry-20": [],
+  "CMU-114-chemistry-29": [
+    "配位化合物"
+  ],
+  "CMU-114-chemistry-31": [
+    "原子軌域"
+  ],
+  "CMU-114-chemistry-40": [
+    "基礎-原子結構",
+    "氣體"
+  ],
+  "CMU-114-chemistry-42": [
+    "電子組態"
+  ],
+  "CMU-114-chemistry-45": [],
+  "CMU-115-chemistry-11": [
+    "立體化學",
+    "相變與分子間作用力"
+  ],
+  "CMU-115-chemistry-28": [
+    "基礎-化學鍵"
+  ],
+  "CMU-115-chemistry-42": [],
+  "CMU-115-chemistry-43": [
+    "配位化合物"
+  ],
+  "CMU-115-chemistry-50": [
+    "基礎-熱力學"
+  ],
+  "ISU-104-chemistry-9": [
+    "基礎-化學鍵"
+  ],
+  "ISU-104-chemistry-10": [
+    "基礎-化學鍵"
+  ],
+  "ISU-104-chemistry-25": [
+    "基礎-原子結構"
+  ],
+  "ISU-106-chemistry-7": [
+    "基礎-化學鍵"
+  ],
+  "ISU-106-chemistry-11": [
+    "原子軌域"
+  ],
+  "ISU-106-chemistry-12": [
+    "離子與電子行為"
+  ],
+  "ISU-106-chemistry-15": [],
+  "ISU-106-chemistry-48": [
+    "酸鹼平衡"
+  ],
+  "ISU-106-chemistry-49": [],
+  "ISU-107-chemistry-8": [
+    "基礎-化學鍵"
+  ],
+  "ISU-107-chemistry-10": [],
+  "ISU-107-chemistry-17": [
+    "光譜分析"
+  ],
+  "ISU-107-chemistry-39": [
+    "原子軌域"
+  ],
+  "ISU-108-chemistry-29": [
+    "基礎-原子結構"
+  ],
+  "ISU-108-chemistry-34": [
+    "反應速率",
+    "酸鹼平衡"
+  ],
+  "ISU-109-chemistry-8": [],
+  "ISU-109-chemistry-11": [],
+  "ISU-109-chemistry-18": [],
+  "ISU-109-chemistry-29": [
+    "原子軌域"
+  ],
+  "ISU-109-chemistry-50": [
+    "立體化學",
+    "光譜分析"
+  ],
+  "ISU-110-chemistry-1": [
+    "基礎-化學鍵"
+  ],
+  "ISU-110-chemistry-14": [],
+  "ISU-111-chemistry-3": [
+    "反應速率"
+  ],
+  "ISU-111-chemistry-21": [
+    "基礎-單位因次"
+  ],
+  "ISU-111-chemistry-24": [
+    "基礎-原子結構"
+  ],
+  "ISU-111-chemistry-25": [
+    "基礎-化學鍵"
+  ],
+  "ISU-111-chemistry-27": [],
+  "ISU-111-chemistry-31": [
+    "基礎-原子結構"
+  ],
+  "ISU-112-chemistry-5": [
+    "光譜分析"
+  ],
+  "ISU-112-chemistry-7": [
+    "基礎-化學鍵"
+  ],
+  "ISU-112-chemistry-11": [
+    "光譜分析"
+  ],
+  "ISU-112-chemistry-12": [
+    "原子軌域"
+  ],
+  "ISU-112-chemistry-15": [
+    "配位化合物"
+  ],
+  "ISU-112-chemistry-24": [
+    "電子組態"
+  ],
+  "ISU-112-chemistry-30": [],
+  "ISU-112-chemistry-45": [],
+  "ISU-113-chemistry-4": [],
+  "ISU-113-chemistry-19": [
+    "光譜分析"
+  ],
+  "ISU-113-chemistry-22": [
+    "週期趨勢"
+  ],
+  "ISU-113-chemistry-47": [],
+  "ISU-114-chemistry-4": [],
+  "ISU-114-chemistry-26": [
+    "光譜分析"
+  ],
+  "ISU-114-chemistry-50": [],
+  "ISU-115-chemistry-5": [],
+  "ISU-115-chemistry-40": [],
+  "ISU-115-chemistry-41": [],
+  "TCU-104-chemistry-5": [
+    "配位化合物"
+  ],
+  "TCU-104-chemistry-7": [],
+  "TCU-105-chemistry-3": [
+    "原子軌域"
+  ],
+  "TCU-105-chemistry-9": [
+    "離子與電子行為"
+  ],
+  "TCU-105-chemistry-14": [],
+  "TCU-105-chemistry-50": [
+    "酸鹼平衡"
+  ],
+  "TCU-107-chemistry-3": [],
+  "TCU-107-chemistry-4": [
+    "原子軌域"
+  ],
+  "TCU-107-chemistry-12": [],
+  "TCU-107-chemistry-19": [],
+  "TCU-107-chemistry-21": [
+    "原子軌域"
+  ],
+  "TCU-108-chemistry-7": [
+    "配位化合物"
+  ],
+  "TCU-108-chemistry-15": [],
+  "TCU-108-chemistry-25": [
+    "配位化合物"
+  ],
+  "TCU-108-chemistry-27": [
+    "有機命名與官能基",
+    "芳香族化學"
+  ],
+  "TCU-108-chemistry-36": [],
+  "TCU-108-chemistry-40": [
+    "基礎-原子結構"
+  ],
+  "TCU-108-chemistry-46": [
+    "基礎-週期表"
+  ],
+  "TCU-108-chemistry-47": [
+    "週期趨勢"
+  ],
+  "TCU-109-chemistry-7": [],
+  "TCU-109-chemistry-13": [],
+  "TCU-109-chemistry-17": [
+    "光譜分析"
+  ],
+  "TCU-109-chemistry-33": [],
+  "TCU-110-chemistry-1": [],
+  "TCU-110-chemistry-4": [],
+  "TCU-110-chemistry-15": [
+    "原子光譜"
+  ],
+  "TCU-110-chemistry-19": [
+    "光譜分析"
+  ],
+  "TCU-110-chemistry-26": [
+    "週期趨勢"
+  ],
+  "TCU-110-chemistry-41": [
+    "基礎-化學鍵"
+  ],
+  "TCU-111-chemistry-16": [],
+  "TCU-111-chemistry-36": [
+    "原子軌域"
+  ],
+  "TCU-111-chemistry-41": [],
+  "TCU-111-chemistry-44": [],
+  "TCU-113-chemistry-7": [
+    "原子光譜"
+  ],
+  "TCU-113-chemistry-22": [],
+  "TCU-113-chemistry-25": [],
+  "TCU-114-chemistry-8": [
+    "基礎-原子結構"
+  ],
+  "TCU-114-chemistry-9": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-19": [
+    "原子軌域"
+  ],
+  "TCU-115-chemistry-5": [],
+  "TCU-115-chemistry-7": [
+    "立體化學",
+    "配位化合物"
+  ],
+  "TCU-115-chemistry-9": [],
+  "TCU-115-chemistry-21": [
+    "原子軌域"
+  ],
+  "TCU-115-chemistry-35": [],
+  "CMU-104-chemistry-19": [],
+  "CMU-104-chemistry-21": [
+    "基礎-化學鍵"
+  ],
+  "CMU-104-chemistry-22": [
+    "基礎-熱力學"
+  ],
+  "CMU-104-chemistry-23": [],
+  "CMU-104-chemistry-27": [],
+  "CMU-105-chemistry-5": [],
+  "CMU-105-chemistry-8": [],
+  "CMU-105-chemistry-15": [
+    "基礎-熱力學"
+  ],
+  "CMU-105-chemistry-28": [
+    "基礎-化學鍵"
+  ],
+  "CMU-105-chemistry-29": [
+    "基礎-化學鍵"
+  ],
+  "CMU-105-chemistry-33": [],
+  "CMU-106-chemistry-16": [
+    "基礎-熱力學"
+  ],
+  "CMU-106-chemistry-17": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-29": [],
+  "CMU-106-chemistry-40": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-46": [
+    "基礎-化學鍵"
+  ],
+  "CMU-106-chemistry-48": [],
+  "CMU-106-chemistry-50": [],
+  "CMU-107-chemistry-8": [],
+  "CMU-107-chemistry-10": [],
+  "CMU-107-chemistry-40": [
+    "基礎-化學鍵"
+  ],
+  "CMU-107-chemistry-45": [],
+  "CMU-108-chemistry-24": [],
+  "CMU-108-chemistry-28": [
+    "基礎-化學鍵"
+  ],
+  "CMU-108-chemistry-29": [],
+  "CMU-109-chemistry-5": [],
+  "CMU-109-chemistry-8": [
+    "基礎-化學鍵"
+  ],
+  "CMU-109-chemistry-12": [],
+  "CMU-109-chemistry-13": [],
+  "CMU-109-chemistry-17": [],
+  "CMU-109-chemistry-20": [],
+  "CMU-110-chemistry-10": [
+    "基礎-化學鍵"
+  ],
+  "CMU-110-chemistry-13": [],
+  "CMU-110-chemistry-18": [
+    "基礎-化學鍵"
+  ],
+  "CMU-110-chemistry-26": [],
+  "CMU-110-chemistry-30": [
+    "基礎-熱力學"
+  ],
+  "CMU-110-chemistry-34": [],
+  "CMU-111-chemistry-3": [],
+  "CMU-111-chemistry-19": [
+    "基礎-化學鍵"
+  ],
+  "CMU-112-chemistry-6": [],
+  "CMU-112-chemistry-27": [],
+  "CMU-112-chemistry-39": [],
+  "CMU-112-chemistry-42": [],
+  "CMU-112-chemistry-43": [],
+  "CMU-112-chemistry-45": [
+    "基礎-化學鍵"
+  ],
+  "CMU-112-chemistry-47": [],
+  "CMU-112-chemistry-49": [
+    "基礎-化學鍵"
+  ],
+  "CMU-113-chemistry-24": [
+    "基礎-化學鍵"
+  ],
+  "CMU-113-chemistry-41": [
+    "基礎-化學鍵"
+  ],
+  "CMU-114-chemistry-18": [],
+  "CMU-114-chemistry-27": [],
+  "CMU-114-chemistry-28": [],
+  "CMU-114-chemistry-30": [
+    "基礎-化學鍵"
+  ],
+  "CMU-114-chemistry-33": [
+    "基礎-化學鍵"
+  ],
+  "CMU-114-chemistry-34": [],
+  "CMU-114-chemistry-43": [
+    "基礎-化學鍵"
+  ],
+  "CMU-115-chemistry-1": [],
+  "CMU-115-chemistry-2": [],
+  "CMU-115-chemistry-6": [],
+  "CMU-115-chemistry-29": [
+    "基礎-化學鍵"
+  ],
+  "ISU-104-chemistry-12": [],
+  "ISU-104-chemistry-13": [],
+  "ISU-105-chemistry-35": [
+    "基礎-化學鍵"
+  ],
+  "ISU-106-chemistry-23": [
+    "基礎-化學鍵"
+  ],
+  "ISU-106-chemistry-39": [],
+  "ISU-107-chemistry-22": [],
+  "ISU-107-chemistry-46": [
+    "基礎-化學鍵"
+  ],
+  "ISU-108-chemistry-5": [
+    "基礎-化學鍵"
+  ],
+  "ISU-108-chemistry-13": [],
+  "ISU-108-chemistry-24": [],
+  "ISU-109-chemistry-2": [],
+  "ISU-109-chemistry-6": [],
+  "ISU-109-chemistry-44": [],
+  "ISU-109-chemistry-47": [],
+  "ISU-110-chemistry-8": [],
+  "ISU-110-chemistry-30": [],
+  "ISU-110-chemistry-31": [
+    "基礎-化學鍵"
+  ],
+  "ISU-110-chemistry-37": [],
+  "ISU-111-chemistry-26": [
+    "基礎-化學鍵"
+  ],
+  "ISU-111-chemistry-28": [],
+  "ISU-111-chemistry-32": [],
+  "ISU-112-chemistry-28": [],
+  "ISU-112-chemistry-36": [],
+  "ISU-113-chemistry-3": [
+    "基礎-熱力學"
+  ],
+  "ISU-114-chemistry-22": [
+    "基礎-化學鍵"
+  ],
+  "ISU-114-chemistry-32": [],
+  "ISU-114-chemistry-36": [
+    "基礎-化學鍵"
+  ],
+  "ISU-115-chemistry-18": [
+    "基礎-化學鍵"
+  ],
+  "TCU-104-chemistry-15": [
+    "基礎-化學鍵"
+  ],
+  "TCU-104-chemistry-16": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-10": [],
+  "TCU-105-chemistry-13": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-19": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-20": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-22": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-25": [
+    "基礎-化學鍵"
+  ],
+  "TCU-105-chemistry-29": [],
+  "TCU-107-chemistry-2": [
+    "基礎-熱力學"
+  ],
+  "TCU-107-chemistry-5": [
+    "基礎-週期表"
+  ],
+  "TCU-107-chemistry-11": [],
+  "TCU-107-chemistry-13": [],
+  "TCU-107-chemistry-33": [
+    "基礎-化學鍵"
+  ],
+  "TCU-107-chemistry-39": [],
+  "TCU-108-chemistry-17": [],
+  "TCU-108-chemistry-29": [],
+  "TCU-109-chemistry-11": [
+    "基礎-化學鍵"
+  ],
+  "TCU-110-chemistry-11": [],
+  "TCU-110-chemistry-27": [],
+  "TCU-110-chemistry-49": [
+    "基礎-熱力學"
+  ],
+  "TCU-111-chemistry-6": [
+    "基礎-化學鍵"
+  ],
+  "TCU-111-chemistry-48": [
+    "基礎-熱力學"
+  ],
+  "TCU-113-chemistry-20": [],
+  "TCU-113-chemistry-21": [],
+  "TCU-113-chemistry-33": [],
+  "TCU-113-chemistry-36": [],
+  "TCU-114-chemistry-3": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-27": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-30": [],
+  "TCU-114-chemistry-34": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-38": [
+    "基礎-化學鍵"
+  ],
+  "TCU-114-chemistry-39": [],
+  "TCU-115-chemistry-14": [
+    "基礎-化學鍵"
+  ],
+  "TCU-115-chemistry-36": [
+    "基礎-化學鍵"
+  ],
+  "TCU-115-chemistry-43": [
+    "基礎-化學鍵"
+  ],
+  "TCU-115-chemistry-44": [],
+  "CMU-104-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "CMU-104-chemistry-5": [
+    "基礎-單位因次"
+  ],
+  "CMU-104-chemistry-10": [
+    "基礎-單位因次"
+  ],
+  "CMU-104-chemistry-11": [
+    "基礎-化學計量"
+  ],
+  "CMU-104-chemistry-26": [],
+  "CMU-104-chemistry-34": [],
+  "CMU-105-chemistry-4": [],
+  "CMU-105-chemistry-41": [],
+  "CMU-106-chemistry-14": [
+    "基礎-化學計量"
+  ],
+  "CMU-106-chemistry-30": [
+    "基礎-單位因次"
+  ],
+  "CMU-108-chemistry-3": [
+    "基礎-單位因次"
+  ],
+  "CMU-110-chemistry-28": [
+    "基礎-單位因次"
+  ],
+  "CMU-111-chemistry-11": [],
+  "CMU-111-chemistry-12": [
+    "基礎-單位因次"
+  ],
+  "CMU-111-chemistry-14": [
+    "基礎-單位因次"
+  ],
+  "CMU-111-chemistry-18": [],
+  "CMU-111-chemistry-24": [
+    "基礎-單位因次"
+  ],
+  "CMU-111-chemistry-41": [
+    "基礎-熱力學"
+  ],
+  "CMU-112-chemistry-14": [
+    "基礎-單位因次"
+  ],
+  "CMU-112-chemistry-18": [
+    "基礎-單位因次"
+  ],
+  "CMU-112-chemistry-21": [
+    "基礎-化學計量"
+  ],
+  "CMU-112-chemistry-25": [
+    "基礎-化學計量"
+  ],
+  "CMU-112-chemistry-46": [
+    "基礎-單位因次"
+  ],
+  "CMU-113-chemistry-11": [],
+  "CMU-113-chemistry-12": [],
+  "CMU-113-chemistry-16": [
+    "基礎-化學計量"
+  ],
+  "CMU-113-chemistry-18": [
+    "基礎-單位因次"
+  ],
+  "CMU-113-chemistry-19": [],
+  "CMU-113-chemistry-30": [
+    "基礎-熱力學"
+  ],
+  "CMU-113-chemistry-33": [],
+  "CMU-113-chemistry-42": [],
+  "CMU-114-chemistry-13": [],
+  "CMU-114-chemistry-37": [
+    "基礎-化學計量"
+  ],
+  "CMU-114-chemistry-44": [
+    "基礎-化學計量"
+  ],
+  "CMU-115-chemistry-3": [],
+  "CMU-115-chemistry-32": [],
+  "CMU-115-chemistry-35": [],
+  "ISU-104-chemistry-6": [],
+  "ISU-104-chemistry-7": [],
+  "ISU-104-chemistry-14": [
+    "基礎-單位因次"
+  ],
+  "ISU-104-chemistry-15": [
+    "基礎-單位因次"
+  ],
+  "ISU-104-chemistry-17": [
+    "基礎-單位因次"
+  ],
+  "ISU-104-chemistry-32": [],
+  "ISU-104-chemistry-47": [],
+  "ISU-105-chemistry-15": [],
+  "ISU-105-chemistry-25": [],
+  "ISU-106-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "ISU-106-chemistry-18": [],
+  "ISU-106-chemistry-19": [
+    "基礎-單位因次"
+  ],
+  "ISU-106-chemistry-32": [],
+  "ISU-107-chemistry-1": [
+    "基礎-化學計量"
+  ],
+  "ISU-107-chemistry-30": [],
+  "ISU-107-chemistry-33": [],
+  "ISU-107-chemistry-40": [
+    "基礎-化學計量"
+  ],
+  "ISU-107-chemistry-42": [],
+  "ISU-108-chemistry-4": [],
+  "ISU-108-chemistry-28": [
+    "基礎-單位因次"
+  ],
+  "ISU-108-chemistry-30": [
+    "基礎-化學計量"
+  ],
+  "ISU-109-chemistry-17": [
+    "基礎-單位因次"
+  ],
+  "ISU-109-chemistry-27": [
+    "基礎-化學計量"
+  ],
+  "ISU-109-chemistry-31": [
+    "基礎-單位因次"
+  ],
+  "ISU-111-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "ISU-111-chemistry-17": [],
+  "ISU-111-chemistry-22": [
+    "基礎-化學計量"
+  ],
+  "ISU-111-chemistry-23": [
+    "基礎-單位因次"
+  ],
+  "ISU-111-chemistry-35": [],
+  "ISU-112-chemistry-37": [
+    "基礎-單位因次"
+  ],
+  "ISU-112-chemistry-48": [],
+  "ISU-113-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "ISU-113-chemistry-6": [
+    "基礎-單位因次"
+  ],
+  "ISU-113-chemistry-24": [
+    "基礎-單位因次"
+  ],
+  "ISU-114-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "ISU-114-chemistry-3": [
+    "基礎-單位因次"
+  ],
+  "ISU-114-chemistry-20": [
+    "基礎-單位因次"
+  ],
+  "ISU-114-chemistry-33": [
+    "基礎-化學計量"
+  ],
+  "ISU-115-chemistry-1": [
+    "基礎-單位因次"
+  ],
+  "ISU-115-chemistry-2": [
+    "基礎-單位因次"
+  ],
+  "ISU-115-chemistry-3": [
+    "基礎-單位因次"
+  ],
+  "ISU-115-chemistry-4": [
+    "基礎-單位因次"
+  ],
+  "ISU-115-chemistry-8": [
+    "基礎-化學計量"
+  ],
+  "ISU-115-chemistry-23": [],
+  "ISU-115-chemistry-34": [
+    "基礎-化學計量"
+  ],
+  "ISU-115-chemistry-35": [],
+  "ISU-115-chemistry-38": [],
+  "ISU-115-chemistry-39": [
+    "基礎-化學計量"
+  ],
+  "TCU-105-chemistry-16": [
+    "基礎-單位因次"
+  ],
+  "TCU-107-chemistry-10": [
+    "基礎-化學計量"
+  ],
+  "TCU-108-chemistry-12": [],
+  "TCU-108-chemistry-14": [],
+  "TCU-108-chemistry-37": [],
+  "TCU-109-chemistry-24": [],
+  "TCU-109-chemistry-38": [],
+  "TCU-110-chemistry-10": [],
+  "TCU-110-chemistry-21": [],
+  "TCU-110-chemistry-43": [],
+  "TCU-110-chemistry-48": [
+    "基礎-單位因次"
+  ],
+  "TCU-111-chemistry-17": [
+    "基礎-熱力學"
+  ],
+  "TCU-111-chemistry-24": [],
+  "TCU-111-chemistry-28": [],
+  "TCU-111-chemistry-50": [
+    "基礎-熱力學"
+  ],
+  "TCU-113-chemistry-14": [],
+  "TCU-113-chemistry-18": [
+    "基礎-單位因次"
+  ],
+  "TCU-113-chemistry-34": [],
+  "TCU-114-chemistry-18": [
+    "基礎-化學計量"
+  ],
+  "TCU-114-chemistry-20": [],
+  "TCU-114-chemistry-40": [
+    "基礎-單位因次"
+  ],
+  "TCU-114-chemistry-42": [
+    "基礎-化學計量"
+  ],
+  "TCU-115-chemistry-2": [],
+  "TCU-115-chemistry-8": [
+    "基礎-單位因次"
+  ],
+  "TCU-115-chemistry-10": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-38": [
+    "基礎-單位因次"
+  ],
+  "TCU-115-chemistry-45": [
+    "基礎-單位因次"
+  ],
+  "CMU-104-chemistry-6": [],
+  "CMU-105-chemistry-26": [
+    "基礎-熱力學"
+  ],
+  "CMU-105-chemistry-30": [
+    "基礎-熱力學"
+  ],
+  "CMU-106-chemistry-32": [
+    "基礎-熱力學"
+  ],
+  "CMU-106-chemistry-34": [
+    "基礎-熱力學"
+  ],
+  "CMU-107-chemistry-5": [
+    "基礎-週期表"
+  ],
+  "CMU-107-chemistry-12": [
+    "基礎-熱力學"
+  ],
+  "CMU-107-chemistry-15": [],
+  "CMU-107-chemistry-19": [
+    "週期趨勢"
+  ],
+  "CMU-108-chemistry-5": [
+    "基礎-週期表"
+  ],
+  "CMU-108-chemistry-16": [
+    "基礎-熱力學"
+  ],
+  "CMU-108-chemistry-17": [
+    "基礎-熱力學"
+  ],
+  "CMU-108-chemistry-18": [
+    "基礎-熱力學"
+  ],
+  "CMU-108-chemistry-20": [
+    "基礎-熱力學"
+  ],
+  "CMU-110-chemistry-17": [
+    "基礎-熱力學"
+  ],
+  "CMU-111-chemistry-29": [],
+  "CMU-113-chemistry-47": [
+    "週期趨勢"
+  ],
+  "CMU-114-chemistry-35": [
+    "基礎-熱力學"
+  ],
+  "CMU-114-chemistry-38": [
+    "基礎-週期表"
+  ],
+  "CMU-114-chemistry-46": [
+    "基礎-熱力學"
+  ],
+  "CMU-115-chemistry-26": [
+    "基礎-熱力學"
+  ],
+  "CMU-115-chemistry-30": [
+    "基礎-熱力學"
+  ],
+  "CMU-115-chemistry-41": [
+    "基礎-週期表"
+  ],
+  "CMU-115-chemistry-45": [
+    "基礎-化學鍵"
+  ],
+  "CMU-115-chemistry-49": [
+    "基礎-熱力學"
+  ],
+  "ISU-104-chemistry-18": [
+    "基礎-熱力學"
+  ],
+  "ISU-104-chemistry-24": [
+    "基礎-週期表"
+  ],
+  "ISU-105-chemistry-32": [
+    "基礎-熱力學"
+  ],
+  "ISU-105-chemistry-44": [
+    "基礎-熱力學"
+  ],
+  "ISU-106-chemistry-6": [
+    "基礎-熱力學"
+  ],
+  "ISU-106-chemistry-21": [
+    "基礎-熱力學"
+  ],
+  "ISU-106-chemistry-22": [
+    "基礎-熱力學"
+  ],
+  "ISU-107-chemistry-23": [],
+  "ISU-108-chemistry-37": [
+    "基礎-熱力學"
+  ],
+  "ISU-109-chemistry-1": [
+    "基礎-週期表"
+  ],
+  "ISU-109-chemistry-5": [
+    "基礎-熱力學"
+  ],
+  "ISU-110-chemistry-16": [
+    "基礎-熱力學"
+  ],
+  "ISU-110-chemistry-17": [
+    "基礎-熱力學"
+  ],
+  "ISU-110-chemistry-35": [
+    "基礎-熱力學"
+  ],
+  "ISU-111-chemistry-29": [
+    "基礎-熱力學"
+  ],
+  "ISU-112-chemistry-40": [
+    "基礎-熱力學"
+  ],
+  "ISU-113-chemistry-21": [
+    "基礎-熱力學"
+  ],
+  "ISU-114-chemistry-6": [
+    "基礎-熱力學"
+  ],
+  "ISU-114-chemistry-34": [
+    "週期趨勢"
+  ],
+  "ISU-114-chemistry-43": [],
+  "ISU-115-chemistry-21": [
+    "基礎-熱力學"
+  ],
+  "ISU-115-chemistry-22": [],
+  "ISU-115-chemistry-24": [
+    "基礎-熱力學"
+  ],
+  "ISU-115-chemistry-36": [
+    "基礎-熱力學"
+  ],
+  "TCU-104-chemistry-8": [
+    "基礎-熱力學"
+  ],
+  "TCU-104-chemistry-9": [
+    "基礎-熱力學"
+  ],
+  "TCU-104-chemistry-13": [
+    "基礎-熱力學"
+  ],
+  "TCU-105-chemistry-6": [
+    "基礎-熱力學"
+  ],
+  "TCU-105-chemistry-7": [
+    "基礎-熱力學"
+  ],
+  "TCU-105-chemistry-15": [],
+  "TCU-107-chemistry-14": [
+    "基礎-熱力學"
+  ],
+  "TCU-107-chemistry-18": [
+    "基礎-熱力學"
+  ],
+  "TCU-108-chemistry-3": [
+    "基礎-熱力學"
+  ],
+  "TCU-108-chemistry-26": [],
+  "TCU-109-chemistry-6": [
+    "基礎-熱力學"
+  ],
+  "TCU-109-chemistry-9": [
+    "基礎-熱力學"
+  ],
+  "TCU-109-chemistry-25": [
+    "基礎-週期表"
+  ],
+  "TCU-110-chemistry-22": [],
+  "TCU-110-chemistry-42": [
+    "基礎-熱力學"
+  ],
+  "TCU-111-chemistry-11": [],
+  "TCU-111-chemistry-31": [
+    "基礎-熱力學"
+  ],
+  "TCU-111-chemistry-32": [
+    "基礎-熱力學"
+  ],
+  "TCU-113-chemistry-10": [
+    "基礎-熱力學"
+  ],
+  "TCU-113-chemistry-27": [
+    "基礎-熱力學"
+  ],
+  "TCU-114-chemistry-2": [
+    "週期趨勢"
+  ],
+  "TCU-114-chemistry-7": [
+    "基礎-熱力學"
+  ],
+  "TCU-114-chemistry-10": [
+    "基礎-熱力學"
+  ],
+  "TCU-114-chemistry-13": [],
+  "TCU-114-chemistry-22": [
+    "基礎-熱力學"
+  ],
+  "TCU-114-chemistry-23": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-3": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-11": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-18": [
+    "基礎-熱力學"
+  ],
+  "TCU-115-chemistry-39": [],
+  "CMU-104-chemistry-4": [],
+  "CMU-104-chemistry-39": [],
+  "CMU-105-chemistry-20": [],
+  "CMU-114-chemistry-14": [],
+  "CMU-114-chemistry-15": [],
+  "CMU-114-chemistry-47": [],
+  "CMU-115-chemistry-27": [],
+  "CMU-115-chemistry-38": [],
+  "ISU-105-chemistry-45": [],
+  "ISU-106-chemistry-37": [],
+  "ISU-107-chemistry-28": [
+    "基礎-胺基酸"
+  ],
+  "ISU-107-chemistry-38": [],
+  "ISU-108-chemistry-1": [
+    "基礎-胺基酸"
+  ],
+  "ISU-108-chemistry-33": [],
+  "ISU-109-chemistry-26": [],
+  "ISU-110-chemistry-36": [],
+  "ISU-111-chemistry-19": [],
+  "ISU-111-chemistry-41": [],
+  "TCU-104-chemistry-27": [],
+  "TCU-107-chemistry-28": [],
+  "TCU-108-chemistry-20": [],
+  "TCU-108-chemistry-50": [
+    "基礎-胺基酸"
+  ],
+  "TCU-110-chemistry-9": [
+    "基礎-胺基酸"
+  ],
+  "TCU-110-chemistry-13": [],
+  "TCU-111-chemistry-13": [
+    "基礎-胺基酸"
+  ],
+  "TCU-111-chemistry-14": [],
+  "TCU-113-chemistry-3": [],
+  "TCU-113-chemistry-4": [
+    "基礎-胺基酸"
+  ],
+  "TCU-113-chemistry-23": [],
+  "TCU-113-chemistry-41": [
+    "基礎-胺基酸"
+  ],
+  "TCU-113-chemistry-46": [],
+  "TCU-113-chemistry-47": [],
+  "TCU-113-chemistry-49": [
+    "基礎-胺基酸"
+  ],
+  "TCU-115-chemistry-46": [],
+  "CMU-104-biology-8": [],
+  "CMU-104-biology-35": [],
+  "CMU-106-biology-14": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-106-biology-26": [],
+  "CMU-106-biology-27": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-107-biology-9": [],
+  "CMU-107-biology-29": [
+    "細胞-細胞膜"
+  ],
+  "CMU-107-biology-44": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-108-biology-10": [],
+  "CMU-108-biology-29": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-108-biology-30": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-108-biology-41": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-109-biology-8": [
+    "細胞-原核與真核"
+  ],
+  "CMU-109-biology-44": [],
+  "CMU-110-biology-10": [],
+  "CMU-110-biology-13": [],
+  "CMU-110-biology-22": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-110-biology-28": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-110-biology-33": [],
+  "CMU-110-biology-39": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-111-biology-35": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-111-biology-40": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-112-biology-24": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-112-biology-48": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-113-biology-2": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-113-biology-41": [],
+  "CMU-114-biology-16": [],
+  "CMU-114-biology-29": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-114-biology-43": [],
+  "CMU-114-biology-47": [
+    "細胞-原核與真核"
+  ],
+  "CMU-114-biology-49": [
+    "細胞-骨架與連結"
+  ],
+  "CMU-115-biology-2": [],
+  "CMU-115-biology-4": [],
+  "CMU-115-biology-5": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-115-biology-14": [
+    "細胞-細胞核與胞器"
+  ],
+  "CMU-115-biology-46": [],
+  "CMU-115-biology-47": [],
+  "ISU-104-biology-3": [],
+  "ISU-104-biology-48": [],
+  "ISU-105-biology-3": [],
+  "ISU-105-biology-14": [],
+  "ISU-105-biology-18": [],
+  "ISU-105-biology-33": [],
+  "ISU-105-biology-34": [],
+  "ISU-105-biology-36": [],
+  "ISU-106-biology-6": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-106-biology-20": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-106-biology-31": [],
+  "ISU-106-biology-35": [
+    "細胞-原核與真核"
+  ],
+  "ISU-107-biology-9": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-107-biology-14": [],
+  "ISU-107-biology-24": [
+    "細胞-骨架與連結"
+  ],
+  "ISU-107-biology-26": [
+    "細胞-骨架與連結"
+  ],
+  "ISU-107-biology-28": [],
+  "ISU-107-biology-36": [
+    "細胞-原核與真核"
+  ],
+  "ISU-107-biology-49": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-108-biology-12": [],
+  "ISU-108-biology-13": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-108-biology-16": [],
+  "ISU-108-biology-19": [],
+  "ISU-108-biology-28": [],
+  "ISU-108-biology-30": [],
+  "ISU-108-biology-43": [
+    "細胞-原核與真核"
+  ],
+  "ISU-109-biology-1": [
+    "細胞-原核與真核"
+  ],
+  "ISU-110-biology-14": [
+    "細胞-骨架與連結"
+  ],
+  "ISU-110-biology-46": [],
+  "ISU-111-biology-11": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-111-biology-26": [
+    "細胞-原核與真核"
+  ],
+  "ISU-111-biology-32": [
+    "細胞-原核與真核"
+  ],
+  "ISU-111-biology-46": [],
+  "ISU-112-biology-20": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-112-biology-23": [],
+  "ISU-112-biology-39": [],
+  "ISU-112-biology-45": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-112-biology-49": [],
+  "ISU-113-biology-2": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-113-biology-26": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-113-biology-35": [
+    "細胞-原核與真核"
+  ],
+  "ISU-113-biology-42": [],
+  "ISU-114-biology-16": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-114-biology-17": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-114-biology-24": [],
+  "ISU-114-biology-29": [
+    "細胞-原核與真核"
+  ],
+  "ISU-115-biology-7": [
+    "細胞-原核與真核"
+  ],
+  "ISU-115-biology-8": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-115-biology-14": [],
+  "ISU-115-biology-17": [],
+  "ISU-115-biology-18": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-115-biology-19": [],
+  "ISU-115-biology-20": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-115-biology-23": [],
+  "ISU-115-biology-29": [
+    "細胞-細胞核與胞器"
+  ],
+  "ISU-115-biology-40": [],
+  "TCU-104-biology-10": [
+    "細胞-原核與真核"
+  ],
+  "TCU-104-biology-22": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-105-biology-1": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-105-biology-30": [],
+  "TCU-105-biology-41": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-105-biology-42": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-105-biology-47": [],
+  "TCU-106-biology-3": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-106-biology-4": [],
+  "TCU-106-biology-12": [],
+  "TCU-106-biology-14": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-106-biology-19": [],
+  "TCU-106-biology-22": [],
+  "TCU-106-biology-28": [],
+  "TCU-106-biology-37": [],
+  "TCU-107-biology-39": [],
+  "TCU-108-biology-13": [],
+  "TCU-108-biology-14": [],
+  "TCU-108-biology-18": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-108-biology-42": [],
+  "TCU-108-biology-45": [
+    "細胞-原核與真核"
+  ],
+  "TCU-109-biology-3": [],
+  "TCU-109-biology-4": [],
+  "TCU-109-biology-5": [],
+  "TCU-109-biology-7": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-109-biology-10": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-109-biology-12": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-109-biology-26": [
+    "細胞-原核與真核"
+  ],
+  "TCU-109-biology-30": [],
+  "TCU-109-biology-44": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-109-biology-45": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-109-biology-46": [],
+  "TCU-110-biology-1": [],
+  "TCU-110-biology-15": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-110-biology-34": [],
+  "TCU-110-biology-41": [],
+  "TCU-110-biology-44": [],
+  "TCU-111-biology-6": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-111-biology-10": [],
+  "TCU-111-biology-17": [],
+  "TCU-111-biology-29": [
+    "細胞-原核與真核"
+  ],
+  "TCU-113-biology-6": [],
+  "TCU-113-biology-11": [],
+  "TCU-113-biology-16": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-114-biology-10": [
+    "細胞-原核與真核"
+  ],
+  "TCU-114-biology-19": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-114-biology-21": [],
+  "TCU-114-biology-23": [
+    "細胞-骨架與連結"
+  ],
+  "TCU-114-biology-26": [
+    "細胞-細胞核與胞器"
+  ],
+  "TCU-114-biology-27": [],
+  "TCU-114-biology-38": [],
+  "TCU-114-biology-44": [],
+  "TCU-114-biology-46": [],
+  "TCU-115-biology-1": [],
+  "TCU-115-biology-23": [],
+  "TCU-115-biology-42": [],
+  "CMU-106-chinese-7": [
+    "部首"
+  ],
+  "ISU-110-chinese-18": [
+    "部首"
+  ],
+  "ISU-111-chinese-3": [
+    "部首"
+  ],
+  "ISU-115-chinese-3": [
+    "部首"
+  ],
+  "ISU-115-chinese-14": [
+    "部首"
+  ],
+  "CMU-115-biology-22": [
+    "細胞-細胞膜"
+  ],
+  "CMU-106-biology-36": [
+    "細胞-細胞膜"
+  ],
+  "ISU-105-biology-11": [
+    "細胞-細胞膜"
+  ],
+  "ISU-105-biology-17": [
+    "細胞-細胞膜"
+  ],
+  "ISU-106-biology-2": [
+    "細胞-細胞膜"
+  ],
+  "CMU-105-chinese-13": [
+    "詩經"
+  ],
+  "ISU-105-chinese-26": [
+    "詩經"
+  ],
+  "ISU-111-biology-28": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-110-biology-31": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-109-biology-41": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-115-biology-10": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-105-biology-2": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-113-biology-14": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-104-biology-33": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-108-biology-31": [
+    "細胞訊號傳遞"
+  ],
+  "ISU-112-biology-47": [
+    "細胞訊號傳遞"
+  ],
+  "CMU-109-biology-2": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-111-biology-2": [
+    "細胞訊號傳遞"
+  ],
+  "TCU-109-biology-8": [
+    "細胞訊號傳遞"
+  ]
+}

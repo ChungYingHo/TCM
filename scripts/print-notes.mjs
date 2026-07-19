@@ -45,6 +45,8 @@ const NOTES = [
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞骨架與細胞外連結' },
   { dir: '生物', href: '/bio-cell-4', file: '4-細胞膜構造與功能' },
+  { dir: '生物', href: '/membrane-transport', file: '5-跨膜運輸與囊泡運輸' },
+  { dir: '生物', href: '/cell-signaling', file: '6-細胞訊號傳遞' },
   { dir: '英文', href: '/readings/r1', file: '1-增補廣讀R1-VOA字彙' },
   { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
 ]
@@ -147,11 +149,15 @@ async function main() {
         await new Promise((r) => setTimeout(r, 150))
       }
       window.scrollTo(0, 0)
-      await Promise.all(
+      const imagesReady = Promise.all(
         [...document.images].map((img) =>
           img.complete && img.naturalWidth > 0 ? null : img.decode().catch(() => {}),
         ),
       )
+      await Promise.race([
+        imagesReady,
+        new Promise((resolve) => setTimeout(resolve, 15_000)),
+      ])
     })
     // 等字體與島嶼就緒，避免落字或 fallback metrics
     await page.evaluate(async () => {
