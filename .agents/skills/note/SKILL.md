@@ -91,7 +91,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
 - **大綱點名的課本大表/大圖一定要做**（Aira 2026-07-04：「不然我給你幹嘛」），如氫原子波函數表、能階圖，不可略、不可用文字搪塞。
 - **速查優先用表格、留白別擠**（Aira 2026-07-04）：能表格化就表格化，別堆項目符號牆。**「必背」只放一個 `Memorize`**（表格卡，每則「主題：內容」），不分兩塊、不放「解題方向」。
 - **大綱「例題指定」＝放在該段落當 inline 知識範例**（用 `WorkedExample`），不是丟最後例題區；自測練習才用互動 `ExampleQuestion`（選→對→解析，支援複選）。
-- 大綱說「圖解」就**做圖**（建小 Svelte 元件，`not-prose` 容器、Svelte 5 runes）。**底線＝元件一定要在 PDF/GoodNotes 顯示完整資訊**（Aira 幾乎都看 PDF，互動在那邊無效）。**互動與否其次、該不該互動由 Codex 自己判斷**——兩條路任選：①**全畫成靜態**（不加 `client:`、純 SSR、最省事、首選）；②**要互動也沒關係**，但**必須附 `print:block` 靜態完整版**（範本＝`ExampleQuestion`）。**唯一禁忌：資訊只藏在互動後面又 `print:hidden`**（PDF 整片空白，如舊版 `VseprShapes`／`SigFig` 之坑，見 memory `pdf-print-pagination`）。
+- 大綱說「圖解」就**做圖**（建小 Svelte 元件，`not-prose` 容器、Svelte 5 runes）。**底線＝元件一定要在 PDF/GoodNotes 顯示完整資訊**（Aira 幾乎都看 PDF，互動在那邊無效）。**互動與否其次、該不該互動由執行的 agent 自己判斷**——兩條路任選：①**全畫成靜態**（不加 `client:`、純 SSR、最省事、首選）；②**要互動也沒關係**，但**必須附 `print:block` 靜態完整版**（範本＝`ExampleQuestion`）。**唯一禁忌：資訊只藏在互動後面又 `print:hidden`**（PDF 整片空白，如舊版 `VseprShapes`／`SigFig` 之坑，見 memory `pdf-print-pagination`）。
 - **中英數字間距＋全形標點（新規範，Aira 2026-07-04）**：中文與英文/數字/符號之間，若非本來一個詞就**空一格**；中文散文一律**全形標點**（，。：、）。例 `微管(microtubule)25nm(最粗,tubulin α+β,中空)` → `微管 (microtubule) 25nm (最粗，tubulin α+β，中空)`。散文括號用全形（），`Memorize` 等密集標註沿用半形 `( )` 但前後空格＋內部逗號改全形。徹查 prose／Memorize／表格 cell／元件 props。
 - **生物筆記：名詞統整表（Aira 2026-07-04）**：篇末（`## 考古題` 之前）放一張 `## 名詞統整` 三欄表（`英文（縮寫）｜中文｜一句話`），把整篇專有名詞一次列出（生物多是**專有名詞不熟、非觀念不熟**）。包在 `overflow-x-auto print:overflow-visible`、PDF 會印出。範本＝bio-cell-1/2/3。
 
@@ -139,7 +139,7 @@ description: 把一份「筆記大綱」(＋課本照片) 整理成本專案的�
    - `src/models/solveTemplates.ts` 加 `'本篇標籤': [...3–4 步解題方向...]`（否則 `taxonomy.test` #7「每 tag 要解題步驟」失敗）。
    - `src/models/notes.ts` 該篇 `tags: ['本篇標籤']`。
    - 筆記 MDX：`<NoteStats tag="本篇標籤" client:load />`、**篇末必放考古題區**（`## 考古題` ＋ `<RelatedQuestions tag="本篇標籤" limit={10} client:load />`）。**2026-07-04 起考古題會印進 PDF**（`QuestionCard` 內建 `hidden print:block` 靜態版：題幹圖＋選項＋正解＋詳解），故 `## 考古題` **不再包 `print:hidden`**。題庫不足 10 就全放、0 題會自動顯示「尚未考過」。
-   - **工具頁（.astro，如週期表/胺基酸）也當正常筆記**：在 `<NotePager />` 前加「**例題**」section（`ExampleQuestion` 自測題、`client:visible`）＋「**考古題**」section（`RelatedQuestions` limit 10、`client:load`），且 `page-kicker` 寫成 `筆記 · <本篇標籤>`（這類頁用 `Layout` 非 `NoteLayout`，kicker 是寫死的要手動改）。即「Codex 例題＋考古題」兩區跟 prose 筆記一致。
+   - **工具頁（.astro，如週期表/胺基酸）也當正常筆記**：在 `<NotePager />` 前加「**例題**」section（`ExampleQuestion` 自測題、`client:visible`）＋「**考古題**」section（`RelatedQuestions` limit 10、`client:load`），且 `page-kicker` 寫成 `筆記 · <本篇標籤>`（這類頁用 `Layout` 非 `NoteLayout`，kicker 是寫死的要手動改）。即「例題＋考古題」兩區跟 prose 筆記一致。
 5. `cd pipeline && python -m retag` 重生 `src/data/<school>.json`＋index → **綠燈全跑**：`vitest`(含 taxonomy.test)、`cd pipeline && python -m pytest`、`npx astro check`、該篇 `fetch /<slug>` render 200。備份 `pipeline/overrides/concept_tags.json` 後再動。
 
 **誠實**：主題若考很少（如光電效應，三校近年實測≈0 題），認領完就是 0–幾題，NoteStats 顯示低頻/0——**這才對，勝過硬塞整桶超綱題**。
