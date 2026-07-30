@@ -24,6 +24,15 @@ desktop.ini
 # local agent / editor session files — never commit（專案 skills 例外，要版控）
 .claude/*
 !.claude/skills/
+# 同上：.agents/ 只版控 skills，工作卡屬 session 檔
+.agents/scratchpad.md
+
+# 改規則檔／覆寫檔前留的時間戳備份（隨時可重生，never commit）
+*.bak
+pipeline/overrides/concept_tags.backup-*.json
+
+# PDF 匯出與一次性檢查的暫存 log
+tmp/
 
 # pipeline intermediates (committed outputs are src/data + public/q only)
 pipeline/out/

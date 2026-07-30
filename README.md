@@ -5,7 +5,7 @@
 ## 系統組成
 - **資料 pipeline**（[`pipeline/`](pipeline/README.md)）：PDF → `src/data/<school>.json` + `public/q/**` 題目截圖。正確答案只由答案卡 + 釋疑決定，不依賴 LLM。
 - **網站**（Astro + Svelte + TS + Tailwind/DaisyUI，部署 Vercel）：伺服器端密碼閘門。**題庫為靜態 JSON**；使用者狀態（錯題本／作答紀錄）存在 **Vercel 上的資料庫（Upstash Redis）**，localStorage 僅作本機快取（載入時讀 DB、變動時寫回，last-write-wins）。未設定 DB 時自動降級為純本機。進站密碼放在環境變數 `SITE_PASSWORD`（本機 `.env`／Vercel 環境變數，不進 repo、不進資料庫），詳見 `.env.example`。
-- 詳細實作見 plan 檔與 [CLAUDE.md](CLAUDE.md)。
+- 詳細實作見 plan 檔與 [AGENTS.md](AGENTS.md)。
 
 ## 本機開發
 ```bash
