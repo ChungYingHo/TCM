@@ -45,8 +45,8 @@ const NOTES = [
   { dir: '生物', href: '/bio-cell-2', file: '2-細胞核內膜系統能量胞器' },
   { dir: '生物', href: '/bio-cell-3', file: '3-細胞骨架與細胞外連結' },
   { dir: '生物', href: '/bio-cell-4', file: '4-細胞膜構造與功能' },
-  { dir: '生物', href: '/membrane-transport', file: '5-跨膜運輸與囊泡運輸' },
-  { dir: '生物', href: '/cell-signaling', file: '6-細胞訊號傳遞' },
+  { dir: '生物', href: '/bio-cell-5', file: '5-跨膜運輸與囊泡運輸' },
+  { dir: '生物', href: '/bio-cell-6', file: '6-細胞訊號傳遞' },
   { dir: '英文', href: '/readings/r1', file: '1-增補廣讀R1-VOA字彙' },
   { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
 ]

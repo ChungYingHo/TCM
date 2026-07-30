@@ -2,7 +2,13 @@
   // 必背速查表（合併原 Memorize＋KeyPoints，2026-07-04 Aira 定案：一個區塊、表格化、不要擠）。
   // items：每則寫「主題：內容」，元件自動以第一個「：」拆成兩欄（主題｜內容）；無「：」則內容獨佔整列。
   // 每列 print:break-inside-avoid，長表可自然跨頁但單列不被切。
-  let { label = '必背', items = [] }: { label?: string; items?: string[] } = $props()
+  import type { Snippet } from 'svelte'
+
+  let {
+    label = '必背',
+    items = [],
+    children,
+  }: { label?: string; items?: string[]; children?: Snippet } = $props()
   const split = (s: string): [string, string] => {
     const i = s.indexOf('：')
     return i > 0 && i <= 18 ? [s.slice(0, i), s.slice(i + 1)] : ['', s]
@@ -31,7 +37,7 @@
     </table>
   {:else}
     <div class="px-5 py-4 text-[0.9375rem] leading-relaxed">
-      <slot />
+      {@render children?.()}
     </div>
   {/if}
 </aside>

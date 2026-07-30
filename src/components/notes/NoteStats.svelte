@@ -19,7 +19,7 @@
       .finally(() => { loading = false })
   })
 
-  const subject = tagSubject(tag)
+  const subject = $derived(tagSubject(tag))
   const matches = $derived(all.filter((q) => q.concept_tags.includes(tag)))
   const total = $derived(matches.length)
   const perSchool = $derived(

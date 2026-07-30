@@ -1,0 +1,112 @@
+---
+// GPCR 下游路徑總表（板書式）：同一個起點依 Gα 亞型分流成六條路，
+// 末尾另附三組「開 → 關」的復位開關。
+// 純靜態、無 hydration：SSR 直出，列印 PDF 完整呈現（不藏在互動後面）。
+const TONE: Record<string, { box: string; badge: string }> = {
+  error: { box: 'border-error/45', badge: 'bg-error/12 text-error' },
+  warning: { box: 'border-warning/45', badge: 'bg-warning/15 text-warning' },
+  info: { box: 'border-info/45', badge: 'bg-info/12 text-info' },
+  secondary: { box: 'border-secondary/45', badge: 'bg-secondary/12 text-secondary' },
+  success: { box: 'border-success/45', badge: 'bg-success/12 text-success' },
+  primary: { box: 'border-primary/45', badge: 'bg-primary/12 text-primary' },
+}
+
+const PATHWAYS = [
+  {
+    receptor: 'β₁、β₂ 腎上腺素受體',
+    g: 'Gs',
+    tone: 'error',
+    lines: [['AC 腺苷酸環化酶', 'ATP → cAMP ↑', 'PKA', 'Ser-P／Thr-P']],
+    result: '肝醣分解、平滑肌舒張、心跳加快',
+  },
+  {
+    receptor: 'α₁ 腎上腺素受體',
+    g: 'Gq',
+    tone: 'warning',
+    lines: [
+      ['PLC 磷脂酶 C', '切開 PIP₂', 'DAG', 'PKC', 'Ser-P／Thr-P'],
+      ['PLC 磷脂酶 C', '切開 PIP₂', 'IP₃', '開 ER 鈣通道', '胞質 Ca²⁺ ↑'],
+    ],
+    result: '平滑肌收縮',
+  },
+  {
+    receptor: 'α₂ 腎上腺素受體',
+    g: 'Gi',
+    tone: 'info',
+    lines: [
+      ['⊖ 抑制 AC', 'cAMP ↓'],
+      ['⊖ 抑制 PLC', 'Ca²⁺ ↓'],
+    ],
+    result: '抑制性調節',
+  },
+  {
+    receptor: '視紫質 rhodopsin',
+    g: '轉導蛋白 transducin',
+    tone: 'secondary',
+    lines: [['PDE 磷酸二酯酶', 'cGMP ↓', 'Na⁺ 通道關閉', '感光細胞過極化']],
+    result: '產生視覺訊號',
+  },
+  {
+    receptor: '蕈毒鹼型 ACh 受體 mAChR（竇房結）',
+    g: 'Gβγ 次單元',
+    tone: 'success',
+    lines: [['直接開啟 K⁺ 通道', 'K⁺ 外流', '膜電位更負']],
+    result: '心跳變慢，屬抑制性',
+  },
+  {
+    receptor: '嗅覺受體、味覺受體',
+    g: 'Golf、Ggust',
+    tone: 'primary',
+    lines: [['AC 腺苷酸環化酶', 'cAMP', 'PKA']],
+    result: '嗅覺與味覺',
+  },
+]
+
+---
+
+<div class="not-prose my-6 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5 print:break-inside-avoid">
+  <div class="mb-3 flex items-center gap-2">
+    <span aria-hidden="true">🧭</span>
+    <span class="font-display font-bold">GPCR 下游路徑總表</span>
+  </div>
+
+  <p class="mb-4 rounded-box bg-base-200/60 px-3 py-2 text-sm leading-relaxed">
+    <b>共同起點</b>：水溶性配體 → 細胞膜上的 GPCR → 受體改變形狀 →
+    <b class="whitespace-nowrap">Gα 把 GDP 換成 GTP（開）</b> → 以下依 <b>Gα 亞型</b>分流。
+  </p>
+
+  <ol class="flex flex-col gap-3">
+    {
+      PATHWAYS.map((p) => (
+        <li class={`rounded-box border-l-4 bg-base-200/35 px-3 py-2.5 ${TONE[p.tone].box}`}>
+          <div class="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+            <span class="text-sm font-bold">{p.receptor}</span>
+            <span class={`rounded-full px-2 py-0.5 text-xs font-bold ${TONE[p.tone].badge}`}>
+              {p.g}
+            </span>
+          </div>
+
+          {p.lines.map((chain) => (
+            <div class="flex flex-wrap items-center gap-x-1 gap-y-1 text-[0.8125rem] leading-snug">
+              {chain.map((step, i) => (
+                <>
+                  {i > 0 && <span class="text-base-content/35" aria-hidden="true">→</span>}
+                  <span class="rounded bg-base-100 px-1.5 py-0.5 ring-1 ring-base-300">{step}</span>
+                </>
+              ))}
+            </div>
+          ))}
+
+          <div class="mt-1.5 text-xs text-base-content/70">
+            <span class="font-bold">結果：</span>
+            {p.result}
+          </div>
+        </li>
+      ))
+    }
+  </ol>
+
+  <p class="mt-4 text-xs leading-relaxed text-base-content/65">
+    每一條路都會自己關掉。三組復位開關整理在第八節「終止訊息」。
+  </p>
+</div>

@@ -27,10 +27,18 @@
     <text x="50" y="54" text-anchor="middle" class="fill-base-content/60 text-[8px]">ATP</text>
   </svg>
 
-  <label class="mt-3 flex items-center justify-between text-sm">
+  <label for="nakpump-cycles" class="mt-3 flex items-center justify-between text-sm">
     <span>循環次數 = <b class="text-primary tabular-nums">{cycles}</b></span>
   </label>
-  <input type="range" min="1" max="10" step="1" bind:value={cycles} class="range range-primary range-xs" />
+  <input
+    id="nakpump-cycles"
+    type="range"
+    min="1"
+    max="10"
+    step="1"
+    bind:value={cycles}
+    class="range range-primary range-xs"
+  />
 
   <div class="mt-2 grid grid-cols-3 gap-2 text-center text-sm">
     <div class="rounded-lg bg-error/10 p-2"><div class="text-xs text-base-content/55">Na⁺ 泵出</div><div class="font-bold tabular-nums text-error">{naOut}</div></div>

@@ -1,0 +1,164 @@
+---
+// 細胞訊號傳遞總覽：從訊號分子一路收斂到細胞反應的分層流程圖。
+// 重點在「哪些零件被不同路徑共用」，所以第二傳訊者與激酶都標了來源。
+// 純靜態、無 hydration：SSR 直出，列印 PDF 完整呈現。
+
+const TIERS = [
+  {
+    n: '①',
+    title: '訊號分子',
+    sub: '先看它溶不溶於脂，這一步決定受體在膜上還是細胞裡',
+    items: [
+      { t: '水溶性配體', d: '多數激素、神經傳遞物質、生長因子', cls: 'bg-primary/10 ring-primary/30' },
+      { t: '脂溶性配體', d: '類固醇、甲狀腺素、NO', cls: 'bg-secondary/10 ring-secondary/30' },
+    ],
+  },
+  {
+    n: '②',
+    title: '受體',
+    sub: '水溶性走上面三種膜受體，脂溶性直接穿膜找細胞內受體',
+    items: [
+      { t: 'GPCR', d: '七次跨膜，活化 G 蛋白', cls: 'bg-error/10 ring-error/30' },
+      { t: 'RTK', d: '二聚化，互相磷酸化 Tyr', cls: 'bg-warning/10 ring-warning/30' },
+      { t: '離子通道型受體', d: '配體一結合就開閘', cls: 'bg-success/10 ring-success/30' },
+      { t: '細胞內受體', d: '在胞質或核內', cls: 'bg-secondary/10 ring-secondary/30' },
+    ],
+  },
+  {
+    n: '③',
+    title: '轉換器',
+    sub: '把「配體結合」這件事翻譯成細胞內看得懂的形式',
+    items: [
+      { t: 'Gα · GTP／Gβγ', d: '來自 GPCR', cls: 'bg-error/10 ring-error/30' },
+      { t: '磷酸化的 Tyr 停泊位', d: '來自 RTK，可接十條以上路徑', cls: 'bg-warning/10 ring-warning/30' },
+      { t: '離子直接流入', d: '來自離子通道，直接改變膜電位', cls: 'bg-success/10 ring-success/30' },
+      { t: '激素-受體複合體', d: '來自細胞內受體，本身就是轉錄因子', cls: 'bg-secondary/10 ring-secondary/30' },
+    ],
+  },
+  {
+    n: '④',
+    title: '第二傳訊者',
+    sub: '小、水溶、能快速擴散。細胞內受體那條路沒有這一層',
+    items: [
+      { t: 'cAMP', d: '來源：AC（被 Gs 開、Gi 關）', cls: 'bg-error/10 ring-error/30' },
+      { t: 'IP₃', d: '來源：PLC 切 PIP₂　由 Gq 或 RTK 啟動', cls: 'bg-accent/12 ring-accent/40' },
+      { t: 'DAG', d: '來源：PLC 切 PIP₂　由 Gq 或 RTK 啟動', cls: 'bg-accent/12 ring-accent/40' },
+      { t: 'Ca²⁺', d: '來源：IP₃ 開 ER 鈣通道，或由胞外流入', cls: 'bg-accent/12 ring-accent/40' },
+      { t: 'cGMP', d: '來源：鳥苷酸環化酶（NO 會使它上升，視覺路徑的 PDE 使它下降）', cls: 'bg-info/10 ring-info/30' },
+    ],
+  },
+  {
+    n: '⑤',
+    title: '激酶',
+    sub: '把訊號放大成一整串磷酸化',
+    items: [
+      { t: 'PKA', d: '由 cAMP 活化，磷酸化 Ser／Thr', cls: 'bg-error/10 ring-error/30' },
+      { t: 'PKC', d: '由 DAG ＋ Ca²⁺ 活化，磷酸化 Ser／Thr', cls: 'bg-accent/12 ring-accent/40' },
+      { t: 'Ca²⁺-鈣調蛋白激酶', d: '由 Ca²⁺ 結合鈣調蛋白後活化', cls: 'bg-accent/12 ring-accent/40' },
+      { t: 'PKG', d: '由 cGMP 活化', cls: 'bg-info/10 ring-info/30' },
+      { t: '中繼蛋白級聯', d: '接在 RTK 的停泊位上', cls: 'bg-warning/10 ring-warning/30' },
+    ],
+  },
+  {
+    n: '⑥',
+    title: '共同終點：蛋白質磷酸化',
+    sub: '幾乎所有膜受體路徑都收斂到這裡，靠蛋白磷酸酶 PP 復位',
+    items: [
+      { t: '磷酸化 Ser／Thr', d: 'PKA、PKC、PKG 都做這件事', cls: 'bg-base-300/50 ring-base-300' },
+      { t: '磷酸化 Tyr', d: 'RTK 專屬', cls: 'bg-base-300/50 ring-base-300' },
+    ],
+  },
+  {
+    n: '⑦',
+    title: '細胞反應',
+    sub: '兩個去處',
+    items: [
+      { t: '胞質反應', d: '改變酵素活性、開關離子通道、代謝改變（如肝醣分解）', cls: 'bg-success/10 ring-success/30' },
+      { t: '核內反應', d: '調控轉錄，改變基因表現', cls: 'bg-secondary/10 ring-secondary/30' },
+    ],
+  },
+]
+
+const SHARED = [
+  {
+    k: 'PLC → IP₃ ＋ DAG',
+    v: '這條不是 GPCR 專屬。<b>GPCR（Gq）和 RTK 都能活化磷脂酶 C</b>，所以兩類受體最後可以走進同一條路。',
+  },
+  {
+    k: 'Ca²⁺',
+    v: '<b>GPCR 與 RTK 都用它當第二傳訊者</b>。來源有兩個：IP₃ 打開內質網的鈣通道，或由胞外經離子通道流入。',
+  },
+  {
+    k: 'cGMP',
+    v: '同一個分子被兩條路用，<b>方向卻相反</b>：NO 經鳥苷酸環化酶使 cGMP <b>上升</b>，視覺路徑的 PDE 使 cGMP <b>下降</b>。',
+  },
+  {
+    k: '蛋白質磷酸化',
+    v: '<b>幾乎所有膜受體路徑的共同終點</b>。差別只在磷酸化 Ser／Thr（PKA、PKC、PKG）還是 Tyr（RTK）。',
+  },
+  {
+    k: '三組關閉開關',
+    v: 'GTP 水解酶關 G 蛋白、PDE 分解 cAMP 與 cGMP、PP 去磷酸化。<b>不同路徑共用同一套復位機制</b>。',
+  },
+  {
+    k: '細胞內受體是例外',
+    v: '它<b>整層跳過第二傳訊者與激酶</b>，複合體直接進核當轉錄因子。所以反應慢、但持續久。',
+  },
+]
+---
+
+<div class="not-prose my-6 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
+  <div class="mb-1 flex items-center gap-2">
+    <span aria-hidden="true">🗺️</span>
+    <span class="font-display font-bold">細胞訊號傳遞總覽</span>
+  </div>
+  <p class="mb-4 text-xs leading-relaxed text-base-content/60">
+    由上往下走，每一層都會收斂一些。顏色代表訊號從哪一類受體來，
+    <span class="rounded bg-accent/12 px-1 ring-1 ring-accent/40">米色</span>
+    的方塊是被多條路徑共用的零件。
+  </p>
+
+  <ol class="flex flex-col">
+    {
+      TIERS.map((tier, ti) => (
+        <li>
+          <div class="rounded-box bg-base-200/40 px-3 py-2.5 print:break-inside-avoid">
+            <div class="mb-1 flex flex-wrap items-baseline gap-x-2">
+              <span class="text-sm font-bold">
+                {tier.n} {tier.title}
+              </span>
+              <span class="text-xs text-base-content/60">{tier.sub}</span>
+            </div>
+            <div class="flex flex-wrap gap-1.5">
+              {tier.items.map((it) => (
+                <div class={`min-w-0 flex-1 basis-40 rounded-lg px-2 py-1.5 ring-1 ${it.cls}`}>
+                  <div class="text-[0.8125rem] font-bold leading-snug">{it.t}</div>
+                  <div class="mt-0.5 text-[0.6875rem] leading-snug text-base-content/70">{it.d}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          {ti < TIERS.length - 1 && (
+            <div class="py-1 text-center text-base-content/30" aria-hidden="true">
+              ↓
+            </div>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+
+  <div class="mt-5 rounded-box border border-accent/30 bg-accent/[0.06] p-3 print:break-inside-avoid">
+    <div class="mb-2 text-sm font-bold">哪些零件是共用的</div>
+    <dl class="flex flex-col gap-1.5 text-[0.8125rem] leading-relaxed">
+      {
+        SHARED.map((s) => (
+          <div class="flex flex-col gap-0.5 sm:flex-row sm:gap-2">
+            <dt class="shrink-0 font-bold sm:w-40">{s.k}</dt>
+            <dd class="text-base-content/80" set:html={s.v} />
+          </div>
+        ))
+      }
+    </dl>
+  </div>
+</div>
