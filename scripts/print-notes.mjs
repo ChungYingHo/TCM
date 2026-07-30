@@ -140,24 +140,39 @@ async function main() {
     // 觸發載圖與島嶼：lazy 圖改 eager、逐段捲到底再回頂讓每個 IntersectionObserver 都觸發、
     // 等所有 <img> 解碼完成（少一張圖都不行）。
     await page.evaluate(async () => {
-      document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
-        img.loading = 'eager'
-      })
-      const step = Math.max(400, Math.floor(window.innerHeight * 0.8))
-      for (let y = 0; y <= document.body.scrollHeight; y += step) {
-        window.scrollTo(0, y)
-        await new Promise((r) => setTimeout(r, 150))
+      const eagerAll = () =>
+        document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+          img.loading = 'eager'
+        })
+      const scrollAll = async () => {
+        const step = Math.max(400, Math.floor(window.innerHeight * 0.8))
+        for (let y = 0; y <= document.body.scrollHeight; y += step) {
+          window.scrollTo(0, y)
+          await new Promise((r) => setTimeout(r, 150))
+        }
+        window.scrollTo(0, 0)
       }
-      window.scrollTo(0, 0)
-      const imagesReady = Promise.all(
-        [...document.images].map((img) =>
-          img.complete && img.naturalWidth > 0 ? null : img.decode().catch(() => {}),
-        ),
-      )
-      await Promise.race([
-        imagesReady,
-        new Promise((resolve) => setTimeout(resolve, 15_000)),
-      ])
+      const decodeAll = async () => {
+        const imagesReady = Promise.all(
+          [...document.images].map((img) =>
+            img.complete && img.naturalWidth > 0 ? null : img.decode().catch(() => {}),
+          ),
+        )
+        await Promise.race([imagesReady, new Promise((resolve) => setTimeout(resolve, 15_000))])
+      }
+      const pending = () =>
+        [...document.images].filter((img) => !(img.complete && img.naturalWidth > 0)).length
+
+      // 重複「轉 eager → 捲一遍 → 等解碼」直到圖片數不再增加且全部載完。
+      // 一輪不夠：考古題區的 RelatedQuestions 是 client:load 非同步 fetch 完才插入 DOM，
+      // 那些卡片的 <img loading="lazy"> 不在第一輪的 eager 轉換範圍內，只跑一輪會整片空白。
+      for (let pass = 0; pass < 4; pass++) {
+        const before = document.images.length
+        eagerAll()
+        await scrollAll()
+        await decodeAll()
+        if (document.images.length === before && pending() === 0) break
+      }
     })
     // 等字體與島嶼就緒，避免落字或 fallback metrics
     await page.evaluate(async () => {
