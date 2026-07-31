@@ -15,31 +15,72 @@
 
   type Seg = { t: string; kind: 'text' | 'head' | 'reuse'; w?: string; zh?: string }
 
-  // Slice the example into plain text, the bolded headword, and tappable reused words.
-  // Ranges come from the headword match + each precomputed reuse surface; overlaps are
-  // dropped (first wins) so rendering is a single clean pass.
-  const segments = $derived.by<Seg[]>(() => {
-    const ex = word.example
-    if (!ex) return []
+  // A multi-sentence example is one string in the data, so split it for display —
+  // otherwise the sentences run together inline and you can't tell them apart.
+  // Only break on end punctuation followed by a capital, so "e.g." / "Dr." survive.
+  // 稱謂與常見縮寫的句點不是句尾（"I recommend Mr. Lin" 不可切在 Mr. 後面）。
+  const ABBR = /(?:^|\s)(mr|mrs|ms|dr|prof|st|jr|sr|vs|etc|approx|dept|univ|fig|no|e\.g|i\.e)$/i
+
+  function splitEn(s: string): string[] {
+    const out: string[] = []
+    const re = /[.!?]+\s+(?=["“'‘A-Z])/g
+    let last = 0
+    let m: RegExpExecArray | null
+    while ((m = re.exec(s))) {
+      if (ABBR.test(s.slice(last, m.index))) continue
+      out.push(s.slice(last, m.index + m[0].trimEnd().length))
+      last = m.index + m[0].length
+    }
+    out.push(s.slice(last))
+    return out.map((x) => x.trim()).filter(Boolean)
+  }
+
+  const splitZh = (s: string): string[] =>
+    (s.match(/[^。！？]+[。！？]?/g) ?? []).map((x) => x.trim()).filter(Boolean)
+
+  // Slice one sentence into plain text, the bolded headword, and tappable reused words.
+  // Every occurrence is marked, not just the first — the headword often appears again in
+  // the second sentence (26 words in the set), and leaving those unmarked looks like a bug.
+  // Overlaps are dropped (first wins) so rendering is a single clean pass.
+  function segment(sentence: string): Seg[] {
     const ranges: { start: number; end: number; kind: 'head' | 'reuse'; w?: string; zh?: string }[] = []
-    const headRe = new RegExp(`\\b${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*`, 'i')
-    const hm = ex.match(headRe)
-    if (hm && hm.index !== undefined) ranges.push({ start: hm.index, end: hm.index + hm[0].length, kind: 'head' })
+    const headRe = new RegExp(`\\b${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*`, 'gi')
+    for (const m of sentence.matchAll(headRe)) {
+      if (m.index !== undefined) ranges.push({ start: m.index, end: m.index + m[0].length, kind: 'head' })
+    }
     for (const r of word.reuses ?? []) {
-      const i = ex.indexOf(r.s)
-      if (i >= 0) ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', w: r.w, zh: r.zh })
+      for (let i = sentence.indexOf(r.s); i >= 0; i = sentence.indexOf(r.s, i + r.s.length)) {
+        ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', w: r.w, zh: r.zh })
+      }
     }
     ranges.sort((a, b) => a.start - b.start)
     const out: Seg[] = []
     let pos = 0
     for (const rg of ranges) {
       if (rg.start < pos) continue
-      if (rg.start > pos) out.push({ t: ex.slice(pos, rg.start), kind: 'text' })
-      out.push({ t: ex.slice(rg.start, rg.end), kind: rg.kind, w: rg.w, zh: rg.zh })
+      if (rg.start > pos) out.push({ t: sentence.slice(pos, rg.start), kind: 'text' })
+      out.push({ t: sentence.slice(rg.start, rg.end), kind: rg.kind, w: rg.w, zh: rg.zh })
       pos = rg.end
     }
-    if (pos < ex.length) out.push({ t: ex.slice(pos), kind: 'text' })
+    if (pos < sentence.length) out.push({ t: sentence.slice(pos), kind: 'text' })
     return out
+  }
+
+  // Pair each English sentence with its 中文 when the counts line up (they do for all but
+  // one word); otherwise keep the 中文 as a single trailing block rather than mis-pairing.
+  const rows = $derived.by(() => {
+    const ex = word.example
+    if (!ex) return []
+    const en = splitEn(ex)
+    const zh = splitZh(word.example_zh ?? '')
+    const paired = zh.length === en.length
+    return en.map((s, i) => ({ segs: segment(s), zh: paired ? zh[i] : '' }))
+  })
+
+  const trailingZh = $derived.by(() => {
+    const ex = word.example
+    if (!ex || !word.example_zh) return ''
+    return splitZh(word.example_zh).length === splitEn(ex).length ? '' : word.example_zh
   })
 
   const hasReuse = $derived((word.reuses?.length ?? 0) > 0)
@@ -103,13 +144,16 @@
 
   {#if word.example}
     <div class="mt-1 rounded-lg bg-base-200/60 p-2.5 text-sm">
-      <p class="leading-relaxed">
-        {#each segments as seg, i (i)}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
-              type="button"
-              class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
-              title="點看字義（考過的字）"
-              onclick={() => tapReuse(seg.t, seg.w ?? '', seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
-      </p>
+      {#each rows as row, ri (ri)}
+        <p class="leading-relaxed {ri > 0 ? 'mt-2' : ''}">
+          {#each row.segs as seg, i (i)}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
+                type="button"
+                class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
+                title="點看字義（考過的字）"
+                onclick={() => tapReuse(seg.t, seg.w ?? '', seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
+        </p>
+        {#if row.zh}<p class="mt-0.5 text-base-content/60">{row.zh}</p>{/if}
+      {/each}
 
       {#if peek}
         <p class="mt-1.5 flex items-baseline gap-1.5 rounded bg-primary/10 px-2 py-1 text-xs">
@@ -118,7 +162,7 @@
         </p>
       {/if}
 
-      {#if word.example_zh}<p class="mt-0.5 text-base-content/60">{word.example_zh}</p>{/if}
+      {#if trailingZh}<p class="mt-0.5 text-base-content/60">{trailingZh}</p>{/if}
 
       <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
         {#if word.draft}<span class="inline-block rounded bg-base-300/60 px-1 text-[10px] text-base-content/50">AI 草稿例句</span>{/if}
