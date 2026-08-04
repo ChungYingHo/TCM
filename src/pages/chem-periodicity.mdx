@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 週期表與週期性
 summary: 週期表的結構與元素分類、各週期填入的軌域，金屬與非金屬性、有效核電荷，以及游離能的定義、逐步游離能與週期趨勢（含 Be→B、N→O 兩個例外）。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import MiniPeriodicTable from '@/components/notes/MiniPeriodicTable.svelte'
@@ -179,9 +179,9 @@ $$X(g) \to X^+(g) + e^-$$
 
 ## 必背
 
-<Memorize client:visible items={[
+<Memorize items={[
     "A 族最後填 s 或 p，B 族填 d 或 f。",
-    "各週期元素數 <code>2/8/18/32</code>；同族原子序差 <code>2,8,8,18,18,32,32,50,50</code>。",
+    "各週期元素數 <code>2、8、18、32</code>。同族原子序差 <code>2,8,8,18,18,32,32,50,50</code>。",
     "元素四類：<ul><li>A 族典型</li><li>8A 惰氣（單原子）</li><li>d 過渡（有色、多氧化態、催化）</li><li>f 內過渡</li></ul>",
     "金屬 vs 非金屬：<ul><li>金屬易失電子、IE 小、氧化物鹼性</li><li>非金屬易得電子、IE 大、氧化物酸性</li><li>類金屬兩性</li></ul>",
     "有效核電荷：<code><b>Z<sub>eff</sub>＝Z − σ</b></code>，σ 是遮蔽常數（0 ＜ σ ＜ Z）。",

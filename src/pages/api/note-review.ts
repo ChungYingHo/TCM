@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro'
 import { NOTES } from '@/models/notes'
-import { parseCards, parseExamples, type NoteCard, type NoteExample } from '@/utils/noteReview'
+import { parseCards, parseExamples, tagLists, type NoteCard, type NoteExample } from '@/utils/noteReview'
+import { renderMathHtml } from '@/utils/mathHtml'
 
 export const prerender = false
 
@@ -38,7 +39,16 @@ function build(): NoteReviewData {
     const note = byHref.get(`/${slug}`)
     if (!note) continue
     const src = { slug, href: note.href, title: note.title, subject: note.subject }
-    cards.push(...parseCards(raw, src))
+    // 公式在這裡就用 KaTeX 渲染好（跟 Memorize.astro 同一個 renderer），回想卡拿到的是
+    // 已經有分數橫線的 HTML——MemorizeDrill 是前端元件，不能自己 import katex。
+    cards.push(
+      ...parseCards(raw, src).map((c) => ({
+        ...c,
+        topic: renderMathHtml(c.topic),
+        body: renderMathHtml(tagLists(c.body)),
+        points: c.points.map(renderMathHtml),
+      })),
+    )
     examples.push(...parseExamples(raw, src))
   }
   return { cards, examples }

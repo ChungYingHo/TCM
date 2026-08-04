@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學反應方程式與化學計量
 summary: 平衡方程式（觀察法）、係數比的意義、化學計量總流程、限量試劑、理論產量、產率與原子經濟性，全程 unit factor。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 
@@ -125,7 +125,7 @@ M_{\ce{M}} &= \frac{0.972\ \text{g}}{0.0119\ \text{mol}} - 16.0\ \text{g/mol}\\[
 \end{aligned}
 $$
 
-（用硫化物驗算：$1.164/0.0119-32.1=65.5$ 一致，$\approx 65.4$ 即鋅 $\ce{Zn}$）→ (B)。
+（用硫化物驗算：$\dfrac{1.164}{0.0119}-32.1=65.5$ 一致，$\approx 65.4$ 即鋅 $\ce{Zn}$）→ (B)。
 
 </WorkedExample>
 
@@ -138,7 +138,7 @@ $$
 **判斷步驟**：
 
 1. 各反應物**都先換成 mol**。
-2. 各 mol **÷ 自己的係數**。
+2. 各 mol 都 **乘上 $\dfrac{1}{\text{自己的係數}}$**。
 3. **比值最小**者 → **限量試劑**。
 
 $$
@@ -213,7 +213,7 @@ $0.010 < 0.015$ → 只能中和 $0.010$ mol，仍剩 $0.005$ mol 胃酸 → **�
 |------|------|
 | **理論產量** | 由**限量試劑**算出的**最大**產量（反應完全、零損失） |
 | **實際產量** | 實驗真正得到的量（通常較少） |
-| **產率（%）** | 實際 ÷ 理論 |
+| **產率（%）** | $\dfrac{\text{實際產量}}{\text{理論產量}}$ |
 
 $$
 \text{產率} = \frac{\text{實際產量}}{\text{理論產量}} \times 100\%
@@ -297,14 +297,14 @@ $$
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "平衡方程式：只調係數不改化學式。先平衡只出現一次的元素，H、O 最後。",
     "各種比：<ul><li>係數比＝分子數比＝莫耳數比＝氣體體積比（同溫同壓）</li><li><b>質量比 ≠ 係數比</b></li></ul>",
-    "計量總流程：<ul><li>已知量 → mol：<code>÷M</code>（克）、<code>÷N<sub>A</sub></code>（個數）、<code>÷22.4</code>（STP 公升）</li><li>mol → mol：<code>×目標係數/已知係數</code></li><li>mol → 目標量：<code>×M</code>、<code>×N<sub>A</sub></code>、<code>×22.4</code></li></ul>",
-    "限量試劑：各反應物 mol <b>÷自己係數，最小者</b>。不可只比 mol 或質量。",
-    "理論產量：由限量試劑決定，過量試劑也全以限量試劑為基準往下算。<code>產率＝實際/理論×100%</code>",
-    "原子經濟性：<code>目標產物式量×係數</code> ÷ <code>Σ(反應物式量×係數)</code> ×100%。算理論設計效率，與產率不同。"
+    "計量總流程：<ul><li>已知量 → mol：$\\times\\dfrac{1}{M}$（克）、$\\times\\dfrac{1}{N_A}$（個數）、$\\times\\dfrac{1}{22.4}$（STP 公升）</li><li>mol → mol：$\\times\\dfrac{\\text{目標係數}}{\\text{已知係數}}$</li><li>mol → 目標量：$\\times M$、$\\times N_A$、$\\times 22.4$</li></ul>",
+    "限量試劑：各反應物算 $n\\times\\dfrac{1}{\\text{自己的係數}}$，<b>最小者</b>。不可只比 mol 或質量。",
+    "理論產量：由限量試劑決定，過量試劑也全以限量試劑為基準往下算。$產率＝\\dfrac{實際產量}{理論產量}\\times100\\%$",
+    "原子經濟性：$\\dfrac{\\text{目標產物式量}\\times\\text{係數}}{\\Sigma(\\text{反應物式量}\\times\\text{係數})}\\times100\\%$。算理論設計效率，與產率不同。"
   ]}
 />
 
@@ -351,7 +351,7 @@ $$
   options={["N₂", "H₂", "兩者剛好", "無法判斷"]}
   answer="(B) H₂"
   steps={[
-    "各 mol ÷ 自己係數：N₂ ＝ 2/1 ＝ 2、H₂ ＝ 3/3 ＝ 1。",
+    "各 mol 乘自己係數的倒數：N₂ ＝ $\\dfrac{2}{1}$ ＝ 2、H₂ ＝ $\\dfrac{3}{3}$ ＝ 1。",
     "比值最小者先用完 → <b>H₂ 是限量試劑</b>（N₂ 過量）。",
     "別只看 mol（N₂ 反而較少還不是限量），一定要除係數。"
   ]}
@@ -398,7 +398,7 @@ $$
   answer="(B) 34 g"
   steps={[
     "換 mol：N₂ ＝ 28/28 ＝ 1 mol、H₂ ＝ 9/2 ＝ 4.5 mol。",
-    "÷ 係數：N₂ ＝ 1/1 ＝ 1、H₂ ＝ 4.5/3 ＝ 1.5 → <b>N₂ 限量</b>。",
+    "除以係數：N₂ ＝ $\\dfrac{1}{1}$ ＝ 1、H₂ ＝ $\\dfrac{4.5}{3}$ ＝ 1.5 → <b>N₂ 限量</b>。",
     "以 N₂：1 mol × (2 mol NH₃/1 mol N₂) × 17 g/mol ＝ <b>34 g</b>。"
   ]}
 />

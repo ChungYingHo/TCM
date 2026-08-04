@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 熱力學
 summary: 自發性、熵與亂度、系統／外界／宇宙熵（第二定律），與 ΔH·ΔS 四種組合對自發性的影響。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import EntropySign from '@/components/notes/EntropySign.svelte'
 
@@ -78,14 +78,14 @@ $$
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "自發判據：<code>ΔS<sub>宇宙</sub> > 0</code>（第二定律）。自發不等於快，方向是熱力學、速率是動力學。",
     "熵＝亂度：<code>固＜液＜氣</code>。判 ΔS<sub>系統</sub> 最快看反應前後<b>氣體莫耳數</b>增減。固→液→氣、溶解、混合、升溫都增熵。",
-    "宇宙熵：<ul><li><code>ΔS<sub>宇宙</sub>＝ΔS<sub>系統</sub>＋ΔS<sub>外界</sub></code></li><li><code>ΔS<sub>外界</sub>＝−ΔH/T</code></li></ul>放熱使外界熵增，有利自發但非絕對。",
+    "宇宙熵：<ul><li>$\\Delta S_{宇宙}＝\\Delta S_{系統}+\\Delta S_{外界}$</li><li>$\\Delta S_{外界}＝-\\dfrac{\\Delta H}{T}$</li></ul>放熱使外界熵增，有利自發但非絕對。",
     "四種組合：<ul><li>ΔH− ΔS+：恆自發</li><li>ΔH+ ΔS−：恆不自發</li><li>同號才看溫度（−− 低溫自發、++ 高溫自發）</li></ul>",
-    "單位一致：算 <code>ΔS<sub>宇宙</sub>＝ΔS<sub>系統</sub>−ΔH/T</code> 時，ΔH 與 ΔS 都要用 J。",
-    "臨界溫度：ΔH 與 ΔS 同號才有 <code>T＝ΔH/ΔS<sub>系統</sub></code>（宇宙熵為 0 的分界），異號則與溫度無關。"
+    "單位一致：算 $\\Delta S_{宇宙}＝\\Delta S_{系統}-\\dfrac{\\Delta H}{T}$ 時，ΔH 與 ΔS 都要用 J。",
+    "臨界溫度：ΔH 與 ΔS 同號才有 $T＝\\dfrac{\\Delta H}{\\Delta S_{系統}}$（宇宙熵為 0 的分界），異號則與溫度無關。"
   ]}
 />
 

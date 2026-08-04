@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 週期性趨勢：原子半徑、電子親和力與電負度
 summary: 原子半徑（A 族與過渡金屬、鑭系收縮、波耳半徑）、電子親和力（正負符號與三個例外）、離子半徑的四條結論、電負度的定義與趨勢，最後把有效核電荷、游離能、電子親和力、電負度四個量與週期性綜合考題一起複習。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import PeriodicTrends from '@/components/notes/PeriodicTrends.svelte'
@@ -81,13 +81,13 @@ $$\ce{O^-(g) + e^- -> O^2-(g)}$$
 
 $$r_n = \frac{n^2}{Z}\,a_0$$
 
-其中 n 是主量子數、Z 是核電荷、$a_0$ 是波耳半徑。比大小時只要算 $n^2/Z$ 誰大。
+其中 n 是主量子數、Z 是核電荷、$a_0$ 是波耳半徑。比大小時只要算 $\dfrac{n^2}{Z}$ 誰大。
 
 <WorkedExample source="義守 113·22" answer="(A) H（n＝3）" tags={["原子半徑", "波耳模型", "週期趨勢"]}>
 
 **題目**　依據波耳原子模型，下列何者半徑最大？(A) H（n＝3）　(B) $\ce{He^+}$（n＝4）　(C) $\ce{Li^2+}$（n＝3）　(D) $\ce{Be^3+}$（n＝4）
 
-**解法**　半徑正比於 $n^2/Z$，四個算出來是 H ＝ 9/1 ＝ 9、$\ce{He^+}$ ＝ 16/2 ＝ 8、$\ce{Li^2+}$ ＝ 9/3 ＝ 3、$\ce{Be^3+}$ ＝ 16/4 ＝ 4，最大是 H。故選 (A)。
+**解法**　半徑正比於 $\dfrac{n^2}{Z}$，四個算出來是 H ＝ $\dfrac{9}{1}$ ＝ 9、$\ce{He^+}$ ＝ $\dfrac{16}{2}$ ＝ 8、$\ce{Li^2+}$ ＝ $\dfrac{9}{3}$ ＝ 3、$\ce{Be^3+}$ ＝ $\dfrac{16}{4}$ ＝ 4，最大是 H。故選 (A)。
 
 </WorkedExample>
 
@@ -210,7 +210,7 @@ B 族過渡金屬同週期大致跟主族一樣往右增。同族往下前 3 族
 
 ## 必背
 
-<Memorize client:visible items={[
+<Memorize items={[
     "電子親和力：氣態原子加一個電子的能量變化，<code><b>X(g) + e⁻ → X⁻(g)</b></code>，多數放熱。",
     "EA 正負：放熱記負號。負得愈多＝放熱愈多＝EA 愈大。",
     "EA 與 IE 同向：IE 大／EA 大＝愛電子；IE 小／EA 小＝不愛。",
@@ -222,7 +222,7 @@ B 族過渡金屬同週期大致跟主族一樣往右增。同族往下前 3 族
     "過渡金屬半徑：同週期往右遞減、同族 <b>5d ≈ 4d ＞ 3d</b>。",
     "鑭系收縮：4f 遮蔽差 → Zr 與 Hf 半徑幾乎相同、難分離。",
     "稀土＝鑭系＋Y＋Sc：都偏好 +3 價、半徑相近難分離。",
-    "波耳半徑：<code><b>r ∝ n²/Z</b></code>，比大小就算 n²/Z。",
+    "波耳半徑：$r\\propto\\dfrac{n^2}{Z}$，比大小就算這個值誰大。",
     "離子半徑：負電多則大、正電多則小，<code><b>A²⁻＞A⁻＞A＞A⁺＞A²⁺</b></code>。",
     "等電子離子：電子數相同時 <b>核電荷 Z 愈大、半徑愈小</b>。",
     "電負度：把鍵結電子拉過來的能力，<b>F＝3.98 最大</b>，趨勢與游離能同向。",

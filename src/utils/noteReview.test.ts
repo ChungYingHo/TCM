@@ -89,6 +89,17 @@ describe('parseCards', () => {
     expect(cards[1].topic).toBe('Pauli')
   })
 
+  it('extracts the bullet points and plain text used by the hint UI', () => {
+    const raw = '<Memorize items={["節點：<ul><li>徑向 <code>n−ℓ−1</code></li><li>角向 $\\\\ell$</li></ul>", "單句：一軌域最多 2 電子。"]} />'
+    const [list, single] = parseCards(raw, SRC)
+    expect(list.points).toEqual(['徑向 <code>n−ℓ−1</code>', '角向 $\\ell$'])
+    // plain 截在第一個公式前，才不會把 LaTeX 原始碼當提示秀出來
+    expect(list.plain).toBe('徑向 n−ℓ−1角向')
+    // 沒有條列的卡片：points 空，提示改用 plain 的前半段
+    expect(single.points).toEqual([])
+    expect(single.plain).toBe('一軌域最多 2 電子。')
+  })
+
   it('keeps numbering continuous across several Memorize blocks', () => {
     const raw = '<Memorize items={["甲：一"]} /><Memorize label="補充" items={["乙：二"]} />'
     expect(parseCards(raw, SRC).map((c) => c.id)).toEqual(['chem-x-m-1', 'chem-x-m-2'])

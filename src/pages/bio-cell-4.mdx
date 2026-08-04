@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞膜（構造與功能）
 summary: 磷脂雙層與兩性分子、流體鑲嵌模型、膜流動性（飽和／不飽和、鏈長、溫度、膽固醇）、膜蛋白種類分布與六大功能、細胞間辨識、選擇性通透與運輸蛋白。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Supplement from '@/components/notes/Supplement.astro'
 import Figure from '@/components/notes/Figure.astro'
@@ -266,7 +266,7 @@ import IonDistribution from '@/components/notes/IonDistribution.svelte'
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "膜組成：脂質與蛋白質各約占質量一半，醣類 <code>5–10%</code>。",
     "磷脂質＝兩性：親水頭朝外、疏水尾朝內，自組成雙層。膜厚 <code>4–10 nm</code>。",

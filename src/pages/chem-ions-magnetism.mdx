@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 帶電離子的電子組態與磁光行為
 summary: 陽離子與陰離子電子組態的寫法（A 族、特殊 A 族的惰性電子對效應、假惰性氣體組態、等電子），過渡金屬陽離子與氧化態，順磁與反磁，螢光與磷光。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import GouyBalance from '@/components/notes/GouyBalance.svelte'
@@ -205,7 +205,7 @@ import JablonskiDiagram from '@/components/notes/JablonskiDiagram.svelte'
 
 ## 必背
 
-<Memorize client:visible items={[
+<Memorize items={[
     "寫離子組態兩步：先寫中性原子，再<b>陽離子移除能量高的（先移 4s）、陰離子加電子</b>。",
     "一般 A 族：1A~3A 失電子、5A~7A 得電子，都到最近惰性氣體組態。",
     "等電子雙向：同組態→必同總數；同總數→不一定同組態（Zn²⁺ 與 Ni 皆 28 e⁻）。",

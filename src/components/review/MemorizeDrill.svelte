@@ -18,6 +18,8 @@
   let i = $state(0)
   let flipped = $state(false)
   let done = $state(0)
+  /** 已放出的提示條數（0＝還沒給）。條列卡逐條放，單句卡放前面一段。 */
+  let hints = $state(0)
 
   function build() {
     const due = dueIds().filter((id) => byId.has(id))
@@ -31,6 +33,7 @@
     i = 0
     done = 0
     flipped = false
+    hints = 0
   }
   // 只在掛載時建一次牌組。作答會寫 SRS → 讓父層重算 props，若用 $effect 重建就會把 i 歸零、
   // 卡在同一張翻不過去（見 VocabStudy 的同一個坑）。
@@ -38,6 +41,21 @@
 
   const current = $derived(deck[i] ? byId.get(deck[i]) : null)
   const remaining = $derived(Math.max(0, deck.length - i))
+
+  const revealed = $derived(hints > 0)
+  /** 單句卡的提示＝前面約四成，留下後半自己想。 */
+  const partial = $derived(current ? current.plain.slice(0, Math.ceil(current.plain.length * 0.4)) : '')
+  /** 條列卡放到剩最後一條就停（全放完等於直接看答案）；單句卡要前半有東西可露才給。 */
+  const canHint = $derived(
+    !!current &&
+      (current.points.length
+        ? hints < current.points.length - 1
+        : hints === 0 && current.plain.length >= 12),
+  )
+
+  function hint() {
+    hints += 1
+  }
 
   function answer(known: boolean) {
     const id = deck[i]
@@ -48,6 +66,7 @@
     i += 1
     done += 1
     flipped = false
+    hints = 0
   }
 </script>
 
@@ -64,18 +83,46 @@
     <p class="text-center text-sm tabular-nums text-base-content/55">剩 {remaining} 張</p>
 
     <div class="overflow-hidden rounded-box border border-base-300 bg-base-100 shadow-soft">
-      <div class="flex items-center gap-2 border-b border-base-200 bg-base-200/40 px-4 py-2 text-xs text-base-content/55">
+      <!-- 出處放大、放在最上面：光看主題想不起來時，「這是哪一篇的」才是真正的檢索線索 -->
+      <div class="flex flex-wrap items-center gap-x-2 gap-y-1 border-b border-base-200 bg-base-200/40 px-4 py-2.5">
         <span class="badge badge-ghost badge-sm">{current.subject}</span>
-        <a class="link-hover truncate" href={current.noteHref}>{current.noteTitle}</a>
+        <a class="link-hover truncate text-sm font-semibold text-base-content/75" href={current.noteHref}>
+          {current.noteTitle}
+        </a>
       </div>
 
       {#if !flipped}
-        <button class="flex min-h-44 w-full flex-col items-center justify-center gap-3 p-6 text-center transition-colors hover:bg-base-content/[0.02]" onclick={() => (flipped = true)}>
-          <span class="font-display text-2xl font-bold leading-snug tracking-tight">
-            {current.topic || '這篇的重點是什麼？'}
-          </span>
-          <span class="text-xs text-base-content/40">先自己回想，點一下看答案</span>
-        </button>
+        <div class="flex min-h-44 flex-col items-center justify-center gap-2.5 p-6 text-center">
+          <p class="text-xs tracking-wide text-base-content/45">關於這一項，你記得什麼？</p>
+          <p class="font-display text-2xl font-bold leading-snug tracking-tight">
+            {@html current.topic || '這篇的重點'}
+          </p>
+          {#if current.points.length}
+            <p class="text-sm text-base-content/50">共 {current.points.length} 個要點</p>
+          {/if}
+
+          {#if revealed}
+            <div class="memorize-body mt-1 w-full rounded-lg bg-base-200/50 px-4 py-3 text-left text-[0.9rem] leading-relaxed">
+              {#if current.points.length}
+                <ul class="mz-list">
+                  {#each current.points.slice(0, hints) as p, i (i)}<li class="mz-item">{@html p}</li>{/each}
+                </ul>
+              {:else}
+                <span>{partial}…</span>
+              {/if}
+            </div>
+          {/if}
+
+          <div class="mt-2 flex flex-wrap justify-center gap-2">
+            {#if canHint}
+              <button class="btn btn-ghost btn-sm" onclick={hint}>
+                <Icon name="sparkles" class="h-4 w-4" />
+                {revealed ? '再給一點' : '給我提示'}
+              </button>
+            {/if}
+            <button class="btn btn-primary btn-sm" onclick={() => (flipped = true)}>翻開看答案</button>
+          </div>
+        </div>
       {:else}
         <div class="memorize-body px-5 py-4">
           {#if current.topic}
@@ -95,42 +142,3 @@
   </div>
 {/if}
 
-<style>
-  /* 卡背是筆記 `<Memorize items>` 的原文 HTML，樣式要跟筆記裡看到的一致。
-     {@html} 不吃 Svelte 的作用域，得用 :global。 */
-  .memorize-body :global(code) {
-    display: inline-block;
-    padding: 0.05em 0.4em;
-    border-radius: 0.3rem;
-    background: color-mix(in srgb, currentColor 9%, transparent);
-    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    font-size: 0.92em;
-    white-space: nowrap;
-    max-width: 100%;
-    overflow-x: auto;
-    vertical-align: bottom;
-  }
-  .memorize-body :global(code) :global(sub) {
-    font-family: inherit;
-  }
-  .memorize-body :global(ul) {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .memorize-body :global(li) {
-    position: relative;
-    padding-left: 0.85em;
-    margin-top: 0.3em;
-  }
-  .memorize-body :global(li:first-child) {
-    margin-top: 0.15em;
-  }
-  .memorize-body :global(li)::before {
-    content: '·';
-    position: absolute;
-    left: 0.1em;
-    font-weight: 700;
-    opacity: 0.45;
-  }
-</style>

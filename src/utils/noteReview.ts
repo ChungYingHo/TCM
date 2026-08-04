@@ -27,6 +27,11 @@ export interface NoteCard {
   topic: string
   /** 內容，原樣的 HTML 片段（`<ul>`／`<code>`／`<sub>`…），與筆記裡看到的一致。 */
   body: string
+  /** 內容裡的每個 `<li>`。用來在卡面顯示「共 N 個要點」並逐條給提示——光看主題想不
+   *  起來的時候，知道要回想幾件事、再放一條出來，比直接翻答案有效（Aira 2026-08-05）。 */
+  points: string[]
+  /** 內容的純文字（去標籤、截在第一個公式前），沒有條列的卡片用它做局部提示。 */
+  plain: string
 }
 
 export interface NoteReviewSource {
@@ -113,11 +118,35 @@ function arrayProp(attrs: string, key: string): string[] {
   return []
 }
 
-/** 與 Memorize.svelte 相同的拆法：第一個全形冒號之前（≤18 字）是主題。兩邊必須一致，
+/** 與 Memorize.astro 相同的拆法：第一個全形冒號之前（≤18 字）是主題。兩邊必須一致，
  *  否則卡片正面問的主題會和筆記顯示的欄位對不起來。 */
 export function splitMemorizeItem(s: string): [topic: string, body: string] {
   const i = s.indexOf('：')
   return i > 0 && i <= 18 ? [s.slice(0, i), s.slice(i + 1)] : ['', s]
+}
+
+/** 給必背卡內文的 `<ul>`／`<li>` 掛上 class。
+ *  `.prose ul:not([class])` 會還原 markdown 條列的 disc 符號，而必背卡的條列是元件自排版
+ *  （已有自己的 `·`）——沒有 class 就會兩個符號疊在一起。tailwind.css 的註解本來就要求
+ *  「元件內自排版的 list 自帶 class」，這裡補上，不用比 CSS 特異性。 */
+export function tagLists(html: string): string {
+  return html.replace(/<ul>/g, '<ul class="mz-list">').replace(/<li>/g, '<li class="mz-item">')
+}
+
+/** 抽出每個 `<li>` 的內容。 */
+export function listPoints(html: string): string[] {
+  return [...html.matchAll(/<li>([\s\S]*?)<\/li>/g)].map((m) => m[1].trim()).filter(Boolean)
+}
+
+/** 提示用的純文字：去標籤，並在**遇到第一個公式就停**。
+ *  把 `$…$` 的 LaTeX 原始碼拆開會變成 `\Delta S_{宇宙}` 這種讀不懂的東西，
+ *  截在公式前反而誠實——前面沒東西可提示時，UI 就不給提示按鈕。 */
+export function plainText(html: string): string {
+  return html
+    .split('$')[0]
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 /** Parse every `<Memorize items={[…]}/>` in one note's raw MDX into recall cards.
@@ -135,6 +164,8 @@ export function parseCards(raw: string, src: NoteReviewSource): NoteCard[] {
         noteTitle: src.title,
         topic,
         body,
+        points: listPoints(body),
+        plain: plainText(body),
       })
     }
   }

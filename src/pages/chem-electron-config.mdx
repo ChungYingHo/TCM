@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 原子軌域能階與電子組態
 summary: 單電子與多電子原子的軌域能階（n 與 n+l 規則、穿透遮蔽），填電子三大規則，電中性原子與過渡金屬（Cr、Cu 例外）電子組態的書寫。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import OrbitalEnergyLevels from '@/components/notes/OrbitalEnergyLevels.svelte'
@@ -232,7 +232,7 @@ $$2p^6 + 3p^6 + 4p^6 = 6 + 6 + 6 = 18\ \text{個}$$
 
 ## 必背
 
-<Memorize client:visible items={[
+<Memorize items={[
     "單電子原子（H、He⁺、Li²⁺）：能量<b>只由 n 決定</b>，同 n 簡併。",
     "多電子原子：<b>n+l 規則</b>。n+l 大能量高，n+l 相同則 n 大能量高。",
     "同 n 能量序：<code>ns < np < nd < nf</code>。穿透 s>p>d，穿透深則能量低。",

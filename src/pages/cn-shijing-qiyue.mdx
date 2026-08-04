@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 詩經・七月
 summary: 《詩經・豳風・七月》農事詩全解，夏曆與周曆兩套曆法、七月流火正解，加詩經六義、四家詩等常考重點。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ## 一、出處與背景
@@ -203,7 +203,7 @@ import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "七月出處：《詩經・國風・豳風》第一篇。農事詩，寫法用「賦」，按月令鋪陳。",
     "兩套曆法：<ul><li>單純月份（七月、九月…）＝夏曆</li><li>「◯之日」＝周曆，一之日＝夏曆十一月</li></ul>",

@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學上重要的單位
 summary: 莫耳、amu／莫耳質量、unit factor 換算、長度／壓力／溫度／能量／濃度單位、化學常用數學與有效數字。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import SigFig from '@/components/notes/SigFig.svelte'
@@ -91,7 +91,7 @@ $$
 | **質量** | $1\ \text{kg}=10^3\ \text{g}=10^6\ \text{mg}$ |
 | **體積** | $1\ \text{L}=1000\ \text{mL}=1\ \text{dm}^3$、$1\ \text{mL}=1\ \text{cm}^3$ |
 
-> 算莫耳濃度 $M=n/V$ 時，$V$ 一律用 **L**。
+> 算莫耳濃度 $M=\dfrac{n}{V}$ 時，$V$ 一律用 **L**。
 
 ---
 
@@ -152,7 +152,7 @@ $$
 |------|------|
 | **莫耳濃度 $M$** (mol/L) | $M = \dfrac{n}{V_\text{溶液}(\text{L})}$ |
 | **重量莫耳濃度 $m$** (mol/kg) | $m = \dfrac{n}{W_\text{溶劑}(\text{kg})}$ |
-| **重量百分比 %(w/w)** | 溶質質量 ÷ 溶液總質量 × 100% |
+| **重量百分比 %(w/w)** | $\dfrac{\text{溶質質量}}{\text{溶液總質量}}\times100\%$ |
 | **ppm** | $\dfrac{\text{mg}}{\text{L}}$（稀水溶液，密度≈1）、ppb＝$\dfrac{\mu\text{g}}{\text{L}}$ |
 
 **%(w/w) ＋ 密度 → $M$**（鎖定 1 L 溶液，四個 unit factor 串起來）：
@@ -226,16 +226,16 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
-    "unit factor：<code>已知量 × (目標單位 / 已知單位)</code>",
-    "mol 兩種算法：<ul><li>由數量　<code>n＝N / N<sub>A</sub></code></li><li>由質量　<code>n＝m / M</code>（M＝原子量 AW 或分子量 MW）</li></ul>",
-    "amu 橋接：<ul><li><code>1 amu＝1 g ÷ N<sub>A</sub></code></li><li><code>X amu＝X g/mol</code>（數值相同）</li></ul>",
+    "unit factor：$已知量\\times\\dfrac{目標單位}{已知單位}$",
+    "mol 兩種算法：<ul><li>由數量　$n＝\\dfrac{N}{N_A}$</li><li>由質量　$n＝\\dfrac{m}{M}$（M＝原子量 AW 或分子量 MW）</li></ul>",
+    "amu 橋接：<ul><li>$1\\ \\text{amu}＝\\dfrac{1\\ \\text{g}}{N_A}$</li><li><code>X amu＝X g/mol</code>（數值相同）</li></ul>",
     "壓力：<ul><li><code>1 atm＝760 mmHg＝760 torr</code></li><li><code>1 atm＝101325 Pa</code></li><li><code>1 torr ≈ 133.3 Pa</code></li></ul>",
     "溫度：<ul><li><code>K＝°C＋273</code></li><li>其他溫標用「冰點到沸點比例相同」現推</li></ul>",
     "能量：<ul><li><code>1 cal＝4.184 J</code></li><li><code>1 eV＝1.602×10⁻¹⁹ J</code></li><li><code>1 L·atm＝101.325 J</code></li></ul>",
     "長度體積：<ul><li><code>1 Å＝100 pm＝10⁻¹⁰ m</code></li><li><code>1 L＝1000 mL＝1 dm³</code></li></ul>",
-    "重量%換 M：<code>M＝10dw / M<sub>w</sub></code>（d 密度、w 重量%、M<sub>w</sub> 分子量）",
+    "重量%換 M：$M＝\\dfrac{10dw}{M_w}$（d 密度、w 重量%、M<sub>w</sub> 分子量）",
     "對數：<ul><li><code>ln x＝2.303 log x</code></li><li><code>log 2＝0.301</code>、<code>log 3＝0.477</code></li></ul>",
     "有效數字：加減看小數位、乘除看有效位，取最少者",
     "最易漏：算莫耳濃度前，體積先換成 L"

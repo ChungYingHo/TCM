@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 概論、顯微鏡與原核／真核
 summary: 細胞學說與所有細胞的共同特徵、看細胞的工具（光學／電子／共軛焦顯微鏡、細胞大小尺度、細胞分離），以及原核 vs 真核的一刀切分界與細菌構造。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
@@ -139,7 +139,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "共同特徵：<ul><li>細胞膜、細胞質液、DNA、核糖體</li><li>原核 vs 真核只差「DNA 有沒有被膜包起來、有沒有膜性胞器」</li></ul>",
     "顯微鏡解析度：<ul><li>光學 LM 約 <code>0.2 µm</code>（細胞、核、粒線體、細菌）</li><li>電子 EM 好約 100 倍（核糖體、膜、病毒）</li></ul>",

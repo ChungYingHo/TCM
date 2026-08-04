@@ -1,0 +1,107 @@
+---
+// 「東西怎麼過膜」決策圖：由分子的性質往下走，落到唯一一條路線。
+// 生物總表專用——把膜的構造、跨膜運輸、訊號傳遞三個主題收斂成一張圖，
+// 讓「為什麼這個分子走這條」一眼看完，不必分開背三套規則。
+// 純靜態、無 hydration：SSR 直出，列印 PDF 完整呈現。
+
+interface Route {
+  q: string
+  cls: string
+  route: string
+  how: string
+  energy: string
+  eg: string
+}
+
+const ROUTES: Route[] = [
+  {
+    q: '小、非極性',
+    cls: 'bg-success/10 ring-success/30',
+    route: '單純擴散',
+    how: '直接溶進磷脂雙層穿過去',
+    energy: '不耗能，順濃度',
+    eg: 'O₂、CO₂、脂溶性激素',
+  },
+  {
+    q: '小、極性不帶電',
+    cls: 'bg-info/10 ring-info/30',
+    route: '單純擴散（慢）或水孔蛋白',
+    how: '勉強穿膜，或走專屬通道加速',
+    energy: '不耗能，順濃度',
+    eg: 'H₂O、尿素、甘油',
+  },
+  {
+    q: '離子、帶電',
+    cls: 'bg-primary/10 ring-primary/30',
+    route: '促進性擴散',
+    how: '通道蛋白或載體蛋白，具專一性',
+    energy: '不耗能，順濃度',
+    eg: 'K⁺ 洩漏通道、葡萄糖載體',
+  },
+  {
+    q: '要逆著濃度梯度',
+    cls: 'bg-error/10 ring-error/30',
+    route: '主動運輸',
+    how: '幫浦改變形狀把貨推上坡',
+    energy: '直接耗 ATP',
+    eg: '鈉鉀幫浦、鈣幫浦、質子幫浦',
+  },
+  {
+    q: '逆梯度但不想直接燒 ATP',
+    cls: 'bg-warning/10 ring-warning/30',
+    route: '共同運輸',
+    how: '借另一個離子下坡釋出的位能',
+    energy: '間接耗 ATP（梯度是幫浦造的）',
+    eg: '小腸的 Na⁺–葡萄糖同向運輸',
+  },
+  {
+    q: '大分子、顆粒',
+    cls: 'bg-accent/12 ring-accent/40',
+    route: '胞吞／胞吐',
+    how: '膜本身內陷或融合，包成囊泡',
+    energy: '耗能，且會改變膜面積',
+    eg: '吞噬、胞飲、受體媒介型胞吞',
+  },
+  {
+    q: '訊息（水溶性訊號分子）',
+    cls: 'bg-secondary/12 ring-secondary/40',
+    route: '不過膜',
+    how: '膜受體在外側接，訊號轉成胞內第二傳訊者',
+    energy: '訊號本身不過膜，只有資訊過去',
+    eg: '腎上腺素、胰島素、生長因子',
+  },
+]
+---
+
+<figure class="not-prose my-6 overflow-hidden rounded-box border border-base-300 bg-base-100 print:break-inside-avoid">
+  <figcaption
+    class="border-b border-base-300 bg-base-200/50 px-4 py-2.5 text-sm font-bold tracking-wide text-base-content/75"
+  >
+    分子想過膜，先問它是什麼
+  </figcaption>
+
+  <div class="divide-y divide-base-200">
+    {
+      ROUTES.map((r) => (
+        <div class="grid gap-x-4 gap-y-1.5 px-4 py-3 sm:grid-cols-[11rem_1fr]">
+          <div class={`self-start rounded-lg px-2.5 py-1.5 text-sm font-semibold ring-1 ${r.cls}`}>
+            {r.q}
+          </div>
+          <div class="min-w-0">
+            <p class="font-display font-bold leading-snug">
+              {r.route}
+              <span class="ml-1.5 text-xs font-normal text-base-content/50">{r.energy}</span>
+            </p>
+            <p class="mt-0.5 text-sm leading-relaxed text-base-content/70">{r.how}</p>
+            <p class="mt-0.5 text-sm text-base-content/50">例：{r.eg}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="border-t border-base-300 bg-base-200/30 px-4 py-2.5 text-sm leading-relaxed">
+    往下走的順序就是耗能程度：<b>不耗能 → 借梯度 → 直接燒 ATP</b>。而共同運輸之所以算「間接耗能」，
+    是因為它借的那個梯度本來就是幫浦花 ATP 建出來的。
+  </p>
+</figure>

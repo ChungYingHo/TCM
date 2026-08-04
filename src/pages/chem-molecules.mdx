@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學分子表達
 summary: AXₙEₘ 表示法、八隅體電子數公式、VSEPR 形狀與鍵角、σ/π 鍵、極性，以及氫化物／含氧酸／自由基／官能基。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import VseprShapes from '@/components/notes/VseprShapes.svelte'
@@ -174,9 +174,9 @@ $$
 
 <FunctionalGroups client:visible />
 
-<Memorize client:visible
+<Memorize
   items={[
-    "孤對 E 公式：<ul><li>外圍非 H：<code>[(V<sub>總</sub>±q)−8·#X]÷2</code></li><li>外圍是 H：<code>[(V<sub>總</sub>±q)−2·#H]÷2</code></li></ul>q 是電荷，陰離子加、陽離子減。",
+    "孤對 E 公式：<ul><li>外圍非 H：$E＝\\dfrac{(V_{總}\\pm q)-8\\cdot\\#X}{2}$</li><li>外圍是 H：$E＝\\dfrac{(V_{總}\\pm q)-2\\cdot\\#H}{2}$</li></ul>q 是電荷，陰離子加、陽離子減。",
     "立體數 <code>SN＝X＋E</code>：<ul><li>2 直線／3 平面三角／4 正四面體</li><li>5 三角雙錐／6 正八面體</li></ul>雙鍵與參鍵仍算 1 個電子群。",
     "多重鍵：通式自動處理，CO₂、SO₂ 不必先畫 Lewis。",
     "鍵角壓縮：孤對越多鍵角越小。<code>CH₄ 109.5°＞NH₃ 107°＞H₂O 104.5°</code>",

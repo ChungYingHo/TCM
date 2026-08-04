@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 跨膜運輸與囊泡運輸
 summary: 擴散與被動運輸、滲透與張力三態、促進性擴散與通道／攜載蛋白、鈉鉀幫浦與產電位幫浦、膜電位與電化學梯度、共運輸（次級主動運輸）、胞吞與胞吐。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import Supplement from '@/components/notes/Supplement.astro'
@@ -393,7 +393,7 @@ Ca²⁺ 在課本裡到處出現，但它不是鈉鉀幫浦搬的離子，兩者
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "被動運輸：不耗細胞 ATP、順梯度。擴散是隨機熱運動的統計結果，濃度梯度只決定淨方向。",
     "能否自行穿膜：<ul><li>容易：非極性小分子 O₂、CO₂ 與脂溶性分子</li><li>慢：小極性 H₂O、甘油</li><li>幾乎不能：大極性（葡萄糖）與離子</li></ul>",

@@ -6,7 +6,7 @@ import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
 import TeacherHighlights from '@/components/element/TeacherHighlights.astro'
 import ElementQuizPage from '@/components/element/ElementQuizPage.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 
 export const prerender = false
 ---
@@ -95,7 +95,7 @@ export const prerender = false
     "同週期向右：<ul><li>原子半徑變小</li><li>游離能、電子親和力、電負度變大</li></ul>因有效核電荷增、電子層數不變。",
     "半滿全滿較穩：<code>IE₁(N) ＞ IE₁(O)</code>，因 N 的 <code>2p³</code> 半滿。",
     "組態反推位置：最大 n＝週期，價電子數＝A 族族數。如 <code>[Ne]3s²3p⁴</code> → 第三週期 ⅥA。",
-  ]} client:visible />
+  ]} />
 
   <NotePager />
 </Layout>

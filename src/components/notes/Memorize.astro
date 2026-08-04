@@ -1,0 +1,58 @@
+---
+// 必背速查卡（2026-07-04 Aira 定案：一個區塊、不要擠；2026-08-04 改條列式）。
+// items：每則寫「主題：內容」，元件自動以第一個「：」拆成兩欄（主題｜內容）；無「：」則內容獨佔整列。
+//
+// 2026-08-05：改寫成 Astro 元件（原本是 Svelte）。它本來就沒有互動，卻掛著 `client:visible`
+// 白白 hydrate；改成 Astro 之後**永遠不會送 JS 到瀏覽器**，也才敢在這裡 import KaTeX 把
+// items 裡的 `$…$` 在伺服器端渲染成真正的分數橫線（Aira：公式不要 inline 的 ÷ 與 /）。
+//
+// 下標仍寫 `<sub>`（`$…$` 以外的地方 KaTeX 不管），大寫字母與中文沒有 Unicode 下標。
+import { renderMathHtml } from '@/utils/mathHtml'
+import { tagLists } from '@/utils/noteReview'
+
+interface Props {
+  label?: string
+  items?: string[]
+}
+
+const { label = '必背', items = [] } = Astro.props
+
+/** 與 utils/noteReview.ts 的 splitMemorizeItem 同一套拆法，兩邊必須一致。 */
+function split(s: string): [string, string] {
+  const i = s.indexOf('：')
+  return i > 0 && i <= 18 ? [s.slice(0, i), s.slice(i + 1)] : ['', s]
+}
+
+const rows = items.map((item) => {
+  const [topic, body] = split(item)
+  return { topic: renderMathHtml(topic), body: renderMathHtml(tagLists(body)) }
+})
+---
+
+<aside class="note-summary-card memorize my-6 overflow-hidden rounded-box border border-accent/30 bg-base-100">
+  <div class="flex items-center gap-1.5 border-b border-accent/25 bg-accent/10 px-5 py-3 text-sm font-bold tracking-wide text-accent">
+    <span aria-hidden="true">🔑</span>{label}・一定要記
+  </div>
+  {
+    rows.length ? (
+      <dl class="text-[0.9375rem] leading-relaxed">
+        {rows.map((r) => (
+          <div class="border-t border-base-200 px-5 py-3 first:border-t-0 print:break-inside-avoid sm:grid sm:grid-cols-[8.5rem_1fr] sm:gap-x-4 sm:py-3.5">
+            {r.topic ? (
+              <>
+                <dt class="mb-0.5 font-semibold text-accent sm:mb-0" set:html={r.topic} />
+                <dd set:html={r.body} />
+              </>
+            ) : (
+              <dd class="sm:col-span-2" set:html={r.body} />
+            )}
+          </div>
+        ))}
+      </dl>
+    ) : (
+      <div class="px-5 py-4 text-[0.9375rem] leading-relaxed">
+        <slot />
+      </div>
+    )
+  }
+</aside>

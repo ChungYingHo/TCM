@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 學說與理論：原子模型、化學基本定律與次原子粒子
 summary: 從陰極射線到質譜儀的原子模型演進、五大定律＋坎尼札洛分子說，以及次原子粒子與同位素／同素異形體／異構物的分辨。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 
@@ -12,14 +12,14 @@ import WorkedExample from '@/components/notes/WorkedExample.astro'
 | 科學家／工具 | 年代 | 關鍵實驗 | 重點（考） |
 |--------------|------|----------|-----------|
 | 道耳吞 Dalton | 1808 | 整理定比／倍比定律 | 提出**原子說** |
-| 湯木生 Thomson | 1897 | **陰極射線管** | 發現**電子**、測**荷質比** $e/m$ |
+| 湯木生 Thomson | 1897 | **陰極射線管** | 發現**電子**、測**荷質比** $\dfrac{e}{m}$ |
 | 密立根 Millikan | 1909 | **油滴實驗** | 測**電子電荷** $e = 1.60\times10^{-19}$ C |
 | 拉塞福 Rutherford | 1911 | **α 粒子散射**（金箔） | 發現**原子核**：大多穿過→原子很空、極少反彈→**核小、緻密、帶正電** |
 | 莫色勒 Moseley | 1913 | **X 射線光譜** | **原子序＝質子數＝核電荷**。週期表改依原子序排 |
 | 查兌克 Chadwick | 1932 | α 粒子撞鈹 | 發現**中子** |
-| 質譜儀 | — | 依**質荷比** $m/z$ 分離離子 | 測**同位素質量與含量** → 算平均原子量 |
+| 質譜儀 | — | 依**質荷比** $\dfrac{m}{z}$ 分離離子 | 測**同位素質量與含量** → 算平均原子量 |
 
-> **電子質量**由 $e/m$ 與 $e$ 反推（unit factor，C 約掉剩 kg）：
+> **電子質量**由 $\dfrac{e}{m}$ 與 $e$ 反推（unit factor，C 約掉剩 kg）：
 >
 > $$ m_e = 1.60\times10^{-19}\ \text{C} \times \frac{1\ \text{kg}}{1.76\times10^{11}\ \text{C}} = 9.1\times10^{-31}\ \text{kg} $$
 
@@ -66,7 +66,7 @@ import WorkedExample from '@/components/notes/WorkedExample.astro'
 | 質子 | $p^+$ | $+1$（$+1.60\times10^{-19}$ C） | $1.673\times10^{-27}$ | $\approx 1$ | 拉塞福 |
 | 中子 | $n^0$ | $0$ | $1.675\times10^{-27}$ | $\approx 1$ | 查兌克 1932 |
 
-- **原子質量幾乎全在原子核**（質子＋中子）。電子質量可忽略（約質子的 1/1840）。
+- **原子質量幾乎全在原子核**（質子＋中子）。電子質量可忽略（約質子的 $\dfrac{1}{1840}$）。
 - 中性原子：**質子數＝電子數＝Z**。質子與電子電量**大小相等、符號相反**。
 
 ### 符號表示法
@@ -138,7 +138,7 @@ $$
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "原子模型史：<ul><li>湯木生 1897 陰極射線 → 發現電子、測荷質比</li><li>密立根 1909 油滴 → 測電子<b>電荷</b> <code>e＝1.60×10⁻¹⁹ C</code></li><li>拉塞福 1911 α 散射 → 原子核</li><li>莫色勒 1913 X 光 → 原子序＝質子數</li><li>查兌克 1932 → 中子</li></ul>",
     "拉塞福散射：大多穿過→原子很空；極少反彈→核小而緻密、帶正電。",

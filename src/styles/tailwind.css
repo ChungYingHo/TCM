@@ -364,10 +364,66 @@ a.card:hover, .card-hover:hover {
   }
 }
 
-/* ── 筆記尾部必背卡（Memorize）不在 .prose 內，但仍需 KaTeX 公式著色 ── */
-.note-summary-card .katex {
+/* ── 必背卡的內文樣式 ─────────────────────────────────────────────
+   `.memorize`＝筆記篇末的必背卡（Memorize.astro）；`.memorize-body`＝每日複習的回想卡背面
+   （MemorizeDrill.svelte）。兩者顯示的是同一份 HTML，樣式必須一致，所以放這裡共用一份，
+   不各自在元件裡寫 :global（以前重複兩份、改一邊會漂移）。 */
+.note-summary-card .katex,
+.memorize-body .katex {
   font-size: 1.05em;
   color: color-mix(in oklab, var(--color-primary) 60%, var(--color-base-content));
+}
+
+/* 公式色塊：不從中間折斷；真的太長時讓色塊自己橫捲，不把頁面撐寬 */
+.memorize code,
+.memorize-body code {
+  display: inline-block;
+  padding: 0.05em 0.4em;
+  border-radius: 0.3rem;
+  /* currentColor 混色：淺色與夜讀模式都自動成立，不必各寫一套 */
+  background: color-mix(in srgb, currentColor 9%, transparent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.92em;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: bottom;
+}
+.memorize code sub,
+.memorize-body code sub {
+  font-family: inherit;
+}
+
+/* 速查卡以條列為主：一項一行，比一整段話好掃。
+   `.mz-list`／`.mz-item` 這兩個 class 由 utils/noteReview.ts 的 tagLists() 掛上——有 class
+   才不會被上面 `.prose ul:not([class])` 的 disc 符號打到，跟自帶的 `·` 疊成兩個點。 */
+.mz-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.mz-item {
+  position: relative;
+  padding-left: 0.85em;
+  margin-top: 0.3em;
+}
+.mz-item:first-child {
+  margin-top: 0.15em;
+}
+.mz-item::before {
+  content: '·';
+  position: absolute;
+  left: 0.1em;
+  font-weight: 700;
+  opacity: 0.45;
+}
+
+/* 列印時不能靠捲動，改成允許折行 */
+@media print {
+  .memorize code {
+    white-space: normal;
+    overflow-x: visible;
+  }
 }
 
 /* ── 本篇目錄 NoteToc ─────────────────────────────────────────── */

@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 光電效應與量子論：黑體輻射、電磁輻射模型、物質波
 summary: 黑體輻射(只看溫度)與能量量子化 → 電磁輻射模型(波動／光電效應粒子／結論) → 德布羅意物質波 → 測不準。表格＋帶單位的 unit factor＋互動圖。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import BlackbodyCurve from '@/components/notes/BlackbodyCurve.svelte'
@@ -96,7 +96,7 @@ $$
 |------|-----------|------|
 | **光電子動能 $E_K$** | $\tfrac12 m_e v^2$＝電子飛出後剩的動能 | $E_K = h\nu - \Phi$ |
 | **功函數 $\Phi$** | 把電子拉出表面所需的**最低能量** | 因金屬而異 |
-| **低限頻率 $\nu_0$** | $E_K=0$ 時 $h\nu_0=\Phi$ | $\nu_0 = \Phi/h$，頻率低於 $\nu_0$ 不發射 |
+| **低限頻率 $\nu_0$** | $E_K=0$ 時 $h\nu_0=\Phi$ | $\nu_0 = \dfrac{\Phi}{h}$，頻率低於 $\nu_0$ 不發射 |
 | **截止電壓 $V_s$** | $eV_s = E_K$ | 反向電壓擋停電子 → 量動能（冷門） |
 | **強度 vs 頻率** | 強度＝光子**數量**、頻率＝光子**能量** | 意義不同，別混 |
 
@@ -126,7 +126,7 @@ $$
 \boxed{\,E = h\nu = \dfrac{hc}{\lambda}\,}
 $$
 
-頻率愈高 → 能量愈大（$\nu \propto E$），波長愈短 → 能量愈大（$\lambda \propto 1/E$）。即 **能量大 ⟺ 頻率高 ⟺ 波長短**。E 的各種算法統整：
+頻率愈高 → 能量愈大（$\nu \propto E$），波長愈短 → 能量愈大（$\lambda \propto \dfrac{1}{E}$）。即 **能量大 ⟺ 頻率高 ⟺ 波長短**。E 的各種算法統整：
 
 | 要算什麼 | 公式（帶單位） | 備註 |
 |----------|---------------|------|
@@ -136,7 +136,7 @@ $$
 | $n$ 個光子 | $E = n\,h\nu$ | |
 | 光電效應 | $h\nu = \Phi + E_K$ | 見 (二) |
 
-> **算例**　藍光 $\lambda=400\ \text{nm}$ 的光子能量？用 $E=hc/\lambda$（單位 $\text{J·s}\cdot\text{m/s}\div\text{m}=\text{J}$）：
+> **算例**　藍光 $\lambda=400\ \text{nm}$ 的光子能量？用 $E=\dfrac{hc}{\lambda}$（單位 $\dfrac{\text{J·s}\cdot\text{m/s}}{\text{m}}=\text{J}$）：
 >
 > $$
 > \begin{aligned}
@@ -145,7 +145,7 @@ $$
 > \end{aligned}
 > $$
 >
-> 速算驗證：$1240/400 = 3.10\ \text{eV}$ ✓（eV ↔ J 用 $1\ \text{eV}=1.602\times10^{-19}\ \text{J}$）。
+> 速算驗證：$\dfrac{1240}{400} = 3.10\ \text{eV}$ ✓（eV ↔ J 用 $1\ \text{eV}=1.602\times10^{-19}\ \text{J}$）。
 
 **(c) 可見光色輪**：紅橙黃綠藍紫，**紅波長最長（頻率最低）、紫最短（最高）**。
 
@@ -230,25 +230,25 @@ $$
 
 ## 四、不確定性原理（概念即可）
 
-- **海森堡測不準原理**：**位置與動量無法同時測準**，一個越準、另一個越不準：$\Delta x\cdot\Delta p \ge \hbar/2$（$\hbar=h/2\pi$）。
+- **海森堡測不準原理**：**位置與動量無法同時測準**，一個越準、另一個越不準：$\Delta x\cdot\Delta p \ge \dfrac{\hbar}{2}$（$\hbar=\dfrac{h}{2\pi}$）。
 - 這是**微觀粒子的本質**，非儀器問題。
 - 化學意義：電子**沒有確定軌道**，只能用**機率分布（軌域）**描述 → 下一節原子軌域的伏筆。考試多只考概念。
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "黑體輻射：光譜<b>只由溫度決定</b>（與材質、形狀、顏色無關）。溫度↑→峰值往短波移、總強度增。",
     "能量量子化：一個量子 <code>E＝hν</code>，總能量只能是整數倍 <code>nhν</code>。<code>h＝6.626×10⁻³⁴ J·s</code>。",
-    "能量關係：<ul><li><code>c(m/s)＝ν(1/s)×λ(m)</code></li><li><code>E＝hν＝hc/λ</code></li><li>速算 <code>E(eV)＝1240÷λ(nm)</code></li></ul>能量大⟺頻率高⟺波長短。",
+    "能量關係：<ul><li><code>c(m/s)＝ν(1/s)×λ(m)</code></li><li>$E＝h\\nu＝\\dfrac{hc}{\\lambda}$</li><li>速算 $E(\\text{eV})＝\\dfrac{1240}{\\lambda(\\text{nm})}$</li></ul>能量大⟺頻率高⟺波長短。",
     "波譜排序（頻率低→高）：無線電→微波→紅外→可見→紫外→X 光→γ。<b>陷阱：黃光頻率高於紅光</b>。",
     "符號辨別：ν（頻率，Hz）≠ v（速度）、λ＝波長、γ＝伽瑪。公式一律帶單位、unit factor 相消。",
     "光電效應：<code>E<sub>K</sub>＝½m<sub>e</sub>v²＝hν−Φ</code>，合併為 <code>hν＝½m<sub>e</sub>v²＋Φ＝eV<sub>s</sub>＋Φ</code>。",
-    "低限頻率：<code>ν₀＝Φ/h</code>。頻率低於 ν₀ 再亮也不發射。",
+    "低限頻率：$\\nu_0＝\\dfrac{\\Phi}{h}$。頻率低於 ν₀ 再亮也不發射。",
     "強度 vs 頻率：<ul><li>強度＝光子數 → 決定電子<b>數</b>（電流）</li><li>頻率＝光子能量 → 決定電子<b>動能</b></li></ul>截止電壓 <code>eV<sub>s</sub>＝E<sub>K</sub></code>。",
     "功函數圖：x 截距＝ν₀、y 截距＝−Φ、斜率＝h。各金屬平行線，換金屬只平移。Cs（IE 小）常用光電池。",
-    "德布羅意：<code>λ＝h/mv＝h/p</code>，波長與<b>動量成反比</b>。電子夠輕才測得到波動性。",
-    "測不準：<code>Δx·Δp ≥ ħ/2</code>。電子沒有確定軌道，只能用機率（軌域）描述。"
+    "德布羅意：$\\lambda＝\\dfrac{h}{mv}＝\\dfrac{h}{p}$，波長與<b>動量成反比</b>。電子夠輕才測得到波動性。",
+    "測不準：$\\Delta x\\cdot\\Delta p \\ge \\dfrac{\\hbar}{2}$。電子沒有確定軌道，只能用機率（軌域）描述。"
   ]}
 />
 
@@ -277,7 +277,7 @@ $$
   options={["0.8 eV", "1.6 eV", "3.1 eV", "5.4 eV"]}
   answer="(A) 0.8 eV"
   steps={[
-    "光子能量 hν＝hc/λ＝1240÷400＝<b>3.10 eV</b>。",
+    "光子能量 $h\\nu＝\\dfrac{hc}{\\lambda}＝\\dfrac{1240}{400}＝3.10$ eV。",
     "E_K＝hν−Φ＝3.10−2.3＝<b>0.80 eV</b>。",
     "用 hc≈1240 eV·nm 可跳過 J↔eV 換算，考場更快。"
   ]}

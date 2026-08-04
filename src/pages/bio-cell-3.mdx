@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞骨架與細胞外連結
 summary: 細胞骨架三大纖維（微管・微絲・中間絲）的直徑、組成與功能，中心粒／纖毛鞭毛的 9×3 與 9+2，以及細胞外基質（ECM）、整聯蛋白與細胞間連結（緊密接合／胞橋小體／裂隙接合／胞間連絲）。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
@@ -171,7 +171,7 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "骨架直徑：<ul><li>微管 <code>25 nm</code> 最粗，tubulin α+β，中空</li><li>微絲 <code>7 nm</code> 最細，actin，實心</li><li>中間絲 <code>8–12 nm</code>，keratin，最穩定</li></ul>",
     "微管功能：紡錘絲、運輸軌道、纖毛與鞭毛。",

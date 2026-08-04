@@ -9,6 +9,7 @@ import {
   siblingNotes,
   subjectSummary,
 } from '@/models/notes'
+import { parseCards } from '@/utils/noteReview'
 
 const PAGES = path.resolve('./src/pages')
 
@@ -38,6 +39,38 @@ describe('notes registry', () => {
     expect(current?.id).toBe(chem[1].id)
     expect(prev?.id).toBe(chem[0].id)
     expect(next?.id).toBe(chem[2].id)
+  })
+})
+
+// 必背卡的 items 是 JSX 的雙引號字串，KaTeX 指令必須寫 `\\dfrac`（兩個反斜線）。
+// 只寫一個會安靜地壞掉，而且兩種壞法都不會有人發現：
+//   `\t`、`\n` 這類 → 變成控制字元，畫面印出 `imes`、`frac{}` 這種怪字。
+//   其他 `\x`     → JSON.parse 直接失敗，**整組 items 變空陣列**，必背卡與每日複習一起消失。
+// 這兩條就是專門守它的（2026-08-05 真的踩過）。
+describe('必背卡的 items 沒有寫壞', () => {
+  const withMemorize = NOTES.map((n) => ({ n, file: pageFile(n.href) }))
+    .filter((x) => x.file && readFileSync(x.file, 'utf8').includes('<Memorize'))
+
+  it('有寫 <Memorize items> 的筆記都解析得出卡片（解析失敗會整組變空）', () => {
+    expect(withMemorize.length).toBeGreaterThan(15)
+    for (const { n, file } of withMemorize) {
+      const raw = readFileSync(file!, 'utf8')
+      if (!raw.includes('items={[')) continue
+      const cards = parseCards(raw, { slug: n.id, href: n.href, title: n.title, subject: n.subject })
+      expect(cards.length, `${n.title}（${n.href}）的必背卡解析成 0 張——多半是某個 \\ 沒寫成 \\\\`).toBeGreaterThan(0)
+    }
+  })
+
+  it('卡片內容沒有控制字元（\\t 之類被吃掉的反斜線）', () => {
+    for (const { n, file } of withMemorize) {
+      const raw = readFileSync(file!, 'utf8')
+      const cards = parseCards(raw, { slug: n.id, href: n.href, title: n.title, subject: n.subject })
+      for (const c of cards) {
+        // eslint-disable-next-line no-control-regex
+        const bad = /[\u0000-\u001f]/.exec(c.topic + c.body)
+        expect(bad, `${n.title} 的「${c.topic}」含控制字元，檢查 LaTeX 是否少寫一個反斜線`).toBeNull()
+      }
+    }
   })
 })
 

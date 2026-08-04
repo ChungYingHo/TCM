@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞訊號傳遞
 summary: 細胞通訊的三種距離、訊號三階段與 Sutherland 實驗、四類受體（GPCR／RTK／離子通道／細胞內）、Gα 亞型六條下游、第二傳訊者、磷酸化級聯與 10⁸ 放大、訊息整合與支架蛋白、終止訊息與藥理應用、細胞凋亡。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import Supplement from '@/components/notes/Supplement.astro'
@@ -423,13 +423,13 @@ NO 本身是**擴散進鄰居細胞的局部調節物**，它結合的是**細�
 
 ---
 
-<Memorize client:visible
+<Memorize
   items={[
     "三階段：<code>接收→傳遞→反應</code>。Sutherland 發現腎上腺素不必進細胞就能促肝醣分解，因而找到 cAMP。",
     "多步驟路徑的好處：放大、整合、調控、專一性。<b>不會加快速度</b>。",
     "受體先分溶解性：<ul><li>水溶性配體 → 膜受體（GPCR／RTK／離子通道）</li><li>脂溶性配體（類固醇、甲狀腺素、NO）→ 細胞內受體</li></ul>",
     "GPCR：<ul><li>最大的細胞表面受體家族、七次跨膜</li><li>G 蛋白為 α β γ 異三聚體</li><li><code>Gα·GTP＝開</code>、<code>Gα·GDP＝關</code>，GTP 水解很慢</li></ul>",
-    "RTK：<ul><li><code>配體結合→二聚化→互相磷酸化酪胺酸→停泊位</code></li><li>一個受體可開十條以上路徑</li><li>胰島素受體、EGFR、HER2 屬之</li></ul>",
+    "RTK：<ul><li>配體結合 → 二聚化 → 互相磷酸化酪胺酸 → 停泊位</li><li>一個受體可開十條以上路徑</li><li>胰島素受體、EGFR、HER2 屬之</li></ul>",
     "激酶專一性：PKA 磷酸化 <b>Ser／Thr</b>，RTK 磷酸化 <b>Tyr</b>。",
     "nAChR（菸鹼型）：離子通道型、在運動終板、非專一性陽離子通道（Na⁺ 入、K⁺ 出）、產生 EPSP。",
     "mAChR（蕈毒鹼型）：GPCR、在竇房結、由 Gβγ 開 K⁺ 通道使心跳變慢。同一個乙醯膽鹼，結果相反。",

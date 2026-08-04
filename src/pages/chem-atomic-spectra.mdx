@@ -3,7 +3,7 @@ layout: '@/layouts/NoteLayout.astro'
 title: 原子光譜與波耳模型
 summary: 連續/線/吸收光譜、焰色試驗、氫原子發射光譜與系列、能量-頻率-波長計算(H 與類氫)、波耳模型能階與半徑。
 ---
-import Memorize from '@/components/notes/Memorize.svelte'
+import Memorize from '@/components/notes/Memorize.astro'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import FlameTest from '@/components/notes/FlameTest.svelte'
@@ -131,17 +131,17 @@ $a_0$ 稱**波耳半徑（Bohr radius）**，即氫原子基態（$n=1,\,Z=1$）
 - **只適用單電子系統**：H、$\ce{He+}$、$\ce{Li^2+}$ 這類類氫。多電子原子因電子間排斥而失效。
 - 能量與半徑都跟 $Z$ 走：$\ce{He+}$（$Z=2$）基態游離能 $=13.6\times2^2=54.4$ eV（H 的 4 倍），軌道半徑則是 H 的一半。
 
-<Memorize client:visible
+<Memorize
   items={[
     "三種光譜：<ul><li>連續：緻密熱體，全波長</li><li>線光譜：稀薄氣態原子，分立亮線</li><li>吸收：冷氣體，連續帶上暗線</li></ul>同元素的吸收線波長＝發射線波長。",
     "焰色 IA：Li 深紅→Na 金黃→K 淺紫→Rb 紫→Cs 藍。Na 金黃最強，觀察 K 要用藍鈷玻璃濾黃。",
     "焰色 IIA：Mg 白、Ca 橘紅、Sr 磚紅、Ba 黃綠。",
     "光譜系列：看電子<b>落回</b>的低能階 m。<ul><li>m=1 來曼，<b>紫外</b></li><li>m=2 巴耳麥，<b>可見</b></li><li>m=3/4/5 皆<b>紅外</b></li></ul>問可見譜線一律鎖 Balmer。",
-    "能量式：<code>ΔE＝13.6·Z²(1/m²−1/n²) eV</code>，換單位為 <code>2.178×10⁻¹⁸ J</code>、<code>1311.6 kJ/mol</code>、<code>313.6 kcal/mol</code>。",
-    "頻率波長：<ul><li><code>ν＝3.3×10¹⁵·Z²(1/m²−1/n²) Hz</code></li><li><code>λ＝90/[Z²(1/m²−1/n²)] nm</code></li></ul>四式同源，核心都是 <code>(1/m²−1/n²)·Z²</code>。",
-    "n 的規律：游離到 n＝∞ 時，m 越大，能量與頻率 ∝<code>1/m²</code> 遞減、波長 ∝<code>m²</code> 遞增。",
-    "波耳量：<ul><li><code>E<sub>n</sub>＝−13.6·Z²/n² eV</code>（負值）</li><li><code>r<sub>n</sub>＝n²a₀/Z</code></li><li><code>a₀＝0.529 Å</code></li></ul>游離＝從某 n 移到 n＝∞。",
-    "類氫離子：先抓 Z。能量∝<code>Z²</code>、半徑∝<code>1/Z</code>。He⁺ 基態游離能＝<code>13.6×4＝54.4 eV</code>，半徑為 H 的一半。",
+    "能量式：$\\Delta E＝13.6\\,Z^2\\left(\\dfrac{1}{m^2}-\\dfrac{1}{n^2}\\right)$ eV，換單位為 <code>2.178×10⁻¹⁸ J</code>、<code>1311.6 kJ/mol</code>、<code>313.6 kcal/mol</code>。",
+    "頻率波長：<ul><li>$\\nu＝3.3\\times10^{15}\\,Z^2\\left(\\dfrac{1}{m^2}-\\dfrac{1}{n^2}\\right)$ Hz</li><li>$\\lambda＝\\dfrac{90}{Z^2\\left(\\frac{1}{m^2}-\\frac{1}{n^2}\\right)}$ nm</li></ul>四式同源，核心都是 $\\left(\\dfrac{1}{m^2}-\\dfrac{1}{n^2}\\right)Z^2$。",
+    "n 的規律：游離到 n＝∞ 時，m 越大，能量與頻率 $\\propto\\dfrac{1}{m^2}$ 遞減、波長 $\\propto m^2$ 遞增。",
+    "波耳量：<ul><li>$E_n＝-13.6\\dfrac{Z^2}{n^2}$ eV（負值）</li><li>$r_n＝\\dfrac{n^2 a_0}{Z}$</li><li>$a_0＝0.529$ Å</li></ul>游離＝從某 n 移到 n＝∞。",
+    "類氫離子：先抓 Z。能量 $\\propto Z^2$、半徑 $\\propto\\dfrac{1}{Z}$。He⁺ 基態游離能＝<code>13.6×4＝54.4 eV</code>，半徑為 H 的一半。",
     "連續光譜不代表能階連續：它來自大量原子交互作用把能階撐成連續帶。"
   ]}
 />
@@ -180,12 +180,12 @@ $a_0$ 稱**波耳半徑（Bohr radius）**，即氫原子基態（$n=1,\,Z=1$）
 
 <ExampleQuestion client:visible
   n={3}
-  q="氫原子電子由 n=4 落到 m=2，放出光的波長約為？（λ＝90÷(1/m²−1/n²) nm）"
+  q="氫原子電子由 n=4 落到 m=2，放出光的波長約為？（$\\lambda＝\\dfrac{90}{\\frac{1}{m^2}-\\frac{1}{n^2}}$ nm）"
   options={["480 nm", "656 nm", "122 nm", "1875 nm"]}
   answer="(A) 480 nm"
   steps={[
-    "落回 m=2 是 Balmer (可見)。1/2²−1/4²＝1/4−1/16＝<b>3/16</b>。",
-    "λ＝90÷(3/16)＝90×16/3＝<b>480 nm</b> (藍綠 Hβ)。",
+    "落回 m=2 是 Balmer（可見）。$\\dfrac{1}{2^2}-\\dfrac{1}{4^2}＝\\dfrac{1}{4}-\\dfrac{1}{16}＝\\dfrac{3}{16}$。",
+    "$\\lambda＝90\\times\\dfrac{16}{3}＝480$ nm（藍綠 Hβ）。",
     "656 nm 是 n=3→2、122 nm 是 Lyman、1875 nm 是 Paschen，皆非。"
   ]}
 />
@@ -198,7 +198,7 @@ $a_0$ 稱**波耳半徑（Bohr radius）**，即氫原子基態（$n=1,\,Z=1$）
   steps={[
     "類氫游離能 ∝ Z² (同一 n)。",
     "He⁺ 的 Z=2，Z²＝4，游離能是 H 的 <b>4 倍</b> (13.6×4＝54.4 eV)。",
-    "半徑則 ∝1/Z，He⁺ 軌道半徑是 H 的一半。"
+    "半徑則 $\\propto\\dfrac{1}{Z}$，He⁺ 軌道半徑是 H 的一半。"
   ]}
 />
 
