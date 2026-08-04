@@ -216,17 +216,17 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 <Memorize client:visible
   items={[
-    "mol 兩算法：n＝N/N_A（由數量）、n＝m/M（由質量，M＝原子量 AW／分子量 MW）。",
-    "amu 橋接：1 amu＝1 g÷N_A（多以分數計算），<b>X amu＝X g/mol</b>（數值相同），關鍵是 N_A 在 amu→g 與 mol 兩步約掉。",
-    "unit factor：已知量×(目標單位/已知單位)，帶單位、上下約分只剩目標。",
-    "壓力換算：1 atm＝760 mmHg＝760 torr＝101325 Pa，1 Torr≈133.3 Pa。",
-    "溫度換算：用『冰點→沸點比例』現推（不背公式，可解未知溫標），K＝°C＋273。",
-    "能量換算：1 cal＝4.184 J，1 eV＝1.602×10⁻¹⁹ J，1 L·atm＝101.325 J。",
-    "長度體積：1 Å＝100 pm＝10⁻¹⁰ m，1 L＝1000 mL＝1 dm³。",
-    "%(w/w)→M：鎖定 1 L 溶液推導，得 M＝10dw/M_w（d 密度、w 重量%、M_w 分子量）。",
-    "對數換底：ln x＝2.303 log x，log2＝0.301、log3＝0.477。",
-    "有效數字：加減看小數位、乘除看有效位，皆取最少者。",
-    "易漏單位：算莫耳濃度 M 前 V 要換成 L（最常漏的單位轉換）。"
+    "unit factor：<code>已知量 × (目標單位 / 已知單位)</code>。分子分母都寫上單位，上下約掉，最後只剩目標單位。",
+    "mol 兩種算法：由數量算用 <code>n＝N / N<sub>A</sub></code>，由質量算用 <code>n＝m / M</code>。M 是原子量 AW 或分子量 MW。",
+    "amu 橋接：<code>1 amu＝1 g ÷ N<sub>A</sub></code>，所以 <code>X amu＝X g/mol</code> 兩邊數值相同。關鍵是 N<sub>A</sub> 會在 amu→g 和 mol 這兩步約掉。",
+    "壓力換算：<code>1 atm＝760 mmHg＝760 torr</code>，也等於 <code>101325 Pa</code>。單獨換算時 <code>1 torr ≈ 133.3 Pa</code>。",
+    "溫度換算：<code>K＝°C＋273</code>。其他溫標不要背公式，用「冰點到沸點的比例相同」現推，遇到沒看過的溫標也解得出來。",
+    "能量換算：<code>1 cal＝4.184 J</code>、<code>1 eV＝1.602×10⁻¹⁹ J</code>、<code>1 L·atm＝101.325 J</code>。",
+    "長度與體積：<code>1 Å＝100 pm＝10⁻¹⁰ m</code>、<code>1 L＝1000 mL＝1 dm³</code>。",
+    "重量%換莫耳濃度：鎖定 1 L 溶液去推，得 <code>M＝10dw / M<sub>w</sub></code>。d 是密度、w 是重量百分比、M<sub>w</sub> 是分子量。",
+    "對數換底：<code>ln x＝2.303 log x</code>。常用值 <code>log 2＝0.301</code>、<code>log 3＝0.477</code>。",
+    "有效數字：加減看小數位數，乘除看有效位數，兩者都取最少的那個。",
+    "最常漏的一步：算莫耳濃度之前，體積要先換成公升。"
   ]}
 />
 
