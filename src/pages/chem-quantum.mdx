@@ -200,13 +200,32 @@ $$
 $$
 \lambda = \frac{h}{mv} = \frac{h}{p}\qquad (p = mv,\ \text{動量})
 $$
-\begin{aligned}
-\lambda &= \frac{h}{m_e v}
- = \frac{6.626\times10^{-34}\ \text{kg·m}^2/\text{s}}{(9.11\times10^{-31}\ \text{kg})(1.0\times10^6\ \text{m/s})}\\[4pt]
- &= 7.3\times10^{-10}\ \text{m} = 0.73\ \text{nm}
-\end{aligned}
-$$
-> \lambda = \frac{h}{m_e v} = \frac{6.626\times10^{-34}\ \text{kg·m}^2/\text{s}}{(9.11\times10^{-31}\ \text{kg})(1.0\times10^6\ \text{m/s})} = 7.3\times10^{-10}\ \text{m}
+
+**推導**（光子兩式聯立）：
+
+- 光子：$E=h\nu=\dfrac{hc}{\lambda}$，又 $E=mc^2$
+- 兩式相等 → $mc=\dfrac{h}{\lambda}$ → $p=\dfrac{h}{\lambda}$
+- 把 $c$ 換成粒子速度 $v$，推廣到一般粒子：$\lambda=\dfrac{h}{mv}$
+
+**為何平常看不到波動性**：
+
+- $h$ 極小 → 質量大的物體波長太短，測不到
+- 只有**電子**等極輕粒子，波長才大到可測
+
+**應用**：
+
+- **電子顯微鏡**：電子 $\lambda$ 比可見光短上萬倍 → 解析度遠高，看得到病毒／胞器
+- **X 光繞射測晶體**：X 光 $\lambda\approx0.1$ nm，與原子間距相當
+- 電子繞射（戴維森–革末實驗）＝物質波的直接證據
+
+> **算例（帶單位相消）**　電子（$m_e=9.11\times10^{-31}\ \text{kg}$）以 $v=1.0\times10^6\ \text{m/s}$ 運動。注意 $\text{J·s}=\text{kg·m}^2/\text{s}$：
+>
+> $$
+> \begin{aligned}
+> \lambda &= \frac{h}{m_e v}\\[4pt]
+>  &= \frac{6.626\times10^{-34}\ \text{kg·m}^2/\text{s}}{(9.11\times10^{-31}\ \text{kg})(1.0\times10^6\ \text{m/s})}\\[4pt]
+>  &= 7.3\times10^{-10}\ \text{m}
+> \end{aligned}
 > $$
 >
 > $\text{kg}$、一個 $\text{m}$、$1/\text{s}$ 全消去，只剩 m（≈0.73 nm，原子尺度 → 波動性測得到）。
@@ -223,17 +242,17 @@ $$
 
 <Memorize client:visible
   items={[
-    "黑體輻射：光譜<b>只由溫度決定</b>（與材質、形狀、顏色無關）。溫度↑→峰值往短波移、總強度增、短波端→0。",
-    "能量量子化：一個量子是 <code>E＝hν</code>，總能量只能是整數倍 <code>nhν</code>。<code>h＝6.626×10⁻³⁴ J·s</code>。",
-    "能量關係：<code>c(m/s)＝ν(1/s)×λ(m)</code>、<code>E＝hν＝hc/λ</code>。能量大⟺頻率高⟺波長短。速算用 <code>E(eV)＝1240÷λ(nm)</code>。",
-    "波譜排序：頻率低→高＝無線電→微波→紅外→可見→紫外→X 光→γ。可見光紅頻率最低、紫最高。陷阱：黃光頻率<b>高於</b>紅光（紅是可見光最低端）。",
-    "符號辨別：ν(頻率，Hz)≠v(速度)、λ＝波長、γ＝伽瑪。公式一律帶單位、unit factor 相消。",
-    "光電效應：<code>E<sub>K</sub>＝½m<sub>e</sub>v²＝hν−Φ</code>，合併寫成 <code>hν＝½m<sub>e</sub>v²＋Φ＝eV<sub>s</sub>＋Φ</code>。",
-    "低限頻率：<code>ν₀＝Φ/h</code>。頻率低於 ν₀ 時再亮也不發射，因為強度只增加光子數，不增加單顆光子的能量。",
-    "強度 vs 頻率：強度＝光子數→決定電子<b>數</b>(電流)，頻率＝光子能量→決定電子<b>動能</b>，兩者別混。截止電壓 <code>eV<sub>s</sub>＝E<sub>K</sub></code>。",
-    "功函數圖：x 截距＝ν₀、y 截距＝−Φ、斜率＝h（各金屬平行線，換金屬只平移）。Cs (IE 小) 常用光電池。",
-    "德布羅意：<code>λ＝h/mv＝h/p</code>，波長與<b>動量成反比</b>（質量大、速度快→波長短→越不顯波動性）。電子夠輕才測得到波動性（電子顯微鏡）。",
-    "測不準：<code>Δx·Δp ≥ ħ/2</code>。電子沒有確定的軌道，只能用機率（軌域）描述。"
+    "黑體輻射：光譜<b>只由溫度決定</b>（與材質、形狀、顏色無關）。溫度↑→峰值往短波移、總強度增。",
+    "能量量子化：一個量子 <code>E＝hν</code>，總能量只能是整數倍 <code>nhν</code>。<code>h＝6.626×10⁻³⁴ J·s</code>。",
+    "能量關係：<ul><li><code>c(m/s)＝ν(1/s)×λ(m)</code></li><li><code>E＝hν＝hc/λ</code></li><li>速算 <code>E(eV)＝1240÷λ(nm)</code></li></ul>能量大⟺頻率高⟺波長短。",
+    "波譜排序（頻率低→高）：無線電→微波→紅外→可見→紫外→X 光→γ。<b>陷阱：黃光頻率高於紅光</b>。",
+    "符號辨別：ν（頻率，Hz）≠ v（速度）、λ＝波長、γ＝伽瑪。公式一律帶單位、unit factor 相消。",
+    "光電效應：<code>E<sub>K</sub>＝½m<sub>e</sub>v²＝hν−Φ</code>，合併為 <code>hν＝½m<sub>e</sub>v²＋Φ＝eV<sub>s</sub>＋Φ</code>。",
+    "低限頻率：<code>ν₀＝Φ/h</code>。頻率低於 ν₀ 再亮也不發射。",
+    "強度 vs 頻率：<ul><li>強度＝光子數 → 決定電子<b>數</b>（電流）</li><li>頻率＝光子能量 → 決定電子<b>動能</b></li></ul>截止電壓 <code>eV<sub>s</sub>＝E<sub>K</sub></code>。",
+    "功函數圖：x 截距＝ν₀、y 截距＝−Φ、斜率＝h。各金屬平行線，換金屬只平移。Cs（IE 小）常用光電池。",
+    "德布羅意：<code>λ＝h/mv＝h/p</code>，波長與<b>動量成反比</b>。電子夠輕才測得到波動性。",
+    "測不準：<code>Δx·Δp ≥ ħ/2</code>。電子沒有確定軌道，只能用機率（軌域）描述。"
   ]}
 />
 

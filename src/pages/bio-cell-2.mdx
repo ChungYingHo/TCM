@@ -334,17 +334,18 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 
 <Memorize client:visible
   items={[
-    "內膜系統七成員：核套膜、內質網 (ER)、高基氏體 (Golgi)、溶體 (lysosome)、液泡 (vacuole)、運輸小泡、細胞膜。粒線體／葉綠體／過氧化體／核糖體 不屬內膜系統。",
-    "核：核套膜 (nuclear envelope) 雙層＋與 RER 相連、核孔 (nuclear pore) 管進出（出 mRNA／次單位、進蛋白）、核仁 (nucleolus) 做 rRNA 與大小次單位。核糖體蛋白與組蛋白在細胞質做、再進核。",
-    "SER：合成脂質與固醇（性激素／皮質激素原料）、代謝肝醣、解毒 (P450)、儲鈣。",
-    "RER：合成分泌／膜／溶體蛋白、醣基化 (glycosylation)、製膜。修飾順序 ER 先、Golgi 後。分泌蛋白由<b>黏附</b>核糖體合成、不是游離核糖體。",
-    "分泌路徑：核糖體 → 粗糙 ER → 高基氏體 → 分泌小泡 → 胞吐 (exocytosis)。溶體酶在 RER 合成、Golgi 打包，pH ≈ 5 最酸。儲積症＝酶缺 → 受質堆積（Pompe 缺 GAA 堆肝醣、Tay-Sachs 缺 Hex-A 堆 GM2）。",
-    "粒線體：外膜／內膜 (皺褶 cristae，電子傳遞鏈)／基質 (matrix，DNA，檸檬酸循環)／膜間隙。數量看需氧量／代謝率不是看年齡，氰化物是抑制複合體 IV、不是累積在粒線體。",
-    "葉綠體：類囊體 (thylakoid) 疊成基粒（光反應）＋基質 (stroma，卡爾文循環)。",
-    "雙層膜且有自己 DNA：＝核、粒線體、葉綠體三者共同點，過氧化體是<b>單層膜</b>、且<b>不屬</b>內膜系統。",
-    "過氧化體 peroxisome：單層膜、catalase 解 H₂O₂、脂肪酸 β-氧化（不屬內膜系統）。",
-    "蛋白酶體 proteasome：桶狀非膜、降解被泛素 (ubiquitin) 標記的蛋白（UPS）。溶體 (膜包大塊／吞入物) vs 蛋白酶體 (單一被泛素標記的蛋白) 分工不同、別混為一談。",
-    "小泡運輸：COPII 外被 ER → Golgi (順向)、COPI 外被 Golgi → ER (逆向回收)。ER 常駐蛋白帶 KDEL，被 Golgi 的 KDEL 受體認出、由 COPI 送回 ER。融合靠 v-SNARE (小泡) 與 t-SNARE (目標膜) 互扣。突觸再由 synaptotagmin 感應 Ca²⁺ 觸發融合、放出神經傳遞物質。"
+    "內膜系統七成員：<ul><li>核套膜、內質網、高基氏體</li><li>溶體、液泡、運輸小泡、細胞膜</li><li><b>不</b>屬於：粒線體、葉綠體、過氧化體、核糖體</li></ul>",
+    "核：<ul><li>核套膜雙層，與 RER 相連</li><li>核孔管進出（出 mRNA 與次單位、進蛋白）</li><li>核仁做 rRNA 與大小次單位</li></ul>",
+    "SER：合成脂質與固醇、代謝肝醣、解毒 (P450)、儲鈣。",
+    "RER：<ul><li>合成分泌／膜／溶體蛋白、醣基化、製膜</li><li>修飾順序 ER 先、Golgi 後</li><li>分泌蛋白由<b>黏附</b>核糖體合成</li></ul>",
+    "分泌路徑：<code>核糖體→粗糙 ER→高基氏體→分泌小泡→胞吐</code>",
+    "溶體：酶在 RER 合成、Golgi 打包，<code>pH ≈ 5</code> 最酸。",
+    "儲積症：酶缺→受質堆積。Pompe 缺 GAA 堆肝醣、Tay-Sachs 缺 Hex-A 堆 GM2。",
+    "粒線體：<ul><li>外膜／內膜（皺褶 cristae，電子傳遞鏈）／基質（DNA、檸檬酸循環）／膜間隙</li><li>數量看需氧量與代謝率，不是看年齡</li><li>氰化物抑制複合體 IV，不是累積在粒線體</li></ul>",
+    "葉綠體：類囊體疊成基粒（光反應）＋基質（卡爾文循環）。",
+    "過氧化體：單層膜、catalase 解 H₂O₂、脂肪酸 β-氧化。不屬內膜系統。",
+    "蛋白酶體 vs 溶體：<ul><li>蛋白酶體＝桶狀非膜，降解被<b>泛素</b>標記的單一蛋白</li><li>溶體＝膜包，消化大塊或吞入物</li></ul>",
+    "小泡運輸：<ul><li><code>COPII</code>：ER→Golgi（順向）</li><li><code>COPI</code>：Golgi→ER（逆向回收）</li><li>ER 常駐蛋白帶 <code>KDEL</code>，由 COPI 送回</li><li>融合靠 v-SNARE 與 t-SNARE 互扣</li><li>突觸再由 synaptotagmin 感應 Ca²⁺ 觸發</li></ul>"
   ]}
 />
 

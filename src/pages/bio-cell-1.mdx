@@ -145,14 +145,15 @@ import Supplement from '@/components/notes/Supplement.astro'
 
 <Memorize client:visible
   items={[
-    "共同特徵：細胞膜 (plasma membrane)、細胞質液 (cytosol)、DNA、核糖體 (ribosome)。原核 vs 真核差在「DNA 有沒有被膜包成核 ＋ 有沒有膜性胞器」。",
-    "顯微鏡：光學 (LM) 解析度極限約 0.2 µm（看得到細胞／核／粒線體／細菌），電子 (EM) 好約 100 倍（看核糖體／膜／病毒）。SEM 看表面立體、TEM 看內部剖面、共軛焦 (confocal) 用針孔做光學切片。",
-    "放大率 ≠ 解析度：放大率 (magnification) 高不等於清楚，解析度 (resolution) 才是關鍵，<b>數值越小越清晰</b>（油鏡因 NA 大而比乾鏡清楚）。",
-    "EM 只能看死樣本：電子顯微鏡解析度雖高但須真空，<b>只能看死樣本</b>，要看活細胞得用光學顯微鏡 (LM)。",
-    "原核 prokaryote：1–5 µm、環狀裸露 DNA 在類核 (nucleoid) ＋ 質體 (plasmid)、二分裂、壁為肽聚醣（青黴素抑制交聯，古菌偽肽聚醣故無效）。",
-    "真核 eukaryote：約大 10 倍、線狀 DNA 纏組蛋白、有膜性胞器。",
-    "質體 plasmid：<b>主染色體以外</b>的小環狀 DNA，可獨立複製與傳遞，別當成細菌的主基因體。",
-    "雙層膜胞器：＝核、粒線體、葉綠體，三者都有自己的 DNA → 內共生 (endosymbiosis) 證據（雙層膜、環狀 DNA、70S 核糖體、二分裂）。"
+    "共同特徵：<ul><li>細胞膜、細胞質液、DNA、核糖體</li><li>原核 vs 真核只差「DNA 有沒有被膜包起來、有沒有膜性胞器」</li></ul>",
+    "顯微鏡解析度：<ul><li>光學 LM 約 <code>0.2 µm</code>（細胞、核、粒線體、細菌）</li><li>電子 EM 好約 100 倍（核糖體、膜、病毒）</li></ul>",
+    "三種顯微鏡：<ul><li>SEM 看表面立體</li><li>TEM 看內部剖面</li><li>共軛焦用針孔做光學切片</li></ul>",
+    "放大率 ≠ 解析度：解析度才是關鍵，<b>數值越小越清晰</b>。油鏡 NA 大，比乾鏡清楚。",
+    "EM 只能看死樣本：須真空。要看活細胞得用光學顯微鏡。",
+    "原核 prokaryote：<ul><li><code>1–5 µm</code></li><li>環狀裸露 DNA 在類核 ＋ 質體</li><li>二分裂</li><li>壁為肽聚醣（青黴素抑制交聯，古菌偽肽聚醣故無效）</li></ul>",
+    "真核 eukaryote：<ul><li>約大 10 倍</li><li>線狀 DNA 纏組蛋白</li><li>有膜性胞器</li></ul>",
+    "質體 plasmid：<b>主染色體以外</b>的小環狀 DNA，可獨立複製與傳遞。",
+    "雙層膜胞器：核、粒線體、葉綠體。三者都有自己的 DNA → 內共生證據（雙層膜、環狀 DNA、70S 核糖體、二分裂）。"
   ]}
 />
 

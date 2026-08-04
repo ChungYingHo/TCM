@@ -429,25 +429,24 @@ NO 本身是**擴散進鄰居細胞的局部調節物**，它結合的是**細�
 
 <Memorize client:visible
   items={[
-    "三階段：接收 (reception) → 傳遞 (transduction) → 反應 (response)。Sutherland 發現腎上腺素不必進細胞就能促肝醣分解，因而找到 cAMP。",
-    "多步驟路徑的好處：放大、整合、調控、專一性。不會加快速度。",
-    "受體先分溶解性：水溶性配體走膜受體 (GPCR／RTK／離子通道)，脂溶性配體 (類固醇、甲狀腺素、NO) 走細胞內受體。",
-    "GPCR：最大的細胞表面受體家族、七次跨膜、G 蛋白為 α β γ 異三聚體。Gα·GTP＝開、Gα·GDP＝關，GTP 水解很慢。",
-    "RTK：配體結合 → 二聚化 → 互相磷酸化酪胺酸 → 磷酸化位當停泊位，一個受體可開多條路徑。胰島素受體、EGFR、HER2 屬之。",
-    "激酶專一性：PKA 磷酸化 Ser／Thr，RTK 磷酸化 Tyr。",
-    "nAChR (菸鹼型)：離子通道型受體、在運動終板、非專一性陽離子通道 (Na⁺ 入、K⁺ 出)、產生 EPSP。",
-    "mAChR (蕈毒鹼型)：GPCR、在竇房結、由 Gβγ 開 K⁺ 通道使心跳變慢。同一個乙醯膽鹼，兩種受體，結果相反。",
-    "Gα 亞型分流（一）：<code>β→Gs→AC→cAMP→PKA</code>。<code>α₁→Gq→PLC→IP₃＋DAG</code>，再到 Ca²⁺ 與 PKC。",
-    "Gα 亞型分流（二）：<code>α₂→Gi→⊣AC</code> 使 cAMP 下降。<code>rhodopsin→transducin→PDE</code>。<code>mAChR→Gβγ→開 K⁺ 通道</code>。",
-    "第二傳訊者只有 cAMP、Ca²⁺、IP₃、DAG、cGMP。PLC 是酵素、PIP₂ 是膜磷脂，都不是。NO 是氣體局部調節物，它引發的 cGMP 才是第二傳訊者。",
-    "cAMP：AC 由 ATP 生成、PDE 水解成 AMP。一個腎上腺素可使 cAMP 數秒內增為 20 倍。",
-    "鈣離子落差：胞外的 Ca²⁺ 濃度比細胞質高 <code>一萬倍以上</code>，靠鈣幫浦耗 ATP 維持。正因為平時壓得極低，通道一開就是倍數級跳升。",
-    "肝醣分解級聯：<code>cAMP→PKA→磷酸化酶激酶→肝醣磷酸化酶→葡萄糖 1-磷酸</code>。1 個腎上腺素放大到 <code>10⁸</code> 個產物。",
-    "終止訊息三組：<code>Gα·GTP —GTPase→ Gα·GDP</code>、<code>cAMP —PDE→ AMP</code>、<code>磷酸化激酶 —PP→ 不活化蛋白</code>。",
-    "藥理四例：霍亂毒素使 Gα 不能水解 GTP、咖啡因抑制 PDE、威而鋼抑制 PDE5、鋰鹽阻斷 IP₂→IP₁→肌醇。",
-    "支架蛋白 (scaffolding protein)：把多個激酶固定在一起提高效率，本身也是中繼蛋白，可聯繫多條路徑。",
-    "凋亡 vs 壞死：凋亡的膜保持完整、不發炎。壞死的膜破裂、內容物外漏、引起發炎。",
-    "凋亡路徑：caspase-3 為兩條途徑共同的執行者。內在途徑經 cytochrome c 與 Apaf-1，Bcl-2 家族調控粒線體外膜通透性。"
+    "三階段：<code>接收→傳遞→反應</code>。Sutherland 發現腎上腺素不必進細胞就能促肝醣分解，因而找到 cAMP。",
+    "多步驟路徑的好處：放大、整合、調控、專一性。<b>不會加快速度</b>。",
+    "受體先分溶解性：<ul><li>水溶性配體 → 膜受體（GPCR／RTK／離子通道）</li><li>脂溶性配體（類固醇、甲狀腺素、NO）→ 細胞內受體</li></ul>",
+    "GPCR：<ul><li>最大的細胞表面受體家族、七次跨膜</li><li>G 蛋白為 α β γ 異三聚體</li><li><code>Gα·GTP＝開</code>、<code>Gα·GDP＝關</code>，GTP 水解很慢</li></ul>",
+    "RTK：<ul><li><code>配體結合→二聚化→互相磷酸化酪胺酸→停泊位</code></li><li>一個受體可開十條以上路徑</li><li>胰島素受體、EGFR、HER2 屬之</li></ul>",
+    "激酶專一性：PKA 磷酸化 <b>Ser／Thr</b>，RTK 磷酸化 <b>Tyr</b>。",
+    "nAChR（菸鹼型）：離子通道型、在運動終板、非專一性陽離子通道（Na⁺ 入、K⁺ 出）、產生 EPSP。",
+    "mAChR（蕈毒鹼型）：GPCR、在竇房結、由 Gβγ 開 K⁺ 通道使心跳變慢。同一個乙醯膽鹼，結果相反。",
+    "Gα 亞型分流：<ul><li><code>β→Gs→AC→cAMP→PKA</code></li><li><code>α₁→Gq→PLC→IP₃＋DAG</code>→Ca²⁺ 與 PKC</li><li><code>α₂→Gi→⊣AC</code>，cAMP 下降</li><li><code>rhodopsin→transducin→PDE</code></li><li><code>mAChR→Gβγ→開 K⁺ 通道</code></li></ul>",
+    "第二傳訊者只有：cAMP、Ca²⁺、IP₃、DAG、cGMP。<ul><li>PLC 是酵素、PIP₂ 是膜磷脂，都<b>不是</b></li><li>NO 是氣體局部調節物，它引發的 cGMP 才是</li></ul>",
+    "cAMP：<code>AC 由 ATP 生成</code>、<code>PDE 水解成 AMP</code>。一個腎上腺素可使 cAMP 數秒內增為 20 倍。",
+    "鈣離子落差：胞外比細胞質高<b>一萬倍以上</b>，靠鈣幫浦耗 ATP 維持，通道一開就是倍數級跳升。",
+    "肝醣分解級聯：<ul><li><code>cAMP</code> → <code>PKA</code></li><li>→ 磷酸化酶激酶 → 肝醣磷酸化酶</li><li>→ 葡萄糖 1-磷酸</li></ul>1 個腎上腺素放大到 <code>10⁸</code> 個產物。",
+    "終止訊息三組：<ul><li><code>Gα·GTP —GTPase→ Gα·GDP</code></li><li><code>cAMP —PDE→ AMP</code></li><li><code>磷酸化激酶 —PP→ 不活化蛋白</code></li></ul>",
+    "藥理四例：<ul><li>霍亂毒素：使 Gα 不能水解 GTP</li><li>咖啡因：抑制 PDE</li><li>威而鋼：抑制 PDE5</li><li>鋰鹽：阻斷 <code>IP₂→IP₁→肌醇</code></li></ul>",
+    "支架蛋白：把多個激酶固定在一起提高效率，本身也是中繼蛋白，可聯繫多條路徑。",
+    "凋亡 vs 壞死：<ul><li>凋亡：膜完整、不發炎</li><li>壞死：膜破裂、內容物外漏、發炎</li></ul>",
+    "凋亡路徑：<code>caspase-3</code> 為兩條途徑共同執行者。內在途徑經 cytochrome c 與 Apaf-1，Bcl-2 家族調控粒線體外膜通透性。"
   ]}
 />
 
