@@ -39,8 +39,10 @@
 | 改動類型 | 必跑 |
 | :--- | :--- |
 | 任何前端／TS 改動 | `npm run lint`＋`npm run typecheck`＋`npm test`（三者零錯誤） |
+| **push 前（任何改動）** | **`npm run build` 必須成功**。lint／typecheck／`astro check`／vitest 全綠**仍可能** build 紅燈（MDX 的 acorn 解析錯誤只有 build 抓得到），Vercel 就是跑這個 |
 | pipeline（Python）改動 | `cd pipeline && python -m pytest` |
 | 筆記／MDX 改動 | 真的 SSR render：dev server（port 4330）→ 用 `.env` 的 `SITE_PASSWORD` POST `/api/unlock` → fetch 該頁須 **200 且 0 個 `katex-error`**。`astro check` 全綠**不代表**不會 SSR 500（裸 `<字母` 會被當 JSX），散文比較符號寫 `&lt;`/`&gt;` |
+| **用腳本批次改 MDX** | marker 必須整行精確比對，且先 assert `lines.count(marker) == 1`；只比對片段會改到同字串的其他出現處，且被改壞的區段不會有任何測試抓到 |
 | UI／版面改動 | 375px 手機寬＋最極端真實資料（長字串、空資料、超多筆）實際 render，不可只 code review |
 | 列印 PDF 相關改動 | 走 `export-pdf` skill 的逐頁驗證步驟 |
 
