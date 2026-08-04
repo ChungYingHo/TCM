@@ -3,17 +3,13 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞訊號傳遞
 summary: 細胞通訊的三種距離、訊號三階段與 Sutherland 實驗、四類受體（GPCR／RTK／離子通道／細胞內）、Gα 亞型六條下游、第二傳訊者、磷酸化級聯與 10⁸ 放大、訊息整合與支架蛋白、終止訊息與藥理應用、細胞凋亡。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Supplement from '@/components/notes/Supplement.astro'
 import Figure from '@/components/notes/Figure.astro'
 import GpcrPathways from '@/components/notes/GpcrPathways.astro'
 import SignalOverview from '@/components/notes/SignalOverview.astro'
-
-<NoteStats tag="細胞-訊號傳遞" client:load />
 
 ## 一、細胞通訊的距離與方式
 
@@ -617,7 +613,3 @@ NO 本身是**擴散進鄰居細胞的局部調節物**，它結合的是**細�
 | Bcl-2 | Bcl-2 家族 | 調控粒線體外膜通透性的凋亡調節蛋白 |
 
 </div>
-
-## 考古題
-
-<RelatedQuestions tag="細胞-訊號傳遞" limit={10} offset={0} client:load />

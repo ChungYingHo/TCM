@@ -1,44 +1,50 @@
 <script lang="ts">
+  // 每日複習（2026-08-04 改版，Aira 定案）：白天的複習夥伴只做兩件事——
+  //   ① 單字（新字＋SRS 複習），每天不可斷
+  //   ② 快速複習需要記憶的基礎知識＝各篇筆記的必背卡（SRS 回想卡）＋筆記例題
+  // 拿掉的：Unit Factor 測驗、今日／複習古文、元素小遊戲、胺基酸小遊戲、考古題刷題。
+  // 元素與胺基酸沒有消失，是改以必背卡的形式跟其他化學一起排班（見 /api/note-review）。
   import { onMount } from 'svelte'
   import { prefixById, type PrefixGroup, type VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
   import { seenVocabIds, vocabForDay } from '@/utils/vocabSchedule'
-  import type { ClassicsData } from '@/models/classics'
-  import { loadClassics } from '@/utils/classicsData'
   import { dueIds, dumpVocabSrs, learn } from '@/utils/vocabSrs'
-  import { dueIds as classicDueIds, grade as gradeClassic } from '@/utils/classicSrs'
-  import { composeReview, seededSample } from '@/utils/reviewSample'
+  import { dueIds as cardDueIds } from '@/utils/noteCardSrs'
+  import type { NoteCard, NoteExample } from '@/utils/noteReview'
+  import { loadNoteReviewData } from '@/utils/noteReviewData'
+  import { composeReview } from '@/utils/reviewSample'
   import { todayKey } from '@/utils/date'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
-  import ElementQuiz from '@/components/element/ElementQuiz.svelte'
-  import AminoAcidQuiz from '@/components/amino/AminoAcidQuiz.svelte'
-  import UnitFactorQuiz from '@/components/unit/UnitFactorQuiz.svelte'
-  import ClassicReader from '@/components/classics/ClassicReader.svelte'
+  import MemorizeDrill from '@/components/review/MemorizeDrill.svelte'
   import DailyDrill from '@/components/review/DailyDrill.svelte'
   import Icon from '@/components/common/Icon.svelte'
 
-  let classics = $state<ClassicsData | null>(null)
-  const classicById = $derived(new Map((classics?.classics ?? []).map((c) => [c.id, c])))
+  const today = todayKey()
 
   let vocab = $state<VocabData | null>(null)
+  let cards = $state<NoteCard[]>([])
+  let examples = $state<NoteExample[]>([])
+  let notesFailed = $state(false)
+
   const wordById = $derived(new Map((vocab?.words ?? []).map((w) => [w.id, w])))
+
   onMount(async () => {
-    const [v, c] = await Promise.allSettled([loadVocab(), loadClassics()])
+    const [v, n] = await Promise.allSettled([loadVocab(), loadNoteReviewData()])
     if (v.status === 'fulfilled') vocab = v.value
-    if (c.status === 'fulfilled') classics = c.value
+    if (n.status === 'fulfilled') {
+      cards = n.value.cards
+      examples = n.value.examples
+    } else {
+      notesFailed = true
+    }
     seedSchedule()
     refresh()
   })
 
-  const today = todayKey()
-
   let reviewIds = $state<string[]>([])
   let showReview = $state(false)
-  let showElement = $state(false)
-  let showAmino = $state(false)
-  let showUnitFactor = $state(false)
-  let reviewClassicId = $state<string | null>(null)
+  let showCards = $state(false)
 
   // 把「到今天為止看過的今日單字」種進 SRS 排程（含回填起算日至今）。冪等：learn 只補新卡、
   // 不動已學的（見 leitner.ts）。這步是為了打破 bootstrap 死結——複習清單只撈排程內的字，新字
@@ -58,8 +64,10 @@
       60,
       today,
     )
-    reviewClassicId = classicDueIds()[0] ?? null
+    dueCards = cardDueIds().length
   }
+
+  let dueCards = $state(0)
 
   $effect(() => {
     refresh()
@@ -81,23 +89,7 @@
       .map((id) => (id === undefined ? undefined : prefixById(id)))
       .filter((g): g is PrefixGroup => g !== undefined),
   )
-
-  const reviewWords = $derived(
-    reviewIds.map((id) => wordById.get(id)).filter(Boolean),
-  )
-
-  const todayClassic = $derived.by(() => {
-    const all = classics?.classics
-    if (!all?.length) return null
-    return seededSample(all, 1, today)[0] ?? null
-  })
-
-  const reviewClassic = $derived(reviewClassicId ? classicById.get(reviewClassicId) : null)
-
-  function gradeReviewClassic(known: boolean) {
-    if (reviewClassicId) gradeClassic(reviewClassicId, known)
-    refresh()
-  }
+  const reviewWords = $derived(reviewIds.map((id) => wordById.get(id)).filter(Boolean))
 </script>
 
 <div class="flex flex-col gap-5">
@@ -135,62 +127,29 @@
     </section>
   {/if}
 
-  <!-- 3. 今日元素 · 週期表地基 -->
+  <!-- 3. 今日必背（各篇筆記的必背項目，SRS 回想卡） -->
+  <section class="rounded-box border border-base-300 border-l-[3px] border-l-accent bg-base-100 p-4 shadow-soft sm:p-5">
+    <h2 class="section-heading mb-1">
+      今日必背
+      {#if dueCards}<span class="section-sub tabular-nums">到期 {dueCards} 張</span>{/if}
+    </h2>
+    {#if notesFailed}
+      <p class="text-sm text-error">必背卡載入失敗，重新整理看看。</p>
+    {:else if showCards}
+      <MemorizeDrill {cards} {today} />
+    {:else}
+      <p class="mb-3 text-sm text-base-content/55">內膜系統、訊號傳遞、軌域這些<b>要記的地基</b>——正面只給主題，先自己回想再翻開對答案。內容直接來自各篇筆記的必背區，共 {cards.length} 張。</p>
+      <button class="btn btn-primary btn-sm" onclick={() => (showCards = true)} disabled={!cards.length}>
+        開始回想 <Icon name="sparkles" class="h-4 w-4" />
+      </button>
+    {/if}
+  </section>
+
+  <!-- 4. 今日練習題（筆記例題，各科每天換一批） -->
   <section class="rounded-box border border-base-300 border-l-[3px] border-l-success bg-base-100 p-4 shadow-soft sm:p-5">
-    <h2 class="section-heading mb-3">今日元素 · 週期表地基</h2>
-    <p class="mb-3 text-sm text-base-content/55">原子序↔元素、A 族價電子、常用原子量、英中符號、3d/4d/5d 系列。每天抽考，答對自動排間隔複習。</p>
-    {#if showElement}
-      <ElementQuiz />
-    {:else}
-      <button class="btn btn-primary btn-sm" onclick={() => (showElement = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
-    {/if}
+    <h2 class="section-heading mb-1">今日練習題</h2>
+    <p class="mb-3 text-sm text-base-content/55">各科從筆記例題隨機抽幾題，每天換一批，只考筆記教過的範圍。想寫整份考古題到<a class="link link-primary" href="/exam">線上測驗</a>。</p>
+    <DailyDrill {examples} {today} />
   </section>
-
-  <!-- 4. 今日胺基酸 -->
-  <section class="rounded-box border border-base-300 border-l-[3px] border-l-warning bg-base-100 p-4 shadow-soft sm:p-5">
-    <h2 class="section-heading mb-3">今日胺基酸 · 結構對照</h2>
-    <p class="mb-3 text-sm text-base-content/55"><b>結構 ↔ 中文 ↔ 英文 ↔ 簡寫</b>四者互相對照——把 20 個胺基酸練熟，答對自動排間隔複習。</p>
-    {#if showAmino}
-      <AminoAcidQuiz />
-    {:else}
-      <button class="btn btn-primary btn-sm" onclick={() => (showAmino = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
-    {/if}
-  </section>
-
-  <!-- 5. 今日化學基礎 · Unit Factor 換算 -->
-  <section class="rounded-box border border-base-300 border-l-[3px] border-l-secondary bg-base-100 p-4 shadow-soft sm:p-5">
-    <h2 class="section-heading mb-3">今日化學基礎 · Unit Factor</h2>
-    <p class="mb-3 text-sm text-base-content/55">壓力、溫度、能量、體積、長度、莫耳——隨機抽 8 題 unit factor 換算，練到手感自然。</p>
-    {#if showUnitFactor}
-      <UnitFactorQuiz />
-    {:else}
-      <button class="btn btn-primary btn-sm" onclick={() => (showUnitFactor = true)}>開始測驗 <Icon name="sparkles" class="h-4 w-4" /></button>
-    {/if}
-  </section>
-
-  <!-- 6. 今日古文（隨機一篇） -->
-  {#if todayClassic}
-    <section class="rounded-box border border-base-300 border-l-[3px] border-l-accent bg-base-100 p-4 shadow-soft sm:p-5">
-      <h2 class="section-heading mb-3">今日古文</h2>
-      <p class="mb-3 text-sm text-base-content/55">先讀原文、試著回想語意與讀音，再翻開「白話翻譯」對照。</p>
-      <ClassicReader classic={todayClassic} open={false} />
-    </section>
-  {/if}
-
-  <!-- 7. 複習古文（SRS 到期；先回想再翻譯，選記得／不熟安排下次） -->
-  {#if reviewClassic}
-    <section class="rounded-box border border-base-300 border-l-[3px] border-l-secondary bg-base-100 p-4 shadow-soft sm:p-5">
-      <h2 class="section-heading mb-1">複習古文</h2>
-      <p class="mb-3 text-sm text-base-content/55">之前讀過、今天該回顧的一篇——先讀原文回想語意與讀音，再翻開對照，然後選「記得／不熟」安排下次複習。</p>
-      <ClassicReader classic={reviewClassic} open={false} />
-      <div class="mt-3 grid grid-cols-2 gap-2">
-        <button class="btn btn-outline btn-error" onclick={() => gradeReviewClassic(false)}>不熟</button>
-        <button class="btn btn-success" onclick={() => gradeReviewClassic(true)}>記得 <Icon name="check" class="h-4 w-4" /></button>
-      </div>
-    </section>
-  {/if}
-
-  <!-- 8. 今日刷題（各科 10 題：筆記例題＋考古題混合） -->
-  <DailyDrill />
   {/if}
 </div>

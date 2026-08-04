@@ -1,4 +1,10 @@
 ---
+import Layout from '@/layouts/Layout.astro'
+import ExamTabs from '@/components/exam/ExamTabs.svelte'
+
 export const prerender = false
-return Astro.redirect('/study?tab=exam')
 ---
+
+<Layout title="線上測驗 · TCM 題庫">
+  <ExamTabs client:load />
+</Layout>

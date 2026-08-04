@@ -3,14 +3,10 @@ layout: '@/layouts/NoteLayout.astro'
 title: 概論、顯微鏡與原核／真核
 summary: 細胞學說與所有細胞的共同特徵、看細胞的工具（光學／電子／共軛焦顯微鏡、細胞大小尺度、細胞分離），以及原核 vs 真核的一刀切分界與細菌構造。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
-
-<NoteStats tag="細胞-原核與真核" client:load />
 
 ## 一、細胞是生命的基本單位
 
@@ -236,7 +232,3 @@ import Supplement from '@/components/notes/Supplement.astro'
 | penicillin | 青黴素 | 抑制肽聚醣交聯，脹破生長中的細菌 |
 
 </div>
-
-## 考古題
-
-<RelatedQuestions tag="細胞-原核與真核" limit={10} offset={0} client:load />

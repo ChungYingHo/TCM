@@ -3,14 +3,10 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞骨架與細胞外連結
 summary: 細胞骨架三大纖維（微管・微絲・中間絲）的直徑、組成與功能，中心粒／纖毛鞭毛的 9×3 與 9+2，以及細胞外基質（ECM）、整聯蛋白與細胞間連結（緊密接合／胞橋小體／裂隙接合／胞間連絲）。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
-
-<NoteStats tag="細胞-骨架與連結" client:load />
 
 ## 七、細胞骨架（cytoskeleton）
 
@@ -278,7 +274,3 @@ import Supplement from '@/components/notes/Supplement.astro'
 | cellulose | 纖維素 | 植物細胞壁的主成分 |
 
 </div>
-
-## 考古題
-
-<RelatedQuestions tag="細胞-骨架與連結" limit={10} offset={0} client:load />

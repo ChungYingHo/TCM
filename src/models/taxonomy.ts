@@ -1,153 +1,136 @@
-// Canonical concept taxonomy — single source of truth for the UI.
+// Canonical concept taxonomy — 考古題 concept_tags 的正規名稱與教學順序。
+//
+// 2026-08-05：筆記不再「認領」考古題（NoteStats／RelatedQuestions／/study／/analytics 都已移除），
+// 這份表因此縮回單一用途——把題目的 concept_tags 排序、給短標籤，供線上測驗與詳解顯示。
+// 剩下的消費者：ExamApp（模擬考的考點標籤）、AnswerReveal／askAI（解題模板挑選）。
 //
 // Ordering here is PEDAGOGICAL (prerequisite-respecting), and drives:
-//   - the study-page tag filter order
-//   - the notes index "learning path" order
-//   - the analytics trend ordering
 //   - which tag is "primary" for a multi-tag question (earliest in order)
+//   - 解題模板的挑選順序
 //
-// The tag STRINGS must stay in sync with the offline tagger
-// (pipeline/tcmpipe/tags.py). Each tag maps to exactly one concept note
-// (src/content/notes/<slug>.mdx). Keep `tag` ⇄ note frontmatter `tag` aligned.
-//
-// Entries with a `parent` are NOTE-ONLY sub-topics: finer study notes that carve
-// out a slice of a broad category (e.g. 假設語氣 within 文法：時態與語態). They have
-// NO tagger rule, so no question carries their tag directly — the question-derived
-// surfaces (study filter, analytics) simply never list them. To still feed
-// "today's quiz" and show frequency, gen_schedule.py aliases each sub-topic's quiz
-// pool to its parent's, and the note's <NoteStats> points at the parent tag.
+// The tag STRINGS must stay in sync with the offline tagger (pipeline/tcmpipe/tags.py).
 
 import type { Subject } from '@/models/question'
 import { SUBJECTS } from '@/models/question'
 
 export interface TaxonomyEntry {
-  tag: string // matches question.concept_tags[] and note frontmatter `tag`
-  slug: string // note filename (src/content/notes/<slug>.mdx), or src/pages id for `claimed`
+  tag: string // matches question.concept_tags[]
   short: string // compact label for chips/filters
-  parent?: string // note-only sub-topic: borrows this broad tag's quiz pool + stats
-  // This tag's READING is merged into another note (that note `covers:` this tag). The tag
-  // still exists for question-tagging / 考點趨勢; tagSlug resolves it to `readIn` for the page.
-  readIn?: string
-  // note-claiming tag (2026-06-28): lives in a src/pages note registered in models/notes.ts,
-  // NOT the deprecated collection. `slug` is the src/pages id; questions are claimed per-note
-  // via pipeline/overrides/concept_tags.json. The taxonomy.test deprecated-note check is skipped.
-  claimed?: boolean
 }
 
 export const TAXONOMY: Record<Subject, TaxonomyEntry[]> = {
   chemistry: [
-    // ── note-claiming tags（一篇一個、認領自己範圍的考古題；基礎篇用「基礎-」、正課用主題名）──
-    { tag: '基礎-週期表', slug: 'periodic-table', short: '週期表', claimed: true },
-    { tag: '基礎-胺基酸', slug: 'amino-acids', short: '胺基酸', claimed: true },
-    { tag: '基礎-原子結構', slug: 'chem-atomic-theory', short: '原子結構', claimed: true },
-    { tag: '量子力學', slug: 'chem-quantum', short: '量子力學', claimed: true },
-    { tag: '原子光譜', slug: 'chem-atomic-spectra', short: '原子光譜', claimed: true },
-    { tag: '原子軌域', slug: 'chem-orbitals', short: '原子軌域', claimed: true },
-    { tag: '電子組態', slug: 'chem-electron-config', short: '電子組態', claimed: true },
-    { tag: '離子與電子行為', slug: 'chem-ions-magnetism', short: '離子與磁光', claimed: true },
-    { tag: '基礎-單位因次', slug: 'chem-units', short: '單位因次', claimed: true },
-    { tag: '基礎-化學鍵', slug: 'chem-chemical-bonding', short: '化學鍵', claimed: true },
-    { tag: '基礎-化學計量', slug: 'chem-stoichiometry', short: '化學計量', claimed: true },
-    { tag: '基礎-熱力學', slug: 'chem-thermo', short: '熱力學', claimed: true },
-    // ── legacy concept tags（過渡期保留；隨 backfill 逐桶認領後淘汰）──
-    { tag: '原子結構與核化學', slug: 'atomic-structure', short: '原子結構' },
-    // 化學鍵的「閱讀」併入 atomic-structure。週期性 已由 chem-periodicity 認領（正課篇）。
-    { tag: '週期性', slug: 'chem-periodicity', short: '週期性', claimed: true },
-    { tag: '週期趨勢', slug: 'chem-periodic-trends', short: '週期趨勢', claimed: true },
-    { tag: '化學鍵與分子結構', slug: 'chem-bonding', short: '化學鍵', readIn: 'atomic-structure' },
-    { tag: '化學計量', slug: 'stoichiometry', short: '化學計量' },
-    { tag: '氣體', slug: 'gas-laws', short: '氣體' },
-    { tag: '溶液與依數性質', slug: 'solutions', short: '溶液' },
-    { tag: '相變與分子間作用力', slug: 'imf-phases', short: '相變/IMF' },
-    { tag: '熱力學', slug: 'thermo', short: '熱力學' },
-    { tag: '反應速率', slug: 'kinetics', short: '反應速率' },
-    { tag: '化學平衡', slug: 'equilibrium', short: '化學平衡' },
-    { tag: '酸鹼平衡', slug: 'acid-base', short: '酸鹼' },
-    { tag: '水溶液離子平衡', slug: 'aqueous-equilibria', short: '緩衝/滴定/Ksp' },
-    { tag: '氧化還原', slug: 'redox', short: '氧化還原' },
-    { tag: '電化學', slug: 'electrochem', short: '電化學' },
-    { tag: '配位化合物', slug: 'coordination', short: '配位化合物' },
-    { tag: '有機命名與官能基', slug: 'organic-naming', short: '有機命名' },
-    { tag: '有機反應與機構', slug: 'organic-reactions', short: '有機反應' },
-    { tag: '芳香族化學', slug: 'aromatics', short: '芳香族' },
-    { tag: '立體化學', slug: 'stereoisomers', short: '立體化學' },
-    { tag: '生物有機分子', slug: 'biomolecules-chem', short: '生化分子' },
-    { tag: '光譜分析', slug: 'spectroscopy', short: '光譜' },
-    { tag: '化學綜合', slug: 'chem-misc', short: '綜合題' },
+    // ── 有筆記的考點（基礎篇用「基礎-」、正課用主題名）──
+    { tag: '基礎-週期表', short: '週期表' },
+    { tag: '基礎-胺基酸', short: '胺基酸' },
+    { tag: '基礎-原子結構', short: '原子結構' },
+    { tag: '量子力學', short: '量子力學' },
+    { tag: '原子光譜', short: '原子光譜' },
+    { tag: '原子軌域', short: '原子軌域' },
+    { tag: '電子組態', short: '電子組態' },
+    { tag: '離子與電子行為', short: '離子與磁光' },
+    { tag: '基礎-單位因次', short: '單位因次' },
+    { tag: '基礎-化學鍵', short: '化學鍵' },
+    { tag: '基礎-化學計量', short: '化學計量' },
+    { tag: '基礎-熱力學', short: '熱力學' },
+    // ── 尚未寫成筆記的考點（題目仍會標到，模擬考需要它們的短標籤）──
+    { tag: '原子結構與核化學', short: '原子結構' },
+    { tag: '週期性', short: '週期性' },
+    { tag: '週期趨勢', short: '週期趨勢' },
+    { tag: '化學鍵與分子結構', short: '化學鍵' },
+    { tag: '化學計量', short: '化學計量' },
+    { tag: '氣體', short: '氣體' },
+    { tag: '溶液與依數性質', short: '溶液' },
+    { tag: '相變與分子間作用力', short: '相變/IMF' },
+    { tag: '熱力學', short: '熱力學' },
+    { tag: '反應速率', short: '反應速率' },
+    { tag: '化學平衡', short: '化學平衡' },
+    { tag: '酸鹼平衡', short: '酸鹼' },
+    { tag: '水溶液離子平衡', short: '緩衝/滴定/Ksp' },
+    { tag: '氧化還原', short: '氧化還原' },
+    { tag: '電化學', short: '電化學' },
+    { tag: '配位化合物', short: '配位化合物' },
+    { tag: '有機命名與官能基', short: '有機命名' },
+    { tag: '有機反應與機構', short: '有機反應' },
+    { tag: '芳香族化學', short: '芳香族' },
+    { tag: '立體化學', short: '立體化學' },
+    { tag: '生物有機分子', short: '生化分子' },
+    { tag: '光譜分析', short: '光譜' },
+    { tag: '化學綜合', short: '綜合題' },
   ],
   biology: [
-    // ── note-claiming tags（細胞三篇）──
-    { tag: '細胞-原核與真核', slug: 'bio-cell-1', short: '原核真核', claimed: true },
-    { tag: '細胞-細胞核與胞器', slug: 'bio-cell-2', short: '細胞核胞器', claimed: true },
-    { tag: '細胞-骨架與連結', slug: 'bio-cell-3', short: '骨架連結', claimed: true },
-    { tag: '細胞-細胞膜', slug: 'bio-cell-4', short: '細胞膜', claimed: true },
-    { tag: '細胞-物質運輸', slug: 'bio-cell-5', short: '物質運輸', claimed: true },
-    { tag: '細胞-訊號傳遞', slug: 'bio-cell-6', short: '訊號傳遞', claimed: true },
-    // ── legacy concept tags ──
-    { tag: '生命分子與生物化學', slug: 'biomolecules', short: '生命分子' },
-    { tag: '細胞構造與胞器', slug: 'cell-structure', short: '細胞構造' },
-    { tag: '細胞膜與物質運輸', slug: 'membrane-transport', short: '細胞膜運輸' },
-    { tag: '酵素', slug: 'enzymes', short: '酵素' },
-    { tag: '細胞呼吸與能量代謝', slug: 'cell-respiration', short: '細胞呼吸' },
-    { tag: '光合作用與C4/CAM', slug: 'photosynthesis', short: '光合作用' },
-    { tag: '細胞分裂', slug: 'cell-division', short: '細胞分裂' },
-    { tag: '孟德爾遺傳', slug: 'mendelian', short: '孟德爾遺傳' },
-    { tag: '分子遺傳：DNA複製與染色體', slug: 'dna-replication', short: 'DNA複製' },
-    { tag: '基因表現：轉錄轉譯與調控', slug: 'gene-expression', short: '基因表現' },
-    { tag: '生物技術與分子工具', slug: 'biotech', short: '生物技術' },
-    { tag: '演化與生命起源', slug: 'evolution', short: '演化' },
-    { tag: '分類與生物多樣性', slug: 'taxonomy-diversity', short: '分類/多樣性' },
-    { tag: '微生物', slug: 'microbiology', short: '微生物' },
-    { tag: '植物構造與組織', slug: 'plant-structure', short: '植物構造' },
-    { tag: '植物生理', slug: 'plant-physiology', short: '植物生理' },
-    { tag: '神經系統與行為', slug: 'nervous-system', short: '神經系統' },
-    { tag: '內分泌系統', slug: 'endocrine', short: '內分泌' },
-    { tag: '循環與呼吸', slug: 'circulation-respiration', short: '循環/呼吸' },
-    { tag: '免疫系統', slug: 'immunity', short: '免疫' },
-    { tag: '消化與營養', slug: 'digestion', short: '消化' },
-    { tag: '排泄與滲透調節', slug: 'excretion', short: '排泄' },
-    { tag: '骨骼與肌肉運動', slug: 'musculoskeletal', short: '骨骼肌肉' },
-    { tag: '動物生殖與發育', slug: 'animal-reproduction', short: '生殖發育' },
-    { tag: '生態學', slug: 'ecology', short: '生態學' },
-    { tag: '生物學綜合', slug: 'bio-misc', short: '綜合題' },
+    // ── 有筆記的考點（細胞六篇）──
+    { tag: '細胞-原核與真核', short: '原核真核' },
+    { tag: '細胞-細胞核與胞器', short: '細胞核胞器' },
+    { tag: '細胞-骨架與連結', short: '骨架連結' },
+    { tag: '細胞-細胞膜', short: '細胞膜' },
+    { tag: '細胞-物質運輸', short: '物質運輸' },
+    { tag: '細胞-訊號傳遞', short: '訊號傳遞' },
+    // ── 尚未寫成筆記的考點 ──
+    { tag: '生命分子與生物化學', short: '生命分子' },
+    { tag: '細胞構造與胞器', short: '細胞構造' },
+    { tag: '細胞膜與物質運輸', short: '細胞膜運輸' },
+    { tag: '酵素', short: '酵素' },
+    { tag: '細胞呼吸與能量代謝', short: '細胞呼吸' },
+    { tag: '光合作用與C4/CAM', short: '光合作用' },
+    { tag: '細胞分裂', short: '細胞分裂' },
+    { tag: '孟德爾遺傳', short: '孟德爾遺傳' },
+    { tag: '分子遺傳：DNA複製與染色體', short: 'DNA複製' },
+    { tag: '基因表現：轉錄轉譯與調控', short: '基因表現' },
+    { tag: '生物技術與分子工具', short: '生物技術' },
+    { tag: '演化與生命起源', short: '演化' },
+    { tag: '分類與生物多樣性', short: '分類/多樣性' },
+    { tag: '微生物', short: '微生物' },
+    { tag: '植物構造與組織', short: '植物構造' },
+    { tag: '植物生理', short: '植物生理' },
+    { tag: '神經系統與行為', short: '神經系統' },
+    { tag: '內分泌系統', short: '內分泌' },
+    { tag: '循環與呼吸', short: '循環/呼吸' },
+    { tag: '免疫系統', short: '免疫' },
+    { tag: '消化與營養', short: '消化' },
+    { tag: '排泄與滲透調節', short: '排泄' },
+    { tag: '骨骼與肌肉運動', short: '骨骼肌肉' },
+    { tag: '動物生殖與發育', short: '生殖發育' },
+    { tag: '生態學', short: '生態學' },
+    { tag: '生物學綜合', short: '綜合題' },
   ],
   chinese: [
-    // ── note-claiming tag（認領自己範圍的考古題；slug＝src/pages id）──
-    { tag: '部首', slug: 'cn-radicals', short: '部首', claimed: true },
-    { tag: '詩經', slug: 'cn-shijing-qiyue', short: '詩經', claimed: true },
-    // ── legacy concept tags ──
-    { tag: '字音字形', slug: 'cn-phonetics', short: '字音字形' },
-    { tag: '字詞義訓詁', slug: 'cn-word-meaning', short: '字詞義' },
-    { tag: '通假字與古今字', slug: 'cn-loan-characters', short: '通假字', parent: '古典散文文言閱讀' },
-    { tag: '成語熟語', slug: 'cn-idioms', short: '成語' },
-    { tag: '修辭格', slug: 'cn-rhetoric', short: '修辭' },
-    { tag: '詞性語法句構', slug: 'cn-grammar', short: '語法句構' },
-    { tag: '詞語結構與構詞', slug: 'cn-word-formation', short: '詞語結構', parent: '詞性語法句構' },
-    { tag: '標點符號與文意', slug: 'cn-punctuation', short: '標點符號', parent: '詞性語法句構' },
-    { tag: '古典韻文', slug: 'cn-verse', short: '古典韻文' },
-    { tag: '古典散文文言閱讀', slug: 'cn-classical-prose', short: '文言閱讀' },
-    { tag: '文學史常識', slug: 'cn-literature', short: '文學史' },
-    { tag: '文化教材思想', slug: 'cn-thought', short: '思想教材' },
-    { tag: '國學常識', slug: 'cn-sinology', short: '國學常識' },
-    { tag: '應用文書信', slug: 'cn-applied', short: '應用文' },
-    { tag: '閱讀理解綜合', slug: 'cn-reading', short: '閱讀理解' },
+    // ── 有筆記的考點 ──
+    { tag: '部首', short: '部首' },
+    { tag: '詩經', short: '詩經' },
+    // ── 尚未寫成筆記的考點 ──
+    { tag: '字音字形', short: '字音字形' },
+    { tag: '字詞義訓詁', short: '字詞義' },
+    { tag: '通假字與古今字', short: '通假字' },
+    { tag: '成語熟語', short: '成語' },
+    { tag: '修辭格', short: '修辭' },
+    { tag: '詞性語法句構', short: '語法句構' },
+    { tag: '詞語結構與構詞', short: '詞語結構' },
+    { tag: '標點符號與文意', short: '標點符號' },
+    { tag: '古典韻文', short: '古典韻文' },
+    { tag: '古典散文文言閱讀', short: '文言閱讀' },
+    { tag: '文學史常識', short: '文學史' },
+    { tag: '文化教材思想', short: '思想教材' },
+    { tag: '國學常識', short: '國學常識' },
+    { tag: '應用文書信', short: '應用文' },
+    { tag: '閱讀理解綜合', short: '閱讀理解' },
   ],
   english: [
-    { tag: '文法：時態與語態', slug: 'en-tense', short: '時態語態' },
-    { tag: '文法：假設語氣與條件句', slug: 'en-subjunctive', short: '假設語氣', parent: '文法：時態與語態' },
-    { tag: '文法：動名詞與不定詞', slug: 'en-verbals', short: '動名詞/不定詞', parent: '文法：時態與語態' },
-    { tag: '文法：子句與關係代名詞', slug: 'en-clauses', short: '子句關代' },
-    { tag: '文法：主詞動詞一致', slug: 'en-agreement', short: '主動詞一致', parent: '句構與語意連貫' },
-    { tag: '文法：介系詞與片語', slug: 'en-prepositions', short: '介系詞' },
-    { tag: '文法：冠詞與名詞數', slug: 'en-articles', short: '冠詞/名詞數', parent: '句構與語意連貫' },
-    { tag: '句構與語意連貫', slug: 'en-structure', short: '句構連貫' },
-    { tag: '文法：比較與對等結構', slug: 'en-comparison', short: '比較結構', parent: '句構與語意連貫' },
-    { tag: '字彙', slug: 'en-vocab', short: '字彙' },
-    { tag: '易混淆字詞', slug: 'en-confusables', short: '易混淆字', parent: '字彙' },
-    { tag: '同義反義與字根字首', slug: 'en-synonym', short: '同反義/字根' },
-    { tag: '片語動詞與慣用語', slug: 'en-phrases', short: '片語慣用' },
-    { tag: '克漏字', slug: 'en-cloze', short: '克漏字' },
-    { tag: '閱讀測驗', slug: 'en-reading', short: '閱讀測驗' },
+    { tag: '文法：時態與語態', short: '時態語態' },
+    { tag: '文法：假設語氣與條件句', short: '假設語氣' },
+    { tag: '文法：動名詞與不定詞', short: '動名詞/不定詞' },
+    { tag: '文法：子句與關係代名詞', short: '子句關代' },
+    { tag: '文法：主詞動詞一致', short: '主動詞一致' },
+    { tag: '文法：介系詞與片語', short: '介系詞' },
+    { tag: '文法：冠詞與名詞數', short: '冠詞/名詞數' },
+    { tag: '句構與語意連貫', short: '句構連貫' },
+    { tag: '文法：比較與對等結構', short: '比較結構' },
+    { tag: '字彙', short: '字彙' },
+    { tag: '易混淆字詞', short: '易混淆字' },
+    { tag: '同義反義與字根字首', short: '同反義/字根' },
+    { tag: '片語動詞與慣用語', short: '片語慣用' },
+    { tag: '克漏字', short: '克漏字' },
+    { tag: '閱讀測驗', short: '閱讀測驗' },
   ],
 }
 
@@ -160,24 +143,6 @@ const TAG_TO_ENTRY = new Map<string, TaxonomyEntry>(ALL.map((e) => [e.tag, e]))
 const TAG_TO_SUBJECT = new Map<string, Subject>(
   SUBJECTS.flatMap((s) => TAXONOMY[s].map((e) => [e.tag, s] as [string, Subject])),
 )
-
-/** Ordered tag strings for a subject (pedagogical order). */
-export function orderedTags(subject: Subject): string[] {
-  return TAXONOMY[subject].map((e) => e.tag)
-}
-
-/** Note slug for a tag (resolves `readIn` to the merged note), or null if none. */
-export function tagSlug(tag: string): string | null {
-  const e = TAG_TO_ENTRY.get(tag)
-  return e ? (e.readIn ?? e.slug) : null
-}
-
-/** For a note-claiming tag (`claimed: true`), the note's route `/<slug>`; else null.
- *  用於 /study 趨勢標籤標出「已有筆記」的考點並可點進去。 */
-export function claimedNoteHref(tag: string): string | null {
-  const e = TAG_TO_ENTRY.get(tag)
-  return e?.claimed ? `/${e.slug}` : null
-}
 
 /** Compact chip label for a tag (falls back to the tag itself). */
 export function tagShort(tag: string): string {

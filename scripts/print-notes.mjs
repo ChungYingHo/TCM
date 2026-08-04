@@ -47,8 +47,14 @@ const NOTES = [
   { dir: '生物', href: '/bio-cell-4', file: '4-細胞膜構造與功能' },
   { dir: '生物', href: '/bio-cell-5', file: '5-跨膜運輸與囊泡運輸' },
   { dir: '生物', href: '/bio-cell-6', file: '6-細胞訊號傳遞' },
+  { dir: '國文', href: '/cn-radicals', file: '1-部首總表' },
+  { dir: '國文', href: '/cn-shijing-qiyue', file: '2-詩經七月' },
   { dir: '英文', href: '/readings/r1', file: '1-增補廣讀R1-VOA字彙' },
-  { dir: '快速複習', href: '/bio-cell-summary', file: '生物-細胞一頁速查總表' },
+  { dir: '英文', href: '/readings/r2', file: '2-增補廣讀R2-VOA字彙' },
+  { dir: '快速複習', href: '/chem-summary', file: '化學-速查總表' },
+  { dir: '快速複習', href: '/bio-summary', file: '生物-速查總表' },
+  { dir: '快速複習', href: '/cn-summary', file: '國文-速查總表' },
+  { dir: '快速複習', href: '/en-summary', file: '英文-速查總表' },
 ]
 
 // 參數可為 dir（科目，如 `npm run pdf -- 生物`）或單篇 href／檔名（如 `npm run pdf -- /bio-cell-4`），

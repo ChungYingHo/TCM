@@ -3,13 +3,9 @@ layout: '@/layouts/NoteLayout.astro'
 title: 熱力學
 summary: 自發性、熵與亂度、系統／外界／宇宙熵（第二定律），與 ΔH·ΔS 四種組合對自發性的影響。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import EntropySign from '@/components/notes/EntropySign.svelte'
-
-<NoteStats tag="基礎-熱力學" client:load />
 
 ## 一、自發性
 
@@ -169,7 +165,3 @@ $$
     "T < 500 K 時 ΔS_宇宙>0 自發。T > 500 K 反而不自發。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="基礎-熱力學" limit={10} offset={0} client:load />

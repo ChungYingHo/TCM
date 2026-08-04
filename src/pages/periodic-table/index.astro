@@ -5,8 +5,8 @@ import NotePager from '@/components/notes/NotePager.astro'
 import PeriodicTableTool from '@/components/periodic/PeriodicTableTool.svelte'
 import TeacherHighlights from '@/components/element/TeacherHighlights.astro'
 import ElementQuizPage from '@/components/element/ElementQuizPage.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
 
 export const prerender = false
 ---
@@ -88,13 +88,14 @@ export const prerender = false
     <ExampleQuestion n={4} q="不查週期表，用原子序估算溴（Br，Z=35）的原子量約為？" options={['35', '70', '80', '120']} answer="(C) 80" steps={['Z=35 落在 21–50 段 → AW ≈ 2.3Z。', '2.3 × 35 ≈ <b>80</b>（實際 79.9）。']} client:visible />
   </section>
 
-  <section class="mt-10">
-    <header class="mb-4 flex flex-col gap-1.5">
-      <p class="page-kicker">歷屆</p>
-      <h2 class="section-heading">考古題</h2>
-    </header>
-    <RelatedQuestions tag="基礎-週期表" limit={10} client:load />
-  </section>
+  <Memorize items={[
+    "原子量估算：<ul><li><code>Z 1–20</code> → <code>AW ≈ 2Z</code></li><li><code>Z 21–50</code> → <code>AW ≈ 2.3Z</code></li><li><code>Z 51–83</code> → <code>AW ≈ 2.5Z</code></li></ul>中子／質子比隨 Z 增大。",
+    "A 族族數＝價電子數：ⅠA 1、ⅡA 2…ⅦA 7、0 族 8，<b>He 例外為 2</b>。",
+    "價電子數決定：化性、鍵結數、最高氧化態（ⅥA 最高 +6、ⅦA 最高 +7）。",
+    "同週期向右：<ul><li>原子半徑變小</li><li>游離能、電子親和力、電負度變大</li></ul>因有效核電荷增、電子層數不變。",
+    "半滿全滿較穩：<code>IE₁(N) ＞ IE₁(O)</code>，因 N 的 <code>2p³</code> 半滿。",
+    "組態反推位置：最大 n＝週期，價電子數＝A 族族數。如 <code>[Ne]3s²3p⁴</code> → 第三週期 ⅥA。",
+  ]} client:visible />
 
   <NotePager />
 </Layout>

@@ -1,10 +1,5 @@
 ---
-import Layout from '@/layouts/Layout.astro'
-import StudyTabs from '@/components/study/StudyTabs.svelte'
-
+// 2026-08-04：刷題瀏覽器移除，考古題只剩線上測驗。舊書籤導到那裡。
 export const prerender = false
+return Astro.redirect('/exam')
 ---
-
-<Layout title="題庫 · TCM 題庫">
-  <StudyTabs client:load />
-</Layout>

@@ -3,16 +3,12 @@ layout: '@/layouts/NoteLayout.astro'
 title: 細胞核、內膜系統與能量胞器
 summary: 真核細胞的胞器巡禮：細胞核與核糖體、內膜系統七大成員（ER／高基氏體／溶體／液泡…）的合成‧加工‧運送‧分解生產線，以及粒線體、葉綠體、過氧化體、蛋白酶體等能量／其他胞器。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Figure from '@/components/notes/Figure.astro'
 import Supplement from '@/components/notes/Supplement.astro'
 import Organelle from '@/components/notes/Organelle.svelte'
 import SecretoryPathway from '@/components/notes/SecretoryPathway.svelte'
-
-<NoteStats tag="細胞-細胞核與胞器" client:load />
 
 ## 真核細胞全景：動物 vs 植物
 
@@ -456,7 +452,3 @@ DNA 纏**組蛋白（histone）** 成「**核小體（nucleosome）**」串珠�
 | endosymbiosis | 內共生 | 粒線體／葉綠體源自被吞的細菌 |
 
 </div>
-
-## 考古題
-
-<RelatedQuestions tag="細胞-細胞核與胞器" limit={10} offset={0} client:load />

@@ -3,15 +3,11 @@ layout: '@/layouts/NoteLayout.astro'
 title: 原子光譜與波耳模型
 summary: 連續/線/吸收光譜、焰色試驗、氫原子發射光譜與系列、能量-頻率-波長計算(H 與類氫)、波耳模型能階與半徑。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import FlameTest from '@/components/notes/FlameTest.svelte'
 import EnergyLevels from '@/components/notes/EnergyLevels.svelte'
-
-<NoteStats tag="原子光譜" client:load />
 
 ## 一、連續光譜、線光譜與吸收光譜
 
@@ -221,7 +217,3 @@ $a_0$ 稱**波耳半徑（Bohr radius）**，即氫原子基態（$n=1,\,Z=1$）
     "定態不輻射、Eₙ＝−13.6Z²/n² (負值，n↑越接近 0)、高到低放光，(A)(B)(D) 皆對。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="原子光譜" limit={10} offset={0} client:load />

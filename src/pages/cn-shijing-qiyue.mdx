@@ -3,12 +3,8 @@ layout: '@/layouts/NoteLayout.astro'
 title: 詩經・七月
 summary: 《詩經・豳風・七月》農事詩全解，夏曆與周曆兩套曆法、七月流火正解，加詩經六義、四家詩等常考重點。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
-
-<NoteStats tag="詩經" client:load />
 
 ## 一、出處與背景
 
@@ -289,7 +285,3 @@ import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
     "風雅頌是按內容與用途分的三大類，賦比興才是寫作技巧。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="詩經" limit={10} offset={0} client:load />

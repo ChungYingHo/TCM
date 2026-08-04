@@ -3,15 +3,11 @@ layout: '@/layouts/NoteLayout.astro'
 title: 帶電離子的電子組態與磁光行為
 summary: 陽離子與陰離子電子組態的寫法（A 族、特殊 A 族的惰性電子對效應、假惰性氣體組態、等電子），過渡金屬陽離子與氧化態，順磁與反磁，螢光與磷光。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import GouyBalance from '@/components/notes/GouyBalance.svelte'
 import JablonskiDiagram from '@/components/notes/JablonskiDiagram.svelte'
-
-<NoteStats tag="離子與電子行為" client:load />
 
 ## 一、帶電自由離子的電子組態
 
@@ -260,7 +256,3 @@ import JablonskiDiagram from '@/components/notes/JablonskiDiagram.svelte'
     "故選 (A)。",
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="離子與電子行為" limit={10} offset={0} client:load />

@@ -3,15 +3,11 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學分子表達
 summary: AXₙEₘ 表示法、八隅體電子數公式、VSEPR 形狀與鍵角、σ/π 鍵、極性，以及氫化物／含氧酸／自由基／官能基。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import VseprShapes from '@/components/notes/VseprShapes.svelte'
 import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
-
-<NoteStats tag="基礎-化學鍵" client:load />
 
 ## 一、AXₙEₘ 表示法與找中心原子
 
@@ -265,7 +261,3 @@ $$
     "P–H 的 H 不解離，這類要<b>直接記</b>。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="基礎-化學鍵" limit={10} offset={0} client:load />

@@ -3,14 +3,10 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學上重要的單位
 summary: 莫耳、amu／莫耳質量、unit factor 換算、長度／壓力／溫度／能量／濃度單位、化學常用數學與有效數字。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import SigFig from '@/components/notes/SigFig.svelte'
-
-<NoteStats tag="基礎-單位因次" client:load />
 
 ## 一、莫耳（mol）：兩種算法
 
@@ -342,7 +338,3 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
     "<b>°X ＝ 50</b>。沒看過的溫標，套同一條比例式即可。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="基礎-單位因次" limit={10} offset={0} client:load />

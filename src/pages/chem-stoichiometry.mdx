@@ -3,13 +3,9 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學反應方程式與化學計量
 summary: 平衡方程式（觀察法）、係數比的意義、化學計量總流程、限量試劑、理論產量、產率與原子經濟性，全程 unit factor。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
-
-<NoteStats tag="基礎-化學計量" client:load />
 
 ## 一、平衡化學方程式（觀察法）
 
@@ -406,7 +402,3 @@ $$
     "以 N₂：1 mol × (2 mol NH₃/1 mol N₂) × 17 g/mol ＝ <b>34 g</b>。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="基礎-化學計量" limit={10} offset={0} client:load />

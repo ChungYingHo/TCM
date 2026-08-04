@@ -3,17 +3,14 @@ layout: '@/layouts/NoteLayout.astro'
 title: 化學鍵與分子結構
 summary: 化學鍵、離子性、Lewis 結構、形式電荷、共振、混成、VSEPR、分子偶極與分子間作用力。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import FunctionalGroups from '@/components/notes/FunctionalGroups.svelte'
 import MoleculePolarity from '@/components/notes/MoleculePolarity.svelte'
 import BondPotentialCurve from '@/components/notes/BondPotentialCurve.svelte'
 import AlleneGeometry from '@/components/notes/AlleneGeometry.svelte'
 import VseprGeometryTable from '@/components/notes/VseprGeometryTable.svelte'
-
-<NoteStats tag="基礎-化學鍵" client:load />
 
 ## 一、化學鍵與離子化合物
 
@@ -531,7 +528,27 @@ London 力 &lt; 偶極－偶極力 &lt; 氫鍵 &lt; 離子－離子力
 
 <FunctionalGroups client:visible />
 
-<h2 class="print:hidden">考古題</h2>
-<div class="print:hidden">
-  <RelatedQuestions tag="基礎-化學鍵" limit={10} offset={0} client:load />
-</div>
+<Memorize client:visible items={[
+  "三種鍵先看元素類別：<ul><li>金屬＋非金屬 → 離子鍵</li><li>非金屬＋非金屬 → 共價鍵</li><li>全金屬 → 金屬鍵</li></ul>再檢查例外（<code>BeCl₂</code> 偏共價）。",
+  "同時有兩種鍵：<code>NH₄Cl</code> 的 <code>NH₄⁺–Cl⁻</code> 是離子鍵、<code>N–H</code> 是共價鍵。",
+  "A 族價數：1A +1、2A +2、3A +3、5A −3、6A −2、7A −1、8A 0；4A 不固定。",
+  "B 族價數：由陰離子總電荷反推，<b>名稱裡的羅馬數字就是陽離子價數</b>（氯化鐵 (III) ＝ <code>Fe³⁺</code>）。",
+  "離子半徑：陽離子變小、陰離子變大；正電越多越小、負電越多越大；同族往下越大。",
+  "鍵極性三判法：<ul><li>電負度差 <code>ΔEN</code>（最快，<code>&gt;2</code> 偏離子）</li><li>極化力（比離子化合物）</li><li>偶極矩 <code>μ＝Qr</code> 算離子性</li></ul><code>LiI</code> 是例外（ΔEN≈1.5 仍偏離子）。",
+  "極化力：陽離子越小、正電越多越強；陰離子越大、負電越多越易被極化 → 共價性越高。",
+  "偶極矩基準：電荷完全分離且距離 <code>1 Å</code> 時 <code>μ＝4.8 D</code>。",
+  "孤對電子數（外圍非 H）：<code>E＝[(V<sub>總</sub>±q)−8·#X]÷2</code>。陰離子加電荷、陽離子減；外圍是 H 每個只扣 2。",
+  "含氧酸：<b>只有接在 O 上的 H 可解離</b>。<code>H₃PO₄</code> 三質子、<code>H₃PO₃</code> 二質子、<code>H₃PO₂</code> 一質子。",
+  "八隅例外：<ul><li>不足八隅 <code>BeCl₂ BF₃ CH₃⁺</code></li><li>擴張八隅（第三週期以後）<code>PCl₅ SF₆ XeF₄</code></li><li>奇數電子 <code>NO NO₂</code></li></ul>",
+  "形式電荷：<code>FC＝V−B/2−N</code>。中心原子符合八隅時可用目視法（多一鍵 +1、少一鍵 −1），2A/3A 與不足／擴張八隅不適用。",
+  "形式電荷 vs 氧化數：形式電荷把鍵電子<b>平分</b>，氧化數<b>全給電負度高</b>的一方。兩者都是記帳數字。",
+  "共振：原子位置不變，只移孤對、π 電子與形式電荷。真實分子是<b>共振混成體</b>，不是快速切換。",
+  "共振貢獻度：八隅完整 ＞ 形式電荷分散 ＞ 負電荷放在高 EN 原子。",
+  "平均鍵級：<ul><li><code>O₃ SO₂ NO₂⁻</code> 兩式 → <code>1.5</code></li><li><code>CO₃²⁻ NO₃⁻ SO₃</code> 三式 → <code>1.33</code></li></ul>",
+  "鍵的組成：單鍵 <code>1σ</code>、雙鍵 <code>1σ+1π</code>、三鍵 <code>1σ+2π</code>。",
+  "混成看 <code>X+E</code>：2 sp、3 sp²、4 sp³、5 sp³d、6 sp³d²。",
+  "VSEPR 排斥序：<code>LP–LP ＞ LP–BP ＞ BP–BP</code>。電子幾何含孤對，分子幾何只看原子。三角雙錐的孤對放<b>赤道向</b>。",
+  "分子偶極判斷順序：先畫 Lewis → VSEPR 判形狀 → 看鍵偶極是否因對稱抵銷。",
+  "分子間作用力強弱：<code>London ＜ 偶極－偶極 ＜ 氫鍵 ＜ 離子－離子</code>。氫鍵要 H <b>直接接</b> F／O／N。",
+  "比沸點順序：先比作用力種類 → 再比分子量 → 最後比接觸面積。分子量接近時直鏈＞支鏈。",
+]} />

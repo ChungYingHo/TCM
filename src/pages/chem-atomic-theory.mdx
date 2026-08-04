@@ -3,13 +3,9 @@ layout: '@/layouts/NoteLayout.astro'
 title: 學說與理論：原子模型、化學基本定律與次原子粒子
 summary: 從陰極射線到質譜儀的原子模型演進、五大定律＋坎尼札洛分子說，以及次原子粒子與同位素／同素異形體／異構物的分辨。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
-
-<NoteStats tag="基礎-原子結構" client:load />
 
 ## 一、原子模型的演進（關鍵實驗）
 
@@ -238,7 +234,3 @@ $$
     "帶 2− → 比質子數多 2 個電子 → 電子 = 16 + 2 = <b>18</b>。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="基礎-原子結構" limit={10} offset={0} client:load />

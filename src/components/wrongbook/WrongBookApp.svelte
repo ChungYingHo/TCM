@@ -50,7 +50,7 @@
   {#if !loading && items.length === 0}
     <div class="flex flex-col items-center gap-3 rounded-box border border-dashed border-base-300 p-8 text-center">
       <p class="opacity-70">錯題本還是空的。答錯的題目會自動收進來。</p>
-      <a href="/study" class="btn btn-primary btn-sm">去刷題 <Icon name="arrowRight" class="h-4 w-4" /></a>
+      <a href="/exam" class="btn btn-primary btn-sm">去考一份 <Icon name="arrowRight" class="h-4 w-4" /></a>
     </div>
   {/if}
 

@@ -34,6 +34,8 @@ export type ElementSrsStore = Record<string, ElementSrsEntry> // item id -> card
 export type ClassicSrsStore = ElementSrsStore
 // 胺基酸 SRS reuses the same card shape, keyed by `aa:<code1>`.
 export type AminoAcidSrsStore = ElementSrsStore
+// 必背回想卡 SRS reuses the same card shape, keyed by `<note-slug>-m-<n>`。
+export type NoteCardSrsStore = ElementSrsStore
 
 /** The whole persisted user document (stored in the Vercel DB). */
 export interface SyncState {
@@ -44,6 +46,7 @@ export interface SyncState {
   elementSrs?: ElementSrsStore
   classicSrs?: ClassicSrsStore
   aminoAcidSrs?: AminoAcidSrsStore
+  noteCardSrs?: NoteCardSrsStore
   updatedAt: number
 }
 

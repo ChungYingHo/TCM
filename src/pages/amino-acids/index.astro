@@ -4,8 +4,8 @@ import NoteHeader from '@/components/notes/NoteHeader.astro'
 import NotePager from '@/components/notes/NotePager.astro'
 import { AMINO_ACIDS, AA_CATEGORY_LABEL, type AACategory } from '@/models/aminoAcids'
 import AminoAcidStructure from '@/components/amino/AminoAcidStructure.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import Memorize from '@/components/notes/Memorize.svelte'
 
 export const prerender = false
 
@@ -71,13 +71,15 @@ const byCat = CATS.map((c) => ({ c, items: AMINO_ACIDS.filter((a) => a.category 
     <ExampleQuestion n={4} q="20 種胺基酸中，唯一沒有掌性中心（非掌性）的是？" options={['Gly 甘胺酸', 'Ala 丙胺酸', 'Ser 絲胺酸', 'Cys 半胱胺酸']} answer="(A) Gly 甘胺酸" steps={['Gly 側鏈為 H，α 碳接兩個 H → 無四個不同取代基 → <b>無掌性</b>。', '其餘胺基酸 α 碳接四個不同基團 → 皆有掌性（天然為 L 型）。']} client:visible />
   </section>
 
-  <section class="mt-10">
-    <header class="mb-4 flex flex-col gap-1.5">
-      <p class="page-kicker">歷屆</p>
-      <h2 class="section-heading">考古題</h2>
-    </header>
-    <RelatedQuestions tag="基礎-胺基酸" limit={10} client:load />
-  </section>
+  <Memorize items={[
+    "共通骨架：<code>H₃N⁺–C(–COO⁻)–H</code> 接側鏈 R。生理 pH 為兩性離子，<b>要背的只有 R</b>。",
+    "五大分類：非極性脂肪族、極性不帶電、酸性（帶負電）、鹼性（帶正電）、芳香族。",
+    "酸性側鏈：<b>Asp (D)、Glu (E)</b>，生理 pH 帶負電。",
+    "鹼性側鏈：<b>Lys (K)、Arg (R)、His (H)</b>，生理 pH 帶正電。",
+    "9 個必需胺基酸：<b>His・Ile・Leu・Lys・Met・Phe・Thr・Trp・Val</b>。",
+    "含硫兩個：<ul><li><b>Cys</b> 側鏈 <code>–SH</code>，兩個氧化成雙硫鍵 <code>–S–S–</code></li><li><b>Met</b> 為硫醚 <code>–S–CH₃</code>，<b>不</b>形成雙硫鍵</li></ul>",
+    "唯一非掌性：<b>Gly</b>，側鏈是 H，α 碳接兩個 H。其餘天然皆為 L 型。",
+  ]} client:visible />
 
   <NotePager />
 </Layout>

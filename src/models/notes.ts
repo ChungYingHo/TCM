@@ -217,12 +217,39 @@ export const NOTES: NoteEntry[] = [
     desc: '訊號傳遞三階段、四類受體（GPCR／RTK／離子通道／細胞內）、Gα 亞型分流、cAMP 與 IP₃／DAG／Ca²⁺、磷酸化級聯與訊號終止、細胞凋亡',
   },
   {
-    id: 'bio-cell-summary',
-    href: '/bio-cell-summary',
-    title: '細胞・一頁速查總表',
+    id: 'bio-summary',
+    href: '/bio-summary',
+    title: '生物・速查總表',
     subject: '生物',
-    tags: ['細胞-總表'],
-    desc: '三部曲考點濃縮純表格：原核 vs 真核、胞器速查、內膜系統、細胞骨架、細胞連結、動植物差異、顯微鏡與大小，考前 30 秒掃完',
+    tags: ['總表'],
+    desc: '筆記索引＋細胞學純表格（原核真核／胞器／內膜系統／骨架／連結／動植物／顯微鏡）＋跨篇整合（膜三篇怎麼串、內膜系統接訊號傳遞）',
+    category: '快速複習',
+  },
+  {
+    id: 'chem-summary',
+    href: '/chem-summary',
+    title: '化學・速查總表',
+    subject: '化學',
+    tags: ['總表'],
+    desc: '筆記索引＋公式總表（三種能階模型別搞混、量子論五式同源、Zeff 帶動四趨勢、計量與單位骨架、結構判斷三層順序）',
+    category: '快速複習',
+  },
+  {
+    id: 'cn-summary',
+    href: '/cn-summary',
+    title: '國文・速查總表',
+    subject: '國文',
+    tags: ['總表'],
+    desc: '筆記索引＋查證的權威分工（字義查重編、讀音查簡編）＋字的三層判讀順序與韻文共通框架',
+    category: '快速複習',
+  },
+  {
+    id: 'en-summary',
+    href: '/en-summary',
+    title: '英文・速查總表',
+    subject: '英文',
+    tags: ['總表'],
+    desc: '筆記索引＋三條字彙路線的分工（字首字根／廣讀／考古題）＋遇到生字的拆解順序與讀文章的取捨',
     category: '快速複習',
   },
   {
@@ -266,9 +293,9 @@ export function notesIn(category: NoteCategory, subject: NoteSubject): NoteEntry
   return NOTES.filter((n) => noteCategory(n) === category && n.subject === subject)
 }
 
-export function tagsIn(category: NoteCategory, subject: NoteSubject): string[] {
-  const tags = new Set(notesIn(category, subject).flatMap((n) => n.tags))
-  return [...tags]
+/** 一科一份的速查總表（category＝快速複習）。寫完新筆記要回去更新它——由 notes.test.ts 守。 */
+export function subjectSummary(subject: NoteSubject): NoteEntry | undefined {
+  return NOTES.find((n) => n.subject === subject && noteCategory(n) === '快速複習')
 }
 
 /** 某分類＋科目下，依 group 分組（保 NOTES 順序）；無 group 者歸在 key '' 之下。 */

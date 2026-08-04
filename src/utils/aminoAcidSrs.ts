@@ -1,20 +1,12 @@
-// 胺基酸測驗的間隔複習（Leitner）。與 vocabSrs／elementSrs 共用同一核心
-// (utils/leitner.ts) —— 同一套「到期複習」心智模型。卡片以測驗項目 id 為鍵：
-// `aa:<code1>`（某胺基酸，見 aminoAcidQuiz.ts）。雲端同步於 cloud.ts 的 `aminoAcidSrs`。
+// 胺基酸測驗的間隔複習（Leitner），與 vocabSrs／elementSrs 共用同一核心 (utils/leitner.ts)。
+//
+// 2026-08-05 起**休眠**：胺基酸小遊戲已移除（Aira：差不多熟了，改跟其他化學一起用必背卡排班，
+// 見 /api/note-review）。這個 store 保留只為**不要在下次雲端同步時把既有的複習歷史抹掉**——
+// cloud.ts 仍會 dump/replace 它。沒有任何 UI 會再寫入。
 import type { AminoAcidSrsStore } from '@/models/progress'
 import { createLeitner } from '@/utils/leitner'
 
 const srs = createLeitner('tcm.aminoAcidSrs.v1')
-
-export const learn = srs.learn
-export const grade = srs.grade
-export const dueIds = srs.dueIds
-export const getCard = srs.getCard
-
-/** Count of cards currently due — for the daily-plan summary. */
-export function dueCount(now = Date.now()): number {
-  return srs.dueIds(now).length
-}
 
 /** Raw snapshot / restore — used by the cloud layer. */
 export function dumpAminoAcidSrs(): AminoAcidSrsStore {

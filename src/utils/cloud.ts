@@ -11,6 +11,7 @@ import { dumpVocabSrs, replaceVocabSrs, VOCAB_SRS_EPOCH } from '@/utils/vocabSrs
 import { dumpElementSrs, replaceElementSrs } from '@/utils/elementSrs'
 import { dumpClassicSrs, replaceClassicSrs } from '@/utils/classicSrs'
 import { dumpAminoAcidSrs, replaceAminoAcidSrs } from '@/utils/aminoAcidSrs'
+import { dumpNoteCardSrs, replaceNoteCardSrs } from '@/utils/noteCardSrs'
 
 export function localSnapshot(): SyncState {
   return {
@@ -21,6 +22,7 @@ export function localSnapshot(): SyncState {
     elementSrs: dumpElementSrs(),
     classicSrs: dumpClassicSrs(),
     aminoAcidSrs: dumpAminoAcidSrs(),
+    noteCardSrs: dumpNoteCardSrs(),
     updatedAt: Date.now(),
   }
 }
@@ -33,6 +35,7 @@ function applyServer(s: SyncState): void {
   replaceElementSrs(s.elementSrs ?? {})
   replaceClassicSrs(s.classicSrs ?? {})
   replaceAminoAcidSrs(s.aminoAcidSrs ?? {})
+  replaceNoteCardSrs(s.noteCardSrs ?? {})
   if (typeof window !== 'undefined') window.dispatchEvent(new Event('tcm:cloudloaded'))
 }
 

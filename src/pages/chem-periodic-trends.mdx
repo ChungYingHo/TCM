@@ -3,17 +3,13 @@ layout: '@/layouts/NoteLayout.astro'
 title: 週期性趨勢：原子半徑、電子親和力與電負度
 summary: 原子半徑（A 族與過渡金屬、鑭系收縮、波耳半徑）、電子親和力（正負符號與三個例外）、離子半徑的四條結論、電負度的定義與趨勢，最後把有效核電荷、游離能、電子親和力、電負度四個量與週期性綜合考題一起複習。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import PeriodicTrends from '@/components/notes/PeriodicTrends.svelte'
 import TransitionRadius from '@/components/notes/TransitionRadius.svelte'
 import EaTrend from '@/components/notes/EaTrend.svelte'
 import TransitionEneg from '@/components/notes/TransitionEneg.svelte'
-
-<NoteStats tag="週期趨勢" client:load />
 
 ## 一、電子親和力 EA
 
@@ -274,7 +270,3 @@ B 族過渡金屬同週期大致跟主族一樣往右增。同族往下前 3 族
     "同族往下電負度變小 (C) 錯。游離能是拔電子、電子親和力是加電子，方向相反 (D) 錯。",
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="週期趨勢" limit={10} offset={0} client:load />

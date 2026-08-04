@@ -3,18 +3,14 @@ layout: '@/layouts/NoteLayout.astro'
 title: 光電效應與量子論：黑體輻射、電磁輻射模型、物質波
 summary: 黑體輻射(只看溫度)與能量量子化 → 電磁輻射模型(波動／光電效應粒子／結論) → 德布羅意物質波 → 測不準。表格＋帶單位的 unit factor＋互動圖。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import BlackbodyCurve from '@/components/notes/BlackbodyCurve.svelte'
 import WaveBasics from '@/components/notes/WaveBasics.svelte'
 import PhotoelectricPlot from '@/components/notes/PhotoelectricPlot.svelte'
 import ColorWheel from '@/components/notes/ColorWheel.svelte'
 import EmSpectrum from '@/components/notes/EmSpectrum.svelte'
-
-<NoteStats tag="量子力學" client:load />
 
 ## 一、普朗克黑體輻射
 
@@ -337,7 +333,3 @@ $$
     "頻率越大、光子能量越大 → (C) 可。波長更長＝頻率更低 → (D) 更不行。"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="量子力學" limit={10} offset={0} client:load />

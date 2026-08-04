@@ -3,10 +3,8 @@ layout: '@/layouts/NoteLayout.astro'
 title: 原子軌域能階與電子組態
 summary: 單電子與多電子原子的軌域能階（n 與 n+l 規則、穿透遮蔽），填電子三大規則，電中性原子與過渡金屬（Cr、Cu 例外）電子組態的書寫。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import OrbitalEnergyLevels from '@/components/notes/OrbitalEnergyLevels.svelte'
 import RadialProbability from '@/components/notes/RadialProbability.svelte'
@@ -15,8 +13,6 @@ import OrbitalEnergyVsZ from '@/components/notes/OrbitalEnergyVsZ.svelte'
 import OrbitalShape3dVs4s from '@/components/notes/OrbitalShape3dVs4s.svelte'
 import OrbitalDiagram from '@/components/notes/OrbitalDiagram.svelte'
 import ConfigDecoder from '@/components/notes/ConfigDecoder.svelte'
-
-<NoteStats tag="電子組態" client:load />
 
 ## 一、單電子與多電子原子的軌域能階
 
@@ -301,7 +297,3 @@ $$2p^6 + 3p^6 + 4p^6 = 6 + 6 + 6 = 18\ \text{個}$$
     "故選 (A)。",
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="電子組態" limit={10} offset={0} client:load />

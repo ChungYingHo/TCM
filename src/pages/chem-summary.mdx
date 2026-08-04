@@ -1,0 +1,105 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 化學・速查總表
+summary: 化學科的跨篇速查：全部筆記索引、公式總表（量子論五式同源、週期趨勢四量、計量骨架）、常數與單位換算，以及只有橫跨多篇才看得出來的整合（能階三種模型、Zeff 貫穿四個量）。
+---
+
+## 筆記索引
+
+| 篇 | 章 | 一句話 |
+|---|---|---|
+| [元素週期表](/periodic-table) | 工具 | 必背速查、原子量估算、互動週期表熱圖 |
+| [20 種胺基酸](/amino-acids) | 工具 | 五大分類、側鏈結構、必需與簡寫 |
+| [學說與理論](/chem-atomic-theory) | 基礎 | 原子模型演進、五大定律、同位素／同素異形體 |
+| [化學上重要的單位](/chem-units) | 基礎 | 莫耳與 amu、unit factor、壓力溫度能量濃度、有效數字 |
+| [化學分子表達](/chem-molecules) | 基礎 | AXₙEₘ 電子數公式、VSEPR 形狀鍵角、σ／π、極性 |
+| [化學反應方程式與化學計量](/chem-stoichiometry) | 基礎 | 平衡、係數比、計量骨架、限量試劑、產率 |
+| [熱力學](/chem-thermo) | 基礎 | 自發性、熵、宇宙熵第二定律、ΔH·ΔS 四組合 |
+| [化學鍵與分子結構](/chem-chemical-bonding) | 化學鍵 | 離子性、Lewis、形式電荷、共振、混成、IMF |
+| [光電效應與量子論](/chem-quantum) | 量子論 | 黑體輻射、E＝hν、光電效應、德布羅意、測不準 |
+| [原子光譜與波耳模型](/chem-atomic-spectra) | 量子論 | 三種光譜、焰色、五大系列、波耳能階與半徑 |
+| [量子力學與原子軌域](/chem-orbitals) | 量子論 | 盒中質點、波函數、軌域形狀節點、四量子數 |
+| [原子軌域能階與電子組態](/chem-electron-config) | 量子論 | n+l 規則、三大規則、填入順序、Cr/Cu 例外 |
+| [帶電離子的電子組態與磁光行為](/chem-ions-magnetism) | 量子論 | 離子組態、惰性電子對、等電子、順磁反磁、螢光磷光 |
+| [週期表與週期性](/chem-periodicity) | 量子論 | 週期表結構、Zeff、游離能與 Be→B／N→O 例外 |
+| [週期性趨勢](/chem-periodic-trends) | 量子論 | 原子半徑、電子親和力、離子半徑、電負度 |
+
+## 三種「能階」模型別搞混
+
+三篇各給一條能階公式，長得像但**方向相反**，混用是最常見的失分點：
+
+| 模型 | 公式 | 隨 n 變化 | 出處 |
+|---|---|---|---|
+| 一維盒中質點 | $E_n = \dfrac{n^2h^2}{8mL^2}$ | $\propto n^2$，**往上越開** | [軌域](/chem-orbitals) |
+| 氫原子（波耳） | $E_n = -13.6\dfrac{Z^2}{n^2}\ \text{eV}$ | $\propto -1/n^2$，**往 0 收斂** | [原子光譜](/chem-atomic-spectra) |
+| 多電子原子 | 無單一公式，用 **n+l 規則** | n+l 大則高；相同則 n 大者高 | [電子組態](/chem-electron-config) |
+
+> 判斷用哪個：問「箱子／井」用盒中質點；問**氫或類氫離子**（單電子）用波耳；問**多電子原子填電子順序**用 n+l。
+
+## 量子論五式同源
+
+[光電效應](/chem-quantum) 與 [原子光譜](/chem-atomic-spectra) 的公式其實是同一件事換單位，核心只有 $(1/m^2 - 1/n^2)\cdot Z^2$：
+
+| 要算什麼 | 公式 | 單位 |
+|---|---|---|
+| 一個光子的能量 | $E = h\nu = \dfrac{hc}{\lambda}$ | J |
+| 考場速算 | $E(\text{eV}) = \dfrac{1240}{\lambda(\text{nm})}$ | eV |
+| 躍遷能量差 | $\Delta E = 13.6\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)$ | eV |
+| 躍遷頻率 | $\nu = 3.3\times10^{15}\,Z^2\left(\dfrac{1}{m^2}-\dfrac{1}{n^2}\right)$ | Hz |
+| 躍遷波長 | $\lambda = \dfrac{90}{Z^2\left(\frac{1}{m^2}-\frac{1}{n^2}\right)}$ | nm |
+| 物質波 | $\lambda = \dfrac{h}{mv} = \dfrac{h}{p}$ | m |
+
+**常數**：$h = 6.626\times10^{-34}$ J·s｜$c = 3.00\times10^8$ m/s｜$1\ \text{eV} = 1.602\times10^{-19}$ J｜$a_0 = 0.529$ Å｜$N_A = 6.022\times10^{23}$ /mol
+
+## Zeff 一個量帶動四個趨勢
+
+[週期表與週期性](/chem-periodicity) 定義有效核電荷 $Z_{\text{eff}} = Z - \sigma$，[週期性趨勢](/chem-periodic-trends) 的四個量全部由它決定——**背一條就好，不必背四張趨勢圖**：
+
+| 量 | 與 Zeff 的關係 | 同週期往右 | 同族往下 |
+|---|---|---|---|
+| 原子半徑 | Zeff 大 → 拉得緊 → **小** | 變小 | 變大 |
+| 游離能 IE | Zeff 大 → 難拔 → **大** | 變大 | 變小 |
+| 電子親和力 EA | Zeff 大 → 愛收 → **大** | 變大 | 變小 |
+| 電負度 EN | Zeff 大 → 搶得贏 → **大** | 變大 | 變小 |
+
+> 一句話：**Zeff 大、半徑小 → 其餘三個都大。** 例外只有四個要單獨記：Be→B、N→O（[週期性](/chem-periodicity)）、EA 的 F＜Cl、N 半滿難加（[週期趨勢](/chem-periodic-trends)）。
+
+## 計量與單位骨架
+
+任何計算題都走同一條路（[化學計量](/chem-stoichiometry)），每個箭頭是一個 unit factor（[單位](/chem-units)）：
+
+$$
+\underbrace{\text{已知量}}_{\text{g／個／L}}
+\xrightarrow[\div M,\ \div N_A,\ \div 22.4]{}
+\text{mol}
+\xrightarrow[\times \frac{\text{目標係數}}{\text{已知係數}}]{}
+\text{mol}
+\xrightarrow[\times M,\ \times N_A]{}
+\text{目標量}
+$$
+
+| 常用換算 | 關係 |
+|---|---|
+| 質量 ↔ mol | $\div M$（g/mol） |
+| 粒子數 ↔ mol | $\div N_A$ |
+| 氣體體積 ↔ mol | STP $\div 22.4$ L/mol |
+| 濃度 ↔ mol | $\times V(\text{L})$ |
+| 溫度 | $K = ^\circ C + 273.15$（**加法偏移，不可當乘法因子**） |
+| 壓力 | $1\ \text{atm} = 760\ \text{mmHg} = 101325\ \text{Pa}$ |
+| 能量 | $1\ \text{cal} = 4.184\ \text{J}$ |
+
+## 結構判斷的三層順序
+
+[分子表達](/chem-molecules) 與 [化學鍵](/chem-chemical-bonding) 講的是同一套流程的前後段：
+
+1. **算電子**：$E = \dfrac{(V_{\text{總}} \pm q) - 8\cdot\#X}{2}$（外圍是 H 改扣 2）→ 得孤對數 E。
+2. **判幾何**：立體數 $\text{SN} = X + E$ → 電子幾何；扣掉孤對 → 分子幾何（VSEPR）。
+3. **判性質**：形狀對稱且外圍原子全同 → 非極性；否則極性 → 決定分子間作用力 → 決定沸點。
+
+| SN | 電子幾何 | 混成 |
+|---:|---|---|
+| 2 | 直線 | sp |
+| 3 | 三角平面 | sp² |
+| 4 | 四面體 | sp³ |
+| 5 | 三角雙錐 | sp³d |
+| 6 | 八面體 | sp³d² |

@@ -3,17 +3,13 @@ layout: '@/layouts/NoteLayout.astro'
 title: 週期表與週期性
 summary: 週期表的結構與元素分類、各週期填入的軌域，金屬與非金屬性、有效核電荷，以及游離能的定義、逐步游離能與週期趨勢（含 Be→B、N→O 兩個例外）。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
 import MiniPeriodicTable from '@/components/notes/MiniPeriodicTable.svelte'
 import FirstIEChart from '@/components/notes/FirstIEChart.svelte'
 import IEDecisionFlow from '@/components/notes/IEDecisionFlow.svelte'
 import IonizationLadder from '@/components/notes/IonizationLadder.svelte'
-
-<NoteStats tag="週期性" client:load />
 
 ## 一、週期表的結構
 
@@ -233,7 +229,3 @@ $$X(g) \to X^+(g) + e^-$$
     "故選 (A)，例如 Si。",
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="週期性" limit={10} offset={0} client:load />

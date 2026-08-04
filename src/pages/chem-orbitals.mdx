@@ -3,16 +3,12 @@ layout: '@/layouts/NoteLayout.astro'
 title: 量子力學與原子軌域
 summary: 一維/三維盒中質點與零點能量、氫原子波函數與軌域、s/p/d/f 形狀與節點、徑向分布函數、四個量子數與 Pauli。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import ParticleInBox from '@/components/notes/ParticleInBox.svelte'
 import OrbitalShapes from '@/components/notes/OrbitalShapes.svelte'
 import RadialDistribution from '@/components/notes/RadialDistribution.svelte'
 import QuantumNumbers from '@/components/notes/QuantumNumbers.svelte'
-
-<NoteStats tag="原子軌域" client:load />
 
 ## 一、盒中質點
 
@@ -243,7 +239,3 @@ $$
     "(5 軌域/10 電子是只看 3d 次殼層 2ℓ+1＝5 的陷阱。)"
   ]}
 />
-
-## 考古題
-
-<RelatedQuestions tag="原子軌域" limit={10} offset={0} client:load />

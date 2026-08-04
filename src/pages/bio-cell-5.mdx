@@ -3,18 +3,14 @@ layout: '@/layouts/NoteLayout.astro'
 title: 跨膜運輸與囊泡運輸
 summary: 擴散與被動運輸、滲透與張力三態、促進性擴散與通道／攜載蛋白、鈉鉀幫浦與產電位幫浦、膜電位與電化學梯度、共運輸（次級主動運輸）、胞吞與胞吐。
 ---
-import NoteStats from '@/components/notes/NoteStats.svelte'
 import Memorize from '@/components/notes/Memorize.svelte'
 import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
 import WorkedExample from '@/components/notes/WorkedExample.astro'
-import RelatedQuestions from '@/components/notes/RelatedQuestions.svelte'
 import Supplement from '@/components/notes/Supplement.astro'
 import Figure from '@/components/notes/Figure.astro'
 import Tonicity from '@/components/notes/Tonicity.svelte'
 import NaKPump from '@/components/notes/NaKPump.svelte'
 import TransportType from '@/components/notes/TransportType.svelte'
-
-<NoteStats tag="細胞-物質運輸" client:load />
 
 ## 一、擴散與被動運輸
 
@@ -200,8 +196,6 @@ import TransportType from '@/components/notes/TransportType.svelte'
 水在這裡走的仍然是滲透，ADH 改變的是「開多少門」，不是把水硬推回去。
 
 回收的量非常可觀：**若腎臟完全不回收水，一個人每天將排出約 180 公升的尿**。實際尿量只有一、兩公升，等於濾出的水絕大部分都被收了回去。
-
-
 
 </Supplement>
 
@@ -584,7 +578,3 @@ Ca²⁺ 在課本裡到處出現，但它不是鈉鉀幫浦搬的離子，兩者
 | caveolae | 小窩 | 富含膽固醇與 caveolin 的膜內凹構造 |
 
 </div>
-
-## 考古題
-
-<RelatedQuestions tag="細胞-物質運輸" limit={10} offset={0} client:load />
