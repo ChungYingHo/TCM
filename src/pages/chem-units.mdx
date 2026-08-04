@@ -40,7 +40,12 @@ $$
 **關鍵橋接：$X$ amu ＝ $X$ g/mol（數值相同）**。以 O（16.00 amu）為例，$N_A$ 在分子分母約掉：
 
 $$
-\underbrace{16\ \text{amu}}_{\text{1 個 O}} \times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23}\ \text{amu}}}_{\text{amu→g}} \times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A} = 16\ \text{g/mol}
+\begin{aligned}
+&\underbrace{16\ \text{amu}}_{\text{1 個 O}}
+\times \underbrace{\frac{1\ \text{g}}{6.022\times10^{23}\ \text{amu}}}_{\text{amu→g}}\\[4pt]
+&\qquad\times \underbrace{\frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}}_{N_A}
+= 16\ \text{g/mol}
+\end{aligned}
 $$
 
 ---
@@ -69,7 +74,11 @@ $$
 多步驟串連（質量 → mol → 個）：
 
 $$
-9\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}} \times \frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}} = 3.01\times10^{23}\ \text{個}
+\begin{aligned}
+&9\ \text{g H}_2\text{O} \times \frac{1\ \text{mol}}{18\ \text{g}}
+\times \frac{6.022\times10^{23}\ \text{個}}{1\ \text{mol}}\\[4pt]
+&\qquad = 3.01\times10^{23}\ \text{個}
+\end{aligned}
 $$
 
 ---
@@ -101,7 +110,10 @@ $$
 **兩個計算公式**：
 
 $$
-P = \frac{F}{A}\ (\text{力／面積}) \qquad P = \rho g h\ (\text{流體靜壓、氣壓計、U 形管})
+\begin{gathered}
+P = \frac{F}{A}\quad(\text{力／面積})\\[4pt]
+P = \rho g h\quad(\text{流體靜壓、氣壓計、U 形管})
+\end{gathered}
 $$
 
 ---
@@ -150,7 +162,11 @@ $$
 **%(w/w) ＋ 密度 → $M$**（鎖定 1 L 溶液，四個 unit factor 串起來）：
 
 $$
-1\ \text{L} \times \frac{1000\ \text{mL}}{1\ \text{L}} \times \frac{d\ \text{g}}{1\ \text{mL}} \times \frac{w\%}{100} \times \frac{1\ \text{mol}}{M_w\ \text{g}} = \frac{10\,d\,w}{M_w}\ \text{mol}
+\begin{aligned}
+&1\ \text{L} \times \frac{1000\ \text{mL}}{1\ \text{L}} \times \frac{d\ \text{g}}{1\ \text{mL}}\\[4pt]
+&\qquad\times \frac{w\%}{100} \times \frac{1\ \text{mol}}{M_w\ \text{g}}
+= \frac{10\,d\,w}{M_w}\ \text{mol}
+\end{aligned}
 $$
 
 所以 $M = \dfrac{10\,d\,w}{M_w}$（$d$＝密度 g/mL、$w$＝重量百分比、$M_w$＝分子量）。
@@ -216,17 +232,17 @@ $$ y = mx + b \quad(m=\text{斜率}、b=\text{截距}) $$
 
 <Memorize client:visible
   items={[
-    "unit factor：<code>已知量 × (目標單位 / 已知單位)</code>。分子分母都寫上單位，上下約掉，最後只剩目標單位。",
-    "mol 兩種算法：由數量算用 <code>n＝N / N<sub>A</sub></code>，由質量算用 <code>n＝m / M</code>。M 是原子量 AW 或分子量 MW。",
-    "amu 橋接：<code>1 amu＝1 g ÷ N<sub>A</sub></code>，所以 <code>X amu＝X g/mol</code> 兩邊數值相同。關鍵是 N<sub>A</sub> 會在 amu→g 和 mol 這兩步約掉。",
-    "壓力換算：<code>1 atm＝760 mmHg＝760 torr</code>，也等於 <code>101325 Pa</code>。單獨換算時 <code>1 torr ≈ 133.3 Pa</code>。",
-    "溫度換算：<code>K＝°C＋273</code>。其他溫標不要背公式，用「冰點到沸點的比例相同」現推，遇到沒看過的溫標也解得出來。",
-    "能量換算：<code>1 cal＝4.184 J</code>、<code>1 eV＝1.602×10⁻¹⁹ J</code>、<code>1 L·atm＝101.325 J</code>。",
-    "長度與體積：<code>1 Å＝100 pm＝10⁻¹⁰ m</code>、<code>1 L＝1000 mL＝1 dm³</code>。",
-    "重量%換莫耳濃度：鎖定 1 L 溶液去推，得 <code>M＝10dw / M<sub>w</sub></code>。d 是密度、w 是重量百分比、M<sub>w</sub> 是分子量。",
-    "對數換底：<code>ln x＝2.303 log x</code>。常用值 <code>log 2＝0.301</code>、<code>log 3＝0.477</code>。",
-    "有效數字：加減看小數位數，乘除看有效位數，兩者都取最少的那個。",
-    "最常漏的一步：算莫耳濃度之前，體積要先換成公升。"
+    "unit factor：<code>已知量 × (目標單位 / 已知單位)</code>",
+    "mol 兩種算法：<ul><li>由數量　<code>n＝N / N<sub>A</sub></code></li><li>由質量　<code>n＝m / M</code>（M＝原子量 AW 或分子量 MW）</li></ul>",
+    "amu 橋接：<ul><li><code>1 amu＝1 g ÷ N<sub>A</sub></code></li><li><code>X amu＝X g/mol</code>（數值相同）</li></ul>",
+    "壓力：<ul><li><code>1 atm＝760 mmHg＝760 torr</code></li><li><code>1 atm＝101325 Pa</code></li><li><code>1 torr ≈ 133.3 Pa</code></li></ul>",
+    "溫度：<ul><li><code>K＝°C＋273</code></li><li>其他溫標用「冰點到沸點比例相同」現推</li></ul>",
+    "能量：<ul><li><code>1 cal＝4.184 J</code></li><li><code>1 eV＝1.602×10⁻¹⁹ J</code></li><li><code>1 L·atm＝101.325 J</code></li></ul>",
+    "長度體積：<ul><li><code>1 Å＝100 pm＝10⁻¹⁰ m</code></li><li><code>1 L＝1000 mL＝1 dm³</code></li></ul>",
+    "重量%換 M：<code>M＝10dw / M<sub>w</sub></code>（d 密度、w 重量%、M<sub>w</sub> 分子量）",
+    "對數：<ul><li><code>ln x＝2.303 log x</code></li><li><code>log 2＝0.301</code>、<code>log 3＝0.477</code></li></ul>",
+    "有效數字：加減看小數位、乘除看有效位，取最少者",
+    "最易漏：算莫耳濃度前，體積先換成 L"
   ]}
 />
 

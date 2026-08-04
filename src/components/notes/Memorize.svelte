@@ -71,6 +71,28 @@
       overflow-x: visible;
     }
   }
+
+  /* 速查卡以條列為主：一項一行，比一整段話好掃 */
+  .memorize :global(ul) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .memorize :global(li) {
+    position: relative;
+    padding-left: 0.85em;
+    margin-top: 0.3em;
+  }
+  .memorize :global(li:first-child) {
+    margin-top: 0.15em;
+  }
+  .memorize :global(li)::before {
+    content: '·';
+    position: absolute;
+    left: 0.1em;
+    font-weight: 700;
+    opacity: 0.45;
+  }
   .memorize :global(code) :global(sub) {
     font-family: inherit;
   }

@@ -352,6 +352,18 @@ a.card:hover, .card-hover:hover {
 }
 .prose .katex-display .katex { color: var(--color-base-content); }
 
+/* 手機：display 公式不再放大、內距收窄，換回被邊框吃掉的橫向空間，
+   長式子才不會動不動就要橫捲（Aira 2026-08-04）。 */
+@media (max-width: 640px) {
+  .prose .katex-display {
+    margin: 0.9rem 0;
+    padding: 0.7rem 0.75rem;
+  }
+  .prose .katex-display > .katex {
+    font-size: 1em;
+  }
+}
+
 /* ── 筆記尾部必背卡（Memorize）不在 .prose 內，但仍需 KaTeX 公式著色 ── */
 .note-summary-card .katex {
   font-size: 1.05em;

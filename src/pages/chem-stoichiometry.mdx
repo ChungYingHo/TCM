@@ -31,7 +31,11 @@ import WorkedExample from '@/components/notes/WorkedExample.astro'
 **題目**　下式完全平衡後，反應物與生成物的**係數總和**為多少？
 
 $$
-\ce{Na3PO4 + (NH4)2MoO4 + HNO3 -> (NH4)3PO4.12MoO3 + NH4NO3 + NaNO3 + H2O}
+\begin{aligned}
+&\ce{Na3PO4 + (NH4)2MoO4 + HNO3}\\[2pt]
+&\quad \ce{-> (NH4)3PO4.12MoO3 + NH4NO3}\\[2pt]
+&\qquad\ \ce{+ NaNO3 + H2O}
+\end{aligned}
 $$
 
 (A) 72　(B) 73　(C) 74　(D) 75
@@ -51,7 +55,11 @@ $$
 ⑥ **H、O** 收尾 → $\ce{H2O}=12$（回頭驗 H、O 皆守恆）。
 
 $$
-\ce{Na3PO4 + 12(NH4)2MoO4 + 24HNO3 -> (NH4)3PO4.12MoO3 + 21NH4NO3 + 3NaNO3 + 12H2O}
+\begin{aligned}
+&\ce{Na3PO4 + 12(NH4)2MoO4 + 24HNO3}\\[2pt]
+&\; \ce{-> (NH4)3PO4.12MoO3 + 21NH4NO3}\\[2pt]
+&\;\; \ce{+ 3NaNO3 + 12H2O}
+\end{aligned}
 $$
 
 係數總和 $=1+12+24+1+21+3+12=\mathbf{74}$ → (C)。
@@ -80,13 +88,15 @@ $$
 任何計量題都走這條路：**先把已知換成 mol，用係數比跨到目標物，再換成要的單位**。每個箭頭都是一個 unit factor：
 
 $$
-\underbrace{\text{已知量}}_{\text{g／個／L／濃度}}
+\begin{aligned}
+&\underbrace{\text{已知量}}_{\text{g／個／L／濃度}}
 \xrightarrow[\div M,\ \div N_A,\ \div 22.4\dots]{\text{公式轉換}}
-\underbrace{\text{mol}_\text{已知}}_{}
-\xrightarrow[\times \frac{\text{目標係數}}{\text{已知係數}}]{\text{係數比}}
+\underbrace{\text{mol}_\text{已知}}_{}\\[8pt]
+&\qquad\xrightarrow[\times \frac{\text{目標係數}}{\text{已知係數}}]{\text{係數比}}
 \underbrace{\text{mol}_\text{目標}}_{}
 \xrightarrow[\times M,\ \times N_A\dots]{\text{公式轉換}}
 \underbrace{\text{目標量}}_{}
+\end{aligned}
 $$
 
 > 例：$\ce{CH4 + 2O2 -> CO2 + 2H2O}$，完全燃燒 8 g $\ce{CH4}$（M＝16）需多少克 $\ce{O2}$（M＝32）？
@@ -104,13 +114,19 @@ $$
 關鍵：每 1 mol 化合物由 $\ce{MS}\to\ce{MO}$，等於「拿掉 1 個 S、換上 1 個 O」，質量**減少** $32.1-16.0=16.1$ g。把總減少質量用 unit factor 換成莫耳：
 
 $$
-(1.164-0.972)\ \text{g} \times \frac{1\ \text{mol}}{(32.1-16.0)\ \text{g}} = \frac{0.192}{16.1} = 0.0119\ \text{mol}
+\begin{aligned}
+&(1.164-0.972)\ \text{g} \times \frac{1\ \text{mol}}{(32.1-16.0)\ \text{g}}\\[4pt]
+&\qquad = \frac{0.192}{16.1} = 0.0119\ \text{mol}
+\end{aligned}
 $$
 
 這就是化合物（也＝金屬）的莫耳數。再由氧化物質量回推莫耳質量、扣掉氧：
 
 $$
-M_{\ce{M}} = \frac{0.972\ \text{g}}{0.0119\ \text{mol}} - 16.0\ \text{g/mol} = 81.5 - 16.0 = \mathbf{65.5}\ \text{g/mol}
+\begin{aligned}
+M_{\ce{M}} &= \frac{0.972\ \text{g}}{0.0119\ \text{mol}} - 16.0\ \text{g/mol}\\[4pt]
+&= 81.5 - 16.0 = \mathbf{65.5}\ \text{g/mol}
+\end{aligned}
 $$
 
 （用硫化物驗算：$1.164/0.0119-32.1=65.5$ 一致，$\approx 65.4$ 即鋅 $\ce{Zn}$）→ (B)。
@@ -130,7 +146,10 @@ $$
 3. **比值最小**者 → **限量試劑**。
 
 $$
-\text{比較每個反應物的}\ \frac{n\ (\text{mol})}{\text{係數}}\ ，\ \text{最小者為限量試劑}
+\begin{gathered}
+\text{比較每個反應物的}\ \frac{n\ (\text{mol})}{\text{係數}}\\[4pt]
+\text{最小者為限量試劑}
+\end{gathered}
 $$
 
 > **不能只比 mol、更不能只比質量**，一定要先除以係數。
@@ -153,7 +172,10 @@ $0.33<0.86$ → **$\ce{HCl}$ 限量**（$\ce{MnO2}$ 過量、用不完）。
 ② 一律以限量試劑 $\ce{HCl}$ 往下算 $\ce{Cl2}$（$\ce{Cl2}$ 式量 $=71.0$）：
 
 $$
-48.2\ \text{g HCl} \times \frac{1\ \text{mol HCl}}{36.5\ \text{g}} \times \frac{1\ \text{mol Cl2}}{4\ \text{mol HCl}} \times \frac{71.0\ \text{g}}{1\ \text{mol Cl2}} \approx 23.4\ \text{g}
+\begin{aligned}
+&48.2\ \text{g HCl} \times \frac{1\ \text{mol HCl}}{36.5\ \text{g}} \times \frac{1\ \text{mol Cl2}}{4\ \text{mol HCl}}\\[4pt]
+&\qquad \times \frac{71.0\ \text{g}}{1\ \text{mol Cl2}} \approx 23.4\ \text{g}
+\end{aligned}
 $$
 
 → (B)。（若誤把 $\ce{MnO2}$ 當限量、或忘了 $\ce{HCl}$ 係數是 4，就會落入其他選項。）
@@ -177,7 +199,10 @@ $$
 這錠 $\ce{CaCO3}$ 能中和的 HCl（用係數比 $1\ \ce{CaCO3}:2\ \ce{HCl}$）：
 
 $$
-0.500\ \text{g} \times \frac{1\ \text{mol CaCO3}}{100\ \text{g}} \times \frac{2\ \text{mol HCl}}{1\ \text{mol CaCO3}} = 0.010\ \text{mol HCl}
+\begin{aligned}
+&0.500\ \text{g} \times \frac{1\ \text{mol CaCO3}}{100\ \text{g}} \times \frac{2\ \text{mol HCl}}{1\ \text{mol CaCO3}}\\[4pt]
+&\qquad = 0.010\ \text{mol HCl}
+\end{aligned}
 $$
 
 $0.010 < 0.015$ → 只能中和 $0.010$ mol，仍剩 $0.005$ mol 胃酸 → **鹼量不足**，選 (B)。
@@ -207,7 +232,10 @@ $$
 **題目**　某係數未平衡的反應式如下。將 120 kg $\ce{FeCr2O4}$、288 kg $\ce{K2CO3}$ 與 75 kg $\ce{O2}$ 置入容器反應，實際得 150 kg $\ce{K2CrO4}$。（原子量：Fe=55.85、Cr=52.00、O=16.00、C=12.01、K=39.10）下列何者正確？
 
 $$
-\ce{FeCr2O4 + K2CO3 + O2 -> K2CrO4 + Fe2O3 + CO2}
+\begin{aligned}
+&\ce{FeCr2O4 + K2CO3 + O2}\\[2pt]
+&\quad \ce{-> K2CrO4 + Fe2O3 + CO2}
+\end{aligned}
 $$
 
 (A) $\ce{FeCr2O4}$ 為限量試劑　(B) 理論產量為 253 kg $\ce{K2CrO4}$　(C) 實際產率為 82%　(D) $\ce{O2}$ 為催化劑
@@ -215,18 +243,28 @@ $$
 **解** ① 先配平（Fe、Cr、K、C 各只出現一次先平，O 收尾，整條 ×4 去分數）：
 
 $$
-\ce{4FeCr2O4 + 8K2CO3 + 7O2 -> 8K2CrO4 + 2Fe2O3 + 8CO2}
+\begin{aligned}
+&\ce{4FeCr2O4 + 8K2CO3 + 7O2}\\[2pt]
+&\quad \ce{-> 8K2CrO4 + 2Fe2O3 + 8CO2}
+\end{aligned}
 $$
 
 ② 三種反應物**都換 mol、再各除自己的係數**，比值最小者為限量試劑（$\ce{FeCr2O4}$ 式量 $=55.85+2\times52.00+4\times16.00=223.85$）：
 
 $$
-\ce{FeCr2O4}:\ 120\ \text{kg} \times \frac{1000\ \text{g}}{1\ \text{kg}} \times \frac{1\ \text{mol}}{223.85\ \text{g}} = 536\ \text{mol} \;\Rightarrow\; \frac{536}{4} = \mathbf{134}
+\begin{aligned}
+\ce{FeCr2O4}&:\ 120\ \text{kg} \times \frac{1000\ \text{g}}{1\ \text{kg}} \times \frac{1\ \text{mol}}{223.85\ \text{g}}\\[4pt]
+&= 536\ \text{mol} \;\Rightarrow\; \frac{536}{4} = \mathbf{134}
+\end{aligned}
 $$
 
 $$
-\ce{K2CO3}:\ \frac{288{,}000\ \text{g}}{138.21\ \text{g/mol}} = 2084\ \text{mol} \Rightarrow \frac{2084}{8} = 260 \qquad
-\ce{O2}:\ \frac{75{,}000\ \text{g}}{32.00\ \text{g/mol}} = 2344\ \text{mol} \Rightarrow \frac{2344}{7} = 335
+\begin{aligned}
+\ce{K2CO3}&:\ \frac{288{,}000\ \text{g}}{138.21\ \text{g/mol}} = 2084\ \text{mol}\\[2pt]
+&\Rightarrow \frac{2084}{8} = 260\\[6pt]
+\ce{O2}&:\ \frac{75{,}000\ \text{g}}{32.00\ \text{g/mol}} = 2344\ \text{mol}\\[2pt]
+&\Rightarrow \frac{2344}{7} = 335
+\end{aligned}
 $$
 
 $134 < 260 < 335$ → **$\ce{FeCr2O4}$ 比值最小，先用完 → 限量試劑**，故 **(A) 正確**。
@@ -234,7 +272,11 @@ $134 < 260 < 335$ → **$\ce{FeCr2O4}$ 比值最小，先用完 → 限量試劑
 ③ 順手驗證其餘選項（全部以限量試劑 $\ce{FeCr2O4}$ 為基準）：
 
 $$
-\text{理論產量} = 536\ \text{mol} \times \frac{8\ \text{mol K2CrO4}}{4\ \text{mol FeCr2O4}} \times \frac{194.2\ \text{g}}{1\ \text{mol}} \times \frac{1\ \text{kg}}{1000\ \text{g}} \approx 208\ \text{kg}
+\begin{aligned}
+\text{理論產量} &= 536\ \text{mol} \times \frac{8\ \text{mol K2CrO4}}{4\ \text{mol FeCr2O4}}\\[4pt]
+&\quad \times \frac{194.2\ \text{g}}{1\ \text{mol}} \times \frac{1\ \text{kg}}{1000\ \text{g}}\\[4pt]
+&\approx 208\ \text{kg}
+\end{aligned}
 $$
 
 - (B) 理論產量約 **208 kg**，不是 253 kg → ✗
