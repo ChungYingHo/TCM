@@ -13,7 +13,9 @@
   // Which reused word's gloss is currently revealed (tap to toggle).
   let peek = $state<{ s: string; zh: string } | null>(null)
 
-  type Seg = { t: string; kind: 'text' | 'head' | 'reuse'; w?: string; zh?: string }
+  type Seg = { t: string; kind: 'text' | 'head' | 'deriv' | 'reuse'; w?: string; zh?: string }
+
+  const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 
   // A multi-sentence example is one string in the data, so split it for display —
   // otherwise the sentences run together inline and you can't tell them apart.
@@ -43,14 +45,23 @@
   // the second sentence (26 words in the set), and leaving those unmarked looks like a bug.
   // Overlaps are dropped (first wins) so rendering is a single clean pass.
   function segment(sentence: string): Seg[] {
-    const ranges: { start: number; end: number; kind: 'head' | 'reuse'; w?: string; zh?: string }[] = []
-    const headRe = new RegExp(`\\b${word.word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\w*`, 'gi')
+    const ranges: { start: number; end: number; kind: 'head' | 'deriv' | 'reuse'; w?: string; zh?: string }[] = []
+    // 先搶先贏：標頭字 > 考過的字（可點） > 衍生字。
+    const headRe = new RegExp(`\\b${esc(word.word)}\\w*`, 'gi')
     for (const m of sentence.matchAll(headRe)) {
       if (m.index !== undefined) ranges.push({ start: m.index, end: m.index + m[0].length, kind: 'head' })
     }
     for (const r of word.reuses ?? []) {
       for (let i = sentence.indexOf(r.s); i >= 0; i = sentence.indexOf(r.s, i + r.s.length)) {
         ranges.push({ start: i, end: i + r.s.length, kind: 'reuse', w: r.w, zh: r.zh })
+      }
+    }
+    // 衍生字（reservation、disadvantage…）字尾變化太多，headword 規則抓不到，
+    // 但它就列在卡片的「衍」那排，例句裡出現卻沒標會看起來像漏標。
+    // 標記刻意比標頭字弱，才不會讓人誤以為它就是這張卡在教的字。
+    for (const dv of word.derivatives ?? []) {
+      for (const m of sentence.matchAll(new RegExp(`\\b${esc(dv.word)}\\w*`, 'gi'))) {
+        if (m.index !== undefined) ranges.push({ start: m.index, end: m.index + m[0].length, kind: 'deriv' })
       }
     }
     ranges.sort((a, b) => a.start - b.start)
@@ -146,7 +157,9 @@
     <div class="mt-1 rounded-lg bg-base-200/60 p-2.5 text-sm">
       {#each rows as row, ri (ri)}
         <p class="leading-relaxed {ri > 0 ? 'mt-2' : ''}">
-          {#each row.segs as seg, i (i)}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'reuse'}<button
+          {#each row.segs as seg, i (i)}{#if seg.kind === 'head'}<strong class="text-primary">{seg.t}</strong>{:else if seg.kind === 'deriv'}<span
+                class="font-semibold text-primary/70"
+                title="衍生字">{seg.t}</span>{:else if seg.kind === 'reuse'}<button
                 type="button"
                 class="border-b border-dotted border-primary/50 transition-colors hover:text-primary {peek?.s === seg.t ? 'text-primary' : 'text-base-content/90'}"
                 title="點看字義（考過的字）"
