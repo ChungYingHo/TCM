@@ -22,6 +22,8 @@ export interface Leitner {
   touch(ids: string[], now?: number): void
   /** Ids whose review is due now, soonest first. */
   dueIds(now?: number): string[]
+  /** 一直背不起來的（答「不熟」累計 ≥ `min` 次），最慘的排前面。 */
+  leechIds(min?: number): string[]
   getCard(id: string): VocabSrsEntry | undefined
   /** Raw snapshot / restore — used by the cloud layer (replace is silent: no state event). */
   dump(): LeitnerStore
@@ -49,7 +51,9 @@ export function createLeitner(KEY: string): Leitner {
       const store = read()
       const prev = store[id]
       const box = known ? Math.min((prev?.box ?? 1) + 1, MAX_BOX) : 1
-      store[id] = { box, due: dueAt(box, now), ts: now }
+      // lapses 只增不減：答對不該把「我曾經卡在這裡 5 次」的事實抹掉，那正是要拿來排優先序的。
+      const lapses = (prev?.lapses ?? 0) + (known ? 0 : 1)
+      store[id] = lapses ? { box, due: dueAt(box, now), ts: now, lapses } : { box, due: dueAt(box, now), ts: now }
       write(store)
     },
     touch(ids, now = Date.now()) {
@@ -68,6 +72,12 @@ export function createLeitner(KEY: string): Leitner {
       return Object.entries(store)
         .filter(([, c]) => c.due <= now)
         .sort((a, b) => a[1].due - b[1].due)
+        .map(([id]) => id)
+    },
+    leechIds(min = 3) {
+      return Object.entries(read())
+        .filter(([, c]) => (c.lapses ?? 0) >= min)
+        .sort((a, b) => (b[1].lapses ?? 0) - (a[1].lapses ?? 0))
         .map(([id]) => id)
     },
     getCard(id) {

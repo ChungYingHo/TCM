@@ -23,6 +23,9 @@ export interface VocabSrsEntry {
   box: number // 1 = soonest
   due: number // epoch ms — next review due
   ts: number // last graded
+  /** 累計答「不熟」的次數。用來揪出一直背不起來的（SRS 術語 leech）——那些才是該回去
+   *  補筆記或換記法的，光靠排程再輪幾次也沒用。舊資料沒有這欄，視為 0。 */
+  lapses?: number
 }
 export type VocabSrsStore = Record<string, VocabSrsEntry> // word id -> card
 

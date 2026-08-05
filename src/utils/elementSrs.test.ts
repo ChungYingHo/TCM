@@ -21,8 +21,8 @@ describe('elementSrs (Leitner)', () => {
     learn(['el:6'], t0)
     grade('el:6', true, t0) // box 1 -> 2 (interval 3d)
     expect(getCard('el:6')).toEqual({ box: 2, due: t0 + 3 * DAY, ts: t0 })
-    grade('el:6', false, t0 + 3 * DAY) // wrong -> back to box 1 (tomorrow)
-    expect(getCard('el:6')).toEqual({ box: 1, due: t0 + 4 * DAY, ts: t0 + 3 * DAY })
+    grade('el:6', false, t0 + 3 * DAY) // wrong -> back to box 1 (tomorrow), 並累計一次 lapse
+    expect(getCard('el:6')).toEqual({ box: 1, due: t0 + 4 * DAY, ts: t0 + 3 * DAY, lapses: 1 })
   })
 
   it('caps the box at the longest interval', () => {

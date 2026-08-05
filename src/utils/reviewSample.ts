@@ -29,14 +29,17 @@ export function seededSample<T>(items: T[], n: number, seedKey: string): T[] {
   return pool.slice(0, take)
 }
 
-/** Compose today's review list: a LIMITED, date-seeded RANDOM batch capped at the daily
- *  target — not the whole due queue. When more words are due than the cap, a random rotating
- *  slice is shown (the rest roll to following days, so it varies day to day instead of dumping
- *  everything). When the due queue fits, all due come first (most-overdue first) and a random
- *  draw from learned-but-not-due words fills the spare capacity. Seeded by date → stable within
- *  a day, rotating across days. NOTE: the spare-capacity fill draws from learned-but-not-due cards,
- *  so words learned today (due tomorrow) CAN surface here — a caller that already lists "today's new
- *  words" elsewhere must exclude those ids itself to avoid showing them twice (see DailyPlan.svelte). */
+/** Compose today's review list: a LIMITED batch capped at the daily target — not the whole
+ *  due queue.
+ *
+ *  積欠很多時取「**最久沒複習的優先**」（`dueIds` 已依 due 由舊到新排好），只把**呈現順序**
+ *  打散讓每天不會一模一樣。2026-08-05 修：原本這裡是 `seededSample(dueIds, cap)`＝從整個到期
+ *  堆裡**純隨機**抽，等於丟掉了逾期排序——Aira 反映「前面的單字正在快速忘記」，這是主因之一：
+ *  到期 200 多個、每天只抽 60 個，某個字純靠運氣可以連續好幾週抽不到。
+ *
+ *  到期數塞得下時，所有到期的排前面（最久沒複習優先），再從「學過但還沒到期」的字隨機補滿。
+ *  NOTE: 補滿是從 learned-but-not-due 抽，所以今天剛學的字（明天到期）可能出現在這裡——已經
+ *  另外列出「今日單字」的呼叫端要自己把那些 id 濾掉，避免同一天上下重複（見 DailyPlan.svelte）。 */
 export function composeReview(
   dueIds: string[],
   learnedIds: string[],
@@ -46,7 +49,8 @@ export function composeReview(
 ): string[] {
   const cap = Math.max(0, Math.min(target, max))
   if (cap === 0) return []
-  if (dueIds.length >= cap) return seededSample(dueIds, cap, dateKey)
+  // 逾期最久的先還，順序打散只是為了每天翻起來不完全一樣。
+  if (dueIds.length >= cap) return seededSample(dueIds.slice(0, cap), cap, dateKey)
   const dueSet = new Set(dueIds)
   const rest = learnedIds.filter((id) => !dueSet.has(id))
   return [...dueIds, ...seededSample(rest, cap - dueIds.length, dateKey)]

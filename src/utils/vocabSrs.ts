@@ -16,6 +16,7 @@ export const learn = srs.learn
 export const grade = srs.grade
 export const touch = srs.touch
 export const dueIds = srs.dueIds
+export const leechIds = srs.leechIds
 export const getCard = srs.getCard
 
 /** Raw snapshot / restore — used by the cloud layer. */

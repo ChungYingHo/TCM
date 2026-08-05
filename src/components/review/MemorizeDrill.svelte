@@ -4,7 +4,7 @@
   // 內容直接取自筆記的 `<Memorize items>`，所以筆記改了複習內容就跟著改，不會分歧。
   import { onMount } from 'svelte'
   import type { NoteCard } from '@/utils/noteReview'
-  import { dueIds, getCard, grade, learn } from '@/utils/noteCardSrs'
+  import { dueIds, getCard, grade, learn, leechIds } from '@/utils/noteCardSrs'
   import { seededSample } from '@/utils/reviewSample'
   import Icon from '@/components/common/Icon.svelte'
 
@@ -23,17 +23,22 @@
 
   function build() {
     const due = dueIds().filter((id) => byId.has(id))
-    const seen = new Set(due)
+    // 一直答不熟的先考——它們才是真正的破口，混在牌堆中間常常整輪都輪不到（DailyPlan 的
+    // 「一直記不起來的」區塊就是宣告這件事，這裡要真的做到）。
+    const stuck = new Set(leechIds().filter((id) => byId.has(id)))
+    const ordered = [...due.filter((id) => stuck.has(id)), ...due.filter((id) => !stuck.has(id))]
+    const seen = new Set(ordered)
     const fresh = seededSample(
       cards.filter((c) => !seen.has(c.id) && !getCard(c.id)),
       FRESH,
       `cards:${today}`,
     ).map((c) => c.id)
-    deck = [...due, ...fresh]
+    deck = [...ordered, ...fresh]
     i = 0
     done = 0
     flipped = false
     hints = 0
+    requeued = new Set()
   }
   // 只在掛載時建一次牌組。作答會寫 SRS → 讓父層重算 props，若用 $effect 重建就會把 i 歸零、
   // 卡在同一張翻不過去（見 VocabStudy 的同一個坑）。
@@ -57,11 +62,20 @@
     hints += 1
   }
 
+  // 這一輪已經重排過的卡，避免答錯兩次就無限循環。
+  let requeued = $state<Set<string>>(new Set())
+
   function answer(known: boolean) {
     const id = deck[i]
     if (id) {
       if (!getCard(id)) learn([id])
       grade(id, known)
+      // 答「不熟」的卡排到本輪尾端再回想一次。SRS 只在第一次作答時寫入，這次重考純粹是當場
+      // 再試一遍——間隔複習把它排到明天，但當下立刻重試才是最划算的一步（Aira 2026-08-05）。
+      if (!known && !requeued.has(id)) {
+        requeued.add(id)
+        deck = [...deck, id]
+      }
     }
     i += 1
     done += 1

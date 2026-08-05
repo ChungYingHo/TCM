@@ -9,6 +9,7 @@ const srs = createLeitner('tcm.noteCardSrs.v1')
 export const learn = srs.learn
 export const grade = srs.grade
 export const dueIds = srs.dueIds
+export const leechIds = srs.leechIds
 export const getCard = srs.getCard
 
 /** Raw snapshot / restore — used by the cloud layer. */

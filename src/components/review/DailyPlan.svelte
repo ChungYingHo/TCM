@@ -7,9 +7,9 @@
   import { onMount } from 'svelte'
   import { prefixById, type PrefixGroup, type VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
-  import { seenVocabIds, vocabForDay } from '@/utils/vocabSchedule'
-  import { dueIds, dumpVocabSrs, learn } from '@/utils/vocabSrs'
-  import { dueIds as cardDueIds } from '@/utils/noteCardSrs'
+  import { vocabForDay } from '@/utils/vocabSchedule'
+  import { dueIds, dumpVocabSrs, learn, leechIds as vocabLeechIds } from '@/utils/vocabSrs'
+  import { dueIds as cardDueIds, leechIds as cardLeechIds } from '@/utils/noteCardSrs'
   import type { NoteCard, NoteExample } from '@/utils/noteReview'
   import { loadNoteReviewData } from '@/utils/noteReviewData'
   import { composeReview } from '@/utils/reviewSample'
@@ -58,28 +58,43 @@
     localStorage.setItem(MASK_KEY, maskZh ? 'on' : 'off')
   }
 
-  // 把「到今天為止看過的今日單字」種進 SRS 排程（含回填起算日至今）。冪等：learn 只補新卡、
-  // 不動已學的（見 leitner.ts）。這步是為了打破 bootstrap 死結——複習清單只撈排程內的字，新字
-  // 若從沒被種過，複習區永遠是空的，那個唯一能造卡的複習流程也就永遠開不了。也扛住 cloud 把
-  // 本地排程覆寫成空（cloud.ts）後的重新種子：learn 若沒補到新卡不寫入、不會迴圈。
+  // 把**今天真的排到的那 20 個字**種進 SRS。冪等：learn 只補新卡、不動已學的（見 leitner.ts）。
+  // 這步是為了打破 bootstrap 死結——複習清單只撈排程內的字，新字若從沒被種過，複習區永遠是空的。
+  //
+  // ⚠️ 2026-08-05 修：原本種的是 `seenVocabIds`＝「從起算日到今天的全部字」。那是**純日期推算**，
+  // 等於把「日曆翻過去了」當成「你學過了」——第 12 天整個字庫 252 個字就全被標成已學、全部到期，
+  // 之後複習區只能從那堆裡抽 60 個。Aira 說「我可能根本沒記起來過」，就是這麼來的：系統替她
+  // 宣告學會了兩百多個她沒看過的字。改成只種今天實際顯示的 20 個，往後每天累積 20 個。
+  // 這在她即將擴字庫時特別重要——舊行為會讓新上架的字一進來就全部被標成已學。
   function seedSchedule() {
-    if (vocab) learn(seenVocabIds(vocab.words, today))
+    if (vocab) learn(vocabForDay(vocab.words, today).map((w) => w.id))
   }
 
   function refresh() {
     // 今日單字已單獨列在上方，複習區把它們濾掉，避免同一天上下重複同 20 個字。
     const todayIds = new Set(vocab ? vocabForDay(vocab.words, today).map((w) => w.id) : [])
+    const due = dueIds().filter((id) => !todayIds.has(id))
+    dueWords = due.length
     reviewIds = composeReview(
-      dueIds().filter((id) => !todayIds.has(id)),
+      due,
       Object.keys(dumpVocabSrs()).filter((id) => !todayIds.has(id)),
-      60,
-      60,
+      DAILY_REVIEW,
+      DAILY_REVIEW,
       today,
     )
     dueCards = cardDueIds().length
+    stuckWordIds = vocabLeechIds()
+    stuckCardCount = cardLeechIds().length
   }
 
+  const DAILY_REVIEW = 60
+  let dueWords = $state(0)
   let dueCards = $state(0)
+  let stuckWordIds = $state<string[]>([])
+  let stuckCardCount = $state(0)
+  let drillStuck = $state(false)
+
+  const stuckWords = $derived(stuckWordIds.map((id) => wordById.get(id)).filter(Boolean))
 
   $effect(() => {
     refresh()
@@ -129,11 +144,21 @@
   <!-- 2. 複習單字（SRS 到期 + 隨機補滿）— 翻卡作答回寫間隔重複 -->
   {#if reviewWords.length}
     <section class="rounded-box border border-base-300 border-l-[3px] border-l-info bg-base-100 p-4 shadow-soft sm:p-5">
-      <h2 class="section-heading mb-3">複習單字 · {reviewWords.length} 個</h2>
+      <h2 class="section-heading mb-3">
+        複習單字 · {reviewWords.length} 個
+        {#if dueWords > DAILY_REVIEW}<span class="section-sub tabular-nums text-warning">共積欠 {dueWords} 個</span>{/if}
+      </h2>
       {#if showReview}
         <VocabStudy words={reviewWords} ids={reviewWords.map((w) => w.id)} />
       {:else}
-        <p class="mb-3 text-sm text-base-content/55">SRS 到期的優先、再隨機抽樣補滿。翻卡作答，選「認識／不熟」會自動安排下次複習時間。</p>
+        <p class="mb-3 text-sm text-base-content/55">
+          {#if dueWords > DAILY_REVIEW}
+            到期的有 {dueWords} 個，今天先還<b>最久沒複習</b>的 {reviewWords.length} 個，其餘明天接著排。
+          {:else}
+            SRS 到期的優先、再隨機抽樣補滿。
+          {/if}
+          翻卡作答，選「認識／不熟」會自動安排下次複習時間；答「不熟」的字會在本輪結尾再考你一次。
+        </p>
         <div class="mb-3 flex flex-wrap gap-1.5">
           {#each reviewWords.slice(0, 30) as w (w.id)}
             <span class="rounded-full border border-base-300 bg-base-200/50 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>
@@ -163,7 +188,35 @@
     {/if}
   </section>
 
-  <!-- 4. 今日練習題（筆記例題，各科每天換一批） -->
+  <!-- 4. 一直記不起來的（leech）：反覆按「不熟」的才是真正的破口，混在牌堆裡看不出來 -->
+  {#if stuckWords.length || stuckCardCount}
+    <section class="rounded-box border border-base-300 border-l-[3px] border-l-warning bg-base-100 p-4 shadow-soft sm:p-5">
+      <h2 class="section-heading mb-1">一直記不起來的</h2>
+      <p class="mb-3 text-sm text-base-content/55">
+        這些你已經答錯 3 次以上。再多輪幾次排程通常沒用，<b>換個記法或回筆記重讀</b>才會過。
+      </p>
+
+      {#if stuckWords.length}
+        {#if drillStuck}
+          <VocabStudy words={stuckWords} ids={stuckWords.map((w) => w.id)} />
+        {:else}
+          <div class="mb-3 flex flex-wrap gap-1.5">
+            {#each stuckWords.slice(0, 24) as w (w.id)}
+              <span class="rounded-full border border-warning/40 bg-warning/10 px-2.5 py-1 text-sm" title={w.zh}>{w.word}</span>
+            {/each}
+            {#if stuckWords.length > 24}<span class="px-1 py-1 text-sm text-base-content/50">…還有 {stuckWords.length - 24} 個</span>{/if}
+          </div>
+          <button class="btn btn-warning btn-sm" onclick={() => (drillStuck = true)}>只練這些（{stuckWords.length} 個）<Icon name="arrowRight" class="h-4 w-4" /></button>
+        {/if}
+      {/if}
+
+      {#if stuckCardCount}
+        <p class="mt-3 text-sm text-base-content/55">另有 <b class="tabular-nums">{stuckCardCount}</b> 張必背卡也卡住了，會優先排進今日必背。</p>
+      {/if}
+    </section>
+  {/if}
+
+  <!-- 5. 今日練習題（筆記例題，各科每天換一批） -->
   <section class="rounded-box border border-base-300 border-l-[3px] border-l-success bg-base-100 p-4 shadow-soft sm:p-5">
     <h2 class="section-heading mb-1">今日練習題</h2>
     <p class="mb-3 text-sm text-base-content/55">各科從筆記例題隨機抽幾題，每天換一批，只考筆記教過的範圍。想寫整份考古題到<a class="link link-primary" href="/exam">線上測驗</a>。</p>

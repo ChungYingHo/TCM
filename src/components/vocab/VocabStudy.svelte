@@ -27,6 +27,7 @@
     }
     i = 0
     flipped = false
+    requeued = new Set()
   }
   // Build the deck ONCE per mount. Grading a card writes to the SRS store, which makes
   // the parent recompute `ids`/`words` (new array identity) — a reactive `$effect` here
@@ -37,11 +38,21 @@
   const current = $derived(deck[i] ? byId.get(deck[i]) : null)
   const remaining = $derived(Math.max(0, deck.length - i))
 
+  // 這一輪已經重排過的字，避免答錯兩次就無限循環。
+  let requeued = $state<Set<string>>(new Set())
+
   function answer(known: boolean) {
     const id = deck[i]
     if (id) {
       if (!getCard(id)) learn([id])
       grade(id, known)
+      // 答「不熟」的字排到本輪尾端再考一次。SRS 只在第一次作答時寫入（上面那行），這次重考
+      // 純粹是當場再回想一遍——間隔複習把它排到明天，但「當下立刻再試」才是最划算的一步，
+      // 原本整輪過去就沒了（Aira 2026-08-05：前面的單字正在快速忘記）。
+      if (!known && !requeued.has(id)) {
+        requeued.add(id)
+        deck = [...deck, id]
+      }
     }
     i += 1
     flipped = false
