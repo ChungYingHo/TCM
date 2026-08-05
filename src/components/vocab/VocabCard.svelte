@@ -8,7 +8,22 @@
   import Icon from '@/components/common/Icon.svelte'
   import { touch } from '@/utils/vocabSrs'
 
-  let { word, onstudied }: { word: VocabWord; onstudied?: () => void } = $props()
+  // `masked`：先把中文遮起來，逼自己用字首字根＋英文例句推一次再翻答案（Aira 2026-08-05）。
+  // 遮的是所有會洩底的東西——中文解釋、字源（常直接寫出中譯）、衍生字的中文、例句翻譯；
+  // **字首字根拆解與英文例句一定留著**，那才是要她拿來推的線索。
+  let {
+    word,
+    onstudied,
+    masked = false,
+  }: { word: VocabWord; onstudied?: () => void; masked?: boolean } = $props()
+
+  let revealed = $state(false)
+  // 換一個字就重新遮上（VocabStudy 是同一個元件實例輪播不同的字）。
+  $effect(() => {
+    void word.id
+    revealed = false
+  })
+  const show = $derived(!masked || revealed)
 
   // Which reused word's gloss is currently revealed (tap to toggle).
   let peek = $state<{ s: string; zh: string } | null>(null)
@@ -136,21 +151,32 @@
     </div>
   {/if}
 
-  <p class="leading-snug {word.parts?.length ? 'text-sm text-base-content/70' : 'text-[15px]'}">{word.zh}</p>
+  {#if show}
+    <p class="leading-snug {word.parts?.length ? 'text-sm text-base-content/70' : 'text-[15px]'}">{word.zh}</p>
 
-  {#if word.etymology}
-    <p class="border-l-2 border-primary/25 pl-2 text-[13px] leading-relaxed text-base-content/70">
-      <span class="mr-1 font-medium text-primary/70">字源</span>{word.etymology}
-    </p>
-  {/if}
+    {#if word.etymology}
+      <p class="border-l-2 border-primary/25 pl-2 text-[13px] leading-relaxed text-base-content/70">
+        <span class="mr-1 font-medium text-primary/70">字源</span>{word.etymology}
+      </p>
+    {/if}
 
-  {#if word.derivatives?.length}
-    <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 text-[13px] text-base-content/65">
-      <span class="font-medium text-base-content/45">衍</span>
-      {#each word.derivatives as d, i (i)}
-        <span><span class="font-medium text-base-content/85">{d.word}</span>{#if d.pos}&nbsp;<span class="text-base-content/45">{d.pos}</span>{/if}{#if d.zh}&nbsp;{d.zh}{/if}</span>
-      {/each}
-    </div>
+    {#if word.derivatives?.length}
+      <div class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 text-[13px] text-base-content/65">
+        <span class="font-medium text-base-content/45">衍</span>
+        {#each word.derivatives as d, i (i)}
+          <span><span class="font-medium text-base-content/85">{d.word}</span>{#if d.pos}&nbsp;<span class="text-base-content/45">{d.pos}</span>{/if}{#if d.zh}&nbsp;{d.zh}{/if}</span>
+        {/each}
+      </div>
+    {/if}
+  {:else}
+    <button
+      type="button"
+      class="mt-0.5 w-full rounded-lg border border-dashed border-primary/35 bg-primary/[0.04] px-3 py-2 text-left text-sm text-base-content/55 transition-colors hover:border-primary/60 hover:bg-primary/[0.08]"
+      onclick={() => (revealed = true)}
+    >
+      {#if word.parts?.length}先照上面的字首字根推推看{:else}先想想這個字什麼意思{/if}
+      <span class="text-base-content/40">· 點一下看中文</span>
+    </button>
   {/if}
 
   {#if word.example}
@@ -165,7 +191,7 @@
                 title="點看字義（考過的字）"
                 onclick={() => tapReuse(seg.t, seg.w ?? '', seg.zh ?? '')}>{seg.t}</button>{:else}{seg.t}{/if}{/each}
         </p>
-        {#if row.zh}<p class="mt-0.5 text-base-content/60">{row.zh}</p>{/if}
+        {#if row.zh && show}<p class="mt-0.5 text-base-content/60">{row.zh}</p>{/if}
       {/each}
 
       {#if peek}
@@ -175,7 +201,7 @@
         </p>
       {/if}
 
-      {#if trailingZh}<p class="mt-0.5 text-base-content/60">{trailingZh}</p>{/if}
+      {#if trailingZh && show}<p class="mt-0.5 text-base-content/60">{trailingZh}</p>{/if}
 
       <div class="mt-1 flex flex-wrap items-center gap-x-2 gap-y-0.5">
         {#if word.draft}<span class="inline-block rounded bg-base-300/60 px-1 text-[10px] text-base-content/50">AI 草稿例句</span>{/if}

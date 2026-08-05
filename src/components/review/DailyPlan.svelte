@@ -46,6 +46,18 @@
   let showReview = $state(false)
   let showCards = $state(false)
 
+  // 今日單字先遮中文，逼自己用字首字根推一次再翻答案（Aira 2026-08-05）。純 UI 偏好，
+  // 直接寫 localStorage——不走 createJsonStore，那個會發 statechange 觸發雲端同步與本頁 refresh。
+  const MASK_KEY = 'tcm.vocabMask.v1'
+  let maskZh = $state(true)
+  onMount(() => {
+    maskZh = localStorage.getItem(MASK_KEY) !== 'off'
+  })
+  function toggleMask() {
+    maskZh = !maskZh
+    localStorage.setItem(MASK_KEY, maskZh ? 'on' : 'off')
+  }
+
   // 把「到今天為止看過的今日單字」種進 SRS 排程（含回填起算日至今）。冪等：learn 只補新卡、
   // 不動已學的（見 leitner.ts）。這步是為了打破 bootstrap 死結——複習清單只撈排程內的字，新字
   // 若從沒被種過，複習區永遠是空的，那個唯一能造卡的複習流程也就永遠開不了。也扛住 cloud 把
@@ -100,10 +112,16 @@
   <!-- 1. 今日單字（依字根順序，每天 20 個、字根組跨日連續） -->
   {#if todayWords.length}
     <section class="rounded-box border border-base-300 border-l-[3px] border-l-primary bg-base-100 p-4 shadow-soft sm:p-5">
-      <h2 class="section-heading mb-1">今日單字 · {todayWords.length} 個</h2>
+      <div class="mb-1 flex flex-wrap items-center justify-between gap-2">
+        <h2 class="section-heading">今日單字 · {todayWords.length} 個</h2>
+        <label class="flex cursor-pointer items-center gap-1.5 text-xs text-base-content/60">
+          <input type="checkbox" class="toggle toggle-xs toggle-primary" checked={maskZh} onchange={toggleMask} />
+          先遮中文
+        </label>
+      </div>
       <p class="mb-3 text-sm text-base-content/55">涵蓋字首 {todayGroups.map((g) => g.forms.join('／')).join('、')}；依字根順序每天 {todayWords.length} 個、字根組跨日連續（非隨機）。</p>
       <div class="grid gap-2.5 sm:grid-cols-2">
-        {#each todayWords as w (w.id)}<VocabCard word={w} />{/each}
+        {#each todayWords as w (w.id)}<VocabCard word={w} masked={maskZh} />{/each}
       </div>
     </section>
   {/if}
