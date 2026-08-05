@@ -152,7 +152,20 @@
   {/if}
 
   {#if show}
-    <p class="leading-snug {word.parts?.length ? 'text-sm text-base-content/70' : 'text-[15px]'}">{word.zh}</p>
+    <!-- 遮起來過的卡要能再遮回去：想不起來偷看一眼之後，蓋回去自己重講一次才是有效的回想
+         （Aira 2026-08-05）。沒遮的情境（複習翻卡、字庫瀏覽）不顯示這顆鈕。 -->
+    <div class="flex items-start justify-between gap-2">
+      <p class="leading-snug {word.parts?.length ? 'text-sm text-base-content/70' : 'text-[15px]'}">{word.zh}</p>
+      {#if masked}
+        <button
+          type="button"
+          class="-mr-1 -mt-0.5 shrink-0 rounded px-1.5 py-0.5 text-xs text-base-content/40 transition-colors hover:bg-base-200 hover:text-base-content/70"
+          onclick={() => (revealed = false)}
+        >
+          遮回去
+        </button>
+      {/if}
+    </div>
 
     {#if word.etymology}
       <p class="border-l-2 border-primary/25 pl-2 text-[13px] leading-relaxed text-base-content/70">
