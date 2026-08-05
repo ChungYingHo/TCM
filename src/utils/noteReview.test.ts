@@ -60,6 +60,36 @@ describe('splitMemorizeItem', () => {
   })
 })
 
+// 2026-08-05 真實 bug：JSON 只認雙引號，但 JSX 陣列常寫單引號。原本 options/steps 會靜靜
+// 變成空陣列，筆記頁（MDX 自己編譯）正常、只有每日練習題出現「有題目沒有選項」的題。
+describe('單引號的 JSX 陣列也要吃得下', () => {
+  it('單引號的 options 與 steps 都解析得出來', () => {
+    const raw = "<ExampleQuestion n={5} q=\"何者同時具有離子鍵與共價鍵？\" options={['$\\\\ce{CCl4}$', '$\\\\ce{BaCO3}$']} answer=\"(B) $\\\\ce{BaCO3}$\" steps={['先看陽離子。', '再看多原子離子內部。']} />"
+    const [ex] = parseExamples(raw, SRC)
+    expect(ex.options).toEqual(['$\\ce{CCl4}$', '$\\ce{BaCO3}$'])
+    expect(ex.steps).toHaveLength(2)
+  })
+
+  it('單引號字串裡跳脫過的撇號不會提早收尾', () => {
+    // 原始 MDX 寫的是 options={['it\'s fine', 'plain']}
+    const raw = "<ExampleQuestion n={1} q=\"x\" options={['it\\'s fine', 'plain']} answer=\"(A)\" steps={[]} />"
+    expect(parseExamples(raw, SRC)[0].options).toEqual(["it's fine", 'plain'])
+  })
+
+  it('單引號字串裡可以包雙引號', () => {
+    expect(parseCards("<Memorize items={['他說「好」：內容', '乙：二']} />", SRC)[0].topic).toBe('他說「好」')
+  })
+
+  it('混用單雙引號也行', () => {
+    const raw = "<ExampleQuestion n={1} q=\"x\" options={[\"甲\", '乙']} answer=\"(A)\" steps={[]} />"
+    expect(parseExamples(raw, SRC)[0].options).toEqual(['甲', '乙'])
+  })
+
+  it('單引號的 Memorize items 一樣吃得下', () => {
+    expect(parseCards("<Memorize items={['甲：一', '乙：二']} />", SRC).map((c) => c.topic)).toEqual(['甲', '乙'])
+  })
+})
+
 describe('stripTrailingCommas', () => {
   it('drops a comma before a closing bracket but keeps commas inside strings', () => {
     expect(stripTrailingCommas('["a", "b",]')).toBe('["a", "b"]')

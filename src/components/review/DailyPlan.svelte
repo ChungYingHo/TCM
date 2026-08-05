@@ -138,20 +138,26 @@
       <div class="flex h-2.5 w-full overflow-hidden rounded-full bg-base-300/60">
         <div class="bg-success" style={`width:${pct(progress.solid)}%`}></div>
         <div class="bg-info" style={`width:${pct(progress.learning)}%`}></div>
-        <div class="bg-warning/70" style={`width:${pct(progress.notYet)}%`}></div>
+        <div class="bg-warning/70" style={`width:${pct(progress.failed)}%`}></div>
+        <div class="bg-base-content/15" style={`width:${pct(progress.untested)}%`}></div>
       </div>
 
       <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-base-content/60">
         <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-success"></span>穩了 <b class="tabular-nums">{progress.solid}</b></span>
         <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-info"></span>開始記得 <b class="tabular-nums">{progress.learning}</b></span>
-        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/70"></span>還沒過關 <b class="tabular-nums">{progress.notYet}</b></span>
+        {#if progress.failed}
+          <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/70"></span>沒過關 <b class="tabular-nums">{progress.failed}</b></span>
+        {/if}
+        {#if progress.untested}
+          <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-content/15"></span>還沒測過 <b class="tabular-nums">{progress.untested}</b></span>
+        {/if}
         {#if progress.untouched}
           <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-300"></span>還沒排到 <b class="tabular-nums">{progress.untouched}</b></span>
         {/if}
       </div>
 
       <p class="mt-2 text-xs leading-relaxed text-base-content/45">
-        只有<b>翻卡答對過</b>才算數（連續答對 3 次以上算「穩了」）。剛被排進來、還沒測過的都算「還沒過關」——這是誠實的下限，不會灌水。
+        只有<b>翻卡答對過</b>才算數（連續答對 3 次以上算「穩了」）。「還沒測過」是排進來但今天還沒翻到的，<b>不是</b>答錯——真的答錯才算「沒過關」。
       </p>
     </section>
   {/if}

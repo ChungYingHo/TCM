@@ -9,7 +9,7 @@ import {
   siblingNotes,
   subjectSummary,
 } from '@/models/notes'
-import { parseCards } from '@/utils/noteReview'
+import { parseCards, parseExamples } from '@/utils/noteReview'
 
 const PAGES = path.resolve('./src/pages')
 
@@ -71,6 +71,38 @@ describe('必背卡的 items 沒有寫壞', () => {
         expect(bad, `${n.title} 的「${c.topic}」含控制字元，檢查 LaTeX 是否少寫一個反斜線`).toBeNull()
       }
     }
+  })
+})
+
+// 每日練習題直接吃 parseExamples 的產出。選項若解析成空陣列，題目會變成「有題幹沒有選項」
+// 的廢題——而筆記頁自己是 MDX 編譯的、看起來完全正常，所以只看筆記永遠發現不了。
+// 2026-08-05 真的發生過：三篇用單引號寫 JSX 陣列，120 題裡有 29 題中招。
+describe('每篇筆記的例題都能出成可作答的題', () => {
+  const withExamples = NOTES.map((n) => ({ n, file: pageFile(n.href) })).filter(
+    (x) => x.file && readFileSync(x.file, 'utf8').includes('<ExampleQuestion'),
+  )
+
+  it('例題的選項不會解析成空陣列', () => {
+    expect(withExamples.length).toBeGreaterThan(15)
+    const broken: string[] = []
+    for (const { n, file } of withExamples) {
+      const raw = readFileSync(file!, 'utf8')
+      for (const ex of parseExamples(raw, { slug: n.id, href: n.href, title: n.title, subject: n.subject })) {
+        if (!ex.options.length) broken.push(`${n.title} 例 ${ex.n}`)
+      }
+    }
+    expect(broken, `這些例題抽出來沒有選項，每日練習會變成廢題：\n${broken.join('\n')}`).toEqual([])
+  })
+
+  it('例題的解題步驟不會解析成空陣列', () => {
+    const broken: string[] = []
+    for (const { n, file } of withExamples) {
+      const raw = readFileSync(file!, 'utf8')
+      for (const ex of parseExamples(raw, { slug: n.id, href: n.href, title: n.title, subject: n.subject })) {
+        if (!ex.steps.length) broken.push(`${n.title} 例 ${ex.n}`)
+      }
+    }
+    expect(broken, `這些例題抽出來沒有步驟：\n${broken.join('\n')}`).toEqual([])
   })
 })
 

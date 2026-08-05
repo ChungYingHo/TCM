@@ -88,6 +88,65 @@ function parseJsonArray(src: string): string[] | null {
   return null
 }
 
+/** 把一個 JS 字串常值（含頭尾引號）還原成它的值，單雙引號都吃。
+ *  單引號轉成合法的 JSON 字串再交給 JSON.parse，跳脫序列（\\、\n、\u…）的語意才會一致。 */
+function unquoteLiteral(literal: string): string {
+  const quote = literal[0]
+  const body = literal.slice(1, -1)
+  if (quote === '"') return unquote(literal)
+  let out = ''
+  for (let i = 0; i < body.length; i++) {
+    const ch = body[i]
+    if (ch === '\\') {
+      const next = body[i + 1] ?? ''
+      // \' 在 JSON 不合法，直接還原成 '；其餘跳脫原樣留給 JSON.parse 處理
+      out += next === "'" ? "'" : ch + next
+      i++
+    } else {
+      out += ch === '"' ? '\\"' : ch
+    }
+  }
+  try {
+    return JSON.parse(`"${out}"`) as string
+  } catch {
+    return body
+  }
+}
+
+/** 從 `[ … ]` 裡把字串常值一個個挑出來，**單引號與雙引號都吃**。
+ *
+ *  ⚠️ 2026-08-05 修的真實 bug：原本只有 JSON.parse 這條路，而 JSON 規格只認雙引號。
+ *  chem-chemical-bonding、amino-acids、periodic-table 這三處的 JSX 陣列寫的是單引號
+ *  （`options={['$\\ce{CCl4}$', …]}`），JSON.parse 直接拋錯 → 整組 options 與 steps
+ *  變空陣列 → 每日練習題出現「有題目沒有選項」的題（120 題裡有 29 題中招）。
+ *  筆記頁本身是 MDX 自己編譯的、完全正常，所以只有每日複習壞掉，很難察覺。
+ *
+ *  只取字串元素；陣列裡若有數字之類的非字串會被略過（本專案的陣列全是字串）。 */
+function parseStringArray(src: string): string[] | null {
+  const out: string[] = []
+  let i = 0
+  while (i < src.length) {
+    const ch = src[i]
+    if (ch === '"' || ch === "'") {
+      let j = i + 1
+      while (j < src.length) {
+        if (src[j] === '\\') {
+          j += 2
+          continue
+        }
+        if (src[j] === ch) break
+        j++
+      }
+      if (j >= src.length) return null // 字串沒收尾＝抓錯範圍，寧可回 null
+      out.push(unquoteLiteral(src.slice(i, j + 1)))
+      i = j + 1
+    } else {
+      i++
+    }
+  }
+  return out
+}
+
 /** Extract a JSX `key={[ ... ]}` array prop, respecting quotes so a literal `]` inside a
  *  string (e.g. "[Ar]") doesn't end the array early. Returns [] if absent/unparseable. */
 function arrayProp(attrs: string, key: string): string[] {
@@ -112,7 +171,11 @@ function arrayProp(attrs: string, key: string): string[] {
       depth++
     } else if (ch === ']') {
       depth--
-      if (depth === 0) return parseJsonArray(attrs.slice(open, i + 1)) ?? []
+      if (depth === 0) {
+        const span = attrs.slice(open, i + 1)
+        // 先試 JSON（雙引號、含結尾逗號），不行再用容忍單引號的挑字串法。
+        return parseJsonArray(span) ?? parseStringArray(span) ?? []
+      }
     }
   }
   return []
