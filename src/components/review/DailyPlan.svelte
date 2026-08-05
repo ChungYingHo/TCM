@@ -5,7 +5,7 @@
   // 拿掉的：Unit Factor 測驗、今日／複習古文、元素小遊戲、胺基酸小遊戲、考古題刷題。
   // 元素與胺基酸沒有消失，是改以必背卡的形式跟其他化學一起排班（見 /api/note-review）。
   import { onMount } from 'svelte'
-  import { prefixById, type PrefixGroup, type VocabData } from '@/models/vocab'
+  import type { VocabData } from '@/models/vocab'
   import { loadVocab } from '@/utils/vocabData'
   import { vocabForDay } from '@/utils/vocabSchedule'
   import { dueIds, dumpVocabSrs, learn, leechIds as vocabLeechIds } from '@/utils/vocabSrs'
@@ -16,6 +16,7 @@
   import { vocabProgress } from '@/utils/vocabProgress'
   import { todayKey } from '@/utils/date'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
+  import PrefixMap from '@/components/vocab/PrefixMap.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
   import MemorizeDrill from '@/components/review/MemorizeDrill.svelte'
   import DailyDrill from '@/components/review/DailyDrill.svelte'
@@ -115,11 +116,6 @@
   })
 
   const todayWords = $derived(vocab ? vocabForDay(vocab.words, today) : [])
-  const todayGroups = $derived(
-    [...new Set(todayWords.map((w) => w.prefixId))]
-      .map((id) => (id === undefined ? undefined : prefixById(id)))
-      .filter((g): g is PrefixGroup => g !== undefined),
-  )
   const reviewWords = $derived(reviewIds.map((id) => wordById.get(id)).filter(Boolean))
 </script>
 
@@ -170,7 +166,8 @@
           先遮中文
         </label>
       </div>
-      <p class="mb-3 text-sm text-base-content/55">涵蓋字首 {todayGroups.map((g) => g.forms.join('／')).join('、')}；依字根順序每天 {todayWords.length} 個、字根組跨日連續（非隨機）。</p>
+      <PrefixMap words={vocab.words} {todayWords} />
+      <p class="mb-3 text-sm text-base-content/55">依字首組順序每天 {todayWords.length} 個、跨日連續（非隨機）。卡片預設遮住中文，先照上面的字首意思推一次再翻。</p>
       <div class="grid gap-2.5 sm:grid-cols-2">
         {#each todayWords as w (w.id)}<VocabCard word={w} masked={maskZh} />{/each}
       </div>
