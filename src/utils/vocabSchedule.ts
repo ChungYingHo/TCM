@@ -4,8 +4,17 @@
 import { PREFIX_GROUPS, type VocabWord } from '@/models/vocab'
 import { parseYmd } from '@/utils/date'
 
-/** 每日單字排程起算日（day 0）。Aira 2026-07-06 開始。 */
-export const VOCAB_SCHEDULE_START = '2026-07-06'
+/**
+ * 每日單字排程起算日（day 0）。
+ *
+ * 2026-08-05 重新起算（Aira：「260 個大概只記得前面 1/5，是不是重頭更好？」）。
+ * 原起算日 2026-07-06 那一輪不算數——當時 seedSchedule 用日期推算「學過了」，第 12 天整個
+ * 字庫就被標成已學（見 srs-scheduling-pitfalls），後面的字等於只被顯示過一次就丟進複習池，
+ * 從沒被好好教過。**改起算日 ≠ 只清紀錄**：今日單字的位置是 (今天 − 起算日) × 20，跟 SRS
+ * 各自獨立，只清 SRS 的話今日單字仍會停在第 3 輪的第 96 個字，不會回到第 1 個。
+ * 兩個都要動，才是真的從第一個字重走一遍（252 字 ÷ 20 ＝ 13 天一輪）。
+ */
+export const VOCAB_SCHEDULE_START = '2026-08-05'
 
 /** 每日單字數量。 */
 export const VOCAB_PER_DAY = 20
