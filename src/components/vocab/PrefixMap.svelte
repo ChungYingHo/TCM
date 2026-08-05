@@ -13,6 +13,19 @@
   let { words, todayWords }: { words: VocabWord[]; todayWords: VocabWord[] } = $props()
 
   let showAll = $state(false)
+  let scroller = $state<HTMLDivElement | null>(null)
+
+  // 展開時自動捲到今天那組。整條 23 組在小視窗裡只看得到幾列，落在第 20 組的時候
+  // 不捲就等於沒告訴她「我在哪」——那正是這張表要回答的問題。
+  $effect(() => {
+    if (!showAll || !scroller) return
+    const row = scroller.querySelector('tr[data-active]')
+    if (!(row instanceof HTMLElement)) return
+    // 目標位置減掉表頭高度，才不會剛好被 sticky 的表頭蓋住。
+    const head = scroller.querySelector('thead')
+    const offset = head instanceof HTMLElement ? head.offsetHeight : 0
+    scroller.scrollTop = Math.max(0, row.offsetTop - offset - 4)
+  })
 
   const todayIds = $derived(new Set(todayWords.map((w) => w.id)))
   const activeIds = $derived(new Set(todayWords.map((w) => w.prefixId).filter(Boolean)))
@@ -65,26 +78,29 @@
   </button>
 
   {#if showAll}
-    <!-- 375px 放不下三欄：字數是最不重要的一欄，手機藏起來讓「意思」有完整寬度，
-         這樣整張表不必橫捲（原本 min-w 逼出橫捲、意思欄還被切掉）。 -->
-    <div class="mt-2.5">
-      <table class="w-full border-collapse text-sm">
+    <!-- 表格自己捲，不把整頁撐長（23 組展開有 20 幾列，下面的今日單字會被推很遠）。
+         表頭 sticky，捲到中段還看得到欄位；展開時自動捲到今天那組。
+         375px 放不下三欄：字數是最不重要的一欄，手機藏起來讓「意思」有完整寬度。 -->
+    <div bind:this={scroller} class="custom-scrollbar mt-2.5 max-h-64 overflow-y-auto rounded-lg border border-base-200 bg-base-100">
+      <!-- border-separate（不是 collapse）：collapse 會把邊框歸屬給表格而非儲存格，sticky 的
+           表頭捲動時邊框不跟著走，下緣會透出下一列的內容。改用 separate＋逐格 border-b。 -->
+      <table class="w-full border-separate border-spacing-0 text-sm">
         <thead>
-          <tr class="border-b border-base-300 text-left text-xs text-base-content/50">
-            <th class="py-1.5 pr-3 font-medium">字首</th>
-            <th class="py-1.5 font-medium">意思</th>
-            <th class="hidden py-1.5 pl-3 text-right font-medium sm:table-cell">字數</th>
+          <tr class="text-left text-xs text-base-content/50">
+            <th class="sticky top-0 z-10 border-b border-base-300 bg-base-100 px-3 py-1.5 font-medium">字首</th>
+            <th class="sticky top-0 z-10 border-b border-base-300 bg-base-100 py-1.5 font-medium">意思</th>
+            <th class="sticky top-0 z-10 hidden border-b border-base-300 bg-base-100 px-3 py-1.5 text-right font-medium sm:table-cell">字數</th>
           </tr>
         </thead>
         <tbody>
           {#each groups as row (row.group.id)}
             {@const active = activeIds.has(row.group.id)}
-            <tr class="border-b border-base-200/70 last:border-0 {active ? 'bg-primary/10' : ''}">
-              <td class="py-1.5 pr-3 font-display font-semibold {active ? 'text-primary' : ''}">
+            <tr data-active={active ? '' : undefined} class={active ? 'bg-primary/10' : ''}>
+              <td class="border-b border-base-200/70 px-3 py-1.5 font-display font-semibold {active ? 'text-primary' : ''}">
                 {row.group.forms.join('／')}
               </td>
-              <td class="py-1.5 text-base-content/70">{row.group.meaning}</td>
-              <td class="hidden py-1.5 pl-3 text-right tabular-nums text-base-content/45 sm:table-cell">{row.total}</td>
+              <td class="border-b border-base-200/70 py-1.5 text-base-content/70">{row.group.meaning}</td>
+              <td class="hidden border-b border-base-200/70 px-3 py-1.5 text-right tabular-nums text-base-content/45 sm:table-cell">{row.total}</td>
             </tr>
           {/each}
         </tbody>
