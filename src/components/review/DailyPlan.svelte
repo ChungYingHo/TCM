@@ -13,6 +13,7 @@
   import type { NoteCard, NoteExample } from '@/utils/noteReview'
   import { loadNoteReviewData } from '@/utils/noteReviewData'
   import { composeReview } from '@/utils/reviewSample'
+  import { vocabProgress } from '@/utils/vocabProgress'
   import { todayKey } from '@/utils/date'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
@@ -85,6 +86,7 @@
     dueCards = cardDueIds().length
     stuckWordIds = vocabLeechIds()
     stuckCardCount = cardLeechIds().length
+    progress = vocabProgress(dumpVocabSrs(), vocab?.words.length ?? 0)
   }
 
   const DAILY_REVIEW = 60
@@ -93,6 +95,8 @@
   let stuckWordIds = $state<string[]>([])
   let stuckCardCount = $state(0)
   let drillStuck = $state(false)
+  let progress = $state(vocabProgress({}, 0))
+  const pct = (n: number) => (progress.total ? (n / progress.total) * 100 : 0)
 
   const stuckWords = $derived(stuckWordIds.map((id) => wordById.get(id)).filter(Boolean))
 
@@ -123,6 +127,38 @@
   {#if !vocab}
     <div class="flex justify-center py-16"><span class="loading loading-spinner loading-lg text-primary"></span></div>
   {:else}
+
+  <!-- 0. 字庫進度：把「我到底記得幾個」變成數字。box ≥ 2 才算答對過，是誠實的下限估計 -->
+  {#if progress.total}
+    <section class="rounded-box border border-base-300 bg-base-100 p-4 shadow-soft sm:p-5">
+      <div class="mb-2 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+        <h2 class="section-heading">字庫進度</h2>
+        <p class="text-sm text-base-content/55">
+          真的答對過 <b class="tabular-nums text-success">{progress.learning + progress.solid}</b>
+          <span class="text-base-content/40">/ {progress.total}</span>
+        </p>
+      </div>
+
+      <div class="flex h-2.5 w-full overflow-hidden rounded-full bg-base-300/60">
+        <div class="bg-success" style={`width:${pct(progress.solid)}%`}></div>
+        <div class="bg-info" style={`width:${pct(progress.learning)}%`}></div>
+        <div class="bg-warning/70" style={`width:${pct(progress.notYet)}%`}></div>
+      </div>
+
+      <div class="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs text-base-content/60">
+        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-success"></span>穩了 <b class="tabular-nums">{progress.solid}</b></span>
+        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-info"></span>開始記得 <b class="tabular-nums">{progress.learning}</b></span>
+        <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/70"></span>還沒過關 <b class="tabular-nums">{progress.notYet}</b></span>
+        {#if progress.untouched}
+          <span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-300"></span>還沒排到 <b class="tabular-nums">{progress.untouched}</b></span>
+        {/if}
+      </div>
+
+      <p class="mt-2 text-xs leading-relaxed text-base-content/45">
+        只有<b>翻卡答對過</b>才算數（連續答對 3 次以上算「穩了」）。剛被排進來、還沒測過的都算「還沒過關」——這是誠實的下限，不會灌水。
+      </p>
+    </section>
+  {/if}
 
   <!-- 1. 今日單字（依字根順序，每天 20 個、字根組跨日連續） -->
   {#if todayWords.length}
