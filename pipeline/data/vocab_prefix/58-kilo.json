@@ -1,0 +1,41 @@
+[
+  {
+    "word": "kilogram",
+    "prefixId": "kilo",
+    "pos": "n.",
+    "phonetic": "ˈkɪləˌɡræm",
+    "zh": "千克，公斤",
+    "parts": [{ "text": "kilo-", "gloss": "千（希臘 khilioi）" }, { "text": "gram", "gloss": "公克（gramma）" }],
+    "etymology": "法文 kilogramme，1795年隨公制系統引入的字首 kilo-（不規則源自希臘 khilioi 千）與源自希臘 gramma 的法文 gramme 組成，英文約1797年採用。",
+    "derivatives": [],
+    "example": "The police found 200 kilograms of marijuana in the truck.",
+    "example_zh": "警方在卡車上查獲了兩百公斤的大麻。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/kilogram", "ipa": "/ˈkɪləˌɡræm/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "kilobyte",
+    "prefixId": "kilo",
+    "pos": "n.",
+    "phonetic": "ˈkɪləˌbaɪt",
+    "zh": "千位元組",
+    "parts": [{ "text": "kilo-", "gloss": "千（希臘 khilioi）" }, { "text": "byte", "gloss": "位元組（1956年 IBM 造詞）" }],
+    "etymology": "1970年字首 kilo-（千）與1956年 IBM 工程師 Werner Buchholz 所創的電腦術語 byte 組成，指一千位元組。",
+    "derivatives": [],
+    "example": "The attached document is a small, 50-kilobyte file.",
+    "example_zh": "這份附件是一個很小的50千位元組檔案。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/kilobyte", "ipa": "/ˈkɪləˌbaɪt/", "ipaSource": "Oxford Advanced American Dictionary（Wiktionary 僅音檔）" }
+  },
+  {
+    "word": "kilometer",
+    "prefixId": "kilo",
+    "pos": "n.",
+    "phonetic": "kɪˈlɑmɪtɚ",
+    "zh": "千米，公里",
+    "parts": [{ "text": "kilo-", "gloss": "千（希臘 khilioi）" }, { "text": "meter", "gloss": "公尺（metron）" }],
+    "etymology": "法文 kilomètre，公制字首 kilo-（千）與法文 mètre（希臘 metron 測量）組成，英文於1799年前後透過法文譯本採用，指一千公尺，英式拼法為 kilometre。",
+    "derivatives": [],
+    "example": "The official distance of a marathon is 42.195 kilometers.",
+    "example_zh": "馬拉松的官方距離是42.195公里。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/kilometer", "ipa": "/kɪˈlɑmɪtər/", "ipaSource": "Wiktionary", "phoneticNote": "美式亦常見重音在前的 ˈkɪləˌmitɚ（仿 kilogram、millimeter），Wiktionary 兩式皆列為 GA 標準音" }
+  }
+]

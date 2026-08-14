@@ -1,0 +1,28 @@
+[
+  {
+    "word": "octopus",
+    "prefixId": "octa",
+    "pos": "n.",
+    "phonetic": "ˈɑktəpʊs",
+    "zh": "章魚，八爪魚",
+    "parts": [{ "text": "octo-", "gloss": "八（希臘 oktō）" }, { "text": "pus", "gloss": "腳（pous，字幹 pod-）" }],
+    "etymology": "1758年將希臘 oktōpous「八腳」拉丁化而成，oktō（八）＋ pous（腳）；Etymonline 指出古希臘人其實更常用 polypous 稱呼章魚。",
+    "derivatives": [],
+    "example": "The octopus is among the most intelligent creatures in the sea.",
+    "example_zh": "章魚是海中最聰明的生物之一。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/octopus", "ipa": "/ˈɑktəpʊs/", "ipaSource": "Wiktionary", "spellingNote": "複數有 octopodes（希臘式）、octopi（1817起，誤用拉丁式）、octopuses（Etymonline 建議日常英文首選）三種並存" }
+  },
+  {
+    "word": "octogenarian",
+    "prefixId": "octa",
+    "pos": "n.",
+    "phonetic": "ˌɑktədʒɪˈnɛrɪən",
+    "zh": "八十至八十九歲的人",
+    "parts": [{ "text": "octo-", "gloss": "八（拉丁 octo）" }, { "text": "gen", "gloss": "乘十（-ginta，octoginta＝八十）" }],
+    "etymology": "法文 octogénaire，拉丁 octogenarius「含八十的」，octoginta「八十」由 octo（八）＋ -ginta（乘十）組成，英文名詞用法始於1789年、形容詞用法始於1784年。",
+    "derivatives": [],
+    "example": "Did you read Lin Yutang's Memoirs of an Octogenarian?",
+    "example_zh": "你讀過林語堂的《八十自敘》嗎？",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/octogenarian", "ipa": "/ˌɑktədʒɪˈnɛriən/", "ipaSource": "Wiktionary" }
+  }
+]

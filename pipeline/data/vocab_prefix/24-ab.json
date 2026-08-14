@@ -1,0 +1,54 @@
+[
+  {
+    "word": "abhor",
+    "prefixId": "ab",
+    "pos": "v.",
+    "phonetic": "æbˈhɔr",
+    "zh": "厭惡",
+    "parts": [{ "text": "ab-", "gloss": "遠離" }, { "text": "hor", "gloss": "顫抖、畏懼（horrere）" }],
+    "etymology": "ab-（遠離）＋ hor（horrere 顫抖、畏懼，字面是豎毛）——因畏懼而退縮遠離，即厭惡，與 horror 同字根。",
+    "derivatives": [{ "word": "abhorrence", "pos": "n.", "zh": "厭惡" }, { "word": "abhorrent", "pos": "a.", "zh": "令人厭惡的" }],
+    "example": "Civilized people abhor war and violence.",
+    "example_zh": "文明人厭惡戰爭與暴力。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/abhor", "ipa": "/æbˈhɔr/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "aboriginal",
+    "prefixId": "ab",
+    "pos": "a.",
+    "phonetic": "ˌæbəˈrɪdʒɪnəl",
+    "zh": "原住民的",
+    "parts": [{ "text": "ab origine", "gloss": "從起源（拉丁片語）" }],
+    "etymology": "源自拉丁片語 ab origine（從起源、從一開始），ab-（從）＋ origo（起源）——自始即存在之意，因而用來稱呼殖民地的原住民。",
+    "derivatives": [{ "word": "aborigine", "pos": "n.", "zh": "原住民" }],
+    "example": "There's an aboriginal village high in the mountains.",
+    "example_zh": "山上有一座原住民村落。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/aboriginal", "ipa": "/ˌæbəˈrɪdʒɪnəl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "phraseNote": "字首字根組合來自拉丁片語 ab origine 整體，非單純黏合" }
+  },
+  {
+    "word": "abstain",
+    "prefixId": "ab",
+    "pos": "v.",
+    "phonetic": "əbˈsten",
+    "zh": "戒絕，不碰，不沾",
+    "parts": [{ "text": "abs-", "gloss": "離開" }, { "text": "tain", "gloss": "持有、握住（tenere）" }],
+    "etymology": "abs-（離開）＋ tain（tenere 持有）——把持而不放出，引申為戒絕、克制。",
+    "derivatives": [{ "word": "abstention", "pos": "n.", "zh": "戒絕" }],
+    "example": "Amazingly, the alcoholic abstained from drinking for a whole week.",
+    "example_zh": "驚人的是，這名酒癮者整整一週滴酒不沾。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/abstain", "ipa": "/əbˈsteɪn/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  },
+  {
+    "word": "abstract",
+    "prefixId": "ab",
+    "pos": "n., a.",
+    "phonetic": "ˈæbstrækt",
+    "zh": "摘要；抽象的",
+    "parts": [{ "text": "abs-", "gloss": "離開" }, { "text": "tract", "gloss": "拉、抽出（trahere）" }],
+    "etymology": "abs-（離開）＋ tract（trahere 拉、抽出）——字面是抽離、拖走，引申出「摘要」（名詞）與「抽象的」（形容詞）兩義。",
+    "derivatives": [],
+    "example": "You must add an abstract to your paper before handing it in. Abstract painting is my favorite, but I also love still life.",
+    "example_zh": "你在繳交報告前必須加上摘要。抽象畫是我的最愛，但我也喜歡靜物畫。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/abstract", "ipa": "/ˈæbstrækt/(n.), /æbˈstrækt/(a./v.)", "ipaSource": "Wiktionary", "phoneticNote": "名詞重音在前、動詞/形容詞重音在後，此存名詞形" }
+  }
+]

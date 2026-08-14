@@ -1,0 +1,28 @@
+[
+  {
+    "word": "quintessential",
+    "prefixId": "quint",
+    "pos": "a.",
+    "phonetic": "ˌkwɪntɪˈsɛnʃəl",
+    "zh": "最精華的，典型的，最有代表性的",
+    "parts": [{ "text": "quint-", "gloss": "第五" }, { "text": "essenti", "gloss": "本質、存在（essentia）" }],
+    "etymology": "約1600年由名詞 quintessence 加形容詞字尾 -al 構成；quintessence 源自中世紀拉丁 quinta essentia「第五元素」（quinta 為 quintus 第五的陰性形式，essentia 本質），源於亞里斯多德認為土水火風四元素之外，還有構成天體、明亮不朽的第五元素。",
+    "derivatives": [{ "word": "quintessence", "pos": "n.", "zh": "精華，要素" }],
+    "example": "The kimono is the quintessential Japanese costume.",
+    "example_zh": "和服是最具代表性的日本服飾。",
+    "sources": { "page": "IMG_1652", "etymonline": "https://www.etymonline.com/word/quintessential", "ipa": "/ˌkwɪntɪˈsɛnʃəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "quintet",
+    "prefixId": "quint",
+    "pos": "n.",
+    "phonetic": "kwɪnˈtɛt",
+    "zh": "五個一組，五重奏（唱）",
+    "parts": [{ "text": "quint-", "gloss": "第五" }, { "text": "et", "gloss": "表小／一組" }],
+    "etymology": "1811年義大利文 quintetto，quinto「第五」的指小詞（源自拉丁 quintus，與 quinque 五同源）——原指五項獨奏聲部或樂器的樂曲，1882年起也指五人樂團。",
+    "derivatives": [],
+    "example": "The three men and two women sang in a quintet.",
+    "example_zh": "這三名男子與兩名女子組成五重唱。",
+    "sources": { "page": "IMG_1652", "etymonline": "https://www.etymonline.com/word/quintet", "ipa": "/kwɪnˈtɛt/", "ipaSource": "Wiktionary" }
+  }
+]

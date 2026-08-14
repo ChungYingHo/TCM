@@ -1,0 +1,55 @@
+[
+  {
+    "word": "dysfunctional",
+    "prefixId": "dys",
+    "pos": "a.",
+    "phonetic": "dɪsˈfʌŋkʃənəl",
+    "zh": "不正常的，功能失常的",
+    "parts": [{ "text": "dys-", "gloss": "壞、不正常" }, { "text": "function", "gloss": "功能" }],
+    "etymology": "1915年由1914年出現的名詞 dysfunction（dys- 壞、異常＋ function 功能）加形容詞字尾 -al 構成，原指功能運作異常，最初用於解剖／醫學，1949年起才擴及社會學。",
+    "derivatives": [{ "word": "dysfunction", "pos": "n.", "zh": "不正常，功能失常" }],
+    "example": "He grew up in a dysfunctional family, with a father locked up in jail and an alcoholic mother.",
+    "example_zh": "他在一個功能失調的家庭中長大，父親身陷囹圄，母親則酗酒成性。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/dysfunctional", "ipa": "/dɪsˈfʌŋkʃənəl/", "ipaSource": "Wiktionary（僅音檔，依 dysfunction 詞條加規則字尾推得）" }
+  },
+  {
+    "word": "dyspepsia",
+    "prefixId": "dys",
+    "pos": "n.",
+    "phonetic": "dɪsˈpɛpʃə",
+    "zh": "消化不良症",
+    "parts": [{ "text": "dys-", "gloss": "壞、困難" }, { "text": "peptos", "gloss": "已消化的（peptein 消化）" }],
+    "etymology": "1706年晚期拉丁 dyspepsia，希臘 dyspeptos「難以消化」，dys-（壞、困難）＋ peptos（已消化的，peptein 消化，PIE 字根 *pekw- 煮、使成熟）——1650年代曾英化為 dyspepsy。",
+    "derivatives": [{ "word": "dyspeptic", "pos": "a.", "zh": "消化不良的，壞脾氣的" }],
+    "example": "I'm not having lunch today because I'm suffering from dyspepsia.",
+    "example_zh": "我今天不吃午餐了，因為我正患有消化不良症。",
+    "sources": { "page": "IMG_1646", "etymonline": "https://www.etymonline.com/word/dyspepsia", "ipa": "/dɪsˈpɛpʃə/", "ipaSource": "Dictionary.com（Wiktionary 僅標英式）" }
+  },
+  {
+    "word": "dyslexia",
+    "prefixId": "dys",
+    "pos": "n.",
+    "phonetic": "dɪsˈlɛksɪə",
+    "zh": "閱讀困難症",
+    "parts": [{ "text": "dys-", "gloss": "壞、困難" }, { "text": "lexis", "gloss": "詞語、閱讀（legein 說）" }],
+    "etymology": "1885年借自德文 dyslexie（1883），希臘 dys-（壞、困難）＋ lexis（詞語，引申作閱讀，源自 legein 說）加抽象名詞字尾 -ia——指因腦部狀況造成的閱讀困難。",
+    "derivatives": [{ "word": "dyslexic", "pos": "a.", "zh": "閱讀困難的" }],
+    "example": "Children with dyslexia often do poorly at school.",
+    "example_zh": "患有閱讀障礙的孩童在校成績往往不佳。",
+    "sources": { "page": "IMG_1646", "etymonline": "https://www.etymonline.com/word/dyslexia", "ipa": "/(ˌ)dɪsˈlɛksiə/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "dysphagia",
+    "prefixId": "dys",
+    "pos": "n.",
+    "phonetic": "dɪsˈfedʒɪə",
+    "zh": "厭食症",
+    "parts": [{ "text": "dys-", "gloss": "壞、困難" }, { "text": "phagein", "gloss": "吃、進食" }],
+    "etymology": "醫學用語，希臘 dys-（壞、困難）＋ phagein（吃，PIE 字根 *bhag- 分食，同見於 phagocyte 吞噬細胞的 phago-）加抽象名詞字尾 -ia——字面是難以進食，課本取其「吃不好」引申為厭食症。",
+    "derivatives": [{ "word": "dysphagic", "pos": "a.", "zh": "厭食的" }],
+    "example": "Stress-induced dysphagia caused her to lose her appetite for weeks.",
+    "example_zh": "壓力引發的厭食症讓她好幾週都沒有食欲。",
+    "draft": true,
+    "sources": { "page": "IMG_1646", "etymonline": "https://www.etymonline.com/word/dys-", "ipa": "/dɪsˈfeɪdʒ(i)ə/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）；Etymonline 無 dysphagia 專屬詞條，改查字首頁 dys- 與詞根參考頁 phagocyte", "spellingNote": "照片無獨立例句，例句為自擬" }
+  }
+]

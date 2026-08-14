@@ -1,0 +1,54 @@
+[
+  {
+    "word": "telecommute",
+    "prefixId": "tele",
+    "pos": "v.",
+    "phonetic": "ˈtɛləkəˌmjut",
+    "zh": "遠距辦公",
+    "parts": [{ "text": "tele-", "gloss": "遠" }, { "text": "commute", "gloss": "通勤" }],
+    "etymology": "1970年代由 Jack Nilles 提出的概念，tele-（遠）＋ commute（通勤，源自拉丁 commutare 不斷更換）——藉電話線路、資料連線等，在家完成原本要進辦公室做的工作。",
+    "derivatives": [{ "word": "telecommunications", "pos": "n.", "zh": "電信" }],
+    "example": "Chunghwa Telecom is a telecommunications provider.",
+    "example_zh": "中華電信是一家電信業者。",
+    "sources": { "page": "IMG_1629", "etymonline": "https://www.etymonline.com/word/telecommute", "ipa": "/ˈtɛləkəˌmjut/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "teleconferencing",
+    "prefixId": "tele",
+    "pos": "n.",
+    "phonetic": "ˈtɛləˌkɑnfrənsɪŋ",
+    "zh": "電信會議",
+    "parts": [{ "text": "tele-", "gloss": "遠" }, { "text": "conference", "gloss": "會議（conferre 聚集）" }],
+    "etymology": "teleconference 1952年先以專利商標詞出現，1970年代才普及；tele-（遠）＋ conference（會議，源自拉丁 conferre 聚集）——透過電信技術進行、與會者不必親臨同一地點的會議。",
+    "derivatives": [{ "word": "teleconference", "pos": "n.", "zh": "電信會議" }],
+    "example": "The company has branches all over the world and relies on teleconferencing to keep in synch.",
+    "example_zh": "這間公司在世界各地都有分公司，仰賴電信會議來保持同步。",
+    "sources": { "page": "IMG_1629", "etymonline": "https://www.etymonline.com/word/teleconference", "ipa": "/ˈtɛləˌkɑnfrənsɪŋ/", "ipaSource": "Oxford/Collins 美式詞典（Wiktionary 無此形發音）", "phoneticNote": "KK 自美式讀法轉寫（ɒ→ɑ）" }
+  },
+  {
+    "word": "telemarketing",
+    "prefixId": "tele",
+    "pos": "n.",
+    "phonetic": "ˈtɛləˌmɑrkɪtɪŋ",
+    "zh": "電話行銷",
+    "parts": [{ "text": "tele-", "gloss": "電話（由「遠」特化）" }, { "text": "marketing", "gloss": "行銷" }],
+    "etymology": "1970年出現，tele-（此處由「遠」特化為「電話」，如 telephone）＋ marketing（行銷，1897年起強調廣告銷售的商業義）——以電話（尤其未經邀約來電）進行推銷。",
+    "derivatives": [],
+    "example": "Most people find telemarketing annoying.",
+    "example_zh": "大多數人都覺得電話行銷很煩人。",
+    "sources": { "page": "IMG_1629", "etymonline": "https://www.etymonline.com/word/telemarketing", "ipa": "/ˈtɛləˌmɑrkɪtɪŋ/", "ipaSource": "Oxford/Collins 美式詞典（Wiktionary 無此詞發音）", "phoneticNote": "KK 自美式讀法轉寫", "spellingNote": "此處 tele- 是「電話」特化義，非本組典型「遠」義" }
+  },
+  {
+    "word": "telepathy",
+    "prefixId": "tele",
+    "pos": "n.",
+    "phonetic": "təˈlɛpəθɪ",
+    "zh": "超感應，第六感",
+    "parts": [{ "text": "tele-", "gloss": "遠" }, { "text": "pathy", "gloss": "感覺、感受（-patheia）" }],
+    "etymology": "1882年由英國心理學家 Frederic Myers 創造，tele-（遠）＋ pathy（希臘 -patheia 感受）——字面是來自遠方的感覺，指兩個心靈間超乎常理的直接溝通。",
+    "derivatives": [],
+    "example": "The magician claimed to be capable of telepathy.",
+    "example_zh": "這位魔術師聲稱自己有心電感應的能力。",
+    "sources": { "page": "IMG_1629", "etymonline": "https://www.etymonline.com/word/telepathy", "ipa": "/təˈlɛpəθi/", "ipaSource": "Oxford/Collins 美式詞典（Wiktionary 未標腔調）", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y 作 ɪ）" }
+  }
+]

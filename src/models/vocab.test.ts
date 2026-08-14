@@ -9,7 +9,7 @@ const vocab = JSON.parse(readFileSync(path.resolve('./src/data/vocab.json'), 'ut
 describe('字根字彙 corpus (src/data/vocab.json)', () => {
   it('是手工小字庫，非舊 3240 字庫', () => {
     expect(vocab.words.length).toBeGreaterThan(10)
-    expect(vocab.words.length).toBeLessThan(400) // 防舊 3240 字庫溜回來
+    expect(vocab.words.length).toBeLessThan(2000) // 防舊 3240 字庫溜回來
     expect(vocab.count).toBe(vocab.words.length)
   })
 

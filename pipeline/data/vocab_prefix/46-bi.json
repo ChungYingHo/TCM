@@ -1,0 +1,93 @@
+[
+  {
+    "word": "bilingual",
+    "prefixId": "bi",
+    "pos": "a.",
+    "phonetic": "baɪˈlɪŋɡwəl",
+    "zh": "雙語的",
+    "parts": [{ "text": "bi-", "gloss": "二" }, { "text": "lingua", "gloss": "舌頭、語言" }],
+    "etymology": "1818年拉丁 bilinguis「雙舌的」，bi-（二）＋ lingua（舌頭、語言）——字面是兩條舌頭，引申為說兩種語言的，古典拉丁文也有口是心非、狡詐的比喻義。",
+    "derivatives": [],
+    "example": "This is a Chinese-English bilingual dictionary.",
+    "example_zh": "這是一本中英雙語字典。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/bilingual", "ipa": "/baɪˈlɪŋɡwəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "bigamous",
+    "prefixId": "bi",
+    "pos": "a.",
+    "phonetic": "ˈbɪɡəməs",
+    "zh": "重婚的",
+    "parts": [{ "text": "bi-", "gloss": "二（拉丁）" }, { "text": "gam", "gloss": "婚姻（希臘 gamos）" }],
+    "etymology": "1690年代由名詞 bigamy 派生（+ -ous），bigamy 經中世紀拉丁 bigamia，後期拉丁 bigamus「重婚的」，由拉丁 bi-「雙、二」與希臘 gamos「婚姻」混合組成。",
+    "derivatives": [{ "word": "bigamy", "pos": "n.", "zh": "重婚" }],
+    "example": "Bigamy is a civil offense in Taiwan.",
+    "example_zh": "重婚在台灣是一項民事違法行為。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/bigamous", "ipa": "/ˈbɪɡəməs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "biennial",
+    "prefixId": "bi",
+    "pos": "a., n.",
+    "phonetic": "baɪˈɛnɪəl",
+    "zh": "兩年一次的；雙年展，二年生植物",
+    "parts": [{ "text": "bi-", "gloss": "二" }, { "text": "enni", "gloss": "年（annus，複合時 a 變 e）" }],
+    "etymology": "1620年代拉丁 biennium「兩年期間」，bi-（二）＋ annus（年）——1750年起也指每兩年一次的，1770年起再生出植物學上二年生植物的名詞義。",
+    "derivatives": [],
+    "example": "There is a famous biennial art exhibition at Venice. The Taipei Biennial is getting better and better. The plant is a biennial, flowering and dying in its second year.",
+    "example_zh": "威尼斯有一場著名的雙年藝術展。台北雙年展越辦越好。這種植物是二年生植物，在第二年開花後便會凋亡。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/biennial", "ipa": "/baɪˈɛniəl/", "ipaSource": "Wiktionary", "spellingNote": "易與 biannual（一年兩次）混淆：biennial 語根是 annus 年，指每兩年一次" }
+  },
+  {
+    "word": "bilateral",
+    "prefixId": "bi",
+    "pos": "a.",
+    "phonetic": "baɪˈlætərəl",
+    "zh": "雙邊的",
+    "parts": [{ "text": "bi-", "gloss": "二" }, { "text": "lateral", "gloss": "側邊的（latus）" }],
+    "etymology": "1775年 bi-（二）＋ lateral（源自古法文 latéral，拉丁 lateralis，latus 側、邊）——意為有兩側的，用來描述具有兩個對應面向的事物或關係。",
+    "derivatives": [],
+    "example": "This year's Taiwan-American bilateral trade talks are going on at the International Conference Center.",
+    "example_zh": "今年台美雙邊貿易談判正在國際會議中心進行。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/bilateral", "ipa": "/baɪˈlætəɹəl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）" }
+  },
+  {
+    "word": "binoculars",
+    "prefixId": "bi",
+    "pos": "n.",
+    "phonetic": "baɪˈnɑkjəlɚz",
+    "zh": "雙筒望遠鏡",
+    "parts": [{ "text": "bin-", "gloss": "二、雙（bini 兩兩成雙）" }, { "text": "ocul", "gloss": "眼睛（oculus）" }],
+    "etymology": "1866年名詞形式，源自形容詞 binocular（1713年有兩隻眼睛的），拉丁 bini「兩兩成雙」＋ ocularis（oculus 眼睛）——1871年起專指雙眼望遠鏡這種光學儀器。",
+    "derivatives": [{ "word": "binocular", "pos": "a.", "zh": "雙眼的，立體視覺的" }],
+    "example": "Binoculars are best for bird-watching whereas telescopes are ideal for observing heavenly bodies.",
+    "example_zh": "雙筒望遠鏡最適合賞鳥，而天文望遠鏡則最適合觀測星體。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/binoculars", "ipa": "/baɪˈnɑkjəlɚz/", "ipaSource": "Wiktionary", "spellingNote": "字首實為 bin-（源自拉丁 bini 兩兩成雙），非單純 bi- 直接黏上 ocular，多一個 n，屬 bi- 家族變體" }
+  },
+  {
+    "word": "bifocal",
+    "prefixId": "bi",
+    "pos": "a.",
+    "phonetic": "baɪˈfokəl",
+    "zh": "複焦點的",
+    "parts": [{ "text": "bi-", "gloss": "二" }, { "text": "focal", "gloss": "焦點的（focalis）" }],
+    "etymology": "1844年 bi-（二）＋ focal（近代拉丁 focalis，focus 原指爐灶，焦點的光學義是克卜勒約1604年類比透鏡聚光點而創）——意為有兩個焦點的，指同一鏡片兼具兩種焦距，此鏡片由富蘭克林發明。",
+    "derivatives": [{ "word": "bifocals", "pos": "n.", "zh": "雙焦眼鏡" }],
+    "example": "You need a pair of bifocals for you are both myopic and hyperopic.",
+    "example_zh": "你需要一副雙焦眼鏡，因為你同時患有近視和遠視。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/bifocal", "ipa": "/baɪˈfoʊkəl/", "ipaSource": "Wiktionary（詞根 focal 音標推得）", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）" }
+  },
+  {
+    "word": "bipedal",
+    "prefixId": "bi",
+    "pos": "a.",
+    "phonetic": "ˌbaɪˈpidəl",
+    "zh": "雙足的",
+    "parts": [{ "text": "bi-", "gloss": "二" }, { "text": "ped", "gloss": "腳（pes, pedem）" }],
+    "etymology": "約1600年由 biped（拉丁 bi- 二＋ pedem 腳）加形容詞字尾 -al 組成，字面是有兩隻腳的；古典拉丁 bipedalis 原指兩英尺長或粗。",
+    "derivatives": [{ "word": "biped", "pos": "n.", "zh": "雙足動物" }],
+    "example": "Humans are bipeds whereas cows are quadrupeds.",
+    "example_zh": "人類是雙足動物，而牛則是四足動物。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/bipedal", "ipa": "/ˌbaɪˈpiːdəl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（去長音）" }
+  }
+]

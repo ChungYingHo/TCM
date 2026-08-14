@@ -1,0 +1,28 @@
+[
+  {
+    "word": "heptathlon",
+    "prefixId": "sept",
+    "pos": "n.",
+    "phonetic": "hɛpˈtæθˌlɑn",
+    "zh": "七項運動",
+    "parts": [{ "text": "hepta-", "gloss": "七（希臘 hepta）" }, { "text": "athlon", "gloss": "競賽、獎品（字源不確定）" }],
+    "etymology": "希臘字首 hepta-（七）與 athlon（競賽、獎品，字源不確定）組成，構詞方式仿1912年造的 decathlon 一類複合運動項目名稱，OED 記載首次使用於1977年。",
+    "derivatives": [],
+    "example": "The women's heptathlon involves seven competitions.",
+    "example_zh": "女子七項運動包含七個比賽項目。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/hepta-", "ipa": "/hɛpˈtæθˌlɑn/", "ipaSource": "Dictionary.com（Etymonline 無 heptathlon 專屬詞條，Wiktionary 僅列英式）" }
+  },
+  {
+    "word": "septuagenarian",
+    "prefixId": "sept",
+    "pos": "n.",
+    "phonetic": "ˌsɛptədʒɪˈnɛrɪən",
+    "zh": "七十至七十九歲的人",
+    "parts": [{ "text": "septua-", "gloss": "七（拉丁 septem）" }, { "text": "gen", "gloss": "乘十（-ginta，septuaginta＝七十）" }],
+    "etymology": "拉丁 septuagenarius「含七十的」，septuaginta「七十」由 septem（七）＋ -ginta（乘十）組成，英文形容詞用法見於1793年、名詞用法見於1805年。",
+    "derivatives": [],
+    "example": "Most septuagenarians are retired.",
+    "example_zh": "大多數七十多歲的人都已經退休了。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/septuagenarian", "ipa": "/ˌsɛptədʒɪˈnɛriən/", "ipaSource": "Wiktionary", "spellingNote": "此字用拉丁字首 septua-（七），與同組 heptathlon 的希臘字首 hepta-（七）是不同源語言各自對「七」的獨立說法" }
+  }
+]

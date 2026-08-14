@@ -1,0 +1,67 @@
+[
+  {
+    "word": "semiannual",
+    "prefixId": "semi",
+    "pos": "a.",
+    "phonetic": "ˌsɛmiˈænjuəl",
+    "zh": "半年一次的",
+    "parts": [{ "text": "semi-", "gloss": "半（PIE *semi-）" }, { "text": "annual", "gloss": "每年的（annus 年）" }],
+    "etymology": "拉丁字首 semi-「半」（PIE *semi-）＋ annual（每年一次的，經古法文 annuel、中世紀拉丁 annualis，源自拉丁 annus 年）——字面是半年一次，即一年兩次。",
+    "derivatives": [{ "word": "semicircle", "pos": "n.", "zh": "半圓形" }],
+    "example": "Welcome to our semiannual conference!",
+    "example_zh": "歡迎參加我們的半年一次大會！",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/semi-", "ipa": "/ˌsɛmiˈænjuəl/", "ipaSource": "Wiktionary（僅音檔）", "phoneticNote": "Etymonline 無 semiannual 專屬詞條，改查字首頁 semi- 與詞根頁 annual" }
+  },
+  {
+    "word": "demigod",
+    "prefixId": "semi",
+    "pos": "n.",
+    "phonetic": "ˈdɛmiˌɡɑd",
+    "zh": "半神，受英雄崇拜者",
+    "parts": [{ "text": "demi-", "gloss": "半（dimidius，非直接承自 PIE *semi-）" }, { "text": "god", "gloss": "神" }],
+    "etymology": "1520年代構成，指次等神祇、半具神性者；demi- 源自古法文 demi「半」，來自晚期拉丁 dimedius（dis- 分開＋ medius 中間），意譯拉丁 semideus。",
+    "derivatives": [],
+    "example": "Great athletes are like demigods to fans.",
+    "example_zh": "偉大的運動員在粉絲眼中就像半神一樣。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/demigod", "ipa": "/ˈdɛmiɡɑd/", "ipaSource": "Wiktionary", "spellingNote": "demi- 與 semi-／hemi- 同義為「半」，但字源支系不同：demi- 經古法文承自拉丁 dimidius（dis-+medius），並非直接承自 PIE *semi-；semi-（拉丁）與 hemi-（希臘）才是 PIE *semi- 的直系反映，三者同義而非同源" }
+  },
+  {
+    "word": "hemisphere",
+    "prefixId": "semi",
+    "pos": "n.",
+    "phonetic": "ˈhɛmɪˌsfɪr",
+    "zh": "半球",
+    "parts": [{ "text": "hemi-", "gloss": "半（PIE *semi-）" }, { "text": "sphere", "gloss": "球體（sphaira）" }],
+    "etymology": "14世紀末以 hemysperie 之形出現，指天球；晚期拉丁 hemisphaerium 承自希臘 hēmisphairion，hēmi-（半，源自 PIE *semi-）＋ sphaira（球）——1550年代起也用於地球，1804年起擴及大腦半球。",
+    "derivatives": [],
+    "example": "Cyclones move counterclockwise in the northern hemisphere.",
+    "example_zh": "氣旋在北半球以逆時針方向移動。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/hemisphere", "ipa": "/ˈhɛmɪsfɪɹ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "spellingNote": "hemi- 為希臘文支系、直接承自 PIE *semi-，與 demi-（拉丁 dimidius 支系）字源路徑不同但詞義相同" }
+  },
+  {
+    "word": "semiconductor",
+    "prefixId": "semi",
+    "pos": "n.",
+    "phonetic": "ˌsɛmikənˈdʌktɚ",
+    "zh": "半導體",
+    "parts": [{ "text": "semi-", "gloss": "半" }, { "text": "conductor", "gloss": "導體、傳導者" }],
+    "etymology": "1838年出現，指導電性介於導體與絕緣體之間的材料，semi-（半）＋ conductor（1520年代引導者，電學義始於1737年）——現代精確用法始於1931年。",
+    "derivatives": [],
+    "example": "Taiwan has a highly advanced semiconductor industry.",
+    "example_zh": "台灣擁有高度先進的半導體產業。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/semiconductor", "ipa": "/ˌsɛmikənˈdʌktɚ/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "semifinal",
+    "prefixId": "semi",
+    "pos": "a., n.",
+    "phonetic": "ˌsɛmiˈfaɪnəl",
+    "zh": "準決賽（的）",
+    "parts": [{ "text": "semi-", "gloss": "半" }, { "text": "final", "gloss": "最後的、決賽（finalis）" }],
+    "etymology": "形容詞用法1867年、名詞用法1868年，semi-（半）＋ final（14世紀初古法文 final，晚期拉丁 finalis 終結的，源自 finis 終點）——口語縮寫 semi 約1942年才出現。",
+    "derivatives": [],
+    "example": "The semifinal game begins at eight tonight. If we win the semifinal, we will have a good chance of winning First Place.",
+    "example_zh": "準決賽今晚八點開始。如果我們贏了準決賽，就很有機會奪得第一名。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/semifinal", "ipa": "/ˌsɛmiˈfaɪnəl/", "ipaSource": "Wiktionary" }
+  }
+]

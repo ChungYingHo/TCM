@@ -1,0 +1,28 @@
+[
+  {
+    "word": "gigantic",
+    "prefixId": "giga",
+    "pos": "a.",
+    "phonetic": "dʒaɪˈɡæntɪk",
+    "zh": "巨大的",
+    "parts": [{ "text": "gigant-", "gloss": "巨人（希臘 Gigas，神話巨人族）" }, { "text": "ic", "gloss": "…的" }],
+    "etymology": "1610年代拉丁詞幹 gigant-（源自希臘 Gigas，該亞與烏拉諾斯所生的巨人族）加字尾 -ic 構成，取代同期的 gigantine、gigantical，1797年起詞義擴大泛指任何巨大的事物。",
+    "derivatives": [],
+    "example": "The budget for national defense is gigantic.",
+    "example_zh": "國防預算十分龐大。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/gigantic", "ipa": "/dʒaɪˈɡæntɪk/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "gigabyte",
+    "prefixId": "giga",
+    "pos": "n.",
+    "phonetic": "ˈɡɪɡəˌbaɪt",
+    "zh": "十億位元組",
+    "parts": [{ "text": "giga-", "gloss": "十億（任意取自希臘 gigas 巨人）" }, { "text": "byte", "gloss": "位元組" }],
+    "etymology": "1982年由1947年訂定、任意取自希臘 gigas（巨人）的公制字首 giga-（十億）與電腦術語 byte 組成，指十億位元組。",
+    "derivatives": [],
+    "example": "This PC comes with a 500-gigabyte hard drive.",
+    "example_zh": "這台電腦配備500十億位元組（GB）的硬碟。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/gigabyte", "ipa": "/ˈɡɪɡəˌbaɪt/", "ipaSource": "Wiktionary", "phoneticNote": "美式亦可讀作軟音 dʒɪɡəˌbaɪt（如 giant 的 g），此存硬音式" }
+  }
+]

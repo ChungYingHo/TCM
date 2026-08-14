@@ -206,5 +206,44 @@
     "example": "The cream is for external use only.",
     "example_zh": "這款乳膏僅供外用。",
     "sources": { "page": "IMG_1232", "etymonline": "https://www.etymonline.com/word/external", "ipa": "/ɛkˈstɜɹnəl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）；另有 ɪkˈstɝnəl", "example": "photo" }
+  },
+  {
+    "word": "extremities",
+    "prefixId": "ex",
+    "pos": "n.",
+    "phonetic": "ɪkˈstrɛmətɪz",
+    "zh": "末端，肢體末梢",
+    "parts": [{ "text": "ex-", "gloss": "出，超出" }, { "text": "trem", "gloss": "最外的（extremus）" }],
+    "etymology": "ex-（出、超出）＋ trem（extremus 最外的，exterus 向外的最高級）——身體最外緣的部位，即末端、肢體末梢。",
+    "derivatives": [],
+    "example": "In low temperatures, your heart pumps faster to prevent your extremities from freezing.",
+    "example_zh": "在低溫下，你的心臟會跳得更快，以防止你的肢體末梢凍傷。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/extremities", "ipa": "/ɪkˈstrɛmətiz/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；字尾 -ies 依慣例作 ɪ", "example": "photo" }
+  },
+  {
+    "word": "extravagant",
+    "prefixId": "ex",
+    "pos": "a.",
+    "phonetic": "ɪkˈstrævəgənt",
+    "zh": "奢侈的，過分的",
+    "parts": [{ "text": "extra-", "gloss": "在外、超出（ex- 的變體）" }, { "text": "vag", "gloss": "遊蕩（vagari）" }],
+    "etymology": "extra-（ex- 變體，在外）＋ vag（vagari 遊蕩）——原指教會法中未收入法典的教令，引申為超出常軌的奢侈、過度。",
+    "derivatives": [{ "word": "extravagance", "pos": "n.", "zh": "奢侈，過度" }, { "word": "extravagancy", "pos": "n.", "zh": "奢侈，過度" }, { "word": "extravaganza", "pos": "n.", "zh": "奢靡，盛事" }],
+    "example": "The show offers a view of the extravagant lifestyles of various movie stars.",
+    "example_zh": "這個節目呈現了各個電影明星奢侈的生活方式。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/extravagant", "ipa": "/ɪkˈstrævəgənt/", "ipaSource": "Wiktionary", "phoneticNote": "字首實際拼法是 extra-（ex- 變體），非直接 ex-；老師手寫提示 jag 應為 vag 之誤植", "example": "photo" }
+  },
+  {
+    "word": "exert",
+    "prefixId": "ex",
+    "pos": "v.",
+    "phonetic": "ɪɡˈzɝt",
+    "zh": "運用，發揮",
+    "parts": [{ "text": "ex-", "gloss": "出" }, { "text": "ert", "gloss": "接合、排列（serere）" }],
+    "etymology": "ex-（出）＋ ert（serere 接合、排列）——原意是推出、伸出，17世紀晚期才引申為運用、發揮（全力）。",
+    "derivatives": [{ "word": "exertion", "pos": "n.", "zh": "運用，努力" }],
+    "example": "The boss exerted pressure on us to work overtime without pay. If you want to pass the exam, you should really exert yourself.",
+    "example_zh": "老闆對我們施壓要求無償加班。如果你想通過考試，真的應該全力以赴。",
+    "sources": { "page": "IMG_1627", "etymonline": "https://www.etymonline.com/word/exert", "ipa": "/ɪɡˈzɝt/", "ipaSource": "Wiktionary", "phoneticNote": "ɝ 重音節保留", "example": "photo", "spellingNote": "老師手寫提示字根 ert 為「work」，但 Etymonline 顯示字根其實是 serere（接合、排列），非工作義，特此註明落差" }
   }
 ]

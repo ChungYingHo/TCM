@@ -1,0 +1,54 @@
+[
+  {
+    "word": "polygamous",
+    "prefixId": "poly",
+    "pos": "a.",
+    "phonetic": "pəˈlɪɡəməs",
+    "zh": "行多婚制的",
+    "parts": [{ "text": "poly-", "gloss": "多" }, { "text": "gamous", "gloss": "婚姻的（gamos）" }],
+    "etymology": "1610年代由 polygamy 加形容詞字尾 -ous 構成，或直接源自晚期希臘 polygamos（屢次結婚的），polys（多）＋ gamos（婚姻）——字典特別註明此詞不限定於一夫多妻，但常被如此使用。",
+    "derivatives": [{ "word": "polygamy", "pos": "n.", "zh": "多婚制" }],
+    "example": "American Mormons used to practice polygamy.",
+    "example_zh": "美國的摩門教徒過去曾實行多婚制。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/polygamous", "ipa": "/pəˈlɪɡəməs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "polygonal",
+    "prefixId": "poly",
+    "pos": "a.",
+    "phonetic": "pəˈlɪɡənəl",
+    "zh": "多邊形的",
+    "parts": [{ "text": "poly-", "gloss": "多" }, { "text": "gon", "gloss": "角（gōnia）" }],
+    "etymology": "poly-（多）＋ -gon（源自希臘 gōnia 角）加形容詞字尾 -al；根詞 polygon 源自晚期拉丁 polygonum、希臘 polygōnon（polys 多＋ gōnia 角），字面是多角形的。",
+    "derivatives": [{ "word": "polygon", "pos": "n.", "zh": "多邊形" }],
+    "example": "Pentagons, hexagons and octagons are all polygons.",
+    "example_zh": "五邊形、六邊形和八邊形都是多邊形。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/polygon", "ipa": "/pəˈlɪɡənəl/", "ipaSource": "Wiktionary", "phoneticNote": "Etymonline 無 polygonal 獨立詞條，改查根詞 polygon 頁面" }
+  },
+  {
+    "word": "polygraph",
+    "prefixId": "poly",
+    "pos": "n.",
+    "phonetic": "ˈpɑlɪˌgræf",
+    "zh": "測謊（機）",
+    "parts": [{ "text": "poly-", "gloss": "多" }, { "text": "graph", "gloss": "書寫、記錄（graphein）" }],
+    "etymology": "1794年最初指可製作多份書寫或繪圖複本的機械裝置，希臘 polygraphos（寫很多），polys（多）＋ graphein（寫）——1871年擴展為同時記錄身體多種脈動變化的儀器，1921年才首度被用作測謊工具。",
+    "derivatives": [],
+    "example": "I'm willing to take a polygraph to prove my innocence. The police station is equipped with a polygraph.",
+    "example_zh": "我願意接受測謊來證明我的清白。這間警局配有測謊機。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/polygraph", "ipa": "/ˈpɑːliɡræf/", "ipaSource": "Wiktionary（僅英式 ɒ，依常規對應轉美式 ɑ）" }
+  },
+  {
+    "word": "polymath",
+    "prefixId": "poly",
+    "pos": "n.",
+    "phonetic": "ˈpɑlɪˌmæθ",
+    "zh": "多才多藝者，萬事通",
+    "parts": [{ "text": "poly-", "gloss": "多" }, { "text": "math", "gloss": "學習（manthanein）" }],
+    "etymology": "1620年代指博學多聞之人，希臘 polymathes（學識淵博的），polys（多）＋ manthanein（學習，PIE 字根 *mendh- 學習）。",
+    "derivatives": [],
+    "example": "Leonardo da Vinci was a true polymath.",
+    "example_zh": "達文西是一位真正的博學通才。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/polymath", "ipa": "/ˈpɑliˌmæθ/", "ipaSource": "Wiktionary" }
+  }
+]

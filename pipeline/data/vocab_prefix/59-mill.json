@@ -1,0 +1,28 @@
+[
+  {
+    "word": "millimeter",
+    "prefixId": "mill",
+    "pos": "n.",
+    "phonetic": "ˈmɪləˌmitɚ",
+    "zh": "公釐，毫米",
+    "parts": [{ "text": "milli-", "gloss": "千分之一（mille 千）" }, { "text": "meter", "gloss": "公尺（metron）" }],
+    "etymology": "1802年法文 millimètre，拉丁 mille（千）衍生的組合字首 milli-（千分之一）與 mètre（希臘 metron 測量）組成，指公尺的千分之一。",
+    "derivatives": [],
+    "example": "The CWB predicts that the typhoon will bring 300 millimeters of rain.",
+    "example_zh": "中央氣象局預測這次颱風將帶來300毫米的降雨。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/millimeter", "ipa": "/ˈmɪləˌmitər/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "millennium",
+    "prefixId": "mill",
+    "pos": "n.",
+    "phonetic": "mɪˈlɛnɪəm",
+    "zh": "千禧年，一千年（複數 millennia）",
+    "parts": [{ "text": "mill-", "gloss": "千（mille）" }, { "text": "ennium", "gloss": "…年（annus，仿 biennium）" }],
+    "etymology": "1630年代近代拉丁構詞，mille（千）與 annus（年）仿 biennium、triennium 組成，原指《啟示錄》基督統治世間的千年，1711年起泛指任何一千年的區間。",
+    "derivatives": [{ "word": "millennial", "pos": "a., n.", "zh": "千禧年的，千禧世代，Y世代" }],
+    "example": "We are at the beginning of the third millennium. Millennials tend to wed later, if at all.",
+    "example_zh": "我們正處於第三個千禧年的開端。千禧世代傾向較晚結婚，甚至不婚。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/millennium", "ipa": "/mɪˈlɛniəm/", "ipaSource": "Wiktionary" }
+  }
+]

@@ -1,0 +1,93 @@
+[
+  {
+    "word": "mishap",
+    "prefixId": "mis",
+    "pos": "n.",
+    "phonetic": "ˈmɪsˌhæp",
+    "zh": "意外，不幸事故",
+    "parts": [{ "text": "mis-", "gloss": "壞、不順（日耳曼語）" }, { "text": "hap", "gloss": "運氣、機緣（happ）" }],
+    "etymology": "13世紀中期古英文／原始日耳曼語 mis-（壞、偏離常軌）＋ hap（源自古諾斯語 happ 運氣），可能仿古法文 mescheance 構詞，原指厄運、不幸，14世紀中期起也指不幸事件本身。",
+    "derivatives": [],
+    "example": "The plane landed without mishap.",
+    "example_zh": "這架飛機平安降落，沒有發生任何意外。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/mishap", "ipa": "/ˈmɪshæp/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "misfit",
+    "prefixId": "mis",
+    "pos": "n.",
+    "phonetic": "ˈmɪsˌfɪt",
+    "zh": "適應不良者，不適合的東西",
+    "parts": [{ "text": "mis-", "gloss": "不、錯（原始日耳曼 missa- 偏離）" }, { "text": "fit", "gloss": "合身、契合" }],
+    "etymology": "1823年俚語，mis-＋ fit（1680年代出現的合身之意），原指不合身的衣服，詞義先擴大為達不到預期效果的事物，1880年再轉指無法融入環境的人。",
+    "derivatives": [],
+    "example": "I was a bit of a social misfit at college because I didn't like going out at night.",
+    "example_zh": "我大學時有點格格不入，因為我不喜歡晚上出去玩。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misfit", "ipa": "/ˈmɪs.fɪt/", "ipaSource": "Dictionary.com（Wiktionary 僅標英式）" }
+  },
+  {
+    "word": "misplace",
+    "prefixId": "mis",
+    "pos": "v.",
+    "phonetic": "mɪsˈples",
+    "zh": "放錯地方，搞丟",
+    "parts": [{ "text": "mis-", "gloss": "錯誤地" }, { "text": "place", "gloss": "放置" }],
+    "etymology": "1550年代 mis-＋ place（安置），最初指安錯位置，1590年代擴大為放錯地方，1630年代再引申用於情感、信任等抽象事物錯付對象。",
+    "derivatives": [],
+    "example": "I must have misplaced the key.",
+    "example_zh": "我一定是把鑰匙放錯地方了。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misplace", "ipa": "/mɪsˈpleɪs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  },
+  {
+    "word": "misanthropic",
+    "prefixId": "mis",
+    "pos": "a.",
+    "phonetic": "ˌmɪsənˈθrɑpɪk",
+    "zh": "厭惡世人的",
+    "parts": [{ "text": "miso-", "gloss": "恨（希臘 misein，非「壞」義）" }, { "text": "anthrop", "gloss": "人類（anthrōpos）" }],
+    "etymology": "陷阱字：1739年由 misanthrope 加形容詞字尾 -ic 構成；misanthrope（1560年代）源自希臘 misanthrōpos（misein 恨＋ anthrōpos 人）——此處的 mis- 其實是希臘文「恨」的詞根 miso-，與本組其他字「壞、錯」義的 mis- 只是拼法相同、來源不同的兩個字首。",
+    "derivatives": [{ "word": "misanthrope", "pos": "n.", "zh": "厭惡世人者" }, { "word": "misanthropist", "pos": "n.", "zh": "厭惡世人者" }, { "word": "misanthropy", "pos": "n.", "zh": "厭世，不願與人交往" }],
+    "example": "He is a misanthrope and lives as a hermit.",
+    "example_zh": "他是個厭世者，過著隱士般的生活。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misanthropic", "ipa": "/ˌmɪsənˈθɹɑpɪk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "spellingNote": "陷阱字：miso-（希臘「恨」）與 mis-（日耳曼／拉丁「壞、錯」，本組其餘字所用）是兩個不同來源的字首，僅拼法巧合相同" }
+  },
+  {
+    "word": "misleading",
+    "prefixId": "mis",
+    "pos": "a.",
+    "phonetic": "mɪsˈlidɪŋ",
+    "zh": "有誤導作用的，不實的",
+    "parts": [{ "text": "mis-", "gloss": "錯誤地" }, { "text": "lead", "gloss": "引導" }],
+    "etymology": "1630年代古英文 mislædan（引導錯誤、導入歧途），mis-（錯誤地）＋ lead（引導）——常見的日耳曼語系複合構詞。",
+    "derivatives": [{ "word": "mislead", "pos": "v.", "zh": "誤導" }],
+    "example": "Advertisements must not create a misleading impression.",
+    "example_zh": "廣告不得製造誤導人的印象。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misleading", "ipa": "/(ˌ)mɪsˈliːdɪŋ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（iː→i）" }
+  },
+  {
+    "word": "misgiving",
+    "prefixId": "mis",
+    "pos": "n.",
+    "phonetic": "mɪsˈɡɪvɪŋ",
+    "zh": "不安，憂慮",
+    "parts": [{ "text": "mis-", "gloss": "不良地" }, { "text": "give", "gloss": "給予→於心中浮現" }],
+    "etymology": "名詞約1600年出現，源自動詞 misgive（1510年代，使人心生疑慮），mis-＋ give（此處取中古英文「在心中浮現、引發」的引申義）——指信心動搖、心生疑慮不安的感覺。",
+    "derivatives": [{ "word": "misgive", "pos": "v.", "zh": "使不安" }],
+    "example": "The president had misgivings about leaving the company to his son.",
+    "example_zh": "這位總裁對於把公司交給兒子心存疑慮。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misgiving", "ipa": "/mɪsˈɡɪvɪŋ/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "misbehavior",
+    "prefixId": "mis",
+    "pos": "n.",
+    "phonetic": "ˌmɪsbɪˈhevjɚ",
+    "zh": "行為失檢",
+    "parts": [{ "text": "mis-", "gloss": "不當地" }, { "text": "behavior", "gloss": "行為舉止" }],
+    "etymology": "15世紀晚期 mis-（原始日耳曼 missa-）＋ behavior（源自動詞 behave，字尾源自中古英文 havour，上溯古法文 aveir 擁有）——指不當、失禮的行為舉止。",
+    "derivatives": [{ "word": "behave", "pos": "v.", "zh": "行動，守規矩" }, { "word": "behavior", "pos": "n.", "zh": "行為" }, { "word": "misbehave", "pos": "v.", "zh": "行為失檢，不守規矩" }],
+    "example": "The student was punished for persistent misbehavior.",
+    "example_zh": "這名學生因屢次行為失檢而受到處罰。",
+    "sources": { "page": "IMG_1645", "etymonline": "https://www.etymonline.com/word/misbehavior", "ipa": "/ˌmɪsbɪˈheɪvjɚ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  }
+]

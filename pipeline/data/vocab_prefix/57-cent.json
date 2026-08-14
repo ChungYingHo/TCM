@@ -1,0 +1,41 @@
+[
+  {
+    "word": "centenarian",
+    "prefixId": "cent",
+    "pos": "n.",
+    "phonetic": "ˌsɛntəˈnɛrɪən",
+    "zh": "百歲人瑞",
+    "parts": [{ "text": "cent-", "gloss": "百（centum）" }, { "text": "arian", "gloss": "…的人" }],
+    "etymology": "1805年由 centenary（源自拉丁 centenarius「與百有關」，源自 centum 百）加字尾 -ian 構成，指年滿百歲的人。",
+    "derivatives": [],
+    "example": "Japan is famous for its numerous centenarians.",
+    "example_zh": "日本以眾多的百歲人瑞聞名。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/centenarian", "ipa": "/ˌsɛntəˈnɛriən/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "centennial",
+    "prefixId": "cent",
+    "pos": "n., a.",
+    "phonetic": "sɛnˈtɛnɪəl",
+    "zh": "一百周年，百年的",
+    "parts": [{ "text": "cent-", "gloss": "百（centum）" }, { "text": "ennial", "gloss": "…年一次的（仿 biennial，annus 年）" }],
+    "etymology": "1789年由拉丁 centum（百）仿 biennial 字尾構成，原指每百年一次的，1876年起也作名詞指百年紀念，美式英語偏好用詞（英式較常用 centenary）。",
+    "derivatives": [],
+    "example": "Americans mounted centennial celebrations in 1876, and in 1976 they celebrated their bicentennial.",
+    "example_zh": "美國人在1876年舉行了建國百年慶典，並於1976年慶祝了兩百週年。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/centennial", "ipa": "/sɛnˈtɛniəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "centimeter",
+    "prefixId": "cent",
+    "pos": "n.",
+    "phonetic": "ˈsɛntəˌmitɚ",
+    "zh": "公分",
+    "parts": [{ "text": "centi-", "gloss": "百分之一（centum）" }, { "text": "meter", "gloss": "公尺（metron）" }],
+    "etymology": "法文 centimètre，1801年由拉丁 centum（百）與源自希臘 metron（測量）的法文 mètre 組成，指公尺的百分之一，是1795年法國建立公制系統前後所創的詞。",
+    "derivatives": [],
+    "example": "One foot is equivalent to 30.48 centimeters.",
+    "example_zh": "一英尺相當於30.48公分。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/centimeter", "ipa": "/ˈsɛntəˌmitər/", "ipaSource": "Oxford/Collins 美式詞典（Wiktionary 僅英式）" }
+  }
+]

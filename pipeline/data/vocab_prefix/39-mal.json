@@ -1,0 +1,80 @@
+[
+  {
+    "word": "malicious",
+    "prefixId": "mal",
+    "pos": "a.",
+    "phonetic": "məˈlɪʃəs",
+    "zh": "惡意的，惡毒的",
+    "parts": [{ "text": "mal-", "gloss": "壞（malus）" }, { "text": "icious", "gloss": "充滿…性質（malitia 惡意）" }],
+    "etymology": "13世紀中古法文 malicios，拉丁 malitiosus（惡意的），上溯 malitia（惡意、狠毒）與 malus（壞）——原指心懷惡意，14世紀初於盎格魯法律文書發展出蓄意預謀的法律專用義。",
+    "derivatives": [{ "word": "malice", "pos": "n.", "zh": "惡意" }],
+    "example": "The election is approaching, and there are many malicious rumors around.",
+    "example_zh": "選舉將近，坊間流傳著許多惡意謠言。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malicious", "ipa": "/məˈlɪʃəs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "malfunction",
+    "prefixId": "mal",
+    "pos": "n., v.",
+    "phonetic": "ˌmælˈfʌŋkʃən",
+    "zh": "故障；運作",
+    "parts": [{ "text": "mal-", "gloss": "壞、不正常" }, { "text": "function", "gloss": "功能（functio）" }],
+    "etymology": "1827年 mal-（壞，源自拉丁 malus／male）＋ function（功能，源自拉丁 functio）——19世紀新造詞，先作名詞，1888年才衍生出動詞用法。",
+    "derivatives": [{ "word": "function", "pos": "n., v.", "zh": "功能；運作" }],
+    "example": "The work was delayed because of a computer malfunction. The assembly line malfunctioned, resulting in a waste of precious time.",
+    "example_zh": "這項工作因電腦故障而延誤。生產線發生故障，浪費了寶貴的時間。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malfunction", "ipa": "/ˌmælˈfʌŋk.ʃən/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "malnutrition",
+    "prefixId": "mal",
+    "pos": "n.",
+    "phonetic": "ˌmælnuˈtrɪʃən",
+    "zh": "營養不良",
+    "parts": [{ "text": "mal-", "gloss": "壞、不良" }, { "text": "nutrition", "gloss": "營養（nutritio，源自 nutrire 餵養）" }],
+    "etymology": "1843年 mal-（壞，經古法文轉譯自拉丁 malus）＋ nutrition（滋養，源自拉丁 nutritio，動詞 nutrire 餵養）——因身體無法妥善吸收食物而導致的營養缺乏。",
+    "derivatives": [{ "word": "nutrition", "pos": "n.", "zh": "營養" }, { "word": "nutritious", "pos": "a.", "zh": "營養豐富的" }],
+    "example": "Malnutrition is a big problem in many developing countries.",
+    "example_zh": "營養不良是許多開發中國家的一大問題。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malnutrition", "ipa": "/ˌmæl.nuˈtɹɪʃ.ən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）" }
+  },
+  {
+    "word": "malpractice",
+    "prefixId": "mal",
+    "pos": "n.",
+    "phonetic": "mælˈpræktɪs",
+    "zh": "業務過失",
+    "parts": [{ "text": "mal-", "gloss": "不當、錯誤" }, { "text": "practice", "gloss": "業務執行（practicare）" }],
+    "etymology": "1670年代 mal-＋ practice（源自古法文 pratiser、中世紀拉丁 practicare）——原指因無知、疏忽或惡意而不當處置疾病，1758年詞義擴大為利用職務信任圖利自己的違法行為。",
+    "derivatives": [{ "word": "practice", "pos": "n., v.", "zh": "業務；執業" }],
+    "example": "Doctors must pay a lot for malpractice insurance.",
+    "example_zh": "醫師必須支付高額的醫療過失保險費。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malpractice", "ipa": "/mælˈpræktɪs/", "ipaSource": "Dictionary.com（Wiktionary 未列 IPA）" }
+  },
+  {
+    "word": "malignant",
+    "prefixId": "mal",
+    "pos": "a.",
+    "phonetic": "məˈlɪɡnənt",
+    "zh": "惡性的，惡意的",
+    "parts": [{ "text": "mal(e)-", "gloss": "壞地（male）" }, { "text": "gnant", "gloss": "生成、天生（gignere）" }],
+    "etymology": "1560年代最初形容疾病，古法文 malignant，晚期拉丁 malignantem（malignare 惡意加害的現在分詞），上溯 malignus（性惡的，male 壞地＋ 源自 gignere 生的 -gnus）——1590年代起也轉用於形容蓄意加害他人的人。",
+    "derivatives": [{ "word": "malignance", "pos": "n.", "zh": "惡性，惡意" }, { "word": "malignancy", "pos": "n.", "zh": "惡性，惡意" }, { "word": "malign", "pos": "a., v.", "zh": "惡意的，惡意性的；誹謗，中傷" }],
+    "example": "The protagonist fell into the hands of malignant fate. The tumor tested malignant.",
+    "example_zh": "主角落入了惡毒命運的掌控。這顆腫瘤檢驗結果為惡性。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malignant", "ipa": "/məˈlɪɡnənt/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "malevolent",
+    "prefixId": "mal",
+    "pos": "a.",
+    "phonetic": "məˈlɛvələnt",
+    "zh": "惡意的，惡毒的",
+    "parts": [{ "text": "male-", "gloss": "壞地" }, { "text": "volent", "gloss": "意欲、希望（velle）" }],
+    "etymology": "約1500年古法文 malivolent，拉丁 malevolentem，male（壞地）＋ velle 現在分詞 volentem（想要）——字面即心懷惡念，指對他人存有惡意。",
+    "derivatives": [{ "word": "malevolence", "pos": "n.", "zh": "惡意，惡毒" }],
+    "example": "The rumor was malevolent and deliberate.",
+    "example_zh": "這則謠言既惡毒又是蓄意的。",
+    "sources": { "page": "IMG_1644", "etymonline": "https://www.etymonline.com/word/malevolent", "ipa": "/məˈlɛvələnt/", "ipaSource": "Wiktionary" }
+  }
+]

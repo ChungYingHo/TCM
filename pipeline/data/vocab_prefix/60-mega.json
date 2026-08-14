@@ -1,0 +1,41 @@
+[
+  {
+    "word": "megaphone",
+    "prefixId": "mega",
+    "pos": "n.",
+    "phonetic": "ˈmɛɡəˌfon",
+    "zh": "擴音器",
+    "parts": [{ "text": "mega-", "gloss": "大（megas）" }, { "text": "phone", "gloss": "聲音（PIE *bha- 說）" }],
+    "etymology": "1878年出現（可能由愛迪生命名），希臘 megas（大）與 phone（聲音）組成，指擴音用的漏斗狀器具。",
+    "derivatives": [],
+    "example": "The leader of the parade uses a megaphone to keep order.",
+    "example_zh": "遊行隊伍的領隊用擴音器來維持秩序。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/megaphone", "ipa": "/ˈmɛɡəˌfoʊn/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）" }
+  },
+  {
+    "word": "megabyte",
+    "prefixId": "mega",
+    "pos": "n.",
+    "phonetic": "ˈmɛɡəˌbaɪt",
+    "zh": "百萬位元組",
+    "parts": [{ "text": "mega-", "gloss": "百萬（希臘 megas「大」引申）" }, { "text": "byte", "gloss": "位元組" }],
+    "etymology": "1972年字首 mega-（希臘 megas「大」，科學上引申表百萬倍）與電腦術語 byte 組成，指一百萬位元組。",
+    "derivatives": [],
+    "example": "This is a small, 512-megabyte SD card.",
+    "example_zh": "這是一張小容量、512百萬位元組的SD記憶卡。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/megabyte", "ipa": "/ˈmɛɡəˌbaɪt/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "megalomaniac",
+    "prefixId": "mega",
+    "pos": "n.",
+    "phonetic": "ˌmɛɡəloˈmenɪæk",
+    "zh": "自大狂",
+    "parts": [{ "text": "megalo-", "gloss": "誇大、巨大（megas 組合形）" }, { "text": "maniac", "gloss": "…狂、患…狂的人（mania 瘋狂）" }],
+    "etymology": "名詞1882年、形容詞1883年出現，法文 mégalomanie，megalo-（誇大、巨大）與 mania（瘋狂）組成，母詞 megalomania（1866）指自認偉大、有權勢而妄自尊大的精神失常。",
+    "derivatives": [{ "word": "megalomania", "pos": "n.", "zh": "自大狂" }],
+    "example": "The man suffers from megalomania and believes he must save the world.",
+    "example_zh": "這名男子患有自大狂，並深信自己必須拯救世界。",
+    "sources": { "page": "IMG_1655", "etymonline": "https://www.etymonline.com/word/megalomaniac", "ipa": "/ˌmɛɡəloʊˈmeɪniæk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o，eɪ→e）" }
+  }
+]

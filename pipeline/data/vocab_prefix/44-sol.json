@@ -1,0 +1,67 @@
+[
+  {
+    "word": "solo",
+    "prefixId": "sol",
+    "pos": "n., a.",
+    "phonetic": "ˈsolo",
+    "zh": "單人表演（的）",
+    "parts": [{ "text": "sol-", "gloss": "獨自的（solus）" }],
+    "etymology": "1690年代經義大利文 solo「單獨的」，直接承拉丁 solus「獨自的」，原指僅由一人演奏或演唱的樂曲。",
+    "derivatives": [],
+    "example": "The dancer performed a solo, accompanied by the piano. Charles Lindberg's solo flight across the Atlantic won him lasting fame.",
+    "example_zh": "這位舞者表演了一段獨舞，由鋼琴伴奏。查爾斯·林白隻身飛越大西洋的壯舉為他贏得了不朽的名聲。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/solo", "ipa": "/ˈsoʊloʊ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）" }
+  },
+  {
+    "word": "sole",
+    "prefixId": "sol",
+    "pos": "a.",
+    "phonetic": "sol",
+    "zh": "唯一的，獨家的",
+    "parts": [{ "text": "sol-", "gloss": "獨自的、唯一的（solus）" }],
+    "etymology": "古法文 soul「唯一的、單獨的」，源自拉丁 solus「獨自、唯一的」。",
+    "derivatives": [],
+    "example": "The man was the sole survivor of the plane crash.",
+    "example_zh": "這名男子是這場空難中唯一的生還者。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/sole", "ipa": "/soʊl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）", "spellingNote": "另有「鰈魚／腳底」義的同形詞，源自拉丁 solea「鞋底」，與表唯一的 solus 語源無關，同形異源勿混淆" }
+  },
+  {
+    "word": "consolidate",
+    "prefixId": "sol",
+    "pos": "v.",
+    "phonetic": "kənˈsɑlədet",
+    "zh": "鞏固，合併",
+    "parts": [{ "text": "con-", "gloss": "一起、共同" }, { "text": "solid", "gloss": "堅實完整的（solidus，非「獨自」的 solus）" }],
+    "etymology": "陷阱字：拉丁過去分詞 consolidatus（com 一起＋ solidare 使堅固），solidare 源自 solidus「堅實完整的」，與表「獨自」的 solus 是兩個不同詞根，僅外形相似；1510年代進入英文表合併為一體。",
+    "derivatives": [{ "word": "consolidation", "pos": "n.", "zh": "鞏固，合併" }],
+    "example": "The new CEO consolidated his power by inserting his people into key positions. The two companies consolidated to be more competitive.",
+    "example_zh": "這位新任執行長藉由安插自己人到關鍵職位來鞏固權力。這兩間公司合併以提升競爭力。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/consolidate", "ipa": "/kənˈsɑlədeɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）", "spellingNote": "陷阱字：solid- 源自 solidus（堅固、完整），語意上與「一／獨自」無關，收入本表僅因拼寫含 sol-" }
+  },
+  {
+    "word": "soliloquy",
+    "prefixId": "sol",
+    "pos": "n.",
+    "phonetic": "səˈlɪləkwɪ",
+    "zh": "獨白",
+    "parts": [{ "text": "soli-", "gloss": "獨自的（solus）" }, { "text": "loqu", "gloss": "說話（loqui）" }],
+    "etymology": "晚期拉丁 soliloquium「自言自語」（solus 獨自＋ loqui 說話），據 Etymonline 記載此拉丁新詞是奧古斯丁仿希臘 monologia 所創。",
+    "derivatives": [{ "word": "soliloquize", "pos": "v.", "zh": "獨白" }],
+    "example": "Most people are familiar with the famous soliloquy that begins \"To be or not to be.\"",
+    "example_zh": "大多數人都熟悉那段以「生存還是毀滅」開頭的著名獨白。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/soliloquy", "ipa": "/səˈlɪləkwi/", "ipaSource": "Wiktionary", "phoneticNote": "字尾 -y 作 ɪ" }
+  },
+  {
+    "word": "solitude",
+    "prefixId": "sol",
+    "pos": "n.",
+    "phonetic": "ˈsɑlɪˌtud",
+    "zh": "獨處",
+    "parts": [{ "text": "soli-", "gloss": "獨自的（solus）" }, { "text": "tude", "gloss": "抽象名詞字尾（-tudo）" }],
+    "etymology": "古法文 solitude，直接源自拉丁 solitudo「孤獨、獨處之地」，詞根即 solus「獨自的」。",
+    "derivatives": [{ "word": "solitary", "pos": "a.", "zh": "單獨的" }],
+    "example": "I often go by myself to the mountains to enjoy the solitude.",
+    "example_zh": "我常常獨自上山享受獨處的時光。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/solitude", "ipa": "/ˈsɑlɪˌtud/", "ipaSource": "Wiktionary" }
+  }
+]

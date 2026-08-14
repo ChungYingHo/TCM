@@ -1,0 +1,28 @@
+[
+  {
+    "word": "pentagon",
+    "prefixId": "pent",
+    "pos": "n.",
+    "phonetic": "ˈpɛntəˌɡɑn",
+    "zh": "五邊形",
+    "parts": [{ "text": "penta-", "gloss": "五" }, { "text": "gon", "gloss": "角，邊（gōnia）" }],
+    "etymology": "1560年代法文 pentagone 或晚期拉丁 pentagonum，希臘 pentagōnos「五角的」（pente 五＋ gōnia 角）——本義五邊形，1942年完工的美國五角大廈因建築形狀得名，1945年起也借指美國軍方領導層。",
+    "derivatives": [],
+    "example": "The Defense Department is located in the Pentagon.",
+    "example_zh": "國防部設於五角大廈。",
+    "sources": { "page": "IMG_1652", "etymonline": "https://www.etymonline.com/word/pentagon", "ipa": "/ˈpɛntəˌɡɑn/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "pentathlon",
+    "prefixId": "pent",
+    "pos": "n.",
+    "phonetic": "pɛnˈtæθlən",
+    "zh": "五項運動",
+    "parts": [{ "text": "penta-", "gloss": "五" }, { "text": "athlon", "gloss": "競賽、獎品（希臘 athlon，來源不詳）" }],
+    "etymology": "1650年代希臘 pentathlon「五項競賽」（pente 五＋ athlon 獎品、競賽）——原指古希臘同一天由同一批選手進行的五項運動項目，現代奧運五項運動於1912年確立。",
+    "derivatives": [],
+    "example": "The modern pentathlon includes swimming, running, horseback-riding, fencing, and shooting.",
+    "example_zh": "現代五項運動包括游泳、跑步、馬術、擊劍與射擊。",
+    "sources": { "page": "IMG_1652", "etymonline": "https://www.etymonline.com/word/pentathlon", "ipa": "/pɛnˈtæθlən/", "ipaSource": "Dictionary.com（Wiktionary 僅音檔）" }
+  }
+]

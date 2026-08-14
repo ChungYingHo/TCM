@@ -1,0 +1,80 @@
+[
+  {
+    "word": "duplicate",
+    "prefixId": "du",
+    "pos": "n., v., a.",
+    "phonetic": "ˈduplɪkət",
+    "zh": "複製品；複製；複製的",
+    "parts": [{ "text": "du-", "gloss": "二、兩（duo）" }, { "text": "plic", "gloss": "折疊（plicare）" }],
+    "etymology": "拉丁 duplicare（過去分詞 duplicatus），duo「二」＋ plicare「摺疊」——字面是摺兩摺；15世紀初先作形容詞，15世紀晚期發展出動詞，1530年代再產生名詞。",
+    "derivatives": [],
+    "example": "This painting is a duplicate of the original. A cell duplicates itself when it divides. The teacher handed out duplicate copies to all the students.",
+    "example_zh": "這幅畫是原作的複製品。細胞分裂時會自我複製。老師把複本分發給所有學生。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/duplicate", "ipa": "n./a. /ˈd(j)uː.plɪ.kət/; v. /ˈd(j)uː.plɪˌkeɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（美式常無 y 滑音，uː→u，eɪ→e，此存 n./a. 形）" }
+  },
+  {
+    "word": "dual",
+    "prefixId": "du",
+    "pos": "a.",
+    "phonetic": "ˈduəl",
+    "zh": "雙重的，二元的",
+    "parts": [{ "text": "du-", "gloss": "二、兩（duo）" }, { "text": "al", "gloss": "…的" }],
+    "etymology": "拉丁 dualis「雙數的、包含二的」，源自 duo「二」，約1600年以文法「雙數」術語進入英文，1650年代才擴大為由兩部分構成的一般形容詞用法。",
+    "derivatives": [],
+    "example": "The government official is attacked for holding dual citizenship.",
+    "example_zh": "這位政府官員因持有雙重國籍而受到抨擊。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/dual", "ipa": "/ˈd(j)uː.əl/, /duːl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（美式常無 y 滑音，uː→u）", "spellingNote": "常與同音的 duel（決鬥）誤認同源；duel 實源自拉丁 bellum 戰爭的古體 duellum，中世紀才被附會與 duo 有關，兩詞並非真正同源" }
+  },
+  {
+    "word": "duo",
+    "prefixId": "du",
+    "pos": "n.",
+    "phonetic": "ˈduo",
+    "zh": "雙人表演，二人組，一對",
+    "parts": [{ "text": "duo", "gloss": "二（拉丁文「二」本字，整詞借入）" }],
+    "etymology": "直接借自拉丁 duo「二」，1580年代經義大利文或法文進入英文，原指二重唱的音樂作品，1887年才發展出兩人搭檔的用法；字尾 -o 後來也被 trio 仿造沿用。",
+    "derivatives": [{ "word": "duet", "pos": "n.", "zh": "雙人表演，二重奏" }],
+    "example": "The soprano and the alto sang a beautiful duet.",
+    "example_zh": "女高音和女中音唱了一段優美的二重唱。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/duo", "ipa": "/ˈdu.oʊ/, /ˈdju.oʊ/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o，取無 y 滑音式）" }
+  },
+  {
+    "word": "duplicitous",
+    "prefixId": "du",
+    "pos": "a.",
+    "phonetic": "duˈplɪsətəs",
+    "zh": "欺騙的，不誠實的",
+    "parts": [{ "text": "du-", "gloss": "二、兩" }, { "text": "plic", "gloss": "折疊（引申「表裡不一」）" }],
+    "etymology": "1831年由名詞 duplicity（早期15世紀，古法文 duplicite，晚期拉丁 duplicitatem「雙重性」）加形容詞字尾 -ous 構成；核心來自拉丁 duplex（duo 二＋ plicare 折疊），表口是心非、表裡不一。",
+    "derivatives": [{ "word": "duplicity", "pos": "n.", "zh": "欺騙" }],
+    "example": "The agent was accused of duplicity in brokering the deal.",
+    "example_zh": "這名仲介被指控在促成這筆交易時有欺瞞行為。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/duplicitous", "ipa": "/duːˈplɪs.ə.təs/, /djuːˈplɪs.ə.təs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（uː→u，取無 y 滑音式）" }
+  },
+  {
+    "word": "dichotomy",
+    "prefixId": "du",
+    "pos": "n.",
+    "phonetic": "daɪˈkɑtəmɪ",
+    "zh": "二分法",
+    "parts": [{ "text": "dicho-", "gloss": "一分為二、分開（希臘 dikha，非 duo 家族）" }, { "text": "tomy", "gloss": "切、割（temnein）" }],
+    "etymology": "陷阱字：希臘 dikhotomia「切成兩半」，dikha（一分為二、分開）＋ tomia（切割，源自 temnein）——約1600年以拉丁化形式進入英文。Etymonline 的 dikha 詞源與 duo／PIE *dwo-「二」的詞條並未互相參照，屬希臘文獨立的「分開」語根，並非真正的 du-/dou- 家族成員，教材歸入本組是取字面聯想。",
+    "derivatives": [],
+    "example": "In children's minds, there is a simple dichotomy between good and bad.",
+    "example_zh": "在孩子的心中，好與壞之間有著簡單的二分法。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/dichotomy", "ipa": "/daɪˈkɑt.ə.mi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（字尾 -y 作 ɪ）", "spellingNote": "陷阱字：希臘 dikha「分開」與 duo「二」並無直接同源關係，教材歸類取字面聯想" }
+  },
+  {
+    "word": "dilemma",
+    "prefixId": "du",
+    "pos": "n.",
+    "phonetic": "dɪˈlɛmə",
+    "zh": "兩難",
+    "parts": [{ "text": "di-", "gloss": "二（希臘 dis「兩次」縮短形，與 duo 同源）" }, { "text": "lemma", "gloss": "前提、命題（lambanein 取）" }],
+    "etymology": "晚期拉丁 dilemma，希臘 dilemma「雙重命題」，di-（二，dis「兩次」縮短形）＋ lemma（前提，源自 lambanein 取）——1520年代作修辭學術語，1580年代衍生出兩害相權的通俗義。",
+    "derivatives": [],
+    "example": "She faces the dilemma of disobeying her father or losing the man she loves.",
+    "example_zh": "她面臨著違抗父親或失去她所愛之人的兩難處境。",
+    "sources": { "page": "IMG_1650", "etymonline": "https://www.etymonline.com/word/dilemma", "ipa": "/dɪˈlɛm.ə/, /daɪˈlɛm.ə/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫", "spellingNote": "此字的 di- 是希臘 dis「兩次」縮短形，與 duo 同溯 PIE *dwo-，廣義上與 du-/dou- 家族確有親緣，但經希臘語支而非拉丁 duo- 直接構詞，與 dichotomy（同源關係查無明證）情況不同" }
+  }
+]

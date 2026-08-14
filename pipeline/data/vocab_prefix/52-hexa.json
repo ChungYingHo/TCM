@@ -1,0 +1,41 @@
+[
+  {
+    "word": "hexagonal",
+    "prefixId": "hexa",
+    "pos": "a.",
+    "phonetic": "hɛkˈsæɡənəl",
+    "zh": "六邊形的",
+    "parts": [{ "text": "hexa-", "gloss": "六（希臘 hex）" }, { "text": "gon", "gloss": "角（gōnia）" }],
+    "etymology": "希臘 hexagonon（hex 六＋ gōnia 角）經拉丁 hexagonum 演變成英文 hexagon（1560年代），1570年代再加形容詞字尾 -al。",
+    "derivatives": [{ "word": "hexagon", "pos": "n.", "zh": "六邊形" }],
+    "example": "Snowflakes are hexagons.",
+    "example_zh": "雪花是六邊形。",
+    "sources": { "page": "IMG_1652", "etymonline": "https://www.etymonline.com/word/hexagonal", "ipa": "/hɛkˈsæɡənəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "hexapod",
+    "prefixId": "hexa",
+    "pos": "n.",
+    "phonetic": "ˈhɛksəˌpɑd",
+    "zh": "昆蟲",
+    "parts": [{ "text": "hexa-", "gloss": "六（希臘 hex）" }, { "text": "pod", "gloss": "腳（pous，字幹 pod-）" }],
+    "etymology": "1660年代近代拉丁 hexapodus，hex（六）＋ pous（字幹 pod- 腳）——字面是六足的，後衍生泛指昆蟲的用法（形容詞用法遲至1856年）。",
+    "derivatives": [],
+    "example": "Ants are the most common hexapods.",
+    "example_zh": "螞蟻是最常見的昆蟲（六足動物）。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/hexapod", "ipa": "/ˈhɛksəpɑd/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "sexagenarian",
+    "prefixId": "hexa",
+    "pos": "n.",
+    "phonetic": "ˌsɛksədʒɪˈnɛrɪən",
+    "zh": "六十至六十九歲的人",
+    "parts": [{ "text": "sexa-", "gloss": "六（拉丁 sex）" }, { "text": "gen", "gloss": "乘十（-ginta，sexaginta＝六十）" }],
+    "etymology": "拉丁 sexagenarius「含六十的」，sexaginta「六十」由 sex（六）＋ -ginta（乘十）組成，英文1738年起作名詞、1836年起作形容詞。",
+    "derivatives": [],
+    "example": "My uncle is a sexagenarian but he hasn't retired yet.",
+    "example_zh": "我叔叔已經六十多歲了，但他還沒退休。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/sexagenarian", "ipa": "/ˌsɛksədʒɪˈnɛriən/", "ipaSource": "Wiktionary", "spellingNote": "此字用拉丁字首 sexa-（六），與同組 hexagonal／hexapod 的希臘字首 hexa- 不同源語言，僅同溯自更古老的 PIE 詞根 *s(w)eks，非同一路徑" }
+  }
+]

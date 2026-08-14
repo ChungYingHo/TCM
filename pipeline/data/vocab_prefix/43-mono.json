@@ -1,0 +1,67 @@
+[
+  {
+    "word": "monotonous",
+    "prefixId": "mono",
+    "pos": "a.",
+    "phonetic": "məˈnɑtənəs",
+    "zh": "單調的",
+    "parts": [{ "text": "mono-", "gloss": "單一（monos）" }, { "text": "tonous", "gloss": "音調的（tonos）" }],
+    "etymology": "希臘 monotonos「單一音調的」，monos（單一）＋ tonos（音調）——1750年代形容聲音單調，1783年起引申為枯燥乏味。",
+    "derivatives": [{ "word": "monotone", "pos": "n.", "zh": "單調" }],
+    "example": "The lecturer spoke in a monotonous voice.",
+    "example_zh": "這位講者用單調的語氣說話。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/monotonous", "ipa": "/məˈnɑtənəs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "monogamous",
+    "prefixId": "mono",
+    "pos": "a.",
+    "phonetic": "məˈnɑɡəməs",
+    "zh": "行一夫一妻制的",
+    "parts": [{ "text": "mono-", "gloss": "單一（monos）" }, { "text": "gamous", "gloss": "婚姻的（gamos）" }],
+    "etymology": "中世紀拉丁 monogamus，希臘 monogamos「只結一次婚的」（monos 單一＋ gamos 婚姻），1778年進入英文表一夫一妻制的。",
+    "derivatives": [{ "word": "monogamy", "pos": "n.", "zh": "一夫一妻制" }],
+    "example": "Monogamy is the norm in modern society.",
+    "example_zh": "一夫一妻制是現代社會的常態。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/monogamous", "ipa": "/məˈnɑɡəməs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "monarchy",
+    "prefixId": "mono",
+    "pos": "n.",
+    "phonetic": "ˈmɑnɚkɪ",
+    "zh": "帝制，君主制",
+    "parts": [{ "text": "mon-", "gloss": "單一（monos，母音前省略 o）" }, { "text": "archy", "gloss": "統治（arkhein）" }],
+    "etymology": "古法文 monarchie，晚期拉丁 monarchia、希臘 monarkhia，mon（單一）＋ arkhein（統治）——字面是一人統治。",
+    "derivatives": [{ "word": "monarch", "pos": "n.", "zh": "帝王，君主" }],
+    "example": "The British political system is one of constitutional monarchy.",
+    "example_zh": "英國的政治體制是君主立憲制。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/monarchy", "ipa": "/ˈmɑnɚki/", "ipaSource": "Wiktionary", "phoneticNote": "字尾 -y 作 ɪ" }
+  },
+  {
+    "word": "monologue",
+    "prefixId": "mono",
+    "pos": "n.",
+    "phonetic": "ˈmɑnəˌlɔg",
+    "zh": "獨白",
+    "parts": [{ "text": "mono-", "gloss": "單一（monos）" }, { "text": "logue", "gloss": "言語、說話（logos，源自 legein）" }],
+    "etymology": "法文 monologue，晚期希臘 monologos「自言自語的」（monos 單一＋ logos 言語，源自 legein 說）——一人獨自的長篇言論。",
+    "derivatives": [],
+    "example": "He subjected me to a monologue on his last stay in hospital.",
+    "example_zh": "他對我長篇大論地講述他上次住院的經過。",
+    "sources": { "page": "IMG_1647", "etymonline": "https://www.etymonline.com/word/monologue", "ipa": "/ˈmɑnəˌlɔɡ/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "monopoly",
+    "prefixId": "mono",
+    "pos": "n.",
+    "phonetic": "məˈnɑpəlɪ",
+    "zh": "壟斷，專賣",
+    "parts": [{ "text": "mono-", "gloss": "單一（monos）" }, { "text": "poly", "gloss": "販賣（polein）" }],
+    "etymology": "拉丁 monopolium，希臘 monopolion「獨家販賣權」（monos 單一＋ polein 販賣），1530年代進入英文指對商品或貿易的獨占。",
+    "derivatives": [{ "word": "monopolize", "pos": "v.", "zh": "壟斷" }],
+    "example": "The government here has a monopoly on public utilities.",
+    "example_zh": "這裡的政府壟斷了公用事業。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/monopoly", "ipa": "/məˈnɑpəli/", "ipaSource": "Wiktionary", "phoneticNote": "字尾 -y 作 ɪ" }
+  }
+]

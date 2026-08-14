@@ -1,0 +1,80 @@
+[
+  {
+    "word": "multiple",
+    "prefixId": "multi",
+    "pos": "a.",
+    "phonetic": "ˈmʌltɪpəl",
+    "zh": "多重的",
+    "parts": [{ "text": "multi-", "gloss": "多" }, { "text": "ple", "gloss": "…重、…倍（plus）" }],
+    "etymology": "1640年代法文 multiple，晚期拉丁 multiplus（多重的），multi-（多）＋ plus（…重）——由多個部分或關係構成的。",
+    "derivatives": [{ "word": "multiplicity", "pos": "n.", "zh": "多重，多樣" }],
+    "example": "The inventor holds multiple patents. All the questions in the quiz will be in multiple choice.",
+    "example_zh": "這位發明家持有多項專利。這場小考的所有題目都會是選擇題。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/multiple", "ipa": "/ˈmʌltɪpəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "multiply",
+    "prefixId": "multi",
+    "pos": "v.",
+    "phonetic": "ˈmʌltɪˌplaɪ",
+    "zh": "繁殖，乘",
+    "parts": [{ "text": "multi-", "gloss": "多" }, { "text": "ply", "gloss": "使摺疊、使成多重（plicare）" }],
+    "etymology": "古法文 multiplier，拉丁 multiplicare（使增加），源於 multiplex（multus 多＋ -plex …重，PIE 字根 *plek- 編織）——詞義後擴及生育、繁殖與算術上的乘。",
+    "derivatives": [{ "word": "multiplication", "pos": "n.", "zh": "繁殖，乘法" }],
+    "example": "\"Be fruitful and multiply.\" Multiply the cost by 5%, and that's the tax you have to pay.",
+    "example_zh": "「要生養眾多。」把成本乘以5%，就是你必須繳的稅金。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/multiply", "ipa": "/ˈmʌltɪplaɪ/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "multidisciplinary",
+    "prefixId": "multi",
+    "pos": "a.",
+    "phonetic": "ˌmʌltɪˈdɪsəplɪˌnɛrɪ",
+    "zh": "跨領域的，涉及多項學術的",
+    "parts": [{ "text": "multi-", "gloss": "多" }, { "text": "discipline", "gloss": "學科（disciplina）" }],
+    "etymology": "1949年 multi-（多）＋ disciplinary（discipline 學科，源自古法文 descepline、拉丁 disciplina 教導、學習，加形容詞字尾 -ary）——結合多個學術領域或方法。",
+    "derivatives": [{ "word": "discipline", "pos": "n., v.", "zh": "學科；紀律，訓練；懲戒" }],
+    "example": "The government has set up a multidisciplinary expert panel to tackle environmental degradation.",
+    "example_zh": "政府已成立一個跨領域專家小組，以因應環境惡化的問題。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/multidisciplinary", "ipa": "/mʌltiˈdɪsəplɪnɛri/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "multilateral",
+    "prefixId": "multi",
+    "pos": "a.",
+    "phonetic": "ˌmʌltɪˈlætərəl",
+    "zh": "多邊的",
+    "parts": [{ "text": "multi-", "gloss": "多" }, { "text": "lateral", "gloss": "側邊的（latus）" }],
+    "etymology": "1690年代幾何學用語，指有許多邊的，multi-（多）＋ lateral（源自古法文 latéral，拉丁 lateralis）——1802年起發展出涉及三個以上國家的外交政治含義，仿 bilateral 構詞。",
+    "derivatives": [],
+    "example": "The G20 is a multilateral summit.",
+    "example_zh": "G20 是一場多邊高峰會。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/multilateral", "ipa": "/ˌmʌltiˈlætərəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "multilingual",
+    "prefixId": "multi",
+    "pos": "a.",
+    "phonetic": "ˌmʌltɪˈlɪŋɡwəl",
+    "zh": "多語的",
+    "parts": [{ "text": "multi-", "gloss": "多" }, { "text": "lingual", "gloss": "語言的（lingua）" }],
+    "etymology": "1832年 multi-（源自拉丁 multus 多）＋ lingual（源自拉丁 lingua 舌頭、語言）——使用、書寫或具有多種語言特徵的。",
+    "derivatives": [{ "word": "linguistics", "pos": "n.", "zh": "語言學" }, { "word": "linguist", "pos": "n.", "zh": "語言學家" }, { "word": "linguistic", "pos": "a.", "zh": "語言的" }],
+    "example": "Singapore is a multilingual nation.",
+    "example_zh": "新加坡是個多語言的國家。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/multilingual", "ipa": "/ˌmʌltiˈlɪŋɡwəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "multitudinous",
+    "prefixId": "multi",
+    "pos": "a.",
+    "phonetic": "ˌmʌltəˈtudənəs",
+    "zh": "眾多的",
+    "parts": [{ "text": "multi-", "gloss": "多（multus）" }, { "text": "tudin", "gloss": "抽象名詞字尾，表狀態、數量" }],
+    "etymology": "約1600年原意幅員廣大的，1620年代衍生數量眾多的，拉丁 multitudin-（multitudo 群眾、大量，本於 multus 多）加形容詞字尾 -ous，莎士比亞《馬克白》名句使此詞廣為流傳。",
+    "derivatives": [{ "word": "multitude", "pos": "n.", "zh": "眾多，大眾，多數人" }],
+    "example": "The reporters asked a multitude of questions. The President must consider the multitude instead of the few.",
+    "example_zh": "記者們問了眾多問題。總統必須考量大多數人，而非少數人。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/multitudinous", "ipa": "/ˌməltəˈt(j)ud(ɪ)n̩əs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（省略可選 j／ɪ，音節性 n̩→ən）" }
+  }
+]

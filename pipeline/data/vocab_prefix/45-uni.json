@@ -1,0 +1,80 @@
+[
+  {
+    "word": "uniform",
+    "prefixId": "uni",
+    "pos": "n., a.",
+    "phonetic": "ˈjunɪˌfɔrm",
+    "zh": "制服；劃一的，一致的",
+    "parts": [{ "text": "uni-", "gloss": "一" }, { "text": "form", "gloss": "形狀（forma）" }],
+    "etymology": "法文 uniforme，拉丁 uniformis（uni- 一＋ forma 形狀）——原意始終同一形狀、不曾改變，1748年起也指同一團體成員所穿的同款服裝，即今日的制服。",
+    "derivatives": [],
+    "example": "Students at that private school have to wear uniforms. These receptionists are all of uniform height.",
+    "example_zh": "那所私立學校的學生必須穿著制服。這些接待員的身高都一致。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/uniform", "ipa": "/ˈjunɪˌfɔɹm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）" }
+  },
+  {
+    "word": "unilateral",
+    "prefixId": "uni",
+    "pos": "a.",
+    "phonetic": "ˌjunɪˈlætərəl",
+    "zh": "單邊的，片面的",
+    "parts": [{ "text": "uni-", "gloss": "一" }, { "text": "lateral", "gloss": "側邊的（latus）" }],
+    "etymology": "1802年近代拉丁 unilateralis，unus 中性形 unum＋ latus（屬格 lateralis 側、邊）——意為僅屬一方的，法學上引申指僅由一方訂立的（協議），1914年起亦見於單邊裁軍一詞。",
+    "derivatives": [],
+    "example": "The President declared a unilateral cut in nuclear warheads.",
+    "example_zh": "總統宣布單方面削減核彈頭。",
+    "sources": { "page": "IMG_1648", "etymonline": "https://www.etymonline.com/word/unilateral", "ipa": "/ˌjuːnɪˈlætərəl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（去長音）" }
+  },
+  {
+    "word": "unanimous",
+    "prefixId": "uni",
+    "pos": "a.",
+    "phonetic": "juˈnænəməs",
+    "zh": "無異議的，意見一致的",
+    "parts": [{ "text": "un-", "gloss": "一（uni- 省音形）" }, { "text": "anim", "gloss": "心智、精神（animus）" }],
+    "etymology": "1610年代拉丁 unanimus「一心的、意見一致的」，unus（一）＋ animus（心智、精神）——字面是同一個心，引申為意見完全一致。",
+    "derivatives": [{ "word": "unanimity", "pos": "n.", "zh": "意見一致" }],
+    "example": "The bill had unanimous approval in Congress.",
+    "example_zh": "這項法案在國會獲得無異議通過。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/unanimous", "ipa": "/juˈnænəməs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "unification",
+    "prefixId": "uni",
+    "pos": "n.",
+    "phonetic": "ˌjunəfəˈkeʃən",
+    "zh": "統一",
+    "parts": [{ "text": "uni-", "gloss": "一" }, { "text": "fic", "gloss": "做、使成為（facere）" }],
+    "etymology": "1849年源自動詞 unify（古法文 unifier，或直接源於後期拉丁 unificare 使成為一），unificare 由 uni-（一）加表做、使成為的 facere 組成，指統一的動作或狀態。",
+    "derivatives": [{ "word": "unify", "pos": "v.", "zh": "統一" }],
+    "example": "The unification of East and West Germany has been a success so far.",
+    "example_zh": "東西德的統一至今是成功的。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/unification", "ipa": "/ˌjunəfəˈkeɪʃən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  },
+  {
+    "word": "union",
+    "prefixId": "uni",
+    "pos": "n.",
+    "phonetic": "ˈjunjən",
+    "zh": "結合，工會，聯邦",
+    "parts": [{ "text": "uni-", "gloss": "一（unus）" }, { "text": "on", "gloss": "名詞字尾（unio 合一）" }],
+    "etymology": "15世紀初盎格魯法文 unioun，古法文 union，後期拉丁 unionem（主格 unio，古典拉丁文中也指一顆珍珠），本於拉丁 unus「一」，字面即合而為一。",
+    "derivatives": [{ "word": "unite", "pos": "v.", "zh": "結合，團結" }],
+    "example": "Marriage should be the union of two people in love. The labor union is a powerful organization. The US President traditionally delivers a \"State of the Union\" address at the beginning of a new year.",
+    "example_zh": "婚姻應該是兩個相愛的人的結合。這個工會是個強大的組織。美國總統照慣例會在新年之初發表「國情咨文」演說。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/union", "ipa": "/ˈjuːnjən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（去長音）" }
+  },
+  {
+    "word": "unique",
+    "prefixId": "uni",
+    "pos": "a.",
+    "phonetic": "juˈnik",
+    "zh": "獨一無二的",
+    "parts": [{ "text": "uni-", "gloss": "一" }, { "text": "que", "gloss": "獨一的（unicus 字尾 -icus）" }],
+    "etymology": "約1600年16世紀法文 unique，拉丁 unicus「唯一的、獨一無二的」（unus 一＋ -icus）——1610年代起明確指自成一類、獨一無二。",
+    "derivatives": [{ "word": "uniqueness", "pos": "n.", "zh": "獨特性" }],
+    "example": "Your handwriting is unique and easily recognizable.",
+    "example_zh": "你的筆跡獨一無二，很容易辨認。",
+    "sources": { "page": "IMG_1649", "etymonline": "https://www.etymonline.com/word/unique", "ipa": "/juːˈniːk/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（去長音）", "spellingNote": "常被誤用為特別、罕見甚至比較級化（very unique），本義應是不可比較的獨一無二" }
+  }
+]

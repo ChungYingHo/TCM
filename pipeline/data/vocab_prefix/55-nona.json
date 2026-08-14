@@ -1,0 +1,41 @@
+[
+  {
+    "word": "nanometer",
+    "prefixId": "nona",
+    "pos": "n.",
+    "phonetic": "ˈnænəˌmitɚ",
+    "zh": "奈米",
+    "parts": [{ "text": "nano-", "gloss": "侏儒→極小（希臘 nanos，與「九」無關）" }, { "text": "meter", "gloss": "測量（metron）" }],
+    "etymology": "陷阱字：meter 部分源自希臘 metron「測量」；字首 nano- 是1947年國際化學聯合會訂定、借希臘 nanos「侏儒」表十億分之一，與數字「九」無關，nanometer 一詞1963年起用。",
+    "derivatives": [],
+    "example": "One nanometer is one-billionth of a meter.",
+    "example_zh": "一奈米是一公尺的十億分之一。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/nanometer", "ipa": "/ˈnænəˌmitɚ/", "ipaSource": "Wiktionary", "spellingNote": "陷阱字：nano- 源自希臘「侏儒」，與數字「九」毫無語源關係，只是拼寫、發音都形似拉丁文「第九」字首 nona-，教材並列取的是功能相似（都能當數字/度量詞首），並非真正同源" }
+  },
+  {
+    "word": "nanotechnology",
+    "prefixId": "nona",
+    "pos": "n.",
+    "phonetic": "ˌnænotɛkˈnɑlədʒɪ",
+    "zh": "奈米科技",
+    "parts": [{ "text": "nano-", "gloss": "侏儒→極小（希臘 nanos，與「九」無關）" }, { "text": "techno", "gloss": "技藝（tekhnē）" }],
+    "etymology": "陷阱字：1974年出現（1990年代才普及），結合1947年訂定、源自希臘 nanos「侏儒」的字首 nano-（十億分之一，與「九」無關）與源自希臘 tekhnē「技藝」的 technology。",
+    "derivatives": [],
+    "example": "Nanotechnology involves working with atoms and molecules to build minuscule devices.",
+    "example_zh": "奈米科技涉及運用原子與分子來打造微小的裝置。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/nanotechnology", "ipa": "/ˌnænoʊtɛkˈnɑlədʒi/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o，字尾 -y 作 ɪ）", "spellingNote": "陷阱字：同 nanometer，此字的 nano- 是希臘「侏儒」，與「九」無關，跟真正表「九」的拉丁字首 nona- 只是形似的假同源詞" }
+  },
+  {
+    "word": "nonagenarian",
+    "prefixId": "nona",
+    "pos": "n.",
+    "phonetic": "ˌnɑnədʒɪˈnɛrɪən",
+    "zh": "九十至九十九歲的人",
+    "parts": [{ "text": "nona-", "gloss": "九（拉丁 nonus「第九」＜novem「九」）" }, { "text": "gen", "gloss": "乘十（-ginta，nonaginta＝九十）" }],
+    "etymology": "1776年拉丁 nonagenarius「含九十的」，nonaginta「九十」最終溯自 nonus「第九」（novem 九的縮略形，PIE 詞根 *newn 九）——這組詞裡真正與「九」同源的字首。",
+    "derivatives": [],
+    "example": "There are more female nonagenarians than male ones in Taiwan.",
+    "example_zh": "在台灣，九十多歲的女性人數比男性多。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/nonagenarian", "ipa": "/ˌnɑnədʒɪˈnɛriən/", "ipaSource": "Wiktionary", "spellingNote": "與 nanometer／nanotechnology 的 nano-（希臘「侏儒」）相對照：nona- 才是貨真價實源自拉丁「九」的字首，兩者形似純屬巧合" }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "word": "diaphanous",
+    "prefixId": "dia",
+    "pos": "a.",
+    "phonetic": "daɪˈæfənəs",
+    "zh": "薄而透明的",
+    "parts": [{ "text": "dia-", "gloss": "穿透、貫穿" }, { "text": "phainesthai", "gloss": "顯現、被看見" }],
+    "etymology": "1610年代中古拉丁 diaphanus，希臘 diaphanes「透明的」，dia-（穿透）＋ phainesthai（顯現）——字面是透光顯現，指介於 transparent 與 translucent 之間的狀態。",
+    "derivatives": [],
+    "example": "The bride wore a diaphanous veil.",
+    "example_zh": "新娘戴著一條薄透的面紗。",
+    "sources": { "page": "IMG_1638", "etymonline": "https://www.etymonline.com/word/diaphanous", "ipa": "/daɪˈæf.ən.əs/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "diagonal",
+    "prefixId": "dia",
+    "pos": "a., n.",
+    "phonetic": "daɪˈægənəl",
+    "zh": "斜的，對角的；對角線，斜線",
+    "parts": [{ "text": "dia-", "gloss": "貫穿、橫越" }, { "text": "gonia", "gloss": "角" }],
+    "etymology": "古法文 diagonal，拉丁 diagonalis（源自 diagonus 斜線，希臘 diagonios），dia-（貫穿）＋ gonia（角）——字面是從一角到另一角，指連接不相鄰兩角的直線。",
+    "derivatives": [],
+    "example": "The blanket is covered with diagonal stripes. The ramp was set at a low diagonal to make it easier for physically challenged patrons.",
+    "example_zh": "這條毯子上布滿斜紋。這個坡道設置成較低的斜角，方便行動不便的顧客使用。",
+    "sources": { "page": "IMG_1638", "etymonline": "https://www.etymonline.com/word/diagonal", "ipa": "/daɪˈæɡ(ə)nəl/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "dialectical",
+    "prefixId": "dia",
+    "pos": "a.",
+    "phonetic": "ˌdaɪəˈlɛktɪkəl",
+    "zh": "辯證的，方言的",
+    "parts": [{ "text": "dia-", "gloss": "彼此之間、交互" }, { "text": "legein", "gloss": "說話" }],
+    "etymology": "1540年代由 dialectic 加形容詞字尾 -al 構成；dialectic 源自希臘 dialektike（techne），字根 dialektos 由 dialegesthai（dia- 彼此之間＋ legein 說）構成，字面是彼此交談、辯論。",
+    "derivatives": [{ "word": "dialect", "pos": "n.", "zh": "方言" }, { "word": "dialectic", "pos": "n., a.", "zh": "辯證法；辯證的，方言的" }],
+    "example": "There are literally hundreds of different dialects in use in China.",
+    "example_zh": "中國實際使用的方言多達數百種。",
+    "sources": { "page": "IMG_1638", "etymonline": "https://www.etymonline.com/word/dialectical", "ipa": "/ˌdaɪəˈlɛktɪkəl/", "ipaSource": "Wiktionary（僅音檔，依同源詞 dialectic 加規則字尾推得）" }
+  },
+  {
+    "word": "diaphragm",
+    "prefixId": "dia",
+    "pos": "n.",
+    "phonetic": "ˈdaɪəˌfræm",
+    "zh": "橫隔膜",
+    "parts": [{ "text": "dia-", "gloss": "橫越、貫穿" }, { "text": "phragma", "gloss": "圍籬、隔板（phrassein）" }],
+    "etymology": "十四世紀晚期晚期拉丁與希臘 diaphragma，dia-（橫越）＋ phrassein（圍起、阻隔，字源不明）——字面是隔板，最初指分隔胸腔與腹腔的肌肉膜，1650年代起泛指任何分隔物。",
+    "derivatives": [],
+    "example": "Carrying around weight adds pressure on the diaphragm, which needs to move to breathe.",
+    "example_zh": "隨身負重會增加橫隔膜的壓力，而橫隔膜需要活動才能呼吸。",
+    "sources": { "page": "IMG_1638", "etymonline": "https://www.etymonline.com/word/diaphragm", "ipa": "/ˈdaɪəˌfɹæm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）" }
+  }
+]

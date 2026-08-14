@@ -1,0 +1,41 @@
+[
+  {
+    "word": "microcosm",
+    "prefixId": "micro",
+    "pos": "n.",
+    "phonetic": "ˈmaɪkrəˌkɑzəm",
+    "zh": "小宇宙，縮影，寫照",
+    "parts": [{ "text": "micro-", "gloss": "小" }, { "text": "cosm", "gloss": "世界、宇宙（kosmos）" }],
+    "etymology": "15世紀初源自中世紀拉丁 microcosmus，希臘 mikros（小）＋ kosmos（世界）——字面是微型世界，中世紀哲學家常以此比喻人即整個宇宙的縮影。",
+    "derivatives": [{ "word": "macrocosm", "pos": "n.", "zh": "大宇宙" }, { "word": "cosmos", "pos": "n.", "zh": "宇宙" }, { "word": "cosmic", "pos": "a.", "zh": "宇宙的，廣大的" }],
+    "example": "Our little town is a microcosm of modern society.",
+    "example_zh": "我們的小鎮是現代社會的縮影。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/microcosm", "ipa": "/ˈmaɪ.kɹəˌkɑz.əm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）" }
+  },
+  {
+    "word": "microbial",
+    "prefixId": "micro",
+    "pos": "a.",
+    "phonetic": "maɪˈkrobiəl",
+    "zh": "微生物的",
+    "parts": [{ "text": "micro-", "gloss": "小" }, { "text": "bi", "gloss": "生命（bios）" }],
+    "etymology": "1879年由 microbe 加形容詞字尾 -al 構成；microbe 於1878年由法國醫師 Sédillot 所創，取希臘 mikros（小）＋ bios（生命）——原意微小生命體（Etymonline 指出此組法依希臘文法嚴格直譯應為「短命的」，是常見的字源趣味陷阱）。",
+    "derivatives": [{ "word": "microbe", "pos": "n.", "zh": "微生物" }],
+    "example": "Microbes, or microorganisms, are essential to life, but they also cause a lot of our diseases.",
+    "example_zh": "微生物，或稱微小生物，是生命不可或缺的，但它們也造成我們許多的疾病。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/microbe", "ipa": "/maɪˈkɹoʊ.bi.əl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，oʊ→o）", "spellingNote": "mikros+bios 依希臘文法組合並不精確，嚴格直譯應為「短命的」而非「微小生命」" }
+  },
+  {
+    "word": "microeconomics",
+    "prefixId": "micro",
+    "pos": "n.",
+    "phonetic": "ˌmaɪkroˌɛkəˈnɑmɪks",
+    "zh": "個體經濟學",
+    "parts": [{ "text": "micro-", "gloss": "小" }, { "text": "economics", "gloss": "經濟學" }],
+    "etymology": "1948年由 micro-（小）＋ economics（經濟學，1580年代原指治家之術，1792年起衍生「財富的科學」義）構成，指探討個別因素與個人決策的經濟學分支。",
+    "derivatives": [{ "word": "macroeconomics", "pos": "n.", "zh": "總體經濟學" }, { "word": "economics", "pos": "n.", "zh": "經濟學" }, { "word": "economic", "pos": "a.", "zh": "經濟（學）的" }, { "word": "economical", "pos": "a.", "zh": "經濟劃算的" }],
+    "example": "One focus of microeconomics is on the roles of supply and demand in economic behavior.",
+    "example_zh": "個體經濟學的一項重點在於供給與需求在經濟行為中扮演的角色。",
+    "sources": { "page": "IMG_1640", "etymonline": "https://www.etymonline.com/word/microeconomics", "ipa": "/ˌmaɪ.kroʊˌɛk.əˈnɑm.ɪks/", "ipaSource": "Dictionary.com（Wiktionary 僅列非美式音）", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）" }
+  }
+]

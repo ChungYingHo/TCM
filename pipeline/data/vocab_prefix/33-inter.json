@@ -1,0 +1,93 @@
+[
+  {
+    "word": "interaction",
+    "prefixId": "inter",
+    "pos": "n.",
+    "phonetic": "ˌɪntɚˈækʃən",
+    "zh": "互動",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "action", "gloss": "行動（actio）" }],
+    "etymology": "1807年由 inter-（之間）＋ action（行動，源自拉丁 actio）構成，指事物彼此間的相互作用或影響。",
+    "derivatives": [{ "word": "interact", "pos": "v.", "zh": "互動" }, { "word": "interactive", "pos": "a.", "zh": "互動式的" }],
+    "example": "There's not enough interaction between management and the workers.",
+    "example_zh": "管理層與員工之間的互動不夠。",
+    "sources": { "page": "IMG_1638", "etymonline": "https://www.etymonline.com/word/interaction", "ipa": "/ˌɪn.tɚˈæk.ʃən/", "ipaSource": "Wiktionary", "phoneticNote": "ɚ 輕音節保留" }
+  },
+  {
+    "word": "intercollegiate",
+    "prefixId": "inter",
+    "pos": "a.",
+    "phonetic": "ˌɪntɚkəˈlidʒɪt",
+    "zh": "校際的",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "collegiate", "gloss": "學院的（collegium 社團、公會）" }],
+    "etymology": "1860年由 inter-（之間）＋ collegiate（學院的，源自拉丁 collegium 社團、公會）構成，指大學院校之間的。",
+    "derivatives": [],
+    "example": "I won First Place at an intercollegiate speech competition.",
+    "example_zh": "我在一場校際演講比賽中獲得第一名。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/intercollegiate", "ipa": "/ˌɪn.tɚ.kəˈli.dʒɪt/", "ipaSource": "Dictionary.com（Wiktionary 無發音區段）", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "intercontinental",
+    "prefixId": "inter",
+    "pos": "a.",
+    "phonetic": "ˌɪntɚkɑntɪˈnɛntəl",
+    "zh": "洲際的",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "continental", "gloss": "大陸的" }],
+    "etymology": "1825年美式英文由 inter-（之間）＋ continental（大陸的）構成，指存在於不同大陸之間，1956年起也用來形容洲際飛彈。",
+    "derivatives": [{ "word": "continent", "pos": "n.", "zh": "洲，大陸" }, { "word": "continental", "pos": "a.", "zh": "洲的，大陸的" }, { "word": "transcontinental", "pos": "a.", "zh": "橫貫大陸的" }],
+    "example": "The U.S. retains a large arsenal of intercontinental ballistic missiles.",
+    "example_zh": "美國保有大量的洲際彈道飛彈。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/intercontinental", "ipa": "/ˌɪn.tɚ.kɑn.tɪˈnɛn.təl/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "intervention",
+    "prefixId": "inter",
+    "pos": "n.",
+    "phonetic": "ɪntɚˈvɛnʃən",
+    "zh": "干預",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "vent", "gloss": "來（venire）" }],
+    "etymology": "15世紀初源自晚期拉丁 interventionem，動詞 intervenire（inter 之間＋ venire 來）——介於中間而來，即介入、干預。",
+    "derivatives": [{ "word": "intervene", "pos": "v.", "zh": "干預" }],
+    "example": "U.S. intervention in Viet Nam ended in failure and retreat.",
+    "example_zh": "美國對越南的干預以失敗和撤退收場。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/intervention", "ipa": "/ɪn.tɚˈvɛn.ʃən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "interrogate",
+    "prefixId": "inter",
+    "pos": "v.",
+    "phonetic": "ɪnˈtɛrəˌget",
+    "zh": "審問，質問",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "rogate", "gloss": "詢問、要求（rogare）" }],
+    "etymology": "15世紀晚期源自拉丁過去分詞 interrogatus（interrogare，inter 之間＋ rogare 詢問）——在雙方之間詢問、交叉詰問。",
+    "derivatives": [{ "word": "interrogation", "pos": "n.", "zh": "審問，質問" }, { "word": "interrogative", "pos": "a.", "zh": "審問的，質問的" }],
+    "example": "The police interrogated him about where he had gone the night before.",
+    "example_zh": "警方審問他前一晚去了哪裡。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/interrogate", "ipa": "/ɪnˈtɛɹ.ə.ɡeɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，eɪ→e）" }
+  },
+  {
+    "word": "interim",
+    "prefixId": "inter",
+    "pos": "n., a.",
+    "phonetic": "ˈɪntərɪm",
+    "zh": "過渡期間；臨時的",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "im", "gloss": "「那個」（代名詞字幹 is 的古副詞字尾）" }],
+    "etymology": "源自拉丁副詞 interim「在此期間、同時」，inter（之間）＋ im（代名詞 is「那個」的古副詞字尾）——字面是「在那之中」；英文名詞用法始於1560年代。",
+    "derivatives": [],
+    "example": "The inauguration is two months away; in the interim the incumbent is considered a lame duck. An interim government was set up before the nation's first free election.",
+    "example_zh": "就職典禮還有兩個月；在此過渡期間，現任者被視為跛腳鴨。在該國首次自由選舉前，成立了一個臨時政府。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/interim", "ipa": "/ˈɪn.tə.ɹɪm/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r）", "spellingNote": "字尾 -im 是拉丁代名詞字幹的化石字尾，非獨立可辨識的詞根，與本組其他字不同" }
+  },
+  {
+    "word": "interval",
+    "prefixId": "inter",
+    "pos": "n.",
+    "phonetic": "ˈɪntɚvəl",
+    "zh": "間隔，距離",
+    "parts": [{ "text": "inter-", "gloss": "在…之間" }, { "text": "vallum", "gloss": "柵欄、城牆" }],
+    "etymology": "14世紀初源自晚期拉丁 intervallum，inter（之間）＋ vallum（柵欄、城牆，與 wall 同源）——原指柵欄之間的空間，引申為時間或距離上的間隔。",
+    "derivatives": [],
+    "example": "We see each other at regular intervals—usually once a month.",
+    "example_zh": "我們固定間隔見面——通常一個月一次。",
+    "sources": { "page": "IMG_1639", "etymonline": "https://www.etymonline.com/word/interval", "ipa": "/ˈɪn.tɚ.vəl/", "ipaSource": "Wiktionary", "phoneticNote": "ɚ 輕音節保留", "spellingNote": "詞根 vallum 意為城牆／柵欄（與 wall 同源），非 value 之類的聯想，是容易誤拆的陷阱詞根" }
+  }
+]

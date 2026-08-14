@@ -1,0 +1,67 @@
+[
+  {
+    "word": "symbolic",
+    "prefixId": "syn",
+    "pos": "a.",
+    "phonetic": "sɪmˈbɑlɪk",
+    "zh": "象徵性的",
+    "parts": [{ "text": "sym-", "gloss": "共同、一起（syn- 於 b 前同化）" }, { "text": "bole", "gloss": "投擲（ballein）" }],
+    "etymology": "sym-（syn- 同化，一起）＋ bole（ballein 投擲）——字面是丟在一起互相比對的信物，1650年代發展出「象徵性的」之義。",
+    "derivatives": [{ "word": "symbol", "pos": "n.", "zh": "象徵，符號" }, { "word": "symbolize", "pos": "v.", "zh": "象徵，代表" }, { "word": "symbolism", "pos": "n.", "zh": "象徵主義" }],
+    "example": "The Statue of Liberty is a symbol of freedom.",
+    "example_zh": "自由女神像是自由的象徵。",
+    "sources": { "page": "IMG_1635", "etymonline": "https://www.etymonline.com/word/symbolic", "ipa": "/sɪmˈbɑlɪk/", "ipaSource": "Wiktionary（僅音檔，依標準美式唸法轉寫）" }
+  },
+  {
+    "word": "synchronize",
+    "prefixId": "syn",
+    "pos": "v.",
+    "phonetic": "ˈsɪŋkrəˌnaɪz",
+    "zh": "同步化，對時",
+    "parts": [{ "text": "syn-", "gloss": "共同、一起" }, { "text": "chron", "gloss": "時間（khronos）" }],
+    "etymology": "syn-（一起）＋ chron（khronos 時間）——處於同一時間，1620年代指同時發生，1879年才擴展出使鐘錶對時的技術義。",
+    "derivatives": [{ "word": "synchronization", "pos": "n.", "zh": "同步" }, { "word": "synchronous", "pos": "a.", "zh": "同步的，同時的" }],
+    "example": "Let's synchronize our watches. Sound and movement are synchronized in that music video.",
+    "example_zh": "我們把手錶對時吧。那部音樂錄影帶裡的聲音和畫面是同步的。",
+    "sources": { "page": "IMG_1635", "etymonline": "https://www.etymonline.com/word/synchronize", "ipa": "/ˈsɪŋ.krə.naɪz/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "synthetic",
+    "prefixId": "syn",
+    "pos": "a.",
+    "phonetic": "sɪnˈθɛtɪk",
+    "zh": "合成的",
+    "parts": [{ "text": "syn-", "gloss": "共同、一起" }, { "text": "thet", "gloss": "放置（tithenai）" }],
+    "etymology": "syn-（一起）＋ thet（tithenai 放置）——善於組合、有建構力的，17世紀先作邏輯學術語，1930年才衍生「人造的」之義。",
+    "derivatives": [{ "word": "synthesis", "pos": "n.", "zh": "合成，綜合" }, { "word": "synthesize", "pos": "v.", "zh": "合成" }],
+    "example": "Nylon was the first synthetic, or artificial, fiber.",
+    "example_zh": "尼龍是第一種合成纖維，也就是人造纖維。",
+    "sources": { "page": "IMG_1635", "etymonline": "https://www.etymonline.com/word/synthetic", "ipa": "/sɪnˈθɛtɪk/", "ipaSource": "Wiktionary" }
+  },
+  {
+    "word": "photosynthesis",
+    "prefixId": "syn",
+    "pos": "n.",
+    "phonetic": "ˌfotoˈsɪnθəsɪs",
+    "zh": "光合作用",
+    "parts": [{ "text": "photo-", "gloss": "光" }, { "text": "syn-", "gloss": "共同、一起" }, { "text": "thesis", "gloss": "放置、安放" }],
+    "etymology": "1895年仿德文 Photosynthese 的借譯詞，photo-（光）＋ synthese（合成，本身即 syn- 一起＋ thesis 放置）——字面是藉光完成的合成作用，取代舊稱 assimilation。",
+    "derivatives": [{ "word": "photosynthetic", "pos": "a.", "zh": "光合作用的" }, { "word": "photosynthesize", "pos": "v.", "zh": "行光合作用" }],
+    "example": "Without photosynthesis, oxygen in the air would have been depleted long ago.",
+    "example_zh": "沒有光合作用，空氣中的氧氣早就耗盡了。",
+    "sources": { "page": "IMG_1635", "etymonline": "https://www.etymonline.com/word/photosynthesis", "ipa": "/ˌfoʊ.toʊˈsɪn.θə.sɪs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（oʊ→o）", "spellingNote": "syn- 出現在字中 -synthesis 詞根內，而非本字字首本身（本字字首是 photo-）" }
+  },
+  {
+    "word": "simultaneous",
+    "prefixId": "syn",
+    "pos": "a.",
+    "phonetic": "ˌsaɪməlˈtenɪəs",
+    "zh": "同時的",
+    "parts": [{ "text": "simul-", "gloss": "同時（拉丁 simul，非希臘 syn-）" }, { "text": "taneous", "gloss": "…的（仿 spontaneus 字尾）" }],
+    "etymology": "陷阱字：源自中世紀拉丁 simultaneus，根本是拉丁 simul「同時」（與 similis 相似的同源，非希臘字首 syn-），可能仿 spontaneus 構詞而來；1650年代進入英文表同時發生的。",
+    "derivatives": [{ "word": "simultaneously", "pos": "adv.", "zh": "同時地" }, { "word": "simultaneity", "pos": "n.", "zh": "同時性" }],
+    "example": "Two in the audience raised their hands simultaneously.",
+    "example_zh": "觀眾中有兩人同時舉手。",
+    "sources": { "page": "IMG_1635", "etymonline": "https://www.etymonline.com/word/simultaneous", "ipa": "/ˌsaɪ.məlˈteɪ.ni.əs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）", "spellingNote": "陷阱字：字義上是同時，但詞源是拉丁 simul/similis，並非希臘 syn- 的同化或變體；兩者僅在更早的原始印歐字根 *sem-（一）交會，非同一構詞家族" }
+  }
+]

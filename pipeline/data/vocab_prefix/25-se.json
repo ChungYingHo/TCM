@@ -1,0 +1,54 @@
+[
+  {
+    "word": "secede",
+    "prefixId": "se",
+    "pos": "v.",
+    "phonetic": "sɪˈsid",
+    "zh": "脫離",
+    "parts": [{ "text": "se-", "gloss": "分開" }, { "text": "cede", "gloss": "走、離去（cedere）" }],
+    "etymology": "se-（分開）＋ cede（cedere 走、離去）——字面是走開、退出，1755年後專指脫離政治或宗教聯盟。",
+    "derivatives": [{ "word": "secession", "pos": "n.", "zh": "脫離" }],
+    "example": "The South seceded from the Union in 1860.",
+    "example_zh": "南方各州於1860年脫離聯邦。",
+    "sources": { "page": "IMG_1628", "etymonline": "https://www.etymonline.com/word/secede", "ipa": "/sɪˈsiːd/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（iː→i）" }
+  },
+  {
+    "word": "secluded",
+    "prefixId": "se",
+    "pos": "a.",
+    "phonetic": "sɪˈkludɪd",
+    "zh": "僻靜的，與世隔離的",
+    "parts": [{ "text": "se-", "gloss": "分開" }, { "text": "clud", "gloss": "關閉（claudere）" }],
+    "etymology": "se-（分開）＋ clud（claudere 關閉，與 close 同源）——關起來使分開，引申為僻靜的、與世隔離的。",
+    "derivatives": [{ "word": "seclusion", "pos": "n.", "zh": "僻靜，隔離" }],
+    "example": "The hermit lives alone by a secluded lake.",
+    "example_zh": "這位隱士獨自住在一座僻靜的湖邊。",
+    "sources": { "page": "IMG_1628", "etymonline": "https://www.etymonline.com/word/secluded", "ipa": "/sɪˈkludɪd/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "seduce",
+    "prefixId": "se",
+    "pos": "v.",
+    "phonetic": "sɪˈdus",
+    "zh": "引誘，誘惑",
+    "parts": [{ "text": "se-", "gloss": "離開" }, { "text": "duce", "gloss": "引導、帶領（ducere）" }],
+    "etymology": "se-（離開）＋ duce（ducere 引導）——字面是引開、帶離正道，原指誘使部屬背棄效忠，16世紀中葉才發展出誘惑之意。",
+    "derivatives": [{ "word": "seduction", "pos": "n.", "zh": "引誘" }, { "word": "seductive", "pos": "a.", "zh": "誘人的" }],
+    "example": "I joined the tour because I was seduced by the price.",
+    "example_zh": "我報名這個行程是因為被價格誘惑了。",
+    "sources": { "page": "IMG_1628", "etymonline": "https://www.etymonline.com/word/seduce", "ipa": "/sɪˈd(j)uːs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（美式常無 y 滑音，uː→u）" }
+  },
+  {
+    "word": "segregation",
+    "prefixId": "se",
+    "pos": "n.",
+    "phonetic": "ˌsɛgrəˈɡeʃən",
+    "zh": "（種族）隔離",
+    "parts": [{ "text": "se-", "gloss": "分開" }, { "text": "greg", "gloss": "群、羊群（grex）" }],
+    "etymology": "se-（分開）＋ greg（grex 羊群）——字面是從羊群中分開，19世紀末在美國引申為強制種族隔離。",
+    "derivatives": [{ "word": "segregate", "pos": "v.", "zh": "隔離" }],
+    "example": "Modern nations no longer practice racial segregation.",
+    "example_zh": "現代國家不再實行種族隔離。",
+    "sources": { "page": "IMG_1628", "etymonline": "https://www.etymonline.com/word/segregation", "ipa": "/ˌsɛgrəˈɡeɪʃən/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  }
+]

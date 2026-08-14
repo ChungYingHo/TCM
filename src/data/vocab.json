@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-07-12",
-  "count": 252,
-  "withExamples": 252,
+  "generated_at": "2026-08-15",
+  "count": 471,
+  "withExamples": 471,
   "words": [
     {
       "id": "apathetic",
@@ -8528,14 +8528,14 @@
       "parts": [
         {
           "text": "ex-",
-          "gloss": "出、向外"
+          "gloss": "出、盡"
         },
         {
           "text": "haust",
           "gloss": "汲取（haurire）"
         }
       ],
-      "etymology": "拉丁 exhaurīre「汲出、掏空」＝ ex-（出、向外）＋ haurīre（汲取，尤指汲水）。英文取它的過去分詞 exhaustus，所以字根作 haust。把裡面的東西全汲出，就是耗盡、用光。名詞轉指引擎排出的廢氣。注意「盡」是整個字的合義，ex- 本身只表示向外。",
+      "etymology": "ex-（出、盡）＋ haust（haurire 汲取）——把裡頭的東西全汲乾，即耗盡、用光；名詞指排出的廢氣。",
       "derivatives": [
         {
           "word": "exhausted",
@@ -8587,6 +8587,7180 @@
           "zh": "內在的、內部的"
         }
       ]
+    },
+    {
+      "id": "extremities",
+      "word": "extremities",
+      "phonetic": "ɪkˈstrɛmətɪz",
+      "zh": "末端，肢體末梢",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In low temperatures, your heart pumps faster to prevent your extremities from freezing.",
+      "example_zh": "在低溫下，你的心臟會跳得更快，以防止你的肢體末梢凍傷。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "出，超出"
+        },
+        {
+          "text": "trem",
+          "gloss": "最外的（extremus）"
+        }
+      ],
+      "etymology": "ex-（出、超出）＋ trem（extremus 最外的，exterus 向外的最高級）——身體最外緣的部位，即末端、肢體末梢。",
+      "derivatives": []
+    },
+    {
+      "id": "extravagant",
+      "word": "extravagant",
+      "phonetic": "ɪkˈstrævəgənt",
+      "zh": "奢侈的，過分的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The show offers a view of the extravagant lifestyles of various movie stars.",
+      "example_zh": "這個節目呈現了各個電影明星奢侈的生活方式。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "extra-",
+          "gloss": "在外、超出（ex- 的變體）"
+        },
+        {
+          "text": "vag",
+          "gloss": "遊蕩（vagari）"
+        }
+      ],
+      "etymology": "extra-（ex- 變體，在外）＋ vag（vagari 遊蕩）——原指教會法中未收入法典的教令，引申為超出常軌的奢侈、過度。",
+      "derivatives": [
+        {
+          "word": "extravagance",
+          "pos": "n.",
+          "zh": "奢侈，過度"
+        },
+        {
+          "word": "extravagancy",
+          "pos": "n.",
+          "zh": "奢侈，過度"
+        },
+        {
+          "word": "extravaganza",
+          "pos": "n.",
+          "zh": "奢靡，盛事"
+        }
+      ]
+    },
+    {
+      "id": "exert",
+      "word": "exert",
+      "phonetic": "ɪɡˈzɝt",
+      "zh": "運用，發揮",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The boss exerted pressure on us to work overtime without pay. If you want to pass the exam, you should really exert yourself.",
+      "example_zh": "老闆對我們施壓要求無償加班。如果你想通過考試，真的應該全力以赴。",
+      "draft": false,
+      "prefixId": "ex",
+      "parts": [
+        {
+          "text": "ex-",
+          "gloss": "出"
+        },
+        {
+          "text": "ert",
+          "gloss": "接合、排列（serere）"
+        }
+      ],
+      "etymology": "ex-（出）＋ ert（serere 接合、排列）——原意是推出、伸出，17世紀晚期才引申為運用、發揮（全力）。",
+      "derivatives": [
+        {
+          "word": "exertion",
+          "pos": "n.",
+          "zh": "運用，努力"
+        }
+      ]
+    },
+    {
+      "id": "abhor",
+      "word": "abhor",
+      "phonetic": "æbˈhɔr",
+      "zh": "厭惡",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Civilized people abhor war and violence.",
+      "example_zh": "文明人厭惡戰爭與暴力。",
+      "draft": false,
+      "prefixId": "ab",
+      "parts": [
+        {
+          "text": "ab-",
+          "gloss": "遠離"
+        },
+        {
+          "text": "hor",
+          "gloss": "顫抖、畏懼（horrere）"
+        }
+      ],
+      "etymology": "ab-（遠離）＋ hor（horrere 顫抖、畏懼，字面是豎毛）——因畏懼而退縮遠離，即厭惡，與 horror 同字根。",
+      "derivatives": [
+        {
+          "word": "abhorrence",
+          "pos": "n.",
+          "zh": "厭惡"
+        },
+        {
+          "word": "abhorrent",
+          "pos": "a.",
+          "zh": "令人厭惡的"
+        }
+      ]
+    },
+    {
+      "id": "aboriginal",
+      "word": "aboriginal",
+      "phonetic": "ˌæbəˈrɪdʒɪnəl",
+      "zh": "原住民的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There's an aboriginal village high in the mountains.",
+      "example_zh": "山上有一座原住民村落。",
+      "draft": false,
+      "prefixId": "ab",
+      "parts": [
+        {
+          "text": "ab origine",
+          "gloss": "從起源（拉丁片語）"
+        }
+      ],
+      "etymology": "源自拉丁片語 ab origine（從起源、從一開始），ab-（從）＋ origo（起源）——自始即存在之意，因而用來稱呼殖民地的原住民。",
+      "derivatives": [
+        {
+          "word": "aborigine",
+          "pos": "n.",
+          "zh": "原住民"
+        }
+      ]
+    },
+    {
+      "id": "abstain",
+      "word": "abstain",
+      "phonetic": "əbˈsten",
+      "zh": "戒絕，不碰，不沾",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Amazingly, the alcoholic abstained from drinking for a whole week.",
+      "example_zh": "驚人的是，這名酒癮者整整一週滴酒不沾。",
+      "draft": false,
+      "prefixId": "ab",
+      "parts": [
+        {
+          "text": "abs-",
+          "gloss": "離開"
+        },
+        {
+          "text": "tain",
+          "gloss": "持有、握住（tenere）"
+        }
+      ],
+      "etymology": "abs-（離開）＋ tain（tenere 持有）——把持而不放出，引申為戒絕、克制。",
+      "derivatives": [
+        {
+          "word": "abstention",
+          "pos": "n.",
+          "zh": "戒絕"
+        }
+      ]
+    },
+    {
+      "id": "abstract",
+      "word": "abstract",
+      "phonetic": "ˈæbstrækt",
+      "zh": "摘要；抽象的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You must add an abstract to your paper before handing it in. Abstract painting is my favorite, but I also love still life.",
+      "example_zh": "你在繳交報告前必須加上摘要。抽象畫是我的最愛，但我也喜歡靜物畫。",
+      "draft": false,
+      "prefixId": "ab",
+      "parts": [
+        {
+          "text": "abs-",
+          "gloss": "離開"
+        },
+        {
+          "text": "tract",
+          "gloss": "拉、抽出（trahere）"
+        }
+      ],
+      "etymology": "abs-（離開）＋ tract（trahere 拉、抽出）——字面是抽離、拖走，引申出「摘要」（名詞）與「抽象的」（形容詞）兩義。",
+      "derivatives": []
+    },
+    {
+      "id": "secede",
+      "word": "secede",
+      "phonetic": "sɪˈsid",
+      "zh": "脫離",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The South seceded from the Union in 1860.",
+      "example_zh": "南方各州於1860年脫離聯邦。",
+      "draft": false,
+      "prefixId": "se",
+      "parts": [
+        {
+          "text": "se-",
+          "gloss": "分開"
+        },
+        {
+          "text": "cede",
+          "gloss": "走、離去（cedere）"
+        }
+      ],
+      "etymology": "se-（分開）＋ cede（cedere 走、離去）——字面是走開、退出，1755年後專指脫離政治或宗教聯盟。",
+      "derivatives": [
+        {
+          "word": "secession",
+          "pos": "n.",
+          "zh": "脫離"
+        }
+      ]
+    },
+    {
+      "id": "secluded",
+      "word": "secluded",
+      "phonetic": "sɪˈkludɪd",
+      "zh": "僻靜的，與世隔離的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The hermit lives alone by a secluded lake.",
+      "example_zh": "這位隱士獨自住在一座僻靜的湖邊。",
+      "draft": false,
+      "prefixId": "se",
+      "parts": [
+        {
+          "text": "se-",
+          "gloss": "分開"
+        },
+        {
+          "text": "clud",
+          "gloss": "關閉（claudere）"
+        }
+      ],
+      "etymology": "se-（分開）＋ clud（claudere 關閉，與 close 同源）——關起來使分開，引申為僻靜的、與世隔離的。",
+      "derivatives": [
+        {
+          "word": "seclusion",
+          "pos": "n.",
+          "zh": "僻靜，隔離"
+        }
+      ]
+    },
+    {
+      "id": "seduce",
+      "word": "seduce",
+      "phonetic": "sɪˈdus",
+      "zh": "引誘，誘惑",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I joined the tour because I was seduced by the price.",
+      "example_zh": "我報名這個行程是因為被價格誘惑了。",
+      "draft": false,
+      "prefixId": "se",
+      "parts": [
+        {
+          "text": "se-",
+          "gloss": "離開"
+        },
+        {
+          "text": "duce",
+          "gloss": "引導、帶領（ducere）"
+        }
+      ],
+      "etymology": "se-（離開）＋ duce（ducere 引導）——字面是引開、帶離正道，原指誘使部屬背棄效忠，16世紀中葉才發展出誘惑之意。",
+      "derivatives": [
+        {
+          "word": "seduction",
+          "pos": "n.",
+          "zh": "引誘"
+        },
+        {
+          "word": "seductive",
+          "pos": "a.",
+          "zh": "誘人的"
+        }
+      ]
+    },
+    {
+      "id": "segregation",
+      "word": "segregation",
+      "phonetic": "ˌsɛgrəˈɡeʃən",
+      "zh": "（種族）隔離",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Modern nations no longer practice racial segregation.",
+      "example_zh": "現代國家不再實行種族隔離。",
+      "draft": false,
+      "prefixId": "se",
+      "parts": [
+        {
+          "text": "se-",
+          "gloss": "分開"
+        },
+        {
+          "text": "greg",
+          "gloss": "群、羊群（grex）"
+        }
+      ],
+      "etymology": "se-（分開）＋ greg（grex 羊群）——字面是從羊群中分開，19世紀末在美國引申為強制種族隔離。",
+      "derivatives": [
+        {
+          "word": "segregate",
+          "pos": "v.",
+          "zh": "隔離"
+        }
+      ]
+    },
+    {
+      "id": "telecommute",
+      "word": "telecommute",
+      "phonetic": "ˈtɛləkəˌmjut",
+      "zh": "遠距辦公",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Chunghwa Telecom is a telecommunications provider.",
+      "example_zh": "中華電信是一家電信業者。",
+      "draft": false,
+      "prefixId": "tele",
+      "parts": [
+        {
+          "text": "tele-",
+          "gloss": "遠"
+        },
+        {
+          "text": "commute",
+          "gloss": "通勤"
+        }
+      ],
+      "etymology": "1970年代由 Jack Nilles 提出的概念，tele-（遠）＋ commute（通勤，源自拉丁 commutare 不斷更換）——藉電話線路、資料連線等，在家完成原本要進辦公室做的工作。",
+      "derivatives": [
+        {
+          "word": "telecommunications",
+          "pos": "n.",
+          "zh": "電信"
+        }
+      ]
+    },
+    {
+      "id": "teleconferencing",
+      "word": "teleconferencing",
+      "phonetic": "ˈtɛləˌkɑnfrənsɪŋ",
+      "zh": "電信會議",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company has branches all over the world and relies on teleconferencing to keep in synch.",
+      "example_zh": "這間公司在世界各地都有分公司，仰賴電信會議來保持同步。",
+      "draft": false,
+      "prefixId": "tele",
+      "parts": [
+        {
+          "text": "tele-",
+          "gloss": "遠"
+        },
+        {
+          "text": "conference",
+          "gloss": "會議（conferre 聚集）"
+        }
+      ],
+      "etymology": "teleconference 1952年先以專利商標詞出現，1970年代才普及；tele-（遠）＋ conference（會議，源自拉丁 conferre 聚集）——透過電信技術進行、與會者不必親臨同一地點的會議。",
+      "derivatives": [
+        {
+          "word": "teleconference",
+          "pos": "n.",
+          "zh": "電信會議"
+        }
+      ]
+    },
+    {
+      "id": "telemarketing",
+      "word": "telemarketing",
+      "phonetic": "ˈtɛləˌmɑrkɪtɪŋ",
+      "zh": "電話行銷",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Most people find telemarketing annoying.",
+      "example_zh": "大多數人都覺得電話行銷很煩人。",
+      "draft": false,
+      "prefixId": "tele",
+      "parts": [
+        {
+          "text": "tele-",
+          "gloss": "電話（由「遠」特化）"
+        },
+        {
+          "text": "marketing",
+          "gloss": "行銷"
+        }
+      ],
+      "etymology": "1970年出現，tele-（此處由「遠」特化為「電話」，如 telephone）＋ marketing（行銷，1897年起強調廣告銷售的商業義）——以電話（尤其未經邀約來電）進行推銷。",
+      "derivatives": []
+    },
+    {
+      "id": "telepathy",
+      "word": "telepathy",
+      "phonetic": "təˈlɛpəθɪ",
+      "zh": "超感應，第六感",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The magician claimed to be capable of telepathy.",
+      "example_zh": "這位魔術師聲稱自己有心電感應的能力。",
+      "draft": false,
+      "prefixId": "tele",
+      "parts": [
+        {
+          "text": "tele-",
+          "gloss": "遠"
+        },
+        {
+          "text": "pathy",
+          "gloss": "感覺、感受（-patheia）"
+        }
+      ],
+      "etymology": "1882年由英國心理學家 Frederic Myers 創造，tele-（遠）＋ pathy（希臘 -patheia 感受）——字面是來自遠方的感覺，指兩個心靈間超乎常理的直接溝通。",
+      "derivatives": []
+    },
+    {
+      "id": "decipher",
+      "word": "decipher",
+      "phonetic": "dɪˈsaɪfɚ",
+      "zh": "破解，解釋",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Army intelligence is trying to decipher a piece of enemy communication.",
+      "example_zh": "軍方情報單位正試圖破解一段敵軍通訊。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "解除、反轉"
+        },
+        {
+          "text": "cipher",
+          "gloss": "密碼"
+        }
+      ],
+      "etymology": "1540年代由 de-（解除）＋ cipher（密碼）組成，字面是解開密碼，可能部分受法文 déchiffrer 影響。",
+      "derivatives": [
+        {
+          "word": "cipher",
+          "pos": "n.",
+          "zh": "密碼"
+        }
+      ]
+    },
+    {
+      "id": "debilitate",
+      "word": "debilitate",
+      "phonetic": "dəˈbɪləˌtet",
+      "zh": "令人喪失能力",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Chemotherapy debilitated and exhausted him.",
+      "example_zh": "化療讓他喪失體力又精疲力盡。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "離開、抽離"
+        },
+        {
+          "text": "bilis",
+          "gloss": "力量（PIE *bel-）"
+        }
+      ],
+      "etymology": "1530年代拉丁 debilitare，de-（離開）＋ bilis（力量，同源 PIE *bel- 強壯）——字面是力量被抽離，即削弱、使衰弱。",
+      "derivatives": [
+        {
+          "word": "debilitating",
+          "pos": "a.",
+          "zh": "令人喪失能力的"
+        }
+      ]
+    },
+    {
+      "id": "decompose",
+      "word": "decompose",
+      "phonetic": "ˌdikəmˈpoz",
+      "zh": "分解，腐敗",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "After an animal dies, its body starts to decompose.",
+      "example_zh": "動物死後，牠的身體便開始分解。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "相反"
+        },
+        {
+          "text": "compose",
+          "gloss": "組成"
+        }
+      ],
+      "etymology": "1750年代由 de-（相反）＋ compose（組成）構成，原指拆解成組成部分，1777年起延伸出腐爛、分解之意。",
+      "derivatives": [
+        {
+          "word": "compose",
+          "pos": "v.",
+          "zh": "組合，作曲，作文"
+        },
+        {
+          "word": "decomposition",
+          "pos": "n.",
+          "zh": "分解，腐敗"
+        }
+      ]
+    },
+    {
+      "id": "dehydrated",
+      "word": "dehydrated",
+      "phonetic": "dəˈhaɪdretəd",
+      "zh": "脫水的，乾燥的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Dehydrated food was originally developed by NASA for astronauts.",
+      "example_zh": "脫水食品原本是NASA為太空人研發的。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "去除"
+        },
+        {
+          "text": "hydrate",
+          "gloss": "使含水（希臘 hydr- 水）"
+        }
+      ],
+      "etymology": "動詞 dehydrate 1854年指除去水分，de-（去除）＋ hydrate（使含水，源自希臘 hydr- 水）；名詞 dehydration 1834年即已出現。",
+      "derivatives": [
+        {
+          "word": "dehydrate",
+          "pos": "v.",
+          "zh": "脫水"
+        },
+        {
+          "word": "dehydration",
+          "pos": "n.",
+          "zh": "脫水"
+        },
+        {
+          "word": "hydrate",
+          "pos": "v.",
+          "zh": "補充水分，攝取水分"
+        },
+        {
+          "word": "hydration",
+          "pos": "n.",
+          "zh": "補充水分，攝取水分"
+        }
+      ]
+    },
+    {
+      "id": "deliberate",
+      "word": "deliberate",
+      "phonetic": "dɪˈlɪbɚət",
+      "zh": "故意的，慢條斯理的；考慮",
+      "pos": "a., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "That was no accident but a deliberate attack. The drunkard took a few deliberate steps. The committee deliberated over the next move.",
+      "example_zh": "那不是意外，而是蓄意的攻擊。那名醉漢慢條斯理地走了幾步。委員會仔細商議了下一步行動。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強（完全）"
+        },
+        {
+          "text": "libra",
+          "gloss": "天平、衡量"
+        }
+      ],
+      "etymology": "拉丁 deliberatus「已下定決心的」，de-（完全，加強）＋ librare（使平衡，源自 libra 天平）——字面是仔細衡量。",
+      "derivatives": [
+        {
+          "word": "deliberation",
+          "pos": "n.",
+          "zh": "深思熟慮，慎重"
+        },
+        {
+          "word": "deliberately",
+          "pos": "adv.",
+          "zh": "故意地"
+        }
+      ]
+    },
+    {
+      "id": "delineate",
+      "word": "delineate",
+      "phonetic": "dɪˈlɪniˌet",
+      "zh": "勾勒，描繪",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The boundary of the park is delineated by a low fence. The Facebook profile delineates the man's character succinctly.",
+      "example_zh": "公園的邊界由一道矮籬勾勒而出。這個臉書檔案簡潔地描繪出這名男子的性格。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強（完全）"
+        },
+        {
+          "text": "linea",
+          "gloss": "線"
+        }
+      ],
+      "etymology": "1550年代拉丁 delineatus，de-（完全，加強）＋ linea（線）——原指用線條標示輪廓，約1600年擴展為以圖像呈現，1610年代再擴展為用文字描述。",
+      "derivatives": [
+        {
+          "word": "delineation",
+          "pos": "n.",
+          "zh": "勾勒，描繪"
+        }
+      ]
+    },
+    {
+      "id": "demented",
+      "word": "demented",
+      "phonetic": "dɪˈmɛntɪd",
+      "zh": "精神錯亂的，瘋狂的，失智的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His wife was demented with worry when she couldn't reach him for the third day.",
+      "example_zh": "當她連續第三天聯絡不上他時，他的妻子已經憂心如焚、幾近瘋狂。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "脫離"
+        },
+        {
+          "text": "mens",
+          "gloss": "心智"
+        }
+      ],
+      "etymology": "1640年代由已廢用的動詞 dement（使發狂）而來，法文 démenter、晚期拉丁 dementare；拉丁 demens「失去理智的」由 de-（脫離）＋ mente（心智）組成，字面是心智脫離常軌。",
+      "derivatives": [
+        {
+          "word": "dementia",
+          "pos": "n.",
+          "zh": "瘋狂，失智，痴呆"
+        }
+      ]
+    },
+    {
+      "id": "denounce",
+      "word": "denounce",
+      "phonetic": "dɪˈnaʊns",
+      "zh": "譴責，抨擊",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The UN unanimously denounced the act of invasion.",
+      "example_zh": "聯合國一致譴責這起侵略行為。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "向下、加強"
+        },
+        {
+          "text": "nuntiare",
+          "gloss": "宣告、通報"
+        }
+      ],
+      "etymology": "古法文 denoncier，拉丁 denuntiare，de-（向下）＋ nuntiare（宣告，源自 nuntius 使者）——原指正式公告，負面的譴責、告發語感直到15世紀末才確立。",
+      "derivatives": [
+        {
+          "word": "denunciation",
+          "pos": "n.",
+          "zh": "譴責，抨擊"
+        }
+      ]
+    },
+    {
+      "id": "denote",
+      "word": "denote",
+      "phonetic": "dɪˈnot",
+      "zh": "表示，意義",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The color red is often used to denote danger.",
+      "example_zh": "紅色常被用來表示危險。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強（完全）"
+        },
+        {
+          "text": "notare",
+          "gloss": "做記號"
+        }
+      ],
+      "etymology": "1590年代法文 dénoter，拉丁 denotare，de-（完全，加強）＋ notare（做記號）——原指以記號標示、辨識。",
+      "derivatives": [
+        {
+          "word": "denotation",
+          "pos": "n.",
+          "zh": "表示，意義"
+        }
+      ]
+    },
+    {
+      "id": "depict",
+      "word": "depict",
+      "phonetic": "dɪˈpɪkt",
+      "zh": "描繪",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The biography depicts Picasso as a selfish man.",
+      "example_zh": "這本傳記將畢卡索描繪成一個自私的人。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強、向下"
+        },
+        {
+          "text": "pingere",
+          "gloss": "繪畫"
+        }
+      ],
+      "etymology": "15世紀初拉丁 depictus（depingere 過去分詞），de-（加強）＋ pingere（繪畫）——原指用顏色畫出、呈現形象，15世紀中起擴展為用文字描述。",
+      "derivatives": [
+        {
+          "word": "depiction",
+          "pos": "n.",
+          "zh": "描繪"
+        }
+      ]
+    },
+    {
+      "id": "deplore",
+      "word": "deplore",
+      "phonetic": "dɪˈplor",
+      "zh": "哀嘆，對…深感遺憾",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The editorial deplores the widespread indifference to climate change.",
+      "example_zh": "這篇社論對大眾普遍漠視氣候變遷深感遺憾。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強（徹底）"
+        },
+        {
+          "text": "plorare",
+          "gloss": "哭泣、哀號"
+        }
+      ],
+      "etymology": "1550年代法文 déplorer，拉丁 deplorare，de-（徹底，加強）＋ plorare（哭泣、哀號）——原指視為無望而放棄，1560年代起轉為深感遺憾。",
+      "derivatives": [
+        {
+          "word": "deplorable",
+          "pos": "a.",
+          "zh": "可悲的，可嘆的"
+        }
+      ]
+    },
+    {
+      "id": "deport",
+      "word": "deport",
+      "phonetic": "dɪˈpɔrt",
+      "zh": "放逐，驅逐出境",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The illegal immigrant was deported back to her own country.",
+      "example_zh": "這名非法移民被驅逐出境，遣返回自己的國家。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "離開"
+        },
+        {
+          "text": "portare",
+          "gloss": "攜帶"
+        }
+      ],
+      "etymology": "1640年代法文 déporter，拉丁 deportare，de-（離開）＋ portare（攜帶）——字面是帶離、送走。",
+      "derivatives": [
+        {
+          "word": "deportation",
+          "pos": "n.",
+          "zh": "放逐"
+        }
+      ]
+    },
+    {
+      "id": "depreciate",
+      "word": "depreciate",
+      "phonetic": "dəˈpriʃiˌet",
+      "zh": "貶值",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The dollar has depreciated a lot against the Euro.",
+      "example_zh": "美元兌歐元已經大幅貶值。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "向下"
+        },
+        {
+          "text": "pretium",
+          "gloss": "價格"
+        }
+      ],
+      "etymology": "15世紀中晚期拉丁 depretiatus，de-（向下）＋ pretium（價格）——原指低估、貶低價值，約1790年才出現不及物的本身貶值義。",
+      "derivatives": [
+        {
+          "word": "depreciation",
+          "pos": "n.",
+          "zh": "貶值"
+        },
+        {
+          "word": "appreciate",
+          "pos": "v.",
+          "zh": "欣賞，升值"
+        },
+        {
+          "word": "appreciation",
+          "pos": "n.",
+          "zh": "欣賞，感激"
+        }
+      ]
+    },
+    {
+      "id": "deprive",
+      "word": "deprive",
+      "phonetic": "dɪˈpraɪv",
+      "zh": "剝奪",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can't function properly if you are deprived of sleep.",
+      "example_zh": "如果被剝奪睡眠，你就無法正常運作。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強（完全）"
+        },
+        {
+          "text": "privare",
+          "gloss": "剝奪、使脫離"
+        }
+      ],
+      "etymology": "14世紀中古法文 depriver，中世紀拉丁 deprivare，de-（完全，加強）＋ privare（剝奪，與 private 同源詞根）。",
+      "derivatives": [
+        {
+          "word": "deprivation",
+          "pos": "n.",
+          "zh": "剝奪"
+        }
+      ]
+    },
+    {
+      "id": "demerit",
+      "word": "demerit",
+      "phonetic": "dɪˈmɛrɪt",
+      "zh": "缺點，過失",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She got three demerits for lateness on this term's report.",
+      "example_zh": "她這學期的成績單上因遲到被記了三次過失。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-/des-",
+          "gloss": "加強／不（雙重詞源）"
+        },
+        {
+          "text": "merit",
+          "gloss": "應得、功勞（meritum）"
+        }
+      ],
+      "etymology": "陷阱字：Etymonline 並列兩種推導——一可能來自古法文 desmerite（des- 不、相反＋ merite 功勞），一可能直接源自拉丁 demeritum「過失」（demereri，de- 加強＋ mereri 應得）；原本兼指應得的獎賞或懲罰，正面語感約17世紀中葉消失。",
+      "derivatives": [
+        {
+          "word": "merit",
+          "pos": "n.",
+          "zh": "長處，優點"
+        }
+      ]
+    },
+    {
+      "id": "deter",
+      "word": "deter",
+      "phonetic": "dɪˈtɝ",
+      "zh": "嚇阻",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Capital punishment does not seem to deter crime.",
+      "example_zh": "死刑似乎無法嚇阻犯罪。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "離開"
+        },
+        {
+          "text": "terrere",
+          "gloss": "使害怕"
+        }
+      ],
+      "etymology": "1570年代拉丁 deterrere，de-（離開）＋ terrere（使害怕）——原指以恐懼勸阻，1590年代擴展為以任何反向動機阻止行動。",
+      "derivatives": [
+        {
+          "word": "deterrence",
+          "pos": "n.",
+          "zh": "嚇阻"
+        }
+      ]
+    },
+    {
+      "id": "debris",
+      "word": "debris",
+      "phonetic": "dəˈbri",
+      "zh": "殘骸，碎片（不可數）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The site of the bombing was covered with debris.",
+      "example_zh": "轟炸現場遍布殘骸碎片。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "加強、向下"
+        },
+        {
+          "text": "briser",
+          "gloss": "打破"
+        }
+      ],
+      "etymology": "1708年借自法文 débris，已廢用的法文動詞 debriser「打碎、擊垮」，de-（加強）＋ briser（打破，源自晚期拉丁 brisare）。",
+      "derivatives": []
+    },
+    {
+      "id": "derogatory",
+      "word": "derogatory",
+      "phonetic": "dɪˈrɑɡəˌtɔrɪ",
+      "zh": "貶抑的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He made some derogatory remark about the girl's clothes.",
+      "example_zh": "他對這個女孩的穿著說了一些貶抑的評語。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "離開、拿走"
+        },
+        {
+          "text": "rogare",
+          "gloss": "詢問、提議"
+        }
+      ],
+      "etymology": "約1500年晚期拉丁 derogatorius，de-（拿走）＋ rogare（詢問、提議）——字面指透過提出異議而削減（權威、地位），1560年代起才擴及名譽、聲望。",
+      "derivatives": []
+    },
+    {
+      "id": "demolish",
+      "word": "demolish",
+      "phonetic": "dɪˈmɑlɪʃ",
+      "zh": "致壞，拆除，爆破",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A number of houses were demolished without mishap so that the supermarket could be built.",
+      "example_zh": "為了興建超市，數棟房屋在沒有意外發生的情況下被順利拆除。",
+      "draft": false,
+      "prefixId": "de",
+      "parts": [
+        {
+          "text": "de-",
+          "gloss": "向下、反轉"
+        },
+        {
+          "text": "moliri",
+          "gloss": "建造"
+        }
+      ],
+      "etymology": "1560年代中古法文 demoliss-，拉丁 demoliri「拆毀」，de-（向下，加強／反轉）＋ moliri（建造，源自 moles 龐大結構物）——字面是把建造的東西整個拆掉，屬反轉式構詞。",
+      "derivatives": [
+        {
+          "word": "demolition",
+          "pos": "n.",
+          "zh": "致壞，拆除"
+        }
+      ]
+    },
+    {
+      "id": "confront",
+      "word": "confront",
+      "phonetic": "kənˈfrʌnt",
+      "zh": "遭遇，面對",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We'll have to confront the issue sooner or later.",
+      "example_zh": "我們遲早得面對這個問題。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起、加強語氣"
+        },
+        {
+          "text": "front",
+          "gloss": "額頭、前方（frontem）"
+        }
+      ],
+      "etymology": "古法文 confronter，中世紀拉丁 confrontare（劃界、使相鄰），con-（一起）＋ frontem（額頭）——面對面站立，1580年代引申為對峙、對抗。",
+      "derivatives": [
+        {
+          "word": "confrontation",
+          "pos": "n.",
+          "zh": "遭遇，面對"
+        }
+      ]
+    },
+    {
+      "id": "congregation",
+      "word": "congregation",
+      "phonetic": "ˌkɑŋgrəˈgeʃən",
+      "zh": "集合，群眾，會眾",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The church has a congregation of 500 members.",
+      "example_zh": "這間教會有五百名會眾。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起"
+        },
+        {
+          "text": "greg",
+          "gloss": "聚集成群（grex）"
+        }
+      ],
+      "etymology": "古法文 congregacion，拉丁 congregationem，con-（一起）＋ gregare（聚集成群，源自 grex 一群牲畜）——聚集、集會，16世紀被借用來翻譯聖經中的會眾、教會。",
+      "derivatives": [
+        {
+          "word": "congregate",
+          "pos": "v.",
+          "zh": "集合，聚集"
+        }
+      ]
+    },
+    {
+      "id": "connote",
+      "word": "connote",
+      "phonetic": "kəˈnot",
+      "zh": "暗示",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The number \"eight\" connotes fortune and prosperity in Chinese.",
+      "example_zh": "「八」這個數字在中文裡帶有財富與興旺的意涵。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起、附加"
+        },
+        {
+          "text": "note",
+          "gloss": "標記（notare）"
+        }
+      ],
+      "etymology": "拉丁 com-（一起）＋ notare（做記號，源自 nota 記號）——中世紀邏輯用語原意是附帶標記，1829年 James Mill 定義 denote 指本義、connote 指附帶暗示的屬性，1865年後擴大為一般的暗示。",
+      "derivatives": [
+        {
+          "word": "connotation",
+          "pos": "n.",
+          "zh": "暗示"
+        }
+      ]
+    },
+    {
+      "id": "coauthor",
+      "word": "coauthor",
+      "phonetic": "ˈkoˌɔθɚ",
+      "zh": "共同作者；聯合執筆",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Will Durant and his wife are coauthors of The Story of Civilization. Durant coauthored the book with his wife.",
+      "example_zh": "威爾·杜蘭與他的妻子是《文明的故事》的共同作者。杜蘭與他的妻子共同執筆了這本書。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "co-",
+          "gloss": "一起（com- 於母音前變體）"
+        },
+        {
+          "text": "author",
+          "gloss": "創作者（auctor）"
+        }
+      ],
+      "etymology": "名詞1850年出現，co-（一起）＋ author（源自拉丁 auctor 創始者，來自 augere 使增加）——與他人共同撰寫者，動詞用法遲至1948年才出現。",
+      "derivatives": []
+    },
+    {
+      "id": "copilot",
+      "word": "copilot",
+      "phonetic": "ˈkoˌpaɪlət",
+      "zh": "副駕駛",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The captain and the copilot took turns manning the cockpit.",
+      "example_zh": "機長與副駕駛輪流駕駛座艙。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "co-",
+          "gloss": "一起"
+        },
+        {
+          "text": "pilot",
+          "gloss": "駕駛員（piloto）"
+        }
+      ],
+      "etymology": "1927年出現，指飛機的第二駕駛，co-（一起）＋ pilot（原指掌舵者，經法文 pillote 源自義大利文 piloto）——1933年起也作動詞使用。",
+      "derivatives": [
+        {
+          "word": "pilot",
+          "pos": "n.",
+          "zh": "飛行員，領航員"
+        }
+      ]
+    },
+    {
+      "id": "conspiracy",
+      "word": "conspiracy",
+      "phonetic": "kənˈspɪrəsɪ",
+      "zh": "共謀，陰謀",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There's a conspiracy going on to keep him from being elected.",
+      "example_zh": "有一起陰謀正在進行，目的是阻止他當選。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起"
+        },
+        {
+          "text": "spir",
+          "gloss": "呼吸（spirare）"
+        }
+      ],
+      "etymology": "古法文與拉丁 conspirationem，conspirare（con- 一起＋ spirare 呼吸）——字面是一起呼吸，本義是以誓言共謀不法之事。",
+      "derivatives": [
+        {
+          "word": "conspire",
+          "pos": "v.",
+          "zh": "共謀，申通"
+        }
+      ]
+    },
+    {
+      "id": "consternation",
+      "word": "consternation",
+      "phonetic": "ˌkɑnstɚˈneʃən",
+      "zh": "驚愕",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "To his consternation, when he arrived at the airport he found that he had forgotten his passport!",
+      "example_zh": "令他驚愕的是，他抵達機場時才發現自己忘了帶護照！",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "stern",
+          "gloss": "打倒、攤平（sternere）"
+        }
+      ],
+      "etymology": "法文 consternation「驚駭交加的錯愕」，拉丁 consternare（使不知所措），加強語氣的 com-＋ sternere（攤開、鋪平）——因驚嚇而不知所措。",
+      "derivatives": []
+    },
+    {
+      "id": "coeducational",
+      "word": "coeducational",
+      "phonetic": "ˌkoˌɛdʒʊˈkeʃənəl",
+      "zh": "男女合校的，男女兼收的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The college went coeducational in 1960.",
+      "example_zh": "這所大學在1960年開始男女合校。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "co-",
+          "gloss": "共同"
+        },
+        {
+          "text": "education",
+          "gloss": "教育（educare 養育）"
+        }
+      ],
+      "etymology": "1868年由 co-education（co- 一起＋ education，源自拉丁 educare 養育）加形容詞字尾 -al 構成，指男女合校共同求學的。",
+      "derivatives": []
+    },
+    {
+      "id": "cohabit",
+      "word": "cohabit",
+      "phonetic": "koˈhæbɪt",
+      "zh": "同居",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He's cohabiting with his girlfriend.",
+      "example_zh": "他正和女友同居。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "co-",
+          "gloss": "一起"
+        },
+        {
+          "text": "habit",
+          "gloss": "居住（habitare）"
+        }
+      ],
+      "etymology": "後期拉丁 cohabitare，co-（一起）＋ habitare（居住，habere 擁有的重複動詞形）——本義是同住，後特化為未婚男女同居的委婉說法。",
+      "derivatives": [
+        {
+          "word": "inhabit",
+          "pos": "v.",
+          "zh": "居住"
+        },
+        {
+          "word": "cohabitation",
+          "pos": "n.",
+          "zh": "同居"
+        }
+      ]
+    },
+    {
+      "id": "collaborate",
+      "word": "collaborate",
+      "phonetic": "kəˈlæbəˌret",
+      "zh": "共同創作，勾結",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The musician collaborated with a playwright to create an opera. The man betrayed his own country by collaborating with the enemy.",
+      "example_zh": "這位音樂家與一位劇作家合作創作了一齣歌劇。這名男子與敵人勾結，背叛了自己的國家。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "col-",
+          "gloss": "一起（con- 於 l 前同化）"
+        },
+        {
+          "text": "labor",
+          "gloss": "工作（laborare）"
+        }
+      ],
+      "etymology": "後期拉丁 collaborare（com- 於 l 前同化為 col- 一起＋ laborare 工作），1845年出現，二戰期間才衍生出與占領敵軍勾結的負面意涵。",
+      "derivatives": [
+        {
+          "word": "collaboration",
+          "pos": "n.",
+          "zh": "共同創作，勾結"
+        },
+        {
+          "word": "collaborator",
+          "pos": "n.",
+          "zh": "合作者，通敵者"
+        }
+      ]
+    },
+    {
+      "id": "compatriot",
+      "word": "compatriot",
+      "phonetic": "kəmˈpetrɪət",
+      "zh": "同胞",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My compatriots, unite!",
+      "example_zh": "我的同胞們，團結起來！",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "一起"
+        },
+        {
+          "text": "patriot",
+          "gloss": "同鄉、源自祖國（patriota）"
+        }
+      ],
+      "etymology": "法文 compatriote，拉丁 compatriota，com-（一起）＋ patriota（同鄉人，源自希臘 patriotes，來自 patris 祖國）——字面即同屬一個祖國的人。",
+      "derivatives": [
+        {
+          "word": "patriot",
+          "pos": "n.",
+          "zh": "愛國者"
+        }
+      ]
+    },
+    {
+      "id": "accompany",
+      "word": "accompany",
+      "phonetic": "əˈkʌmpənɪ",
+      "zh": "伴隨，陪伴",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Depression is almost always accompanied by insomnia.",
+      "example_zh": "憂鬱症幾乎總是伴隨著失眠。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "ac-",
+          "gloss": "朝向（ad-，非本組 con- 家族）"
+        },
+        {
+          "text": "company",
+          "gloss": "同伴（com- 一起＋ panis 麵包）"
+        }
+      ],
+      "etymology": "古法文 acompaignier，a-（源自拉丁 ad- 朝向，此處拼作 ac-）＋ company／compaignier；真正帶 com- 的是 company 本身（後期拉丁 companio「共食麵包者」，com- 一起＋ panis 麵包）。",
+      "derivatives": [
+        {
+          "word": "accompaniment",
+          "pos": "n.",
+          "zh": "伴隨物，伴奏"
+        }
+      ]
+    },
+    {
+      "id": "competent",
+      "word": "competent",
+      "phonetic": "ˈkɑmpɪtənt",
+      "zh": "勝任的，稱職的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Our manager is a very competent leader.",
+      "example_zh": "我們的經理是位非常稱職的領導者。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "一起"
+        },
+        {
+          "text": "pet",
+          "gloss": "追求、奔向（petere）"
+        }
+      ],
+      "etymology": "古法文與拉丁 competentem，動詞 competere（com- 一起＋ petere 追求）——原意是一致、相符，1640年代才發展出有能力的之意。",
+      "derivatives": [
+        {
+          "word": "compete",
+          "pos": "v.",
+          "zh": "競爭"
+        },
+        {
+          "word": "competence",
+          "pos": "n.",
+          "zh": "勝任，稱職"
+        },
+        {
+          "word": "incompetent",
+          "pos": "a.",
+          "zh": "不勝任的，不稱職的"
+        },
+        {
+          "word": "incompetence",
+          "pos": "n.",
+          "zh": "不勝任，不稱職"
+        }
+      ]
+    },
+    {
+      "id": "compile",
+      "word": "compile",
+      "phonetic": "kəmˈpaɪl",
+      "zh": "匯編，收集",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She compiled a list of all the gourmet restaurants in the area.",
+      "example_zh": "她彙整了這個地區所有美食餐廳的清單。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "一起"
+        },
+        {
+          "text": "pil",
+          "gloss": "壓緊、堆疊（pilare）"
+        }
+      ],
+      "etymology": "古法文 compiler，中世紀拉丁 compilare（com- 一起＋ pilare 壓緊、夯實）——中世紀拉丁原意是掠奪，更早則是捆在一起、堆起來，14世紀初起專指彙整編纂。",
+      "derivatives": [
+        {
+          "word": "compilation",
+          "pos": "n.",
+          "zh": "匯編，收集"
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "word": "combat",
+      "phonetic": "ˈkɑmbæt",
+      "zh": "戰鬥；對抗",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Soldiers in combat rely on each other for their lives. Vaccination is the best means to combat the pandemic.",
+      "example_zh": "在戰鬥中的士兵性命相依。接種疫苗是對抗疫情最好的方法。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "彼此"
+        },
+        {
+          "text": "bat",
+          "gloss": "打、戰鬥（battuere）"
+        }
+      ],
+      "etymology": "法文 combat，古法文 combattre（com- 彼此＋ battuere 打，可能源自高盧語，與古英文 beatan 打同源）——動詞指互相打鬥，名詞指兩名武裝者間的戰鬥。",
+      "derivatives": []
+    },
+    {
+      "id": "compartment",
+      "word": "compartment",
+      "phonetic": "kəmˈpɑrtmənt",
+      "zh": "隔間，小室",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I've reserved a first-class compartment on the Oriental Express.",
+      "example_zh": "我已經在東方快車上訂了一間頭等艙隔間。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "part",
+          "gloss": "部分（partis）"
+        }
+      ],
+      "etymology": "法文 compartiment、義大利文 compartimento，後期拉丁 compartiri（加強語氣的 com-＋ partis 部分）——被隔板與相鄰部分隔開的一部分空間。",
+      "derivatives": [
+        {
+          "word": "compartmentalize",
+          "pos": "v.",
+          "zh": "區隔"
+        }
+      ]
+    },
+    {
+      "id": "conceal",
+      "word": "conceal",
+      "phonetic": "kənˈsil",
+      "zh": "隱藏",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He never concealed his ambitions.",
+      "example_zh": "他從不掩飾自己的野心。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "ceal",
+          "gloss": "隱藏（celare）"
+        }
+      ],
+      "etymology": "古法文 conceler，拉丁 concelare「隱藏」（加強語氣的 con-＋ celare 隱藏）——原意是保密、不透露，15世紀初擴大為使不被看見。",
+      "derivatives": [
+        {
+          "word": "concealment",
+          "pos": "n.",
+          "zh": "隱藏"
+        }
+      ]
+    },
+    {
+      "id": "confiscate",
+      "word": "confiscate",
+      "phonetic": "ˈkɑnfəˌsket",
+      "zh": "沒收，將…充公",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His passport was confiscated by the police to prevent him from leaving the country.",
+      "example_zh": "警方沒收了他的護照，以防止他離境。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起"
+        },
+        {
+          "text": "fisc",
+          "gloss": "國庫、錢籃（fiscus）"
+        }
+      ],
+      "etymology": "同化字首 con-（源自 com-）＋ fiscus（原指裝錢的柳條籃，後引申為國庫）——過去分詞 confiscatus 原指將財物判歸國庫充公，1819年後擴大為以權力沒收。",
+      "derivatives": [
+        {
+          "word": "confiscation",
+          "pos": "n.",
+          "zh": "沒收，充公"
+        }
+      ]
+    },
+    {
+      "id": "conscientious",
+      "word": "conscientious",
+      "phonetic": "ˌkɑnʃiˈɛnʃəs",
+      "zh": "憑良心的，認真負責的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The criminal turned himself in because he's suffering from a guilty conscience.",
+      "example_zh": "這名罪犯因為良心不安而自首。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起、徹底"
+        },
+        {
+          "text": "scient",
+          "gloss": "知道（scire）"
+        }
+      ],
+      "etymology": "法文 conscientieux，中世紀拉丁 conscientiosus，拉丁 conscientia（con- 一起、徹底＋ scire 知道）——字面是共同知悉，引申為良知，指受良知支配而行事的。",
+      "derivatives": [
+        {
+          "word": "conscience",
+          "pos": "n.",
+          "zh": "良心，良知"
+        },
+        {
+          "word": "conscious",
+          "pos": "a.",
+          "zh": "有知覺的，有意識的"
+        },
+        {
+          "word": "unconscious",
+          "pos": "a.",
+          "zh": "無知覺的"
+        }
+      ]
+    },
+    {
+      "id": "conservation",
+      "word": "conservation",
+      "phonetic": "ˌkɑnsɚˈveʃən",
+      "zh": "節約，保育，保護",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You cannot hunt or fish in a conservation area. All citizens are urged to participate in efforts of energy conservation, soil conservation and wild life conservation.",
+      "example_zh": "在保育區內不得狩獵或捕魚。呼籲全體公民參與節約能源、水土保持與野生動物保育的行動。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "serv",
+          "gloss": "看守、保持（servare）"
+        }
+      ],
+      "etymology": "拉丁 conservationem，加強語氣的 com-＋ servare（看守、維持）——本義是保持健康完好、悉心看護，1909年起衍生出保育自然野地的現代環保義。",
+      "derivatives": [
+        {
+          "word": "conserve",
+          "pos": "v.",
+          "zh": "節約"
+        },
+        {
+          "word": "conservatory",
+          "pos": "n., a.",
+          "zh": "音樂學校，表演學校（的）；保守的"
+        }
+      ]
+    },
+    {
+      "id": "contempt",
+      "word": "contempt",
+      "phonetic": "kənˈtɛmpt",
+      "zh": "輕蔑，藐視",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Such behavior is beneath contempt.",
+      "example_zh": "這種行為卑劣到不值一提。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "tempt",
+          "gloss": "輕視（temnere）"
+        }
+      ],
+      "etymology": "古法文與拉丁 contemptus，動詞 contemnere（加強語氣的 com-＋ temnere 輕視）——約1400年後擴大為對卑劣、無價值之事的鄙視。",
+      "derivatives": [
+        {
+          "word": "contemptuous",
+          "pos": "a.",
+          "zh": "輕蔑的，藐視的"
+        }
+      ]
+    },
+    {
+      "id": "coordination",
+      "word": "coordination",
+      "phonetic": "koˌɔrdɪˈneʃən",
+      "zh": "協調，統籌",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The aide is responsible for interdepartmental coordination.",
+      "example_zh": "這位助理負責跨部門的協調工作。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "co-",
+          "gloss": "一起"
+        },
+        {
+          "text": "ordin",
+          "gloss": "排列、順序（ordo）"
+        }
+      ],
+      "etymology": "法文 coordination，中世紀拉丁 coordinationem，co-（一起）＋ ordinatio（源自 ordo 排、列、順序）——本義是有秩序的組合，1855年後發展出肌肉動作協調之意。",
+      "derivatives": [
+        {
+          "word": "coordinate",
+          "pos": "v.",
+          "zh": "協調"
+        },
+        {
+          "word": "coordinates",
+          "pos": "n.",
+          "zh": "座標"
+        }
+      ]
+    },
+    {
+      "id": "conciliate",
+      "word": "conciliate",
+      "phonetic": "kənˈsɪliˌet",
+      "zh": "安撫，調解",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government program has been modified to conciliate its critics.",
+      "example_zh": "這項政府計畫已經修改，以安撫批評者。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起"
+        },
+        {
+          "text": "cili",
+          "gloss": "召集（源自「呼喊」）"
+        }
+      ],
+      "etymology": "拉丁 conciliatus（conciliare 使聚合、示好），同化字首 con-（一起）加上與呼喊同源的字根——以安撫化解對方的猜忌或敵意，拉丁 concilium 集會即為同源詞。",
+      "derivatives": [
+        {
+          "word": "conciliation",
+          "pos": "n.",
+          "zh": "安撫，調解"
+        },
+        {
+          "word": "reconcile",
+          "pos": "v.",
+          "zh": "使和解，調解"
+        }
+      ]
+    },
+    {
+      "id": "corroborate",
+      "word": "corroborate",
+      "phonetic": "kəˈrɑbəˌret",
+      "zh": "證實，確認",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The confession is corroborated by eye-witness testimonies.",
+      "example_zh": "這份供詞得到目擊者證詞的證實。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "cor-",
+          "gloss": "一起（con- 於 r 前同化）"
+        },
+        {
+          "text": "robor",
+          "gloss": "使強壯（robur 力量）"
+        }
+      ],
+      "etymology": "拉丁 corroboratus（corroborare 過去分詞），com- 於 r 前同化為 cor-（一起）＋ roborare（使強壯，源自 robur 力量）——16至18世紀仍保留使強壯本義，1706年後固定為以證據佐證之意。",
+      "derivatives": [
+        {
+          "word": "corroboration",
+          "pos": "n.",
+          "zh": "證實，確認"
+        }
+      ]
+    },
+    {
+      "id": "commensurate",
+      "word": "commensurate",
+      "phonetic": "kəˈmɛnsərət",
+      "zh": "等量的，相稱的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I am looking for a salary that is commensurate with my skills and experience.",
+      "example_zh": "我在尋找與我的技能和經驗相稱的薪資。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "com-",
+          "gloss": "一起（於 m 前同化）"
+        },
+        {
+          "text": "mensur",
+          "gloss": "測量（mensura）"
+        }
+      ],
+      "etymology": "com- 於 m 前同化（一起）＋ 後期拉丁 mensuratus（mensurare 測量，源自 mensura 測量）——本義是具有相同界限，1680年代衍生出可用共同單位衡量之意。",
+      "derivatives": []
+    },
+    {
+      "id": "counsel",
+      "word": "counsel",
+      "phonetic": "ˈkaʊnsəl",
+      "zh": "顧問，律師；建議，提供建議",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The judge became counsel to the President. The expert provides free counsel to people in need. The social worker counsels unemployed people on job-finding.",
+      "example_zh": "這位法官成為總統的法律顧問。這位專家為有需要的人提供免費諮詢。這位社工為失業者提供求職諮詢。",
+      "draft": false,
+      "prefixId": "con",
+      "parts": [
+        {
+          "text": "coun-",
+          "gloss": "一起（con- 的古法文拼法變體，已確認同源）"
+        },
+        {
+          "text": "sel",
+          "gloss": "召集、商議（源自「呼喊」）"
+        }
+      ],
+      "etymology": "古法文 counseil「建議、商議」，拉丁 consilium「計畫、意見」（同化字首 com- 一起＋ 與 calare「宣告、召集」同源的字根）——本義是所給予的建議，14世紀末衍生出提供法律諮詢的律師之意。",
+      "derivatives": []
+    },
+    {
+      "id": "symbolic",
+      "word": "symbolic",
+      "phonetic": "sɪmˈbɑlɪk",
+      "zh": "象徵性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Statue of Liberty is a symbol of freedom.",
+      "example_zh": "自由女神像是自由的象徵。",
+      "draft": false,
+      "prefixId": "syn",
+      "parts": [
+        {
+          "text": "sym-",
+          "gloss": "共同、一起（syn- 於 b 前同化）"
+        },
+        {
+          "text": "bole",
+          "gloss": "投擲（ballein）"
+        }
+      ],
+      "etymology": "sym-（syn- 同化，一起）＋ bole（ballein 投擲）——字面是丟在一起互相比對的信物，1650年代發展出「象徵性的」之義。",
+      "derivatives": [
+        {
+          "word": "symbol",
+          "pos": "n.",
+          "zh": "象徵，符號"
+        },
+        {
+          "word": "symbolize",
+          "pos": "v.",
+          "zh": "象徵，代表"
+        },
+        {
+          "word": "symbolism",
+          "pos": "n.",
+          "zh": "象徵主義"
+        }
+      ]
+    },
+    {
+      "id": "synchronize",
+      "word": "synchronize",
+      "phonetic": "ˈsɪŋkrəˌnaɪz",
+      "zh": "同步化，對時",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Let's synchronize our watches. Sound and movement are synchronized in that music video.",
+      "example_zh": "我們把手錶對時吧。那部音樂錄影帶裡的聲音和畫面是同步的。",
+      "draft": false,
+      "prefixId": "syn",
+      "parts": [
+        {
+          "text": "syn-",
+          "gloss": "共同、一起"
+        },
+        {
+          "text": "chron",
+          "gloss": "時間（khronos）"
+        }
+      ],
+      "etymology": "syn-（一起）＋ chron（khronos 時間）——處於同一時間，1620年代指同時發生，1879年才擴展出使鐘錶對時的技術義。",
+      "derivatives": [
+        {
+          "word": "synchronization",
+          "pos": "n.",
+          "zh": "同步"
+        },
+        {
+          "word": "synchronous",
+          "pos": "a.",
+          "zh": "同步的，同時的"
+        }
+      ]
+    },
+    {
+      "id": "synthetic",
+      "word": "synthetic",
+      "phonetic": "sɪnˈθɛtɪk",
+      "zh": "合成的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Nylon was the first synthetic, or artificial, fiber.",
+      "example_zh": "尼龍是第一種合成纖維，也就是人造纖維。",
+      "draft": false,
+      "prefixId": "syn",
+      "parts": [
+        {
+          "text": "syn-",
+          "gloss": "共同、一起"
+        },
+        {
+          "text": "thet",
+          "gloss": "放置（tithenai）"
+        }
+      ],
+      "etymology": "syn-（一起）＋ thet（tithenai 放置）——善於組合、有建構力的，17世紀先作邏輯學術語，1930年才衍生「人造的」之義。",
+      "derivatives": [
+        {
+          "word": "synthesis",
+          "pos": "n.",
+          "zh": "合成，綜合"
+        },
+        {
+          "word": "synthesize",
+          "pos": "v.",
+          "zh": "合成"
+        }
+      ]
+    },
+    {
+      "id": "photosynthesis",
+      "word": "photosynthesis",
+      "phonetic": "ˌfotoˈsɪnθəsɪs",
+      "zh": "光合作用",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Without photosynthesis, oxygen in the air would have been depleted long ago.",
+      "example_zh": "沒有光合作用，空氣中的氧氣早就耗盡了。",
+      "draft": false,
+      "prefixId": "syn",
+      "parts": [
+        {
+          "text": "photo-",
+          "gloss": "光"
+        },
+        {
+          "text": "syn-",
+          "gloss": "共同、一起"
+        },
+        {
+          "text": "thesis",
+          "gloss": "放置、安放"
+        }
+      ],
+      "etymology": "1895年仿德文 Photosynthese 的借譯詞，photo-（光）＋ synthese（合成，本身即 syn- 一起＋ thesis 放置）——字面是藉光完成的合成作用，取代舊稱 assimilation。",
+      "derivatives": [
+        {
+          "word": "photosynthetic",
+          "pos": "a.",
+          "zh": "光合作用的"
+        },
+        {
+          "word": "photosynthesize",
+          "pos": "v.",
+          "zh": "行光合作用"
+        }
+      ]
+    },
+    {
+      "id": "simultaneous",
+      "word": "simultaneous",
+      "phonetic": "ˌsaɪməlˈtenɪəs",
+      "zh": "同時的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Two in the audience raised their hands simultaneously.",
+      "example_zh": "觀眾中有兩人同時舉手。",
+      "draft": false,
+      "prefixId": "syn",
+      "parts": [
+        {
+          "text": "simul-",
+          "gloss": "同時（拉丁 simul，非希臘 syn-）"
+        },
+        {
+          "text": "taneous",
+          "gloss": "…的（仿 spontaneus 字尾）"
+        }
+      ],
+      "etymology": "陷阱字：源自中世紀拉丁 simultaneus，根本是拉丁 simul「同時」（與 similis 相似的同源，非希臘字首 syn-），可能仿 spontaneus 構詞而來；1650年代進入英文表同時發生的。",
+      "derivatives": [
+        {
+          "word": "simultaneously",
+          "pos": "adv.",
+          "zh": "同時地"
+        },
+        {
+          "word": "simultaneity",
+          "pos": "n.",
+          "zh": "同時性"
+        }
+      ]
+    },
+    {
+      "id": "simulate",
+      "word": "simulate",
+      "phonetic": "ˈsɪmjəˌlet",
+      "zh": "模擬",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some insects simulate the environment for self-protection.",
+      "example_zh": "有些昆蟲會模擬周遭環境以自我保護。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "simul-",
+          "gloss": "相似（拉丁 similis，非 per-）"
+        },
+        {
+          "text": "ate",
+          "gloss": "使成為…"
+        }
+      ],
+      "etymology": "陷阱字：源自拉丁 simulatus（simulare 過去分詞），意為使相似、模仿，本於 similis「相似的」，Etymonline 並未將此字歸入 per-（穿過）家族。",
+      "derivatives": [
+        {
+          "word": "simulation",
+          "pos": "n.",
+          "zh": "模擬"
+        },
+        {
+          "word": "dissimulate",
+          "pos": "v.",
+          "zh": "掩飾，裝假"
+        },
+        {
+          "word": "dissimulation",
+          "pos": "n.",
+          "zh": "掩飾，裝假"
+        }
+      ]
+    },
+    {
+      "id": "simile",
+      "word": "simile",
+      "phonetic": "ˈsɪməlɪ",
+      "zh": "明喻",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "\"She is as beautiful as a rose\" is a simile.",
+      "example_zh": "「她美得像朵玫瑰」是一個明喻。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "simil-",
+          "gloss": "相似（拉丁 similis）"
+        }
+      ],
+      "etymology": "陷阱字：源自拉丁 simile（similis 中性形），意為相似之物、比擬，與 simulate 同源，並非 per- 字首詞。",
+      "derivatives": []
+    },
+    {
+      "id": "imperceptible",
+      "word": "imperceptible",
+      "phonetic": "ˌɪmpɚˈsɛptəbəl",
+      "zh": "覺察不出的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The movement of the hour hand is completely imperceptible.",
+      "example_zh": "時針的移動完全無法用肉眼察覺。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "im-",
+          "gloss": "不、非（in- 同化）"
+        },
+        {
+          "text": "per-",
+          "gloss": "徹底、完全穿透"
+        },
+        {
+          "text": "cept",
+          "gloss": "抓住（capere）"
+        }
+      ],
+      "etymology": "中世紀拉丁 imperceptibilis，否定字首 in-（同化為 im-）＋ perceptibilis（可感知的，源自 percipere＝per 徹底＋ capere 抓取）——字面是無法被完全抓住、感知不到的。",
+      "derivatives": [
+        {
+          "word": "perceive",
+          "pos": "v.",
+          "zh": "觀察，覺察"
+        },
+        {
+          "word": "perception",
+          "pos": "n.",
+          "zh": "觀察，覺察"
+        }
+      ]
+    },
+    {
+      "id": "perennial",
+      "word": "perennial",
+      "phonetic": "pəˈrɛnɪəl",
+      "zh": "年復一年的，永恆的；多年生植物",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Black is a perennial fashion favorite. Perennials live on for many years.",
+      "example_zh": "黑色是歷久不衰的流行首選。多年生植物能存活許多年。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "貫穿、經過"
+        },
+        {
+          "text": "enni",
+          "gloss": "年（annus）"
+        }
+      ],
+      "etymology": "per（貫穿）＋ enni（annus 年）——貫穿全年（或多年）持續的，1640年代先用於常青植物，1670年代才成為多年生的植物學定義。",
+      "derivatives": []
+    },
+    {
+      "id": "perish",
+      "word": "perish",
+      "phonetic": "ˈpɛrɪʃ",
+      "zh": "滅亡，死亡",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The adventurer perished without reaching the South Pole.",
+      "example_zh": "這名冒險家未能抵達南極便喪命了。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "徹底、以致毀滅"
+        },
+        {
+          "text": "ire",
+          "gloss": "走、去"
+        }
+      ],
+      "etymology": "古法文 perir，源自拉丁 perire「消失、滅亡」，per（徹底、以致毀滅）＋ ire（走）——字面是徹底走掉，13世紀末指死亡，14世紀中擴大指一般物品腐壞消失。",
+      "derivatives": [
+        {
+          "word": "peril",
+          "pos": "n.",
+          "zh": "危險"
+        },
+        {
+          "word": "perilous",
+          "pos": "a.",
+          "zh": "危險的"
+        }
+      ]
+    },
+    {
+      "id": "perpetual",
+      "word": "perpetual",
+      "phonetic": "pɚˈpɛtʃuəl",
+      "zh": "永久的，永恆的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The heavenly bodies are in perpetual motion.",
+      "example_zh": "天體恆常運行不息。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "貫穿、徹底"
+        },
+        {
+          "text": "pet",
+          "gloss": "追求、奔向（petere）"
+        }
+      ],
+      "etymology": "拉丁 perpetuus「持續不斷的」，可上溯古拉丁 perpes「持久的」，per（貫穿）＋ petere（追求）字根組成，14世紀中經古法文進入英文，表永遠持續不停止。",
+      "derivatives": [
+        {
+          "word": "perpetuation",
+          "pos": "n.",
+          "zh": "永久，永久性"
+        }
+      ]
+    },
+    {
+      "id": "pervade",
+      "word": "pervade",
+      "phonetic": "pɚˈved",
+      "zh": "彌漫，充斥",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The smell of burnt food pervades the room.",
+      "example_zh": "燒焦食物的氣味瀰漫了整個房間。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "貫穿、通過"
+        },
+        {
+          "text": "vade",
+          "gloss": "走、行（vadere）"
+        }
+      ],
+      "etymology": "拉丁 pervadere「穿過、蔓延」，per（貫穿）＋ vadere（走）——字面是走遍、穿透，1650年代起指某物擴散瀰漫整個空間。",
+      "derivatives": [
+        {
+          "word": "pervasive",
+          "pos": "a.",
+          "zh": "瀰漫的，無所不在的"
+        }
+      ]
+    },
+    {
+      "id": "percolate",
+      "word": "percolate",
+      "phonetic": "ˈpɝkəˌlet",
+      "zh": "過濾，滲透",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Rain water quickly percolated through the dry soil.",
+      "example_zh": "雨水迅速滲透了乾燥的土壤。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "穿過、貫穿"
+        },
+        {
+          "text": "colate",
+          "gloss": "過濾（colum 濾器）"
+        }
+      ],
+      "etymology": "拉丁 percolare「濾過」，per（穿過）＋ colare（過濾，本於 colum 濾器）——字面是穿過濾器，1620年代先指液體滲濾，1670年代起才有比喻用法。",
+      "derivatives": [
+        {
+          "word": "percolation",
+          "pos": "n.",
+          "zh": "過濾，滲透"
+        }
+      ]
+    },
+    {
+      "id": "persevere",
+      "word": "persevere",
+      "phonetic": "ˌpɝsəˈvɪr",
+      "zh": "堅持不懈",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I think the two keys to my success are patience and perseverance.",
+      "example_zh": "我認為我成功的兩個關鍵是耐心與堅持不懈。",
+      "draft": false,
+      "prefixId": "per",
+      "parts": [
+        {
+          "text": "per-",
+          "gloss": "十分、非常（加強義）"
+        },
+        {
+          "text": "severus",
+          "gloss": "嚴格、堅毅"
+        }
+      ],
+      "etymology": "拉丁 perseverare，per（十分、非常）＋ severus（嚴格、堅毅）——字面是十分堅毅，14世紀末經古法文 perseverer 進入英文，表鍥而不捨地堅持。",
+      "derivatives": [
+        {
+          "word": "perseverance",
+          "pos": "n.",
+          "zh": "堅持不懈"
+        }
+      ]
+    },
+    {
+      "id": "translation",
+      "word": "translation",
+      "phonetic": "trænzˈleʃən",
+      "zh": "翻譯",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Web translations are increasingly reliable, though still far from perfect.",
+      "example_zh": "網路翻譯越來越可靠，但仍遠非完美。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過、穿越"
+        },
+        {
+          "text": "ferre",
+          "gloss": "搬運、攜帶"
+        }
+      ],
+      "etymology": "古法文 translacion，拉丁 translationem，trans-（越過）＋ ferre（搬運）——字面是搬運過去，中古英文最初指聖髑遷移，十四世紀晚期才發展出翻譯之義。",
+      "derivatives": [
+        {
+          "word": "translate",
+          "pos": "v.",
+          "zh": "翻譯"
+        }
+      ]
+    },
+    {
+      "id": "transcend",
+      "word": "transcend",
+      "phonetic": "trænˈsɛnd",
+      "zh": "超越，克服",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A smile transcends all language barriers.",
+      "example_zh": "微笑能夠超越所有語言的隔閡。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過、超越"
+        },
+        {
+          "text": "scandere",
+          "gloss": "攀爬"
+        }
+      ],
+      "etymology": "古法文 transcendre，拉丁 transcendere（trans- 越過＋ scandere 攀爬）——字面是爬越過去，十四世紀中期指超出範圍之外，十五世紀初擴大出勝過、超越之意。",
+      "derivatives": [
+        {
+          "word": "transcendent",
+          "pos": "a.",
+          "zh": "超越性的"
+        },
+        {
+          "word": "transcendence",
+          "pos": "n.",
+          "zh": "超越"
+        },
+        {
+          "word": "transcendentalism",
+          "pos": "n.",
+          "zh": "超越主義"
+        }
+      ]
+    },
+    {
+      "id": "intransigent",
+      "word": "intransigent",
+      "phonetic": "ɪnˈtrænsədʒənt",
+      "zh": "不妥協的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The talk broke down because both sides remained intransigent.",
+      "example_zh": "這場會談破局，因為雙方都堅持不肯讓步。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "in-",
+          "gloss": "不"
+        },
+        {
+          "text": "trans-",
+          "gloss": "越過"
+        },
+        {
+          "text": "agere",
+          "gloss": "驅動、推行"
+        }
+      ],
+      "etymology": "1874年法文 intransigeant，借自西班牙政治用語 los intransigentes（不妥協的極端派），in-（不）＋ transigent（源自拉丁 transigere 現在分詞，trans- 越過＋ agere 驅動，本義是談成、辦妥）——字面即談不攏、不肯妥協。",
+      "derivatives": [
+        {
+          "word": "intransigence",
+          "pos": "n.",
+          "zh": "不妥協"
+        }
+      ]
+    },
+    {
+      "id": "transcript",
+      "word": "transcript",
+      "phonetic": "ˈtrænskrɪpt",
+      "zh": "抄本，謄本，成績單",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Admissions Office needs 10 copies of your academic transcripts. The secretary is transcribing the recording into typed texts.",
+      "example_zh": "招生辦公室需要十份你的成績單。這位秘書正在把錄音謄寫成打字文稿。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過、轉移"
+        },
+        {
+          "text": "scribere",
+          "gloss": "書寫"
+        }
+      ],
+      "etymology": "約1300年古法文 transcrit，中古拉丁 transcriptum（transcribere 過去分詞，trans- 越過＋ scribere 書寫）——字面是重新抄寫過去，指依原件謄錄而成的文件。",
+      "derivatives": [
+        {
+          "word": "transcribe",
+          "pos": "v.",
+          "zh": "抄寫，改寫"
+        },
+        {
+          "word": "transcription",
+          "pos": "n.",
+          "zh": "抄寫，謄寫（基因）轉錄"
+        }
+      ]
+    },
+    {
+      "id": "transfusion",
+      "word": "transfusion",
+      "phonetic": "trænzˈfjuʒən",
+      "zh": "輸送",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The victim requires immediate blood transfusion.",
+      "example_zh": "這名傷者需要立即輸血。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過、轉移"
+        },
+        {
+          "text": "fundere",
+          "gloss": "傾倒、灌注"
+        }
+      ],
+      "etymology": "1570年代法文 transfusion，拉丁 transfusionem，transfundere（trans- 越過＋ fundere 傾倒）——原指從一容器倒入另一容器，1640年代才專指血液輸給另一人的醫療用法。",
+      "derivatives": [
+        {
+          "word": "transfuse",
+          "pos": "v.",
+          "zh": "輸送"
+        }
+      ]
+    },
+    {
+      "id": "transit",
+      "word": "transit",
+      "phonetic": "ˈtrænzɪt",
+      "zh": "運輸",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The package is in transit and should arrive in a couple of days.",
+      "example_zh": "這件包裹正在運送中，應該幾天內就會送達。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過"
+        },
+        {
+          "text": "ire",
+          "gloss": "去、行走"
+        }
+      ],
+      "etymology": "拉丁 transitus（transire 動名詞，trans- 越過＋ ire 去）——字面是穿越而過，1660年代發展出行星凌日的天文學意義，1873年起用於大眾運輸。",
+      "derivatives": []
+    },
+    {
+      "id": "translucent",
+      "word": "translucent",
+      "phonetic": "trænzˈlusənt",
+      "zh": "透光的，半透明的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The porcelain is so fine and delicate that it's translucent.",
+      "example_zh": "這件瓷器如此精緻細膩，以致呈現半透明狀。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "穿越、貫穿"
+        },
+        {
+          "text": "lucere",
+          "gloss": "發光、照耀"
+        }
+      ],
+      "etymology": "1785年拉丁 translucentem（translucere 現在分詞，trans- 穿越＋ lucere 發光）——字面是光穿透而過，指半透明、能透光卻不完全透明的狀態。",
+      "derivatives": [
+        {
+          "word": "translucence",
+          "pos": "n.",
+          "zh": "透光，半透明"
+        },
+        {
+          "word": "transparent",
+          "pos": "a.",
+          "zh": "透明的"
+        }
+      ]
+    },
+    {
+      "id": "transplant",
+      "word": "transplant",
+      "phonetic": "ˈtrænzplænt",
+      "zh": "移植",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Nothing short of a heart transplant can save the patient. Transplanted from the mountains, the tree looks unhealthy.",
+      "example_zh": "唯有心臟移植才能挽救這名病患。這棵樹從山上移植過來後，看起來不太健康。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "trans-",
+          "gloss": "越過、轉移"
+        },
+        {
+          "text": "plantare",
+          "gloss": "栽種"
+        }
+      ],
+      "etymology": "十五世紀中期晚期拉丁 trans-＋ plantare（栽種）——字面是移到別處重新栽種，原指園藝移植，1786年才發展出器官／組織移植的外科醫學用法。",
+      "derivatives": []
+    },
+    {
+      "id": "trespass",
+      "word": "trespass",
+      "phonetic": "ˈtrɛspæs",
+      "zh": "擅入，強行穿越",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The sign says \"Private property. No trespassing.\"",
+      "example_zh": "告示牌寫著：「私人土地，禁止擅入。」",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "tres-",
+          "gloss": "越過（＝拉丁 trans-）"
+        },
+        {
+          "text": "passer",
+          "gloss": "經過、行走"
+        }
+      ],
+      "etymology": "約1300年古法文 trespasser，tres-（Etymonline 確認源自拉丁 trans-）＋ passer（經過，字根為拉丁 passus 步伐）——字面是越界走過去，十五世紀中期起專指未經許可擅入他人土地。",
+      "derivatives": [
+        {
+          "word": "trespassing",
+          "pos": "n.",
+          "zh": "擅入"
+        }
+      ]
+    },
+    {
+      "id": "tranquil",
+      "word": "tranquil",
+      "phonetic": "ˈtræŋkwɪl",
+      "zh": "寧靜的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He retired to a tranquil life in the countryside.",
+      "example_zh": "他退休後過著鄉間寧靜的生活。",
+      "draft": false,
+      "prefixId": "trans",
+      "parts": [
+        {
+          "text": "tranquillus",
+          "gloss": "安靜、平和的（拉丁形容詞整字，非 trans-＋字根複合）"
+        }
+      ],
+      "etymology": "陷阱字：十五世紀中期古法文 tranquille／拉丁 tranquillus「安靜、平和的」。Etymonline 僅在 tranquility 詞條提到 tranquillus「或許」是 trans-（此處若成立意為過度、極度）與 PIE *kweie-「安靜」的複合詞，但學者 de Vaan 認為此說語意含糊、語音有疑義。",
+      "derivatives": [
+        {
+          "word": "tranquility",
+          "pos": "n.",
+          "zh": "寧靜"
+        }
+      ]
+    },
+    {
+      "id": "diaphanous",
+      "word": "diaphanous",
+      "phonetic": "daɪˈæfənəs",
+      "zh": "薄而透明的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The bride wore a diaphanous veil.",
+      "example_zh": "新娘戴著一條薄透的面紗。",
+      "draft": false,
+      "prefixId": "dia",
+      "parts": [
+        {
+          "text": "dia-",
+          "gloss": "穿透、貫穿"
+        },
+        {
+          "text": "phainesthai",
+          "gloss": "顯現、被看見"
+        }
+      ],
+      "etymology": "1610年代中古拉丁 diaphanus，希臘 diaphanes「透明的」，dia-（穿透）＋ phainesthai（顯現）——字面是透光顯現，指介於 transparent 與 translucent 之間的狀態。",
+      "derivatives": []
+    },
+    {
+      "id": "diagonal",
+      "word": "diagonal",
+      "phonetic": "daɪˈægənəl",
+      "zh": "斜的，對角的；對角線，斜線",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The blanket is covered with diagonal stripes. The ramp was set at a low diagonal to make it easier for physically challenged patrons.",
+      "example_zh": "這條毯子上布滿斜紋。這個坡道設置成較低的斜角，方便行動不便的顧客使用。",
+      "draft": false,
+      "prefixId": "dia",
+      "parts": [
+        {
+          "text": "dia-",
+          "gloss": "貫穿、橫越"
+        },
+        {
+          "text": "gonia",
+          "gloss": "角"
+        }
+      ],
+      "etymology": "古法文 diagonal，拉丁 diagonalis（源自 diagonus 斜線，希臘 diagonios），dia-（貫穿）＋ gonia（角）——字面是從一角到另一角，指連接不相鄰兩角的直線。",
+      "derivatives": []
+    },
+    {
+      "id": "dialectical",
+      "word": "dialectical",
+      "phonetic": "ˌdaɪəˈlɛktɪkəl",
+      "zh": "辯證的，方言的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are literally hundreds of different dialects in use in China.",
+      "example_zh": "中國實際使用的方言多達數百種。",
+      "draft": false,
+      "prefixId": "dia",
+      "parts": [
+        {
+          "text": "dia-",
+          "gloss": "彼此之間、交互"
+        },
+        {
+          "text": "legein",
+          "gloss": "說話"
+        }
+      ],
+      "etymology": "1540年代由 dialectic 加形容詞字尾 -al 構成；dialectic 源自希臘 dialektike（techne），字根 dialektos 由 dialegesthai（dia- 彼此之間＋ legein 說）構成，字面是彼此交談、辯論。",
+      "derivatives": [
+        {
+          "word": "dialect",
+          "pos": "n.",
+          "zh": "方言"
+        },
+        {
+          "word": "dialectic",
+          "pos": "n., a.",
+          "zh": "辯證法；辯證的，方言的"
+        }
+      ]
+    },
+    {
+      "id": "diaphragm",
+      "word": "diaphragm",
+      "phonetic": "ˈdaɪəˌfræm",
+      "zh": "橫隔膜",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Carrying around weight adds pressure on the diaphragm, which needs to move to breathe.",
+      "example_zh": "隨身負重會增加橫隔膜的壓力，而橫隔膜需要活動才能呼吸。",
+      "draft": false,
+      "prefixId": "dia",
+      "parts": [
+        {
+          "text": "dia-",
+          "gloss": "橫越、貫穿"
+        },
+        {
+          "text": "phragma",
+          "gloss": "圍籬、隔板（phrassein）"
+        }
+      ],
+      "etymology": "十四世紀晚期晚期拉丁與希臘 diaphragma，dia-（橫越）＋ phrassein（圍起、阻隔，字源不明）——字面是隔板，最初指分隔胸腔與腹腔的肌肉膜，1650年代起泛指任何分隔物。",
+      "derivatives": []
+    },
+    {
+      "id": "interaction",
+      "word": "interaction",
+      "phonetic": "ˌɪntɚˈækʃən",
+      "zh": "互動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There's not enough interaction between management and the workers.",
+      "example_zh": "管理層與員工之間的互動不夠。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "action",
+          "gloss": "行動（actio）"
+        }
+      ],
+      "etymology": "1807年由 inter-（之間）＋ action（行動，源自拉丁 actio）構成，指事物彼此間的相互作用或影響。",
+      "derivatives": [
+        {
+          "word": "interact",
+          "pos": "v.",
+          "zh": "互動"
+        },
+        {
+          "word": "interactive",
+          "pos": "a.",
+          "zh": "互動式的"
+        }
+      ]
+    },
+    {
+      "id": "intercollegiate",
+      "word": "intercollegiate",
+      "phonetic": "ˌɪntɚkəˈlidʒɪt",
+      "zh": "校際的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I won First Place at an intercollegiate speech competition.",
+      "example_zh": "我在一場校際演講比賽中獲得第一名。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "collegiate",
+          "gloss": "學院的（collegium 社團、公會）"
+        }
+      ],
+      "etymology": "1860年由 inter-（之間）＋ collegiate（學院的，源自拉丁 collegium 社團、公會）構成，指大學院校之間的。",
+      "derivatives": []
+    },
+    {
+      "id": "intercontinental",
+      "word": "intercontinental",
+      "phonetic": "ˌɪntɚkɑntɪˈnɛntəl",
+      "zh": "洲際的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The U.S. retains a large arsenal of intercontinental ballistic missiles.",
+      "example_zh": "美國保有大量的洲際彈道飛彈。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "continental",
+          "gloss": "大陸的"
+        }
+      ],
+      "etymology": "1825年美式英文由 inter-（之間）＋ continental（大陸的）構成，指存在於不同大陸之間，1956年起也用來形容洲際飛彈。",
+      "derivatives": [
+        {
+          "word": "continent",
+          "pos": "n.",
+          "zh": "洲，大陸"
+        },
+        {
+          "word": "continental",
+          "pos": "a.",
+          "zh": "洲的，大陸的"
+        },
+        {
+          "word": "transcontinental",
+          "pos": "a.",
+          "zh": "橫貫大陸的"
+        }
+      ]
+    },
+    {
+      "id": "intervention",
+      "word": "intervention",
+      "phonetic": "ɪntɚˈvɛnʃən",
+      "zh": "干預",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "U.S. intervention in Viet Nam ended in failure and retreat.",
+      "example_zh": "美國對越南的干預以失敗和撤退收場。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "vent",
+          "gloss": "來（venire）"
+        }
+      ],
+      "etymology": "15世紀初源自晚期拉丁 interventionem，動詞 intervenire（inter 之間＋ venire 來）——介於中間而來，即介入、干預。",
+      "derivatives": [
+        {
+          "word": "intervene",
+          "pos": "v.",
+          "zh": "干預"
+        }
+      ]
+    },
+    {
+      "id": "interrogate",
+      "word": "interrogate",
+      "phonetic": "ɪnˈtɛrəˌget",
+      "zh": "審問，質問",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The police interrogated him about where he had gone the night before.",
+      "example_zh": "警方審問他前一晚去了哪裡。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "rogate",
+          "gloss": "詢問、要求（rogare）"
+        }
+      ],
+      "etymology": "15世紀晚期源自拉丁過去分詞 interrogatus（interrogare，inter 之間＋ rogare 詢問）——在雙方之間詢問、交叉詰問。",
+      "derivatives": [
+        {
+          "word": "interrogation",
+          "pos": "n.",
+          "zh": "審問，質問"
+        },
+        {
+          "word": "interrogative",
+          "pos": "a.",
+          "zh": "審問的，質問的"
+        }
+      ]
+    },
+    {
+      "id": "interim",
+      "word": "interim",
+      "phonetic": "ˈɪntərɪm",
+      "zh": "過渡期間；臨時的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The inauguration is two months away; in the interim the incumbent is considered a lame duck. An interim government was set up before the nation's first free election.",
+      "example_zh": "就職典禮還有兩個月；在此過渡期間，現任者被視為跛腳鴨。在該國首次自由選舉前，成立了一個臨時政府。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "im",
+          "gloss": "「那個」（代名詞字幹 is 的古副詞字尾）"
+        }
+      ],
+      "etymology": "源自拉丁副詞 interim「在此期間、同時」，inter（之間）＋ im（代名詞 is「那個」的古副詞字尾）——字面是「在那之中」；英文名詞用法始於1560年代。",
+      "derivatives": []
+    },
+    {
+      "id": "interval",
+      "word": "interval",
+      "phonetic": "ˈɪntɚvəl",
+      "zh": "間隔，距離",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We see each other at regular intervals—usually once a month.",
+      "example_zh": "我們固定間隔見面——通常一個月一次。",
+      "draft": false,
+      "prefixId": "inter",
+      "parts": [
+        {
+          "text": "inter-",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "vallum",
+          "gloss": "柵欄、城牆"
+        }
+      ],
+      "etymology": "14世紀初源自晚期拉丁 intervallum，inter（之間）＋ vallum（柵欄、城牆，與 wall 同源）——原指柵欄之間的空間，引申為時間或距離上的間隔。",
+      "derivatives": []
+    },
+    {
+      "id": "microcosm",
+      "word": "microcosm",
+      "phonetic": "ˈmaɪkrəˌkɑzəm",
+      "zh": "小宇宙，縮影，寫照",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Our little town is a microcosm of modern society.",
+      "example_zh": "我們的小鎮是現代社會的縮影。",
+      "draft": false,
+      "prefixId": "micro",
+      "parts": [
+        {
+          "text": "micro-",
+          "gloss": "小"
+        },
+        {
+          "text": "cosm",
+          "gloss": "世界、宇宙（kosmos）"
+        }
+      ],
+      "etymology": "15世紀初源自中世紀拉丁 microcosmus，希臘 mikros（小）＋ kosmos（世界）——字面是微型世界，中世紀哲學家常以此比喻人即整個宇宙的縮影。",
+      "derivatives": [
+        {
+          "word": "macrocosm",
+          "pos": "n.",
+          "zh": "大宇宙"
+        },
+        {
+          "word": "cosmos",
+          "pos": "n.",
+          "zh": "宇宙"
+        },
+        {
+          "word": "cosmic",
+          "pos": "a.",
+          "zh": "宇宙的，廣大的"
+        }
+      ]
+    },
+    {
+      "id": "microbial",
+      "word": "microbial",
+      "phonetic": "maɪˈkrobiəl",
+      "zh": "微生物的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Microbes, or microorganisms, are essential to life, but they also cause a lot of our diseases.",
+      "example_zh": "微生物，或稱微小生物，是生命不可或缺的，但它們也造成我們許多的疾病。",
+      "draft": false,
+      "prefixId": "micro",
+      "parts": [
+        {
+          "text": "micro-",
+          "gloss": "小"
+        },
+        {
+          "text": "bi",
+          "gloss": "生命（bios）"
+        }
+      ],
+      "etymology": "1879年由 microbe 加形容詞字尾 -al 構成；microbe 於1878年由法國醫師 Sédillot 所創，取希臘 mikros（小）＋ bios（生命）——原意微小生命體（Etymonline 指出此組法依希臘文法嚴格直譯應為「短命的」，是常見的字源趣味陷阱）。",
+      "derivatives": [
+        {
+          "word": "microbe",
+          "pos": "n.",
+          "zh": "微生物"
+        }
+      ]
+    },
+    {
+      "id": "microeconomics",
+      "word": "microeconomics",
+      "phonetic": "ˌmaɪkroˌɛkəˈnɑmɪks",
+      "zh": "個體經濟學",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "One focus of microeconomics is on the roles of supply and demand in economic behavior.",
+      "example_zh": "個體經濟學的一項重點在於供給與需求在經濟行為中扮演的角色。",
+      "draft": false,
+      "prefixId": "micro",
+      "parts": [
+        {
+          "text": "micro-",
+          "gloss": "小"
+        },
+        {
+          "text": "economics",
+          "gloss": "經濟學"
+        }
+      ],
+      "etymology": "1948年由 micro-（小）＋ economics（經濟學，1580年代原指治家之術，1792年起衍生「財富的科學」義）構成，指探討個別因素與個人決策的經濟學分支。",
+      "derivatives": [
+        {
+          "word": "macroeconomics",
+          "pos": "n.",
+          "zh": "總體經濟學"
+        },
+        {
+          "word": "economics",
+          "pos": "n.",
+          "zh": "經濟學"
+        },
+        {
+          "word": "economic",
+          "pos": "a.",
+          "zh": "經濟（學）的"
+        },
+        {
+          "word": "economical",
+          "pos": "a.",
+          "zh": "經濟劃算的"
+        }
+      ]
+    },
+    {
+      "id": "multiple",
+      "word": "multiple",
+      "phonetic": "ˈmʌltɪpəl",
+      "zh": "多重的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The inventor holds multiple patents. All the questions in the quiz will be in multiple choice.",
+      "example_zh": "這位發明家持有多項專利。這場小考的所有題目都會是選擇題。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多"
+        },
+        {
+          "text": "ple",
+          "gloss": "…重、…倍（plus）"
+        }
+      ],
+      "etymology": "1640年代法文 multiple，晚期拉丁 multiplus（多重的），multi-（多）＋ plus（…重）——由多個部分或關係構成的。",
+      "derivatives": [
+        {
+          "word": "multiplicity",
+          "pos": "n.",
+          "zh": "多重，多樣"
+        }
+      ]
+    },
+    {
+      "id": "multiply",
+      "word": "multiply",
+      "phonetic": "ˈmʌltɪˌplaɪ",
+      "zh": "繁殖，乘",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "\"Be fruitful and multiply.\" Multiply the cost by 5%, and that's the tax you have to pay.",
+      "example_zh": "「要生養眾多。」把成本乘以5%，就是你必須繳的稅金。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多"
+        },
+        {
+          "text": "ply",
+          "gloss": "使摺疊、使成多重（plicare）"
+        }
+      ],
+      "etymology": "古法文 multiplier，拉丁 multiplicare（使增加），源於 multiplex（multus 多＋ -plex …重，PIE 字根 *plek- 編織）——詞義後擴及生育、繁殖與算術上的乘。",
+      "derivatives": [
+        {
+          "word": "multiplication",
+          "pos": "n.",
+          "zh": "繁殖，乘法"
+        }
+      ]
+    },
+    {
+      "id": "multidisciplinary",
+      "word": "multidisciplinary",
+      "phonetic": "ˌmʌltɪˈdɪsəplɪˌnɛrɪ",
+      "zh": "跨領域的，涉及多項學術的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government has set up a multidisciplinary expert panel to tackle environmental degradation.",
+      "example_zh": "政府已成立一個跨領域專家小組，以因應環境惡化的問題。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多"
+        },
+        {
+          "text": "discipline",
+          "gloss": "學科（disciplina）"
+        }
+      ],
+      "etymology": "1949年 multi-（多）＋ disciplinary（discipline 學科，源自古法文 descepline、拉丁 disciplina 教導、學習，加形容詞字尾 -ary）——結合多個學術領域或方法。",
+      "derivatives": [
+        {
+          "word": "discipline",
+          "pos": "n., v.",
+          "zh": "學科；紀律，訓練；懲戒"
+        }
+      ]
+    },
+    {
+      "id": "multilateral",
+      "word": "multilateral",
+      "phonetic": "ˌmʌltɪˈlætərəl",
+      "zh": "多邊的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The G20 is a multilateral summit.",
+      "example_zh": "G20 是一場多邊高峰會。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多"
+        },
+        {
+          "text": "lateral",
+          "gloss": "側邊的（latus）"
+        }
+      ],
+      "etymology": "1690年代幾何學用語，指有許多邊的，multi-（多）＋ lateral（源自古法文 latéral，拉丁 lateralis）——1802年起發展出涉及三個以上國家的外交政治含義，仿 bilateral 構詞。",
+      "derivatives": []
+    },
+    {
+      "id": "multilingual",
+      "word": "multilingual",
+      "phonetic": "ˌmʌltɪˈlɪŋɡwəl",
+      "zh": "多語的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Singapore is a multilingual nation.",
+      "example_zh": "新加坡是個多語言的國家。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多"
+        },
+        {
+          "text": "lingual",
+          "gloss": "語言的（lingua）"
+        }
+      ],
+      "etymology": "1832年 multi-（源自拉丁 multus 多）＋ lingual（源自拉丁 lingua 舌頭、語言）——使用、書寫或具有多種語言特徵的。",
+      "derivatives": [
+        {
+          "word": "linguistics",
+          "pos": "n.",
+          "zh": "語言學"
+        },
+        {
+          "word": "linguist",
+          "pos": "n.",
+          "zh": "語言學家"
+        },
+        {
+          "word": "linguistic",
+          "pos": "a.",
+          "zh": "語言的"
+        }
+      ]
+    },
+    {
+      "id": "multitudinous",
+      "word": "multitudinous",
+      "phonetic": "ˌmʌltəˈtudənəs",
+      "zh": "眾多的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The reporters asked a multitude of questions. The President must consider the multitude instead of the few.",
+      "example_zh": "記者們問了眾多問題。總統必須考量大多數人，而非少數人。",
+      "draft": false,
+      "prefixId": "multi",
+      "parts": [
+        {
+          "text": "multi-",
+          "gloss": "多（multus）"
+        },
+        {
+          "text": "tudin",
+          "gloss": "抽象名詞字尾，表狀態、數量"
+        }
+      ],
+      "etymology": "約1600年原意幅員廣大的，1620年代衍生數量眾多的，拉丁 multitudin-（multitudo 群眾、大量，本於 multus 多）加形容詞字尾 -ous，莎士比亞《馬克白》名句使此詞廣為流傳。",
+      "derivatives": [
+        {
+          "word": "multitude",
+          "pos": "n.",
+          "zh": "眾多，大眾，多數人"
+        }
+      ]
+    },
+    {
+      "id": "polygamous",
+      "word": "polygamous",
+      "phonetic": "pəˈlɪɡəməs",
+      "zh": "行多婚制的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "American Mormons used to practice polygamy.",
+      "example_zh": "美國的摩門教徒過去曾實行多婚制。",
+      "draft": false,
+      "prefixId": "poly",
+      "parts": [
+        {
+          "text": "poly-",
+          "gloss": "多"
+        },
+        {
+          "text": "gamous",
+          "gloss": "婚姻的（gamos）"
+        }
+      ],
+      "etymology": "1610年代由 polygamy 加形容詞字尾 -ous 構成，或直接源自晚期希臘 polygamos（屢次結婚的），polys（多）＋ gamos（婚姻）——字典特別註明此詞不限定於一夫多妻，但常被如此使用。",
+      "derivatives": [
+        {
+          "word": "polygamy",
+          "pos": "n.",
+          "zh": "多婚制"
+        }
+      ]
+    },
+    {
+      "id": "polygonal",
+      "word": "polygonal",
+      "phonetic": "pəˈlɪɡənəl",
+      "zh": "多邊形的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Pentagons, hexagons and octagons are all polygons.",
+      "example_zh": "五邊形、六邊形和八邊形都是多邊形。",
+      "draft": false,
+      "prefixId": "poly",
+      "parts": [
+        {
+          "text": "poly-",
+          "gloss": "多"
+        },
+        {
+          "text": "gon",
+          "gloss": "角（gōnia）"
+        }
+      ],
+      "etymology": "poly-（多）＋ -gon（源自希臘 gōnia 角）加形容詞字尾 -al；根詞 polygon 源自晚期拉丁 polygonum、希臘 polygōnon（polys 多＋ gōnia 角），字面是多角形的。",
+      "derivatives": [
+        {
+          "word": "polygon",
+          "pos": "n.",
+          "zh": "多邊形"
+        }
+      ]
+    },
+    {
+      "id": "polygraph",
+      "word": "polygraph",
+      "phonetic": "ˈpɑlɪˌgræf",
+      "zh": "測謊（機）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I'm willing to take a polygraph to prove my innocence. The police station is equipped with a polygraph.",
+      "example_zh": "我願意接受測謊來證明我的清白。這間警局配有測謊機。",
+      "draft": false,
+      "prefixId": "poly",
+      "parts": [
+        {
+          "text": "poly-",
+          "gloss": "多"
+        },
+        {
+          "text": "graph",
+          "gloss": "書寫、記錄（graphein）"
+        }
+      ],
+      "etymology": "1794年最初指可製作多份書寫或繪圖複本的機械裝置，希臘 polygraphos（寫很多），polys（多）＋ graphein（寫）——1871年擴展為同時記錄身體多種脈動變化的儀器，1921年才首度被用作測謊工具。",
+      "derivatives": []
+    },
+    {
+      "id": "polymath",
+      "word": "polymath",
+      "phonetic": "ˈpɑlɪˌmæθ",
+      "zh": "多才多藝者，萬事通",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Leonardo da Vinci was a true polymath.",
+      "example_zh": "達文西是一位真正的博學通才。",
+      "draft": false,
+      "prefixId": "poly",
+      "parts": [
+        {
+          "text": "poly-",
+          "gloss": "多"
+        },
+        {
+          "text": "math",
+          "gloss": "學習（manthanein）"
+        }
+      ],
+      "etymology": "1620年代指博學多聞之人，希臘 polymathes（學識淵博的），polys（多）＋ manthanein（學習，PIE 字根 *mendh- 學習）。",
+      "derivatives": []
+    },
+    {
+      "id": "omniscient",
+      "word": "omniscient",
+      "phonetic": "ɑmˈnɪʃənt",
+      "zh": "無所不知的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The novel employs the third-person omniscient narrator.",
+      "example_zh": "這部小說採用全知的第三人稱敘事者。",
+      "draft": false,
+      "prefixId": "omni",
+      "parts": [
+        {
+          "text": "omni-",
+          "gloss": "全、所有"
+        },
+        {
+          "text": "scient",
+          "gloss": "知道（scire）"
+        }
+      ],
+      "etymology": "約1600年由中世紀拉丁文 omniscientia（omnis 全部＋ scientia 知識）逆構而成，原意為具備一切事物的知識。",
+      "derivatives": [
+        {
+          "word": "omniscience",
+          "pos": "n.",
+          "zh": "無所不知"
+        }
+      ]
+    },
+    {
+      "id": "omnipresent",
+      "word": "omnipresent",
+      "phonetic": "ˌɑmnɪˈprɛzənt",
+      "zh": "無所不在的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The omnipresent noise of the city is driving me crazy.",
+      "example_zh": "這座城市無所不在的噪音快把我逼瘋了。",
+      "draft": false,
+      "prefixId": "omni",
+      "parts": [
+        {
+          "text": "omni-",
+          "gloss": "全、所有"
+        },
+        {
+          "text": "present",
+          "gloss": "在場（praesens）"
+        }
+      ],
+      "etymology": "約1600年源自中世紀拉丁文 omnipraesens（omni- 全＋ praesens 在場的），意指無所不在、同時存在於一切地方。",
+      "derivatives": [
+        {
+          "word": "omnipresence",
+          "pos": "n.",
+          "zh": "無所不在"
+        }
+      ]
+    },
+    {
+      "id": "omnipotent",
+      "word": "omnipotent",
+      "phonetic": "ɑmˈnɪpətənt",
+      "zh": "無所不能的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Omnipotence is an attribute of God.",
+      "example_zh": "全能是神的一項屬性。",
+      "draft": false,
+      "prefixId": "omni",
+      "parts": [
+        {
+          "text": "omni-",
+          "gloss": "全、所有"
+        },
+        {
+          "text": "potent",
+          "gloss": "有力量的（potens）"
+        }
+      ],
+      "etymology": "14世紀初經古法文承襲拉丁文 omnipotens（omnis 全部＋ potens 有力量的），原專指神的全能，1590年代才泛指擁有絕對權力。",
+      "derivatives": [
+        {
+          "word": "omnipotence",
+          "pos": "n.",
+          "zh": "無所不能"
+        }
+      ]
+    },
+    {
+      "id": "omnivorous",
+      "word": "omnivorous",
+      "phonetic": "ɑmˈnɪvɝəs",
+      "zh": "雜食性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Tigers are carnivores and sheep are herbivores; monkeys, on the other hand, are omnivorous.",
+      "example_zh": "老虎是肉食性動物，羊是草食性動物；而猴子則是雜食性的。",
+      "draft": false,
+      "prefixId": "omni",
+      "parts": [
+        {
+          "text": "omni-",
+          "gloss": "全、所有"
+        },
+        {
+          "text": "vorous",
+          "gloss": "吞食的（vorare）"
+        }
+      ],
+      "etymology": "1650年代源自拉丁文 omnivorus（omnis 全部＋ vorare 吞食），原意為不加選擇地吃各種食物，1791年起也用於比喻義。",
+      "derivatives": [
+        {
+          "word": "omnivore",
+          "pos": "n.",
+          "zh": "雜食動物"
+        }
+      ]
+    },
+    {
+      "id": "omnibus",
+      "word": "omnibus",
+      "phonetic": "ˈɑmnɪbəs",
+      "zh": "文集，公車；總括的，多項的，多用途的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The omnibus contains all of the author's short stories. The party has drafted an omnibus bill to tackle several pressing issues at once.",
+      "example_zh": "這本文集收錄了該作者所有的短篇小說。該政黨起草了一項總括法案，一次處理多項迫切議題。",
+      "draft": false,
+      "prefixId": "omni",
+      "parts": [
+        {
+          "text": "omni-",
+          "gloss": "全、所有"
+        },
+        {
+          "text": "bus",
+          "gloss": "給眾人（omnis 與格複數）"
+        }
+      ],
+      "etymology": "1829年源自法文 (voiture) omnibus「給所有人的（車）」，即拉丁文 omnis 的與格複數 omnibus，原指公共馬車，1835年起延伸為總括各種事項的。",
+      "derivatives": []
+    },
+    {
+      "id": "benedictory",
+      "word": "benedictory",
+      "phonetic": "ˌbɛnɪˈdɪktərɪ",
+      "zh": "祝福的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The priest concluded his sermon with a benediction.",
+      "example_zh": "神父以一段祝禱詞結束了他的講道。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bene-",
+          "gloss": "好、良好地"
+        },
+        {
+          "text": "dictory",
+          "gloss": "說（dicere）"
+        }
+      ],
+      "etymology": "Etymonline 無獨立詞條，改查同源詞 benediction：約1400年源自晚期拉丁文 benedictionem（bene 好＋ dicere 說），本義為說好話、祝福，benedictory 即此詞根加形容詞字尾 -ory。",
+      "derivatives": [
+        {
+          "word": "benediction",
+          "pos": "n.",
+          "zh": "祝福，賜福祈禱"
+        }
+      ]
+    },
+    {
+      "id": "benefactor",
+      "word": "benefactor",
+      "phonetic": "ˈbɛnəˌfæktɚ",
+      "zh": "捐助人，恩人，施主",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The industrial tycoon is a great benefactor of this orphanage.",
+      "example_zh": "這位企業大亨是這間孤兒院的大恩人。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bene-",
+          "gloss": "好、良好地"
+        },
+        {
+          "text": "factor",
+          "gloss": "做…的人（facere）"
+        }
+      ],
+      "etymology": "15世紀中葉源自晚期拉丁文 benefactor（bene 好＋ facere 做），指施予恩惠者，尤指捐助慈善機構的人。",
+      "derivatives": [
+        {
+          "word": "benefaction",
+          "pos": "n.",
+          "zh": "捐獻，善舉"
+        }
+      ]
+    },
+    {
+      "id": "beneficent",
+      "word": "beneficent",
+      "phonetic": "bəˈnɛfəsənt",
+      "zh": "慈善的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This job doesn't pay very well, but there are a lot of benefits. The young man has a very lofty goal: he wants to benefit humanity.",
+      "example_zh": "這份工作薪水不高，但福利很多。這位年輕人有個很崇高的目標：他想要造福人類。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bene-",
+          "gloss": "好、良好地"
+        },
+        {
+          "text": "ficent",
+          "gloss": "做、行（-ficus，源自 facere）"
+        }
+      ],
+      "etymology": "1610年代仿 magnificent 等詞類推而成，源出拉丁文 beneficus（bene 好＋ facere 的組合形 -ficus 做），意為行善樂施的。",
+      "derivatives": [
+        {
+          "word": "beneficence",
+          "pos": "n.",
+          "zh": "福利，利益；慈善"
+        },
+        {
+          "word": "beneficial",
+          "pos": "a.",
+          "zh": "有益的"
+        },
+        {
+          "word": "benefit",
+          "pos": "n., v.",
+          "zh": "福利，利益；有益於"
+        }
+      ]
+    },
+    {
+      "id": "benevolent",
+      "word": "benevolent",
+      "phonetic": "bəˈnɛvələnt",
+      "zh": "慈善的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Many people can benefit from the new policy.",
+      "example_zh": "許多人都能從這項新政策中受益。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bene-",
+          "gloss": "好、良好地"
+        },
+        {
+          "text": "volent",
+          "gloss": "希望、意願（velle）"
+        }
+      ],
+      "etymology": "15世紀中葉經古法文 benivolent 或直接源自拉丁文 benevolentem（bene 好＋ velle 現在分詞 volentem 希望），意為樂於行善、心地和善的。",
+      "derivatives": [
+        {
+          "word": "benevolence",
+          "pos": "n.",
+          "zh": "慈善"
+        }
+      ]
+    },
+    {
+      "id": "benign",
+      "word": "benign",
+      "phonetic": "bɪˈnaɪn",
+      "zh": "仁慈的，良性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My neighbor is a benign old lady. The tumor turned out to be benign.",
+      "example_zh": "我的鄰居是位仁慈的老太太。這顆腫瘤結果是良性的。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "beni-",
+          "gloss": "好（bene 變體）"
+        },
+        {
+          "text": "gn",
+          "gloss": "生、出生（gignere）"
+        }
+      ],
+      "etymology": "14世紀初經古法文 benigne 源自拉丁文 benignus（bene 好＋ gignere 出生，字面為出身良好），引申為性情和善、腫瘤良性的。",
+      "derivatives": [
+        {
+          "word": "benignant",
+          "pos": "a.",
+          "zh": "仁慈的，良性的"
+        }
+      ]
+    },
+    {
+      "id": "bonus",
+      "word": "bonus",
+      "phonetic": "ˈbonəs",
+      "zh": "紅利",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Since the company is losing money, there will be no year-end bonus this year.",
+      "example_zh": "由於公司正在虧損，今年不會有年終獎金。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bonus",
+          "gloss": "好的（拉丁形容詞，整字借入）"
+        }
+      ],
+      "etymology": "1773年作為證交所用語自拉丁文 bonus「好的」整字借入英文，原指一件好東西，後轉指做為獎勵而額外給付的金錢。",
+      "derivatives": []
+    },
+    {
+      "id": "bountiful",
+      "word": "bountiful",
+      "phonetic": "ˈbaʊntɪfəl",
+      "zh": "慷慨的，豐富的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I was amazed by the bounty of our garden.",
+      "example_zh": "我們家花園的豐收讓我驚豔不已。",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bount(y)",
+          "gloss": "恩惠、慷慨（bonitatem，bonus 衍生詞）"
+        },
+        {
+          "text": "ful",
+          "gloss": "充滿…的"
+        }
+      ],
+      "etymology": "15世紀中葉由名詞 bounty（源自拉丁文 bonitatem「善良」，即 bonus 的衍生詞）加上字尾 -ful「充滿」構成，原意為慷慨施予的，1530年代起也指豐盛充足的。",
+      "derivatives": [
+        {
+          "word": "bounty",
+          "pos": "n.",
+          "zh": "慷慨，豐富，賞金"
+        }
+      ]
+    },
+    {
+      "id": "bon appétit",
+      "word": "bon appétit",
+      "phonetic": "ˌbon æpəˈti",
+      "zh": "祝胃口好",
+      "pos": "ph.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You're going to a French restaurant? Bon appétit!",
+      "example_zh": "你要去法國餐廳？祝你用餐愉快！",
+      "draft": false,
+      "prefixId": "bon",
+      "parts": [
+        {
+          "text": "bon",
+          "gloss": "好的（法文，源自拉丁 bonus）"
+        },
+        {
+          "text": "appétit",
+          "gloss": "食欲（法文，源自拉丁 appetitus）"
+        }
+      ],
+      "etymology": "約1860年作為法文整句借入英文，字面意為祝好胃口，bon「好的」源自拉丁文 bonus，appétit「食欲」則源自拉丁文 appetitus（ad- 朝向＋ petere 追求）。",
+      "derivatives": []
+    },
+    {
+      "id": "malicious",
+      "word": "malicious",
+      "phonetic": "məˈlɪʃəs",
+      "zh": "惡意的，惡毒的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The election is approaching, and there are many malicious rumors around.",
+      "example_zh": "選舉將近，坊間流傳著許多惡意謠言。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "mal-",
+          "gloss": "壞（malus）"
+        },
+        {
+          "text": "icious",
+          "gloss": "充滿…性質（malitia 惡意）"
+        }
+      ],
+      "etymology": "13世紀中古法文 malicios，拉丁 malitiosus（惡意的），上溯 malitia（惡意、狠毒）與 malus（壞）——原指心懷惡意，14世紀初於盎格魯法律文書發展出蓄意預謀的法律專用義。",
+      "derivatives": [
+        {
+          "word": "malice",
+          "pos": "n.",
+          "zh": "惡意"
+        }
+      ]
+    },
+    {
+      "id": "malfunction",
+      "word": "malfunction",
+      "phonetic": "ˌmælˈfʌŋkʃən",
+      "zh": "故障；運作",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The work was delayed because of a computer malfunction. The assembly line malfunctioned, resulting in a waste of precious time.",
+      "example_zh": "這項工作因電腦故障而延誤。生產線發生故障，浪費了寶貴的時間。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "mal-",
+          "gloss": "壞、不正常"
+        },
+        {
+          "text": "function",
+          "gloss": "功能（functio）"
+        }
+      ],
+      "etymology": "1827年 mal-（壞，源自拉丁 malus／male）＋ function（功能，源自拉丁 functio）——19世紀新造詞，先作名詞，1888年才衍生出動詞用法。",
+      "derivatives": [
+        {
+          "word": "function",
+          "pos": "n., v.",
+          "zh": "功能；運作"
+        }
+      ]
+    },
+    {
+      "id": "malnutrition",
+      "word": "malnutrition",
+      "phonetic": "ˌmælnuˈtrɪʃən",
+      "zh": "營養不良",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Malnutrition is a big problem in many developing countries.",
+      "example_zh": "營養不良是許多開發中國家的一大問題。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "mal-",
+          "gloss": "壞、不良"
+        },
+        {
+          "text": "nutrition",
+          "gloss": "營養（nutritio，源自 nutrire 餵養）"
+        }
+      ],
+      "etymology": "1843年 mal-（壞，經古法文轉譯自拉丁 malus）＋ nutrition（滋養，源自拉丁 nutritio，動詞 nutrire 餵養）——因身體無法妥善吸收食物而導致的營養缺乏。",
+      "derivatives": [
+        {
+          "word": "nutrition",
+          "pos": "n.",
+          "zh": "營養"
+        },
+        {
+          "word": "nutritious",
+          "pos": "a.",
+          "zh": "營養豐富的"
+        }
+      ]
+    },
+    {
+      "id": "malpractice",
+      "word": "malpractice",
+      "phonetic": "mælˈpræktɪs",
+      "zh": "業務過失",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Doctors must pay a lot for malpractice insurance.",
+      "example_zh": "醫師必須支付高額的醫療過失保險費。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "mal-",
+          "gloss": "不當、錯誤"
+        },
+        {
+          "text": "practice",
+          "gloss": "業務執行（practicare）"
+        }
+      ],
+      "etymology": "1670年代 mal-＋ practice（源自古法文 pratiser、中世紀拉丁 practicare）——原指因無知、疏忽或惡意而不當處置疾病，1758年詞義擴大為利用職務信任圖利自己的違法行為。",
+      "derivatives": [
+        {
+          "word": "practice",
+          "pos": "n., v.",
+          "zh": "業務；執業"
+        }
+      ]
+    },
+    {
+      "id": "malignant",
+      "word": "malignant",
+      "phonetic": "məˈlɪɡnənt",
+      "zh": "惡性的，惡意的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The protagonist fell into the hands of malignant fate. The tumor tested malignant.",
+      "example_zh": "主角落入了惡毒命運的掌控。這顆腫瘤檢驗結果為惡性。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "mal(e)-",
+          "gloss": "壞地（male）"
+        },
+        {
+          "text": "gnant",
+          "gloss": "生成、天生（gignere）"
+        }
+      ],
+      "etymology": "1560年代最初形容疾病，古法文 malignant，晚期拉丁 malignantem（malignare 惡意加害的現在分詞），上溯 malignus（性惡的，male 壞地＋ 源自 gignere 生的 -gnus）——1590年代起也轉用於形容蓄意加害他人的人。",
+      "derivatives": [
+        {
+          "word": "malignance",
+          "pos": "n.",
+          "zh": "惡性，惡意"
+        },
+        {
+          "word": "malignancy",
+          "pos": "n.",
+          "zh": "惡性，惡意"
+        },
+        {
+          "word": "malign",
+          "pos": "a., v.",
+          "zh": "惡意的，惡意性的；誹謗，中傷"
+        }
+      ]
+    },
+    {
+      "id": "malevolent",
+      "word": "malevolent",
+      "phonetic": "məˈlɛvələnt",
+      "zh": "惡意的，惡毒的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The rumor was malevolent and deliberate.",
+      "example_zh": "這則謠言既惡毒又是蓄意的。",
+      "draft": false,
+      "prefixId": "mal",
+      "parts": [
+        {
+          "text": "male-",
+          "gloss": "壞地"
+        },
+        {
+          "text": "volent",
+          "gloss": "意欲、希望（velle）"
+        }
+      ],
+      "etymology": "約1500年古法文 malivolent，拉丁 malevolentem，male（壞地）＋ velle 現在分詞 volentem（想要）——字面即心懷惡念，指對他人存有惡意。",
+      "derivatives": [
+        {
+          "word": "malevolence",
+          "pos": "n.",
+          "zh": "惡意，惡毒"
+        }
+      ]
+    },
+    {
+      "id": "mishap",
+      "word": "mishap",
+      "phonetic": "ˈmɪsˌhæp",
+      "zh": "意外，不幸事故",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The plane landed without mishap.",
+      "example_zh": "這架飛機平安降落，沒有發生任何意外。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "壞、不順（日耳曼語）"
+        },
+        {
+          "text": "hap",
+          "gloss": "運氣、機緣（happ）"
+        }
+      ],
+      "etymology": "13世紀中期古英文／原始日耳曼語 mis-（壞、偏離常軌）＋ hap（源自古諾斯語 happ 運氣），可能仿古法文 mescheance 構詞，原指厄運、不幸，14世紀中期起也指不幸事件本身。",
+      "derivatives": []
+    },
+    {
+      "id": "misfit",
+      "word": "misfit",
+      "phonetic": "ˈmɪsˌfɪt",
+      "zh": "適應不良者，不適合的東西",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I was a bit of a social misfit at college because I didn't like going out at night.",
+      "example_zh": "我大學時有點格格不入，因為我不喜歡晚上出去玩。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "不、錯（原始日耳曼 missa- 偏離）"
+        },
+        {
+          "text": "fit",
+          "gloss": "合身、契合"
+        }
+      ],
+      "etymology": "1823年俚語，mis-＋ fit（1680年代出現的合身之意），原指不合身的衣服，詞義先擴大為達不到預期效果的事物，1880年再轉指無法融入環境的人。",
+      "derivatives": []
+    },
+    {
+      "id": "misplace",
+      "word": "misplace",
+      "phonetic": "mɪsˈples",
+      "zh": "放錯地方，搞丟",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I must have misplaced the key.",
+      "example_zh": "我一定是把鑰匙放錯地方了。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "錯誤地"
+        },
+        {
+          "text": "place",
+          "gloss": "放置"
+        }
+      ],
+      "etymology": "1550年代 mis-＋ place（安置），最初指安錯位置，1590年代擴大為放錯地方，1630年代再引申用於情感、信任等抽象事物錯付對象。",
+      "derivatives": []
+    },
+    {
+      "id": "misanthropic",
+      "word": "misanthropic",
+      "phonetic": "ˌmɪsənˈθrɑpɪk",
+      "zh": "厭惡世人的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He is a misanthrope and lives as a hermit.",
+      "example_zh": "他是個厭世者，過著隱士般的生活。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "miso-",
+          "gloss": "恨（希臘 misein，非「壞」義）"
+        },
+        {
+          "text": "anthrop",
+          "gloss": "人類（anthrōpos）"
+        }
+      ],
+      "etymology": "陷阱字：1739年由 misanthrope 加形容詞字尾 -ic 構成；misanthrope（1560年代）源自希臘 misanthrōpos（misein 恨＋ anthrōpos 人）——此處的 mis- 其實是希臘文「恨」的詞根 miso-，與本組其他字「壞、錯」義的 mis- 只是拼法相同、來源不同的兩個字首。",
+      "derivatives": [
+        {
+          "word": "misanthrope",
+          "pos": "n.",
+          "zh": "厭惡世人者"
+        },
+        {
+          "word": "misanthropist",
+          "pos": "n.",
+          "zh": "厭惡世人者"
+        },
+        {
+          "word": "misanthropy",
+          "pos": "n.",
+          "zh": "厭世，不願與人交往"
+        }
+      ]
+    },
+    {
+      "id": "misleading",
+      "word": "misleading",
+      "phonetic": "mɪsˈlidɪŋ",
+      "zh": "有誤導作用的，不實的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Advertisements must not create a misleading impression.",
+      "example_zh": "廣告不得製造誤導人的印象。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "錯誤地"
+        },
+        {
+          "text": "lead",
+          "gloss": "引導"
+        }
+      ],
+      "etymology": "1630年代古英文 mislædan（引導錯誤、導入歧途），mis-（錯誤地）＋ lead（引導）——常見的日耳曼語系複合構詞。",
+      "derivatives": [
+        {
+          "word": "mislead",
+          "pos": "v.",
+          "zh": "誤導"
+        }
+      ]
+    },
+    {
+      "id": "misgiving",
+      "word": "misgiving",
+      "phonetic": "mɪsˈɡɪvɪŋ",
+      "zh": "不安，憂慮",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The president had misgivings about leaving the company to his son.",
+      "example_zh": "這位總裁對於把公司交給兒子心存疑慮。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "不良地"
+        },
+        {
+          "text": "give",
+          "gloss": "給予→於心中浮現"
+        }
+      ],
+      "etymology": "名詞約1600年出現，源自動詞 misgive（1510年代，使人心生疑慮），mis-＋ give（此處取中古英文「在心中浮現、引發」的引申義）——指信心動搖、心生疑慮不安的感覺。",
+      "derivatives": [
+        {
+          "word": "misgive",
+          "pos": "v.",
+          "zh": "使不安"
+        }
+      ]
+    },
+    {
+      "id": "misbehavior",
+      "word": "misbehavior",
+      "phonetic": "ˌmɪsbɪˈhevjɚ",
+      "zh": "行為失檢",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The student was punished for persistent misbehavior.",
+      "example_zh": "這名學生因屢次行為失檢而受到處罰。",
+      "draft": false,
+      "prefixId": "mis",
+      "parts": [
+        {
+          "text": "mis-",
+          "gloss": "不當地"
+        },
+        {
+          "text": "behavior",
+          "gloss": "行為舉止"
+        }
+      ],
+      "etymology": "15世紀晚期 mis-（原始日耳曼 missa-）＋ behavior（源自動詞 behave，字尾源自中古英文 havour，上溯古法文 aveir 擁有）——指不當、失禮的行為舉止。",
+      "derivatives": [
+        {
+          "word": "behave",
+          "pos": "v.",
+          "zh": "行動，守規矩"
+        },
+        {
+          "word": "behavior",
+          "pos": "n.",
+          "zh": "行為"
+        },
+        {
+          "word": "misbehave",
+          "pos": "v.",
+          "zh": "行為失檢，不守規矩"
+        }
+      ]
+    },
+    {
+      "id": "dysfunctional",
+      "word": "dysfunctional",
+      "phonetic": "dɪsˈfʌŋkʃənəl",
+      "zh": "不正常的，功能失常的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He grew up in a dysfunctional family, with a father locked up in jail and an alcoholic mother.",
+      "example_zh": "他在一個功能失調的家庭中長大，父親身陷囹圄，母親則酗酒成性。",
+      "draft": false,
+      "prefixId": "dys",
+      "parts": [
+        {
+          "text": "dys-",
+          "gloss": "壞、不正常"
+        },
+        {
+          "text": "function",
+          "gloss": "功能"
+        }
+      ],
+      "etymology": "1915年由1914年出現的名詞 dysfunction（dys- 壞、異常＋ function 功能）加形容詞字尾 -al 構成，原指功能運作異常，最初用於解剖／醫學，1949年起才擴及社會學。",
+      "derivatives": [
+        {
+          "word": "dysfunction",
+          "pos": "n.",
+          "zh": "不正常，功能失常"
+        }
+      ]
+    },
+    {
+      "id": "dyspepsia",
+      "word": "dyspepsia",
+      "phonetic": "dɪsˈpɛpʃə",
+      "zh": "消化不良症",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I'm not having lunch today because I'm suffering from dyspepsia.",
+      "example_zh": "我今天不吃午餐了，因為我正患有消化不良症。",
+      "draft": false,
+      "prefixId": "dys",
+      "parts": [
+        {
+          "text": "dys-",
+          "gloss": "壞、困難"
+        },
+        {
+          "text": "peptos",
+          "gloss": "已消化的（peptein 消化）"
+        }
+      ],
+      "etymology": "1706年晚期拉丁 dyspepsia，希臘 dyspeptos「難以消化」，dys-（壞、困難）＋ peptos（已消化的，peptein 消化，PIE 字根 *pekw- 煮、使成熟）——1650年代曾英化為 dyspepsy。",
+      "derivatives": [
+        {
+          "word": "dyspeptic",
+          "pos": "a.",
+          "zh": "消化不良的，壞脾氣的"
+        }
+      ]
+    },
+    {
+      "id": "dyslexia",
+      "word": "dyslexia",
+      "phonetic": "dɪsˈlɛksɪə",
+      "zh": "閱讀困難症",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Children with dyslexia often do poorly at school.",
+      "example_zh": "患有閱讀障礙的孩童在校成績往往不佳。",
+      "draft": false,
+      "prefixId": "dys",
+      "parts": [
+        {
+          "text": "dys-",
+          "gloss": "壞、困難"
+        },
+        {
+          "text": "lexis",
+          "gloss": "詞語、閱讀（legein 說）"
+        }
+      ],
+      "etymology": "1885年借自德文 dyslexie（1883），希臘 dys-（壞、困難）＋ lexis（詞語，引申作閱讀，源自 legein 說）加抽象名詞字尾 -ia——指因腦部狀況造成的閱讀困難。",
+      "derivatives": [
+        {
+          "word": "dyslexic",
+          "pos": "a.",
+          "zh": "閱讀困難的"
+        }
+      ]
+    },
+    {
+      "id": "dysphagia",
+      "word": "dysphagia",
+      "phonetic": "dɪsˈfedʒɪə",
+      "zh": "厭食症",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Stress-induced dysphagia caused her to lose her appetite for weeks.",
+      "example_zh": "壓力引發的厭食症讓她好幾週都沒有食欲。",
+      "draft": true,
+      "prefixId": "dys",
+      "parts": [
+        {
+          "text": "dys-",
+          "gloss": "壞、困難"
+        },
+        {
+          "text": "phagein",
+          "gloss": "吃、進食"
+        }
+      ],
+      "etymology": "醫學用語，希臘 dys-（壞、困難）＋ phagein（吃，PIE 字根 *bhag- 分食，同見於 phagocyte 吞噬細胞的 phago-）加抽象名詞字尾 -ia——字面是難以進食，課本取其「吃不好」引申為厭食症。",
+      "derivatives": [
+        {
+          "word": "dysphagic",
+          "pos": "a.",
+          "zh": "厭食的"
+        }
+      ]
+    },
+    {
+      "id": "semiannual",
+      "word": "semiannual",
+      "phonetic": "ˌsɛmiˈænjuəl",
+      "zh": "半年一次的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Welcome to our semiannual conference!",
+      "example_zh": "歡迎參加我們的半年一次大會！",
+      "draft": false,
+      "prefixId": "semi",
+      "parts": [
+        {
+          "text": "semi-",
+          "gloss": "半（PIE *semi-）"
+        },
+        {
+          "text": "annual",
+          "gloss": "每年的（annus 年）"
+        }
+      ],
+      "etymology": "拉丁字首 semi-「半」（PIE *semi-）＋ annual（每年一次的，經古法文 annuel、中世紀拉丁 annualis，源自拉丁 annus 年）——字面是半年一次，即一年兩次。",
+      "derivatives": [
+        {
+          "word": "semicircle",
+          "pos": "n.",
+          "zh": "半圓形"
+        }
+      ]
+    },
+    {
+      "id": "demigod",
+      "word": "demigod",
+      "phonetic": "ˈdɛmiˌɡɑd",
+      "zh": "半神，受英雄崇拜者",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Great athletes are like demigods to fans.",
+      "example_zh": "偉大的運動員在粉絲眼中就像半神一樣。",
+      "draft": false,
+      "prefixId": "semi",
+      "parts": [
+        {
+          "text": "demi-",
+          "gloss": "半（dimidius，非直接承自 PIE *semi-）"
+        },
+        {
+          "text": "god",
+          "gloss": "神"
+        }
+      ],
+      "etymology": "1520年代構成，指次等神祇、半具神性者；demi- 源自古法文 demi「半」，來自晚期拉丁 dimedius（dis- 分開＋ medius 中間），意譯拉丁 semideus。",
+      "derivatives": []
+    },
+    {
+      "id": "hemisphere",
+      "word": "hemisphere",
+      "phonetic": "ˈhɛmɪˌsfɪr",
+      "zh": "半球",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Cyclones move counterclockwise in the northern hemisphere.",
+      "example_zh": "氣旋在北半球以逆時針方向移動。",
+      "draft": false,
+      "prefixId": "semi",
+      "parts": [
+        {
+          "text": "hemi-",
+          "gloss": "半（PIE *semi-）"
+        },
+        {
+          "text": "sphere",
+          "gloss": "球體（sphaira）"
+        }
+      ],
+      "etymology": "14世紀末以 hemysperie 之形出現，指天球；晚期拉丁 hemisphaerium 承自希臘 hēmisphairion，hēmi-（半，源自 PIE *semi-）＋ sphaira（球）——1550年代起也用於地球，1804年起擴及大腦半球。",
+      "derivatives": []
+    },
+    {
+      "id": "semiconductor",
+      "word": "semiconductor",
+      "phonetic": "ˌsɛmikənˈdʌktɚ",
+      "zh": "半導體",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Taiwan has a highly advanced semiconductor industry.",
+      "example_zh": "台灣擁有高度先進的半導體產業。",
+      "draft": false,
+      "prefixId": "semi",
+      "parts": [
+        {
+          "text": "semi-",
+          "gloss": "半"
+        },
+        {
+          "text": "conductor",
+          "gloss": "導體、傳導者"
+        }
+      ],
+      "etymology": "1838年出現，指導電性介於導體與絕緣體之間的材料，semi-（半）＋ conductor（1520年代引導者，電學義始於1737年）——現代精確用法始於1931年。",
+      "derivatives": []
+    },
+    {
+      "id": "semifinal",
+      "word": "semifinal",
+      "phonetic": "ˌsɛmiˈfaɪnəl",
+      "zh": "準決賽（的）",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The semifinal game begins at eight tonight. If we win the semifinal, we will have a good chance of winning First Place.",
+      "example_zh": "準決賽今晚八點開始。如果我們贏了準決賽，就很有機會奪得第一名。",
+      "draft": false,
+      "prefixId": "semi",
+      "parts": [
+        {
+          "text": "semi-",
+          "gloss": "半"
+        },
+        {
+          "text": "final",
+          "gloss": "最後的、決賽（finalis）"
+        }
+      ],
+      "etymology": "形容詞用法1867年、名詞用法1868年，semi-（半）＋ final（14世紀初古法文 final，晚期拉丁 finalis 終結的，源自 finis 終點）——口語縮寫 semi 約1942年才出現。",
+      "derivatives": []
+    },
+    {
+      "id": "monotonous",
+      "word": "monotonous",
+      "phonetic": "məˈnɑtənəs",
+      "zh": "單調的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The lecturer spoke in a monotonous voice.",
+      "example_zh": "這位講者用單調的語氣說話。",
+      "draft": false,
+      "prefixId": "mono",
+      "parts": [
+        {
+          "text": "mono-",
+          "gloss": "單一（monos）"
+        },
+        {
+          "text": "tonous",
+          "gloss": "音調的（tonos）"
+        }
+      ],
+      "etymology": "希臘 monotonos「單一音調的」，monos（單一）＋ tonos（音調）——1750年代形容聲音單調，1783年起引申為枯燥乏味。",
+      "derivatives": [
+        {
+          "word": "monotone",
+          "pos": "n.",
+          "zh": "單調"
+        }
+      ]
+    },
+    {
+      "id": "monogamous",
+      "word": "monogamous",
+      "phonetic": "məˈnɑɡəməs",
+      "zh": "行一夫一妻制的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Monogamy is the norm in modern society.",
+      "example_zh": "一夫一妻制是現代社會的常態。",
+      "draft": false,
+      "prefixId": "mono",
+      "parts": [
+        {
+          "text": "mono-",
+          "gloss": "單一（monos）"
+        },
+        {
+          "text": "gamous",
+          "gloss": "婚姻的（gamos）"
+        }
+      ],
+      "etymology": "中世紀拉丁 monogamus，希臘 monogamos「只結一次婚的」（monos 單一＋ gamos 婚姻），1778年進入英文表一夫一妻制的。",
+      "derivatives": [
+        {
+          "word": "monogamy",
+          "pos": "n.",
+          "zh": "一夫一妻制"
+        }
+      ]
+    },
+    {
+      "id": "monarchy",
+      "word": "monarchy",
+      "phonetic": "ˈmɑnɚkɪ",
+      "zh": "帝制，君主制",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The British political system is one of constitutional monarchy.",
+      "example_zh": "英國的政治體制是君主立憲制。",
+      "draft": false,
+      "prefixId": "mono",
+      "parts": [
+        {
+          "text": "mon-",
+          "gloss": "單一（monos，母音前省略 o）"
+        },
+        {
+          "text": "archy",
+          "gloss": "統治（arkhein）"
+        }
+      ],
+      "etymology": "古法文 monarchie，晚期拉丁 monarchia、希臘 monarkhia，mon（單一）＋ arkhein（統治）——字面是一人統治。",
+      "derivatives": [
+        {
+          "word": "monarch",
+          "pos": "n.",
+          "zh": "帝王，君主"
+        }
+      ]
+    },
+    {
+      "id": "monologue",
+      "word": "monologue",
+      "phonetic": "ˈmɑnəˌlɔg",
+      "zh": "獨白",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He subjected me to a monologue on his last stay in hospital.",
+      "example_zh": "他對我長篇大論地講述他上次住院的經過。",
+      "draft": false,
+      "prefixId": "mono",
+      "parts": [
+        {
+          "text": "mono-",
+          "gloss": "單一（monos）"
+        },
+        {
+          "text": "logue",
+          "gloss": "言語、說話（logos，源自 legein）"
+        }
+      ],
+      "etymology": "法文 monologue，晚期希臘 monologos「自言自語的」（monos 單一＋ logos 言語，源自 legein 說）——一人獨自的長篇言論。",
+      "derivatives": []
+    },
+    {
+      "id": "monopoly",
+      "word": "monopoly",
+      "phonetic": "məˈnɑpəlɪ",
+      "zh": "壟斷，專賣",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government here has a monopoly on public utilities.",
+      "example_zh": "這裡的政府壟斷了公用事業。",
+      "draft": false,
+      "prefixId": "mono",
+      "parts": [
+        {
+          "text": "mono-",
+          "gloss": "單一（monos）"
+        },
+        {
+          "text": "poly",
+          "gloss": "販賣（polein）"
+        }
+      ],
+      "etymology": "拉丁 monopolium，希臘 monopolion「獨家販賣權」（monos 單一＋ polein 販賣），1530年代進入英文指對商品或貿易的獨占。",
+      "derivatives": [
+        {
+          "word": "monopolize",
+          "pos": "v.",
+          "zh": "壟斷"
+        }
+      ]
+    },
+    {
+      "id": "solo",
+      "word": "solo",
+      "phonetic": "ˈsolo",
+      "zh": "單人表演（的）",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The dancer performed a solo, accompanied by the piano. Charles Lindberg's solo flight across the Atlantic won him lasting fame.",
+      "example_zh": "這位舞者表演了一段獨舞，由鋼琴伴奏。查爾斯·林白隻身飛越大西洋的壯舉為他贏得了不朽的名聲。",
+      "draft": false,
+      "prefixId": "sol",
+      "parts": [
+        {
+          "text": "sol-",
+          "gloss": "獨自的（solus）"
+        }
+      ],
+      "etymology": "1690年代經義大利文 solo「單獨的」，直接承拉丁 solus「獨自的」，原指僅由一人演奏或演唱的樂曲。",
+      "derivatives": []
+    },
+    {
+      "id": "sole",
+      "word": "sole",
+      "phonetic": "sol",
+      "zh": "唯一的，獨家的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man was the sole survivor of the plane crash.",
+      "example_zh": "這名男子是這場空難中唯一的生還者。",
+      "draft": false,
+      "prefixId": "sol",
+      "parts": [
+        {
+          "text": "sol-",
+          "gloss": "獨自的、唯一的（solus）"
+        }
+      ],
+      "etymology": "古法文 soul「唯一的、單獨的」，源自拉丁 solus「獨自、唯一的」。",
+      "derivatives": []
+    },
+    {
+      "id": "consolidate",
+      "word": "consolidate",
+      "phonetic": "kənˈsɑlədet",
+      "zh": "鞏固，合併",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The new CEO consolidated his power by inserting his people into key positions. The two companies consolidated to be more competitive.",
+      "example_zh": "這位新任執行長藉由安插自己人到關鍵職位來鞏固權力。這兩間公司合併以提升競爭力。",
+      "draft": false,
+      "prefixId": "sol",
+      "parts": [
+        {
+          "text": "con-",
+          "gloss": "一起、共同"
+        },
+        {
+          "text": "solid",
+          "gloss": "堅實完整的（solidus，非「獨自」的 solus）"
+        }
+      ],
+      "etymology": "陷阱字：拉丁過去分詞 consolidatus（com 一起＋ solidare 使堅固），solidare 源自 solidus「堅實完整的」，與表「獨自」的 solus 是兩個不同詞根，僅外形相似；1510年代進入英文表合併為一體。",
+      "derivatives": [
+        {
+          "word": "consolidation",
+          "pos": "n.",
+          "zh": "鞏固，合併"
+        }
+      ]
+    },
+    {
+      "id": "soliloquy",
+      "word": "soliloquy",
+      "phonetic": "səˈlɪləkwɪ",
+      "zh": "獨白",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Most people are familiar with the famous soliloquy that begins \"To be or not to be.\"",
+      "example_zh": "大多數人都熟悉那段以「生存還是毀滅」開頭的著名獨白。",
+      "draft": false,
+      "prefixId": "sol",
+      "parts": [
+        {
+          "text": "soli-",
+          "gloss": "獨自的（solus）"
+        },
+        {
+          "text": "loqu",
+          "gloss": "說話（loqui）"
+        }
+      ],
+      "etymology": "晚期拉丁 soliloquium「自言自語」（solus 獨自＋ loqui 說話），據 Etymonline 記載此拉丁新詞是奧古斯丁仿希臘 monologia 所創。",
+      "derivatives": [
+        {
+          "word": "soliloquize",
+          "pos": "v.",
+          "zh": "獨白"
+        }
+      ]
+    },
+    {
+      "id": "solitude",
+      "word": "solitude",
+      "phonetic": "ˈsɑlɪˌtud",
+      "zh": "獨處",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I often go by myself to the mountains to enjoy the solitude.",
+      "example_zh": "我常常獨自上山享受獨處的時光。",
+      "draft": false,
+      "prefixId": "sol",
+      "parts": [
+        {
+          "text": "soli-",
+          "gloss": "獨自的（solus）"
+        },
+        {
+          "text": "tude",
+          "gloss": "抽象名詞字尾（-tudo）"
+        }
+      ],
+      "etymology": "古法文 solitude，直接源自拉丁 solitudo「孤獨、獨處之地」，詞根即 solus「獨自的」。",
+      "derivatives": [
+        {
+          "word": "solitary",
+          "pos": "a.",
+          "zh": "單獨的"
+        }
+      ]
+    },
+    {
+      "id": "uniform",
+      "word": "uniform",
+      "phonetic": "ˈjunɪˌfɔrm",
+      "zh": "制服；劃一的，一致的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Students at that private school have to wear uniforms. These receptionists are all of uniform height.",
+      "example_zh": "那所私立學校的學生必須穿著制服。這些接待員的身高都一致。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "uni-",
+          "gloss": "一"
+        },
+        {
+          "text": "form",
+          "gloss": "形狀（forma）"
+        }
+      ],
+      "etymology": "法文 uniforme，拉丁 uniformis（uni- 一＋ forma 形狀）——原意始終同一形狀、不曾改變，1748年起也指同一團體成員所穿的同款服裝，即今日的制服。",
+      "derivatives": []
+    },
+    {
+      "id": "unilateral",
+      "word": "unilateral",
+      "phonetic": "ˌjunɪˈlætərəl",
+      "zh": "單邊的，片面的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The President declared a unilateral cut in nuclear warheads.",
+      "example_zh": "總統宣布單方面削減核彈頭。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "uni-",
+          "gloss": "一"
+        },
+        {
+          "text": "lateral",
+          "gloss": "側邊的（latus）"
+        }
+      ],
+      "etymology": "1802年近代拉丁 unilateralis，unus 中性形 unum＋ latus（屬格 lateralis 側、邊）——意為僅屬一方的，法學上引申指僅由一方訂立的（協議），1914年起亦見於單邊裁軍一詞。",
+      "derivatives": []
+    },
+    {
+      "id": "unanimous",
+      "word": "unanimous",
+      "phonetic": "juˈnænəməs",
+      "zh": "無異議的，意見一致的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The bill had unanimous approval in Congress.",
+      "example_zh": "這項法案在國會獲得無異議通過。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "un-",
+          "gloss": "一（uni- 省音形）"
+        },
+        {
+          "text": "anim",
+          "gloss": "心智、精神（animus）"
+        }
+      ],
+      "etymology": "1610年代拉丁 unanimus「一心的、意見一致的」，unus（一）＋ animus（心智、精神）——字面是同一個心，引申為意見完全一致。",
+      "derivatives": [
+        {
+          "word": "unanimity",
+          "pos": "n.",
+          "zh": "意見一致"
+        }
+      ]
+    },
+    {
+      "id": "unification",
+      "word": "unification",
+      "phonetic": "ˌjunəfəˈkeʃən",
+      "zh": "統一",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The unification of East and West Germany has been a success so far.",
+      "example_zh": "東西德的統一至今是成功的。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "uni-",
+          "gloss": "一"
+        },
+        {
+          "text": "fic",
+          "gloss": "做、使成為（facere）"
+        }
+      ],
+      "etymology": "1849年源自動詞 unify（古法文 unifier，或直接源於後期拉丁 unificare 使成為一），unificare 由 uni-（一）加表做、使成為的 facere 組成，指統一的動作或狀態。",
+      "derivatives": [
+        {
+          "word": "unify",
+          "pos": "v.",
+          "zh": "統一"
+        }
+      ]
+    },
+    {
+      "id": "union",
+      "word": "union",
+      "phonetic": "ˈjunjən",
+      "zh": "結合，工會，聯邦",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Marriage should be the union of two people in love. The labor union is a powerful organization. The US President traditionally delivers a \"State of the Union\" address at the beginning of a new year.",
+      "example_zh": "婚姻應該是兩個相愛的人的結合。這個工會是個強大的組織。美國總統照慣例會在新年之初發表「國情咨文」演說。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "uni-",
+          "gloss": "一（unus）"
+        },
+        {
+          "text": "on",
+          "gloss": "名詞字尾（unio 合一）"
+        }
+      ],
+      "etymology": "15世紀初盎格魯法文 unioun，古法文 union，後期拉丁 unionem（主格 unio，古典拉丁文中也指一顆珍珠），本於拉丁 unus「一」，字面即合而為一。",
+      "derivatives": [
+        {
+          "word": "unite",
+          "pos": "v.",
+          "zh": "結合，團結"
+        }
+      ]
+    },
+    {
+      "id": "unique",
+      "word": "unique",
+      "phonetic": "juˈnik",
+      "zh": "獨一無二的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Your handwriting is unique and easily recognizable.",
+      "example_zh": "你的筆跡獨一無二，很容易辨認。",
+      "draft": false,
+      "prefixId": "uni",
+      "parts": [
+        {
+          "text": "uni-",
+          "gloss": "一"
+        },
+        {
+          "text": "que",
+          "gloss": "獨一的（unicus 字尾 -icus）"
+        }
+      ],
+      "etymology": "約1600年16世紀法文 unique，拉丁 unicus「唯一的、獨一無二的」（unus 一＋ -icus）——1610年代起明確指自成一類、獨一無二。",
+      "derivatives": [
+        {
+          "word": "uniqueness",
+          "pos": "n.",
+          "zh": "獨特性"
+        }
+      ]
+    },
+    {
+      "id": "bilingual",
+      "word": "bilingual",
+      "phonetic": "baɪˈlɪŋɡwəl",
+      "zh": "雙語的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This is a Chinese-English bilingual dictionary.",
+      "example_zh": "這是一本中英雙語字典。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二"
+        },
+        {
+          "text": "lingua",
+          "gloss": "舌頭、語言"
+        }
+      ],
+      "etymology": "1818年拉丁 bilinguis「雙舌的」，bi-（二）＋ lingua（舌頭、語言）——字面是兩條舌頭，引申為說兩種語言的，古典拉丁文也有口是心非、狡詐的比喻義。",
+      "derivatives": []
+    },
+    {
+      "id": "bigamous",
+      "word": "bigamous",
+      "phonetic": "ˈbɪɡəməs",
+      "zh": "重婚的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Bigamy is a civil offense in Taiwan.",
+      "example_zh": "重婚在台灣是一項民事違法行為。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二（拉丁）"
+        },
+        {
+          "text": "gam",
+          "gloss": "婚姻（希臘 gamos）"
+        }
+      ],
+      "etymology": "1690年代由名詞 bigamy 派生（+ -ous），bigamy 經中世紀拉丁 bigamia，後期拉丁 bigamus「重婚的」，由拉丁 bi-「雙、二」與希臘 gamos「婚姻」混合組成。",
+      "derivatives": [
+        {
+          "word": "bigamy",
+          "pos": "n.",
+          "zh": "重婚"
+        }
+      ]
+    },
+    {
+      "id": "biennial",
+      "word": "biennial",
+      "phonetic": "baɪˈɛnɪəl",
+      "zh": "兩年一次的；雙年展，二年生植物",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There is a famous biennial art exhibition at Venice. The Taipei Biennial is getting better and better. The plant is a biennial, flowering and dying in its second year.",
+      "example_zh": "威尼斯有一場著名的雙年藝術展。台北雙年展越辦越好。這種植物是二年生植物，在第二年開花後便會凋亡。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二"
+        },
+        {
+          "text": "enni",
+          "gloss": "年（annus，複合時 a 變 e）"
+        }
+      ],
+      "etymology": "1620年代拉丁 biennium「兩年期間」，bi-（二）＋ annus（年）——1750年起也指每兩年一次的，1770年起再生出植物學上二年生植物的名詞義。",
+      "derivatives": []
+    },
+    {
+      "id": "bilateral",
+      "word": "bilateral",
+      "phonetic": "baɪˈlætərəl",
+      "zh": "雙邊的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This year's Taiwan-American bilateral trade talks are going on at the International Conference Center.",
+      "example_zh": "今年台美雙邊貿易談判正在國際會議中心進行。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二"
+        },
+        {
+          "text": "lateral",
+          "gloss": "側邊的（latus）"
+        }
+      ],
+      "etymology": "1775年 bi-（二）＋ lateral（源自古法文 latéral，拉丁 lateralis，latus 側、邊）——意為有兩側的，用來描述具有兩個對應面向的事物或關係。",
+      "derivatives": []
+    },
+    {
+      "id": "binoculars",
+      "word": "binoculars",
+      "phonetic": "baɪˈnɑkjəlɚz",
+      "zh": "雙筒望遠鏡",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Binoculars are best for bird-watching whereas telescopes are ideal for observing heavenly bodies.",
+      "example_zh": "雙筒望遠鏡最適合賞鳥，而天文望遠鏡則最適合觀測星體。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bin-",
+          "gloss": "二、雙（bini 兩兩成雙）"
+        },
+        {
+          "text": "ocul",
+          "gloss": "眼睛（oculus）"
+        }
+      ],
+      "etymology": "1866年名詞形式，源自形容詞 binocular（1713年有兩隻眼睛的），拉丁 bini「兩兩成雙」＋ ocularis（oculus 眼睛）——1871年起專指雙眼望遠鏡這種光學儀器。",
+      "derivatives": [
+        {
+          "word": "binocular",
+          "pos": "a.",
+          "zh": "雙眼的，立體視覺的"
+        }
+      ]
+    },
+    {
+      "id": "bifocal",
+      "word": "bifocal",
+      "phonetic": "baɪˈfokəl",
+      "zh": "複焦點的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You need a pair of bifocals for you are both myopic and hyperopic.",
+      "example_zh": "你需要一副雙焦眼鏡，因為你同時患有近視和遠視。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二"
+        },
+        {
+          "text": "focal",
+          "gloss": "焦點的（focalis）"
+        }
+      ],
+      "etymology": "1844年 bi-（二）＋ focal（近代拉丁 focalis，focus 原指爐灶，焦點的光學義是克卜勒約1604年類比透鏡聚光點而創）——意為有兩個焦點的，指同一鏡片兼具兩種焦距，此鏡片由富蘭克林發明。",
+      "derivatives": [
+        {
+          "word": "bifocals",
+          "pos": "n.",
+          "zh": "雙焦眼鏡"
+        }
+      ]
+    },
+    {
+      "id": "bipedal",
+      "word": "bipedal",
+      "phonetic": "ˌbaɪˈpidəl",
+      "zh": "雙足的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Humans are bipeds whereas cows are quadrupeds.",
+      "example_zh": "人類是雙足動物，而牛則是四足動物。",
+      "draft": false,
+      "prefixId": "bi",
+      "parts": [
+        {
+          "text": "bi-",
+          "gloss": "二"
+        },
+        {
+          "text": "ped",
+          "gloss": "腳（pes, pedem）"
+        }
+      ],
+      "etymology": "約1600年由 biped（拉丁 bi- 二＋ pedem 腳）加形容詞字尾 -al 組成，字面是有兩隻腳的；古典拉丁 bipedalis 原指兩英尺長或粗。",
+      "derivatives": [
+        {
+          "word": "biped",
+          "pos": "n.",
+          "zh": "雙足動物"
+        }
+      ]
+    },
+    {
+      "id": "duplicate",
+      "word": "duplicate",
+      "phonetic": "ˈduplɪkət",
+      "zh": "複製品；複製；複製的",
+      "pos": "n., v., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This painting is a duplicate of the original. A cell duplicates itself when it divides. The teacher handed out duplicate copies to all the students.",
+      "example_zh": "這幅畫是原作的複製品。細胞分裂時會自我複製。老師把複本分發給所有學生。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "du-",
+          "gloss": "二、兩（duo）"
+        },
+        {
+          "text": "plic",
+          "gloss": "折疊（plicare）"
+        }
+      ],
+      "etymology": "拉丁 duplicare（過去分詞 duplicatus），duo「二」＋ plicare「摺疊」——字面是摺兩摺；15世紀初先作形容詞，15世紀晚期發展出動詞，1530年代再產生名詞。",
+      "derivatives": []
+    },
+    {
+      "id": "dual",
+      "word": "dual",
+      "phonetic": "ˈduəl",
+      "zh": "雙重的，二元的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government official is attacked for holding dual citizenship.",
+      "example_zh": "這位政府官員因持有雙重國籍而受到抨擊。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "du-",
+          "gloss": "二、兩（duo）"
+        },
+        {
+          "text": "al",
+          "gloss": "…的"
+        }
+      ],
+      "etymology": "拉丁 dualis「雙數的、包含二的」，源自 duo「二」，約1600年以文法「雙數」術語進入英文，1650年代才擴大為由兩部分構成的一般形容詞用法。",
+      "derivatives": []
+    },
+    {
+      "id": "duo",
+      "word": "duo",
+      "phonetic": "ˈduo",
+      "zh": "雙人表演，二人組，一對",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The soprano and the alto sang a beautiful duet.",
+      "example_zh": "女高音和女中音唱了一段優美的二重唱。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "duo",
+          "gloss": "二（拉丁文「二」本字，整詞借入）"
+        }
+      ],
+      "etymology": "直接借自拉丁 duo「二」，1580年代經義大利文或法文進入英文，原指二重唱的音樂作品，1887年才發展出兩人搭檔的用法；字尾 -o 後來也被 trio 仿造沿用。",
+      "derivatives": [
+        {
+          "word": "duet",
+          "pos": "n.",
+          "zh": "雙人表演，二重奏"
+        }
+      ]
+    },
+    {
+      "id": "duplicitous",
+      "word": "duplicitous",
+      "phonetic": "duˈplɪsətəs",
+      "zh": "欺騙的，不誠實的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The agent was accused of duplicity in brokering the deal.",
+      "example_zh": "這名仲介被指控在促成這筆交易時有欺瞞行為。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "du-",
+          "gloss": "二、兩"
+        },
+        {
+          "text": "plic",
+          "gloss": "折疊（引申「表裡不一」）"
+        }
+      ],
+      "etymology": "1831年由名詞 duplicity（早期15世紀，古法文 duplicite，晚期拉丁 duplicitatem「雙重性」）加形容詞字尾 -ous 構成；核心來自拉丁 duplex（duo 二＋ plicare 折疊），表口是心非、表裡不一。",
+      "derivatives": [
+        {
+          "word": "duplicity",
+          "pos": "n.",
+          "zh": "欺騙"
+        }
+      ]
+    },
+    {
+      "id": "dichotomy",
+      "word": "dichotomy",
+      "phonetic": "daɪˈkɑtəmɪ",
+      "zh": "二分法",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In children's minds, there is a simple dichotomy between good and bad.",
+      "example_zh": "在孩子的心中，好與壞之間有著簡單的二分法。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "dicho-",
+          "gloss": "一分為二、分開（希臘 dikha，非 duo 家族）"
+        },
+        {
+          "text": "tomy",
+          "gloss": "切、割（temnein）"
+        }
+      ],
+      "etymology": "陷阱字：希臘 dikhotomia「切成兩半」，dikha（一分為二、分開）＋ tomia（切割，源自 temnein）——約1600年以拉丁化形式進入英文。Etymonline 的 dikha 詞源與 duo／PIE *dwo-「二」的詞條並未互相參照，屬希臘文獨立的「分開」語根，並非真正的 du-/dou- 家族成員，教材歸入本組是取字面聯想。",
+      "derivatives": []
+    },
+    {
+      "id": "dilemma",
+      "word": "dilemma",
+      "phonetic": "dɪˈlɛmə",
+      "zh": "兩難",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She faces the dilemma of disobeying her father or losing the man she loves.",
+      "example_zh": "她面臨著違抗父親或失去她所愛之人的兩難處境。",
+      "draft": false,
+      "prefixId": "du",
+      "parts": [
+        {
+          "text": "di-",
+          "gloss": "二（希臘 dis「兩次」縮短形，與 duo 同源）"
+        },
+        {
+          "text": "lemma",
+          "gloss": "前提、命題（lambanein 取）"
+        }
+      ],
+      "etymology": "晚期拉丁 dilemma，希臘 dilemma「雙重命題」，di-（二，dis「兩次」縮短形）＋ lemma（前提，源自 lambanein 取）——1520年代作修辭學術語，1580年代衍生出兩害相權的通俗義。",
+      "derivatives": []
+    },
+    {
+      "id": "trio",
+      "word": "trio",
+      "phonetic": "ˈtrio",
+      "zh": "三人組，三件一套，三人演出",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He plays the saxophone in a jazz trio.",
+      "example_zh": "他在一個爵士三重奏樂團中吹奏薩克斯風。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "o",
+          "gloss": "仿 duo 的字尾造字"
+        }
+      ],
+      "etymology": "義大利文／法文 trio，以 duo 為範本仿造（tri- 三＋仿 duo 的 -o 字尾），1724年進入英文，原指三重奏的音樂作品，1789年起也指三人一組。",
+      "derivatives": []
+    },
+    {
+      "id": "trilateral",
+      "word": "trilateral",
+      "phonetic": "trɪˈlætərəl",
+      "zh": "三邊的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The trilateral talks involve school officials, parents and students.",
+      "example_zh": "這場三方會談涉及學校官員、家長和學生。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "later",
+          "gloss": "邊、側（latus／屬格 lateris）"
+        }
+      ],
+      "etymology": "晚期拉丁 trilaterus「三邊的」，tri-（三）＋ lateralis（latus／屬格 lateris 側、邊）——1650年代作形容詞進入英文，現代因1973年成立的 Trilateral Commission（三邊委員會）更廣為人知。",
+      "derivatives": []
+    },
+    {
+      "id": "trilogy",
+      "word": "trilogy",
+      "phonetic": "ˈtrɪləˌdʒɪ",
+      "zh": "三部曲",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Lord of the Ring was written as a trilogy.",
+      "example_zh": "《魔戒》是以三部曲的形式寫成的。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "logy",
+          "gloss": "話語、作品（logos）"
+        }
+      ],
+      "etymology": "希臘 trilogia，tri-（三）＋ logos（話語）——原指雅典酒神節演出的三部悲劇組曲，1660年代以英化形式進入英文，後泛指任何三部相關作品。",
+      "derivatives": []
+    },
+    {
+      "id": "trinity",
+      "word": "trinity",
+      "phonetic": "ˈtrɪnətɪ",
+      "zh": "三位一體",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Holy Trinity includes the Father, the Son, and the Holy Spirit.",
+      "example_zh": "聖三位一體包括聖父、聖子與聖靈。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "trin-",
+          "gloss": "三重、三合一（trinus）"
+        },
+        {
+          "text": "ity",
+          "gloss": "性質、狀態"
+        }
+      ],
+      "etymology": "古法文 trinite，晚期拉丁 trinitas，trinus「三重的」（PIE 字根 *trei- 三）——13世紀初進入英文，最初專指基督教三位一體教義（神學家特土良所創），14世紀晚期擴大為泛指三者一組。",
+      "derivatives": []
+    },
+    {
+      "id": "tripod",
+      "word": "tripod",
+      "phonetic": "ˈtraɪˌpɑd",
+      "zh": "三腳架，鼎",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Professional photographers like to use tripods while shooting.",
+      "example_zh": "專業攝影師拍攝時喜歡使用三腳架。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "pod",
+          "gloss": "腳（pous）"
+        }
+      ],
+      "etymology": "拉丁 tripus（屬格 tripodis），希臘 tripous，tri-（三）＋ pous（腳）——字面是三腳的，14世紀晚期經中古拉丁文進入英文，原指三腳凳或三腳桌。",
+      "derivatives": []
+    },
+    {
+      "id": "trimester",
+      "word": "trimester",
+      "phonetic": "ˈtraɪˌmɛstɚ",
+      "zh": "（懷胎）三個月一期",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Abortion can be most safely done in the first trimester.",
+      "example_zh": "墮胎在懷孕的前三個月進行最為安全。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "mester",
+          "gloss": "月（mensis）"
+        }
+      ],
+      "etymology": "法文 trimestre，拉丁 trime(n)stris，tri-（三）＋ mensis（月）——字面是三個月，1821年進入英文，1900年後才專指懷孕的孕期三個月。",
+      "derivatives": []
+    },
+    {
+      "id": "triathlon",
+      "word": "triathlon",
+      "phonetic": "traɪˈæθˌlɑn",
+      "zh": "三項運動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Iron Man Triathlon is a grueling competition.",
+      "example_zh": "鐵人三項是一場艱苦的比賽。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "athlon",
+          "gloss": "競賽（希臘 athlon）"
+        }
+      ],
+      "etymology": "1970年代仿 decathlon、biathlon 構詞新造，tri-（三）＋ 希臘 athlon（競賽）——最初泛指各種三項組合運動，1981年後固定專指游泳＋自行車＋馬拉松的標準賽制。",
+      "derivatives": []
+    },
+    {
+      "id": "tricycle",
+      "word": "tricycle",
+      "phonetic": "ˈtraɪˌsɪkəl",
+      "zh": "三輪車",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The child loves riding his tricycle.",
+      "example_zh": "這個孩子喜歡騎他的三輪車。",
+      "draft": false,
+      "prefixId": "tri",
+      "parts": [
+        {
+          "text": "tri-",
+          "gloss": "三"
+        },
+        {
+          "text": "cycle",
+          "gloss": "輪、圓（kyklos）"
+        }
+      ],
+      "etymology": "法文 tricycle（1827年），tri-（三）＋ cycle（希臘 kyklos 圓、輪）——1828年進入英文，最初指馬拉的三輪車，1868年起指腳踏三輪車。",
+      "derivatives": []
+    },
+    {
+      "id": "quadrangle",
+      "word": "quadrangle",
+      "phonetic": "ˈkwɑdræŋɡəl",
+      "zh": "四邊形，四邊形廣場",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are tall buildings all around the quadrangle.",
+      "example_zh": "四邊形廣場的四周都是高樓。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quadr-",
+          "gloss": "四"
+        },
+        {
+          "text": "angle",
+          "gloss": "角（angulus）"
+        }
+      ],
+      "etymology": "14世紀晚期古法文 quadrangle，晚期拉丁 quadrangulum（quattuor 四＋ angulus 角）——本義有四角的平面圖形，1590年代引申為四面被建築物圍繞的方形庭院，1820年在牛津大學被學生簡稱 quad。",
+      "derivatives": []
+    },
+    {
+      "id": "quadrupedal",
+      "word": "quadrupedal",
+      "phonetic": "ˌkwɑdrəˈpidəl",
+      "zh": "四足的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Most mammals are quadrupeds.",
+      "example_zh": "大多數哺乳動物都是四足動物。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quadru-",
+          "gloss": "四"
+        },
+        {
+          "text": "ped",
+          "gloss": "腳，足（pes）"
+        }
+      ],
+      "etymology": "1610年代拉丁 quadrupes（quadri- 四＋ pes 腳）衍生的形容詞，意為四足的，用四肢行走的，與1640年代進入英文的名詞 quadruped（四足動物）同源。",
+      "derivatives": [
+        {
+          "word": "quadruped",
+          "pos": "n.",
+          "zh": "四足動物"
+        }
+      ]
+    },
+    {
+      "id": "quarantine",
+      "word": "quarantine",
+      "phonetic": "ˈkwɔrənˌtin",
+      "zh": "隔離檢疫",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The dog had to spend several months in quarantine when it reached the US. It was quarantined for several months.",
+      "example_zh": "這隻狗抵達美國時，必須接受長達數月的隔離檢疫。牠被隔離檢疫了好幾個月。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quarant-",
+          "gloss": "四十（義大利 quaranta，源自拉丁「四」衍生詞 quadraginta）"
+        }
+      ],
+      "etymology": "1660年代義大利文 quaranta giorni「四十天」（quaranta 源自拉丁「四」的衍生詞 quadraginta 四十）——典故是威尼斯自1377年規定疫區船隻須在外海隔離四十天。",
+      "derivatives": []
+    },
+    {
+      "id": "quart",
+      "word": "quart",
+      "phonetic": "kwɔrt",
+      "zh": "夸脫",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He bought a quart of milk at the convenience store.",
+      "example_zh": "他在便利商店買了一夸脫牛奶。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quart-",
+          "gloss": "第四、四分之一（quartus）"
+        }
+      ],
+      "etymology": "14世紀早期古法文 quarte「四分之一」，拉丁 quarta (pars)，即 quartus「第四」的陰性形式，指等於一加侖四分之一的液量單位。",
+      "derivatives": []
+    },
+    {
+      "id": "quartet",
+      "word": "quartet",
+      "phonetic": "kwɔrˈtɛt",
+      "zh": "四人組，四件一套，四重奏（唱）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A string quartet comprises two violins, a viola and a cello.",
+      "example_zh": "一個絃樂四重奏由兩把小提琴、一把中提琴和一把大提琴組成。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quart-",
+          "gloss": "第四、四分之一"
+        },
+        {
+          "text": "et",
+          "gloss": "表小／一組（義大利 -etto）"
+        }
+      ],
+      "etymology": "1773年法文 quartette，義大利文 quartetto（quarto「第四」的指小詞）——原指四項獨奏樂器或聲部的樂曲，1814年起也指四人樂團。",
+      "derivatives": []
+    },
+    {
+      "id": "quadrant",
+      "word": "quadrant",
+      "phonetic": "ˈkwɑdrənt",
+      "zh": "象限，扇形",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The river runs through the northeast quadrant of the city.",
+      "example_zh": "這條河流經這座城市的東北象限。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quadr-",
+          "gloss": "四"
+        },
+        {
+          "text": "ant",
+          "gloss": "四分之一（quadrans／quadrantem）"
+        }
+      ],
+      "etymology": "14世紀晚期古法文 quadrant，拉丁 quadrantem（主格 quadrans「四分之一」，與 quadrare 使成方形、quadrus 正方形同源，回溯到 quattuor 四）——約1400年指古代測量儀器，1570年代起也指圓的四分之一。",
+      "derivatives": []
+    },
+    {
+      "id": "quarter",
+      "word": "quarter",
+      "phonetic": "ˈkwɔrtɚ",
+      "zh": "區域，地區",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This is the bustling commercial quarter of the city.",
+      "example_zh": "這裡是這座城市熱鬧的商業區。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "quart-",
+          "gloss": "第四、四分之一"
+        },
+        {
+          "text": "er",
+          "gloss": "名詞字尾"
+        }
+      ],
+      "etymology": "約1300年古法文 quartier，拉丁 quartarius「四分之一」（源自 quartus 第四）——本義四等分之一，約1400年引申為地區、地方，1520年代起特指由特定族群聚居的城鎮區域。",
+      "derivatives": []
+    },
+    {
+      "id": "headquarters",
+      "word": "headquarters",
+      "phonetic": "ˈhɛdˌkwɔrtɚz",
+      "zh": "總部",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company's headquarters is (are) in London.",
+      "example_zh": "這間公司的總部設在倫敦。",
+      "draft": false,
+      "prefixId": "quadr",
+      "parts": [
+        {
+          "text": "head-",
+          "gloss": "主要的、首要的"
+        },
+        {
+          "text": "quarters",
+          "gloss": "quarter（駐紮處）的複數"
+        }
+      ],
+      "etymology": "1640年代 head（主要的）＋ quarters（1590年代起指軍隊駐紮處，源自「四分之一」之意的 quarter）複合而成，原指軍事指揮官的駐地。",
+      "derivatives": []
+    },
+    {
+      "id": "pentagon",
+      "word": "pentagon",
+      "phonetic": "ˈpɛntəˌɡɑn",
+      "zh": "五邊形",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Defense Department is located in the Pentagon.",
+      "example_zh": "國防部設於五角大廈。",
+      "draft": false,
+      "prefixId": "pent",
+      "parts": [
+        {
+          "text": "penta-",
+          "gloss": "五"
+        },
+        {
+          "text": "gon",
+          "gloss": "角，邊（gōnia）"
+        }
+      ],
+      "etymology": "1560年代法文 pentagone 或晚期拉丁 pentagonum，希臘 pentagōnos「五角的」（pente 五＋ gōnia 角）——本義五邊形，1942年完工的美國五角大廈因建築形狀得名，1945年起也借指美國軍方領導層。",
+      "derivatives": []
+    },
+    {
+      "id": "pentathlon",
+      "word": "pentathlon",
+      "phonetic": "pɛnˈtæθlən",
+      "zh": "五項運動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The modern pentathlon includes swimming, running, horseback-riding, fencing, and shooting.",
+      "example_zh": "現代五項運動包括游泳、跑步、馬術、擊劍與射擊。",
+      "draft": false,
+      "prefixId": "pent",
+      "parts": [
+        {
+          "text": "penta-",
+          "gloss": "五"
+        },
+        {
+          "text": "athlon",
+          "gloss": "競賽、獎品（希臘 athlon，來源不詳）"
+        }
+      ],
+      "etymology": "1650年代希臘 pentathlon「五項競賽」（pente 五＋ athlon 獎品、競賽）——原指古希臘同一天由同一批選手進行的五項運動項目，現代奧運五項運動於1912年確立。",
+      "derivatives": []
+    },
+    {
+      "id": "quintessential",
+      "word": "quintessential",
+      "phonetic": "ˌkwɪntɪˈsɛnʃəl",
+      "zh": "最精華的，典型的，最有代表性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The kimono is the quintessential Japanese costume.",
+      "example_zh": "和服是最具代表性的日本服飾。",
+      "draft": false,
+      "prefixId": "quint",
+      "parts": [
+        {
+          "text": "quint-",
+          "gloss": "第五"
+        },
+        {
+          "text": "essenti",
+          "gloss": "本質、存在（essentia）"
+        }
+      ],
+      "etymology": "約1600年由名詞 quintessence 加形容詞字尾 -al 構成；quintessence 源自中世紀拉丁 quinta essentia「第五元素」（quinta 為 quintus 第五的陰性形式，essentia 本質），源於亞里斯多德認為土水火風四元素之外，還有構成天體、明亮不朽的第五元素。",
+      "derivatives": [
+        {
+          "word": "quintessence",
+          "pos": "n.",
+          "zh": "精華，要素"
+        }
+      ]
+    },
+    {
+      "id": "quintet",
+      "word": "quintet",
+      "phonetic": "kwɪnˈtɛt",
+      "zh": "五個一組，五重奏（唱）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The three men and two women sang in a quintet.",
+      "example_zh": "這三名男子與兩名女子組成五重唱。",
+      "draft": false,
+      "prefixId": "quint",
+      "parts": [
+        {
+          "text": "quint-",
+          "gloss": "第五"
+        },
+        {
+          "text": "et",
+          "gloss": "表小／一組"
+        }
+      ],
+      "etymology": "1811年義大利文 quintetto，quinto「第五」的指小詞（源自拉丁 quintus，與 quinque 五同源）——原指五項獨奏聲部或樂器的樂曲，1882年起也指五人樂團。",
+      "derivatives": []
+    },
+    {
+      "id": "hexagonal",
+      "word": "hexagonal",
+      "phonetic": "hɛkˈsæɡənəl",
+      "zh": "六邊形的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Snowflakes are hexagons.",
+      "example_zh": "雪花是六邊形。",
+      "draft": false,
+      "prefixId": "hexa",
+      "parts": [
+        {
+          "text": "hexa-",
+          "gloss": "六（希臘 hex）"
+        },
+        {
+          "text": "gon",
+          "gloss": "角（gōnia）"
+        }
+      ],
+      "etymology": "希臘 hexagonon（hex 六＋ gōnia 角）經拉丁 hexagonum 演變成英文 hexagon（1560年代），1570年代再加形容詞字尾 -al。",
+      "derivatives": [
+        {
+          "word": "hexagon",
+          "pos": "n.",
+          "zh": "六邊形"
+        }
+      ]
+    },
+    {
+      "id": "hexapod",
+      "word": "hexapod",
+      "phonetic": "ˈhɛksəˌpɑd",
+      "zh": "昆蟲",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Ants are the most common hexapods.",
+      "example_zh": "螞蟻是最常見的昆蟲（六足動物）。",
+      "draft": false,
+      "prefixId": "hexa",
+      "parts": [
+        {
+          "text": "hexa-",
+          "gloss": "六（希臘 hex）"
+        },
+        {
+          "text": "pod",
+          "gloss": "腳（pous，字幹 pod-）"
+        }
+      ],
+      "etymology": "1660年代近代拉丁 hexapodus，hex（六）＋ pous（字幹 pod- 腳）——字面是六足的，後衍生泛指昆蟲的用法（形容詞用法遲至1856年）。",
+      "derivatives": []
+    },
+    {
+      "id": "sexagenarian",
+      "word": "sexagenarian",
+      "phonetic": "ˌsɛksədʒɪˈnɛrɪən",
+      "zh": "六十至六十九歲的人",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My uncle is a sexagenarian but he hasn't retired yet.",
+      "example_zh": "我叔叔已經六十多歲了，但他還沒退休。",
+      "draft": false,
+      "prefixId": "hexa",
+      "parts": [
+        {
+          "text": "sexa-",
+          "gloss": "六（拉丁 sex）"
+        },
+        {
+          "text": "gen",
+          "gloss": "乘十（-ginta，sexaginta＝六十）"
+        }
+      ],
+      "etymology": "拉丁 sexagenarius「含六十的」，sexaginta「六十」由 sex（六）＋ -ginta（乘十）組成，英文1738年起作名詞、1836年起作形容詞。",
+      "derivatives": []
+    },
+    {
+      "id": "heptathlon",
+      "word": "heptathlon",
+      "phonetic": "hɛpˈtæθˌlɑn",
+      "zh": "七項運動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The women's heptathlon involves seven competitions.",
+      "example_zh": "女子七項運動包含七個比賽項目。",
+      "draft": false,
+      "prefixId": "sept",
+      "parts": [
+        {
+          "text": "hepta-",
+          "gloss": "七（希臘 hepta）"
+        },
+        {
+          "text": "athlon",
+          "gloss": "競賽、獎品（字源不確定）"
+        }
+      ],
+      "etymology": "希臘字首 hepta-（七）與 athlon（競賽、獎品，字源不確定）組成，構詞方式仿1912年造的 decathlon 一類複合運動項目名稱，OED 記載首次使用於1977年。",
+      "derivatives": []
+    },
+    {
+      "id": "septuagenarian",
+      "word": "septuagenarian",
+      "phonetic": "ˌsɛptədʒɪˈnɛrɪən",
+      "zh": "七十至七十九歲的人",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Most septuagenarians are retired.",
+      "example_zh": "大多數七十多歲的人都已經退休了。",
+      "draft": false,
+      "prefixId": "sept",
+      "parts": [
+        {
+          "text": "septua-",
+          "gloss": "七（拉丁 septem）"
+        },
+        {
+          "text": "gen",
+          "gloss": "乘十（-ginta，septuaginta＝七十）"
+        }
+      ],
+      "etymology": "拉丁 septuagenarius「含七十的」，septuaginta「七十」由 septem（七）＋ -ginta（乘十）組成，英文形容詞用法見於1793年、名詞用法見於1805年。",
+      "derivatives": []
+    },
+    {
+      "id": "octopus",
+      "word": "octopus",
+      "phonetic": "ˈɑktəpʊs",
+      "zh": "章魚，八爪魚",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The octopus is among the most intelligent creatures in the sea.",
+      "example_zh": "章魚是海中最聰明的生物之一。",
+      "draft": false,
+      "prefixId": "octa",
+      "parts": [
+        {
+          "text": "octo-",
+          "gloss": "八（希臘 oktō）"
+        },
+        {
+          "text": "pus",
+          "gloss": "腳（pous，字幹 pod-）"
+        }
+      ],
+      "etymology": "1758年將希臘 oktōpous「八腳」拉丁化而成，oktō（八）＋ pous（腳）；Etymonline 指出古希臘人其實更常用 polypous 稱呼章魚。",
+      "derivatives": []
+    },
+    {
+      "id": "octogenarian",
+      "word": "octogenarian",
+      "phonetic": "ˌɑktədʒɪˈnɛrɪən",
+      "zh": "八十至八十九歲的人",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Did you read Lin Yutang's Memoirs of an Octogenarian?",
+      "example_zh": "你讀過林語堂的《八十自敘》嗎？",
+      "draft": false,
+      "prefixId": "octa",
+      "parts": [
+        {
+          "text": "octo-",
+          "gloss": "八（拉丁 octo）"
+        },
+        {
+          "text": "gen",
+          "gloss": "乘十（-ginta，octoginta＝八十）"
+        }
+      ],
+      "etymology": "法文 octogénaire，拉丁 octogenarius「含八十的」，octoginta「八十」由 octo（八）＋ -ginta（乘十）組成，英文名詞用法始於1789年、形容詞用法始於1784年。",
+      "derivatives": []
+    },
+    {
+      "id": "nanometer",
+      "word": "nanometer",
+      "phonetic": "ˈnænəˌmitɚ",
+      "zh": "奈米",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "One nanometer is one-billionth of a meter.",
+      "example_zh": "一奈米是一公尺的十億分之一。",
+      "draft": false,
+      "prefixId": "nona",
+      "parts": [
+        {
+          "text": "nano-",
+          "gloss": "侏儒→極小（希臘 nanos，與「九」無關）"
+        },
+        {
+          "text": "meter",
+          "gloss": "測量（metron）"
+        }
+      ],
+      "etymology": "陷阱字：meter 部分源自希臘 metron「測量」；字首 nano- 是1947年國際化學聯合會訂定、借希臘 nanos「侏儒」表十億分之一，與數字「九」無關，nanometer 一詞1963年起用。",
+      "derivatives": []
+    },
+    {
+      "id": "nanotechnology",
+      "word": "nanotechnology",
+      "phonetic": "ˌnænotɛkˈnɑlədʒɪ",
+      "zh": "奈米科技",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Nanotechnology involves working with atoms and molecules to build minuscule devices.",
+      "example_zh": "奈米科技涉及運用原子與分子來打造微小的裝置。",
+      "draft": false,
+      "prefixId": "nona",
+      "parts": [
+        {
+          "text": "nano-",
+          "gloss": "侏儒→極小（希臘 nanos，與「九」無關）"
+        },
+        {
+          "text": "techno",
+          "gloss": "技藝（tekhnē）"
+        }
+      ],
+      "etymology": "陷阱字：1974年出現（1990年代才普及），結合1947年訂定、源自希臘 nanos「侏儒」的字首 nano-（十億分之一，與「九」無關）與源自希臘 tekhnē「技藝」的 technology。",
+      "derivatives": []
+    },
+    {
+      "id": "nonagenarian",
+      "word": "nonagenarian",
+      "phonetic": "ˌnɑnədʒɪˈnɛrɪən",
+      "zh": "九十至九十九歲的人",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are more female nonagenarians than male ones in Taiwan.",
+      "example_zh": "在台灣，九十多歲的女性人數比男性多。",
+      "draft": false,
+      "prefixId": "nona",
+      "parts": [
+        {
+          "text": "nona-",
+          "gloss": "九（拉丁 nonus「第九」＜novem「九」）"
+        },
+        {
+          "text": "gen",
+          "gloss": "乘十（-ginta，nonaginta＝九十）"
+        }
+      ],
+      "etymology": "1776年拉丁 nonagenarius「含九十的」，nonaginta「九十」最終溯自 nonus「第九」（novem 九的縮略形，PIE 詞根 *newn 九）——這組詞裡真正與「九」同源的字首。",
+      "derivatives": []
+    },
+    {
+      "id": "decade",
+      "word": "decade",
+      "phonetic": "ˈdɛked",
+      "zh": "十年",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Computer technology has come a long way in this decade.",
+      "example_zh": "電腦科技在這十年間有了長足的進步。",
+      "draft": false,
+      "prefixId": "deca",
+      "parts": [
+        {
+          "text": "deca-",
+          "gloss": "十（希臘 deka）"
+        },
+        {
+          "text": "ade",
+          "gloss": "一組（希臘字尾 -as）"
+        }
+      ],
+      "etymology": "古法文 décade，晚期拉丁 decas、希臘 dekas（一組十個，PIE 詞根 *dekm- 十）——15世紀中葉原指文本的十等分，16世紀末才轉指十年，19世紀此義才成為主流。",
+      "derivatives": []
+    },
+    {
+      "id": "decathlon",
+      "word": "decathlon",
+      "phonetic": "dɪˈkæθlɑn",
+      "zh": "十項運動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The Olympic champion in decathlon is often called the greatest athlete on Earth.",
+      "example_zh": "十項全能的奧運冠軍常被稱為地表上最偉大的運動員。",
+      "draft": false,
+      "prefixId": "deca",
+      "parts": [
+        {
+          "text": "deca-",
+          "gloss": "十"
+        },
+        {
+          "text": "athlon",
+          "gloss": "競賽、獎品（字源不詳）"
+        }
+      ],
+      "etymology": "1912年由字首 deca-（十，PIE *dekm-）與希臘 athlon（競賽、獎品，字源不詳）組成的現代造詞，指由十項比賽構成的奧運項目。",
+      "derivatives": []
+    },
+    {
+      "id": "decimal",
+      "word": "decimal",
+      "phonetic": "ˈdɛsɪməl",
+      "zh": "十進位的，小數的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In the decimal system, the decimal point separates the integral part and the fractional part of a number.",
+      "example_zh": "在十進位系統中，小數點將一個數字的整數部分與小數部分區隔開來。",
+      "draft": false,
+      "prefixId": "deca",
+      "parts": [
+        {
+          "text": "deci-",
+          "gloss": "第十、十分之一（decimus）"
+        },
+        {
+          "text": "al",
+          "gloss": "…的"
+        }
+      ],
+      "etymology": "中世紀拉丁 decimalis（什一稅的、十分之一的），拉丁 decimus（第十，decem 十的衍生詞）——約1600年泛指與十有關，1610年代用於十進位記數法，1640年代也作名詞指小數。",
+      "derivatives": []
+    },
+    {
+      "id": "decimate",
+      "word": "decimate",
+      "phonetic": "ˈdɛsəˌmet",
+      "zh": "重創",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The earthquake decimated the island.",
+      "example_zh": "這場地震重創了這座島嶼。",
+      "draft": false,
+      "prefixId": "deca",
+      "parts": [
+        {
+          "text": "deci-",
+          "gloss": "十分之一（decimus）"
+        },
+        {
+          "text": "ate",
+          "gloss": "使…"
+        }
+      ],
+      "etymology": "拉丁 decimare（取十分之一）過去分詞 decimatus，源自 decimus（第十）——約1600年進入英文，本指羅馬軍隊抽籤處死每十人中一人的懲罰，1660年代起被鬆散引申為大量摧毀。",
+      "derivatives": [
+        {
+          "word": "decimation",
+          "pos": "n.",
+          "zh": "重創"
+        }
+      ]
+    },
+    {
+      "id": "centenarian",
+      "word": "centenarian",
+      "phonetic": "ˌsɛntəˈnɛrɪən",
+      "zh": "百歲人瑞",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Japan is famous for its numerous centenarians.",
+      "example_zh": "日本以眾多的百歲人瑞聞名。",
+      "draft": false,
+      "prefixId": "cent",
+      "parts": [
+        {
+          "text": "cent-",
+          "gloss": "百（centum）"
+        },
+        {
+          "text": "arian",
+          "gloss": "…的人"
+        }
+      ],
+      "etymology": "1805年由 centenary（源自拉丁 centenarius「與百有關」，源自 centum 百）加字尾 -ian 構成，指年滿百歲的人。",
+      "derivatives": []
+    },
+    {
+      "id": "centennial",
+      "word": "centennial",
+      "phonetic": "sɛnˈtɛnɪəl",
+      "zh": "一百周年，百年的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Americans mounted centennial celebrations in 1876, and in 1976 they celebrated their bicentennial.",
+      "example_zh": "美國人在1876年舉行了建國百年慶典，並於1976年慶祝了兩百週年。",
+      "draft": false,
+      "prefixId": "cent",
+      "parts": [
+        {
+          "text": "cent-",
+          "gloss": "百（centum）"
+        },
+        {
+          "text": "ennial",
+          "gloss": "…年一次的（仿 biennial，annus 年）"
+        }
+      ],
+      "etymology": "1789年由拉丁 centum（百）仿 biennial 字尾構成，原指每百年一次的，1876年起也作名詞指百年紀念，美式英語偏好用詞（英式較常用 centenary）。",
+      "derivatives": []
+    },
+    {
+      "id": "centimeter",
+      "word": "centimeter",
+      "phonetic": "ˈsɛntəˌmitɚ",
+      "zh": "公分",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "One foot is equivalent to 30.48 centimeters.",
+      "example_zh": "一英尺相當於30.48公分。",
+      "draft": false,
+      "prefixId": "cent",
+      "parts": [
+        {
+          "text": "centi-",
+          "gloss": "百分之一（centum）"
+        },
+        {
+          "text": "meter",
+          "gloss": "公尺（metron）"
+        }
+      ],
+      "etymology": "法文 centimètre，1801年由拉丁 centum（百）與源自希臘 metron（測量）的法文 mètre 組成，指公尺的百分之一，是1795年法國建立公制系統前後所創的詞。",
+      "derivatives": []
+    },
+    {
+      "id": "kilogram",
+      "word": "kilogram",
+      "phonetic": "ˈkɪləˌɡræm",
+      "zh": "千克，公斤",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The police found 200 kilograms of marijuana in the truck.",
+      "example_zh": "警方在卡車上查獲了兩百公斤的大麻。",
+      "draft": false,
+      "prefixId": "kilo",
+      "parts": [
+        {
+          "text": "kilo-",
+          "gloss": "千（希臘 khilioi）"
+        },
+        {
+          "text": "gram",
+          "gloss": "公克（gramma）"
+        }
+      ],
+      "etymology": "法文 kilogramme，1795年隨公制系統引入的字首 kilo-（不規則源自希臘 khilioi 千）與源自希臘 gramma 的法文 gramme 組成，英文約1797年採用。",
+      "derivatives": []
+    },
+    {
+      "id": "kilobyte",
+      "word": "kilobyte",
+      "phonetic": "ˈkɪləˌbaɪt",
+      "zh": "千位元組",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The attached document is a small, 50-kilobyte file.",
+      "example_zh": "這份附件是一個很小的50千位元組檔案。",
+      "draft": false,
+      "prefixId": "kilo",
+      "parts": [
+        {
+          "text": "kilo-",
+          "gloss": "千（希臘 khilioi）"
+        },
+        {
+          "text": "byte",
+          "gloss": "位元組（1956年 IBM 造詞）"
+        }
+      ],
+      "etymology": "1970年字首 kilo-（千）與1956年 IBM 工程師 Werner Buchholz 所創的電腦術語 byte 組成，指一千位元組。",
+      "derivatives": []
+    },
+    {
+      "id": "kilometer",
+      "word": "kilometer",
+      "phonetic": "kɪˈlɑmɪtɚ",
+      "zh": "千米，公里",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The official distance of a marathon is 42.195 kilometers.",
+      "example_zh": "馬拉松的官方距離是42.195公里。",
+      "draft": false,
+      "prefixId": "kilo",
+      "parts": [
+        {
+          "text": "kilo-",
+          "gloss": "千（希臘 khilioi）"
+        },
+        {
+          "text": "meter",
+          "gloss": "公尺（metron）"
+        }
+      ],
+      "etymology": "法文 kilomètre，公制字首 kilo-（千）與法文 mètre（希臘 metron 測量）組成，英文於1799年前後透過法文譯本採用，指一千公尺，英式拼法為 kilometre。",
+      "derivatives": []
+    },
+    {
+      "id": "millimeter",
+      "word": "millimeter",
+      "phonetic": "ˈmɪləˌmitɚ",
+      "zh": "公釐，毫米",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The CWB predicts that the typhoon will bring 300 millimeters of rain.",
+      "example_zh": "中央氣象局預測這次颱風將帶來300毫米的降雨。",
+      "draft": false,
+      "prefixId": "mill",
+      "parts": [
+        {
+          "text": "milli-",
+          "gloss": "千分之一（mille 千）"
+        },
+        {
+          "text": "meter",
+          "gloss": "公尺（metron）"
+        }
+      ],
+      "etymology": "1802年法文 millimètre，拉丁 mille（千）衍生的組合字首 milli-（千分之一）與 mètre（希臘 metron 測量）組成，指公尺的千分之一。",
+      "derivatives": []
+    },
+    {
+      "id": "millennium",
+      "word": "millennium",
+      "phonetic": "mɪˈlɛnɪəm",
+      "zh": "千禧年，一千年（複數 millennia）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We are at the beginning of the third millennium. Millennials tend to wed later, if at all.",
+      "example_zh": "我們正處於第三個千禧年的開端。千禧世代傾向較晚結婚，甚至不婚。",
+      "draft": false,
+      "prefixId": "mill",
+      "parts": [
+        {
+          "text": "mill-",
+          "gloss": "千（mille）"
+        },
+        {
+          "text": "ennium",
+          "gloss": "…年（annus，仿 biennium）"
+        }
+      ],
+      "etymology": "1630年代近代拉丁構詞，mille（千）與 annus（年）仿 biennium、triennium 組成，原指《啟示錄》基督統治世間的千年，1711年起泛指任何一千年的區間。",
+      "derivatives": [
+        {
+          "word": "millennial",
+          "pos": "a., n.",
+          "zh": "千禧年的，千禧世代，Y世代"
+        }
+      ]
+    },
+    {
+      "id": "megaphone",
+      "word": "megaphone",
+      "phonetic": "ˈmɛɡəˌfon",
+      "zh": "擴音器",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The leader of the parade uses a megaphone to keep order.",
+      "example_zh": "遊行隊伍的領隊用擴音器來維持秩序。",
+      "draft": false,
+      "prefixId": "mega",
+      "parts": [
+        {
+          "text": "mega-",
+          "gloss": "大（megas）"
+        },
+        {
+          "text": "phone",
+          "gloss": "聲音（PIE *bha- 說）"
+        }
+      ],
+      "etymology": "1878年出現（可能由愛迪生命名），希臘 megas（大）與 phone（聲音）組成，指擴音用的漏斗狀器具。",
+      "derivatives": []
+    },
+    {
+      "id": "megabyte",
+      "word": "megabyte",
+      "phonetic": "ˈmɛɡəˌbaɪt",
+      "zh": "百萬位元組",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This is a small, 512-megabyte SD card.",
+      "example_zh": "這是一張小容量、512百萬位元組的SD記憶卡。",
+      "draft": false,
+      "prefixId": "mega",
+      "parts": [
+        {
+          "text": "mega-",
+          "gloss": "百萬（希臘 megas「大」引申）"
+        },
+        {
+          "text": "byte",
+          "gloss": "位元組"
+        }
+      ],
+      "etymology": "1972年字首 mega-（希臘 megas「大」，科學上引申表百萬倍）與電腦術語 byte 組成，指一百萬位元組。",
+      "derivatives": []
+    },
+    {
+      "id": "megalomaniac",
+      "word": "megalomaniac",
+      "phonetic": "ˌmɛɡəloˈmenɪæk",
+      "zh": "自大狂",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man suffers from megalomania and believes he must save the world.",
+      "example_zh": "這名男子患有自大狂，並深信自己必須拯救世界。",
+      "draft": false,
+      "prefixId": "mega",
+      "parts": [
+        {
+          "text": "megalo-",
+          "gloss": "誇大、巨大（megas 組合形）"
+        },
+        {
+          "text": "maniac",
+          "gloss": "…狂、患…狂的人（mania 瘋狂）"
+        }
+      ],
+      "etymology": "名詞1882年、形容詞1883年出現，法文 mégalomanie，megalo-（誇大、巨大）與 mania（瘋狂）組成，母詞 megalomania（1866）指自認偉大、有權勢而妄自尊大的精神失常。",
+      "derivatives": [
+        {
+          "word": "megalomania",
+          "pos": "n.",
+          "zh": "自大狂"
+        }
+      ]
+    },
+    {
+      "id": "gigantic",
+      "word": "gigantic",
+      "phonetic": "dʒaɪˈɡæntɪk",
+      "zh": "巨大的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The budget for national defense is gigantic.",
+      "example_zh": "國防預算十分龐大。",
+      "draft": false,
+      "prefixId": "giga",
+      "parts": [
+        {
+          "text": "gigant-",
+          "gloss": "巨人（希臘 Gigas，神話巨人族）"
+        },
+        {
+          "text": "ic",
+          "gloss": "…的"
+        }
+      ],
+      "etymology": "1610年代拉丁詞幹 gigant-（源自希臘 Gigas，該亞與烏拉諾斯所生的巨人族）加字尾 -ic 構成，取代同期的 gigantine、gigantical，1797年起詞義擴大泛指任何巨大的事物。",
+      "derivatives": []
+    },
+    {
+      "id": "gigabyte",
+      "word": "gigabyte",
+      "phonetic": "ˈɡɪɡəˌbaɪt",
+      "zh": "十億位元組",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This PC comes with a 500-gigabyte hard drive.",
+      "example_zh": "這台電腦配備500十億位元組（GB）的硬碟。",
+      "draft": false,
+      "prefixId": "giga",
+      "parts": [
+        {
+          "text": "giga-",
+          "gloss": "十億（任意取自希臘 gigas 巨人）"
+        },
+        {
+          "text": "byte",
+          "gloss": "位元組"
+        }
+      ],
+      "etymology": "1982年由1947年訂定、任意取自希臘 gigas（巨人）的公制字首 giga-（十億）與電腦術語 byte 組成，指十億位元組。",
+      "derivatives": []
     }
   ]
 }

@@ -1,0 +1,54 @@
+[
+  {
+    "word": "decade",
+    "prefixId": "deca",
+    "pos": "n.",
+    "phonetic": "ˈdɛked",
+    "zh": "十年",
+    "parts": [{ "text": "deca-", "gloss": "十（希臘 deka）" }, { "text": "ade", "gloss": "一組（希臘字尾 -as）" }],
+    "etymology": "古法文 décade，晚期拉丁 decas、希臘 dekas（一組十個，PIE 詞根 *dekm- 十）——15世紀中葉原指文本的十等分，16世紀末才轉指十年，19世紀此義才成為主流。",
+    "derivatives": [],
+    "example": "Computer technology has come a long way in this decade.",
+    "example_zh": "電腦科技在這十年間有了長足的進步。",
+    "sources": { "page": "IMG_1653", "etymonline": "https://www.etymonline.com/word/decade", "ipa": "/ˈdɛkeɪd/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）" }
+  },
+  {
+    "word": "decathlon",
+    "prefixId": "deca",
+    "pos": "n.",
+    "phonetic": "dɪˈkæθlɑn",
+    "zh": "十項運動",
+    "parts": [{ "text": "deca-", "gloss": "十" }, { "text": "athlon", "gloss": "競賽、獎品（字源不詳）" }],
+    "etymology": "1912年由字首 deca-（十，PIE *dekm-）與希臘 athlon（競賽、獎品，字源不詳）組成的現代造詞，指由十項比賽構成的奧運項目。",
+    "derivatives": [],
+    "example": "The Olympic champion in decathlon is often called the greatest athlete on Earth.",
+    "example_zh": "十項全能的奧運冠軍常被稱為地表上最偉大的運動員。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/decathlon", "ipa": "/dɪˈkæθlɑn/", "ipaSource": "Oxford Advanced American Dictionary（Wiktionary 僅英式）" }
+  },
+  {
+    "word": "decimal",
+    "prefixId": "deca",
+    "pos": "a.",
+    "phonetic": "ˈdɛsɪməl",
+    "zh": "十進位的，小數的",
+    "parts": [{ "text": "deci-", "gloss": "第十、十分之一（decimus）" }, { "text": "al", "gloss": "…的" }],
+    "etymology": "中世紀拉丁 decimalis（什一稅的、十分之一的），拉丁 decimus（第十，decem 十的衍生詞）——約1600年泛指與十有關，1610年代用於十進位記數法，1640年代也作名詞指小數。",
+    "derivatives": [],
+    "example": "In the decimal system, the decimal point separates the integral part and the fractional part of a number.",
+    "example_zh": "在十進位系統中，小數點將一個數字的整數部分與小數部分區隔開來。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/decimal", "ipa": "/ˈdɛsɪməl/", "ipaSource": "Wiktionary", "spellingNote": "字首實為 deci-（第十、十分之一），與同組其他字所屬的 deca-（十）同源而形態不同" }
+  },
+  {
+    "word": "decimate",
+    "prefixId": "deca",
+    "pos": "v.",
+    "phonetic": "ˈdɛsəˌmet",
+    "zh": "重創",
+    "parts": [{ "text": "deci-", "gloss": "十分之一（decimus）" }, { "text": "ate", "gloss": "使…" }],
+    "etymology": "拉丁 decimare（取十分之一）過去分詞 decimatus，源自 decimus（第十）——約1600年進入英文，本指羅馬軍隊抽籤處死每十人中一人的懲罰，1660年代起被鬆散引申為大量摧毀。",
+    "derivatives": [{ "word": "decimation", "pos": "n.", "zh": "重創" }],
+    "example": "The earthquake decimated the island.",
+    "example_zh": "這場地震重創了這座島嶼。",
+    "sources": { "page": "IMG_1654", "etymonline": "https://www.etymonline.com/word/decimate", "ipa": "/ˈdɛsəmeɪt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（eɪ→e）", "spellingNote": "字首同為 deci-（十分之一），與 deca-（十）同源而形態不同；詞義自1660年代起鬆散化脫離取十分之一本義，常見誤用陷阱" }
+  }
+]

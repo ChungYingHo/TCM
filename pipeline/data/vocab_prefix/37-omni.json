@@ -1,0 +1,67 @@
+[
+  {
+    "word": "omniscient",
+    "prefixId": "omni",
+    "pos": "a.",
+    "phonetic": "ɑmˈnɪʃənt",
+    "zh": "無所不知的",
+    "parts": [{ "text": "omni-", "gloss": "全、所有" }, { "text": "scient", "gloss": "知道（scire）" }],
+    "etymology": "約1600年由中世紀拉丁文 omniscientia（omnis 全部＋ scientia 知識）逆構而成，原意為具備一切事物的知識。",
+    "derivatives": [{ "word": "omniscience", "pos": "n.", "zh": "無所不知" }],
+    "example": "The novel employs the third-person omniscient narrator.",
+    "example_zh": "這部小說採用全知的第三人稱敘事者。",
+    "sources": { "page": "IMG_1641", "etymonline": "https://www.etymonline.com/word/omniscient", "ipa": "/ɑmˈnɪʃənt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "omnipresent",
+    "prefixId": "omni",
+    "pos": "a.",
+    "phonetic": "ˌɑmnɪˈprɛzənt",
+    "zh": "無所不在的",
+    "parts": [{ "text": "omni-", "gloss": "全、所有" }, { "text": "present", "gloss": "在場（praesens）" }],
+    "etymology": "約1600年源自中世紀拉丁文 omnipraesens（omni- 全＋ praesens 在場的），意指無所不在、同時存在於一切地方。",
+    "derivatives": [{ "word": "omnipresence", "pos": "n.", "zh": "無所不在" }],
+    "example": "The omnipresent noise of the city is driving me crazy.",
+    "example_zh": "這座城市無所不在的噪音快把我逼瘋了。",
+    "sources": { "page": "IMG_1642", "etymonline": "https://www.etymonline.com/word/omnipresent", "ipa": "/ˌɑmnɪˈpɹɛzn̩t/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫（ɹ→r，音節性 n̩→ən）" }
+  },
+  {
+    "word": "omnipotent",
+    "prefixId": "omni",
+    "pos": "a.",
+    "phonetic": "ɑmˈnɪpətənt",
+    "zh": "無所不能的",
+    "parts": [{ "text": "omni-", "gloss": "全、所有" }, { "text": "potent", "gloss": "有力量的（potens）" }],
+    "etymology": "14世紀初經古法文承襲拉丁文 omnipotens（omnis 全部＋ potens 有力量的），原專指神的全能，1590年代才泛指擁有絕對權力。",
+    "derivatives": [{ "word": "omnipotence", "pos": "n.", "zh": "無所不能" }],
+    "example": "Omnipotence is an attribute of God.",
+    "example_zh": "全能是神的一項屬性。",
+    "sources": { "page": "IMG_1642", "etymonline": "https://www.etymonline.com/word/omnipotent", "ipa": "/ɑmˈnɪpətənt/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫" }
+  },
+  {
+    "word": "omnivorous",
+    "prefixId": "omni",
+    "pos": "a.",
+    "phonetic": "ɑmˈnɪvɝəs",
+    "zh": "雜食性的",
+    "parts": [{ "text": "omni-", "gloss": "全、所有" }, { "text": "vorous", "gloss": "吞食的（vorare）" }],
+    "etymology": "1650年代源自拉丁文 omnivorus（omnis 全部＋ vorare 吞食），原意為不加選擇地吃各種食物，1791年起也用於比喻義。",
+    "derivatives": [{ "word": "omnivore", "pos": "n.", "zh": "雜食動物" }],
+    "example": "Tigers are carnivores and sheep are herbivores; monkeys, on the other hand, are omnivorous.",
+    "example_zh": "老虎是肉食性動物，羊是草食性動物；而猴子則是雜食性的。",
+    "sources": { "page": "IMG_1642", "etymonline": "https://www.etymonline.com/word/omnivorous", "ipa": "/ɑmˈnɪvɝəs/", "ipaSource": "Wiktionary", "phoneticNote": "ɝ 重音節保留" }
+  },
+  {
+    "word": "omnibus",
+    "prefixId": "omni",
+    "pos": "n., a.",
+    "phonetic": "ˈɑmnɪbəs",
+    "zh": "文集，公車；總括的，多項的，多用途的",
+    "parts": [{ "text": "omni-", "gloss": "全、所有" }, { "text": "bus", "gloss": "給眾人（omnis 與格複數）" }],
+    "etymology": "1829年源自法文 (voiture) omnibus「給所有人的（車）」，即拉丁文 omnis 的與格複數 omnibus，原指公共馬車，1835年起延伸為總括各種事項的。",
+    "derivatives": [],
+    "example": "The omnibus contains all of the author's short stories. The party has drafted an omnibus bill to tackle several pressing issues at once.",
+    "example_zh": "這本文集收錄了該作者所有的短篇小說。該政黨起草了一項總括法案，一次處理多項迫切議題。",
+    "sources": { "page": "IMG_1642", "etymonline": "https://www.etymonline.com/word/omnibus", "ipa": "/ˈɑmnɪbəs/", "ipaSource": "Wiktionary", "phoneticNote": "KK 自 US IPA 轉寫；日常口語 bus 一詞即此字尾截斷而來" }
+  }
+]
