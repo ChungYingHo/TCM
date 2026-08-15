@@ -226,6 +226,15 @@ export const NOTES: NoteEntry[] = [
     desc: '四大組織（上皮／結締／肌肉／神經）、上皮的極性與分類、細胞骨架撐起的上皮特化、體內恆定的調控迴路與負回饋、正回饋',
   },
   {
+    id: 'bio-sense-1',
+    href: '/bio-sense-1',
+    title: '視覺',
+    subject: '生物',
+    tags: ['視覺'],
+    group: '感覺與運動',
+    desc: '光線經過的七個構造、眼球壁三層、視網膜分層與兩條路徑、視紫質與光轉導五步、暗亮相反的膜電位、側抑制與接受域、視覺傳導路徑',
+  },
+  {
     id: 'bio-summary',
     href: '/bio-summary',
     title: '生物・速查總表',
