@@ -217,6 +217,15 @@ export const NOTES: NoteEntry[] = [
     desc: '訊號傳遞三階段、四類受體（GPCR／RTK／離子通道／細胞內）、Gα 亞型分流、cAMP 與 IP₃／DAG／Ca²⁺、磷酸化級聯與訊號終止、細胞凋亡',
   },
   {
+    id: 'bio-tissue-1',
+    href: '/bio-tissue-1',
+    title: '組織與體內恆定',
+    subject: '生物',
+    tags: ['組織與恆定'],
+    group: '動物的形態與功能',
+    desc: '四大組織（上皮／結締／肌肉／神經）、上皮的極性與分類、細胞骨架撐起的上皮特化、體內恆定的調控迴路與負回饋、正回饋',
+  },
+  {
     id: 'bio-summary',
     href: '/bio-summary',
     title: '生物・速查總表',

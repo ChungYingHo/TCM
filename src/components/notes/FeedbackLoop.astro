@@ -1,0 +1,74 @@
+---
+// 負回饋與正回饋的對照環。Campbell 圖 40.8 用的是室溫調節的比喻，這裡直接畫生理版並把
+// 兩種回饋並排，差別（回應消除刺激 vs 回應放大刺激）一眼就看得出來。
+//
+// 純 Astro 靜態元件，不送 JS 到瀏覽器，PDF 與網頁看到的完全一樣。
+interface Step {
+  label: string
+  text: string
+}
+
+const NEGATIVE: Step[] = [
+  { label: '刺激', text: '劇烈運動產熱，體溫上升' },
+  { label: '感應器', text: '神經系統偵測到體溫偏離' },
+  { label: '回應', text: '排汗，汗水蒸發帶走熱' },
+  { label: '結果', text: '體溫下降回到設定值' },
+]
+
+const POSITIVE: Step[] = [
+  { label: '刺激', text: '嬰兒吸吮乳頭' },
+  { label: '感應器', text: '訊息傳到腦下腺' },
+  { label: '回應', text: '分泌催產素，排出更多乳汁' },
+  { label: '結果', text: '吸吮持續，刺激反而更強' },
+]
+---
+
+<div class="not-prose my-6 grid gap-4 sm:grid-cols-2">
+  <section class="rounded-box border border-info/35 bg-info/[0.06] p-4">
+    <h3 class="mb-1 font-display text-base font-bold text-info">負回饋</h3>
+    <p class="mb-3 text-sm text-base-content/65">回應<b>消除</b>引發它的刺激。恆定幾乎全靠這條。</p>
+    <ol class="flex flex-col gap-1.5">
+      {
+        NEGATIVE.map((s, i) => (
+          <li class="flex items-start gap-2 text-sm">
+            <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-info/20 text-xs font-bold text-info">
+              {i + 1}
+            </span>
+            <span>
+              <b class="text-base-content/80">{s.label}</b>
+              <span class="text-base-content/45">・</span>
+              {s.text}
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+    <p class="mt-3 rounded-lg bg-info/10 px-3 py-2 text-sm">
+      <b class="text-info">刺激消失</b>，循環自己停下來。
+    </p>
+  </section>
+
+  <section class="rounded-box border border-warning/40 bg-warning/[0.07] p-4">
+    <h3 class="mb-1 font-display text-base font-bold text-warning">正回饋</h3>
+    <p class="mb-3 text-sm text-base-content/65">回應<b>放大</b>引發它的刺激。與恆定無關。</p>
+    <ol class="flex flex-col gap-1.5">
+      {
+        POSITIVE.map((s, i) => (
+          <li class="flex items-start gap-2 text-sm">
+            <span class="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-warning/25 text-xs font-bold text-warning">
+              {i + 1}
+            </span>
+            <span>
+              <b class="text-base-content/80">{s.label}</b>
+              <span class="text-base-content/45">・</span>
+              {s.text}
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+    <p class="mt-3 rounded-lg bg-warning/15 px-3 py-2 text-sm">
+      <b class="text-warning">刺激變強</b>，要靠外力（嬰兒停止吸吮）才停。
+    </p>
+  </section>
+</div>
