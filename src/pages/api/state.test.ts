@@ -8,6 +8,7 @@ vi.mock('@/utils/kv', () => ({
 
 import { GET, PUT } from '@/pages/api/state'
 import { kvEnabled, kvGet, kvSet } from '@/utils/kv'
+import { localSnapshot } from '@/utils/cloud'
 
 afterEach(() => vi.clearAllMocks())
 
@@ -53,6 +54,38 @@ describe('PUT /api/state', () => {
     expect(stored.wrongbook).toEqual({ a: 1 })
     expect(stored.progress).toEqual({})
     expect(stored.updatedAt).toBe(9)
+  })
+
+  // 2026-08-24 真實資料遺失：PUT 用手寫白名單逐欄重建 state，漏收了 vocabSrsEpoch 與
+  // noteCardSrs。epoch 存不進雲端 → 每次 GET 回來都對不上世代 → cloud.ts 的世代閘把整個
+  // 單字複習進度清成空的 → 每日複習的「複習單字」區永遠不出現。Aira 三週只能背不能複習。
+  // 這兩條釘住「客戶端存什麼，伺服器就要原封收下什麼」。
+  it('存得下 SyncState 的每一個欄位（少收一欄就是資料遺失）', async () => {
+    const card = { box: 2, due: 111, ts: 222 }
+    const snapshot = {
+      wrongbook: { w: 1 },
+      progress: { p: 1 },
+      vocabSrs: { v: card },
+      vocabSrsEpoch: 3,
+      elementSrs: { e: card },
+      classicSrs: { c: card },
+      aminoAcidSrs: { a: card },
+      noteCardSrs: { n: card },
+      updatedAt: 42,
+    }
+    await put({ state: snapshot })
+    const stored = JSON.parse(vi.mocked(kvSet).mock.calls[0][1])
+    for (const [k, v] of Object.entries(snapshot)) {
+      expect(stored[k], `PUT 掉了「${k}」，這個欄位永遠存不進雲端`).toEqual(v)
+    }
+  })
+
+  it('客戶端快照的每個欄位都收得到（新增 store 忘了加白名單就紅燈）', async () => {
+    await put({ state: localSnapshot() })
+    const stored = JSON.parse(vi.mocked(kvSet).mock.calls[0][1])
+    for (const k of Object.keys(localSnapshot())) {
+      expect(Object.hasOwn(stored, k), `localSnapshot() 有「${k}」但 PUT 沒收，會靜靜地掉資料`).toBe(true)
+    }
   })
 
   it('400s on a non-JSON body', async () => {

@@ -30,8 +30,13 @@ export function localSnapshot(): SyncState {
 function applyServer(s: SyncState): void {
   replaceWrong(s.wrongbook ?? {})
   replaceProgress(s.progress ?? {})
-  // 複習進度世代閘：雲端 epoch 對不上（含舊 blob 無此欄）就丟棄舊 vocabSrs，讓單字從今天重排。
-  replaceVocabSrs(s.vocabSrsEpoch === VOCAB_SRS_EPOCH ? (s.vocabSrs ?? {}) : {})
+  // 複習進度世代閘：只有雲端**明確標了不同世代**才丟棄 vocabSrs，讓單字從今天重排。
+  // 沒有這個欄位時一律保留——「我們可能根本沒寫過這個欄位」不等於「這批資料是舊的」。
+  // 原本寫成 `=== VOCAB_SRS_EPOCH`，遇到缺欄位就當作對不上而清空；偏偏 api/state.ts 的
+  // PUT 白名單漏收了 vocabSrsEpoch，於是每次開頁都把單字複習進度清光，整整三週
+  // 「複習單字」區都是空的（2026-08-24）。清空使用者資料的預設值必須是「不清」。
+  const staleEpoch = typeof s.vocabSrsEpoch === 'number' && s.vocabSrsEpoch !== VOCAB_SRS_EPOCH
+  replaceVocabSrs(staleEpoch ? {} : (s.vocabSrs ?? {}))
   replaceElementSrs(s.elementSrs ?? {})
   replaceClassicSrs(s.classicSrs ?? {})
   replaceAminoAcidSrs(s.aminoAcidSrs ?? {})

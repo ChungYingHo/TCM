@@ -11,6 +11,18 @@ const EMPTY: SyncState = { wrongbook: {}, progress: {}, updatedAt: 0 }
 const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } })
 
+/** 只收「一包 id → 紀錄」的物件，其餘一律當空的。 */
+const obj = (v: unknown): Record<string, never> =>
+  v && typeof v === 'object' ? (v as Record<string, never>) : {}
+
+/**
+ * PUT 要原封收下的欄位。`Required<>` 讓**漏收一欄變成編譯錯誤**，而不是等使用者的資料被
+ * 清光才發現：2026-08-24 就是這裡漏收 `vocabSrsEpoch` 與 `noteCardSrs`，epoch 存不進雲端
+ * → 每次 GET 回來都對不上世代 → cloud.ts 把整包單字複習進度清成空的 → Aira 三週打不開
+ * 「複習單字」。以後 SyncState 新增欄位，這裡不處理就編不過。
+ */
+type StoredStores = Required<Omit<SyncState, 'vocabSrsEpoch'>>
+
 export const GET: APIRoute = async () => {
   if (!kvEnabled()) return json({ disabled: true })
   try {
@@ -30,15 +42,20 @@ export const PUT: APIRoute = async ({ request }) => {
     if (!st || typeof st !== 'object') {
       return json({ error: 'missing_state' }, 400)
     }
-    state = {
-      wrongbook: st.wrongbook && typeof st.wrongbook === 'object' ? st.wrongbook : {},
-      progress: st.progress && typeof st.progress === 'object' ? st.progress : {},
-      vocabSrs: st.vocabSrs && typeof st.vocabSrs === 'object' ? st.vocabSrs : {},
-      elementSrs: st.elementSrs && typeof st.elementSrs === 'object' ? st.elementSrs : {},
-      classicSrs: st.classicSrs && typeof st.classicSrs === 'object' ? st.classicSrs : {},
-      aminoAcidSrs: st.aminoAcidSrs && typeof st.aminoAcidSrs === 'object' ? st.aminoAcidSrs : {},
+    const stores: StoredStores = {
+      wrongbook: obj(st.wrongbook),
+      progress: obj(st.progress),
+      vocabSrs: obj(st.vocabSrs),
+      elementSrs: obj(st.elementSrs),
+      classicSrs: obj(st.classicSrs),
+      aminoAcidSrs: obj(st.aminoAcidSrs),
+      noteCardSrs: obj(st.noteCardSrs),
       updatedAt: typeof st.updatedAt === 'number' ? st.updatedAt : Date.now(),
     }
+    // 世代是數字、不是 store，所以單獨處理：**原樣轉存，絕不自己編一個預設值**。
+    // 編一個就等於謊報世代，cloud.ts 會據此把整包 vocabSrs 丟掉。客戶端沒送就不存這欄。
+    state =
+      typeof st.vocabSrsEpoch === 'number' ? { ...stores, vocabSrsEpoch: st.vocabSrsEpoch } : stores
   } catch {
     return json({ error: 'bad_body' }, 400)
   }
