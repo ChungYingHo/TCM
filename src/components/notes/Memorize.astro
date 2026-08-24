@@ -8,7 +8,7 @@
 //
 // 下標仍寫 `<sub>`（`$…$` 以外的地方 KaTeX 不管），大寫字母與中文沒有 Unicode 下標。
 import { renderMathHtml } from '@/utils/mathHtml'
-import { tagLists } from '@/utils/noteReview'
+import { splitMemorizeItem, tagLists } from '@/utils/noteReview'
 
 interface Props {
   label?: string
@@ -17,14 +17,10 @@ interface Props {
 
 const { label = '必背', items = [] } = Astro.props
 
-/** 與 utils/noteReview.ts 的 splitMemorizeItem 同一套拆法，兩邊必須一致。 */
-function split(s: string): [string, string] {
-  const i = s.indexOf('：')
-  return i > 0 && i <= 18 ? [s.slice(0, i), s.slice(i + 1)] : ['', s]
-}
-
+// 拆法直接用 noteReview 那支：筆記顯示的欄位與每日複習的回想卡必須切在同一個位置，
+// 各寫一份遲早會漂移。
 const rows = items.map((item) => {
-  const [topic, body] = split(item)
+  const [topic, body] = splitMemorizeItem(item)
   return { topic: renderMathHtml(topic), body: renderMathHtml(tagLists(body)) }
 })
 ---

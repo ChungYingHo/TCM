@@ -58,6 +58,21 @@ describe('splitMemorizeItem', () => {
       '這是一個超過十八個字的很長很長很長主題：內容',
     ])
   })
+
+  // 2026-08-24 真實 bug：18 字上限原本量原始字串，主題裡的 <code>／<b> 把額度吃光，
+  // 全站 7 則必背卡的主題被整個丟掉，每日複習正面退成問不出東西的「這篇的重點」。
+  it('18 字上限只算看得見的字，不算 HTML 標籤', () => {
+    // 「混成看 X+E」看起來 9 個字，原始字串 25 個。
+    expect(splitMemorizeItem('混成看 <code>X+E</code>：2 sp、3 sp²')).toEqual([
+      '混成看 <code>X+E</code>',
+      '2 sp、3 sp²',
+    ])
+  })
+
+  it('去掉標籤後仍超過 18 字就不算主題', () => {
+    const long = `<b>${'字'.repeat(19)}</b>：內容`
+    expect(splitMemorizeItem(long)).toEqual(['', long])
+  })
 })
 
 // 2026-08-05 真實 bug：JSON 只認雙引號，但 JSX 陣列常寫單引號。原本 options/steps 會靜靜

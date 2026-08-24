@@ -181,11 +181,24 @@ function arrayProp(attrs: string, key: string): string[] {
   return []
 }
 
-/** 與 Memorize.astro 相同的拆法：第一個全形冒號之前（≤18 字）是主題。兩邊必須一致，
- *  否則卡片正面問的主題會和筆記顯示的欄位對不起來。 */
+/** 去掉 HTML 標籤，只留看得見的字。 */
+function stripTags(s: string): string {
+  return s.replace(/<[^>]+>/g, '')
+}
+
+/** 主題最多幾個「看得見的字」。超過就當它不是主題，整則變成沒有標題的一列。 */
+const TOPIC_MAX = 18
+
+/** 第一個全形冒號之前是主題，但長度上限量的是**去掉標籤後**的字數。
+ *  主題常包 `<code>`／`<b>`，標籤本身不該吃掉額度——`混成看 <code>X+E</code>` 看起來
+ *  只有 9 個字，原始字串卻有 25 個，照原始長度算會把主題整個丟掉，卡片正面就退成
+ *  問不出東西的「這篇的重點」（2026-08-24 全站抓到 7 則）。
+ *  `Memorize.astro` 直接 import 這支，兩邊不會再各寫一份而漂移。 */
 export function splitMemorizeItem(s: string): [topic: string, body: string] {
   const i = s.indexOf('：')
-  return i > 0 && i <= 18 ? [s.slice(0, i), s.slice(i + 1)] : ['', s]
+  if (i <= 0) return ['', s]
+  const topic = s.slice(0, i)
+  return stripTags(topic).length <= TOPIC_MAX ? [topic, s.slice(i + 1)] : ['', s]
 }
 
 /** 給必背卡內文的 `<ul>`／`<li>` 掛上 class。
@@ -205,9 +218,7 @@ export function listPoints(html: string): string[] {
  *  把 `$…$` 的 LaTeX 原始碼拆開會變成 `\Delta S_{宇宙}` 這種讀不懂的東西，
  *  截在公式前反而誠實——前面沒東西可提示時，UI 就不給提示按鈕。 */
 export function plainText(html: string): string {
-  return html
-    .split('$')[0]
-    .replace(/<[^>]+>/g, '')
+  return stripTags(html.split('$')[0])
     .replace(/\s+/g, ' ')
     .trim()
 }

@@ -74,6 +74,28 @@ describe('必背卡的 items 沒有寫壞', () => {
   })
 })
 
+// 主題是回想卡的正面，翻牌前只看得到它加上篇名。沒有主題的卡片正面會退成「這篇的重點」，
+// 等於問不出一個具體問題，那張卡在每日複習裡就廢了。兩種寫壞法：主題裡包了 <code>／<b>
+// 把 18 字上限吃光（標籤本身不該算進額度），或整則根本沒寫全形冒號。
+describe('每則必背卡都問得出主題', () => {
+  it('主題不會空掉（正面不會退成「這篇的重點」）', () => {
+    const blank: string[] = []
+    for (const n of NOTES) {
+      const file = pageFile(n.href)
+      if (!file) continue
+      const raw = readFileSync(file, 'utf8')
+      if (!raw.includes('items={[')) continue
+      for (const c of parseCards(raw, { slug: n.id, href: n.href, title: n.title, subject: n.subject })) {
+        if (!c.topic.trim()) blank.push(`${n.title}（${n.href}）：${c.plain.slice(0, 36)}`)
+      }
+    }
+    expect(
+      blank,
+      `這些必背卡沒有主題，每日複習的正面問不出東西：\n${blank.join('\n')}`,
+    ).toEqual([])
+  })
+})
+
 // 每日練習題直接吃 parseExamples 的產出。選項若解析成空陣列，題目會變成「有題幹沒有選項」
 // 的廢題——而筆記頁自己是 MDX 編譯的、看起來完全正常，所以只看筆記永遠發現不了。
 // 2026-08-05 真的發生過：三篇用單引號寫 JSX 陣列，120 題裡有 29 題中招。
