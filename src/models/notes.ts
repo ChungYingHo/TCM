@@ -298,6 +298,15 @@ export const NOTES: NoteEntry[] = [
     desc: '康熙 214 部首一頁速查：部首、讀音、意思、例字，標出變形／難讀／自成／形近部首',
   },
   {
+    id: 'cn-word-sense-1',
+    href: '/cn-word-sense-1',
+    title: '破音字與語助詞：思、適、差',
+    subject: '國文',
+    tags: ['字義辨析'],
+    group: '字詞基礎',
+    desc: '《詩經》裡當語助詞的「思」與句首句中句末三個位置、入泮采芹的典故、「適」通謫嫡敵、論語里仁無適無莫、「差」的六個讀音、破音字三步判法',
+  },
+  {
     id: 'cn-shijing-qiyue',
     href: '/cn-shijing-qiyue',
     title: '詩經・七月',
@@ -305,6 +314,15 @@ export const NOTES: NoteEntry[] = [
     tags: ['詩經'],
     group: '韻文',
     desc: '《詩經・豳風・七月》農事詩：夏曆與周曆兩套曆法、七月流火正解，加詩經六義、四家詩等常考重點',
+  },
+  {
+    id: 'cn-sima-jizhu',
+    href: '/cn-sima-jizhu',
+    title: '司馬季主論卜',
+    subject: '國文',
+    tags: ['古文觀止'],
+    group: '古文',
+    desc: '劉基《郁離子》寓言體論說文：東陵侯與司馬季主的對話、三段原文與語譯、六組今昔對照的排比與對比、天道親德與鬼神因人而靈、何……為句式',
   },
   {
     id: 'reading-r1',
