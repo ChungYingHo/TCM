@@ -1,0 +1,27 @@
+---
+// 由 pipeline/gen_practice_tests.py 產生，請不要手改：改了下次重跑就沒了。
+import Layout from '@/layouts/Layout.astro'
+import PracticeRunner from '@/components/practice/PracticeRunner.svelte'
+import type { PracticeTest } from '@/models/practice'
+import data from '@/data/practice/T7.json'
+
+export const prerender = false
+
+const test = data as unknown as PracticeTest
+---
+
+<Layout title={`${test.title} · TCM 題庫`}>
+  <header class="mb-6 flex flex-col gap-1.5">
+    <a href="/notes?subject=國文" class="page-kicker gap-1 transition-opacity hover:opacity-70">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-3 w-3"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      筆記 · 國文實力測驗
+    </a>
+    <h1 class="page-title">{test.title}</h1>
+    <p class="page-desc max-w-2xl">
+      共 {test.questionCount} 題。選一個選項就立刻對答案，答錯會顯示正解與原卷詳解。
+      題目與選項是原卷裁圖，答案取自原卷的【解答】表。
+    </p>
+  </header>
+
+  <PracticeRunner test={test} client:load />
+</Layout>
