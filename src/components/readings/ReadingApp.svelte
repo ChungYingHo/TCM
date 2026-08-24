@@ -124,7 +124,9 @@
                 <span class="font-semibold text-base-content">{w.word}</span>
                 <span class="text-xs text-base-content/40">{w.pos}</span>
               </div>
-              <p class="text-sm leading-relaxed text-base-content/65">{w.en}</p>
+              {#if w.en}
+                <p class="text-sm leading-relaxed text-base-content/65">{w.en}</p>
+              {/if}
               {#if showZh}
                 <p class="text-sm font-medium text-primary/80">{w.zh}</p>
               {/if}

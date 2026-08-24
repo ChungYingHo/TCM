@@ -448,6 +448,30 @@ export const NOTES: NoteEntry[] = [
     tags: ['廣讀'],
     desc: '4 篇 VOA 進階短篇小說 + 26 個重點字彙（旋元佑老師編授）',
   },
+  {
+    id: 'reading-r3',
+    href: '/readings/r3',
+    title: '增補廣讀 R3：BBC Travel 字彙',
+    subject: '英文',
+    tags: ['廣讀'],
+    desc: '4 篇 BBC Travel 旅遊報導 + 320 個重點字彙（旋元佑老師編授）',
+  },
+  {
+    id: 'reading-r4',
+    href: '/readings/r4',
+    title: '增補廣讀 R4：CNN 字彙',
+    subject: '英文',
+    tags: ['廣讀'],
+    desc: '3 篇 CNN 國際新聞 + 313 個重點字彙（旋元佑老師編授）',
+  },
+  {
+    id: 'reading-r5',
+    href: '/readings/r5',
+    title: '增補廣讀 R5：Popular Science 字彙',
+    subject: '英文',
+    tags: ['廣讀'],
+    desc: '4 篇 Popular Science 科普報導 + 307 個重點字彙（旋元佑老師編授）',
+  },
 ]
 
 /** 某分類底下、某科目的筆記（分類省略視為「考點筆記」）。 */

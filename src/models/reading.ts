@@ -4,8 +4,9 @@ export interface ReadingWord {
   /** 詞條原形（忠於課本 glossary 的列法，如 glove、guess、smash）。 */
   word: string
   pos: string
-  /** 英文釋義（逐字取自課本 Words in This Story）。 */
-  en: string
+  /** 英文釋義（逐字取自課本 Words in This Story）。
+   *  R3 以後的講義只給中譯、沒有英文釋義，那幾份就沒有這個欄位。 */
+  en?: string
   /** 中譯（非課本內容，我方補上，供對照）。 */
   zh: string
   /**
