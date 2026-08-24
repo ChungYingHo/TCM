@@ -1,0 +1,86 @@
+---
+// 六條眼外肌的作用方向與支配神經。課本只給表格，但「哪條肌肉把眼球拉去哪」是空間資訊，
+// 排成 3×3 的方位盤才看得懂：中間是眼球，八個方位放對應的肌肉。
+//
+// 純 Astro 靜態元件，不送 JS 到瀏覽器，PDF 與網頁看到的完全一樣。
+interface Cell {
+  arrow: string
+  muscle: string
+  nerve: string
+  cls: string
+}
+
+// 依方位盤排列：外側在左、內側在右。空字串代表該格只放軸線標示。
+const OUTER = 'ring-info/40 bg-info/10 text-info'
+const TROCHLEAR = 'ring-warning/45 bg-warning/10 text-warning'
+const OCULOMOTOR = 'ring-primary/40 bg-primary/10 text-primary'
+
+const GRID: (Cell | null)[] = [
+  { arrow: '↖', muscle: '上直肌', nerve: 'CN III', cls: OCULOMOTOR },
+  null,
+  { arrow: '↗', muscle: '下斜肌', nerve: 'CN III', cls: OCULOMOTOR },
+  { arrow: '←', muscle: '外直肌', nerve: 'CN VI', cls: OUTER },
+  null,
+  { arrow: '→', muscle: '內直肌', nerve: 'CN III', cls: OCULOMOTOR },
+  { arrow: '↙', muscle: '下直肌', nerve: 'CN III', cls: OCULOMOTOR },
+  null,
+  { arrow: '↘', muscle: '上斜肌', nerve: 'CN IV', cls: TROCHLEAR },
+]
+
+const AXIS = ['上', '眼球', '下']
+---
+
+<figure
+  class="not-prose my-6 overflow-hidden rounded-box border border-base-300 bg-base-100 print:break-inside-avoid"
+>
+  <figcaption
+    class="border-b border-base-300 bg-base-200/50 px-4 py-2.5 text-sm font-bold tracking-wide text-base-content/75"
+  >
+    眼球轉向哪個方位，是哪條肌肉在拉
+  </figcaption>
+
+  <div class="px-3 py-3 sm:px-4">
+    <div class="mb-2 flex text-center text-xs font-semibold text-base-content/50">
+      <span class="flex-1">外側（顳側）</span>
+      <span class="flex-1">中線</span>
+      <span class="flex-1">內側（鼻側）</span>
+    </div>
+
+    <div class="grid grid-cols-3 gap-1.5 sm:gap-2">
+      {
+        GRID.map((c, i) =>
+          c ? (
+            <div class={`rounded-lg px-1.5 py-2 text-center ring-1 sm:px-2 ${c.cls}`}>
+              <div class="text-lg leading-none font-bold">{c.arrow}</div>
+              <div class="mt-1 text-sm leading-tight font-bold text-base-content">{c.muscle}</div>
+              <div class="mt-0.5 text-xs font-semibold">{c.nerve}</div>
+            </div>
+          ) : (
+            <div class="grid place-items-center rounded-lg bg-base-200/45 px-1 py-2 text-center">
+              <span
+                class={
+                  i === 4
+                    ? 'text-sm font-bold text-base-content/70'
+                    : 'text-sm text-base-content/40'
+                }
+              >
+                {AXIS[(i - 1) / 3]}
+              </span>
+            </div>
+          )
+        )
+      }
+    </div>
+  </div>
+
+  <div class="border-t border-base-300 bg-base-200/30 px-4 py-2.5 text-sm leading-relaxed">
+    <p>
+      只要記兩條特例，其餘自動歸位：<b class="text-info">外直肌歸 CN VI</b>、<b
+        class="text-warning">上斜肌歸 CN IV</b
+      >，<b class="text-primary">剩下四條全歸 CN III</b>。
+    </p>
+    <p class="mt-1 text-base-content/70">
+      左半邊四格是眼球先<b>外展</b>之後才測得準（直肌沿前後軸拉），右半邊四格要眼球先<b>內收</b>才測得準（斜肌從內側斜拉）。
+    </p>
+  </div>
+</figure>

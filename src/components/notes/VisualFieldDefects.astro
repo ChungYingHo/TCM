@@ -1,0 +1,147 @@
+---
+// 視覺路徑三個受損位置與對應的視野缺損。缺損長什麼樣完全由「鼻側纖維在視交叉交叉」
+// 這一件事決定，所以上半部先把交叉畫出來，下半部才逐個對照。
+//
+// 純 Astro 靜態元件，不送 JS 到瀏覽器，PDF 與網頁看到的完全一樣。
+type Half = 'none' | 'left' | 'right' | 'full'
+
+interface Lesion {
+  n: string
+  site: string
+  defect: string
+  left: Half
+  right: Half
+  why: string
+}
+
+const LESIONS: Lesion[] = [
+  {
+    n: '①',
+    site: '左側視神經',
+    defect: '左眼全盲',
+    left: 'full',
+    right: 'none',
+    why: '這隻眼睛的訊息在進入視交叉之前就整條斷了，另一眼完全不受影響。',
+  },
+  {
+    n: '②',
+    site: '視交叉正中央',
+    defect: '雙顳側偏盲',
+    left: 'left',
+    right: 'right',
+    why: '斷掉的是正在交叉的鼻側纖維，鼻側視網膜看的是外側視野，兩眼外側同時消失。',
+  },
+  {
+    n: '③',
+    site: '左側視徑',
+    defect: '右側同名偏盲',
+    left: 'right',
+    right: 'right',
+    why: '交叉後的左側視徑帶的已經是兩眼右半視野的合併訊息，斷了就兩眼右半一起沒。',
+  },
+]
+
+// 視野圓：半徑 16、圓心 (18,18)。sweep=0 走左半、sweep=1 走右半。
+const HALF_PATH: Record<Half, string | null> = {
+  none: null,
+  left: 'M18,2 A16,16 0 0,0 18,34 Z',
+  right: 'M18,2 A16,16 0 0,1 18,34 Z',
+  full: 'M18,2 A16,16 0 0,0 18,34 A16,16 0 0,0 18,2 Z',
+}
+---
+
+<figure
+  class="not-prose my-6 overflow-hidden rounded-box border border-base-300 bg-base-100 print:break-inside-avoid"
+>
+  <figcaption
+    class="border-b border-base-300 bg-base-200/50 px-4 py-2.5 text-sm font-bold tracking-wide text-base-content/75"
+  >
+    斷在哪一段，視野就缺哪一塊
+  </figcaption>
+
+  <div class="px-3 pt-4 pb-2 sm:px-4">
+    <svg viewBox="0 0 320 168" class="mx-auto block w-full max-w-md" role="img"
+      aria-label="視覺路徑示意圖：左右兩眼各有顳側與鼻側兩束纖維，鼻側纖維在視交叉處交叉到對側，圖上以三個叉號標出左側視神經、視交叉正中央、左側視徑三個受損位置">
+      <g class="fill-none stroke-info" stroke-width="3" stroke-linecap="round">
+        <path d="M46,24 H290"></path>
+        <path d="M46,144 H290"></path>
+      </g>
+      <g class="fill-none stroke-warning" stroke-width="3" stroke-linecap="round">
+        <path d="M46,40 H118 L182,128 H290"></path>
+        <path d="M46,128 H118 L182,40 H290"></path>
+      </g>
+
+      <g class="fill-base-100 stroke-base-content/55" stroke-width="2.5">
+        <circle cx="28" cy="32" r="15"></circle>
+        <circle cx="28" cy="136" r="15"></circle>
+      </g>
+
+      <g class="fill-base-content/65" font-size="12" text-anchor="middle">
+        <text x="28" y="9">左眼</text>
+        <text x="28" y="166">右眼</text>
+      </g>
+      <g class="fill-base-content/45" font-size="11">
+        <text x="252" y="15">左側視徑</text>
+        <text x="252" y="164">右側視徑</text>
+      </g>
+
+      <g class="stroke-error" stroke-width="3.5" stroke-linecap="round">
+        <path d="M72,14 L94,50 M94,14 L72,50"></path>
+        <path d="M139,73 L161,95 M161,73 L139,95"></path>
+        <path d="M218,14 L240,50 M240,14 L218,50"></path>
+      </g>
+      <g class="fill-error" font-size="13" font-weight="bold" text-anchor="middle">
+        <text x="83" y="66">①</text>
+        <text x="150" y="112">②</text>
+        <text x="229" y="66">③</text>
+      </g>
+    </svg>
+
+    <div class="mt-2 flex flex-wrap justify-center gap-x-4 gap-y-1 text-xs text-base-content/60">
+      <span><b class="text-info">■</b> 顳側纖維，不交叉</span>
+      <span><b class="text-warning">■</b> 鼻側纖維，在視交叉越過中線</span>
+    </div>
+  </div>
+
+  <div class="grid divide-y divide-base-200 border-t border-base-300 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+    {
+      LESIONS.map((l) => (
+        <div class="px-4 py-3">
+          <p class="font-display font-bold leading-snug">
+            <span class="text-error">{l.n}</span> {l.site}
+          </p>
+          <p class="mt-0.5 text-sm font-bold text-base-content/80">{l.defect}</p>
+
+          <div class="mt-2 flex gap-4">
+            {(['left', 'right'] as const).map((eye) => {
+              const blind = HALF_PATH[l[eye]]
+              return (
+              <div class="text-center">
+                <svg viewBox="0 0 36 36" class="block h-11 w-11" aria-hidden="true">
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="16"
+                    class="fill-base-100 stroke-base-content/45"
+                    stroke-width="1.5"
+                  />
+                  {blind && <path d={blind} class="fill-base-content/70" />}
+                </svg>
+                <span class="mt-0.5 block text-xs text-base-content/55">
+                  {eye === 'left' ? '左眼' : '右眼'}
+                </span>
+              </div>
+              )
+            })}
+          </div>
+
+          <p class="mt-2 text-sm leading-relaxed text-base-content/70">{l.why}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="border-t border-base-300 bg-base-200/30 px-4 py-2.5 text-sm leading-relaxed">
+    視野圓依病人的視角畫，塗黑處代表看不見。圓的<b>左半＝視野左側</b>，所以左眼的顳側視野落在圓的左半、右眼的顳側視野落在圓的右半。
+  </p>
+</figure>
