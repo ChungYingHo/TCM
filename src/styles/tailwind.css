@@ -263,23 +263,26 @@ a.card:hover, .card-hover:hover {
 .prose blockquote p { margin: 0; }
 .prose blockquote p::before, .prose blockquote p::after { content: none; }
 
-/* 補充色塊（Supplement.astro）：大綱「補」的延伸知識，藍 info 框，和琥珀提示明確區隔 */
-.prose .supplement {
+/* 筆記色塊（Supplement.astro／RelatedNote.astro）：外框共用，顏色由 --note-aside-color 決定。
+   藍 info ＝大綱「補」的延伸知識，紫 primary ＝指向另一篇筆記。兩者都和琥珀提示明確區隔 */
+.prose .note-aside {
+  --note-aside-color: var(--color-info);
   margin: 1em 0; overflow: hidden;
-  border: 1px solid color-mix(in oklab, var(--color-info) 35%, transparent);
+  border: 1px solid color-mix(in oklab, var(--note-aside-color) 35%, transparent);
   border-radius: var(--radius-box);
-  background: color-mix(in oklab, var(--color-info) 6%, var(--color-base-100));
+  background: color-mix(in oklab, var(--note-aside-color) 6%, var(--color-base-100));
 }
-.prose .supplement-head {
+.prose .note-aside--related { --note-aside-color: var(--color-primary); }
+.prose .note-aside-head {
   display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem;
   padding: 0.4rem 0.85rem; font-size: 0.85rem;
-  background: color-mix(in oklab, var(--color-info) 12%, transparent);
-  border-bottom: 1px solid color-mix(in oklab, var(--color-info) 22%, transparent);
+  background: color-mix(in oklab, var(--note-aside-color) 12%, transparent);
+  border-bottom: 1px solid color-mix(in oklab, var(--note-aside-color) 22%, transparent);
 }
-.prose .supplement-body { padding: 0.55rem 0.9rem; font-size: 0.9rem; line-height: 1.65; }
-.prose .supplement-body > :first-child { margin-top: 0; }
-.prose .supplement-body > :last-child { margin-bottom: 0; }
-.prose .supplement-body :is(p, ul, ol) { margin: 0.35rem 0; }
+.prose .note-aside-body { padding: 0.55rem 0.9rem; font-size: 0.9rem; line-height: 1.65; }
+.prose .note-aside-body > :first-child { margin-top: 0; }
+.prose .note-aside-body > :last-child { margin-bottom: 0; }
+.prose .note-aside-body :is(p, ul, ol) { margin: 0.35rem 0; }
 
 /* ── 深色模式（夜讀／護眼）：現代冷調深石板底＋柔白字，睡前手機刷題不刺眼。
    隨亮色一同翻新——拿掉舊版墨黛色偏，改乾淨 slate；強調色提亮保清晰。 ─────── */

@@ -1,0 +1,28 @@
+---
+// 關聯色塊：指向另一篇筆記的延伸內容，把「訊號送到腦裡某個位置」這類跨篇的線接起來。
+// 與 Supplement.astro 共用 .note-aside 外框（見 styles/tailwind.css），換成 primary 色與「延伸」標籤。
+// 靜態無 hydration，列印整塊不分頁。列印時連結點不到，但目標篇名的文字仍指得出該翻哪一篇。
+// 給了 href 就會在底部補一行連結，連結文字用 to。內文自己列多個連結時，兩者都省略。
+interface Props {
+  title: string // 這個 block 在講什麼，如「視覺在腦裡的下一站」
+  href?: string // 目標筆記的網址
+  to?: string // 目標筆記的標題，省略時退回顯示網址
+}
+
+const { title, href, to } = Astro.props
+---
+
+<aside class="note-aside note-aside--related print:break-inside-avoid">
+  <div class="note-aside-head">
+    <span class="badge badge-primary badge-sm shrink-0 border-none font-bold">→ 延伸</span>
+    <span class="font-semibold text-base-content/80">{title}</span>
+  </div>
+  <div class="note-aside-body">
+    <slot />
+    {href && (
+      <p>
+        <a href={href}>{to ?? href}</a>
+      </p>
+    )}
+  </div>
+</aside>

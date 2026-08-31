@@ -1,19 +1,20 @@
 ---
 // 補充色塊：大綱裡標「補」的延伸知識（你還不熟、先簡單認識）。
 // 用藍色 info 框＋「補充」標籤，和主內容、和琥珀色提示（blockquote／必背）明確區隔。
-// 靜態無 hydration；列印整塊不分頁。內文（slot）走 markdown，由 .supplement-body 收斂間距。
+// 靜態無 hydration；列印整塊不分頁。內文（slot）走 markdown，由 .note-aside-body 收斂間距。
+// 外框樣式與 RelatedNote.astro 共用 .note-aside，見 styles/tailwind.css。
 interface Props {
   title?: string // 補充的主題，如「質體 plasmid」
 }
 const { title } = Astro.props
 ---
 
-<aside class="supplement print:break-inside-avoid">
-  <div class="supplement-head">
+<aside class="note-aside print:break-inside-avoid">
+  <div class="note-aside-head">
     <span class="badge badge-info badge-sm shrink-0 border-none font-bold">＋ 補充</span>
     {title && <span class="font-semibold text-base-content/80">{title}</span>}
   </div>
-  <div class="supplement-body">
+  <div class="note-aside-body">
     <slot />
   </div>
 </aside>
