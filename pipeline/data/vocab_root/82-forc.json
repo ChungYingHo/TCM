@@ -1,0 +1,231 @@
+[
+  {
+    "word": "fort",
+    "prefixId": "forc",
+    "pos": "n.",
+    "phonetic": "fɔrt",
+    "zh": "堡壘，要塞",
+    "parts": [
+      {
+        "text": "fort",
+        "gloss": "強、堅固"
+      }
+    ],
+    "etymology": "15 世紀中期源自古法語 fort（堡壘。強壯的人，原為形容詞「強壯的」），承自拉丁文 fortis「強壯的、堅定的、勇敢的」。",
+    "derivatives": [
+      {
+        "word": "fortress",
+        "pos": "n.",
+        "zh": "堡壘，要塞"
+      }
+    ],
+    "example": "The military fort gradually developed into a city.",
+    "example_zh": "這座軍事堡壘逐漸發展成一座城市。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/fort",
+      "ipa": "/fɔrt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "fortify",
+    "prefixId": "forc",
+    "pos": "v.",
+    "phonetic": "ˈfɔrtəˌfaɪ",
+    "zh": "加強，增強",
+    "parts": [
+      {
+        "text": "fort",
+        "gloss": "強"
+      },
+      {
+        "text": "-fy",
+        "gloss": "使成為"
+      }
+    ],
+    "etymology": "源自古法語 fortifiier 與晚期拉丁文 fortificare，由拉丁文 fortis「強」+ facere「做、使」的組合形式構成，原意為加固城牆、使堅固，後引申出精神上的堅強與強化之意。",
+    "derivatives": [
+      {
+        "word": "fortification",
+        "pos": "n.",
+        "zh": "增強；防禦工事"
+      }
+    ],
+    "example": "In the baby formula, milk is fortified with more than a dozen nutrients.",
+    "example_zh": "在嬰兒配方奶粉裡，牛奶被強化添加了十幾種營養素。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/fortify",
+      "ipa": "/ˈfɔrtəˌfaɪ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The castle is surrounded with heavy fortifications."
+      ]
+    }
+  },
+  {
+    "word": "enforcement",
+    "prefixId": "forc",
+    "pos": "n.",
+    "phonetic": "ɪnˈfɔrsmənt",
+    "zh": "強制執行",
+    "parts": [
+      {
+        "text": "en",
+        "gloss": "使入"
+      },
+      {
+        "text": "forc",
+        "gloss": "力量、強"
+      }
+    ],
+    "etymology": "源自古法語 enforcier，由 en-「使」+ force「力量」構成。force 經古法語承自通俗拉丁文 *fortia，源自拉丁文 fortis「強」，故 enforcement 的核心語意仍是「施力、強制」。",
+    "derivatives": [
+      {
+        "word": "enforce",
+        "pos": "v.",
+        "zh": "強制執行"
+      }
+    ],
+    "example": "Policemen are law enforcement officers.",
+    "example_zh": "警察是執法人員。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/enforcement",
+      "ipa": "/ɪnˈfɔrsmənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "forte",
+    "prefixId": "forc",
+    "pos": "n.",
+    "phonetic": "ˈfɔrte",
+    "zh": "強音，強項，拿手項目",
+    "parts": [
+      {
+        "text": "forte",
+        "gloss": "強。強項"
+      }
+    ],
+    "etymology": "「強項」義於 1640 年代源自法語 fort「（劍刃）最堅硬處。強項」，18 世紀加上字尾 -e 仿義大利文拼法。音樂術語「強、大聲」則是直接借自義大利文 forte「強」。兩義最終都承自拉丁文 fortis「強」。",
+    "derivatives": [],
+    "example": "Math is my forte, but English is my Achilles' heel.",
+    "example_zh": "數學是我的強項，英文則是我的罩門。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/forte",
+      "ipa": "/ˈfɔrteɪ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "「強項」義另有唸法 /fɔrt/（單音節，仿法語 fort 原音，部分人視為較道地的唸法）。音樂「強奏」義固定唸 /ˈfɔrteɪ/。兩義在美式英語中常被唸成同音 /ˈfɔrteɪ/，字典多兩者並列承認。"
+    }
+  },
+  {
+    "word": "fortitude",
+    "prefixId": "forc",
+    "pos": "n.",
+    "phonetic": "ˈfɔrtɪˌtud",
+    "zh": "堅忍，堅毅",
+    "parts": [
+      {
+        "text": "fort",
+        "gloss": "強"
+      }
+    ],
+    "etymology": "源自拉丁文 fortitudo「力量、剛毅、勇氣」，由 fortis「強、勇敢」衍生而來。14 世紀晚期先指道德上的剛毅（樞德之一），15 世紀初擴及身體上的強健。",
+    "derivatives": [],
+    "example": "The orphans demonstrated admirable fortitude and learned to support themselves.",
+    "example_zh": "這些孤兒展現出令人欽佩的堅毅，學會了自食其力。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/fortitude",
+      "ipa": "/ˈfɔrtɪˌtud/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "reinforce",
+    "prefixId": "forc",
+    "pos": "v.",
+    "phonetic": "ˌriɪnˈfɔrs",
+    "zh": "加強，增援",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再、又"
+      },
+      {
+        "text": "in",
+        "gloss": "使入"
+      },
+      {
+        "text": "forc",
+        "gloss": "力量、強"
+      }
+    ],
+    "etymology": "約 1600 年由 re-「再」+ inforce（enforce 的變體，意為「施力。使堅固」）構成。enforce 源自古法語 enforcier（en- + force），force 又承自拉丁文 fortis「強」。Etymonline 指出 rein- 已與原本的 enforce 脫鉤，現在幾乎不作「再次施行」解。",
+    "derivatives": [
+      {
+        "word": "reinforcement",
+        "pos": "n.",
+        "zh": "加強，援軍"
+      }
+    ],
+    "example": "The general decided to reinforce the troops with 2,000 new men.",
+    "example_zh": "將軍決定用兩千名新兵去增援部隊。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/reinforce",
+      "ipa": "/ˌriɪnˈfɔrs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "This wall is made of reinforced concrete."
+      ]
+    }
+  },
+  {
+    "word": "fortuitous",
+    "prefixId": "forc",
+    "pos": "a.",
+    "phonetic": "fɔrˈtuətəs",
+    "zh": "偶然的，幸運的",
+    "parts": [
+      {
+        "text": "fortu",
+        "gloss": "偶然、運氣"
+      }
+    ],
+    "etymology": "1650 年代源自拉丁文 fortuitus「偶然發生的、非刻意的」，來自 fors「機運、偶然」的奪格 forte（義為「憑機運」），與 fortuna「命運」同源。Etymonline 特別指出此字原意是「意外的、非刻意的」而非「幸運的」。",
+    "derivatives": [
+      {
+        "word": "fortune",
+        "pos": "n.",
+        "zh": "命運，幸運"
+      }
+    ],
+    "example": "The collapse of its rival was a fortuitous opportunity for the company.",
+    "example_zh": "對手的垮台對這家公司來說是個幸運的機會。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/fortuitous",
+      "ipa": "/fɔrˈtuətəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "陷阱字：課本依拼字把此字歸入 fort（強壯） 字根組，但 Etymonline 明確顯示其真正詞源是拉丁文 fors/fortuna「機運、偶然」，與 fortis「強」無關，語意也是「偶然、非刻意」而非「幸運」。不應強行併入「強」字根組。"
+    }
+  }
+]

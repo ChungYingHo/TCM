@@ -1,0 +1,32 @@
+[
+  {
+    "word": "dynamic",
+    "parts": [
+      {"text": "dynam", "gloss": "力量"}
+    ],
+    "etymology": "1812年經由法文dynamique進入英文（該詞由德國數學家萊布尼茲於1691年提出），源自希臘文dynamikos「有力量的」，其構詞來自dynamis「力量」與dynasthai「能夠、有力量」，此希臘字根的更早起源不明。",
+    "us_ipa": "/daɪˈnæm.ɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/dynamic",
+    "notes": ""
+  },
+  {
+    "word": "dynamite",
+    "parts": [
+      {"text": "dynam", "gloss": "力量"}
+    ],
+    "etymology": "1867年由發明此炸藥的瑞典化學家Alfred Nobel所創，源自瑞典文dynamit，結合希臘文dynamis「力量」（同dynamic字根）與源自法文、表化學鹽類的字尾-ite。",
+    "us_ipa": "/ˈdaɪ.nəˌmaɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/dynamite",
+    "notes": ""
+  },
+  {
+    "word": "dynasty",
+    "parts": [
+      {"text": "dynas", "gloss": "統治者"}
+    ],
+    "etymology": "15世紀中期經中世紀拉丁文dynastia，源自希臘文dynasteia「權力、統治權、統治地位」（源自名詞dynastes「統治者、首領」），兩者皆出自動詞dynasthai「能夠、有力量」，其更早起源不明。",
+    "us_ipa": "/ˈdaɪnəsti/",
+    "etymonline_url": "https://www.etymonline.com/word/dynasty",
+    "notes": "與dynamic同源：dynasty的希臘字根dynasteia／dynastes皆溯自動詞dynasthai（能夠、有力量），與dynamic的字根dynamis同出一源，並非各自獨立的詞根；教科書「lord/ruler」是此字根的引申義，非最終詞源。"
+  }
+]

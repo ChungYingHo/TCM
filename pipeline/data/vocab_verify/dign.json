@@ -1,0 +1,55 @@
+[
+  {
+    "word": "deign",
+    "parts": [
+      { "text": "deign", "gloss": "值得" }
+    ],
+    "etymology": "源自古法文 deignier 與拉丁文 dignari「認為值得」，其字根 dignus（值得的）可溯至原始印歐字根 *dek-（拿取、接受），16世紀晚期起衍生出「屈尊俯就」之意。",
+    "us_ipa": "/deɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/deign",
+    "notes": "課本標記詞根為 dign，但 deign 實際拼字中間多了 e（d-e-i-g-n），並無連續的 dign 字串；仍同源於拉丁 dignus。"
+  },
+  {
+    "word": "disdain",
+    "parts": [
+      { "text": "dis-", "gloss": "不、相反" },
+      { "text": "dain", "gloss": "值得" }
+    ],
+    "etymology": "源自古法文 desdeignier，由 des-（相反）＋ deignier（視為值得）組成，deignier 源自拉丁文 dignari，其字根為 dignus（值得的）。",
+    "us_ipa": "/dɪsˈdeɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/disdain",
+    "notes": ""
+  },
+  {
+    "word": "condign",
+    "parts": [
+      { "text": "con-", "gloss": "完全、一起" },
+      { "text": "dign", "gloss": "值得" }
+    ],
+    "etymology": "源自古法文 condigne 與拉丁文 condignus「完全值得的」，由 con-（一起、完全）＋ dignus（值得的）組成，約1700年後詞義窄化為專指「（懲罰）罪有應得」。",
+    "us_ipa": "/kənˈdaɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/condign",
+    "notes": ""
+  },
+  {
+    "word": "dignified",
+    "parts": [
+      { "text": "dign", "gloss": "值得" }
+    ],
+    "etymology": "為動詞 dignify 的過去分詞，dignify 源自古法文 dignefiier 與中世紀拉丁文 dignificare「使值得」，由拉丁文 dignus（值得的）＋ -ficare（使、做，源自 facere）組成。",
+    "us_ipa": "/ˈdɪɡnɪfaɪd/",
+    "etymonline_url": "https://www.etymonline.com/word/dignified",
+    "notes": ""
+  },
+  {
+    "word": "indignant",
+    "parts": [
+      { "text": "in-", "gloss": "不、非" },
+      { "text": "dign", "gloss": "值得" }
+    ],
+    "etymology": "源自拉丁文 indignantem（indignari 的現在分詞），意為「因視為不值得而憤慨、不悅」，indignari 由 in-（不）＋ dignus（值得的）組成。",
+    "us_ipa": "/ɪnˈdɪɡnənt/",
+    "etymonline_url": "https://www.etymonline.com/word/indignant",
+    "notes": ""
+  }
+]

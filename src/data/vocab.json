@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-01",
-  "count": 566,
-  "withExamples": 566,
+  "count": 604,
+  "withExamples": 604,
   "words": [
     {
       "id": "apathetic",
@@ -18646,6 +18646,1148 @@
       ],
       "etymology": "1540 年代源自中古拉丁文 renegare（re-＋negare「拒絕、否認」），原意「否認、背棄」，18 世紀後語意窄化為美式常用的「反悔、食言」。",
       "derivatives": []
+    },
+    {
+      "id": "neoclassical",
+      "word": "neoclassical",
+      "phonetic": "ˌnioˈklæsɪkəl",
+      "zh": "新古典的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This neoclassical building evokes Roman churches.",
+      "example_zh": "這棟新古典風格的建築讓人聯想到羅馬的教堂。",
+      "draft": false,
+      "prefixId": "neo",
+      "parts": [
+        {
+          "text": "neo",
+          "gloss": "新"
+        },
+        {
+          "text": "classical",
+          "gloss": "古典的"
+        }
+      ],
+      "etymology": "1859 年出現的 neo-classical（也拼作 neoclassical），由 neo-（新）＋ classical（古典的）組成，指受古典風格影響的藝術、建築等風格，尤指十八世紀英國文學。",
+      "derivatives": []
+    },
+    {
+      "id": "innovation",
+      "word": "innovation",
+      "phonetic": "ˌɪnəˈveʃən",
+      "zh": "創新，革新",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This notebook employs the latest innovations in voice recognition.",
+      "example_zh": "這台筆電採用了語音辨識領域最新的創新技術。",
+      "draft": false,
+      "prefixId": "neo",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "進入"
+        },
+        {
+          "text": "nov",
+          "gloss": "新"
+        }
+      ],
+      "etymology": "innovation 最早見於十五世紀中，原意是「恢復、更新」，源自晚期拉丁語 innovationem，本於 innovare（in-「進入」＋novus「新」，意為「改變、更新」）。「創新、新事物」的現代語義始於一五四〇年代。",
+      "derivatives": [
+        {
+          "word": "innovate",
+          "pos": "v.",
+          "zh": "創新，革新"
+        },
+        {
+          "word": "innovative",
+          "pos": "a.",
+          "zh": "創新的"
+        }
+      ]
+    },
+    {
+      "id": "renovate",
+      "word": "renovate",
+      "phonetic": "ˈrɛnəvet",
+      "zh": "翻修，整建",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man is taking out a bank loan to renovate his house.",
+      "example_zh": "這名男子正在向銀行貸款來翻修他的房子。",
+      "draft": false,
+      "prefixId": "neo",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再次"
+        },
+        {
+          "text": "nov",
+          "gloss": "新"
+        }
+      ],
+      "etymology": "renovate 於一五二〇年代出現，意為「使恢復如新、整修」，是 renovation 的逆構詞，或直接源自拉丁語 renovatus（renovare 的過去分詞）。renovare 由 re-（再次）＋novare（使變新，源自 novus「新」）組成。",
+      "derivatives": [
+        {
+          "word": "renovation",
+          "pos": "n.",
+          "zh": "翻修，整建"
+        }
+      ]
+    },
+    {
+      "id": "novel",
+      "word": "novel",
+      "phonetic": "ˈnɑvəl",
+      "zh": "新奇的；小說",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His suggestion provides a novel approach to the problem.",
+      "example_zh": "他的提議為這個問題提供了一個新奇的思路。",
+      "draft": false,
+      "prefixId": "neo",
+      "parts": [
+        {
+          "text": "nov",
+          "gloss": "新"
+        }
+      ],
+      "etymology": "novel 作形容詞（「新奇的、前所未有的」）始於十五世紀中，源自古法語 novel／nouvel，來自拉丁語 novellus（novus「新」的指小詞）。作名詞（「長篇小說」）則於一五六〇年代出現，經義大利語 novella（原意「新鮮事、消息」）同樣上溯至 novellus／novus。",
+      "derivatives": []
+    },
+    {
+      "id": "novice",
+      "word": "novice",
+      "phonetic": "ˈnɑvɪs",
+      "zh": "新手，生手",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Although a novice in the field, I can learn very fast.",
+      "example_zh": "雖然我在這個領域還是新手，但我學得很快。",
+      "draft": false,
+      "prefixId": "neo",
+      "parts": [
+        {
+          "text": "nov",
+          "gloss": "新"
+        }
+      ],
+      "etymology": "novice 於十四世紀中出現，原指「修會中的見習生」，源自古法語 novice（「初學者」），上承中世紀拉丁語 novicius，本於拉丁語 novicius「新引進的、新來的、無經驗的」（原用於描述奴隸），源頭是 novus「新」。",
+      "derivatives": []
+    },
+    {
+      "id": "primary",
+      "word": "primary",
+      "phonetic": "ˈpraɪˌmɛrɪ",
+      "zh": "首要的，主要的；黨內初選",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The primary responsibility of a manager is to lead her subordinates.",
+      "example_zh": "一位主管最首要的職責是帶領他的部屬。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "源自拉丁文 primarius（「首位的、主要的、卓越的」），來自 primus（「第一」）。15 世紀初進入英文原指「最早、最基本」，16 世紀後才發展出「首要、最高等」之義。",
+      "derivatives": []
+    },
+    {
+      "id": "premier",
+      "word": "premier",
+      "phonetic": "prɪˈmɪər",
+      "zh": "總理；首屈一指的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The French Premier and the British Prime Minister are having a summit soon.",
+      "example_zh": "法國總理與英國首相即將舉行高峰會。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "premi",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "源自古法文 premier（「第一、首要」），上溯拉丁文 primarius，再溯 primus（「第一」）。中世紀英文先作形容詞，1711 年才轉為名詞、作「首相」（premier minister 之簡稱）。",
+      "derivatives": []
+    },
+    {
+      "id": "premiere",
+      "word": "premiere",
+      "phonetic": "prəˈmɪɚ",
+      "zh": "首演；首屈一指的",
+      "pos": "n., v., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I'm going to the world premiere of the new movie.",
+      "example_zh": "我要去看那部新電影的全球首映。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "premi",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "1889 年借自法文 première（premier 的陰性形式，見於 première représentation「首次公演」），同樣上溯拉丁 primarius、primus（「第一」），原指戲劇的「首演」。",
+      "derivatives": []
+    },
+    {
+      "id": "prime",
+      "word": "prime",
+      "phonetic": "praɪm",
+      "zh": "主要的，最好的；全盛期，巔峰狀態",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The prime suspect of the murder investigation turned out to be innocent.",
+      "example_zh": "這樁謀殺案調查中的頭號嫌犯，結果是無辜的。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "源自古法文 prime、拉丁文 primus（「第一、原本的」），14 世紀晚期進入英文，本義「第一、最初」，後衍生「最優等」「質數」「本初子午線」等義。",
+      "derivatives": []
+    },
+    {
+      "id": "primeval",
+      "word": "primeval",
+      "phonetic": "praɪˈmivəl",
+      "zh": "太古的，原始的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Many rare animals live in these primeval forests.",
+      "example_zh": "許多稀有動物棲息在這些太古森林裡。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        },
+        {
+          "text": "ev",
+          "gloss": "時代、年歲"
+        }
+      ],
+      "etymology": "1650 年代出現的形容詞，源自拉丁文 primaevus（「早年的、年輕的」），由 primus（「第一」）＋ aevum（「時代、年歲」）組成，字面即「屬於最初時代」。",
+      "derivatives": []
+    },
+    {
+      "id": "primitive",
+      "word": "primitive",
+      "phonetic": "ˈprɪmɪtɪv",
+      "zh": "原始的，簡陋的；原始人",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Humans in the Paleolithic Age used primitive tools.",
+      "example_zh": "舊石器時代的人類使用原始的工具。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "14 世紀晚期經古法文 primitif 借自拉丁文 primitivus（「最早、原初的」），源出 primitus（「起初」）、primus（「第一」）。1680 年代起衍生「風格古樸」之義，1895 年進入人類學指「停留於簡單發展階段的文化」。",
+      "derivatives": []
+    },
+    {
+      "id": "primordial",
+      "word": "primordial",
+      "phonetic": "praɪˈmɔrdiəl",
+      "zh": "原始的，洪荒的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Many scientists believe that life originated in primordial oceans.",
+      "example_zh": "許多科學家相信生命起源於原始的海洋。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        },
+        {
+          "text": "ord",
+          "gloss": "開始、次序"
+        }
+      ],
+      "etymology": "14 世紀晚期源自後期拉丁文 primordialis（「最原初的」），由拉丁 primus（「第一」）＋ ordiri（「開始」，與 ordo「行列、次序」同源）組成。1934 年 J.B.S. Haldane 提出 primordial soup（原始湯）描述生命起源時的地球環境。",
+      "derivatives": []
+    },
+    {
+      "id": "primate",
+      "word": "primate",
+      "phonetic": "ˈpraɪmet",
+      "zh": "靈長類動物",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Monkeys, apes and humans are all primates.",
+      "example_zh": "猴子、猿與人類都屬於靈長類動物。",
+      "draft": false,
+      "prefixId": "prim",
+      "parts": [
+        {
+          "text": "prim",
+          "gloss": "第一"
+        }
+      ],
+      "etymology": "教會義約 1200 年出現，源自古法文 primat、中世紀拉丁文 primatem，來自後期拉丁形容詞 primas（「首位的」），根源仍是 primus（「第一」）。動物學義遲至 1876 年才出現，直接借自林奈（Linnæus）所訂的現代拉丁分類名 Primates（primas 的複數），因林奈認為此目是「最高等」的哺乳類（原本還包含蝙蝠），「第一／首位」之義因此轉化為生物分類上的「最高等」。",
+      "derivatives": []
+    },
+    {
+      "id": "invaluable",
+      "word": "invaluable",
+      "phonetic": "ɪnˈvæljəbəl",
+      "zh": "無價的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Your support has been invaluable to me.",
+      "example_zh": "你的支持對我而言是無價的。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "不"
+        },
+        {
+          "text": "valu(e)",
+          "gloss": "價值"
+        }
+      ],
+      "etymology": "1570 年代由 in-（不）＋ value（估價）構成，本義「高到無法估定價值」，故 invaluable 指「珍貴無價」而非「無價值」。1630 年代雖一度因 in- 的否定義被誤用為「無價值」，但「珍貴無價」才是沿用至今的主流語意。",
+      "derivatives": []
+    },
+    {
+      "id": "avail",
+      "word": "avail",
+      "phonetic": "əˈvel",
+      "zh": "利用；用處，利益",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You really should avail yourself of this rare opportunity.",
+      "example_zh": "你真的應該好好利用這個難得的機會。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "a",
+          "gloss": "向、朝"
+        },
+        {
+          "text": "vail",
+          "gloss": "值、強"
+        }
+      ],
+      "etymology": "約 1300 年源自古法語 a-（源自拉丁 ad-「向」）＋ vaill-（valoir「值」的詞幹，源自拉丁 valere「強、值」），本義「有助益、有效用」。",
+      "derivatives": []
+    },
+    {
+      "id": "available",
+      "word": "available",
+      "phonetic": "əˈveləbəl",
+      "zh": "可取得的，有供應的，有售的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The manager is presiding over a meeting and is not available right now.",
+      "example_zh": "經理正在主持會議，現在沒有空。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "avail",
+          "gloss": "有效用"
+        }
+      ],
+      "etymology": "15 世紀中由 avail 加 -able 構成，原意「有效力的、有效用的」，直到 1827 年才轉為現代「可取得、可利用」之義。",
+      "derivatives": [
+        {
+          "word": "availability",
+          "pos": "n.",
+          "zh": "可取得，有供應"
+        }
+      ]
+    },
+    {
+      "id": "valiant",
+      "word": "valiant",
+      "phonetic": "ˈvæliənt",
+      "zh": "英勇的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The losing team made a valiant attempt to get even.",
+      "example_zh": "落後的那一隊做了英勇的嘗試，想扳平比數。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "vali",
+          "gloss": "強、勇敢"
+        }
+      ],
+      "etymology": "14 世紀初經古法語 vaillant 源自拉丁文 valere「強、值、健」，本義「勇敢的、強壯的」。",
+      "derivatives": [
+        {
+          "word": "valor",
+          "pos": "n.",
+          "zh": "英勇"
+        },
+        {
+          "word": "valorous",
+          "pos": "a.",
+          "zh": "英勇的"
+        }
+      ]
+    },
+    {
+      "id": "convalescence",
+      "word": "convalescence",
+      "phonetic": "ˌkɑnvəˈlɛsəns",
+      "zh": "康復，療養",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "During convalescence, the patient needs plenty of nutritious food and a lot of rest.",
+      "example_zh": "療養期間，病人需要充足的營養食物與大量的休息。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "強調"
+        },
+        {
+          "text": "val",
+          "gloss": "轉強"
+        }
+      ],
+      "etymology": "15 世紀晚期經法文 convalescence 源自晚期拉丁文 convalescentia，由 com-（此處為強調字首）＋ valescere「開始變強」（valere「強」的起始動詞形）構成，指「病後逐漸恢復體力」的過程。",
+      "derivatives": [
+        {
+          "word": "convalesce",
+          "pos": "v.",
+          "zh": "康復，療養"
+        }
+      ]
+    },
+    {
+      "id": "devalue",
+      "word": "devalue",
+      "phonetic": "diˈvælju",
+      "zh": "貶值",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government plans to devalue the currency to stimulate exports.",
+      "example_zh": "政府打算讓貨幣貶值以刺激出口。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "向下、去除"
+        },
+        {
+          "text": "value",
+          "gloss": "價值"
+        }
+      ],
+      "etymology": "1918 年由 devaluation 反構（back-formation）而成。devaluation＝de-（向下）＋valuation（估價，源自 value < 拉丁 valere），原指「降低貨幣或事物的價值」。",
+      "derivatives": [
+        {
+          "word": "devaluation",
+          "pos": "n.",
+          "zh": "貶值"
+        }
+      ]
+    },
+    {
+      "id": "equivalent",
+      "word": "equivalent",
+      "phonetic": "ɪˈkwɪvələnt",
+      "zh": "等值的（東西）",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "One inch is equivalent to 2.54 centimeters.",
+      "example_zh": "一英寸等於二點五四公分。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "equi",
+          "gloss": "相等"
+        },
+        {
+          "text": "val",
+          "gloss": "值、強"
+        }
+      ],
+      "etymology": "15 世紀初源自晚期拉丁文 aequivalentem，由 aequus「相等」＋ valere「值、強」構成，本義「價值或效力相等」。",
+      "derivatives": [
+        {
+          "word": "equivalence",
+          "pos": "n.",
+          "zh": "相等"
+        }
+      ]
+    },
+    {
+      "id": "evaluate",
+      "word": "evaluate",
+      "phonetic": "ɪˈvæljuˌet",
+      "zh": "評價，評估",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The manager has to evaluate each employee's performance at the end of the year.",
+      "example_zh": "經理必須在年底評估每位員工的表現。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "向外"
+        },
+        {
+          "text": "valu",
+          "gloss": "價值"
+        }
+      ],
+      "etymology": "1831 年由 evaluation 反構或借自法文 évaluer，其中 é-（源自拉丁 ex-「出」）＋valuer（源自 valere「值、強」）。最初用於數學估算，後擴及一般「評估」之義。",
+      "derivatives": [
+        {
+          "word": "evaluation",
+          "pos": "n.",
+          "zh": "評價，評估"
+        }
+      ]
+    },
+    {
+      "id": "invalid",
+      "word": "invalid",
+      "phonetic": "ɪnˈvælɪd",
+      "zh": "無效的；殘廢",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The argument is invalid because the logic is flawed.",
+      "example_zh": "這個論證是無效的，因為它的邏輯有瑕疵。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "不"
+        },
+        {
+          "text": "valid",
+          "gloss": "強、有效"
+        }
+      ],
+      "etymology": "1630 年代源自拉丁文 invalidus，由 in-「不」＋validus「強」（PIE 字根 *wal-「強」）構成，本義「不具法律效力的」。1640 年代另發展出同源但重音不同的名詞義「傷殘者」。",
+      "derivatives": [
+        {
+          "word": "valid",
+          "pos": "a.",
+          "zh": "有效的"
+        },
+        {
+          "word": "validate",
+          "pos": "v.",
+          "zh": "證實有效"
+        },
+        {
+          "word": "invalidate",
+          "pos": "v.",
+          "zh": "使無效，證實無效"
+        }
+      ]
+    },
+    {
+      "id": "prevalent",
+      "word": "prevalent",
+      "phonetic": "ˈprɛvələnt",
+      "zh": "盛行的，流行的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The disease is prevalent among tropical countries.",
+      "example_zh": "這種疾病在熱帶國家很盛行。",
+      "draft": false,
+      "prefixId": "val",
+      "parts": [
+        {
+          "text": "pre",
+          "gloss": "在前、先"
+        },
+        {
+          "text": "val",
+          "gloss": "強、有力"
+        }
+      ],
+      "etymology": "15 世紀初源自拉丁文 praevalentem（praevalere 的現在分詞），由 prae「先、前」＋valere「強、有力」構成，原意「掌權、支配的」，17 世紀中葉後轉為「普遍存在的」。",
+      "derivatives": [
+        {
+          "word": "prevalence",
+          "pos": "n.",
+          "zh": "盛行，流行"
+        },
+        {
+          "word": "prevail",
+          "pos": "v.",
+          "zh": "勝出，佔上風"
+        }
+      ]
+    },
+    {
+      "id": "deign",
+      "word": "deign",
+      "phonetic": "den",
+      "zh": "屈就，俯允",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "If she deigns to reply to my letter, I will be extremely surprised.",
+      "example_zh": "如果她願意屈就回我的信，我會非常驚訝。",
+      "draft": false,
+      "prefixId": "dign",
+      "parts": [
+        {
+          "text": "deign",
+          "gloss": "值得"
+        }
+      ],
+      "etymology": "源自古法文 deignier 與拉丁文 dignari「認為值得」，其字根 dignus（值得的）可溯至原始印歐字根 *dek-（拿取、接受），16 世紀晚期起衍生出「屈尊俯就」之意。",
+      "derivatives": []
+    },
+    {
+      "id": "disdain",
+      "word": "disdain",
+      "phonetic": "dɪsˈden",
+      "zh": "蔑視，不屑；瞧不起",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He regarded their proposal with disdain.",
+      "example_zh": "他以輕蔑的態度看待他們的提案。",
+      "draft": false,
+      "prefixId": "dign",
+      "parts": [
+        {
+          "text": "dis",
+          "gloss": "不、相反"
+        },
+        {
+          "text": "dain",
+          "gloss": "值得"
+        }
+      ],
+      "etymology": "源自古法文 desdeignier，由 des-（相反）＋ deignier（視為值得）組成，deignier 源自拉丁文 dignari，其字根為 dignus（值得的）。",
+      "derivatives": [
+        {
+          "word": "disdainful",
+          "pos": "a.",
+          "zh": "輕蔑的，瞧不起的"
+        }
+      ]
+    },
+    {
+      "id": "condign",
+      "word": "condign",
+      "phonetic": "kənˈdaɪn",
+      "zh": "恰當的，合適的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Three years would be condign punishment for the crime.",
+      "example_zh": "三年對這項罪行來說會是恰當的刑罰。",
+      "draft": false,
+      "prefixId": "dign",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "完全、一起"
+        },
+        {
+          "text": "dign",
+          "gloss": "值得"
+        }
+      ],
+      "etymology": "源自古法文 condigne 與拉丁文 condignus「完全值得的」，由 con-（一起、完全）＋ dignus（值得的）組成，約 1700 年後詞義窄化為專指「（懲罰）罪有應得」。",
+      "derivatives": []
+    },
+    {
+      "id": "dignified",
+      "word": "dignified",
+      "phonetic": "ˈdɪgnɪfaɪd",
+      "zh": "有尊嚴的，莊嚴的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The general surrendered in a dignified manner.",
+      "example_zh": "那位將軍以有尊嚴的方式投降。",
+      "draft": false,
+      "prefixId": "dign",
+      "parts": [
+        {
+          "text": "dign",
+          "gloss": "值得"
+        }
+      ],
+      "etymology": "為動詞 dignify 的過去分詞，dignify 源自古法文 dignefiier 與中世紀拉丁文 dignificare「使值得」，由拉丁文 dignus（值得的）＋ -ficare（使、做，源自 facere）組成。",
+      "derivatives": [
+        {
+          "word": "dignity",
+          "pos": "n.",
+          "zh": "尊嚴"
+        }
+      ]
+    },
+    {
+      "id": "indignant",
+      "word": "indignant",
+      "phonetic": "ɪnˈdɪgnənt",
+      "zh": "憤怒的，忿忿不平的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The wife became indignant at the accusation.",
+      "example_zh": "這位妻子對這項指控感到忿忿不平。",
+      "draft": false,
+      "prefixId": "dign",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "不、非"
+        },
+        {
+          "text": "dign",
+          "gloss": "值得"
+        }
+      ],
+      "etymology": "源自拉丁文 indignantem（indignari 的現在分詞），意為「因視為不值得而憤慨、不悅」，indignari 由 in-（不）＋ dignus（值得的）組成。",
+      "derivatives": [
+        {
+          "word": "indignation",
+          "pos": "n.",
+          "zh": "憤怒"
+        }
+      ]
+    },
+    {
+      "id": "fort",
+      "word": "fort",
+      "phonetic": "fɔrt",
+      "zh": "堡壘，要塞",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The military fort gradually developed into a city.",
+      "example_zh": "這座軍事堡壘逐漸發展成一座城市。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "fort",
+          "gloss": "強、堅固"
+        }
+      ],
+      "etymology": "15 世紀中期源自古法語 fort（堡壘。強壯的人，原為形容詞「強壯的」），承自拉丁文 fortis「強壯的、堅定的、勇敢的」。",
+      "derivatives": [
+        {
+          "word": "fortress",
+          "pos": "n.",
+          "zh": "堡壘，要塞"
+        }
+      ]
+    },
+    {
+      "id": "fortify",
+      "word": "fortify",
+      "phonetic": "ˈfɔrtəˌfaɪ",
+      "zh": "加強，增強",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In the baby formula, milk is fortified with more than a dozen nutrients.",
+      "example_zh": "在嬰兒配方奶粉裡，牛奶被強化添加了十幾種營養素。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "fort",
+          "gloss": "強"
+        },
+        {
+          "text": "-fy",
+          "gloss": "使成為"
+        }
+      ],
+      "etymology": "源自古法語 fortifiier 與晚期拉丁文 fortificare，由拉丁文 fortis「強」+ facere「做、使」的組合形式構成，原意為加固城牆、使堅固，後引申出精神上的堅強與強化之意。",
+      "derivatives": [
+        {
+          "word": "fortification",
+          "pos": "n.",
+          "zh": "增強；防禦工事"
+        }
+      ]
+    },
+    {
+      "id": "enforcement",
+      "word": "enforcement",
+      "phonetic": "ɪnˈfɔrsmənt",
+      "zh": "強制執行",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Policemen are law enforcement officers.",
+      "example_zh": "警察是執法人員。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "en",
+          "gloss": "使入"
+        },
+        {
+          "text": "forc",
+          "gloss": "力量、強"
+        }
+      ],
+      "etymology": "源自古法語 enforcier，由 en-「使」+ force「力量」構成。force 經古法語承自通俗拉丁文 *fortia，源自拉丁文 fortis「強」，故 enforcement 的核心語意仍是「施力、強制」。",
+      "derivatives": [
+        {
+          "word": "enforce",
+          "pos": "v.",
+          "zh": "強制執行"
+        }
+      ]
+    },
+    {
+      "id": "forte",
+      "word": "forte",
+      "phonetic": "ˈfɔrte",
+      "zh": "強音，強項，拿手項目",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Math is my forte, but English is my Achilles' heel.",
+      "example_zh": "數學是我的強項，英文則是我的罩門。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "forte",
+          "gloss": "強。強項"
+        }
+      ],
+      "etymology": "「強項」義於 1640 年代源自法語 fort「（劍刃）最堅硬處。強項」，18 世紀加上字尾 -e 仿義大利文拼法。音樂術語「強、大聲」則是直接借自義大利文 forte「強」。兩義最終都承自拉丁文 fortis「強」。",
+      "derivatives": []
+    },
+    {
+      "id": "fortitude",
+      "word": "fortitude",
+      "phonetic": "ˈfɔrtɪˌtud",
+      "zh": "堅忍，堅毅",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The orphans demonstrated admirable fortitude and learned to support themselves.",
+      "example_zh": "這些孤兒展現出令人欽佩的堅毅，學會了自食其力。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "fort",
+          "gloss": "強"
+        }
+      ],
+      "etymology": "源自拉丁文 fortitudo「力量、剛毅、勇氣」，由 fortis「強、勇敢」衍生而來。14 世紀晚期先指道德上的剛毅（樞德之一），15 世紀初擴及身體上的強健。",
+      "derivatives": []
+    },
+    {
+      "id": "reinforce",
+      "word": "reinforce",
+      "phonetic": "ˌriɪnˈfɔrs",
+      "zh": "加強，增援",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The general decided to reinforce the troops with 2,000 new men.",
+      "example_zh": "將軍決定用兩千名新兵去增援部隊。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再、又"
+        },
+        {
+          "text": "in",
+          "gloss": "使入"
+        },
+        {
+          "text": "forc",
+          "gloss": "力量、強"
+        }
+      ],
+      "etymology": "約 1600 年由 re-「再」+ inforce（enforce 的變體，意為「施力。使堅固」）構成。enforce 源自古法語 enforcier（en- + force），force 又承自拉丁文 fortis「強」。Etymonline 指出 rein- 已與原本的 enforce 脫鉤，現在幾乎不作「再次施行」解。",
+      "derivatives": [
+        {
+          "word": "reinforcement",
+          "pos": "n.",
+          "zh": "加強，援軍"
+        }
+      ]
+    },
+    {
+      "id": "fortuitous",
+      "word": "fortuitous",
+      "phonetic": "fɔrˈtuətəs",
+      "zh": "偶然的，幸運的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The collapse of its rival was a fortuitous opportunity for the company.",
+      "example_zh": "對手的垮台對這家公司來說是個幸運的機會。",
+      "draft": false,
+      "prefixId": "forc",
+      "parts": [
+        {
+          "text": "fortu",
+          "gloss": "偶然、運氣"
+        }
+      ],
+      "etymology": "1650 年代源自拉丁文 fortuitus「偶然發生的、非刻意的」，來自 fors「機運、偶然」的奪格 forte（義為「憑機運」），與 fortuna「命運」同源。Etymonline 特別指出此字原意是「意外的、非刻意的」而非「幸運的」。",
+      "derivatives": [
+        {
+          "word": "fortune",
+          "pos": "n.",
+          "zh": "命運，幸運"
+        }
+      ]
+    },
+    {
+      "id": "dynamic",
+      "word": "dynamic",
+      "phonetic": "daɪˈnæmɪk",
+      "zh": "有活力的，能量強的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Our top salesperson has a dynamic personality.",
+      "example_zh": "我們的頂尖業務員有著充滿活力的個性。",
+      "draft": false,
+      "prefixId": "dynam",
+      "parts": [
+        {
+          "text": "dynam",
+          "gloss": "力量"
+        }
+      ],
+      "etymology": "1812 年經由法文 dynamique 進入英文（該詞由德國數學家萊布尼茲於 1691 年提出），源自希臘文 dynamikos「有力量的」，其構詞來自 dynamis「力量」與 dynasthai「能夠、有力量」，此希臘字根的更早起源不明。",
+      "derivatives": [
+        {
+          "word": "dynamics",
+          "pos": "n.",
+          "zh": "力學"
+        },
+        {
+          "word": "dynamo",
+          "pos": "n.",
+          "zh": "發電機，活力旺盛者"
+        }
+      ]
+    },
+    {
+      "id": "dynamite",
+      "word": "dynamite",
+      "phonetic": "ˈdaɪnəˌmaɪt",
+      "zh": "炸藥；炸",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The issue of unemployment is political dynamite.",
+      "example_zh": "失業問題是政治上的一顆炸藥。",
+      "draft": false,
+      "prefixId": "dynam",
+      "parts": [
+        {
+          "text": "dynam",
+          "gloss": "力量"
+        }
+      ],
+      "etymology": "1867 年由發明此炸藥的瑞典化學家 Alfred Nobel 所創，源自瑞典文 dynamit，結合希臘文 dynamis「力量」（同 dynamic 字根）與源自法文、表化學鹽類的字尾-ite。",
+      "derivatives": []
+    },
+    {
+      "id": "dynasty",
+      "word": "dynasty",
+      "phonetic": "ˈdaɪnəstɪ",
+      "zh": "朝代",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Chinese power was ascendant in the Han dynasty.",
+      "example_zh": "中國的國力在漢朝時達到鼎盛。",
+      "draft": false,
+      "prefixId": "dynam",
+      "parts": [
+        {
+          "text": "dynas",
+          "gloss": "統治者"
+        }
+      ],
+      "etymology": "15 世紀中期經中世紀拉丁文 dynastia，源自希臘文 dynasteia「權力、統治權、統治地位」（源自名詞 dynastes「統治者、首領」），兩者皆出自動詞 dynasthai「能夠、有力量」，其更早起源不明。",
+      "derivatives": [
+        {
+          "word": "dynastic",
+          "pos": "a.",
+          "zh": "朝代的"
+        }
+      ]
     }
   ]
 }

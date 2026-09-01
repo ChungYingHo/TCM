@@ -1,0 +1,98 @@
+[
+  {
+    "word": "negative",
+    "parts": [
+      { "text": "neg", "gloss": "否定、說不" }
+    ],
+    "etymology": "源自拉丁文 negare「拒絕、說不」（可溯至原始印歐語 *ne-「不」），經古法文 negatif 演變出「表示否定」之意，17世紀後才擴及代數與電學的「負」義。",
+    "us_ipa": "/ˈnɛɡ.ə.tɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/negative",
+    "notes": "陷阱提醒：Etymonline 將 negare（拒絕/說不）、nihil（無）、nullus（一個都沒有）視為三個各自獨立的拉丁字，並非同一詞根的變化形；三者的否定成分雖都可回溯到原始印歐語 *ne-「不」，屬遠親同源，但教材把 neg/nil/nul 併作同一組「字根」是簡化整理，嚴格說是三個不同的字。"
+  },
+  {
+    "word": "negligible",
+    "parts": [
+      { "text": "neg", "gloss": "不" },
+      { "text": "lig", "gloss": "拿取、挑選" }
+    ],
+    "etymology": "源自拉丁文 neglegere（nec「不」＋legere「拿取、挑選」）「不去理會、不去挑起」之意，1819年加上 -ible 定型為「可被忽略、無關緊要」。",
+    "us_ipa": "/ˈnɛɡlɪdʒɪbəl/",
+    "etymonline_url": "https://www.etymonline.com/word/negligible",
+    "notes": "此字的 neg- 實際來自否定詞 nec「不」，與 negative／renegade／renege 的 neg-（源自動詞 negare「拒絕」）是不同的拉丁詞素，只是同樣帶「不」義；教材標「neg(not)」已正確與 negative 的「neg(deny)」區分。leg 根確認＝legere「拿取、挑選」，因母音變化在字中拼作 lig。"
+  },
+  {
+    "word": "negligent",
+    "parts": [
+      { "text": "neg", "gloss": "不" },
+      { "text": "lig", "gloss": "拿取、挑選" }
+    ],
+    "etymology": "與 negligible 同源於拉丁文 neglegere（nec「不」＋legere「拿取、挑選」），其分詞 neglegens 原指「粗心、不上心」的人，14世紀晚期進入英文後仍作「疏忽、玩忽職守」解。",
+    "us_ipa": "/ˈnɛɡ.lɪ.dʒənt/",
+    "etymonline_url": "https://www.etymonline.com/word/negligent",
+    "notes": "同 negligible，此字的 neg- 亦源自否定詞 nec「不」而非動詞 negare，leg 根確認＝legere「拿取、挑選」（拼作 lig）。"
+  },
+  {
+    "word": "annihilate",
+    "parts": [
+      { "text": "an", "gloss": "朝向（ad- 同化）" },
+      { "text": "nihil", "gloss": "無、什麼都沒有" }
+    ],
+    "etymology": "源自中古拉丁文 annihilare，由 ad-（同化為 an-，「朝向」）＋nihil「無、什麼都沒有」組成，字面義「化為烏有」，即「徹底消滅」。",
+    "us_ipa": "/əˈnaɪ.ə.leɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/annihilate",
+    "notes": ""
+  },
+  {
+    "word": "nihilistic",
+    "parts": [
+      { "text": "nihil", "gloss": "無、什麼都沒有" }
+    ],
+    "etymology": "詞根 nihil「無」先於19世紀初由德國哲學家雅可比造出 Nihilismus（否定一切的學說），nihilistic 即由此衍生的 nihilism/nihilist 家族形容詞。",
+    "us_ipa": "/ˈnaɪ.(h)ɪl.ɪs.tɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/nihilism",
+    "notes": "Etymonline『nihilistic』頁面本身抓取失敗（重試一次仍只回傳頁首/頁尾，無正文），改以『nihilism』條目確認字源，該條目明確列出 nihilistic 為 nihilism/nihilist 家族的形容詞衍生詞。發音方面，Wiktionary『nihilistic』條目只標示 (UK) 發音 /ˈnaɪ.(h)ɪl.ɪs.tɪk/、/ˈniː.ɪl.ɪs.tɪk/，未見獨立標示美式發音；因同字族『nihilist』條目的 (General American) 發音重音位置與此一致（重音同在第一音節），故沿用此形式代表美式發音，特此註明非直接取自標示為 US 的條目。"
+  },
+  {
+    "word": "nil",
+    "parts": [
+      { "text": "nil", "gloss": "無、零" }
+    ],
+    "etymology": "1833年進入英文，是拉丁文 nihil（更早作 nihilum）的縮寫，nihilum 本身由 ne-「不」＋hilum「瑣屑之物」組成。",
+    "us_ipa": "/nɪl/",
+    "etymonline_url": "https://www.etymonline.com/word/nil",
+    "notes": ""
+  },
+  {
+    "word": "nullify",
+    "parts": [
+      { "text": "null", "gloss": "無、一個都沒有" },
+      { "text": "fy", "gloss": "使成為、做成" }
+    ],
+    "etymology": "源自後期拉丁文 nullificare，由 nullus「一個都沒有」（ne-「不」＋ullus「任一個」）＋facere「做」組成，字面「使成無」，1590年代起專指法律上「使無效」。",
+    "us_ipa": "/ˈnʌlɪfaɪ/",
+    "etymonline_url": "https://www.etymonline.com/word/nullify",
+    "notes": "此字的 null- 源自拉丁文 nullus（ne-「不」＋ullus「任一個」），與 negare、nihil 各自是獨立的拉丁字，僅在更早的原始印歐語 *ne-「不」層次同源，並非同一詞根直接衍生；-fy 已確認來自 facere「做」的組合形。"
+  },
+  {
+    "word": "renegade",
+    "parts": [
+      { "text": "re", "gloss": "再、回頭" },
+      { "text": "neg", "gloss": "否認、拒絕" }
+    ],
+    "etymology": "約1580年代經西班牙文 renegado 進入英文，源自中古拉丁文 renegare（re- 加強語氣＋negare「拒絕、否認」），原指「背棄信仰改宗之人」，17世紀後泛指「叛徒、變節者」。",
+    "us_ipa": "/ˈrɛnɪˌɡeɪd/",
+    "etymonline_url": "https://www.etymonline.com/word/renegade",
+    "notes": ""
+  },
+  {
+    "word": "renege",
+    "parts": [
+      { "text": "re", "gloss": "再、回頭" },
+      { "text": "neg", "gloss": "否認、拒絕" }
+    ],
+    "etymology": "1540年代源自中古拉丁文 renegare（re-＋negare「拒絕、否認」），原意「否認、背棄」，18世紀後語意窄化為美式常用的「反悔、食言」。",
+    "us_ipa": "/rɪˈnɛɡ/",
+    "etymonline_url": "https://www.etymonline.com/word/renege",
+    "notes": "Wiktionary 列出多個美式發音變體（/rɪˈnɛɡ/、/rɪˈnɪɡ/、/rɪˈneɪɡ/ 等），本表採第一個列出的 /rɪˈnɛɡ/ 為代表。"
+  }
+]

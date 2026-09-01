@@ -91,26 +91,44 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　26 張，估約 190 字　**轉錄中**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 6/29 組**
 
-| 進度 | 狀態 |
+照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
+卡在 Etymonline／IPA 查證，29 組只做完 6 組。
+
+| 部分 | 狀態 |
 | :--- | :--- |
-| 書頁 81–88（IMG_1696–1703）｜59 字｜9 個字根組 | **照片轉錄完成**，字表在 `pipeline/data/vocab_root_wordlist_b2.md` |
-| 書頁 89–106（IMG_1704–1721）｜18 張 | 待轉錄，從 IMG_1704 接 |
-| Etymonline／IPA 查證 | **全部未做**（59 字 ≈ 9 個 worker ≈ 0.8M tokens） |
-| 例句中譯、KK 轉寫、來源檔、上架 | 未做 |
+| 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
+| 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
+| 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
+| Etymonline／IPA 查證 | **6/29 組**（38 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 38 字（`vocab.json` 共 604 字） |
 
-已轉錄的 9 個字根組：neo/nov（新）、prim（第一）、val/vail（價值）、dign（價值）、
-forc/fort（強）、dur（硬、持久）、dynam（力）、potent（力）、salut/san（健康）、
-luc/lumin（光明）。
+**查證完成的 6 組**：neo、prim、val、dign、forc、dynam
 
-接手步驟：讀 `vocab_root_wordlist_b2.md` 看已轉錄到哪，從 IMG_1704 續讀，
-之後照 `/vocab` skill 第 2 步起走（worker 一批 3 個）。組裝腳本是
-scratchpad 的 `assemble_vocab_root.py`，把 `WORDLIST` 指向 b2 那份即可。
+**還沒查證的 23 組**（接手就從這裡派 worker，一批 3 個）：
 
-課本錯字（已在字表註記，用正確寫法）：
-- 書頁 81 innovation 的中文印成「格新」，正確是「革新」
-- 書頁 85 endure 的例句印成 "endure huger and pain"，正確是 hunger
+`dur` `potent` `salut` `luc` `grav` `lev` `stig` `acr` `punct` `sign` `cas` `fin`
+`term` `clud` `flu` `und` `cur` `fund` `lav` `spars` `enni` `chron` `journ`
+
+### 接手怎麼做
+
+1. worker 的 prompt 範本見 `/vocab` skill 附錄 E，字表在 `vocab_root_wordlist_b2.md`，
+   每組把該組的字照抄成固定清單，**不准增刪改字**。
+2. worker 把 JSON 寫到 `pipeline/data/vocab_verify/<group>.json`（這個目錄現在在 repo 裡，
+   不放 scratchpad，因為 Temp 會被清掉）。
+3. 收完跑 `python pipeline/assemble_vocab_root.py --b2 --write`，
+   再 `python pipeline/build_vocab_prefix.py`。
+4. 綠燈與 render 驗證照 AGENTS.md 驗法表。
+
+### 課本錯誤（字表都已註記並改用正確寫法）
+
+- 書頁 81 innovation 中文印「格新」，正確是「革新」
+- 書頁 85 endure 例句印 "endure huger and pain"，正確是 hunger
+- 書頁 100 redundant 一則三處印錯：redendancy、redanant organs、"we have ," 多逗號
+- 書頁 102 incursion 中文寫成「招致，蒙受」（那是 incur 的意思），正確是「侵入、襲擊」
+- 書頁 102 precursor 例句印 "SO is a precursor of acid rain"，正確是 SO₂
+- 書頁 102 confusion 中文印「混肴」，正確是「混淆」
 
 ### 還沒拿到的照片
 

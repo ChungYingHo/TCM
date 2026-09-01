@@ -1,0 +1,229 @@
+[
+  {
+    "word": "primary",
+    "prefixId": "prim",
+    "pos": "a., n.",
+    "phonetic": "ˈpraɪˌmɛrɪ",
+    "zh": "首要的，主要的；黨內初選",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "源自拉丁文 primarius（「首位的、主要的、卓越的」），來自 primus（「第一」）。15 世紀初進入英文原指「最早、最基本」，16 世紀後才發展出「首要、最高等」之義。",
+    "derivatives": [],
+    "example": "The primary responsibility of a manager is to lead her subordinates.",
+    "example_zh": "一位主管最首要的職責是帶領他的部屬。",
+    "sources": {
+      "page": "IMG_1696",
+      "etymonline": "https://www.etymonline.com/word/primary",
+      "ipa": "/ˈpɹaɪˌmɛɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "This cartoon uses mostly the three primary colors.",
+        "The winner in the primaries will be nominated as Presidential candidate."
+      ]
+    }
+  },
+  {
+    "word": "premier",
+    "prefixId": "prim",
+    "pos": "n., a.",
+    "phonetic": "prɪˈmɪər",
+    "zh": "總理；首屈一指的",
+    "parts": [
+      {
+        "text": "premi",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "源自古法文 premier（「第一、首要」），上溯拉丁文 primarius，再溯 primus（「第一」）。中世紀英文先作形容詞，1711 年才轉為名詞、作「首相」（premier minister 之簡稱）。",
+    "derivatives": [],
+    "example": "The French Premier and the British Prime Minister are having a summit soon.",
+    "example_zh": "法國總理與英國首相即將舉行高峰會。",
+    "sources": {
+      "page": "IMG_1696",
+      "etymonline": "https://www.etymonline.com/word/premier",
+      "ipa": "/pɹɪˈmɪəɹ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "字根在此字中拼為 premi- 而非 prim-（經古法文母音 i→e），仍與同組同源，非拼寫錯誤。",
+      "extraExamples": [
+        "The man is one of the world's premier (or premiere) chefs."
+      ]
+    }
+  },
+  {
+    "word": "premiere",
+    "prefixId": "prim",
+    "pos": "n., v., a.",
+    "phonetic": "prəˈmɪɚ",
+    "zh": "首演；首屈一指的",
+    "parts": [
+      {
+        "text": "premi",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "1889 年借自法文 première（premier 的陰性形式，見於 première représentation「首次公演」），同樣上溯拉丁 primarius、primus（「第一」），原指戲劇的「首演」。",
+    "derivatives": [],
+    "example": "I'm going to the world premiere of the new movie.",
+    "example_zh": "我要去看那部新電影的全球首映。",
+    "sources": {
+      "page": "IMG_1696",
+      "etymonline": "https://www.etymonline.com/word/premiere",
+      "ipa": "/pɹəˈmɪɚ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "字根在此字中拼為 premi- 而非 prim-（經法文陰性形式借入），仍與同組同源，非拼寫錯誤。",
+      "extraExamples": [
+        "The new movie is going to premiere tonight."
+      ]
+    }
+  },
+  {
+    "word": "prime",
+    "prefixId": "prim",
+    "pos": "a., n.",
+    "phonetic": "praɪm",
+    "zh": "主要的，最好的；全盛期，巔峰狀態",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "源自古法文 prime、拉丁文 primus（「第一、原本的」），14 世紀晚期進入英文，本義「第一、最初」，後衍生「最優等」「質數」「本初子午線」等義。",
+    "derivatives": [],
+    "example": "The prime suspect of the murder investigation turned out to be innocent.",
+    "example_zh": "這樁謀殺案調查中的頭號嫌犯，結果是無辜的。",
+    "sources": {
+      "page": "IMG_1697",
+      "etymonline": "https://www.etymonline.com/word/prime",
+      "ipa": "/pɹaɪm/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "This talk show is on prime-time TV.",
+        "At 23, the rock climber is in her prime."
+      ]
+    }
+  },
+  {
+    "word": "primeval",
+    "prefixId": "prim",
+    "pos": "a.",
+    "phonetic": "praɪˈmivəl",
+    "zh": "太古的，原始的",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      },
+      {
+        "text": "ev",
+        "gloss": "時代、年歲"
+      }
+    ],
+    "etymology": "1650 年代出現的形容詞，源自拉丁文 primaevus（「早年的、年輕的」），由 primus（「第一」）＋ aevum（「時代、年歲」）組成，字面即「屬於最初時代」。",
+    "derivatives": [],
+    "example": "Many rare animals live in these primeval forests.",
+    "example_zh": "許多稀有動物棲息在這些太古森林裡。",
+    "sources": {
+      "page": "IMG_1697",
+      "etymonline": "https://www.etymonline.com/word/primeval",
+      "ipa": "/pɹaɪˈmivəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "primitive",
+    "prefixId": "prim",
+    "pos": "a., n.",
+    "phonetic": "ˈprɪmɪtɪv",
+    "zh": "原始的，簡陋的；原始人",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "14 世紀晚期經古法文 primitif 借自拉丁文 primitivus（「最早、原初的」），源出 primitus（「起初」）、primus（「第一」）。1680 年代起衍生「風格古樸」之義，1895 年進入人類學指「停留於簡單發展階段的文化」。",
+    "derivatives": [],
+    "example": "Humans in the Paleolithic Age used primitive tools.",
+    "example_zh": "舊石器時代的人類使用原始的工具。",
+    "sources": {
+      "page": "IMG_1697",
+      "etymonline": "https://www.etymonline.com/word/primitive",
+      "ipa": "/ˈpɹɪmɪtɪv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "There are still primitives isolated in remote areas of the modern world."
+      ]
+    }
+  },
+  {
+    "word": "primordial",
+    "prefixId": "prim",
+    "pos": "a.",
+    "phonetic": "praɪˈmɔrdiəl",
+    "zh": "原始的，洪荒的",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      },
+      {
+        "text": "ord",
+        "gloss": "開始、次序"
+      }
+    ],
+    "etymology": "14 世紀晚期源自後期拉丁文 primordialis（「最原初的」），由拉丁 primus（「第一」）＋ ordiri（「開始」，與 ordo「行列、次序」同源）組成。1934 年 J.B.S. Haldane 提出 primordial soup（原始湯）描述生命起源時的地球環境。",
+    "derivatives": [],
+    "example": "Many scientists believe that life originated in primordial oceans.",
+    "example_zh": "許多科學家相信生命起源於原始的海洋。",
+    "sources": {
+      "page": "IMG_1697",
+      "etymonline": "https://www.etymonline.com/word/primordial",
+      "ipa": "/pɹaɪˈmɔɹdiəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "primate",
+    "prefixId": "prim",
+    "pos": "n.",
+    "phonetic": "ˈpraɪmet",
+    "zh": "靈長類動物",
+    "parts": [
+      {
+        "text": "prim",
+        "gloss": "第一"
+      }
+    ],
+    "etymology": "教會義約 1200 年出現，源自古法文 primat、中世紀拉丁文 primatem，來自後期拉丁形容詞 primas（「首位的」），根源仍是 primus（「第一」）。動物學義遲至 1876 年才出現，直接借自林奈（Linnæus）所訂的現代拉丁分類名 Primates（primas 的複數），因林奈認為此目是「最高等」的哺乳類（原本還包含蝙蝠），「第一／首位」之義因此轉化為生物分類上的「最高等」。",
+    "derivatives": [],
+    "example": "Monkeys, apes and humans are all primates.",
+    "example_zh": "猴子、猿與人類都屬於靈長類動物。",
+    "sources": {
+      "page": "IMG_1697",
+      "etymonline": "https://www.etymonline.com/word/primate",
+      "ipa": "/ˈpɹaɪmeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "word": "primary",
+    "parts": [
+      { "text": "prim", "gloss": "第一" }
+    ],
+    "etymology": "源自拉丁文 primarius（「首位的、主要的、卓越的」），來自 primus（「第一」）；15世紀初進入英文原指「最早、最基本」，16世紀後才發展出「首要、最高等」之義。",
+    "us_ipa": "/ˈpɹaɪˌmɛɹi/",
+    "etymonline_url": "https://www.etymonline.com/word/primary",
+    "notes": ""
+  },
+  {
+    "word": "premier",
+    "parts": [
+      { "text": "premi", "gloss": "第一" }
+    ],
+    "etymology": "源自古法文 premier（「第一、首要」），上溯拉丁文 primarius，再溯 primus（「第一」）；中世紀英文先作形容詞，1711年才轉為名詞、作「首相」（premier minister 之簡稱）。",
+    "us_ipa": "/pɹɪˈmɪəɹ/",
+    "etymonline_url": "https://www.etymonline.com/word/premier",
+    "notes": "字根在此字中拼為 premi- 而非 prim-（經古法文母音 i→e），仍與同組同源，非拼寫錯誤。"
+  },
+  {
+    "word": "premiere",
+    "parts": [
+      { "text": "premi", "gloss": "第一" }
+    ],
+    "etymology": "1889年借自法文 première（premier 的陰性形式，見於 première représentation「首次公演」），同樣上溯拉丁 primarius、primus（「第一」），原指戲劇的「首演」。",
+    "us_ipa": "/pɹəˈmɪɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/premiere",
+    "notes": "字根在此字中拼為 premi- 而非 prim-（經法文陰性形式借入），仍與同組同源，非拼寫錯誤。"
+  },
+  {
+    "word": "prime",
+    "parts": [
+      { "text": "prim", "gloss": "第一" }
+    ],
+    "etymology": "源自古法文 prime、拉丁文 primus（「第一、原本的」），14世紀晚期進入英文，本義「第一、最初」，後衍生「最優等」「質數」「本初子午線」等義。",
+    "us_ipa": "/pɹaɪm/",
+    "etymonline_url": "https://www.etymonline.com/word/prime",
+    "notes": ""
+  },
+  {
+    "word": "primeval",
+    "parts": [
+      { "text": "prim", "gloss": "第一" },
+      { "text": "ev", "gloss": "時代、年歲" }
+    ],
+    "etymology": "1650年代出現的形容詞，源自拉丁文 primaevus（「早年的、年輕的」），由 primus（「第一」）＋ aevum（「時代、年歲」）組成，字面即「屬於最初時代」。",
+    "us_ipa": "/pɹaɪˈmivəl/",
+    "etymonline_url": "https://www.etymonline.com/word/primeval",
+    "notes": ""
+  },
+  {
+    "word": "primitive",
+    "parts": [
+      { "text": "prim", "gloss": "第一" }
+    ],
+    "etymology": "14世紀晚期經古法文 primitif 借自拉丁文 primitivus（「最早、原初的」），源出 primitus（「起初」）、primus（「第一」）；1680年代起衍生「風格古樸」之義，1895年進入人類學指「停留於簡單發展階段的文化」。",
+    "us_ipa": "/ˈpɹɪmɪtɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/primitive",
+    "notes": ""
+  },
+  {
+    "word": "primordial",
+    "parts": [
+      { "text": "prim", "gloss": "第一" },
+      { "text": "ord", "gloss": "開始、次序" }
+    ],
+    "etymology": "14世紀晚期源自後期拉丁文 primordialis（「最原初的」），由拉丁 primus（「第一」）＋ ordiri（「開始」，與 ordo「行列、次序」同源）組成；1934年 J.B.S. Haldane 提出 primordial soup（原始湯）描述生命起源時的地球環境。",
+    "us_ipa": "/pɹaɪˈmɔɹdiəl/",
+    "etymonline_url": "https://www.etymonline.com/word/primordial",
+    "notes": ""
+  },
+  {
+    "word": "primate",
+    "parts": [
+      { "text": "prim", "gloss": "第一" }
+    ],
+    "etymology": "教會義約1200年出現，源自古法文 primat、中世紀拉丁文 primatem，來自後期拉丁形容詞 primas（「首位的」），根源仍是 primus（「第一」）；動物學義遲至1876年才出現，直接借自林奈（Linnæus）所訂的現代拉丁分類名 Primates（primas 的複數），因林奈認為此目是「最高等」的哺乳類（原本還包含蝙蝠），「第一／首位」之義因此轉化為生物分類上的「最高等」。",
+    "us_ipa": "/ˈpɹaɪmeɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/primate",
+    "notes": ""
+  }
+]

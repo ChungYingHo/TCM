@@ -1,0 +1,56 @@
+[
+  {
+    "word": "symmetry",
+    "parts": [
+      { "text": "sym-", "gloss": "共同、一起" },
+      { "text": "metr", "gloss": "測量" }
+    ],
+    "etymology": "symmetry 源自希臘文 symmetros（syn-「共同」+ metron「測量」），16世紀經法文 symmétrie、拉丁文 symmetria 傳入英文，本義是「各部分成比例」，後來發展成「勻稱、對稱」之意，19世紀再衍生出「以中線為準的鏡像對稱」這種科學用法。",
+    "us_ipa": "/ˈsɪm.ɪ.tɹi/",
+    "etymonline_url": "https://www.etymonline.com/word/symmetry",
+    "notes": ""
+  },
+  {
+    "word": "perimeter",
+    "parts": [
+      { "text": "peri-", "gloss": "環繞、周圍" },
+      { "text": "meter", "gloss": "測量" }
+    ],
+    "etymology": "perimeter 源自希臘文 perimetron「周長」（peri-「環繞」+ metron「測量」），15世紀經拉丁文 perimetros 傳入英文，本義是「圖形外圍的周長、邊界」，20世紀中期才衍生出「防禦陣地外圍界線」的軍事用法。",
+    "us_ipa": "/pəˈɹɪm.ɪ.təɹ/",
+    "etymonline_url": "https://www.etymonline.com/word/perimeter",
+    "notes": ""
+  },
+  {
+    "word": "thermometer",
+    "parts": [
+      { "text": "thermo-", "gloss": "熱" },
+      { "text": "meter", "gloss": "測量" }
+    ],
+    "etymology": "thermometer 是耶穌會神父 Jean Leurechon 於1620年代用希臘文 thermos「熱」+ metron「測量」造出的法文 thermomètre，1630年代進入英文，字面意思是「量熱的工具」，即測量溫度的儀器。",
+    "us_ipa": "/θɚˈmɑ.mɪ.tɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/thermometer",
+    "notes": ""
+  },
+  {
+    "word": "immensely",
+    "parts": [
+      { "text": "im-", "gloss": "不、無" },
+      { "text": "mens", "gloss": "已測量的" }
+    ],
+    "etymology": "immensely 由 immense 加副詞字尾 -ly 於1650年代構成；immense 源自拉丁文 immensus（in-「不」+ mensus，動詞 metiri「測量」的過去分詞，同一個 PIE 字根 *me-「測量」，與希臘文 metron 同源），字面是「無法測量的」，引申為「巨大、極大」，immensely 即「極度地、非常」之意。",
+    "us_ipa": "/ɪˈmɛnsli/",
+    "etymonline_url": "https://www.etymonline.com/word/immensely",
+    "notes": ""
+  },
+  {
+    "word": "meticulous",
+    "parts": [
+      { "text": "meticul-", "gloss": "恐懼、懼怕" }
+    ],
+    "etymology": "meticulous 源自拉丁文 meticulosus／metuculosus「充滿恐懼的」，來自 metus「恐懼」（字源不明），1530年代進入英文時本義是「膽怯易驚」（此義現已過時），19世紀受法文 méticuleux 影響詞義轉為「拘謹講究」，到19世紀末才固定成現在「一絲不苟、極端仔細」的意思。",
+    "us_ipa": "/mɪˈtɪkjɪlɪs/, /mɪˈtɪkjuləs/",
+    "etymonline_url": "https://www.etymonline.com/word/meticulous",
+    "notes": "陷阱字：meticulous 與「測量」字根其實沒有關係，它源自拉丁文 metus「恐懼」（meticulosus 意為「充滿恐懼的」），課本可能因外形與 metr/meter 相近而誤將它歸入「測量」字群；正確的字根意義是「恐懼」，不是「測量」，與 symmetry／perimeter／thermometer／immensely 所屬的測量字群無關。"
+  }
+]

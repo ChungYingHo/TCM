@@ -1,0 +1,99 @@
+[
+  {
+    "word": "complement",
+    "parts": [
+      {"text": "com-", "gloss": "完全（加強語氣）"},
+      {"text": "ple", "gloss": "填滿"}
+    ],
+    "etymology": "源自拉丁文 complementum，由 com-（完全，加強語氣）加 plere（填滿）構成，字面意義是「使完整、填滿之物」；16世紀時衍生出「客套讚美」的用法，該義項後來拼法獨立成 compliment，complement 則專指「補足、使完整之物」，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），僅能靠拼法與語境分辨。",
+    "us_ipa": "/ˈkɑmpləmənt/",
+    "etymonline_url": "https://www.etymonline.com/word/complement",
+    "notes": ""
+  },
+  {
+    "word": "compliment",
+    "parts": [
+      {"text": "com-", "gloss": "完全（加強語氣）"},
+      {"text": "pli", "gloss": "填滿"}
+    ],
+    "etymology": "與 complement 同源，皆出自拉丁文 complementum（com- 完全 + plere 填滿），但 compliment 是經義大利文 complimento、法文 compliment 才轉入英文，17世紀中葉起專指「使人愉悅的客套話、讚美」（原意「用來完成禮貌義務之物」），與保留「補足、使完整」本義的 complement 從此分道揚鑣，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），只能靠拼法與語境分辨。",
+    "us_ipa": "/ˈkɑmpləmənt/",
+    "etymonline_url": "https://www.etymonline.com/word/compliment",
+    "notes": ""
+  },
+  {
+    "word": "supplement",
+    "parts": [
+      {"text": "sup-", "gloss": "由下而上、補足"},
+      {"text": "ple", "gloss": "填滿"}
+    ],
+    "etymology": "源自拉丁文 supplementum，來自動詞 supplere（sub- 由下而上、補足 + plere 填滿），字面意義是「由下方填補使滿之物」，14世紀末指「為補足缺漏而添加之物」，1560年代起特指為文獻補充內容而加的「補篇」。",
+    "us_ipa": "/ˈsʌpləmənt/",
+    "etymonline_url": "https://www.etymonline.com/word/supplement",
+    "notes": ""
+  },
+  {
+    "word": "implement",
+    "parts": [
+      {"text": "im-", "gloss": "進入"},
+      {"text": "ple", "gloss": "填滿"}
+    ],
+    "etymology": "源自晚期拉丁文 implementem（「填滿之事」），來自拉丁文 implere（in- 進入 + plere 填滿），本義是「填補需求之物」；名詞15世紀中先指「補足償還的款項」，1530年代轉指「工作所需的工具」，18世紀初蘇格蘭法律用語中另生出動詞「履行、實行」之意。",
+    "us_ipa": "/ˈɪmpləmənt/",
+    "etymonline_url": "https://www.etymonline.com/word/implement",
+    "notes": ""
+  },
+  {
+    "word": "deplete",
+    "parts": [
+      {"text": "de-", "gloss": "離開、去除"},
+      {"text": "plete", "gloss": "填滿"}
+    ],
+    "etymology": "1807年由 depletion 反構而來，源自拉丁文 deplere（de- 離開、去除 + plere 填滿），字面意義是「使不再填滿、抽空」，最初是醫學用語指以放血、瀉下等方式「抽乾」體液，1859年後才泛用於「耗盡資源」。",
+    "us_ipa": "/dɪˈplit/",
+    "etymonline_url": "https://www.etymonline.com/word/deplete",
+    "notes": ""
+  },
+  {
+    "word": "plenteous",
+    "parts": [
+      {"text": "plente", "gloss": "充滿、豐盛"}
+    ],
+    "etymology": "約1300年進入英文，源自古法文 plenteivous，其源頭是拉丁文 plenitas／plenitatem（豐滿、豐盛），本身即來自 plenus（充滿的）；plenteous 與 plenty 同源，但語感較典雅，多見於詩文而非日常口語。",
+    "us_ipa": "/ˈplɛntiəs/",
+    "etymonline_url": "https://www.etymonline.com/word/plenteous",
+    "notes": ""
+  },
+  {
+    "word": "plethora",
+    "parts": [
+      {"text": "pleth", "gloss": "充滿、過多"}
+    ],
+    "etymology": "源自希臘文 plēthōrē（豐滿、過多），來自動詞 plēthein（充滿），經晚期拉丁文 plethora 進入英文，1540年代原為醫學用語指「體液過多」，約1700年才泛指任何「過剩、過多」。",
+    "us_ipa": "/ˈplɛθərə/",
+    "etymonline_url": "https://www.etymonline.com/word/plethora",
+    "notes": "此字字根是希臘文（plēthōrē／plēthein），並非直接源自拉丁文 plere/plenus；不過 Etymonline 指出 plēthein 與拉丁文 plenus、plere 同源於原始印歐語根 *pele-（填滿），所以雖然語言路徑不同（希臘文而非拉丁文），仍與本組其他字同屬一個詞源家族。"
+  },
+  {
+    "word": "replenish",
+    "parts": [
+      {"text": "re-", "gloss": "再次（加強語氣）"},
+      {"text": "plen", "gloss": "充滿"}
+    ],
+    "etymology": "14世紀中葉源自古法文 replenir（「填滿」），本身來自拉丁文 plenus（充滿的），前綴 re- 原意「回到原處、再次」，在此作加強語氣（「反覆填滿」）；最初泛指「以食物、財富等填滿」，1610年代起專指「補充恢復到原本的量」。",
+    "us_ipa": "/rɪˈplɛnɪʃ/",
+    "etymonline_url": "https://www.etymonline.com/word/replenish",
+    "notes": ""
+  },
+  {
+    "word": "replete",
+    "parts": [
+      {"text": "re-", "gloss": "再次、完全地（加強語氣）"},
+      {"text": "plete", "gloss": "填滿"}
+    ],
+    "etymology": "14世紀末源自古法文 replet 與拉丁文 repletus（replere 的過去分詞），由 re-（加強語氣，「反覆填滿」）加 plere（填滿）構成，本義是「完全填滿、裝滿」，即形容「（被）填得滿滿的、飽足的」。",
+    "us_ipa": "/rɪˈplit/",
+    "etymonline_url": "https://www.etymonline.com/word/replete",
+    "notes": ""
+  }
+]

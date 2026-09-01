@@ -1,0 +1,98 @@
+[
+  {
+    "word": "dynamic",
+    "prefixId": "dynam",
+    "pos": "a.",
+    "phonetic": "daɪˈnæmɪk",
+    "zh": "有活力的，能量強的",
+    "parts": [
+      {
+        "text": "dynam",
+        "gloss": "力量"
+      }
+    ],
+    "etymology": "1812 年經由法文 dynamique 進入英文（該詞由德國數學家萊布尼茲於 1691 年提出），源自希臘文 dynamikos「有力量的」，其構詞來自 dynamis「力量」與 dynasthai「能夠、有力量」，此希臘字根的更早起源不明。",
+    "derivatives": [
+      {
+        "word": "dynamics",
+        "pos": "n.",
+        "zh": "力學"
+      },
+      {
+        "word": "dynamo",
+        "pos": "n.",
+        "zh": "發電機，活力旺盛者"
+      }
+    ],
+    "example": "Our top salesperson has a dynamic personality.",
+    "example_zh": "我們的頂尖業務員有著充滿活力的個性。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/dynamic",
+      "ipa": "/daɪˈnæm.ɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "dynamite",
+    "prefixId": "dynam",
+    "pos": "n., v.",
+    "phonetic": "ˈdaɪnəˌmaɪt",
+    "zh": "炸藥；炸",
+    "parts": [
+      {
+        "text": "dynam",
+        "gloss": "力量"
+      }
+    ],
+    "etymology": "1867 年由發明此炸藥的瑞典化學家 Alfred Nobel 所創，源自瑞典文 dynamit，結合希臘文 dynamis「力量」（同 dynamic 字根）與源自法文、表化學鹽類的字尾-ite。",
+    "derivatives": [],
+    "example": "The issue of unemployment is political dynamite.",
+    "example_zh": "失業問題是政治上的一顆炸藥。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/dynamite",
+      "ipa": "/ˈdaɪ.nəˌmaɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The rebels had dynamited the railway line."
+      ]
+    }
+  },
+  {
+    "word": "dynasty",
+    "prefixId": "dynam",
+    "pos": "n.",
+    "phonetic": "ˈdaɪnəstɪ",
+    "zh": "朝代",
+    "parts": [
+      {
+        "text": "dynas",
+        "gloss": "統治者"
+      }
+    ],
+    "etymology": "15 世紀中期經中世紀拉丁文 dynastia，源自希臘文 dynasteia「權力、統治權、統治地位」（源自名詞 dynastes「統治者、首領」），兩者皆出自動詞 dynasthai「能夠、有力量」，其更早起源不明。",
+    "derivatives": [
+      {
+        "word": "dynastic",
+        "pos": "a.",
+        "zh": "朝代的"
+      }
+    ],
+    "example": "Chinese power was ascendant in the Han dynasty.",
+    "example_zh": "中國的國力在漢朝時達到鼎盛。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/dynasty",
+      "ipa": "/ˈdaɪnəsti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "與 dynamic 同源：dynasty 的希臘字根 dynasteia／dynastes 皆溯自動詞 dynasthai（能夠、有力量），與 dynamic 的字根 dynamis 同出一源，並非各自獨立的詞根。教科書「lord/ruler」是此字根的引申義，非最終詞源。"
+    }
+  }
+]

@@ -1,0 +1,95 @@
+[
+  {
+    "word": "avoid",
+    "parts": [
+      { "text": "a-", "gloss": "出、離" },
+      { "text": "void", "gloss": "空的" }
+    ],
+    "etymology": "avoid 源自古法文 esvuidier（清空、掏空），由 es-（出）+ vuidier（使空）組成，vuidier 又來自 voide（空的），可追溯至拉丁文 vocivus（空著的、未被佔用的），與 vacare（空著）同源；字義由「清空、騰空」逐漸演變成「設法避開、迴避」。",
+    "us_ipa": "/əˈvɔɪd/",
+    "etymonline_url": "https://www.etymonline.com/word/avoid",
+    "notes": ""
+  },
+  {
+    "word": "vanish",
+    "parts": [
+      { "text": "van", "gloss": "空、消失" }
+    ],
+    "etymology": "vanish 源自古法文 esvanir，來自通俗拉丁文 *exvanire，本於拉丁文 evanescere（消失、逝去），由 ex-（出）+ vanescere（漸漸變空、消失）組成，而 vanescere 又源自形容詞 vanus（空的、空虛的）；字義由「變空」引申為「消失不見」。",
+    "us_ipa": "/ˈvænɪʃ/",
+    "etymonline_url": "https://www.etymonline.com/word/vanish",
+    "notes": ""
+  },
+  {
+    "word": "vacancy",
+    "parts": [
+      { "text": "vac", "gloss": "空" }
+    ],
+    "etymology": "vacancy 源自晚期拉丁文 vacantia，來自拉丁文 vacans（vacare 的現在分詞，意為「空著、未被佔用」）；字義由「空著的狀態」發展出「（職位、房間等）空缺、空房」之意。",
+    "us_ipa": "/ˈveɪkənsi/",
+    "etymonline_url": "https://www.etymonline.com/word/vacancy",
+    "notes": ""
+  },
+  {
+    "word": "evacuate",
+    "parts": [
+      { "text": "e-", "gloss": "出" },
+      { "text": "vacu", "gloss": "空" }
+    ],
+    "etymology": "evacuate 源自拉丁文 evacuare（清空、使無效）的過去分詞 evacuatus，由 ex-（出）+ vacuus（空的）組成；原本用於醫學上指排空體液，後延伸出軍事上「撤離」、以及現代「疏散（居民）」之意。",
+    "us_ipa": "/ɪˈvækjueɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/evacuate",
+    "notes": ""
+  },
+  {
+    "word": "evanescent",
+    "parts": [
+      { "text": "e-", "gloss": "出" },
+      { "text": "van", "gloss": "消失" }
+    ],
+    "etymology": "evanescent 源自拉丁文 evanescens（evanescere 的現在分詞），由 ex-（出，此處同化為 e-）+ vanescere（漸漸消失，本於 vanus「空的」的起始動詞）組成；字義為「逐漸變得難以察覺、逐漸消逝」。",
+    "us_ipa": "/ˌɛvəˈnɛsənt/",
+    "etymonline_url": "https://www.etymonline.com/word/evanescent",
+    "notes": ""
+  },
+  {
+    "word": "vacate",
+    "parts": [
+      { "text": "vac", "gloss": "空" }
+    ],
+    "etymology": "vacate 源自拉丁文 vacatus（vacare「空著」的過去分詞），原意為「使在法律上失效、宣告無效」，於 18 世紀末發展出「（人）離開、騰出某地」的現代用法。",
+    "us_ipa": "/veɪˈkeɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/vacate",
+    "notes": ""
+  },
+  {
+    "word": "vain",
+    "parts": [
+      { "text": "vain", "gloss": "空、虛" }
+    ],
+    "etymology": "vain 源自古法文 vain / vein（無價值的、空的、無效的，後亦有「自負的」之意），來自拉丁文 vanus（空的、空虛的，引申為「徒然的、無實質的」）；字義由「空洞、不實」演變出「徒然（in vain）」與「自負、虛榮」兩條意義路線。",
+    "us_ipa": "/veɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/vain",
+    "notes": ""
+  },
+  {
+    "word": "vacuum",
+    "parts": [
+      { "text": "vacu", "gloss": "空" }
+    ],
+    "etymology": "vacuum 直接借自拉丁文 vacuum（空的空間、真空），是形容詞 vacuus（空的、未被佔用的，與 vacare「空著」同源）的中性名詞用法；原指「不含物質的空間」，17 世紀中期後專指「排除空氣後的空間」。",
+    "us_ipa": "/ˈvækjuːm/",
+    "etymonline_url": "https://www.etymonline.com/word/vacuum",
+    "notes": ""
+  },
+  {
+    "word": "vaccine",
+    "parts": [
+      { "text": "vacc", "gloss": "牛" }
+    ],
+    "etymology": "vaccine 源自拉丁文 vaccinus（牛的、與牛有關），由 vacca（母牛）+ -inus（表「屬於／與……有關」的形容詞字尾）組成；因英國醫師 Edward Jenner 以牛痘（cowpox）為人接種以預防天花而得名，字源與「空」完全無關。",
+    "us_ipa": "/vækˈsin/",
+    "etymonline_url": "https://www.etymonline.com/word/vaccine",
+    "notes": "課本依拼寫外觀把 vaccine 歸入 vac（空）字根組，但 Etymonline 顯示其真正字源是拉丁文 vacca（母牛，因牛痘疫苗得名），與「空」的字根家族（vacare / vanus）無關，是同形異源的巧合，不應併入空的字義群組。"
+  }
+]

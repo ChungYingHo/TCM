@@ -1,0 +1,46 @@
+[
+  {
+    "word": "concentrate",
+    "parts": [
+      {"text": "con-", "gloss": "一起、共同"},
+      {"text": "centr", "gloss": "中心"}
+    ],
+    "etymology": "動詞 concentrate 於 1630 年代出現，經義大利文 concentrare，由拉丁文 com-（一起）＋centrum（中心）組成，本義是「聚集到同一個中心點」，17–18 世紀引申為「濃縮」「加強作用」，直到 1860 年代才發展出「精神集中」的現代用法。",
+    "us_ipa": "/ˈkɑn.sən.tɹeɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/concentrate",
+    "notes": ""
+  },
+  {
+    "word": "concentric",
+    "parts": [
+      {"text": "con-", "gloss": "一起、共同"},
+      {"text": "centr", "gloss": "中心"}
+    ],
+    "etymology": "concentric 約 1400 年出現，經古法文 concentrique、中世紀拉丁文 concentricus，由同化形式的 com-（一起）＋拉丁文 centrum（圓心、中心）組成，字面即「共有一個中心」，指幾何上共用圓心的圖形。",
+    "us_ipa": "/kənˈsɛn.tɹɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/concentric",
+    "notes": ""
+  },
+  {
+    "word": "decentralize",
+    "parts": [
+      {"text": "de-", "gloss": "脫離、去除"},
+      {"text": "centr", "gloss": "中心"}
+    ],
+    "etymology": "decentralize 於 1840 年出現（先以 decentralized 的形式使用），很可能是從名詞 decentralization（1839 年，由 de- ＋ centralization 組成）反向構詞而來，字面是「把（權力等）從中心分散出去」，即脫離中央控制。",
+    "us_ipa": "/diˈsɛntɹəˌlaɪz/",
+    "etymonline_url": "https://www.etymonline.com/word/decentralize",
+    "notes": ""
+  },
+  {
+    "word": "eccentric",
+    "parts": [
+      {"text": "ec-", "gloss": "出、離開"},
+      {"text": "centr", "gloss": "中心"}
+    ],
+    "etymology": "eccentric 名詞最早見於 15 世紀初，原是托勒密天文學（Ptolemaic astronomy）的術語，指「偏心圓、偏心軌道」；形容詞於 1550 年代出現，經法文 eccentrique、中世紀拉丁文 eccentricus，源自希臘文 ekkentros（ek「出」＋kentron「中心」），直到 1620 年代才引申出「古怪、異於常人」的譬喻義，指人的「怪人」則遲至 1817 年才出現。",
+    "us_ipa": "/ɪkˈsɛntɹɪk/, /ɛkˈsɛntɹɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/eccentric",
+    "notes": "Etymonline 記載此字源自天文學術語：15世紀初原指托勒密天文學中的「偏心圓、偏心軌道」，16–17世紀才引申出「古怪的」之意。"
+  }
+]

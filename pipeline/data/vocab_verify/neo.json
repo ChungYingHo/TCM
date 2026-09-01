@@ -1,0 +1,55 @@
+[
+  {
+    "word": "neoclassical",
+    "parts": [
+      { "text": "neo-", "gloss": "新" },
+      { "text": "classical", "gloss": "古典的" }
+    ],
+    "etymology": "1859 年出現的 neo-classical（也拼作 neoclassical），由 neo-（新）＋ classical（古典的）組成，指受古典風格影響的藝術、建築等風格，尤指十八世紀英國文學。",
+    "us_ipa": "/ˌnioʊˈklæsɪkəl/",
+    "etymonline_url": "https://www.etymonline.com/word/neo-classical",
+    "notes": "trap 檢核：Etymonline 與 Wiktionary 都顯示 neo-（希臘語 neos）與 nov-（拉丁語 novus）同源自原始印歐語根 *newo-／*néwos「新」——兩者是同一 PIE 詞根在希臘語與拉丁語的不同分支（後代／借詞），不是同一個詞，但也非互不相關的巧合。另：Etymonline 正式詞條網址是 neo-classical（連字號），單獨查 neoclassical／neoclassicism 會 404；Wiktionary 的 neoclassical 條目本身未列發音，此處 IPA 由其 neo-（GA /ˈnioʊ/）與 classical（GA /ˈklæsɪkəl/）兩詞條的發音組合而成。"
+  },
+  {
+    "word": "innovation",
+    "parts": [
+      { "text": "in-", "gloss": "進入" },
+      { "text": "nov", "gloss": "新" }
+    ],
+    "etymology": "innovation 最早見於十五世紀中，原意是「恢復、更新」，源自晚期拉丁語 innovationem，本於 innovare（in-「進入」＋novus「新」，意為「改變、更新」）；「創新、新事物」的現代語義始於一五四〇年代。",
+    "us_ipa": "/ˌɪnəˈveɪʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/innovation",
+    "notes": ""
+  },
+  {
+    "word": "renovate",
+    "parts": [
+      { "text": "re-", "gloss": "再次" },
+      { "text": "nov", "gloss": "新" }
+    ],
+    "etymology": "renovate 於一五二〇年代出現，意為「使恢復如新、整修」，是 renovation 的逆構詞，或直接源自拉丁語 renovatus（renovare 的過去分詞）；renovare 由 re-（再次）＋novare（使變新，源自 novus「新」）組成。",
+    "us_ipa": "/ˈɹɛnəveɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/renovate",
+    "notes": ""
+  },
+  {
+    "word": "novel",
+    "parts": [
+      { "text": "nov", "gloss": "新" }
+    ],
+    "etymology": "novel 作形容詞（「新奇的、前所未有的」）始於十五世紀中，源自古法語 novel／nouvel，來自拉丁語 novellus（novus「新」的指小詞）；作名詞（「長篇小說」）則於一五六〇年代出現，經義大利語 novella（原意「新鮮事、消息」）同樣上溯至 novellus／novus。",
+    "us_ipa": "/ˈnɑvəl/",
+    "etymonline_url": "https://www.etymonline.com/word/novel",
+    "notes": ""
+  },
+  {
+    "word": "novice",
+    "parts": [
+      { "text": "nov", "gloss": "新" }
+    ],
+    "etymology": "novice 於十四世紀中出現，原指「修會中的見習生」，源自古法語 novice（「初學者」），上承中世紀拉丁語 novicius，本於拉丁語 novicius「新引進的、新來的、無經驗的」（原用於描述奴隸），源頭是 novus「新」。",
+    "us_ipa": "/ˈnɑvɪs/",
+    "etymonline_url": "https://www.etymonline.com/word/novice",
+    "notes": ""
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "word": "grandiose",
+    "parts": [
+      { "text": "grand", "gloss": "偉大、宏大" }
+    ],
+    "etymology": "源自拉丁文 grandis（偉大、龐大），先派生出義大利文 grandioso，再經法文 grandiose（意為氣派逼人）於 1828 年借入英文，形容事物宏偉壯觀。",
+    "us_ipa": "/ˈgrændioʊs/",
+    "etymonline_url": "https://www.etymonline.com/word/grandiose",
+    "notes": "Etymonline 詞條並未明確指出「浮誇」的貶義是後起的語意發展；該詞條僅記載 1873 年有評論批評此字構詞「不合法」（違反拉丁文→英文的正規造字規則），屬構詞爭議，而非語意貶化時間點的說明。"
+  },
+  {
+    "word": "grandiloquent",
+    "parts": [
+      { "text": "grand", "gloss": "偉大、宏大" },
+      { "text": "loqu", "gloss": "說話" }
+    ],
+    "etymology": "由拉丁文 grandis（偉大）與 loqui（說話）合成 grandiloquus／grandiloquentia，指「用誇大詞藻說話」；英文先於 1580 年代出現 grandiloquence，1590 年代再回頭派生（back-formation）出形容詞 grandiloquent，形容言辭誇張浮誇、大言不慚。",
+    "us_ipa": "/grænˈdɪləkwənt/",
+    "etymonline_url": "https://www.etymonline.com/word/grandiloquent",
+    "notes": ""
+  },
+  {
+    "word": "grandeur",
+    "parts": [
+      { "text": "grand", "gloss": "偉大、宏大" }
+    ],
+    "etymology": "法文 grandeur 源自古法文 grandor（12世紀），本於 grand（偉大，源自拉丁文 grandis），約 1500 年借入英文，原指「高聳、高度」，到 1660 年代詞義擴大為「莊嚴、宏偉」。",
+    "us_ipa": "/ˈgrændʒɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/grandeur",
+    "notes": ""
+  }
+]

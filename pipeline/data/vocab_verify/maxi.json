@@ -1,0 +1,75 @@
+[
+  {
+    "word": "magnify",
+    "parts": [
+      {"text": "magn", "gloss": "大；偉大"},
+      {"text": "-fy", "gloss": "做；使成"}
+    ],
+    "etymology": "這個字源自古法文 magnefiier、上承拉丁文 magnificare（由 magnus「大」加 facere「做」的組合形構成，字面義是「做出偉大的事」），14世紀晚期英文最初的意思是「為了榮耀某人某事而言行讚頌」，直到1660年代才發展出「用透鏡把物體的外觀放大」這個英文特有的現代用法。",
+    "us_ipa": "/ˈmæɡnɪfaɪ/",
+    "etymonline_url": "https://www.etymonline.com/word/magnify",
+    "notes": ""
+  },
+  {
+    "word": "maximum",
+    "parts": [
+      {"text": "maxim", "gloss": "最大的"}
+    ],
+    "etymology": "這個字在1740年直接借自拉丁文 maximum（複數 maxima），是 magnus「大」的不規則最高級 maximus「最大的」的中性形，最初在英文中指「最大的量、數目或程度」，形容詞用法（意為「最大的」）則要到1834年才出現。",
+    "us_ipa": "/ˈmæksɪməm/",
+    "etymonline_url": "https://www.etymonline.com/word/maximum",
+    "notes": "maxim- 並非 magn- 的規則變化，而是拉丁文 magnus「大」的不規則最高級 maximus（可能經由 PIE *mag-samo- 演變而成），兩者同源、同屬 PIE 字根 *meg-「大」，只是最高級換了詞幹（類似英文 good/best 的不規則變化），屬同一字根家族但非單純拼寫變體。"
+  },
+  {
+    "word": "magnanimous",
+    "parts": [
+      {"text": "magn", "gloss": "大；偉大"},
+      {"text": "anim", "gloss": "心智；精神"}
+    ],
+    "etymology": "這個字約在1580年代出現，由拉丁文 magnanimus（或先出現的 magnanimity 加上 -ous）構成，magnus「大」加 animus「心智、精神」，字面是「心靈偉大」，最初指「英勇無畏」，到1590年代才轉為「胸襟高尚、不計較瑣碎怨恨」的現代意義。",
+    "us_ipa": "/mæɡˈnæn.ɪ.məs/",
+    "etymonline_url": "https://www.etymonline.com/word/magnanimous",
+    "notes": ""
+  },
+  {
+    "word": "majority",
+    "parts": [
+      {"text": "major", "gloss": "較大的"}
+    ],
+    "etymology": "這個字在1550年代借自中世紀拉丁文 majoritatem，本義是「較大、優越的狀態」；其中 major 是拉丁文 magnus「大」的不規則比較級 maior（更早形態為 magios）演變而來，意思是「較大的」，因此 majority 字面就是「較大的狀態」，後來才發展出「多數」的意思。",
+    "us_ipa": "/məˈd͡ʒɑ.ɹɪti/, /məˈd͡ʒɔɹ.ɪti/",
+    "etymonline_url": "https://www.etymonline.com/word/majority",
+    "notes": "majority 自身頁面連續兩次 fetch 皆逾時（HTTP 504，已依規則重試一次），改查其字根頁 https://www.etymonline.com/word/major 取得對應段落（該頁明確提到 majority, 1550s, 源自中世紀拉丁文 majoritatem）。另外，major 是拉丁文 magnus「大」的不規則比較級 maior（早期形態 magios）之英文借形，與 magn-／maxi- 同源，皆可回溯至 PIE 字根 *meg-「大」，但因拉丁文不規則比較級變化而拼法不同，非 magn- 的規則衍生詞。"
+  },
+  {
+    "word": "magnificent",
+    "parts": [
+      {"text": "magn", "gloss": "大；偉大"},
+      {"text": "fic", "gloss": "做；製造"}
+    ],
+    "etymology": "這個字源自古法文 magnificent，是拉丁文 magnificentior（magnificus 的比較級，由 magnus「大」加 facere「做」構成，字面「做出偉大之事」）的逆構詞，15世紀中原本指「行為偉大顯赫、光榮」，到1520年代才擴大為「富麗堂皇、極盡奢華」的現代意義。",
+    "us_ipa": "/mæɡˈnɪfəsənt/",
+    "etymonline_url": "https://www.etymonline.com/word/magnificent",
+    "notes": ""
+  },
+  {
+    "word": "magnitude",
+    "parts": [
+      {"text": "magn", "gloss": "大；偉大"}
+    ],
+    "etymology": "這個字約在1400年借自拉丁文 magnitudo，由 magnus「大」加上構成抽象名詞的字尾 -tudo 而成，最初指「卓越、宏偉」，15世紀初轉為「體積或範圍的大小」，到1640年代又發展出翻譯托勒密的希臘文 megethos 而來的天文學「星等」義。",
+    "us_ipa": "/ˈmæɡnɪtuːd/",
+    "etymonline_url": "https://www.etymonline.com/word/magnitude",
+    "notes": "Wiktionary 對此字未明確標示 US／UK 分區標籤，只並列三種變體：/ˈmæɡnɪtjuːd/（保留 yod）、/ˈmæɡnɪtʃuːd/（yod-coalescence）、/ˈmæɡnɪtuːd/（yod-dropping），且唯一的音檔標為 Southern England。已選用 yod-dropping 的 /ˈmæɡnɪtuːd/，因為美式英語在 t/d/n 後接 u 時普遍不保留 y 滑音（如 tune、student），此為 General American 的標準讀法，但非該頁面直接標註的「US」欄位，特此註明。"
+  },
+  {
+    "word": "majestic",
+    "parts": [
+      {"text": "majest", "gloss": "偉大；尊貴"}
+    ],
+    "etymology": "這個字約在1600年由 majesty 加上字尾 -ic 構成；majesty 源自古法文 majeste，再往上溯至拉丁文主格 maiestas（字根 maiestatem），意思是「偉大、尊嚴、崇高」，而 maiestas 本身是從 maior（magnus 的比較級，中性作 maius）衍生出的抽象名詞，原本用於形容神祇的莊嚴崇高，14世紀晚期才擴大用於稱呼君王的尊號。",
+    "us_ipa": "/məˈdʒɛstɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/majestic",
+    "notes": "majest- 並非直接等於 magnus 或 maior 本身，而是由 maior 派生出的抽象名詞 maiestas「偉大、尊嚴」再加 -ic 而成，關係較間接（是「大」的抽象引申義，非形容詞本身），但往上追溯仍與 magn-／maxi- 同屬 magnus 家族，同源於 PIE 字根 *meg-「大」。"
+  }
+]

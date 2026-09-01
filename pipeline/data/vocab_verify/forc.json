@@ -1,0 +1,76 @@
+[
+  {
+    "word": "fort",
+    "parts": [
+      { "text": "fort", "gloss": "強、堅固" }
+    ],
+    "etymology": "15世紀中期源自古法語 fort（堡壘；強壯的人，原為形容詞「強壯的」），承自拉丁文 fortis「強壯的、堅定的、勇敢的」。",
+    "us_ipa": "/fɔrt/",
+    "etymonline_url": "https://www.etymonline.com/word/fort",
+    "notes": ""
+  },
+  {
+    "word": "fortify",
+    "parts": [
+      { "text": "fort", "gloss": "強" },
+      { "text": "-fy", "gloss": "使成為" }
+    ],
+    "etymology": "源自古法語 fortifiier 與晚期拉丁文 fortificare，由拉丁文 fortis「強」+ facere「做、使」的組合形式構成，原意為加固城牆、使堅固，後引申出精神上的堅強與強化之意。",
+    "us_ipa": "/ˈfɔrtəˌfaɪ/",
+    "etymonline_url": "https://www.etymonline.com/word/fortify",
+    "notes": ""
+  },
+  {
+    "word": "enforcement",
+    "parts": [
+      { "text": "en-", "gloss": "使入" },
+      { "text": "forc", "gloss": "力量、強" }
+    ],
+    "etymology": "源自古法語 enforcier，由 en-「使」+ force「力量」構成；force 經古法語承自通俗拉丁文 *fortia，源自拉丁文 fortis「強」，故 enforcement 的核心語意仍是「施力、強制」。",
+    "us_ipa": "/ɪnˈfɔrsmənt/",
+    "etymonline_url": "https://www.etymonline.com/word/enforcement",
+    "notes": ""
+  },
+  {
+    "word": "forte",
+    "parts": [
+      { "text": "forte", "gloss": "強；強項" }
+    ],
+    "etymology": "「強項」義於1640年代源自法語 fort「(劍刃)最堅硬處；強項」，18世紀加上字尾 -e 仿義大利文拼法；音樂術語「強、大聲」則是直接借自義大利文 forte「強」。兩義最終都承自拉丁文 fortis「強」。",
+    "us_ipa": "/ˈfɔrteɪ/",
+    "etymonline_url": "https://www.etymonline.com/word/forte",
+    "notes": "「強項」義另有唸法 /fɔrt/（單音節，仿法語 fort 原音，部分人視為較道地的唸法）；音樂「強奏」義固定唸 /ˈfɔrteɪ/。兩義在美式英語中常被唸成同音 /ˈfɔrteɪ/，字典多兩者並列承認。"
+  },
+  {
+    "word": "fortitude",
+    "parts": [
+      { "text": "fort", "gloss": "強" }
+    ],
+    "etymology": "源自拉丁文 fortitudo「力量、剛毅、勇氣」，由 fortis「強、勇敢」衍生而來；14世紀晚期先指道德上的剛毅（樞德之一），15世紀初擴及身體上的強健。",
+    "us_ipa": "/ˈfɔrtɪˌtud/",
+    "etymonline_url": "https://www.etymonline.com/word/fortitude",
+    "notes": ""
+  },
+  {
+    "word": "reinforce",
+    "parts": [
+      { "text": "re-", "gloss": "再、又" },
+      { "text": "in-", "gloss": "使入" },
+      { "text": "forc", "gloss": "力量、強" }
+    ],
+    "etymology": "約1600年由 re-「再」+ inforce（enforce 的變體，意為「施力；使堅固」）構成；enforce 源自古法語 enforcier（en- + force），force 又承自拉丁文 fortis「強」。Etymonline 指出 rein- 已與原本的 enforce 脫鉤，現在幾乎不作「再次施行」解。",
+    "us_ipa": "/ˌriɪnˈfɔrs/",
+    "etymonline_url": "https://www.etymonline.com/word/reinforce",
+    "notes": ""
+  },
+  {
+    "word": "fortuitous",
+    "parts": [
+      { "text": "fortu-", "gloss": "偶然、運氣" }
+    ],
+    "etymology": "1650年代源自拉丁文 fortuitus「偶然發生的、非刻意的」，來自 fors「機運、偶然」的奪格 forte（義為「憑機運」），與 fortuna「命運」同源；Etymonline 特別指出此字原意是「意外的、非刻意的」而非「幸運的」。",
+    "us_ipa": "/fɔrˈtuətəs/",
+    "etymonline_url": "https://www.etymonline.com/word/fortuitous",
+    "notes": "陷阱字：課本依拼字把此字歸入 fort(強壯) 字根組，但 Etymonline 明確顯示其真正詞源是拉丁文 fors/fortuna「機運、偶然」，與 fortis「強」無關，語意也是「偶然、非刻意」而非「幸運」。不應強行併入「強」字根組。"
+  }
+]

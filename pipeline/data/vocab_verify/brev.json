@@ -1,0 +1,34 @@
+[
+  {
+    "word": "brief",
+    "parts": [
+      {"text": "brief", "gloss": "短的"}
+    ],
+    "etymology": "brief 約1300年（拼作 bref）經古法語借入英文，源自拉丁文 brevis「短、低、小、淺」，可上溯原始印歐語字根 *mregh-u-「短」；名詞用法於14世紀初出現，原指官方發出的文書，因篇幅簡短而衍生出「摘要」之義，1630年代起定型為法律上「案件事實摘要」的意思。",
+    "us_ipa": "/ˈbɹif/",
+    "etymonline_url": "https://www.etymonline.com/word/brief",
+    "notes": ""
+  },
+  {
+    "word": "abridge",
+    "parts": [
+      {"text": "a-", "gloss": "向、使成（拉丁 ad-，非「離開」的 ab-）"},
+      {"text": "bridge", "gloss": "縮短（拉丁 breviare，與英文「橋」無關）"}
+    ],
+    "etymology": "abridge 約1300年經古法語 abregier 借入英文，源自晚期拉丁文 abbreviare（ad-「向」+breviare「使短」，breviare 又源自 brevis「短」）；拉丁文 -vi- 到古法語 -dg- 是規律音變（同見 assuage<assuavidare、deluge<diluvium），brevis 因此一路變成 bridge，和「橋」純屬拼法巧合。abridge 與 abbreviate 系出同源、皆源自拉丁 abbreviare，屬於同一詞根的雙生詞（doublet）：abridge 經古法語轉道進入英文（約1300年），abbreviate 則約15世紀中直接借自拉丁文，因此兩者拼法讀音才會分歧。",
+    "us_ipa": "/əˈbɹɪd͡ʒ/",
+    "etymonline_url": "https://www.etymonline.com/word/abridge",
+    "notes": "課本詞素標示「a-/ab-(from)」宜訂正：Etymonline 明確指出 abbreviare = ad-「向、朝」+breviare「使短」，abridge 的字首其實是拉丁 ad-（弱化為 a-），並非表「離開、來自」的 ab-，課本此處字首字義恐有誤植。"
+  },
+  {
+    "word": "unabridged",
+    "parts": [
+      {"text": "un-", "gloss": "不、未"},
+      {"text": "abridged", "gloss": "刪節的（abridge 的過去分詞）"}
+    ],
+    "etymology": "unabridged 最早見於1590年代，由否定字首 un-「不」加上動詞 abridge 的過去分詞構成，字面即「未被刪節、未縮短」，19世紀以來主要用於形容辭典、書籍等未經刪節的完整版本。",
+    "us_ipa": "/ˌʌnəˈbrɪdʒd/",
+    "etymonline_url": "https://www.etymonline.com/word/unabridged",
+    "notes": "Wiktionary 該詞條無 Pronunciation 段落（已重試一次仍無），故美式 IPA 改採 Dictionary.com 標音，非源自 Wiktionary。"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "word": "circumference",
+    "parts": [
+      { "text": "circum", "gloss": "環繞、周圍" },
+      { "text": "fer", "gloss": "搬運、攜帶" }
+    ],
+    "etymology": "源自拉丁文 circumferentia(circumferre 的中性複數分詞形),由 circum「環繞」+ ferre「搬運」組成,字面是「繞著搬、繞行一圈」;14世紀晚期借入英文,原指「圈住圓形的那條線」即圓周,也是希臘文 periphereia 的意譯詞。",
+    "us_ipa": "/sɚˈkʌmfɹəns/",
+    "etymonline_url": "https://www.etymonline.com/word/circumference",
+    "notes": ""
+  },
+  {
+    "word": "circuit",
+    "parts": [
+      { "text": "circu", "gloss": "環繞、周圍" },
+      { "text": "it", "gloss": "走、去" }
+    ],
+    "etymology": "源自拉丁文 circuitus「繞行一圈」,由 circum「環繞」的變體 circu- + ire(過去分詞 itum)「走、去」組成;14世紀晚期經古法文進入英文,原指「繞一圈的路線或範圍」,1570年代衍生出法官巡迴轄區之意,1746年再引申為電流繞行迴路的「電路」。",
+    "us_ipa": "/ˈsɝ.kɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/circuit",
+    "notes": ""
+  },
+  {
+    "word": "circulation",
+    "parts": [
+      { "text": "circul", "gloss": "小圓圈、小環" }
+    ],
+    "etymology": "源自拉丁文 circulationem,是動詞 circulare「形成圓圈」的動作名詞化,而 circulare 又源自 circulus「小圓圈」,即 circus「圓、環」的指小詞;15世紀中葉先用於煉金術的循環蒸餾程序,1620年代哈維用它描述血液「流回原點、周而復始」的循環,1680年代再泛化為「流通、分布」之意。",
+    "us_ipa": "/ˌsɝkjʊˈleɪʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/circulation",
+    "notes": ""
+  },
+  {
+    "word": "circumspect",
+    "parts": [
+      { "text": "circum", "gloss": "環繞、周圍" },
+      { "text": "spect", "gloss": "看" }
+    ],
+    "etymology": "源自拉丁文 circumspectus「謹慎的、面面俱到的」,是動詞 circumspicere 的過去分詞,由 circum「環繞」+ specere「看」組成,字面是「向四面八方看」;15世紀初借入英文後,由「四處張望」引申為做事「謹慎、周全」。",
+    "us_ipa": "/ˈsɝ.kəm.spɛkt/",
+    "etymonline_url": "https://www.etymonline.com/word/circumspect",
+    "notes": ""
+  },
+  {
+    "word": "circumvent",
+    "parts": [
+      { "text": "circum", "gloss": "環繞、周圍" },
+      { "text": "vent", "gloss": "來" }
+    ],
+    "etymology": "源自拉丁文 circumventus,是動詞 circumvenire 的過去分詞,由 circum「環繞」+ venire「來」組成,字面是「繞到四周來、包圍」;15世紀中葉英文先取其比喻義「用計謀包圍、欺瞞」,直到1840年才發展出「繞過障礙」的現代常見用法。",
+    "us_ipa": "/ˌsɝkəmˈvɛnt/",
+    "etymonline_url": "https://www.etymonline.com/word/circumvent",
+    "notes": "Wiktionary 該詞條只列出英式(Southern England)音標,未標示獨立的美式發音,故 us_ipa 改查 Dictionary.com 的美式音標(原標示為 /ˌsɜrkəmˈvɛnt/,ɜr 與 ɝ 同指美式捲舌央元音,已轉寫為 ɝ 以與其他詞一致)。Etymonline 頁面第一、二次讀取皆回傳 503,第三次重試才成功讀到,內容已與 circumvention 頁面交叉核對一致。"
+  },
+  {
+    "word": "recycle",
+    "parts": [
+      { "text": "re", "gloss": "再、重新" },
+      { "text": "cycl", "gloss": "圓、輪" }
+    ],
+    "etymology": "1922年由 re-「再、重新」+ cycle 組成的英文新造詞,最初用於工業製程指「材料重新利用」,1960年詞義擴大為「廢棄物回收再製」,1969年起再擴大出一般比喻用法;cycle 本身源自希臘文 kyklos「圓、輪」,經由古法文 cicle、晚期拉丁文 cyclus 於14世紀晚期進入英文。",
+    "us_ipa": "/ɹəˈsaɪkəl/",
+    "etymonline_url": "https://www.etymonline.com/word/recycle",
+    "notes": "教科書把 recycle 歸在 circum(circul)這組,但查證後兩者字源並不相同:circum／circul 源自拉丁文 circus／circulus(PIE 詞根 *sker-「轉、彎」),而 recycle 的 cycl 源自希臘文 kyklos(PIE 詞根 *kwel-「轉動」)。兩者是「同義但不同源」,只是語意都跟「圓、繞」有關,並非同一字根,不應當成同一詞源家族教。"
+  }
+]

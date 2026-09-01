@@ -1,0 +1,161 @@
+[
+  {
+    "word": "deign",
+    "prefixId": "dign",
+    "pos": "v.",
+    "phonetic": "den",
+    "zh": "屈就，俯允",
+    "parts": [
+      {
+        "text": "deign",
+        "gloss": "值得"
+      }
+    ],
+    "etymology": "源自古法文 deignier 與拉丁文 dignari「認為值得」，其字根 dignus（值得的）可溯至原始印歐字根 *dek-（拿取、接受），16 世紀晚期起衍生出「屈尊俯就」之意。",
+    "derivatives": [],
+    "example": "If she deigns to reply to my letter, I will be extremely surprised.",
+    "example_zh": "如果她願意屈就回我的信，我會非常驚訝。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/deign",
+      "ipa": "/deɪn/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "課本標記詞根為 dign，但 deign 實際拼字中間多了 e（d-e-i-g-n），並無連續的 dign 字串。仍同源於拉丁 dignus。"
+    }
+  },
+  {
+    "word": "disdain",
+    "prefixId": "dign",
+    "pos": "n., v.",
+    "phonetic": "dɪsˈden",
+    "zh": "蔑視，不屑；瞧不起",
+    "parts": [
+      {
+        "text": "dis",
+        "gloss": "不、相反"
+      },
+      {
+        "text": "dain",
+        "gloss": "值得"
+      }
+    ],
+    "etymology": "源自古法文 desdeignier，由 des-（相反）＋ deignier（視為值得）組成，deignier 源自拉丁文 dignari，其字根為 dignus（值得的）。",
+    "derivatives": [
+      {
+        "word": "disdainful",
+        "pos": "a.",
+        "zh": "輕蔑的，瞧不起的"
+      }
+    ],
+    "example": "He regarded their proposal with disdain.",
+    "example_zh": "他以輕蔑的態度看待他們的提案。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/disdain",
+      "ipa": "/dɪsˈdeɪn/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The older musicians disdained the new, rock-influenced music."
+      ]
+    }
+  },
+  {
+    "word": "condign",
+    "prefixId": "dign",
+    "pos": "a.",
+    "phonetic": "kənˈdaɪn",
+    "zh": "恰當的，合適的",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "完全、一起"
+      },
+      {
+        "text": "dign",
+        "gloss": "值得"
+      }
+    ],
+    "etymology": "源自古法文 condigne 與拉丁文 condignus「完全值得的」，由 con-（一起、完全）＋ dignus（值得的）組成，約 1700 年後詞義窄化為專指「（懲罰）罪有應得」。",
+    "derivatives": [],
+    "example": "Three years would be condign punishment for the crime.",
+    "example_zh": "三年對這項罪行來說會是恰當的刑罰。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/condign",
+      "ipa": "/kənˈdaɪn/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "dignified",
+    "prefixId": "dign",
+    "pos": "a.",
+    "phonetic": "ˈdɪgnɪfaɪd",
+    "zh": "有尊嚴的，莊嚴的",
+    "parts": [
+      {
+        "text": "dign",
+        "gloss": "值得"
+      }
+    ],
+    "etymology": "為動詞 dignify 的過去分詞，dignify 源自古法文 dignefiier 與中世紀拉丁文 dignificare「使值得」，由拉丁文 dignus（值得的）＋ -ficare（使、做，源自 facere）組成。",
+    "derivatives": [
+      {
+        "word": "dignity",
+        "pos": "n.",
+        "zh": "尊嚴"
+      }
+    ],
+    "example": "The general surrendered in a dignified manner.",
+    "example_zh": "那位將軍以有尊嚴的方式投降。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/dignified",
+      "ipa": "/ˈdɪɡnɪfaɪd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "indignant",
+    "prefixId": "dign",
+    "pos": "a.",
+    "phonetic": "ɪnˈdɪgnənt",
+    "zh": "憤怒的，忿忿不平的",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "不、非"
+      },
+      {
+        "text": "dign",
+        "gloss": "值得"
+      }
+    ],
+    "etymology": "源自拉丁文 indignantem（indignari 的現在分詞），意為「因視為不值得而憤慨、不悅」，indignari 由 in-（不）＋ dignus（值得的）組成。",
+    "derivatives": [
+      {
+        "word": "indignation",
+        "pos": "n.",
+        "zh": "憤怒"
+      }
+    ],
+    "example": "The wife became indignant at the accusation.",
+    "example_zh": "這位妻子對這項指控感到忿忿不平。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/indignant",
+      "ipa": "/ɪnˈdɪɡnənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

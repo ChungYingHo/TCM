@@ -1,0 +1,372 @@
+[
+  {
+    "word": "invaluable",
+    "prefixId": "val",
+    "pos": "a.",
+    "phonetic": "ɪnˈvæljəbəl",
+    "zh": "無價的",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "不"
+      },
+      {
+        "text": "valu(e)",
+        "gloss": "價值"
+      }
+    ],
+    "etymology": "1570 年代由 in-（不）＋ value（估價）構成，本義「高到無法估定價值」，故 invaluable 指「珍貴無價」而非「無價值」。1630 年代雖一度因 in- 的否定義被誤用為「無價值」，但「珍貴無價」才是沿用至今的主流語意。",
+    "derivatives": [],
+    "example": "Your support has been invaluable to me.",
+    "example_zh": "你的支持對我而言是無價的。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/invaluable",
+      "ipa": "/ɪnˈvæljəbl̩/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 該詞未特別標示 US 音標（僅列 Southern England 音檔），us_ipa 取其列出的通用簡化讀法。"
+    }
+  },
+  {
+    "word": "avail",
+    "prefixId": "val",
+    "pos": "v., n.",
+    "phonetic": "əˈvel",
+    "zh": "利用；用處，利益",
+    "parts": [
+      {
+        "text": "a",
+        "gloss": "向、朝"
+      },
+      {
+        "text": "vail",
+        "gloss": "值、強"
+      }
+    ],
+    "etymology": "約 1300 年源自古法語 a-（源自拉丁 ad-「向」）＋ vaill-（valoir「值」的詞幹，源自拉丁 valere「強、值」），本義「有助益、有效用」。",
+    "derivatives": [],
+    "example": "You really should avail yourself of this rare opportunity.",
+    "example_zh": "你真的應該好好利用這個難得的機會。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/avail",
+      "ipa": "/əˈveɪl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "I tried to dissuade him from the rash move, to no avail."
+      ]
+    }
+  },
+  {
+    "word": "available",
+    "prefixId": "val",
+    "pos": "a.",
+    "phonetic": "əˈveləbəl",
+    "zh": "可取得的，有供應的，有售的",
+    "parts": [
+      {
+        "text": "avail",
+        "gloss": "有效用"
+      }
+    ],
+    "etymology": "15 世紀中由 avail 加 -able 構成，原意「有效力的、有效用的」，直到 1827 年才轉為現代「可取得、可利用」之義。",
+    "derivatives": [
+      {
+        "word": "availability",
+        "pos": "n.",
+        "zh": "可取得，有供應"
+      }
+    ],
+    "example": "The manager is presiding over a meeting and is not available right now.",
+    "example_zh": "經理正在主持會議，現在沒有空。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/available",
+      "ipa": "/əˈveɪləbəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The new product is not yet available in Asia."
+      ]
+    }
+  },
+  {
+    "word": "valiant",
+    "prefixId": "val",
+    "pos": "a.",
+    "phonetic": "ˈvæliənt",
+    "zh": "英勇的",
+    "parts": [
+      {
+        "text": "vali",
+        "gloss": "強、勇敢"
+      }
+    ],
+    "etymology": "14 世紀初經古法語 vaillant 源自拉丁文 valere「強、值、健」，本義「勇敢的、強壯的」。",
+    "derivatives": [
+      {
+        "word": "valor",
+        "pos": "n.",
+        "zh": "英勇"
+      },
+      {
+        "word": "valorous",
+        "pos": "a.",
+        "zh": "英勇的"
+      }
+    ],
+    "example": "The losing team made a valiant attempt to get even.",
+    "example_zh": "落後的那一隊做了英勇的嘗試，想扳平比數。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/valiant",
+      "ipa": "/ˈvæliənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "convalescence",
+    "prefixId": "val",
+    "pos": "n.",
+    "phonetic": "ˌkɑnvəˈlɛsəns",
+    "zh": "康復，療養",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "強調"
+      },
+      {
+        "text": "val",
+        "gloss": "轉強"
+      }
+    ],
+    "etymology": "15 世紀晚期經法文 convalescence 源自晚期拉丁文 convalescentia，由 com-（此處為強調字首）＋ valescere「開始變強」（valere「強」的起始動詞形）構成，指「病後逐漸恢復體力」的過程。",
+    "derivatives": [
+      {
+        "word": "convalesce",
+        "pos": "v.",
+        "zh": "康復，療養"
+      }
+    ],
+    "example": "During convalescence, the patient needs plenty of nutritious food and a lot of rest.",
+    "example_zh": "療養期間，病人需要充足的營養食物與大量的休息。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/convalescence",
+      "ipa": "/ˌkɑnvəˈlɛsəns/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 該詞條僅附美式發音音檔、未列書面 IPA。us_ipa 改查 Dictionary.com 之美式標音核實。"
+    }
+  },
+  {
+    "word": "devalue",
+    "prefixId": "val",
+    "pos": "v.",
+    "phonetic": "diˈvælju",
+    "zh": "貶值",
+    "parts": [
+      {
+        "text": "de",
+        "gloss": "向下、去除"
+      },
+      {
+        "text": "value",
+        "gloss": "價值"
+      }
+    ],
+    "etymology": "1918 年由 devaluation 反構（back-formation）而成。devaluation＝de-（向下）＋valuation（估價，源自 value < 拉丁 valere），原指「降低貨幣或事物的價值」。",
+    "derivatives": [
+      {
+        "word": "devaluation",
+        "pos": "n.",
+        "zh": "貶值"
+      }
+    ],
+    "example": "The government plans to devalue the currency to stimulate exports.",
+    "example_zh": "政府打算讓貨幣貶值以刺激出口。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/devalue",
+      "ipa": "/diːˈvæljuː/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 僅列一組 IPA（音檔標 Southern England），未另分美式/英式，此讀法美式亦通用。且此字是由 devaluation 反構而成，非直接由 de-+value 組合。"
+    }
+  },
+  {
+    "word": "equivalent",
+    "prefixId": "val",
+    "pos": "a., n.",
+    "phonetic": "ɪˈkwɪvələnt",
+    "zh": "等值的（東西）",
+    "parts": [
+      {
+        "text": "equi",
+        "gloss": "相等"
+      },
+      {
+        "text": "val",
+        "gloss": "值、強"
+      }
+    ],
+    "etymology": "15 世紀初源自晚期拉丁文 aequivalentem，由 aequus「相等」＋ valere「值、強」構成，本義「價值或效力相等」。",
+    "derivatives": [
+      {
+        "word": "equivalence",
+        "pos": "n.",
+        "zh": "相等"
+      }
+    ],
+    "example": "One inch is equivalent to 2.54 centimeters.",
+    "example_zh": "一英寸等於二點五四公分。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/equivalent",
+      "ipa": "/ɪˈkwɪvələnt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "You need a college diploma or its equivalents to apply for the job."
+      ]
+    }
+  },
+  {
+    "word": "evaluate",
+    "prefixId": "val",
+    "pos": "v.",
+    "phonetic": "ɪˈvæljuˌet",
+    "zh": "評價，評估",
+    "parts": [
+      {
+        "text": "e",
+        "gloss": "向外"
+      },
+      {
+        "text": "valu",
+        "gloss": "價值"
+      }
+    ],
+    "etymology": "1831 年由 evaluation 反構或借自法文 évaluer，其中 é-（源自拉丁 ex-「出」）＋valuer（源自 valere「值、強」）。最初用於數學估算，後擴及一般「評估」之義。",
+    "derivatives": [
+      {
+        "word": "evaluation",
+        "pos": "n.",
+        "zh": "評價，評估"
+      }
+    ],
+    "example": "The manager has to evaluate each employee's performance at the end of the year.",
+    "example_zh": "經理必須在年底評估每位員工的表現。",
+    "sources": {
+      "page": "IMG_1698",
+      "etymonline": "https://www.etymonline.com/word/evaluate",
+      "ipa": "/ɪˈvæljuˌeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "invalid",
+    "prefixId": "val",
+    "pos": "a., n.",
+    "phonetic": "ɪnˈvælɪd",
+    "zh": "無效的；殘廢",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "不"
+      },
+      {
+        "text": "valid",
+        "gloss": "強、有效"
+      }
+    ],
+    "etymology": "1630 年代源自拉丁文 invalidus，由 in-「不」＋validus「強」（PIE 字根 *wal-「強」）構成，本義「不具法律效力的」。1640 年代另發展出同源但重音不同的名詞義「傷殘者」。",
+    "derivatives": [
+      {
+        "word": "valid",
+        "pos": "a.",
+        "zh": "有效的"
+      },
+      {
+        "word": "validate",
+        "pos": "v.",
+        "zh": "證實有效"
+      },
+      {
+        "word": "invalidate",
+        "pos": "v.",
+        "zh": "使無效，證實無效"
+      }
+    ],
+    "example": "The argument is invalid because the logic is flawed.",
+    "example_zh": "這個論證是無效的，因為它的邏輯有瑕疵。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/invalid",
+      "ipa": "/ɪnˈvælɪd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "異音異義詞（heteronym）：形容詞「無效的」重音在後 /ɪnˈvælɪd/。名詞「傷殘者」重音在前，讀作 /ˈɪnvəlɪd/ 或 /ˈɪnvəˌliːd/，語意分化（法律效力 vs. 身體衰弱）後連帶重音位置也不同。",
+      "extraExamples": [
+        "The argument has no validity."
+      ]
+    }
+  },
+  {
+    "word": "prevalent",
+    "prefixId": "val",
+    "pos": "a.",
+    "phonetic": "ˈprɛvələnt",
+    "zh": "盛行的，流行的",
+    "parts": [
+      {
+        "text": "pre",
+        "gloss": "在前、先"
+      },
+      {
+        "text": "val",
+        "gloss": "強、有力"
+      }
+    ],
+    "etymology": "15 世紀初源自拉丁文 praevalentem（praevalere 的現在分詞），由 prae「先、前」＋valere「強、有力」構成，原意「掌權、支配的」，17 世紀中葉後轉為「普遍存在的」。",
+    "derivatives": [
+      {
+        "word": "prevalence",
+        "pos": "n.",
+        "zh": "盛行，流行"
+      },
+      {
+        "word": "prevail",
+        "pos": "v.",
+        "zh": "勝出，佔上風"
+      }
+    ],
+    "example": "The disease is prevalent among tropical countries.",
+    "example_zh": "這種疾病在熱帶國家很盛行。",
+    "sources": {
+      "page": "IMG_1699",
+      "etymonline": "https://www.etymonline.com/word/prevalent",
+      "ipa": "/ˈprɛvələnt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 另列受 prevail 類推影響的變體讀法 /prɪˈveɪlənt/，但標準 GA/RP/CA 讀法為重音在首音節的 /ˈprɛvələnt/。",
+      "extraExamples": [
+        "In the debate, emotion unfortunately prevailed over reason."
+      ]
+    }
+  }
+]
