@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-02",
-  "count": 646,
-  "withExamples": 646,
+  "count": 663,
+  "withExamples": 663,
   "words": [
     {
       "id": "apathetic",
@@ -21109,6 +21109,541 @@
           "zh": "敏銳，劇烈"
         }
       ]
+    },
+    {
+      "id": "acupuncture",
+      "word": "acupuncture",
+      "phonetic": "ˈækjuˌpʌŋktʃɚ",
+      "zh": "針灸",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Acupuncture has proven effective for pain relief.",
+      "example_zh": "針灸已證實對止痛有效。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "acu",
+          "gloss": "針"
+        },
+        {
+          "text": "punct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "1680 年代指以針刺止痛的外科操作，由拉丁文 acus（針）加上 puncture（來自晚期拉丁文 punctura「刺」，源自 pungere 的過去分詞 punctus）構成，走的是分詞幹 punct-。",
+      "derivatives": []
+    },
+    {
+      "id": "compunction",
+      "word": "compunction",
+      "phonetic": "kəmˈpʌŋkʃən",
+      "zh": "良心不安，內疚",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man cheated on his wife without compunction.",
+      "example_zh": "這名男子對妻子不忠，卻毫無良心不安。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "com",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "punct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "14 世紀中經古法文 compunction 借自晚期拉丁文 compunctionem「良心的刺痛、悔恨」，源自動詞 compungere，即 com-（此處或為加強語氣）加 pungere（刺、穿），英文形的 -punct- 取自過去分詞幹。",
+      "derivatives": []
+    },
+    {
+      "id": "poignant",
+      "word": "poignant",
+      "phonetic": "ˈpɔɪnjənt",
+      "zh": "刺鼻的，尖酸的，感人的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There is a poignant farewell occurring on the platform.",
+      "example_zh": "月台上正上演著一場感人的道別。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "poign",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "14 世紀晚期借自古法文 poignant「尖銳的、刺人的」（13 世紀），那是動詞 poindre（刺、螫）的現在分詞，poindre 又源自拉丁文 pungere（刺、穿、螫，引申為使人悲傷苦惱）。",
+      "derivatives": [
+        {
+          "word": "poignancy",
+          "pos": "n.",
+          "zh": "尖酸，感人"
+        }
+      ]
+    },
+    {
+      "id": "puncture",
+      "word": "puncture",
+      "phonetic": "ˈpʌŋktʃɚ",
+      "zh": "戳穿，刺穿；刺破，小洞",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My response punctured his whole argument.",
+      "example_zh": "我的回應戳破了他整套論點。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "punct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "14 世紀晚期指尖銳器物造成的小穿孔或小傷口，源自晚期拉丁文 punctura「刺」，來自拉丁文 punctus，即 pungere（刺、穿）的過去分詞，上溯原始印歐語字根 *peuk-（刺）。",
+      "derivatives": []
+    },
+    {
+      "id": "pungent",
+      "word": "pungent",
+      "phonetic": "ˈpʌndʒənt",
+      "zh": "刺鼻的，尖酸的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The pungent smell of vinegar made me want to sneeze.",
+      "example_zh": "醋刺鼻的氣味讓我想打噴嚏。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "pung",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "1590 年代原指「尖銳而使人痛楚的」，源自拉丁文 pungentem（主格 pungens），是 pungere（刺、穿、螫）的現在分詞，1660 年代才轉指氣味或味道的嗆鼻辛辣。",
+      "derivatives": [
+        {
+          "word": "pungency",
+          "pos": "n.",
+          "zh": "辛辣，尖酸"
+        }
+      ]
+    },
+    {
+      "id": "expunge",
+      "word": "expunge",
+      "phonetic": "ɪkˈspʌndʒ",
+      "zh": "除去，消去",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His name has been expunged from the list of members.",
+      "example_zh": "他的名字已經從會員名單上被除去了。",
+      "draft": false,
+      "prefixId": "punct",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "pung",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "源自拉丁文 expungere「刺去、塗銷」，即 ex（向外）加 pungere（刺、穿），字面義是在名冊上要刪的名字上下刺點做記號，後被早期英語辭書理解為「以刺點真的抹除」。",
+      "derivatives": []
+    },
+    {
+      "id": "assign",
+      "word": "assign",
+      "phonetic": "əˈsaɪn",
+      "zh": "指派，分配",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The case has been assigned to our most senior officer.",
+      "example_zh": "這個案子已經指派給我們最資深的那位警官。",
+      "draft": false,
+      "prefixId": "sign",
+      "parts": [
+        {
+          "text": "as",
+          "gloss": "朝向"
+        },
+        {
+          "text": "sign",
+          "gloss": "記號"
+        }
+      ],
+      "etymology": "源自古法文 assigner，上承拉丁文 assignare／adsignare「劃記分配、指定」，由 ad-「朝向」（在此同化為 as-）加上 signare「做記號」（源自 signum「標記」）組成。",
+      "derivatives": [
+        {
+          "word": "assignment",
+          "pos": "n.",
+          "zh": "指派，任務，作業"
+        }
+      ]
+    },
+    {
+      "id": "significance",
+      "word": "significance",
+      "phonetic": "sɪgˈnɪfɪkəns",
+      "zh": "意義，重要性",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The significance of this finding is beyond comprehension.",
+      "example_zh": "這項發現的重要性超乎想像。",
+      "draft": false,
+      "prefixId": "sign",
+      "parts": [
+        {
+          "text": "sign",
+          "gloss": "記號"
+        },
+        {
+          "text": "fic",
+          "gloss": "做"
+        }
+      ],
+      "etymology": "源自拉丁文 significantia，來自 significare「用記號表示、意指」，由 signum「記號」加上 facere 的組合形式 -fic-「做」構成，字面意思是「做出記號」，字義由「徵兆、夢兆的含義」演變為現今的「重要性」。",
+      "derivatives": [
+        {
+          "word": "significant",
+          "pos": "a.",
+          "zh": "重要的，重大的"
+        },
+        {
+          "word": "signify",
+          "pos": "v.",
+          "zh": "表示"
+        }
+      ]
+    },
+    {
+      "id": "insignia",
+      "word": "insignia",
+      "phonetic": "ɪnˈsɪgniə",
+      "zh": "標誌，徽章",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Their jackets have the school's insignia on the front.",
+      "example_zh": "他們的外套前面有學校的校徽。",
+      "draft": false,
+      "prefixId": "sign",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "在上"
+        },
+        {
+          "text": "sign",
+          "gloss": "記號"
+        }
+      ],
+      "etymology": "源自拉丁文 insignia，是 insigne（意為「榮譽或職位的徽章、標誌」）的中性複數形式，由方位字首 in-「在…之上」（即 Etymonline 的 in-（2），並非表否定的 in-（1）「不」）加上 signum「標記」組成。",
+      "derivatives": []
+    },
+    {
+      "id": "designate",
+      "word": "designate",
+      "phonetic": "ˈdɛzɪgnet",
+      "zh": "標示，委任，指派",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The wooden stakes designate the edge of the building site.",
+      "example_zh": "這些木樁標示出建築工地的邊界。",
+      "draft": false,
+      "prefixId": "sign",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "向外"
+        },
+        {
+          "text": "sign",
+          "gloss": "記號"
+        }
+      ],
+      "etymology": "源自拉丁文 designatus，是 designare「標示出、指明、選定」的過去分詞，由 de「向外」加上 signare「做記號」（源自 signum「標記」）組成，原意為「標示出」，後轉為「指定、任命」之義。",
+      "derivatives": [
+        {
+          "word": "designation",
+          "pos": "n.",
+          "zh": "標示，稱號，指定"
+        }
+      ]
+    },
+    {
+      "id": "occasionally",
+      "word": "occasionally",
+      "phonetic": "əˈkeʒənəlɪ",
+      "zh": "偶爾",
+      "pos": "adv.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I go to the movies only occasionally.",
+      "example_zh": "我只偶爾去看電影。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "oc",
+          "gloss": "向下、朝"
+        },
+        {
+          "text": "cas",
+          "gloss": "落下"
+        }
+      ],
+      "etymology": "拉丁文 cadere（落下）加前綴 ob-（Etymonline 在此釋為「向下、離開」）成 occidere「落下、沉沒」，其過去分詞幹 cas- 造出名詞 occasionem，本義是「眾多情境一起落下的交會點」，因而引申為時機、場合，副詞 occasionally 即「機會偶然落到某時某地」的偶爾。",
+      "derivatives": [
+        {
+          "word": "occasion",
+          "pos": "n.",
+          "zh": "場合，時機"
+        }
+      ]
+    },
+    {
+      "id": "casual",
+      "word": "casual",
+      "phonetic": "ˈkæʒuəl",
+      "zh": "不正式的，隨意的，偶然的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This is an informal party, so you can come in casual wear.",
+      "example_zh": "這是個非正式的派對，所以你可以穿便服來。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "cas",
+          "gloss": "落下、機運"
+        }
+      ],
+      "etymology": "十四世紀末經法文 casuel 借入，源自晚期拉丁文 casualis「出於偶然的」，其字根 casus（機運、時機、意外、事件）正是動詞 cadere（落下、崩落）的過去分詞，字面就是「一次落下」，故 casual 由「受偶然支配的」延伸出 1883 年指人「靠不住、隨性」與 1891 年指衣著「非正式的」。",
+      "derivatives": [
+        {
+          "word": "casually",
+          "pos": "adv.",
+          "zh": "隨意地"
+        }
+      ]
+    },
+    {
+      "id": "casualty",
+      "word": "casualty",
+      "phonetic": "ˈkæʒuəltɪ",
+      "zh": "傷亡人員，死傷者",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The ex-legislator was a casualty of the last election.",
+      "example_zh": "這位前立委是上次選舉的犧牲者。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "cas",
+          "gloss": "落下、機運"
+        }
+      ],
+      "etymology": "十五世紀初在英文內部由形容詞 casual 仿 royalty、penalty 的構詞加 -ty 而成，字根仍是 cadere 的過去分詞 casus（機運、意外），原指「偶發事故、意外損失」，十五世紀末轉指部隊的人員折損，到 1844 年才窄化成「戰場上被殺、負傷或失蹤的個人」。",
+      "derivatives": []
+    },
+    {
+      "id": "incident",
+      "word": "incident",
+      "phonetic": "ˈɪnsɪdənt",
+      "zh": "偶發事件",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The fight was an unfortunate incident that marred the otherwise perfect party.",
+      "example_zh": "那場打架是個不幸的插曲，毀了原本完美的派對。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "在…之上"
+        },
+        {
+          "text": "cid",
+          "gloss": "落下"
+        }
+      ],
+      "etymology": "十五世紀初借自拉丁文 incidere「落到…上、碰巧發生、降臨」的現在分詞 incidentem，其結構是 in-（在…之上）加上 cadere 在前綴後母音弱化而成的複合形 -cidere（落下），所以 incident 字面就是「落到身上的一件事」，即事件、事變。",
+      "derivatives": [
+        {
+          "word": "incidentally",
+          "pos": "adv.",
+          "zh": "附帶一提"
+        },
+        {
+          "word": "incidence",
+          "pos": "n.",
+          "zh": "事件，發生，發生率"
+        }
+      ]
+    },
+    {
+      "id": "coincidence",
+      "word": "coincidence",
+      "phonetic": "koˈɪnsɪdəns",
+      "zh": "巧合",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It was a coincidence that he and his ex-girlfriend got adjoining seats on the same flight.",
+      "example_zh": "他和前女友在同一班飛機上坐到相鄰的位子，真是巧合。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "co",
+          "gloss": "一起"
+        },
+        {
+          "text": "in",
+          "gloss": "在…之上"
+        },
+        {
+          "text": "cid",
+          "gloss": "落下"
+        }
+      ],
+      "etymology": "約 1600 年借自法文 coincidence，源自中世紀拉丁文 coincidere「一起落到同一點上」，即 com-（一起）疊加在 incidere（in-「在…之上」＋ cadere 弱化後的 -cidere「落下」）之上，初指「本質完全吻合」，1640 年代指「同時存在」，1680 年代起才是今天「看似無關卻同時發生」的巧合。",
+      "derivatives": [
+        {
+          "word": "coincide",
+          "pos": "v.",
+          "zh": "與…巧合"
+        },
+        {
+          "word": "coincidental",
+          "pos": "a.",
+          "zh": "巧合的"
+        }
+      ]
+    },
+    {
+      "id": "decadent",
+      "word": "decadent",
+      "phonetic": "ˈdɛkədənt",
+      "zh": "頹廢的，墮落的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Rome under Nero was a decadent city.",
+      "example_zh": "尼祿統治下的羅馬是一座墮落的城市。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "向下、離"
+        },
+        {
+          "text": "cad",
+          "gloss": "落下"
+        }
+      ],
+      "etymology": "源自法文 décadent，係由 décadence 逆構而成，再上溯中世紀拉丁文 decadentia（衰敗）與動詞 decadere，也就是 de-（apart, down，離開、向下）加上保留現在幹形式的 cadere（落下），字面即「一路往下掉」，1837 年由卡萊爾引入英文指「自昔日全盛狀態衰落」，1888 年起兼指頹廢派藝文，1970 年代商業文案又轉出形容甜點「令人縱情享受」的褒義。",
+      "derivatives": [
+        {
+          "word": "decadence",
+          "pos": "n.",
+          "zh": "頹廢，墮落"
+        }
+      ]
+    },
+    {
+      "id": "deciduous",
+      "word": "deciduous",
+      "phonetic": "dɪˈsɪdʒuəs",
+      "zh": "落葉性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "If you plant deciduous trees in your yard, it will be hard to keep the lawn tidy.",
+      "example_zh": "如果你在院子裡種落葉樹，草坪就很難保持整潔。",
+      "draft": false,
+      "prefixId": "cas",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "向下"
+        },
+        {
+          "text": "cid",
+          "gloss": "落下"
+        }
+      ],
+      "etymology": "1680 年代借自拉丁文 deciduus「會掉落下來的」，來自動詞 decidere（de-「向下」＋ cadere 在前綴後弱化成的 -cidere「落下」），本指「到了某階段就脫落」，1778 年起用於植物學，專指每年落葉的落葉樹，與常綠樹相對。",
+      "derivatives": []
     }
   ]
 }

@@ -1,0 +1,46 @@
+[
+  {
+    "word": "assign",
+    "parts": [
+      { "text": "as-", "gloss": "朝向" },
+      { "text": "sign", "gloss": "記號" }
+    ],
+    "etymology": "源自古法文 assigner，上承拉丁文 assignare／adsignare「劃記分配、指定」，由 ad-「朝向」（在此同化為 as-）加上 signare「做記號」（源自 signum「標記」）組成。",
+    "us_ipa": "/əˈsaɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/assign",
+    "notes": ""
+  },
+  {
+    "word": "significance",
+    "parts": [
+      { "text": "sign", "gloss": "記號" },
+      { "text": "fic", "gloss": "做" }
+    ],
+    "etymology": "源自拉丁文 significantia，來自 significare「用記號表示、意指」，由 signum「記號」加上 facere 的組合形式 -fic-「做」構成，字面意思是「做出記號」，字義由「徵兆、夢兆的含義」演變為現今的「重要性」。",
+    "us_ipa": "/sɪɡˈnɪfɪkəns/",
+    "etymonline_url": "https://www.etymonline.com/word/significance",
+    "notes": ""
+  },
+  {
+    "word": "insignia",
+    "parts": [
+      { "text": "in-", "gloss": "在上" },
+      { "text": "sign", "gloss": "記號" }
+    ],
+    "etymology": "源自拉丁文 insignia，是 insigne（意為「榮譽或職位的徽章、標誌」）的中性複數形式，由方位字首 in-「在…之上」（即 Etymonline 的 in-(2)，並非表否定的 in-(1)「不」）加上 signum「標記」組成。",
+    "us_ipa": "/ɪnˈsɪɡniə/",
+    "etymonline_url": "https://www.etymonline.com/word/insignia",
+    "notes": "這是陷阱字：in- 在此並非「不、否定」的字首（如 invisible 的 in-(1)），而是表示「在…之上」的方位字首（in-(2)，與 into、on 同源，見 Etymonline 的 in- 詞條）。老師提示的「in-(在)」方向正確，但學習時容易誤判成否定字首，需特別留意分辨。"
+  },
+  {
+    "word": "designate",
+    "parts": [
+      { "text": "de-", "gloss": "向外" },
+      { "text": "sign", "gloss": "記號" }
+    ],
+    "etymology": "源自拉丁文 designatus，是 designare「標示出、指明、選定」的過去分詞，由 de「向外」加上 signare「做記號」（源自 signum「標記」）組成，原意為「標示出」，後轉為「指定、任命」之義。",
+    "us_ipa": "/ˈdɛzɪɡneɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/designate",
+    "notes": "老師提示 de- 意為「向下」，但 Etymonline 在 designate 詞條原文寫的是 de 意為「out（向外）」，並非「down（向下）」，與老師提示有出入。此處依 Etymonline 原文以「向外」理解，designare 本義即為「標示出」（把記號做到外面來，使其顯明）。"
+  }
+]

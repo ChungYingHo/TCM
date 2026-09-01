@@ -1,0 +1,66 @@
+[
+  {
+    "word": "determine",
+    "parts": [
+      { "text": "de-", "gloss": "離、去" },
+      { "text": "termin", "gloss": "界限" }
+    ],
+    "etymology": "拉丁文 determinare 意為「圍住、劃定界限」，由 de-（Etymonline 記作 off，離、去）加上 terminare（標出終點或界線）構成，十四世紀末進入英語時的義項正是「定下範圍、限定時間或程度」，之後才引申為今天的判定與決定。",
+    "us_ipa": "/dɪˈtɝmɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/determine",
+    "notes": "老師提示 de- 作 down，Etymonline 實際記的是 off（離、去），此處帶有「把界線一次劃定下來」的完成意味，兩說都在 de- 的常見義域內，不影響「劃界→決定」這條推導。"
+  },
+  {
+    "word": "term",
+    "parts": [
+      { "text": "term", "gloss": "界限" }
+    ],
+    "etymology": "約 1200 年經古法文 terme 借自拉丁文 terminus「終點、界線」，最早指時間上的界限（期限、任期，1300 年前後再生出開庭期與學期），中世紀拉丁文在邏輯與數學中用 terminus 指「被界定的語詞」而生出十四世紀末的術語義，複數 terms 則於十四世紀初引申為劃定雙方範圍的條件。",
+    "us_ipa": "/tɜɹm/",
+    "etymonline_url": "https://www.etymonline.com/word/term",
+    "notes": "課本四個中文義（期限／術語／學期／條件）全部正確，且都回得到同一個「界線」核心。拉丁 terminus 的本義是地界上的界石（PIE *ter-men「木樁、界柱」，羅馬另有掌管地界的神 Terminus），把這個字根記成「界標」而非單純的「結束」，才解釋得了 conterminous 與 exterminate。"
+  },
+  {
+    "word": "conterminous",
+    "parts": [
+      { "text": "con-", "gloss": "共同" },
+      { "text": "termin", "gloss": "界線" }
+    ],
+    "etymology": "1670 年代借自拉丁文 conterminus「相鄰、有共同邊界」，由 com-（一起）加 terminus（界石、界線）構成，字面就是兩塊地共用同一條界線，因此意為「有相同界限、在邊界上相接」。",
+    "us_ipa": "/kənˈtɝmɪnəs/",
+    "etymonline_url": "https://www.etymonline.com/word/conterminous",
+    "notes": "常見的同義變體 coterminous（1630 年代）是英語拿 co- 自行拼出來的，Etymonline 註為 malformed，主張拉丁正統寫法的人偏好 conterminous，兩種拼法都會在考題出現。"
+  },
+  {
+    "word": "exterminate",
+    "parts": [
+      { "text": "ex-", "gloss": "向外" },
+      { "text": "termin", "gloss": "界線" }
+    ],
+    "etymology": "1540 年代進入英語時的意思是「驅逐、趕走」，源自拉丁文 exterminare「趕出去、驅出界外」，由 ex-（out of）加 termen（界線、界限）的奪格 termine 而來，字面是把人趕到邊界之外，「徹底消滅」的今義要到 1640 年代才出現。",
+    "us_ipa": "/ɪkˈstɝmɪneɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/exterminate",
+    "notes": "課本中文的「終結」會誤導：exterminate 指把整群人或生物殺光、根除，不是一般的「使某事結束」（那是 terminate），字源上也是「趕出界外」而非「終結」，「消滅」才是準確的對譯。"
+  },
+  {
+    "word": "terminal",
+    "parts": [
+      { "text": "termin", "gloss": "界線、終點" }
+    ],
+    "etymology": "十五世紀中葉借自拉丁文 terminalis「屬於界線或終點的、最後的」，源頭是 terminus（界石、界線），名詞用法先指字尾（1831）與電池末端的接線螺絲（1838），1870 年起指鐵路終點站、1921 年擴及航空、1954 年起指電腦終端機，而「致命的、末期的」一義見於 1862 年。",
+    "us_ipa": "/ˈtɝmɪnəl/",
+    "etymonline_url": "https://www.etymonline.com/word/terminal",
+    "notes": ""
+  },
+  {
+    "word": "interminable",
+    "parts": [
+      { "text": "in-", "gloss": "不" },
+      { "text": "termin", "gloss": "界限" }
+    ],
+    "etymology": "十四世紀末經古法文 interminable 或直接借自晚期拉丁文 interminabilis，由 in-（不）加 terminabilis（來自 terminare「設限、劃界、結束」）構成，字面是「無法被劃出界線的」，因此表示沒有盡頭。",
+    "us_ipa": "/ɪnˈtɝmənəbəl/",
+    "etymonline_url": "https://www.etymonline.com/word/interminable",
+    "notes": "此處 in- 是否定的「不」，不是表方向的「進入」，別跟 intern、internal 混。Wiktionary 只列英式 /ɪnˈtɜː(ɹ).mɪn.ə.bəl/，本欄美式音標取自 Dictionary.com 的 ɪnˈtɜr mə nə bəl。"
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "word": "finale",
+    "parts": [
+      { "text": "fin", "gloss": "結束" }
+    ],
+    "etymology": "1783 年借自義大利文 finale（形容詞「最後的」轉作名詞），上溯拉丁文 finalis「屬於結尾的」與字根 finis「結束」，本指樂曲或戲劇的終樂章，1810 年起有比喻用法。",
+    "us_ipa": "/fəˈnɑli/",
+    "etymonline_url": "https://www.etymonline.com/word/finale",
+    "notes": "此字走的是義大利文而非直接從拉丁文入英文，所以字尾讀成義式的 -li（/fəˈnɑli/，另可讀 /fəˈnæli/），不是英語化的 /-eɪl/。"
+  },
+  {
+    "word": "confine",
+    "parts": [
+      { "text": "con-", "gloss": "共同" },
+      { "text": "fin", "gloss": "界線" }
+    ],
+    "etymology": "1520 年代自法文 confiner，源自拉丁文 confinis「相鄰的、共有邊界的」，由 com「共同」加 finis「邊界」構成，本義是兩地共用一條界線，1590 年代才轉為把人事物關在界內的「限制」。",
+    "us_ipa": "/kənˈfaɪn/",
+    "etymonline_url": "https://www.etymonline.com/word/confine",
+    "notes": "此處 fin 取「邊界」義（共有一條界線）而非「結束」。重音會隨詞性移動，動詞讀 /kənˈfaɪn/，名詞讀 /ˈkɑnfaɪn/，且名詞「範圍、界限」義多用複數 confines。"
+  },
+  {
+    "word": "definition",
+    "parts": [
+      { "text": "de-", "gloss": "徹底" },
+      { "text": "fin", "gloss": "界限" }
+    ],
+    "etymology": "14 世紀晚期經古法文 definicion 借自拉丁文 definitionem「劃界、設限、說明」，來自動詞 definire（de「徹底」加 finire「劃定界線」），所以「定義」的本義是把一個概念的邊界完整框出來。",
+    "us_ipa": "/ˌdɛfəˈnɪʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/definition",
+    "notes": "Etymonline 把 de- 註為「完全、徹底」，與老師字根表寫的「向下」不同。fin 在此取「邊界」義（劃出概念範圍），與「結束」無關。"
+  },
+  {
+    "word": "definite",
+    "parts": [
+      { "text": "de-", "gloss": "徹底" },
+      { "text": "fin", "gloss": "界限" }
+    ],
+    "etymology": "約 1500 年借自拉丁文 definitus（definire「劃定界線、界定、說明」的過去分詞），字面是「已被劃定邊界的」，1550 年代起有「有固定界限」義，引申為界線清楚、精確無疑的「明確的」。",
+    "us_ipa": "/ˈdɛfənɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/definite",
+    "notes": "de- 在 Etymonline 註為「完全」非「向下」，fin 取「邊界」義。Etymonline 明文辨析 definite 是「清楚、精確、不含糊」，definitive 才是「具最終定論性質」，兩字不可互換。"
+  },
+  {
+    "word": "definitive",
+    "parts": [
+      { "text": "de-", "gloss": "徹底" },
+      { "text": "fin", "gloss": "界限" }
+    ],
+    "etymology": "14 世紀晚期經古法文 definitif 借自拉丁文 definitivus「界定性的」，同樣來自 definire「劃定界線、界定、說明」，語意落在劃下最後一道界線，因而指再無爭議的定論。",
+    "us_ipa": "/dɪˈfɪnətɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/definitive",
+    "notes": "與 definite 同源同構（皆出自 definire），差別在 Etymonline 的辨析，definite 指「清楚、精確、不含糊」，definitive 指「帶有最終定論的性質」。de- 在此註為「完全」非「向下」。"
+  },
+  {
+    "word": "finalist",
+    "parts": [
+      { "text": "fin", "gloss": "最終" }
+    ],
+    "etymology": "1896 年由 final 加 -ist 造出，final 經古法文承自晚期拉丁文 finalis「屬於結尾的」，源頭是 finis「結束」，指層層淘汰後留到最後一場決賽的人。",
+    "us_ipa": "/ˈfaɪnəlɪst/",
+    "etymonline_url": "https://www.etymonline.com/word/finalist",
+    "notes": "Wiktionary 的 finalist 條沒有列美式 IPA，此音由其字基 final /ˈfaɪn(ə)l/ 加 -ist 推得。課本中文「入圍者」略寬，finalist 專指進入最後一輪決賽者，不是任何階段的入選者。另有 1883 年的舊義「相信終局已至者」，今已罕用。"
+  },
+  {
+    "word": "finality",
+    "parts": [
+      { "text": "fin", "gloss": "結束" }
+    ],
+    "etymology": "1540 年代自法文 finalité，源自晚期拉丁文 finalitas「處於最終狀態」，再上溯 finalis「最後的」與 finis「結束」，1833 年起指事情已成定局、不會再變動的性質。",
+    "us_ipa": "/faɪˈnæləti/",
+    "etymonline_url": "https://www.etymonline.com/word/finality",
+    "notes": "課本中文「確定性」容易和 certainty（有把握）混淆，finality 強調的是「已成定局、無法再更動」的終局性，是關於事情不可逆而非關於心裡篤定。"
+  },
+  {
+    "word": "finite",
+    "parts": [
+      { "text": "fin", "gloss": "界限" }
+    ],
+    "etymology": "15 世紀初借自拉丁文 finitum（finire「劃定界線、設限、告終」的過去分詞），字根 finis 本義是「劃分之物、邊界」，故 finite 指有邊界可及、非無窮的。",
+    "us_ipa": "/ˈfaɪnaɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/finite",
+    "notes": "讀音陷阱，finite 讀 /ˈfaɪnaɪt/，但加了否定字首的 infinite 重音前移、母音全變短，讀 /ˈɪnfɪnɪt/，不可由 finite 直接推。"
+  },
+  {
+    "word": "affinity",
+    "parts": [
+      { "text": "af-", "gloss": "朝向" },
+      { "text": "fin", "gloss": "邊界" }
+    ],
+    "etymology": "約 1300 年經古法文 afinite 借自拉丁文 affinitatem，來自 affinis「毗鄰的、接壤的」（ad「向」加 finis「邊界」），字面是「與之接壤」，先指姻親關係，約 1600 年用於化學等領域的結構親緣，1610 年代才引申為人與人之間的自然投緣。",
+    "us_ipa": "/əˈfɪnɪti/",
+    "etymonline_url": "https://www.etymonline.com/word/affinity",
+    "notes": "本組最不直觀的一個，fin 在此絕對是「邊界」而非「結束」，字面是兩塊地接壤，所以才由姻親義長出「相似、親近」義。課本中文「喜好」偏弱，affinity 指天生的投緣或親近傾向，不等於一般的 like。"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "word": "acupuncture",
+    "parts": [
+      { "text": "acu", "gloss": "針" },
+      { "text": "punct", "gloss": "刺" }
+    ],
+    "etymology": "1680 年代指以針刺止痛的外科操作，由拉丁文 acus（針）加上 puncture（來自晚期拉丁文 punctura「刺」，源自 pungere 的過去分詞 punctus）構成，走的是分詞幹 punct-。",
+    "us_ipa": "/ˈækjuˌpʌŋktʃɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/acupuncture",
+    "notes": "第一個成分是拉丁名詞 acus（針），與 acute／acumen 那組的動詞 acuere（使銳利）是不同的拉丁字，只是同溯原始印歐語字根 *ak-（尖銳），所以本字同時橫跨 acu- 與 punct- 兩個字根家族，老師標的 acu(sharp/needle) 取「針」義較準。"
+  },
+  {
+    "word": "compunction",
+    "parts": [
+      { "text": "com", "gloss": "加強語氣" },
+      { "text": "punct", "gloss": "刺" }
+    ],
+    "etymology": "14 世紀中經古法文 compunction 借自晚期拉丁文 compunctionem「良心的刺痛、悔恨」，源自動詞 compungere，即 com-（此處或為加強語氣）加 pungere（刺、穿），英文形的 -punct- 取自過去分詞幹。",
+    "us_ipa": "/kəmˈpʌŋkʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/compunction",
+    "notes": "與老師標的 com-(together) 不同，Etymonline 在本字明言 com- 在此「或許是加強語氣的字首（perhaps an intensive prefix）」，意思是「狠狠刺一下（良心）」而非「一起刺」，記時宜當作加強語氣。"
+  },
+  {
+    "word": "poignant",
+    "parts": [
+      { "text": "poign", "gloss": "刺" }
+    ],
+    "etymology": "14 世紀晚期借自古法文 poignant「尖銳的、刺人的」（13 世紀），那是動詞 poindre（刺、螫）的現在分詞，poindre 又源自拉丁文 pungere（刺、穿、螫，引申為使人悲傷苦惱）。",
+    "us_ipa": "/ˈpɔɪnjənt/",
+    "etymonline_url": "https://www.etymonline.com/word/poignant",
+    "notes": "拼法陷阱：本字走法文而非直接走拉丁分詞，保留的是鼻音現在式字幹並在法文裡拼成 -gn-，所以是 poignant 不是 poinctant／punctant，且 g 不發音，讀作 /ˈpɔɪnjənt/。"
+  },
+  {
+    "word": "puncture",
+    "parts": [
+      { "text": "punct", "gloss": "刺" }
+    ],
+    "etymology": "14 世紀晚期指尖銳器物造成的小穿孔或小傷口，源自晚期拉丁文 punctura「刺」，來自拉丁文 punctus，即 pungere（刺、穿）的過去分詞，上溯原始印歐語字根 *peuk-（刺）。",
+    "us_ipa": "/ˈpʌŋktʃɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/puncture",
+    "notes": ""
+  },
+  {
+    "word": "pungent",
+    "parts": [
+      { "text": "pung", "gloss": "刺" }
+    ],
+    "etymology": "1590 年代原指「尖銳而使人痛楚的」，源自拉丁文 pungentem（主格 pungens），是 pungere（刺、穿、螫）的現在分詞，1660 年代才轉指氣味或味道的嗆鼻辛辣。",
+    "us_ipa": "/ˈpʌndʒənt/",
+    "etymonline_url": "https://www.etymonline.com/word/pungent",
+    "notes": "本字取的是鼻音現在式字幹 pung- 而非分詞幹 punct-，故無 c，且此處 g 讀軟音 /dʒ/，與 puncture 的 /ŋk/ 不同，別讀成 /ˈpʌŋɡənt/。"
+  },
+  {
+    "word": "expunge",
+    "parts": [
+      { "text": "ex", "gloss": "向外" },
+      { "text": "pung", "gloss": "刺" }
+    ],
+    "etymology": "源自拉丁文 expungere「刺去、塗銷」，即 ex（向外）加 pungere（刺、穿），字面義是在名冊上要刪的名字上下刺點做記號，後被早期英語辭書理解為「以刺點真的抹除」。",
+    "us_ipa": "/ɪkˈspʌndʒ/",
+    "etymonline_url": "https://www.etymonline.com/word/expunge",
+    "notes": "同樣沿用現在式字幹 pung-，所以拼作 expunge 而非 expunct，但名詞化時又回到分詞幹寫成 expunction，兩種拼法都對、只是各據一個字幹。"
+  }
+]

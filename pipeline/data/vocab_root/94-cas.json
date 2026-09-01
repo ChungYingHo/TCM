@@ -1,0 +1,252 @@
+[
+  {
+    "word": "occasionally",
+    "prefixId": "cas",
+    "pos": "adv.",
+    "phonetic": "əˈkeʒənəlɪ",
+    "zh": "偶爾",
+    "parts": [
+      {
+        "text": "oc",
+        "gloss": "向下、朝"
+      },
+      {
+        "text": "cas",
+        "gloss": "落下"
+      }
+    ],
+    "etymology": "拉丁文 cadere（落下）加前綴 ob-（Etymonline 在此釋為「向下、離開」）成 occidere「落下、沉沒」，其過去分詞幹 cas- 造出名詞 occasionem，本義是「眾多情境一起落下的交會點」，因而引申為時機、場合，副詞 occasionally 即「機會偶然落到某時某地」的偶爾。",
+    "derivatives": [
+      {
+        "word": "occasion",
+        "pos": "n.",
+        "zh": "場合，時機"
+      }
+    ],
+    "example": "I go to the movies only occasionally.",
+    "example_zh": "我只偶爾去看電影。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/occasion",
+      "ipa": "/əˈkeɪʒənəli/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師標 oc- 為「toward」，但 Etymonline 的 occasion 條把 ob- 釋為「down, away（向下、離開）」，取「往下落」之義更貼字義。另注意本字用的是過去分詞幹 cas，不是現在幹 cad 或弱化形 cid。"
+    }
+  },
+  {
+    "word": "casual",
+    "prefixId": "cas",
+    "pos": "a.",
+    "phonetic": "ˈkæʒuəl",
+    "zh": "不正式的，隨意的，偶然的",
+    "parts": [
+      {
+        "text": "cas",
+        "gloss": "落下、機運"
+      }
+    ],
+    "etymology": "十四世紀末經法文 casuel 借入，源自晚期拉丁文 casualis「出於偶然的」，其字根 casus（機運、時機、意外、事件）正是動詞 cadere（落下、崩落）的過去分詞，字面就是「一次落下」，故 casual 由「受偶然支配的」延伸出 1883 年指人「靠不住、隨性」與 1891 年指衣著「非正式的」。",
+    "derivatives": [
+      {
+        "word": "casually",
+        "pos": "adv.",
+        "zh": "隨意地"
+      }
+    ],
+    "example": "This is an informal party, so you can come in casual wear.",
+    "example_zh": "這是個非正式的派對，所以你可以穿便服來。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/casual",
+      "ipa": "/ˈkæʒuəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "A casual encounter with a stranger turned into a truly entertaining evening."
+      ]
+    }
+  },
+  {
+    "word": "casualty",
+    "prefixId": "cas",
+    "pos": "n.",
+    "phonetic": "ˈkæʒuəltɪ",
+    "zh": "傷亡人員，死傷者",
+    "parts": [
+      {
+        "text": "cas",
+        "gloss": "落下、機運"
+      }
+    ],
+    "etymology": "十五世紀初在英文內部由形容詞 casual 仿 royalty、penalty 的構詞加 -ty 而成，字根仍是 cadere 的過去分詞 casus（機運、意外），原指「偶發事故、意外損失」，十五世紀末轉指部隊的人員折損，到 1844 年才窄化成「戰場上被殺、負傷或失蹤的個人」。",
+    "derivatives": [],
+    "example": "The ex-legislator was a casualty of the last election.",
+    "example_zh": "這位前立委是上次選舉的犧牲者。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/casualty",
+      "ipa": "/ˈkæʒuəlti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師把 casualty 掛在 cas 下正確，但它不是拉丁文直接造的字，而是英文用 casual＋-ty 派生。語意路徑是「機運、偶發事故」→「部隊減員」→「傷亡人員」，考題常考的正是這條由「偶然」到「死傷」的轉折。",
+      "extraExamples": [
+        "The battle ended with heavy casualties on both sides."
+      ]
+    }
+  },
+  {
+    "word": "incident",
+    "prefixId": "cas",
+    "pos": "n.",
+    "phonetic": "ˈɪnsɪdənt",
+    "zh": "偶發事件",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "在…之上"
+      },
+      {
+        "text": "cid",
+        "gloss": "落下"
+      }
+    ],
+    "etymology": "十五世紀初借自拉丁文 incidere「落到…上、碰巧發生、降臨」的現在分詞 incidentem，其結構是 in-（在…之上）加上 cadere 在前綴後母音弱化而成的複合形 -cidere（落下），所以 incident 字面就是「落到身上的一件事」，即事件、事變。",
+    "derivatives": [
+      {
+        "word": "incidentally",
+        "pos": "adv.",
+        "zh": "附帶一提"
+      },
+      {
+        "word": "incidence",
+        "pos": "n.",
+        "zh": "事件，發生，發生率"
+      }
+    ],
+    "example": "The fight was an unfortunate incident that marred the otherwise perfect party.",
+    "example_zh": "那場打架是個不幸的插曲，毀了原本完美的派對。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/incident",
+      "ipa": "/ˈɪnsɪdənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "coincidence",
+    "prefixId": "cas",
+    "pos": "n.",
+    "phonetic": "koˈɪnsɪdəns",
+    "zh": "巧合",
+    "parts": [
+      {
+        "text": "co",
+        "gloss": "一起"
+      },
+      {
+        "text": "in",
+        "gloss": "在…之上"
+      },
+      {
+        "text": "cid",
+        "gloss": "落下"
+      }
+    ],
+    "etymology": "約 1600 年借自法文 coincidence，源自中世紀拉丁文 coincidere「一起落到同一點上」，即 com-（一起）疊加在 incidere（in-「在…之上」＋ cadere 弱化後的 -cidere「落下」）之上，初指「本質完全吻合」，1640 年代指「同時存在」，1680 年代起才是今天「看似無關卻同時發生」的巧合。",
+    "derivatives": [
+      {
+        "word": "coincide",
+        "pos": "v.",
+        "zh": "與…巧合"
+      },
+      {
+        "word": "coincidental",
+        "pos": "a.",
+        "zh": "巧合的"
+      }
+    ],
+    "example": "It was a coincidence that he and his ex-girlfriend got adjoining seats on the same flight.",
+    "example_zh": "他和前女友在同一班飛機上坐到相鄰的位子，真是巧合。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/coincidence",
+      "ipa": "/koʊˈɪnsɪdəns/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師拆成 co-＋in-＋cid 與 Etymonline 一致，但層次是巢狀的：先有 in-＋cid 組成 incidere，co-（com-）再加在整個複合動詞前面，不是三個成分平行相加。"
+    }
+  },
+  {
+    "word": "decadent",
+    "prefixId": "cas",
+    "pos": "a.",
+    "phonetic": "ˈdɛkədənt",
+    "zh": "頹廢的，墮落的",
+    "parts": [
+      {
+        "text": "de",
+        "gloss": "向下、離"
+      },
+      {
+        "text": "cad",
+        "gloss": "落下"
+      }
+    ],
+    "etymology": "源自法文 décadent，係由 décadence 逆構而成，再上溯中世紀拉丁文 decadentia（衰敗）與動詞 decadere，也就是 de-（apart, down，離開、向下）加上保留現在幹形式的 cadere（落下），字面即「一路往下掉」，1837 年由卡萊爾引入英文指「自昔日全盛狀態衰落」，1888 年起兼指頹廢派藝文，1970 年代商業文案又轉出形容甜點「令人縱情享受」的褒義。",
+    "derivatives": [
+      {
+        "word": "decadence",
+        "pos": "n.",
+        "zh": "頹廢，墮落"
+      }
+    ],
+    "example": "Rome under Nero was a decadent city.",
+    "example_zh": "尼祿統治下的羅馬是一座墮落的城市。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/decadent",
+      "ipa": "/ˈdɛkədənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師列的衍生字 decay 確與 decadent 同源，兩者都出自 de-＋cadere（decay 走通俗拉丁文 decadere → 古北法文 decair 這條路），只是 decay 拼寫已磨損到看不出 cad。發音方面 Wiktionary 只給一條 /ˈdɛkədənt/（附南英格蘭語音檔）而未另列 US 行，美式亦讀此音。"
+    }
+  },
+  {
+    "word": "deciduous",
+    "prefixId": "cas",
+    "pos": "a.",
+    "phonetic": "dɪˈsɪdʒuəs",
+    "zh": "落葉性的",
+    "parts": [
+      {
+        "text": "de",
+        "gloss": "向下"
+      },
+      {
+        "text": "cid",
+        "gloss": "落下"
+      }
+    ],
+    "etymology": "1680 年代借自拉丁文 deciduus「會掉落下來的」，來自動詞 decidere（de-「向下」＋ cadere 在前綴後弱化成的 -cidere「落下」），本指「到了某階段就脫落」，1778 年起用於植物學，專指每年落葉的落葉樹，與常綠樹相對。",
+    "derivatives": [],
+    "example": "If you plant deciduous trees in your yard, it will be hard to keep the lawn tidy.",
+    "example_zh": "如果你在院子裡種落葉樹，草坪就很難保持整潔。",
+    "sources": {
+      "page": "IMG_1710",
+      "etymonline": "https://www.etymonline.com/word/deciduous",
+      "ipa": "/dɪˈsɪdʒuəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "陷阱字：此處的 -cid- 是 cadere（落下）的弱化形，與表「切、殺」的 -cide（拉丁 caedere，如 suicide、pesticide）同形異源，勿混。醫學上的 deciduous teeth（乳齒）也是取「會掉落」之義。"
+    }
+  }
+]

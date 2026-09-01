@@ -91,21 +91,21 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 14/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 17/29 組**
 
 照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 14 組。
+卡在 Etymonline／IPA 查證，29 組做完 17 組。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **14/29 組**（80 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 80 字（`vocab.json` 共 646 字） |
+| Etymonline／IPA 查證 | **17/29 組**（97 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 97 字（`vocab.json` 共 663 字） |
 
-**查證完成的 14 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
-lev、stig、acr
+**查證完成的 17 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr、punct、sign、cas
 
 **還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
 （組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
@@ -114,8 +114,8 @@ lev、stig、acr
 | 輪 | 組（字數） | 小計 | 狀態 |
 | :--- | :--- | --: | :--- |
 | R1 | lev 5、stig 10、acr 3 | 18 | **完成** |
-| R2 | punct 6、sign 4、cas 7 | 17 | 未開始 |
-| R3 | fin 9、term 6、und 4 | 19 | 未開始 |
+| R2 | punct 6、sign 4、cas 7 | 17 | **完成** |
+| R3 | fin 9、term 6、und 4 | 19 | 進行中 |
 | R4 | clud 8、flu 9、enni 2 | 19 | 未開始 |
 | R5 | cur 14、spars 3、lav 5 | 22 | 未開始 |
 | R6 | fund 7、chron 4、journ 4 | 15 | 未開始 |
@@ -129,6 +129,27 @@ lev、stig、acr
 3. 收完跑 `python pipeline/assemble_vocab_root.py --b2 --write`，
    再 `python pipeline/build_vocab_prefix.py`。
 4. 綠燈與 render 驗證照 AGENTS.md 驗法表。
+
+### 課本中文「不算錯但會背歪」的字（2026-09-02 全表逐字複查 172 字的結果）
+
+`zh` 一律保留課本原文（那是老師上課用的版本），但下列 6 個字若照字面背會在考題上判斷錯，
+複習時要知道差別。這是**通讀全部中文**的結論，不是抽查。
+
+| 字 | 課本中文 | 實際上 |
+| :--- | :--- | :--- |
+| poignant | 刺鼻的，尖酸的，感人的 | 現代英文幾乎只用「令人心酸、深刻動人」。「刺鼻」是古義，課本列它是為了配字根 |
+| stimulating | 刺激的 | 中文「刺激」易讀成 thrilling，這個字是「激發思考、富啟發性」 |
+| invalid | 無效的；殘廢 | 兩義**重音不同**：形容詞「無效的」/ɪnˈvælɪd/，名詞「病弱者」/ˈɪnvəlɪd/。且「殘廢」是舊譯 |
+| forte | 強音，強項 | 兩義**讀音不同**：音樂「強音」/ˈfɔrteɪ/，「強項」/fɔrt/ |
+| condign | 恰當的，合適的 | 幾乎只用於刑罰，指「罪有應得的」 |
+| claustrophobia | 禁閉恐懼症 | 台灣醫學通用譯名是「幽閉恐懼症」 |
+
+### 完整性怎麼保證（不必人工比對）
+
+- **照片 → 字表**：兩份字表的流水號連續無缺號、無重號（第一批 1–95、第二批 1–172），
+  轉錄階段沒掉字。
+- **字表 → 出貨**：組裝器逐條走字表，只有「已查證」的才輸出，並把**尚未查證的字逐一印出來**，
+  結構上不可能靜默漏字。每次跑都會印 `字表 N 字｜已查證 M`。
 
 ### 課本錯誤（字表都已註記並改用正確寫法）
 
@@ -147,4 +168,5 @@ lev、stig、acr
 
 一個查證 worker 約 **85k tokens**。這一批 16 組實際花了約 1.3M。**一批派 3 個就好**，
 派 4 個以上很容易整批一起撞到 session 額度（這次 16 組裡有 6 組因此全滅要重派）。
-worker 一定要把 JSON 寫進 `scratchpad/vocab_verify/<group>.json`，撞額度時已寫的檔還在。
+worker 一定要把 JSON 寫進 `pipeline/data/vocab_verify/<group>.json`（**repo 內，不是 scratchpad**——
+Temp 重開機會被清掉），撞額度時已寫的檔還在。
