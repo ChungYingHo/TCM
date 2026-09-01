@@ -158,6 +158,45 @@ export const PREFIX_GROUPS: PrefixGroup[] = [
   { id: 'plet', forms: ['plet', 'plen'], meaning: '滿、填（full, fill）', order: 75, kind: 'root' },
   { id: 'vac', forms: ['vac', 'van', 'vain'], meaning: '空（empty）', order: 76, kind: 'root' },
   { id: 'neg', forms: ['neg', 'nil', 'nul'], meaning: '無、否定（no, nothing）', order: 77, kind: 'root' },
+  // 表示「新」與「第一」的字根
+  { id: 'neo', forms: ['neo', 'nov'], meaning: '新（new）', order: 78, kind: 'root' },
+  { id: 'prim', forms: ['prim'], meaning: '第一、最初（first）', order: 79, kind: 'root' },
+  // 表示「力量」與「價值」的字根
+  { id: 'val', forms: ['val', 'vail'], meaning: '價值、強（worth, strong）', order: 80, kind: 'root' },
+  { id: 'dign', forms: ['dign'], meaning: '價值（worth）', order: 81, kind: 'root' },
+  { id: 'forc', forms: ['forc', 'fort'], meaning: '強（strong）', order: 82, kind: 'root' },
+  { id: 'dur', forms: ['dur'], meaning: '硬、持久（hard, last）', order: 83, kind: 'root' },
+  { id: 'dynam', forms: ['dynam'], meaning: '力（power）', order: 84, kind: 'root' },
+  { id: 'potent', forms: ['potent'], meaning: '力（power）', order: 85, kind: 'root' },
+  { id: 'salut', forms: ['salut', 'san'], meaning: '健康（health）', order: 86, kind: 'root' },
+  // 表示「光明」的字根
+  { id: 'luc', forms: ['luc', 'lumin'], meaning: '光（light）', order: 87, kind: 'root' },
+  // 表示「重」與「輕」的字根
+  { id: 'grav', forms: ['grav'], meaning: '重（heavy）', order: 88, kind: 'root' },
+  { id: 'lev', forms: ['lev'], meaning: '輕（light）', order: 89, kind: 'root' },
+  // 表示「尖銳」與「刺激」的字根
+  { id: 'stig', forms: ['stig', 'sting', 'stinct'], meaning: '刺、記號（prick, mark）', order: 90, kind: 'root' },
+  { id: 'acr', forms: ['acr', 'acu'], meaning: '尖銳（sharp）', order: 91, kind: 'root' },
+  { id: 'punct', forms: ['punct'], meaning: '刺、穿（prick, pierce）', order: 92, kind: 'root' },
+  // 表示「記號」的字根
+  { id: 'sign', forms: ['sign'], meaning: '記號（mark）', order: 93, kind: 'root' },
+  // 表示「發生與結束」的字根
+  { id: 'cas', forms: ['cas', 'cad', 'cid'], meaning: '落下、發生（fall, befall）', order: 94, kind: 'root' },
+  { id: 'fin', forms: ['fin'], meaning: '結束、界限（end, limit）', order: 95, kind: 'root' },
+  { id: 'term', forms: ['term', 'termin'], meaning: '結束、界限（end, limit）', order: 96, kind: 'root' },
+  { id: 'clud', forms: ['clud', 'clus'], meaning: '關閉（close）', order: 97, kind: 'root' },
+  // 表示「流動」的字根
+  { id: 'flu', forms: ['flu'], meaning: '流（flow）', order: 98, kind: 'root' },
+  { id: 'und', forms: ['und', 'ound'], meaning: '流、波（flow, wave）', order: 99, kind: 'root' },
+  { id: 'cur', forms: ['cur', 'cour'], meaning: '跑（run）', order: 100, kind: 'root' },
+  { id: 'fund', forms: ['fund', 'fus'], meaning: '傾倒、熔（pour, melt）', order: 101, kind: 'root' },
+  { id: 'lav', forms: ['lav', 'luv'], meaning: '洗（wash）', order: 102, kind: 'root' },
+  // 表示「分散」的字根
+  { id: 'spars', forms: ['spars', 'spers'], meaning: '散（scatter）', order: 103, kind: 'root' },
+  // 表示「年」與「時間」的字根
+  { id: 'enni', forms: ['enni', 'annu'], meaning: '年（year）', order: 104, kind: 'root' },
+  { id: 'chron', forms: ['chron'], meaning: '時間（time）', order: 105, kind: 'root' },
+  { id: 'journ', forms: ['journ', 'urn'], meaning: '日（day）', order: 106, kind: 'root' },
 ]
 
 const PREFIX_BY_ID: Record<string, PrefixGroup> = Object.fromEntries(
