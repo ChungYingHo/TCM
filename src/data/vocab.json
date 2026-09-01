@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-09-01",
-  "count": 628,
-  "withExamples": 628,
+  "generated_at": "2026-09-02",
+  "count": 646,
+  "withExamples": 646,
   "words": [
     {
       "id": "apathetic",
@@ -20529,6 +20529,584 @@
           "word": "gravitation",
           "pos": "n.",
           "zh": "重力，吸引，向…移動"
+        }
+      ]
+    },
+    {
+      "id": "leverage",
+      "word": "leverage",
+      "phonetic": "ˈlɛvərɪdʒ",
+      "zh": "槓桿作用，影響力；槓桿操作，利用",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The union's size gave it leverage in the contract negotiations.",
+      "example_zh": "工會的規模讓它在合約談判中握有影響力。",
+      "draft": false,
+      "prefixId": "lev",
+      "parts": [
+        {
+          "text": "lev",
+          "gloss": "舉起"
+        },
+        {
+          "text": "-er",
+          "gloss": "器具"
+        }
+      ],
+      "etymology": "leverage 於 1724 年由 lever（槓桿）加字尾 -age 構成，原指「槓桿的作用」，1827 年轉為「槓桿的力量」，1858 年再引申為「達成目的的優勢」，而 lever 約 1300 年入英文，來自古法語 levier（撬棒、舉物之器）這個由動詞 lever（舉起）而來的行為者名詞，上溯拉丁文 levare（舉起），其字根為 levis（重量輕的）與印歐字根 *legwh-（不重的）。",
+      "derivatives": [
+        {
+          "word": "lever",
+          "pos": "n.",
+          "zh": "槓桿，操控桿"
+        }
+      ]
+    },
+    {
+      "id": "elevate",
+      "word": "elevate",
+      "phonetic": "ˈɛləvet",
+      "zh": "升高，提升",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "They want to elevate the status of teachers.",
+      "example_zh": "他們想提升教師的地位。",
+      "draft": false,
+      "prefixId": "lev",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "向外、向上"
+        },
+        {
+          "text": "lev",
+          "gloss": "舉起、減輕"
+        }
+      ],
+      "etymology": "elevate 於 15 世紀晚期借自拉丁文 elevatus（動詞 elevare 的過去分詞），該字由 ex-（向外）加 levare（減輕、舉起）構成，英文最早義為「舉到平常位置之上」，約 1500 年生出「提升地位」義，1620 年代再擴及道德與心智層面的提升，levare 出自 levis（重量輕的），上溯印歐字根 *legwh-（不重的）。",
+      "derivatives": [
+        {
+          "word": "elevation",
+          "pos": "n.",
+          "zh": "提升，高度，海拔"
+        }
+      ]
+    },
+    {
+      "id": "levity",
+      "word": "levity",
+      "phonetic": "ˈlɛvɪtɪ",
+      "zh": "輕浮，輕佻",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The teachers disapprove of any displays of levity during school assemblies.",
+      "example_zh": "老師們不贊成在朝會上有任何輕浮的舉動。",
+      "draft": false,
+      "prefixId": "lev",
+      "parts": [
+        {
+          "text": "lev",
+          "gloss": "輕"
+        }
+      ],
+      "etymology": "levity 於 1560 年代經法語 levite 借自拉丁文 levitatem（主格 levitas，兼指實體的「輕」與比喻的「輕浮、輕率」），字根即形容詞 levis（重量輕的），上溯印歐字根 *legwh-（不重的），英文一入語即用「缺乏嚴肅、輕浮」之義。",
+      "derivatives": []
+    },
+    {
+      "id": "levy",
+      "word": "levy",
+      "phonetic": "ˈlɛvɪ",
+      "zh": "徵收；徵稅",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government imposed a levy on luxury goods.",
+      "example_zh": "政府對奢侈品課徵了一項稅。",
+      "draft": false,
+      "prefixId": "lev",
+      "parts": [
+        {
+          "text": "lev",
+          "gloss": "舉起、徵集"
+        }
+      ],
+      "etymology": "levy 的動詞義（憑權力徵集、徵收）約 13 世紀初來自盎格魯法語 leve 與古法語 levée（舉起的行為），名詞義則於 15 世紀初出現指徵稅、徵債之舉，古法語動詞 lever（舉起）承自拉丁文 levare（舉起、抬高、使變輕），上溯印歐字根 *legwh-（不重的）。",
+      "derivatives": []
+    },
+    {
+      "id": "relieve",
+      "word": "relieve",
+      "phonetic": "rɪˈliv",
+      "zh": "緩和，減輕，接替",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She was given a shot of morphine to relieve the pain.",
+      "example_zh": "醫生給她打了一針嗎啡來減輕疼痛。",
+      "draft": false,
+      "prefixId": "lev",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "lieve",
+          "gloss": "舉起、減輕"
+        }
+      ],
+      "etymology": "relieve 源自古法語 relever（舉起、救助）並直接承自拉丁文 relevare（舉起、減輕、使卸下重擔），該字由作加強語氣用的 re- 加 levare（舉起、使變輕）構成，核心意象是「把人從困境中拉起來」，15 世紀初起陸續發展出減輕痛苦、給予慰藉、換班解除職務等義，levare 出自 levis（不重的）。",
+      "derivatives": [
+        {
+          "word": "relief",
+          "pos": "n.",
+          "zh": "緩和，減輕，接替"
+        }
+      ]
+    },
+    {
+      "id": "distinguished",
+      "word": "distinguished",
+      "phonetic": "dɪˈstɪŋgwɪʃt",
+      "zh": "傑出的，卓越的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man is a distinguished director, with several Oscars under his belt.",
+      "example_zh": "這位男士是位傑出的導演，拿過好幾座奧斯卡獎。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "分開"
+        },
+        {
+          "text": "stingu",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "拉丁文 distinguere（分開、區隔、標記出來）由 dis-（分開）加 -stinguere（刺）構成，字面近於「用刺點把東西分隔標記」，1560 年代經法語 distinguiss- 進入英文成為 distinguish，其過去分詞形容詞 distinguished 約 1600 年原指「被區隔開的」，到 1714 年才轉為「著名的、卓越的」，1748 年再有「有出眾氣質的」之義。",
+      "derivatives": [
+        {
+          "word": "distinguish",
+          "pos": "v.",
+          "zh": "區別，區分"
+        }
+      ]
+    },
+    {
+      "id": "distinct",
+      "word": "distinct",
+      "phonetic": "dɪˈstɪŋkt",
+      "zh": "不同的，清楚的，明確的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "These grasses belong to three distinct species.",
+      "example_zh": "這些草分屬三個不同的物種。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "分開"
+        },
+        {
+          "text": "stinct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "14 世紀晚期借自拉丁文 distinctus，即 distinguere（分開、區隔、標記出來）的過去分詞，由 dis-（分開）加 -stinguere（刺）組成，Etymonline 提到一說源自在羊皮紙上「刺點」作標記以區隔文句，另一說 -stinguere 上溯的原始印歐字根意為「推、戳」，約 1600 年引申出「清楚明白的」之義。",
+      "derivatives": [
+        {
+          "word": "distinction",
+          "pos": "n.",
+          "zh": "差別，卓越"
+        }
+      ]
+    },
+    {
+      "id": "distinctive",
+      "word": "distinctive",
+      "phonetic": "dɪˈstɪŋktɪv",
+      "zh": "獨特的，特有的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The distinctive stripes on a zebra are impossible to miss.",
+      "example_zh": "斑馬身上那些獨特的條紋讓人不可能看漏。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "分開"
+        },
+        {
+          "text": "stinct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "15 世紀初經古法文 distinctif 並直接借自中世紀拉丁文 distinctivus 進入英文，同樣回到拉丁文 distinguere（分開、區隔、標記出來），即 dis-（分開）加 -stinguere（刺）。",
+      "derivatives": [
+        {
+          "word": "distinctiveness",
+          "pos": "n.",
+          "zh": "獨特性，特殊性"
+        }
+      ]
+    },
+    {
+      "id": "extinct",
+      "word": "extinct",
+      "phonetic": "ɪkˈstɪŋkt",
+      "zh": "絕種的，滅絕的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The fossil represents an extinct species.",
+      "example_zh": "這塊化石代表一個已經絕種的物種。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "stinct",
+          "gloss": "刺、熄滅"
+        }
+      ],
+      "etymology": "15 世紀初借自拉丁文 extinctus（亦拼 exstinctus），是 extinguere／exstinguere 的過去分詞，由 ex-（向外）加 stinguere（熄滅）組成，而 stinguere 的「熄滅」義據 Etymonline 是由原始印歐字根 *steig-「刺、戳、穿刺」演變而來，此字原指火被撲滅，1580 年代用於家族或爵位斷絕，1690 年代才用於物種滅絕。",
+      "derivatives": [
+        {
+          "word": "extinction",
+          "pos": "n.",
+          "zh": "絕種，滅絕"
+        }
+      ]
+    },
+    {
+      "id": "instinct",
+      "word": "instinct",
+      "phonetic": "ˈɪnstɪŋkt",
+      "zh": "本能，直覺",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "All his instincts told him to stay near the car and wait.",
+      "example_zh": "他所有的直覺都告訴他要待在車子旁邊等。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "向內"
+        },
+        {
+          "text": "stinct",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "15 世紀初經古法文 instinct 或直接借自拉丁文 instinctus（激動、衝動、靈感），該詞是 instinguere（激起、驅使）的過去分詞名詞化，由 in-（進入、在上）加 stinguere（刺、戳刺驅趕）組成，源自原始印歐字根 *steig-「刺、戳、穿刺」。",
+      "derivatives": [
+        {
+          "word": "instinctive",
+          "pos": "a.",
+          "zh": "出於本能的"
+        }
+      ]
+    },
+    {
+      "id": "stimulating",
+      "word": "stimulating",
+      "phonetic": "ˈstɪmjəˌletɪŋ",
+      "zh": "刺激的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The conversation was witty and stimulating.",
+      "example_zh": "這場對話既風趣又富有啟發性。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "stimul",
+          "gloss": "刺棒"
+        }
+      ],
+      "etymology": "動詞 stimulate 於 1610 年代借自拉丁文 stimulatus（stimulare 的過去分詞），其名詞 stimulus 原指趕牛趕奴用的「刺棒、尖木棍」並引申為刺痛與激勵，Etymonline 明言 stimulus 來源不確定，可能是 stilus（尖金屬器）的派生詞，de Vaan 認為其中或可看到一個表「尖銳物」的字根 sti-，也可能與產出 instigare、instinguere 的原始印歐字根 *steig-「刺、尖」相連。",
+      "derivatives": [
+        {
+          "word": "stimulate",
+          "pos": "v.",
+          "zh": "刺激"
+        }
+      ]
+    },
+    {
+      "id": "stigma",
+      "word": "stigma",
+      "phonetic": "ˈstɪgmə",
+      "zh": "恥辱，汙點",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There is no longer any stigma to being divorced.",
+      "example_zh": "離婚在今天已經不再是什麼汙點了。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "stig",
+          "gloss": "刺、記號"
+        }
+      ],
+      "etymology": "1590 年代（更早作 stigme，約 1400 年）借自拉丁文 stigma，再上溯希臘文 stigma（所有格 stigmatos，意為尖器刺出的記號、刺孔、刺青、烙印），與希臘動詞 stizein（作記號、刺青）同源，出自原始印歐字根 *steig-「刺、尖」，原義是用燒紅的鐵在皮膚上烙出的印記。",
+      "derivatives": [
+        {
+          "word": "stigmatize",
+          "pos": "v.",
+          "zh": "給…帶來恥辱，汙名化"
+        }
+      ]
+    },
+    {
+      "id": "astigmatic",
+      "word": "astigmatic",
+      "phonetic": "ˌæstɪgˈmætɪk",
+      "zh": "亂視的，散光的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The astigmatic man looked at the crescent moon and saw a bunch of bananas.",
+      "example_zh": "那位有散光的男子看著上弦月，卻看成了一串香蕉。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "a",
+          "gloss": "無"
+        },
+        {
+          "text": "stigmat",
+          "gloss": "點、記號"
+        }
+      ],
+      "etymology": "本字的母詞 astigmatism 於 1849 年由英國學者 William Whewell 所造，取希臘文 a-（無）加 stigmatos（stigma「記號、斑點、刺孔」的所有格），描述光線無法在視網膜上聚成一「點」的眼睛結構缺陷，同年再加 -ic 形成形容詞 astigmatic（有散光的）。",
+      "derivatives": [
+        {
+          "word": "astigmatism",
+          "pos": "n.",
+          "zh": "亂視，散光"
+        }
+      ]
+    },
+    {
+      "id": "stingy",
+      "word": "stingy",
+      "phonetic": "ˈstɪndʒɪ",
+      "zh": "吝嗇的，小氣的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company was too stingy to raise salaries.",
+      "example_zh": "這家公司小氣到不肯調薪。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "sting",
+          "gloss": "刺、螫"
+        }
+      ],
+      "etymology": "1650 年代出現，意為吝嗇小氣，Etymonline 明言來源不確定，推測是方言口語 stingy（形容寒風或批評「刺人的、尖刻的」，1610 年代）的變音，而該詞來自英語本有的動詞 sting（古英語 stingan「刺、戳、螫」）。",
+      "derivatives": [
+        {
+          "word": "stinginess",
+          "pos": "n.",
+          "zh": "吝嗇，小氣"
+        }
+      ]
+    },
+    {
+      "id": "instigate",
+      "word": "instigate",
+      "phonetic": "ˈɪnstəget",
+      "zh": "唆使，煽動，發動",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The revolt is believed to have been instigated by a high-ranking general.",
+      "example_zh": "一般認為這場叛亂是由一位高階將領煽動的。",
+      "draft": false,
+      "prefixId": "stig",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "向內"
+        },
+        {
+          "text": "stig",
+          "gloss": "刺"
+        }
+      ],
+      "etymology": "1540 年代由 instigation 逆構而成，或直接來自拉丁文 instigatus（instigare「催促、煽動」的過去分詞），由 in-（在…之上、進入）加字根 *stigare（刺）組成，源自原始印歐字根 *steig-「刺、戳、穿刺」。",
+      "derivatives": [
+        {
+          "word": "instigation",
+          "pos": "n.",
+          "zh": "煽動，發動"
+        },
+        {
+          "word": "instigator",
+          "pos": "n.",
+          "zh": "煽動者"
+        }
+      ]
+    },
+    {
+      "id": "acrimony",
+      "word": "acrimony",
+      "phonetic": "ˈækrɪˌmonɪ",
+      "zh": "尖酸，刻薄",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The dispute began again, with increased acrimony.",
+      "example_zh": "這場爭執又開打了，而且更加尖酸刻薄。",
+      "draft": false,
+      "prefixId": "acr",
+      "parts": [
+        {
+          "text": "acr",
+          "gloss": "尖銳"
+        }
+      ],
+      "etymology": "acrimony 1540 年代源自法文 acrimonie 或直接借自拉丁文 acrimonia「味道的尖酸辛辣」，是形容詞 acer（尖銳的，陰性 acris）加上表性質狀態的名詞字尾 -monia 構成的抽象名詞，故字根屬於 acer 一系而非動詞 acuere，字義約自 1610 年代起才由味覺引申為待人態度的尖酸刻薄。",
+      "derivatives": [
+        {
+          "word": "acrimonious",
+          "pos": "a.",
+          "zh": "尖酸的，刻薄的"
+        }
+      ]
+    },
+    {
+      "id": "acumen",
+      "word": "acumen",
+      "phonetic": "ˈækjəmən",
+      "zh": "銳敏，判斷力",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man failed because of a lack of business acumen.",
+      "example_zh": "這名男子失敗，是因為缺乏做生意的判斷力。",
+      "draft": false,
+      "prefixId": "acr",
+      "parts": [
+        {
+          "text": "acu",
+          "gloss": "削尖"
+        }
+      ],
+      "etymology": "acumen 1530 年代源自拉丁文 acumen「尖端、刺」，引申為「心智敏銳、精明」之意，此字源自動詞 acuere（削尖）並與名詞 acus（針）同源，而非直接出自形容詞 acer。",
+      "derivatives": [
+        {
+          "word": "acuminous",
+          "pos": "a.",
+          "zh": "敏銳的"
+        }
+      ]
+    },
+    {
+      "id": "acute",
+      "word": "acute",
+      "phonetic": "əˈkjut",
+      "zh": "敏銳的，劇烈的，急性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He has an exceptionally acute mind.",
+      "example_zh": "他有一顆異常敏銳的頭腦。",
+      "draft": false,
+      "prefixId": "acr",
+      "parts": [
+        {
+          "text": "acu",
+          "gloss": "削尖"
+        }
+      ],
+      "etymology": "acute 十四世紀末源自拉丁文 acutus「尖銳的、有稜角的」，是動詞 acuere（削尖）的過去分詞，最初專指熱病「來勢又急又猛」，直到 1560 年代才轉用於形容物理上的尖銳，1580 年代再擴及智力敏銳，字根同樣屬於動詞 acuere 而非形容詞 acer。",
+      "derivatives": [
+        {
+          "word": "acuteness",
+          "pos": "n.",
+          "zh": "嚴重性"
+        },
+        {
+          "word": "acuity",
+          "pos": "n.",
+          "zh": "敏銳，劇烈"
         }
       ]
     }

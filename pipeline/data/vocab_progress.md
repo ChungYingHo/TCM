@@ -91,28 +91,34 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 11/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 14/29 組**
 
 照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 11 組。
+卡在 Etymonline／IPA 查證，29 組做完 14 組。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **11/29 組**（62 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 62 字（`vocab.json` 共 628 字） |
+| Etymonline／IPA 查證 | **14/29 組**（80 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 80 字（`vocab.json` 共 646 字） |
 
-**查證完成的 11 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav
+**查證完成的 14 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr
 
-**還沒查證的 18 組**（接手就從這裡派 worker，一批 3 到 5 個）：
+**還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
+（組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
+每輪 3 個 worker，排程如下，做完一輪就把該列改成「完成」：
 
-`lev` `stig` `acr` `punct` `sign` `cas` `fin` `term` `clud`
-`flu` `und` `cur` `fund` `lav` `spars` `enni` `chron` `journ`
-
-字數分別是：lev 5、stig 10、acr 3、punct 6、sign 4、cas 7、fin 9、term 6、clud 8、
-flu 9、und 4、cur 14、fund 7、lav 5、spars 3、enni 2、chron 4、journ 4，共 110 字。
+| 輪 | 組（字數） | 小計 | 狀態 |
+| :--- | :--- | --: | :--- |
+| R1 | lev 5、stig 10、acr 3 | 18 | **完成** |
+| R2 | punct 6、sign 4、cas 7 | 17 | 未開始 |
+| R3 | fin 9、term 6、und 4 | 19 | 未開始 |
+| R4 | clud 8、flu 9、enni 2 | 19 | 未開始 |
+| R5 | cur 14、spars 3、lav 5 | 22 | 未開始 |
+| R6 | fund 7、chron 4、journ 4 | 15 | 未開始 |
 
 ### 接手怎麼做
 

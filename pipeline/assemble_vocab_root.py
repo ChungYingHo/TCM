@@ -128,6 +128,33 @@ CJK = r'一-鿿'  # 漢字本身，用來決定中英之間要不要空格
 CJKP = r'一-鿿　-〿＀-￯'
 
 
+# chip 只放「有語意」的詞素。worker 常把 -ity／-ate／-age 這類純詞性標記也列進來，
+# 但卡片上的 chip 是用來記「這個字為什麼是這個意思」的，純文法字尾放上去只是雜訊
+# （既有 628 字平均 1.88 個 chip＝字首＋字根，就是這個慣例）。
+# 判準看 gloss 不看拼法：把純文法用語剃掉後若什麼都不剩，就是純詞性標記。
+# 這樣 -fy（做、使成）、-cule（表「小」的指小詞尾）這種帶語意的字尾會留下來。
+GRAMMAR_ONLY = ('名詞', '動詞', '形容詞', '副詞', '字尾', '詞尾', '指小',
+                '性質', '狀態', '作用', '表', '的', '使', '化')
+
+
+def is_grammar_only(gloss: str) -> bool:
+    s = gloss
+    for g in GRAMMAR_ONLY:
+        s = s.replace(g, '')
+    return not re.sub(r'[、，,。…\s「」『』（）()]', '', s)
+
+
+def keep_parts(parts: list) -> tuple:
+    """回傳 (保留的 parts, 被剃掉的)。只考慮以 - 開頭的字尾，且不會把 parts 剃到空。"""
+    keep, dropped = [], []
+    for p in parts:
+        if p['text'].lstrip().startswith('-') and is_grammar_only(p['gloss']):
+            dropped.append(p)
+        else:
+            keep.append(p)
+    return (keep, dropped) if keep else (parts, [])
+
+
 def normalize_zh(text: str, gloss: bool = False) -> str:
     """gloss=True 用於 chip 上的詞素字義。那是並列的短詞不是句子，分號要收成頓號；
     收成句號會變成「有力量的。主人」這種在小標籤裡很突兀的寫法。"""
@@ -238,7 +265,7 @@ def main() -> None:
     if missing_zh:
         print(f'  尚未翻譯（{len(missing_zh)}）：' + ' '.join(missing_zh))
 
-    by_group, kk_review = {}, []
+    by_group, kk_review, chip_dropped = {}, [], []
     for w in words:
         v = verify.get(w['word'])
         if not v:
@@ -248,6 +275,9 @@ def main() -> None:
         kk, note = to_kk(raw_ipa)
         if note:
             kk_review.append(f"{w['word']}: {v.get('us_ipa')} -> {kk}｜{note}")
+        parts, dropped = keep_parts(v.get('parts', []))
+        for p in dropped:
+            chip_dropped.append(f"{w['word']}: {p['text']}（{p['gloss']}）")
         entry = {
             'word': w['word'], 'prefixId': w['group'], 'pos': w['pos'], 'phonetic': kk,
             'zh': w['zh'],
@@ -256,7 +286,7 @@ def main() -> None:
                     'text': (t := p['text'].strip().rstrip('-')),
                     'gloss': gloss_fix.get(f"{w['word']}/{t}", normalize_zh(p['gloss'], gloss=True)),
                 }
-                for p in v.get('parts', [])
+                for p in parts
             ],
             'etymology': normalize_zh(v.get('etymology', '')),
             'derivatives': w['derivatives'],
@@ -278,6 +308,11 @@ def main() -> None:
     if kk_review:
         print(f'\nKK 轉寫需人工確認（{len(kk_review)}）：')
         for r in kk_review:
+            print('  ', r)
+
+    if chip_dropped:
+        print(f'\n剃掉的純詞性 chip（{len(chip_dropped)}）：')
+        for r in chip_dropped:
             print('  ', r)
 
     # chip 上的字義要短。worker 有時會把整段說明塞進 gloss，那在卡片上會爆版，

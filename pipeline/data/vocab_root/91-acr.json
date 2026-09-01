@@ -1,0 +1,104 @@
+[
+  {
+    "word": "acrimony",
+    "prefixId": "acr",
+    "pos": "n.",
+    "phonetic": "ˈækrɪˌmonɪ",
+    "zh": "尖酸，刻薄",
+    "parts": [
+      {
+        "text": "acr",
+        "gloss": "尖銳"
+      }
+    ],
+    "etymology": "acrimony 1540 年代源自法文 acrimonie 或直接借自拉丁文 acrimonia「味道的尖酸辛辣」，是形容詞 acer（尖銳的，陰性 acris）加上表性質狀態的名詞字尾 -monia 構成的抽象名詞，故字根屬於 acer 一系而非動詞 acuere，字義約自 1610 年代起才由味覺引申為待人態度的尖酸刻薄。",
+    "derivatives": [
+      {
+        "word": "acrimonious",
+        "pos": "a.",
+        "zh": "尖酸的，刻薄的"
+      }
+    ],
+    "example": "The dispute began again, with increased acrimony.",
+    "example_zh": "這場爭執又開打了，而且更加尖酸刻薄。",
+    "sources": {
+      "page": "IMG_1707",
+      "etymonline": "https://www.etymonline.com/word/acrimony",
+      "ipa": "/ˈækɹɪˌmoʊni/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "acumen",
+    "prefixId": "acr",
+    "pos": "n.",
+    "phonetic": "ˈækjəmən",
+    "zh": "銳敏，判斷力",
+    "parts": [
+      {
+        "text": "acu",
+        "gloss": "削尖"
+      }
+    ],
+    "etymology": "acumen 1530 年代源自拉丁文 acumen「尖端、刺」，引申為「心智敏銳、精明」之意，此字源自動詞 acuere（削尖）並與名詞 acus（針）同源，而非直接出自形容詞 acer。",
+    "derivatives": [
+      {
+        "word": "acuminous",
+        "pos": "a.",
+        "zh": "敏銳的"
+      }
+    ],
+    "example": "The man failed because of a lack of business acumen.",
+    "example_zh": "這名男子失敗，是因為缺乏做生意的判斷力。",
+    "sources": {
+      "page": "IMG_1707",
+      "etymonline": "https://www.etymonline.com/word/acumen",
+      "ipa": "/ˈækjəmən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "美式發音以首音節重音的 /ˈækjəmən/ 較常見，重音在第二音節的 /əˈkjumən/ 為字典收錄的次要唸法，兩者皆可但不宜與 acute 的重音位置搞混。"
+    }
+  },
+  {
+    "word": "acute",
+    "prefixId": "acr",
+    "pos": "a.",
+    "phonetic": "əˈkjut",
+    "zh": "敏銳的，劇烈的，急性的",
+    "parts": [
+      {
+        "text": "acu",
+        "gloss": "削尖"
+      }
+    ],
+    "etymology": "acute 十四世紀末源自拉丁文 acutus「尖銳的、有稜角的」，是動詞 acuere（削尖）的過去分詞，最初專指熱病「來勢又急又猛」，直到 1560 年代才轉用於形容物理上的尖銳，1580 年代再擴及智力敏銳，字根同樣屬於動詞 acuere 而非形容詞 acer。",
+    "derivatives": [
+      {
+        "word": "acuteness",
+        "pos": "n.",
+        "zh": "嚴重性"
+      },
+      {
+        "word": "acuity",
+        "pos": "n.",
+        "zh": "敏銳，劇烈"
+      }
+    ],
+    "example": "He has an exceptionally acute mind.",
+    "example_zh": "他有一顆異常敏銳的頭腦。",
+    "sources": {
+      "page": "IMG_1707",
+      "etymonline": "https://www.etymonline.com/word/acute",
+      "ipa": "/əˈkjut/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The flood resulted in acute food shortages."
+      ]
+    }
+  }
+]

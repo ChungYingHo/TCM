@@ -1,0 +1,116 @@
+[
+  {
+    "word": "distinguished",
+    "parts": [
+      { "text": "di-", "gloss": "分開" },
+      { "text": "stingu", "gloss": "刺" },
+      { "text": "-ished", "gloss": "…的" }
+    ],
+    "etymology": "拉丁文 distinguere（分開、區隔、標記出來）由 dis-（分開）加 -stinguere（刺）構成，字面近於「用刺點把東西分隔標記」，1560 年代經法語 distinguiss- 進入英文成為 distinguish，其過去分詞形容詞 distinguished 約 1600 年原指「被區隔開的」，到 1714 年才轉為「著名的、卓越的」，1748 年再有「有出眾氣質的」之義。",
+    "us_ipa": "/dɪˈstɪŋɡwɪʃt/",
+    "etymonline_url": "https://www.etymonline.com/word/distinguished",
+    "notes": "拼寫要注意：拉丁 dis- 接 st- 開頭的字根時兩個 s 併成一個，所以英文實際拼成 di-＋stingu-，老師標的 dis- 是字源還原形不是拼字形。此字走拉丁線（stinguere），與希臘線的 stigma 不同支。"
+  },
+  {
+    "word": "distinct",
+    "parts": [
+      { "text": "di-", "gloss": "分開" },
+      { "text": "stinct", "gloss": "刺" }
+    ],
+    "etymology": "14 世紀晚期借自拉丁文 distinctus，即 distinguere（分開、區隔、標記出來）的過去分詞，由 dis-（分開）加 -stinguere（刺）組成，Etymonline 提到一說源自在羊皮紙上「刺點」作標記以區隔文句，另一說 -stinguere 上溯的原始印歐字根意為「推、戳」，約 1600 年引申出「清楚明白的」之義。",
+    "us_ipa": "/dɪˈstɪŋkt/",
+    "etymonline_url": "https://www.etymonline.com/word/distinct",
+    "notes": "拼寫上 dis-＋stinct 的兩個 s 併成一個，實際拼作 di-＋stinct。此字屬拉丁 stinguere 這一線，與希臘 stizein／stigma 那一線分屬兩支。"
+  },
+  {
+    "word": "distinctive",
+    "parts": [
+      { "text": "di-", "gloss": "分開" },
+      { "text": "stinct", "gloss": "刺" },
+      { "text": "-ive", "gloss": "…的" }
+    ],
+    "etymology": "15 世紀初經古法文 distinctif 並直接借自中世紀拉丁文 distinctivus 進入英文，同樣回到拉丁文 distinguere（分開、區隔、標記出來），即 dis-（分開）加 -stinguere（刺）。",
+    "us_ipa": "/dɪˈstɪŋktɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/distinctive",
+    "notes": "與 distinct 同一組拼寫規則，dis-＋stinct 併 s 後拼成 di-＋stinct-ive。屬拉丁線。"
+  },
+  {
+    "word": "extinct",
+    "parts": [
+      { "text": "ex-", "gloss": "向外" },
+      { "text": "stinct", "gloss": "刺、熄滅" }
+    ],
+    "etymology": "15 世紀初借自拉丁文 extinctus（亦拼 exstinctus），是 extinguere／exstinguere 的過去分詞，由 ex-（向外）加 stinguere（熄滅）組成，而 stinguere 的「熄滅」義據 Etymonline 是由原始印歐字根 *steig-「刺、戳、穿刺」演變而來，此字原指火被撲滅，1580 年代用於家族或爵位斷絕，1690 年代才用於物種滅絕。",
+    "us_ipa": "/ɪkˈstɪŋkt/",
+    "etymonline_url": "https://www.etymonline.com/word/extinct",
+    "notes": "拼寫陷阱：拉丁原形 extinguere 與 exstinguere 兩種拼法並存，英文 extinct 只留一個 s，所以表面看像 ex-＋tinct，字根其實仍是 stinct。另外此字的 stinguere 在拉丁時期語意已轉成「熄滅」，「刺」是更早的印歐層次，老師的 prick 註解要當作字源義而非現代義理解。"
+  },
+  {
+    "word": "instinct",
+    "parts": [
+      { "text": "in-", "gloss": "向內" },
+      { "text": "stinct", "gloss": "刺" }
+    ],
+    "etymology": "15 世紀初經古法文 instinct 或直接借自拉丁文 instinctus（激動、衝動、靈感），該詞是 instinguere（激起、驅使）的過去分詞名詞化，由 in-（進入、在上）加 stinguere（刺、戳刺驅趕）組成，源自原始印歐字根 *steig-「刺、戳、穿刺」。",
+    "us_ipa": "/ˈɪnstɪŋkt/",
+    "etymonline_url": "https://www.etymonline.com/word/instinct",
+    "notes": "此字拼寫剛好完整保留 in-＋stinct，是本組最乾淨的例子。屬拉丁 stinguere 線。"
+  },
+  {
+    "word": "stimulating",
+    "parts": [
+      { "text": "stimul", "gloss": "刺棒" },
+      { "text": "-ating", "gloss": "…的" }
+    ],
+    "etymology": "動詞 stimulate 於 1610 年代借自拉丁文 stimulatus（stimulare 的過去分詞），其名詞 stimulus 原指趕牛趕奴用的「刺棒、尖木棍」並引申為刺痛與激勵，Etymonline 明言 stimulus 來源不確定，可能是 stilus（尖金屬器）的派生詞，de Vaan 認為其中或可看到一個表「尖銳物」的字根 sti-，也可能與產出 instigare、instinguere 的原始印歐字根 *steig-「刺、尖」相連。",
+    "us_ipa": "/ˈstɪmjəˌleɪtɪŋ/",
+    "etymonline_url": "https://www.etymonline.com/word/stimulate",
+    "notes": "老師把 stim 併進本組只能算「大致同族」，不是嚴格同一字根：Etymonline 的 stimulus 條目說得很清楚，stimulus 是拉丁自有的名詞（刺棒），並非由 stinguere 構成，它與 *steig- 的關聯只是「可能」，另一說（de Vaan）走 sti-「尖銳物」／stilus 這條線。記憶上仍可用「刺」串起來，但不要當成 distinct／instinct 那種確定的同根字。"
+  },
+  {
+    "word": "stigma",
+    "parts": [
+      { "text": "stig", "gloss": "刺、記號" },
+      { "text": "-ma", "gloss": "名詞" }
+    ],
+    "etymology": "1590 年代（更早作 stigme，約 1400 年）借自拉丁文 stigma，再上溯希臘文 stigma（所有格 stigmatos，意為尖器刺出的記號、刺孔、刺青、烙印），與希臘動詞 stizein（作記號、刺青）同源，出自原始印歐字根 *steig-「刺、尖」，原義是用燒紅的鐵在皮膚上烙出的印記。",
+    "us_ipa": "/ˈstɪɡmə/",
+    "etymonline_url": "https://www.etymonline.com/word/stigma",
+    "notes": "分線說明：stigma 與 astigmatic 走希臘線（stizein「刺、刺青」），distinct／distinctive／distinguished／instinct／extinct／instigate 走拉丁線（stinguere／instigare）。兩線在 Etymonline 都上溯同一個原始印歐字根 *steig-「刺、尖」，所以最深層確實同源，但不是直接的借詞關係。"
+  },
+  {
+    "word": "astigmatic",
+    "parts": [
+      { "text": "a-", "gloss": "無" },
+      { "text": "stigmat", "gloss": "點、記號" },
+      { "text": "-ic", "gloss": "…的" }
+    ],
+    "etymology": "本字的母詞 astigmatism 於 1849 年由英國學者 William Whewell 所造，取希臘文 a-（無）加 stigmatos（stigma「記號、斑點、刺孔」的所有格），描述光線無法在視網膜上聚成一「點」的眼睛結構缺陷，同年再加 -ic 形成形容詞 astigmatic（有散光的）。",
+    "us_ipa": "/ˌæstɪɡˈmætɪk/",
+    "etymonline_url": "https://www.etymonline.com/word/astigmatism",
+    "notes": "拼寫要點：字幹取自所有格 stigmatos，所以是 astigmat-（有 -at-）而非 astigm-。此字與 stigma 同屬希臘線，和拉丁線的 distinct／extinct 只在原始印歐字根 *steig- 的層次同源。Wiktionary 的 astigmatic 條沒有發音欄，US IPA 取自 Dictionary.com（ˌæs tɪgˈmæt ɪk），與 Wiktionary 的 astigmatism 美式 /əˈstɪɡmətɪzm̩/ 一致。"
+  },
+  {
+    "word": "stingy",
+    "parts": [
+      { "text": "sting", "gloss": "刺、螫" },
+      { "text": "-y", "gloss": "…的" }
+    ],
+    "etymology": "1650 年代出現，意為吝嗇小氣，Etymonline 明言來源不確定，推測是方言口語 stingy（形容寒風或批評「刺人的、尖刻的」，1610 年代）的變音，而該詞來自英語本有的動詞 sting（古英語 stingan「刺、戳、螫」）。",
+    "us_ipa": "/ˈstɪndʒi/",
+    "etymonline_url": "https://www.etymonline.com/word/stingy",
+    "notes": "⚠️ 這是陷阱字，老師的分組在字源上不成立。Etymonline 的 sting 條把它追到古英語 stingan、原始日耳曼語 *stingan、原始印歐字根 *stengh-（*stegh-「刺、戳、螫」的鼻音化形），是純英語本有詞，並非拉丁 stinguere（*steig-）那一支。Etymonline 在 sting 條還特別註明：學者曾試圖把 *stegh- 與 *steig- 連起來，但兩者關係「仍不清楚」（Boutkan 2005）。發音也要小心，stingy 是同形異音字，「小氣的」讀 /ˈstɪndʒi/，「會螫人的」（sting＋-y）讀 /ˈstɪŋi/，本組取前者。建議上架時保留此字但明確標成「形似易混、非同源」。"
+  },
+  {
+    "word": "instigate",
+    "parts": [
+      { "text": "in-", "gloss": "向內" },
+      { "text": "stig", "gloss": "刺" },
+      { "text": "-ate", "gloss": "動詞" }
+    ],
+    "etymology": "1540 年代由 instigation 逆構而成，或直接來自拉丁文 instigatus（instigare「催促、煽動」的過去分詞），由 in-（在…之上、進入）加字根 *stigare（刺）組成，源自原始印歐字根 *steig-「刺、戳、穿刺」。",
+    "us_ipa": "/ˈɪnstəɡeɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/instigate",
+    "notes": "此字是本組中拉丁線上唯一保留 stig 原形（未鼻音化為 stinct）的字，可與 instinct 對照記：同一個 *steig-，instigare 走 *stigare，instinguere 則插入鼻音成 -stingu-／-stinct-。"
+  }
+]

@@ -40,7 +40,8 @@ description: 把老師課本（依字首排列的英文字彙照片）某一組�
 - **挑 model**：查證 worker 是機械性工作，用便宜快的 model 即可；只有陷阱字判斷（字首非該組義、拼字更正）值得升級。
 - **worker 撞額度或回空**：換另一個 worker 接續已收集的來源，或主 agent 接手該組。**同一方法失敗兩次就換做法**，不要原樣重試。
 - **先算成本再派**（2026-09-01 實測）：一個查證 worker 約 **85k tokens**（10 組實測 81k–94k，含 17–29 次 fetch）。所以 16 組 ≈ 1.4M tokens。**一次派超過 4 個很容易一起撞到 session 額度**，那一批會全滅。安全做法是**一批 3 個、收完再派下一批**，並要求 worker「自己的推理寫簡短一點」。
-- **worker 一定要把 JSON 寫檔**（`scratchpad/vocab_verify/<group>.json`），不要只在回覆裡貼。撞額度時已寫的檔還在，只需重派沒寫成的組，不必整批重來。
+- **worker 一定要把 JSON 寫檔**（`pipeline/data/vocab_verify/<group>.json`，**寫 repo 不寫 scratchpad**——scratchpad 在 `%TEMP%` 底下，重開機會被清掉，而一組查證約 85k tokens，弄丟就要重跑）。不要只在回覆裡貼：撞額度時已寫的檔還在，只需重派沒寫成的組，不必整批重來。
+- **prompt 裡點名這一組的「要釐清什麼」**。泛泛要求查 Etymonline，worker 只會照抄條目；明寫「這組要判 levis（輕）還是 levare（舉起）」「stingy 疑似不屬本組」，才問得出真結論。第一批的 salus/sanus、fortuitous、vaccine 都是這樣抓到的。
 
 ## 進度要留檔，下次才接得下去（Aira 2026-09-01）
 

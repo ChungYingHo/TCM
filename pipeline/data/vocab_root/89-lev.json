@@ -1,0 +1,174 @@
+[
+  {
+    "word": "leverage",
+    "prefixId": "lev",
+    "pos": "n., v.",
+    "phonetic": "ˈlɛvərɪdʒ",
+    "zh": "槓桿作用，影響力；槓桿操作，利用",
+    "parts": [
+      {
+        "text": "lev",
+        "gloss": "舉起"
+      },
+      {
+        "text": "-er",
+        "gloss": "器具"
+      }
+    ],
+    "etymology": "leverage 於 1724 年由 lever（槓桿）加字尾 -age 構成，原指「槓桿的作用」，1827 年轉為「槓桿的力量」，1858 年再引申為「達成目的的優勢」，而 lever 約 1300 年入英文，來自古法語 levier（撬棒、舉物之器）這個由動詞 lever（舉起）而來的行為者名詞，上溯拉丁文 levare（舉起），其字根為 levis（重量輕的）與印歐字根 *legwh-（不重的）。",
+    "derivatives": [
+      {
+        "word": "lever",
+        "pos": "n.",
+        "zh": "槓桿，操控桿"
+      }
+    ],
+    "example": "The union's size gave it leverage in the contract negotiations.",
+    "example_zh": "工會的規模讓它在合約談判中握有影響力。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/leverage",
+      "ipa": "/ˈlɛv.(ə.)ɹɪdʒ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "直接來源是拉丁動詞 levare（舉起）而非形容詞 levis（輕），槓桿是「把重物舉起來」的器具，老師的 lev（light） 在此易誤導，記憶重心應放在「舉、撬」。Wiktionary 另列美式變體 /ˈliːv.（ə.）ɹɪdʒ/，金融語境常聽到。",
+      "extraExamples": [
+        "The company tries to leverage its brands more effectively."
+      ]
+    }
+  },
+  {
+    "word": "elevate",
+    "prefixId": "lev",
+    "pos": "v.",
+    "phonetic": "ˈɛləvet",
+    "zh": "升高，提升",
+    "parts": [
+      {
+        "text": "e",
+        "gloss": "向外、向上"
+      },
+      {
+        "text": "lev",
+        "gloss": "舉起、減輕"
+      }
+    ],
+    "etymology": "elevate 於 15 世紀晚期借自拉丁文 elevatus（動詞 elevare 的過去分詞），該字由 ex-（向外）加 levare（減輕、舉起）構成，英文最早義為「舉到平常位置之上」，約 1500 年生出「提升地位」義，1620 年代再擴及道德與心智層面的提升，levare 出自 levis（重量輕的），上溯印歐字根 *legwh-（不重的）。",
+    "derivatives": [
+      {
+        "word": "elevation",
+        "pos": "n.",
+        "zh": "提升，高度，海拔"
+      }
+    ],
+    "example": "They want to elevate the status of teachers.",
+    "example_zh": "他們想提升教師的地位。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/elevate",
+      "ipa": "/ˈɛl.ə.veɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師的 e-（out） 正確，但 lev 在此取 levare 的「舉起」義（e-lev-ate＝往上舉），levis「輕」只是更上游的字根，字義重心是「升高」不是「輕」。",
+      "extraExamples": [
+        "He has been elevated to deputy manager."
+      ]
+    }
+  },
+  {
+    "word": "levity",
+    "prefixId": "lev",
+    "pos": "n.",
+    "phonetic": "ˈlɛvɪtɪ",
+    "zh": "輕浮，輕佻",
+    "parts": [
+      {
+        "text": "lev",
+        "gloss": "輕"
+      }
+    ],
+    "etymology": "levity 於 1560 年代經法語 levite 借自拉丁文 levitatem（主格 levitas，兼指實體的「輕」與比喻的「輕浮、輕率」），字根即形容詞 levis（重量輕的），上溯印歐字根 *legwh-（不重的），英文一入語即用「缺乏嚴肅、輕浮」之義。",
+    "derivatives": [],
+    "example": "The teachers disapprove of any displays of levity during school assemblies.",
+    "example_zh": "老師們不贊成在朝會上有任何輕浮的舉動。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/levity",
+      "ipa": "/ˈlɛ.vɪ.ti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "levy",
+    "prefixId": "lev",
+    "pos": "v., n.",
+    "phonetic": "ˈlɛvɪ",
+    "zh": "徵收；徵稅",
+    "parts": [
+      {
+        "text": "lev",
+        "gloss": "舉起、徵集"
+      }
+    ],
+    "etymology": "levy 的動詞義（憑權力徵集、徵收）約 13 世紀初來自盎格魯法語 leve 與古法語 levée（舉起的行為），名詞義則於 15 世紀初出現指徵稅、徵債之舉，古法語動詞 lever（舉起）承自拉丁文 levare（舉起、抬高、使變輕），上溯印歐字根 *legwh-（不重的）。",
+    "derivatives": [],
+    "example": "The government imposed a levy on luxury goods.",
+    "example_zh": "政府對奢侈品課徵了一項稅。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/levy",
+      "ipa": "/ˈlɛ.vi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "出自 levare（舉起）而非 levis（輕），老師的 lev（light） 在此誤導，levy＝把稅金或兵員「徵集起來」，與「輕」無關。拼字上只有一個 e，勿與 levee（堤防）混淆。",
+      "extraExamples": [
+        "A new tax is levied on the purchase of luxury goods."
+      ]
+    }
+  },
+  {
+    "word": "relieve",
+    "prefixId": "lev",
+    "pos": "v.",
+    "phonetic": "rɪˈliv",
+    "zh": "緩和，減輕，接替",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "加強語氣"
+      },
+      {
+        "text": "lieve",
+        "gloss": "舉起、減輕"
+      }
+    ],
+    "etymology": "relieve 源自古法語 relever（舉起、救助）並直接承自拉丁文 relevare（舉起、減輕、使卸下重擔），該字由作加強語氣用的 re- 加 levare（舉起、使變輕）構成，核心意象是「把人從困境中拉起來」，15 世紀初起陸續發展出減輕痛苦、給予慰藉、換班解除職務等義，levare 出自 levis（不重的）。",
+    "derivatives": [
+      {
+        "word": "relief",
+        "pos": "n.",
+        "zh": "緩和，減輕，接替"
+      }
+    ],
+    "example": "She was given a shot of morphine to relieve the pain.",
+    "example_zh": "醫生給她打了一針嗎啡來減輕疼痛。",
+    "sources": {
+      "page": "IMG_1705",
+      "etymonline": "https://www.etymonline.com/word/relieve",
+      "ipa": "/ɹɪˈliːv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師寫 re-（again） 與 Etymonline 不符，此處 re- 是加強語氣（intensive）而非「再一次」。字根取 levare「舉起、減輕」而非 levis「輕」。拼字為 -ieve（relieve／名詞 relief），勿誤拼成 releive。",
+      "extraExamples": [
+        "I'm on duty until 2 p.m. and then Peter is coming to relieve me.",
+        "After the exam, I felt an incredible sense of relief."
+      ]
+    }
+  }
+]
