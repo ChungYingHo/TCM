@@ -91,10 +91,26 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 下一批：書頁 81–106（IMG_1696–1721）　26 張，估約 190 字
+### 第二批：書頁 81–106（IMG_1696–1721）　26 張，估約 190 字　**轉錄中**
 
-照片**已在資料夾裡**，還沒轉錄。書頁 81 起是新主題「表示『新舊』的字根」（nov、prim）。
-接手時從 IMG_1696 開始逐張讀，讀法見 `/vocab` skill 流程第 1 步。
+| 進度 | 狀態 |
+| :--- | :--- |
+| 書頁 81–88（IMG_1696–1703）｜59 字｜9 個字根組 | **照片轉錄完成**，字表在 `pipeline/data/vocab_root_wordlist_b2.md` |
+| 書頁 89–106（IMG_1704–1721）｜18 張 | 待轉錄，從 IMG_1704 接 |
+| Etymonline／IPA 查證 | **全部未做**（59 字 ≈ 9 個 worker ≈ 0.8M tokens） |
+| 例句中譯、KK 轉寫、來源檔、上架 | 未做 |
+
+已轉錄的 9 個字根組：neo/nov（新）、prim（第一）、val/vail（價值）、dign（價值）、
+forc/fort（強）、dur（硬、持久）、dynam（力）、potent（力）、salut/san（健康）、
+luc/lumin（光明）。
+
+接手步驟：讀 `vocab_root_wordlist_b2.md` 看已轉錄到哪，從 IMG_1704 續讀，
+之後照 `/vocab` skill 第 2 步起走（worker 一批 3 個）。組裝腳本是
+scratchpad 的 `assemble_vocab_root.py`，把 `WORDLIST` 指向 b2 那份即可。
+
+課本錯字（已在字表註記，用正確寫法）：
+- 書頁 81 innovation 的中文印成「格新」，正確是「革新」
+- 書頁 85 endure 的例句印成 "endure huger and pain"，正確是 hunger
 
 ### 還沒拿到的照片
 
