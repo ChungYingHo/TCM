@@ -2,7 +2,7 @@
   // 單字表 —— 主體是「字根字彙」：依字首＋字根拆解記憶（現行 vocab.json，隨頁載入）。
   // 可切到「原字庫」瀏覽已下架為次要的舊 GRE/TOEFL 3240 字（vocab-legacy.json，懶載一次）。
   // 兩者都支援搜尋、瀏覽與翻卡練習；VocabCard 對兩種資料形皆相容。
-  import { PREFIX_GROUPS, type VocabData } from '@/models/vocab'
+  import { GROUP_KINDS, PREFIX_GROUPS, groupKind, type VocabData } from '@/models/vocab'
   import { loadVocab, loadLegacyVocab } from '@/utils/vocabData'
   import { onMount } from 'svelte'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
@@ -97,7 +97,7 @@
     <p class="page-kicker">字庫</p>
     <h1 class="page-title">單字表</h1>
     <p class="page-desc max-w-2xl">
-      依「字首＋字根」拆解記憶單字：先看構詞，再由字根推出字義；中文只作對照、例句幫助記憶。依 {PREFIX_GROUPS.length} 種字首分類，目前收錄 {words.length} 個字（陸續擴充中）。
+      依「字首＋字根」拆解記憶單字：先看構詞，再由字根推出字義；中文只作對照、例句幫助記憶。分成依字首與依字根兩部分，共 {PREFIX_GROUPS.length} 組，目前收錄 {words.length} 個字（陸續擴充中）。
     </p>
   </header>
 
@@ -127,12 +127,18 @@
           <input type="search" bind:value={q} placeholder="搜尋英文或中文…" class="input input-bordered w-full" />
           <div class="flex flex-wrap items-center gap-2">
             <button class="btn btn-xs" class:btn-primary={activePrefix === 'all'} class:btn-ghost={activePrefix !== 'all'} onclick={() => (activePrefix = 'all')}>全部</button>
-            {#each PREFIX_GROUPS as g (g.id)}
-              {#if availablePrefixIds.has(g.id)}
-                <button class="btn btn-xs" class:btn-primary={activePrefix === g.id} class:btn-ghost={activePrefix !== g.id} onclick={() => (activePrefix = g.id)}>{g.forms.join('/')}</button>
-              {/if}
-            {/each}
           </div>
+          {#each GROUP_KINDS as k (k.kind)}
+            {@const groups = PREFIX_GROUPS.filter((g) => groupKind(g) === k.kind && availablePrefixIds.has(g.id))}
+            {#if groups.length}
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="shrink-0 text-xs font-medium text-base-content/45">{k.label}</span>
+                {#each groups as g (g.id)}
+                  <button class="btn btn-xs" class:btn-primary={activePrefix === g.id} class:btn-ghost={activePrefix !== g.id} onclick={() => (activePrefix = g.id)}>{g.forms.join('/')}</button>
+                {/each}
+              </div>
+            {/if}
+          {/each}
           <p class="text-xs text-base-content/50 tabular-nums">{rootCount} 個字</p>
 
           {#if rootGroups.length}

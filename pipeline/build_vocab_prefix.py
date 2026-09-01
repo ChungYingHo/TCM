@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """把手工撰寫、經 Etymonline 查證的字根字彙來源檔組裝成網站出貨用的 src/data/vocab.json。
 
-來源：pipeline/data/vocab_prefix/*.json（每組字首一個檔，檔名前綴數字定序；每字含
-      parts/etymology/derivatives 與 sources 出處）。
+來源：pipeline/data/vocab_prefix/*.json（第一部分 依字首）與 pipeline/data/vocab_root/*.json
+      （第二部分 依字根）。每組一個檔，檔名前綴數字定序；每字含 parts/etymology/derivatives
+      與 sources 出處。兩部分共用同一個字池，每日複習才吃得到。
 出貨：src/data/vocab.json（VocabData 形；剝掉 sources、補上 id 與各 exam/tag 預設值）。
 
 原字庫（舊 ECDICT GRE/TOEFL 3240 字）已封存於 src/data/vocab-legacy.json，不由此腳本產生。
@@ -14,14 +15,18 @@ import json
 import pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-SRC_DIR = ROOT / "pipeline" / "data" / "vocab_prefix"
+SRC_DIRS = [
+    ROOT / "pipeline" / "data" / "vocab_prefix",  # 第一部分 依字首
+    ROOT / "pipeline" / "data" / "vocab_root",  # 第二部分 依字根
+]
 OUT = ROOT / "src" / "data" / "vocab.json"
 
 
 def main() -> None:
     src = []
-    for f in sorted(SRC_DIR.glob("*.json")):  # 檔名前綴數字＝字首顯示順序
-        src.extend(json.loads(f.read_text(encoding="utf-8")))
+    for d in SRC_DIRS:  # 目錄順序＝課本兩大部分的順序
+        for f in sorted(d.glob("*.json")):  # 檔名前綴數字＝組內顯示順序
+            src.extend(json.loads(f.read_text(encoding="utf-8")))
     words = []
     for e in src:
         words.append(

@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
-import { PREFIX_GROUPS, prefixById, type VocabData } from '@/models/vocab'
+import { PREFIX_GROUPS, groupKind, prefixById, type VocabData } from '@/models/vocab'
 
 // 出貨的字根字彙字庫（原字庫 3240 字已封存於 vocab-legacy.json，不在此測）。
 const vocab = JSON.parse(readFileSync(path.resolve('./src/data/vocab.json'), 'utf8')) as VocabData
@@ -33,5 +33,16 @@ describe('字根字彙 corpus (src/data/vocab.json)', () => {
     expect(new Set(ids).size).toBe(ids.length)
     const orders = PREFIX_GROUPS.map((g) => g.order).sort((a, b) => a - b)
     expect(orders).toEqual(PREFIX_GROUPS.map((_, i) => i + 1))
+  })
+
+  // 課本第一部分依字首、第二部分依字根，chips 直接印 forms。字首要帶連字號、字根不帶，
+  // 新增一組時最容易把這點抄錯（`loc-` 或 `magn-` 會讓整排 chips 讀起來像字首）。
+  it('字首的 forms 帶連字號、字根的不帶', () => {
+    const wrong = PREFIX_GROUPS.flatMap((g) =>
+      g.forms
+        .filter((f) => f.endsWith('-') !== (groupKind(g) === 'prefix'))
+        .map((f) => `${g.id}：${f}（kind=${groupKind(g)}）`),
+    )
+    expect(wrong, `forms 的連字號與 kind 不符：\n${wrong.join('\n')}`).toEqual([])
   })
 })

@@ -52,14 +52,28 @@ export interface VocabData {
   words: VocabWord[]
 }
 
-// ── 字首分組 —— 單一資料來源（字首相關 UI 一律讀這張表，勿散落硬寫）───────────────
-// 依老師教法排序；forms 收同一字首的拼寫變體（子音同化造成，如 in-→il-/im-/ir-）。
+// ── 構詞分組 —— 單一資料來源（分組相關 UI 一律讀這張表，勿散落硬寫）───────────────
+// 依老師教法排序。課本分兩部分：第一部分依「字首」、第二部分依「字根」，由 kind 區分，
+// 兩部分的字共用同一個字池（都在 vocab.json），每日複習才吃得到。
+// forms 收同一構詞單位的拼寫變體（字首的子音同化如 in-→il-/im-/ir-，字根的異體如 magn/maj）。
 
 export interface PrefixGroup {
   id: string // 穩定 id，對應 VocabWord.prefixId
-  forms: string[] // 字首拼法變體，如 ['in-', 'il-', 'im-', 'ir-']
+  forms: string[] // 拼法變體，字首如 ['in-', 'il-', 'im-', 'ir-']，字根如 ['magn', 'maj']
   meaning: string // 白話字義（中文＋英文）
   order: number // 顯示順序（老師教法原序）
+  kind?: 'prefix' | 'root' // 省略＝'prefix'（第一部分的 61 組都是字首）
+}
+
+/** 課本的兩大部分，/vocab 依此分區顯示。 */
+export const GROUP_KINDS = [
+  { kind: 'prefix' as const, label: '依字首' },
+  { kind: 'root' as const, label: '依字根' },
+]
+
+/** 分組的種類，省略 kind 時視為字首。 */
+export function groupKind(g: PrefixGroup): 'prefix' | 'root' {
+  return g.kind ?? 'prefix'
 }
 
 export const PREFIX_GROUPS: PrefixGroup[] = [
@@ -124,6 +138,26 @@ export const PREFIX_GROUPS: PrefixGroup[] = [
   { id: 'mill', forms: ['mill-'], meaning: '千（thousand）', order: 59 },
   { id: 'mega', forms: ['mega-'], meaning: '百萬、巨大（million, great）', order: 60 },
   { id: 'giga', forms: ['giga-'], meaning: '十億、巨大（billion, giant）', order: 61 },
+  // ── 第二部分：依字根排列（課本書頁 67 起）─────────────────────────────────────
+  // 表示「位置」的字根
+  { id: 'loc', forms: ['loc'], meaning: '位置（place）', order: 62, kind: 'root' },
+  { id: 'centr', forms: ['centr'], meaning: '中心（center）', order: 63, kind: 'root' },
+  { id: 'circum', forms: ['circum', 'circul'], meaning: '圓、環繞（circle, around）', order: 64, kind: 'root' },
+  { id: 'found', forms: ['found', 'fund'], meaning: '底部（bottom）', order: 65, kind: 'root' },
+  { id: 'radic', forms: ['radic', 'rudi'], meaning: '根（root）', order: 66, kind: 'root' },
+  // 表示「大小」與「測量」的字根
+  { id: 'maxi', forms: ['maxi', 'magn', 'maj'], meaning: '大（great）', order: 67, kind: 'root' },
+  { id: 'aug', forms: ['aug'], meaning: '增加、大（increase, great）', order: 68, kind: 'root' },
+  { id: 'grand', forms: ['grand'], meaning: '大（great）', order: 69, kind: 'root' },
+  { id: 'medi', forms: ['medi', 'midi'], meaning: '中間（middle）', order: 70, kind: 'root' },
+  { id: 'mini', forms: ['mini'], meaning: '小（small）', order: 71, kind: 'root' },
+  { id: 'brev', forms: ['brev', 'brid'], meaning: '短（short）', order: 72, kind: 'root' },
+  { id: 'meter', forms: ['meter'], meaning: '測量（measure）', order: 73, kind: 'root' },
+  { id: 'mod', forms: ['mod'], meaning: '方式、尺度（manner, measure）', order: 74, kind: 'root' },
+  // 表示「多少」的字根
+  { id: 'plet', forms: ['plet', 'plen'], meaning: '滿、填（full, fill）', order: 75, kind: 'root' },
+  { id: 'vac', forms: ['vac', 'van', 'vain'], meaning: '空（empty）', order: 76, kind: 'root' },
+  { id: 'neg', forms: ['neg', 'nil', 'nul'], meaning: '無、否定（no, nothing）', order: 77, kind: 'root' },
 ]
 
 const PREFIX_BY_ID: Record<string, PrefixGroup> = Object.fromEntries(
