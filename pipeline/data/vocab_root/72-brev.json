@@ -1,0 +1,102 @@
+[
+  {
+    "word": "brief",
+    "prefixId": "brev",
+    "pos": "a., v.",
+    "phonetic": "ˈbrif",
+    "zh": "簡短的；做簡報",
+    "parts": [
+      {
+        "text": "brief",
+        "gloss": "短的"
+      }
+    ],
+    "etymology": "brief 約 1300 年（拼作 bref）經古法語借入英文，源自拉丁文 brevis「短、低、小、淺」，可上溯原始印歐語字根 *mregh-u-「短」。名詞用法於 14 世紀初出現，原指官方發出的文書，因篇幅簡短而衍生出「摘要」之義，1630 年代起定型為法律上「案件事實摘要」的意思。",
+    "derivatives": [
+      {
+        "word": "brevity",
+        "pos": "n.",
+        "zh": "簡短"
+      }
+    ],
+    "example": "Let me give you a brief survey of company history.",
+    "example_zh": "我來簡短介紹一下公司的歷史。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/brief",
+      "ipa": "/ˈbɹif/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "We had already been briefed about our job descriptions."
+      ]
+    }
+  },
+  {
+    "word": "abridge",
+    "prefixId": "brev",
+    "pos": "v.",
+    "phonetic": "əˈbrɪdʒ",
+    "zh": "刪節，縮短",
+    "parts": [
+      {
+        "text": "a",
+        "gloss": "朝向（ad-）"
+      },
+      {
+        "text": "bridge",
+        "gloss": "使短"
+      }
+    ],
+    "etymology": "abridge 約 1300 年經古法語 abregier 借入英文，源自晚期拉丁文 abbreviare（ad-「向」+breviare「使短」，breviare 又源自 brevis「短」）。拉丁文 -vi- 到古法語 -dg- 是規律音變（同見 assuage<assuavidare、deluge<diluvium），brevis 因此一路變成 bridge，和「橋」純屬拼法巧合。abridge 與 abbreviate 系出同源、皆源自拉丁 abbreviare，屬於同一詞根的雙生詞（doublet）：abridge 經古法語轉道進入英文（約 1300 年），abbreviate 則約 15 世紀中直接借自拉丁文，因此兩者拼法讀音才會分歧。",
+    "derivatives": [
+      {
+        "word": "abridgment",
+        "pos": "n.",
+        "zh": "刪節版，摘要"
+      }
+    ],
+    "example": "The 500-page novel was abridged to half its length.",
+    "example_zh": "這本五百頁的小說被刪節成原本的一半長度。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/abridge",
+      "ipa": "/əˈbɹɪd͡ʒ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "課本詞素標示「a-/ab-（from）」宜訂正：Etymonline 明確指出 abbreviare = ad-「向、朝」+breviare「使短」，abridge 的字首其實是拉丁 ad-（弱化為 a-），並非表「離開、來自」的 ab-，課本此處字首字義恐有誤植。"
+    }
+  },
+  {
+    "word": "unabridged",
+    "prefixId": "brev",
+    "pos": "a.",
+    "phonetic": "ˌʌnəˈbrɪdʒd",
+    "zh": "未刪節的，足本的",
+    "parts": [
+      {
+        "text": "un",
+        "gloss": "不、未"
+      },
+      {
+        "text": "abridged",
+        "gloss": "刪節的"
+      }
+    ],
+    "etymology": "unabridged 最早見於 1590 年代，由否定字首 un-「不」加上動詞 abridge 的過去分詞構成，字面即「未被刪節、未縮短」，19 世紀以來主要用於形容辭典、書籍等未經刪節的完整版本。",
+    "derivatives": [],
+    "example": "The unabridged audiobook In Search of Lost Time takes several full days to listen to.",
+    "example_zh": "《追憶似水年華》的足本有聲書要花上好幾整天才聽得完。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/unabridged",
+      "ipa": "/ˌʌnəˈbrɪdʒd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 該詞條無 Pronunciation 段落（已重試一次仍無），故美式 IPA 改採 Dictionary.com 標音，非源自 Wiktionary。"
+    }
+  }
+]

@@ -1,0 +1,187 @@
+[
+  {
+    "word": "august",
+    "prefixId": "aug",
+    "pos": "a.",
+    "phonetic": "ɔˈgʌst",
+    "zh": "崇高的，偉大的",
+    "parts": [
+      {
+        "text": "aug",
+        "gloss": "增加、偉大"
+      }
+    ],
+    "etymology": "1660 年代源自拉丁文 augustus「莊嚴的、崇高的、宏偉的」，Etymonline 註明字源有兩種說法：一說原意是「經占卜官認可、帶有吉兆而顯神聖」（與 augur 有關），另一說（語言學者 de Vaan）認為是「被增大之物」，直接連結 augere「增加」，兩說皆指向「因某種增益而顯尊貴莊嚴」之意。",
+    "derivatives": [],
+    "example": "The family claims an august lineage.",
+    "example_zh": "這個家族自稱有著崇高的血統。",
+    "sources": {
+      "page": "IMG_1686",
+      "etymonline": "https://www.etymonline.com/word/august",
+      "ipa": "/ɔˈɡʌst/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此為形容詞「莊嚴的」的字源（非月份 August）。Etymonline 對其確切來源列出兩種假說（見 etymology），並非單一定論，但其中一說直接連結 augere「增加」，與教材歸類相符。"
+    }
+  },
+  {
+    "word": "auction",
+    "prefixId": "aug",
+    "pos": "n., v.",
+    "phonetic": "ˈɔkʃən",
+    "zh": "拍賣",
+    "parts": [
+      {
+        "text": "auct",
+        "gloss": "增加"
+      }
+    ],
+    "etymology": "源自拉丁文 auctio（屬格 auctionem），意為「以喊價遞增方式進行的公開拍賣」，是動詞 augere「增加」過去分詞詞幹所形成的動作名詞，字面就是「（喊價）不斷增加的過程」，後成為英文「拍賣」一詞，並可回溯至原始印歐字根 *aug-「增加」。",
+    "derivatives": [],
+    "example": "I bought this couch at a furniture auction.",
+    "example_zh": "這張沙發是我在一場家具拍賣會上買的。",
+    "sources": {
+      "page": "IMG_1687",
+      "etymonline": "https://www.etymonline.com/word/auction",
+      "ipa": "/ˈɔkʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The painting will be auctioned tomorrow at Sotheby's."
+      ]
+    }
+  },
+  {
+    "word": "authorize",
+    "prefixId": "aug",
+    "pos": "v.",
+    "phonetic": "ˈɔθəraɪz",
+    "zh": "授權",
+    "parts": [
+      {
+        "text": "author",
+        "gloss": "創始者、締造者"
+      }
+    ],
+    "etymology": "源自古法文 autoriser／auctoriser 與中世紀拉丁文 auctorizare「授予權威」，其字根 auctor「創始者、締造者」是 augere「增加」的過去分詞 auctus 所形成的施事名詞，字面義為「使…成長茁壯之人」，因此「authorize」本義即「賦予（如創始者般的）權威」。",
+    "derivatives": [
+      {
+        "word": "authorization",
+        "pos": "n.",
+        "zh": "授權"
+      }
+    ],
+    "example": "I have been authorized by the manager to handle the deal.",
+    "example_zh": "我已獲得經理授權來處理這筆交易。",
+    "sources": {
+      "page": "IMG_1687",
+      "etymonline": "https://www.etymonline.com/word/authorize",
+      "ipa": "/ˈɔθəɹaɪz/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "author 確實透過 auctor < auctus < augere 回溯到「增加」字根（Etymonline 明確記載），教材歸類正確。但 author 拼法中的 -th- 是近代英文誤以為此字與 authentic 同源才加上的，並非語音自然演變，屬拼法史上的插曲，與字根真偽無關。"
+    }
+  },
+  {
+    "word": "augment",
+    "prefixId": "aug",
+    "pos": "v.",
+    "phonetic": "ɔgˈmɛnt",
+    "zh": "擴大，增加",
+    "parts": [
+      {
+        "text": "aug",
+        "gloss": "增加"
+      }
+    ],
+    "etymology": "源自古法文 augmenter，來自晚期拉丁文 augmentare「使增加」，其名詞 augmentum「增長」直接源於動詞 augere「增加、擴大、使壯大」（可回溯至原始印歐字根 *aug-「增加」），字面意思就是「使變大、增添」。",
+    "derivatives": [
+      {
+        "word": "augmentation",
+        "pos": "n.",
+        "zh": "擴大，增加"
+      }
+    ],
+    "example": "He augmented his income by taking a second job.",
+    "example_zh": "他靠兼第二份工作來增加收入。",
+    "sources": {
+      "page": "IMG_1687",
+      "etymonline": "https://www.etymonline.com/word/augment",
+      "ipa": "/ɔɡˈmɛnt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "augury",
+    "prefixId": "aug",
+    "pos": "n.",
+    "phonetic": "ˈɔgjʊrɪ",
+    "zh": "占卜，預兆",
+    "parts": [
+      {
+        "text": "augur",
+        "gloss": "占卜官、預言者"
+      }
+    ],
+    "etymology": "源自拉丁文 augurium「占卜、對徵兆的觀察與解釋」，直接字根是 augur「占卜官」。Etymonline 對 augur 本身的語源特別註明不確定——一說（perhaps，引語言學者 de Vaan）原意與「祭儀中使農作物增產」有關而連結 augere「增加」，但「更普遍的說法」其實是 augur 源自拉丁文 avis「鳥」＋garrire「說話」，因觀察鳥的飛行、鳴叫、覓食是占卜的重要依據，與「增加」字根無關。",
+    "derivatives": [],
+    "example": "Watching the birds fly was the classical Greek method of augury.",
+    "example_zh": "觀察鳥的飛行是古希臘的占卜方法。",
+    "sources": {
+      "page": "IMG_1687",
+      "etymonline": "https://www.etymonline.com/word/augury",
+      "ipa": "/ˈɔːɡjʊɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "字根真偽存疑：Etymonline 明白指出 augur 與 augere「增加」的關聯只是次要假說（perhaps, de Vaan），「更普遍的說法」是 augur 另有語源（avis「鳥」+ garrire「說話」），與 aug- 字族無關。教材把 augury 歸入 aug（increase） 字族，依 Etymonline 原文並非穩固定論，宜誠實告知學生此關聯有爭議。",
+      "extraExamples": [
+        "Some say a broken mirror is an augury of seven years' bad luck"
+      ]
+    }
+  },
+  {
+    "word": "inaugurate",
+    "prefixId": "aug",
+    "pos": "v.",
+    "phonetic": "ɪˈnɔgjəˌret",
+    "zh": "就職，開幕，開始",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "在…之上、進入"
+      },
+      {
+        "text": "augur",
+        "gloss": "占卜官、預言者"
+      }
+    ],
+    "etymology": "源自拉丁文 inauguratus（inaugurare 的過去分詞），意為「觀察飛鳥占卜、於吉兆下舉行祝聖或就職儀式」，由 in-「在…之上」＋augurare「擔任占卜官、預言」組成（augurare 又源於 augur），字面義是「在占卜吉兆的儀式中正式就職」，這也是古羅馬就職典禮必含占卜儀式的由來。",
+    "derivatives": [
+      {
+        "word": "inauguration",
+        "pos": "n.",
+        "zh": "就職，開幕，開始"
+      }
+    ],
+    "example": "American Presidents are always inaugurated on Jan. 20.",
+    "example_zh": "美國總統一律在一月二十日就職。",
+    "sources": {
+      "page": "IMG_1687",
+      "etymonline": "https://www.etymonline.com/word/inaugurate",
+      "ipa": "/ɪˈnɔɡjəˌɹeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "inaugurate 與 augur 的關聯本身明確（in- + augurare < augur），但如 augury 條所述，augur 是否真的源自 augere「增加」，Etymonline 註明是有爭議、非主流的假說（主流說法是 augur < avis「鳥」+ garrire「說話」，與「增加」無關）。因此 inaugurate 被歸入 aug（increase） 字族，其實建立在 augur 語源的次要假說之上，並非穩固定論。",
+      "extraExamples": [
+        "The government inaugurated a new trade policy."
+      ]
+    }
+  }
+]

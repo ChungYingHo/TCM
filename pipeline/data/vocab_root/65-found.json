@@ -1,0 +1,122 @@
+[
+  {
+    "word": "profound",
+    "prefixId": "found",
+    "pos": "a.",
+    "phonetic": "prəˈfaʊnd",
+    "zh": "深遠的，深刻的",
+    "parts": [
+      {
+        "text": "pro",
+        "gloss": "向前、在前"
+      },
+      {
+        "text": "found",
+        "gloss": "底部、深"
+      }
+    ],
+    "etymology": "拉丁文 profundus 由 pro-（向前、向下）加 fundus（底部）組成，原意為「深不見底」，中世紀英文約於 14 世紀經古法文 profont/profund 引入後，保留其比喻義，發展出「學識淵博、意義深奧」及「感受深刻」之意。",
+    "derivatives": [
+      {
+        "word": "profundity",
+        "pos": "n.",
+        "zh": "深遠，深刻"
+      }
+    ],
+    "example": "The invention of the contraceptive pill brought about profound changes in the lives of women.",
+    "example_zh": "避孕藥的發明為女性的生活帶來了深遠的改變。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/profound",
+      "ipa": "/prəˈfaʊnd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "fundamental",
+    "prefixId": "found",
+    "pos": "a.",
+    "phonetic": "ˌfʌndəˈmɛntəl",
+    "zh": "根本的，基本的",
+    "parts": [
+      {
+        "text": "fund",
+        "gloss": "底部、基礎"
+      }
+    ],
+    "etymology": "fundamental 仿中世紀晚期拉丁文 fundamentalis（『屬於根基的』）而造，其名詞 fundamentum（『根基、基礎』）源自拉丁文 fundare（『建立』），而 fundare 又源自 fundus（『底部』），約 15 世紀中期進入英文，原意為『屬於根基的、主要的』。",
+    "derivatives": [],
+    "example": "There's a fundamental difference between these two political parties.",
+    "example_zh": "這兩個政黨之間有根本上的差異。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/fundamental",
+      "ipa": "/ˌfʌndəˈmɛntəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "found",
+    "prefixId": "found",
+    "pos": "v.",
+    "phonetic": "faʊnd",
+    "zh": "創立，創設",
+    "parts": [
+      {
+        "text": "found",
+        "gloss": "建立、奠基"
+      }
+    ],
+    "etymology": "此為 found 的其中一個同形詞，意為『建立、創立』：源自古法文 fonder，溯自拉丁文 fundare（『打地基、奠基』），而 fundare 又源自 fundus（『底部』），字面義為『打下底部』，約 13 世紀晚期進入英文。",
+    "derivatives": [
+      {
+        "word": "founder",
+        "pos": "n.",
+        "zh": "創立者，創辦人"
+      }
+    ],
+    "example": "The university was founded by a Christian sect.",
+    "example_zh": "這所大學是由一個基督教教派創立的。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/found",
+      "ipa": "/faʊnd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "英文 found 有三個字源完全不同的同形詞：①本條指『建立』（fundare < fundus「底部」），屬本組字根。②另有 found 意為『熔煉、鑄造金屬』，源自拉丁文 fundere（『熔化、倒出』），來自不同的 PIE 字根 *gheu-（『倒』），與「底部」無關，是本組的偽同源詞，不可混淆。③found 也是動詞 find 的過去式／過去分詞，源自古英語 findan，與拉丁字根完全無關。教材此處指的是①『建立』之義。"
+    }
+  },
+  {
+    "word": "foundation",
+    "prefixId": "found",
+    "pos": "n.",
+    "phonetic": "ˌfaʊnˈdeʃən",
+    "zh": "創立，地基，基金會，根據",
+    "parts": [
+      {
+        "text": "found",
+        "gloss": "底部、基礎"
+      }
+    ],
+    "etymology": "foundation 源自古法文 fondacion 或晚期拉丁文 fundationem，其字根為拉丁文 fundare（『打地基』），再溯源至 fundus（『底部』）。14 世紀晚期原指『建立的行為』，15 世紀初期起也用來指建築物『地基、根基』的實體意義。",
+    "derivatives": [],
+    "example": "The foundations will have to be reinforced to keep the house from sinking further into the ground.",
+    "example_zh": "地基必須加固，房子才不會繼續往下陷。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/foundation",
+      "ipa": "/ˌfaʊnˈdeɪʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "These allegations are completely without foundation."
+      ]
+    }
+  }
+]

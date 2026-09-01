@@ -1,0 +1,324 @@
+[
+  {
+    "word": "minus",
+    "prefixId": "mini",
+    "pos": "prep., n.",
+    "phonetic": "ˈmaɪnəs",
+    "zh": "減；負數，缺點",
+    "parts": [
+      {
+        "text": "minus",
+        "gloss": "較少、減去"
+      }
+    ],
+    "etymology": "拉丁文 minus「較少」，是 minor「較小的」的中性格形式，源自原始印歐字根 *mei-「小」。15 世紀晚期因中世紀北海地區商業上以拉丁文 plus/minus 標示重量盈虧，進入英文成為表示「減去」的介系詞。",
+    "derivatives": [],
+    "example": "Profit is revenue minus cost.",
+    "example_zh": "利潤等於營收減去成本。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/minus",
+      "ipa": "/ˈmaɪnəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "Aggressiveness can be a plus or a minus, depending on how one uses it."
+      ]
+    }
+  },
+  {
+    "word": "minuscule",
+    "prefixId": "mini",
+    "pos": "a.",
+    "phonetic": "ˈmɪnəˌskjul",
+    "zh": "微小的",
+    "parts": [
+      {
+        "text": "minus",
+        "gloss": "較少、小"
+      },
+      {
+        "text": "-cule",
+        "gloss": "表「小」的指小詞尾"
+      }
+    ],
+    "etymology": "源自拉丁文 minuscula （littera）「稍小的（字母）」，minusculus 是 minus「較少」的指小詞形式。1705 年借自法文 minuscule 進入英文，原指（印刷用的）小寫字母，1727 年起也作形容詞，1893 年起才有「極微小」的泛用語意。",
+    "derivatives": [],
+    "example": "The cactus only requires a minuscule amount of water to survive.",
+    "example_zh": "仙人掌只需要極少量的水就能活。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/minuscule",
+      "ipa": "/ˈmɪnəˌskjuːl/（亦作 /mɪˈnʌskjuːl/）",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "administration",
+    "prefixId": "mini",
+    "pos": "n.",
+    "phonetic": "ədˌmɪnəˈstreʃən",
+    "zh": "行政，政府",
+    "parts": [
+      {
+        "text": "ad",
+        "gloss": "向、對"
+      },
+      {
+        "text": "minister",
+        "gloss": "僕人、次要者"
+      }
+    ],
+    "etymology": "由 ad-「向」+ minister「僕人、次要者」組成。minister 本身源自 minus/minor「較少」加比較級字尾 -teros，字面義「地位較低下者」。administration 源自拉丁文 administrationem「協助、管理」，語意從「給予、分配」（14 世紀）逐漸演變為「管理莊園」（15 世紀初）、「管理公共事務」（1680 年代），1796 年起也指（總統的）執政期或行政部門。",
+    "derivatives": [
+      {
+        "word": "minister",
+        "pos": "n.",
+        "zh": "部長，牧師"
+      },
+      {
+        "word": "administer",
+        "pos": "v.",
+        "zh": "行使，用藥"
+      }
+    ],
+    "example": "I like teaching, but don't like administration.",
+    "example_zh": "我喜歡教書，但不喜歡做行政。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/administration",
+      "ipa": "/ədˌmɪnəˈstreɪʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "查證後確認 TRAP 不成立：minister 確實源自 minus/minor「較少」+ 比較級字尾 -teros（字面「較低下者、僕人」），屬同一字根家族，只是透過比較級字尾間接連結，並非 minister 直接等於 minus。",
+      "extraExamples": [
+        "Many Americans are dissatisfied with the current administration."
+      ]
+    }
+  },
+  {
+    "word": "diminish",
+    "prefixId": "mini",
+    "pos": "v.",
+    "phonetic": "dɪˈmɪnɪʃ",
+    "zh": "減少，變小",
+    "parts": [
+      {
+        "text": "di",
+        "gloss": "完全、加強語氣"
+      },
+      {
+        "text": "-min",
+        "gloss": "使變小"
+      }
+    ],
+    "etymology": "15 世紀初由兩個同義的古字 diminue 與 minish 合流而成。diminue 源自古法文 diminuer、拉丁文 diminuere（deminuere 的變體，de-「完全」+ minuere「使變小」），minish 則源自古法文 menuisier（同樣來自 minuere）。字面義為「弄成細小碎片」，引申為「減少、使變小」。",
+    "derivatives": [],
+    "example": "The sound of the parade diminished in the distance.",
+    "example_zh": "遊行的聲音在遠處逐漸減弱。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/diminish",
+      "ipa": "/dɪˈmɪnɪʃ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教材寫作 minu，但 diminish 實際拼字為 di-min-ish，字根中並無字母 u。正確應標為 min。字源上 diminish 是 diminue 與 minish 兩詞合流而成，兩者皆終究來自拉丁文 minuere「使變小」，字根家族關聯仍成立，僅教材的拼字提示有誤。"
+    }
+  },
+  {
+    "word": "diminutive",
+    "prefixId": "mini",
+    "pos": "a.",
+    "phonetic": "dɪˈmɪnjətɪv",
+    "zh": "極小的",
+    "parts": [
+      {
+        "text": "di",
+        "gloss": "完全、加強語氣"
+      },
+      {
+        "text": "-minut",
+        "gloss": "使變小的、已變小的"
+      }
+    ],
+    "etymology": "源自古法文 diminutif 與拉丁文 diminutivus（deminutivus 的變體），來自 deminuere「減少、使變小」（de-「完全」+ minuere「使變小」）。14 世紀晚期原為文法用語，指「表示微小」的衍生詞（如指小詞），約 1600 年起也作一般形容詞用，指「微小的、狹隘的」。",
+    "derivatives": [
+      {
+        "word": "diminution",
+        "pos": "n.",
+        "zh": "縮小，減低"
+      }
+    ],
+    "example": "The six-foot-tall man looks diminutive among those NBA players.",
+    "example_zh": "那位身高六英尺的男子站在那些 NBA 球員之中顯得格外嬌小。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/diminutive",
+      "ipa": "/dɪˈmɪnjətɪv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The diminutive bonsai plant costs a fortune."
+      ]
+    }
+  },
+  {
+    "word": "minute",
+    "prefixId": "mini",
+    "pos": "a., n.",
+    "phonetic": "maɪˈnjut",
+    "zh": "微小的；會議記錄（複數）",
+    "parts": [
+      {
+        "text": "minute",
+        "gloss": "變小的、細小的"
+      }
+    ],
+    "etymology": "皆源自拉丁文 minutus「被弄小的」，是 minuere「使變小」的過去分詞。形容詞義約於 15 世紀中出現，原指「被切細的」，15 世紀晚期起指「體積或程度上微小的」。名詞義則源自中世紀拉丁文 minuta「一小部分」，指圓或鐘面的六十分之一，即「分鐘」。同一名詞另外發展出「（草擬的）摘要、備忘」之意（約 1450 年），其複數 minutes 約 1710 年起專指「會議記錄」，因早期記錄常先寫成簡略草稿。",
+    "derivatives": [],
+    "example": "The picture captures everything in minute detail.",
+    "example_zh": "這張照片把每一個微小的細節都拍了下來。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/minute",
+      "ipa": "/maɪˈnjuːt/（adj. 微小的）；/ˈmɪnɪt/（n. 分鐘、會議記錄）",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "同一拼字依詞性/語意不同，重音與發音明顯不同：形容詞「微小的」重音在後一音節 /maɪˈnjuːt/。名詞「分鐘」與「會議記錄」（兩者同音）重音在前一音節 /ˈmɪnɪt/。「會議記錄」（minutes） 源自「（草擬的）摘要、備忘」這個名詞子義，而非直接來自「六十分之一小時」的子義，但兩者皆同源自 minutus「小」。",
+      "extraExamples": [
+        "The manager asked the secretary to take the minutes for the monthly conference."
+      ]
+    }
+  },
+  {
+    "word": "minutia",
+    "prefixId": "mini",
+    "pos": "n.",
+    "phonetic": "məˈnuʃiə",
+    "zh": "細節，小事（複數 minutiae）",
+    "parts": [
+      {
+        "text": "minut",
+        "gloss": "變小的、細小的"
+      }
+    ],
+    "etymology": "源自拉丁文 minutia「微小、瑣細」，來自 minutus「小的」。1751 年進入英文，指「微小的細節、瑣事」，現代英文多用複數 minutiae（晚期拉丁文，意為「瑣事」）。",
+    "derivatives": [],
+    "example": "The committee wasted too much time on the minutiae of the report.",
+    "example_zh": "委員會在這份報告的枝微末節上浪費了太多時間。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/minutia",
+      "ipa": "/məˈnuːʃ(i)ə/（亦作 /maɪˈnuːʃiə/）",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 頁面未明確標示「US」標籤（僅音檔標示 UK），但所列兩種發音 /maɪˈn（j）uːʃ（iː）ə/ 與 /məˈn（j）uːʃ（iː）ə/ 均通行於美式英文，已依 Merriam-Webster 慣例以 mə- 開頭者列為主要發音。"
+    }
+  },
+  {
+    "word": "miniature",
+    "prefixId": "mini",
+    "pos": "a., n.",
+    "phonetic": "ˈmɪniətʃər",
+    "zh": "縮小的；縮小版（圖、像等）",
+    "parts": [
+      {
+        "text": "miniat",
+        "gloss": "塗紅（紅丹）"
+      }
+    ],
+    "etymology": "不屬於「小」字根家族。1580 年代源自義大利文 miniatura（手抄本裝飾畫），來自動詞 miniare「塗成紅色」，其字根是拉丁文 minium「紅丹」（一種鉛丹顏料，用於手抄本裝飾與紅色書寫）。Etymonline 明確指出「小」的語意是後來附加的：一因中世紀手抄本插畫本身尺寸小，二因與 minor、minimus、minutus 等表「小」的形似字產生語音聯想，而非真正詞源。",
+    "derivatives": [],
+    "example": "My kid sister made some miniature clothing for her doll.",
+    "example_zh": "我妹妹幫她的娃娃做了一些迷你的衣服。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/miniature",
+      "ipa": "/ˈmɪniətʃər/（亦作 /ˈmɪnətʃər/）",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "重大陷阱：miniature 並不屬於 minus/minuere「小」這個字根家族。它源自拉丁文 minium（紅丹顏料）→ miniare（塗紅）→義大利文 miniatura（手抄本裝飾畫），本義與「紅色」有關而非「小」。「小」的語感是後來才附加的：一因手抄本插畫本身尺寸小，二因與 minor/minimus/minutus 等形似字產生語音聯想而誤植，Etymonline 明確指出這是巧合的字形/字音聯想，非真正詞源。教材若將此字歸入 mini-「小」字根組，建議另加說明或移除。",
+      "extraExamples": [
+        "At that theme park you can see many world-famous buildings in miniature."
+      ]
+    }
+  },
+  {
+    "word": "minimum",
+    "prefixId": "mini",
+    "pos": "n., a.",
+    "phonetic": "ˈmɪnəməm",
+    "zh": "最低限度（的）",
+    "parts": [
+      {
+        "text": "minim",
+        "gloss": "最小的（拉丁文最高級）"
+      }
+    ],
+    "etymology": "源自拉丁文 minimus「最小的」，是 minor「較小的」的最高級形式，源自原始印歐字根 *mei-「小」。名詞義 1660 年代進入英文，原指「物質可分割的最小部分」（今已不用），1670 年代起指「最小量、最低限度」。形容詞義則遲至 1810 年才出現。",
+    "derivatives": [
+      {
+        "word": "minimal",
+        "pos": "a.",
+        "zh": "最低限度的"
+      }
+    ],
+    "example": "I need a minimum of three days to finish the report.",
+    "example_zh": "我至少需要三天才能寫完這份報告。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/minimum",
+      "ipa": "/ˈmɪnəməm/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "This part-time job only pays the minimum wage."
+      ]
+    }
+  },
+  {
+    "word": "minor",
+    "prefixId": "mini",
+    "pos": "a., n.",
+    "phonetic": "ˈmaɪnər",
+    "zh": "小幅度的；未成年人，副修科目",
+    "parts": [
+      {
+        "text": "minor",
+        "gloss": "較小的、較次要的"
+      }
+    ],
+    "etymology": "源自拉丁文 minor「較少的、較小的、較次要的」，與 minus 同源，源自原始印歐字根 *mei-「小」。英文最早於 13 世紀初以 frere menour（「小兄弟」，方濟會修士自稱謙卑之意）之姿進入英文，14 世紀初也作名詞指方濟會修士。1570 年代起有「未成年」之意，15 世紀初起有「較小、較次要」的一般比較義，1620 年代起有「相對不重要」之意。",
+    "derivatives": [
+      {
+        "word": "minority",
+        "pos": "n.",
+        "zh": "少數，少數民族"
+      }
+    ],
+    "example": "The book was published after some minor changes.",
+    "example_zh": "這本書在做了一些小幅度的修改之後才出版。",
+    "sources": {
+      "page": "IMG_1689",
+      "etymonline": "https://www.etymonline.com/word/minor",
+      "ipa": "/ˈmaɪnər/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "This is an R-rated movie; minors are not allowed.",
+        "My undergraduate major was in English, with a minor in music."
+      ]
+    }
+  }
+]

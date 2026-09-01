@@ -1,0 +1,302 @@
+[
+  {
+    "word": "negative",
+    "prefixId": "neg",
+    "pos": "a., n.",
+    "phonetic": "ˈnɛgətɪv",
+    "zh": "否定的，陰性的，負面的；否定",
+    "parts": [
+      {
+        "text": "neg",
+        "gloss": "否定、說不"
+      }
+    ],
+    "etymology": "源自拉丁文 negare「拒絕、說不」（可溯至原始印歐語 *ne-「不」），經古法文 negatif 演變出「表示否定」之意，17 世紀後才擴及代數與電學的「負」義。",
+    "derivatives": [
+      {
+        "word": "negate",
+        "pos": "v.",
+        "zh": "否定"
+      }
+    ],
+    "example": "About your request for help, the answer is negative.",
+    "example_zh": "關於你請求協助這件事，答案是否定的。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/negative",
+      "ipa": "/ˈnɛɡ.ə.tɪv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "陷阱提醒：Etymonline 將 negare（拒絕/說不）、nihil（無）、nullus（一個都沒有）視為三個各自獨立的拉丁字，並非同一詞根的變化形。三者的否定成分雖都可回溯到原始印歐語 *ne-「不」，屬遠親同源，但教材把 neg/nil/nul 併作同一組「字根」是簡化整理，嚴格說是三個不同的字。",
+      "extraExamples": [
+        "The rapid test came out negative.",
+        "The lack of a reply is a negative in itself."
+      ]
+    }
+  },
+  {
+    "word": "negligible",
+    "prefixId": "neg",
+    "pos": "a.",
+    "phonetic": "ˈnɛglɪdʒɪbəl",
+    "zh": "可以忽略的",
+    "parts": [
+      {
+        "text": "neg",
+        "gloss": "不"
+      },
+      {
+        "text": "lig",
+        "gloss": "拿取、挑選"
+      }
+    ],
+    "etymology": "源自拉丁文 neglegere（nec「不」＋legere「拿取、挑選」）「不去理會、不去挑起」之意，1819 年加上 -ible 定型為「可被忽略、無關緊要」。",
+    "derivatives": [],
+    "example": "In weighing the product, the weight of the plastic bag is negligible.",
+    "example_zh": "秤這件商品的時候，塑膠袋的重量可以忽略不計。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/negligible",
+      "ipa": "/ˈnɛɡlɪdʒɪbəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此字的 neg- 實際來自否定詞 nec「不」，與 negative／renegade／renege 的 neg-（源自動詞 negare「拒絕」）是不同的拉丁詞素，只是同樣帶「不」義。教材標「neg（not）」已正確與 negative 的「neg（deny）」區分。leg 根確認＝legere「拿取、挑選」，因母音變化在字中拼作 lig。"
+    }
+  },
+  {
+    "word": "negligent",
+    "prefixId": "neg",
+    "pos": "a.",
+    "phonetic": "ˈnɛglɪdʒənt",
+    "zh": "疏忽的",
+    "parts": [
+      {
+        "text": "neg",
+        "gloss": "不"
+      },
+      {
+        "text": "lig",
+        "gloss": "拿取、挑選"
+      }
+    ],
+    "etymology": "與 negligible 同源於拉丁文 neglegere（nec「不」＋legere「拿取、挑選」），其分詞 neglegens 原指「粗心、不上心」的人，14 世紀晚期進入英文後仍作「疏忽、玩忽職守」解。",
+    "derivatives": [
+      {
+        "word": "negligence",
+        "pos": "n.",
+        "zh": "疏忽"
+      }
+    ],
+    "example": "The fire was caused by a negligent smoker.",
+    "example_zh": "這場火災是一名疏忽的吸菸者造成的。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/negligent",
+      "ipa": "/ˈnɛɡ.lɪ.dʒənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "同 negligible，此字的 neg- 亦源自否定詞 nec「不」而非動詞 negare，leg 根確認＝legere「拿取、挑選」（拼作 lig）。"
+    }
+  },
+  {
+    "word": "annihilate",
+    "prefixId": "neg",
+    "pos": "v.",
+    "phonetic": "əˈnaɪəlet",
+    "zh": "消滅",
+    "parts": [
+      {
+        "text": "an",
+        "gloss": "朝向（ad- 同化）"
+      },
+      {
+        "text": "nihil",
+        "gloss": "無、什麼都沒有"
+      }
+    ],
+    "etymology": "源自中古拉丁文 annihilare，由 ad-（同化為 an-，「朝向」）＋nihil「無、什麼都沒有」組成，字面義「化為烏有」，即「徹底消滅」。",
+    "derivatives": [
+      {
+        "word": "annihilation",
+        "pos": "n.",
+        "zh": "消滅"
+      }
+    ],
+    "example": "Pompeii was completely annihilated by an eruption of Mt. Vesuvius.",
+    "example_zh": "龐貝城被維蘇威火山的一次噴發徹底摧毀。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/annihilate",
+      "ipa": "/əˈnaɪ.ə.leɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "nihilistic",
+    "prefixId": "neg",
+    "pos": "a.",
+    "phonetic": "ˈnaɪhɪlɪstɪk",
+    "zh": "虛無主義的",
+    "parts": [
+      {
+        "text": "nihil",
+        "gloss": "無、什麼都沒有"
+      }
+    ],
+    "etymology": "詞根 nihil「無」先於 19 世紀初由德國哲學家雅可比造出 Nihilismus（否定一切的學說），nihilistic 即由此衍生的 nihilism/nihilist 家族形容詞。",
+    "derivatives": [
+      {
+        "word": "nihilist",
+        "pos": "n.",
+        "zh": "虛無主義者"
+      },
+      {
+        "word": "nihilism",
+        "pos": "n.",
+        "zh": "虛無主義"
+      }
+    ],
+    "example": "The film was criticized as being too bleak and nihilistic.",
+    "example_zh": "這部電影被批評過於陰鬱且虛無。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/nihilism",
+      "ipa": "/ˈnaɪ.(h)ɪl.ɪs.tɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Etymonline『nihilistic』頁面本身抓取失敗（重試一次仍只回傳頁首/頁尾，無正文），改以『nihilism』條目確認字源，該條目明確列出 nihilistic 為 nihilism/nihilist 家族的形容詞衍生詞。發音方面，Wiktionary『nihilistic』條目只標示 （UK） 發音 /ˈnaɪ.（h）ɪl.ɪs.tɪk/、/ˈniː.ɪl.ɪs.tɪk/，未見獨立標示美式發音。因同字族『nihilist』條目的 （General American） 發音重音位置與此一致（重音同在第一音節），故沿用此形式代表美式發音，特此註明非直接取自標示為 US 的條目。"
+    }
+  },
+  {
+    "word": "nil",
+    "prefixId": "neg",
+    "pos": "n., a.",
+    "phonetic": "nɪl",
+    "zh": "零，無；沒有的，不存在的",
+    "parts": [
+      {
+        "text": "nil",
+        "gloss": "無、零"
+      }
+    ],
+    "etymology": "1833 年進入英文，是拉丁文 nihil（更早作 nihilum）的縮寫，nihilum 本身由 ne-「不」＋hilum「瑣屑之物」組成。",
+    "derivatives": [],
+    "example": "They lost the game seven to nil.",
+    "example_zh": "他們以零比七輸掉了那場比賽。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/nil",
+      "ipa": "/nɪl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The chance of success is almost nil."
+      ]
+    }
+  },
+  {
+    "word": "nullify",
+    "prefixId": "neg",
+    "pos": "v.",
+    "phonetic": "ˈnʌlɪfaɪ",
+    "zh": "使無效",
+    "parts": [
+      {
+        "text": "null",
+        "gloss": "無、一個都沒有"
+      },
+      {
+        "text": "fy",
+        "gloss": "使成為、做成"
+      }
+    ],
+    "etymology": "源自後期拉丁文 nullificare，由 nullus「一個都沒有」（ne-「不」＋ullus「任一個」）＋facere「做」組成，字面「使成無」，1590 年代起專指法律上「使無效」。",
+    "derivatives": [
+      {
+        "word": "nullification",
+        "pos": "n.",
+        "zh": "取消，廢除"
+      }
+    ],
+    "example": "The contract was nullified because one party failed to meet requirements.",
+    "example_zh": "這份合約因為其中一方未達成要求而失效。",
+    "sources": {
+      "page": "IMG_1694",
+      "etymonline": "https://www.etymonline.com/word/nullify",
+      "ipa": "/ˈnʌlɪfaɪ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此字的 null- 源自拉丁文 nullus（ne-「不」＋ullus「任一個」），與 negare、nihil 各自是獨立的拉丁字，僅在更早的原始印歐語 *ne-「不」層次同源，並非同一詞根直接衍生。-fy 已確認來自 facere「做」的組合形。"
+    }
+  },
+  {
+    "word": "renegade",
+    "prefixId": "neg",
+    "pos": "n., a.",
+    "phonetic": "ˈrɛnɪˌged",
+    "zh": "叛徒；變節的",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再、回頭"
+      },
+      {
+        "text": "neg",
+        "gloss": "否認、拒絕"
+      }
+    ],
+    "etymology": "約 1580 年代經西班牙文 renegado 進入英文，源自中古拉丁文 renegare（re- 加強語氣＋negare「拒絕、否認」），原指「背棄信仰改宗之人」，17 世紀後泛指「叛徒、變節者」。",
+    "derivatives": [],
+    "example": "Henry VIII was a renegade who broke away from Catholicism.",
+    "example_zh": "亨利八世是一個脫離天主教的叛徒。",
+    "sources": {
+      "page": "IMG_1695",
+      "etymonline": "https://www.etymonline.com/word/renegade",
+      "ipa": "/ˈrɛnɪˌɡeɪd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The renegade soldiers captured their own captain and surrendered to the enemy."
+      ]
+    }
+  },
+  {
+    "word": "renege",
+    "prefixId": "neg",
+    "pos": "v.",
+    "phonetic": "rɪˈnɛg",
+    "zh": "食言，違約",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再、回頭"
+      },
+      {
+        "text": "neg",
+        "gloss": "否認、拒絕"
+      }
+    ],
+    "etymology": "1540 年代源自中古拉丁文 renegare（re-＋negare「拒絕、否認」），原意「否認、背棄」，18 世紀後語意窄化為美式常用的「反悔、食言」。",
+    "derivatives": [],
+    "example": "You can't renege on the deal once you have signed the contract.",
+    "example_zh": "合約一旦簽了，你就不能食言。",
+    "sources": {
+      "page": "IMG_1695",
+      "etymonline": "https://www.etymonline.com/word/renege",
+      "ipa": "/rɪˈnɛɡ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 列出多個美式發音變體（/rɪˈnɛɡ/、/rɪˈnɪɡ/、/rɪˈneɪɡ/ 等），本表採第一個列出的 /rɪˈnɛɡ/ 為代表。"
+    }
+  }
+]

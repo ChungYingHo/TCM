@@ -1,0 +1,148 @@
+[
+  {
+    "word": "concentrate",
+    "prefixId": "centr",
+    "pos": "v., n.",
+    "phonetic": "ˈkɑnsəntret",
+    "zh": "集中；濃縮液",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "一起、共同"
+      },
+      {
+        "text": "centr",
+        "gloss": "中心"
+      }
+    ],
+    "etymology": "動詞 concentrate 於 1630 年代出現，經義大利文 concentrare，由拉丁文 com-（一起）＋centrum（中心）組成，本義是「聚集到同一個中心點」，17–18 世紀引申為「濃縮」「加強作用」，直到 1860 年代才發展出「精神集中」的現代用法。",
+    "derivatives": [
+      {
+        "word": "concentration",
+        "pos": "n.",
+        "zh": "集中，濃度"
+      }
+    ],
+    "example": "It's difficult to concentrate on the reading, with so much noise around.",
+    "example_zh": "周圍這麼吵，很難專心讀這篇文章。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/concentrate",
+      "ipa": "/ˈkɑn.sən.tɹeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The bottled juice was restored from juice concentrates."
+      ]
+    }
+  },
+  {
+    "word": "concentric",
+    "prefixId": "centr",
+    "pos": "a.",
+    "phonetic": "kənˈsɛntrɪk",
+    "zh": "同圓心的",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "一起、共同"
+      },
+      {
+        "text": "centr",
+        "gloss": "中心"
+      }
+    ],
+    "etymology": "concentric 約 1400 年出現，經古法文 concentrique、中世紀拉丁文 concentricus，由同化形式的 com-（一起）＋拉丁文 centrum（圓心、中心）組成，字面即「共有一個中心」，指幾何上共用圓心的圖形。",
+    "derivatives": [],
+    "example": "The shooting target is composed of a series of concentric circles.",
+    "example_zh": "射擊靶是由一系列同心圓組成的。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/concentric",
+      "ipa": "/kənˈsɛn.tɹɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "decentralize",
+    "prefixId": "centr",
+    "pos": "v.",
+    "phonetic": "diˈsɛntrəˌlaɪz",
+    "zh": "分散",
+    "parts": [
+      {
+        "text": "de",
+        "gloss": "脫離、去除"
+      },
+      {
+        "text": "centr",
+        "gloss": "中心"
+      }
+    ],
+    "etymology": "decentralize 於 1840 年出現（先以 decentralized 的形式使用），很可能是從名詞 decentralization（1839 年，由 de- ＋ centralization 組成）反向構詞而來，字面是「把（權力等）從中心分散出去」，即脫離中央控制。",
+    "derivatives": [
+      {
+        "word": "decentralization",
+        "pos": "n.",
+        "zh": "分散"
+      },
+      {
+        "word": "centralize",
+        "pos": "v.",
+        "zh": "集中"
+      }
+    ],
+    "example": "The company decentralized operations by setting up eight branch offices.",
+    "example_zh": "公司設立八個分公司，把營運分散出去。",
+    "sources": {
+      "page": "IMG_1683",
+      "etymonline": "https://www.etymonline.com/word/decentralize",
+      "ipa": "/diˈsɛntɹəˌlaɪz/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "eccentric",
+    "prefixId": "centr",
+    "pos": "a., n.",
+    "phonetic": "ɪkˈsɛntrɪk",
+    "zh": "古怪的（人），我行我素的（人）",
+    "parts": [
+      {
+        "text": "ec",
+        "gloss": "出、離開"
+      },
+      {
+        "text": "centr",
+        "gloss": "中心"
+      }
+    ],
+    "etymology": "eccentric 名詞最早見於 15 世紀初，原是托勒密天文學（Ptolemaic astronomy）的術語，指「偏心圓、偏心軌道」。形容詞於 1550 年代出現，經法文 eccentrique、中世紀拉丁文 eccentricus，源自希臘文 ekkentros（ek「出」＋kentron「中心」），直到 1620 年代才引申出「古怪、異於常人」的譬喻義，指人的「怪人」則遲至 1817 年才出現。",
+    "derivatives": [
+      {
+        "word": "eccentricity",
+        "pos": "n.",
+        "zh": "怪異，怪癖"
+      }
+    ],
+    "example": "Howard Hughes became an eccentric billionaire who had an abnormal fear of germs.",
+    "example_zh": "霍華・休斯後來成了一個古怪的億萬富翁，對細菌有異常的恐懼。",
+    "sources": {
+      "page": "IMG_1683",
+      "etymonline": "https://www.etymonline.com/word/eccentric",
+      "ipa": "/ɪkˈsɛntɹɪk/, /ɛkˈsɛntɹɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Etymonline 記載此字源自天文學術語：15 世紀初原指托勒密天文學中的「偏心圓、偏心軌道」，16–17 世紀才引申出「古怪的」之意。",
+      "extraExamples": [
+        "My uncle is a delightful old eccentric."
+      ]
+    }
+  }
+]

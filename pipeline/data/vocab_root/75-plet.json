@@ -1,0 +1,309 @@
+[
+  {
+    "word": "complement",
+    "prefixId": "plet",
+    "pos": "n., v.",
+    "phonetic": "ˈkɑmpləmənt",
+    "zh": "互補物；補充，補足",
+    "parts": [
+      {
+        "text": "com",
+        "gloss": "完全（加強語氣）"
+      },
+      {
+        "text": "ple",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "源自拉丁文 complementum，由 com-（完全，加強語氣）加 plere（填滿）構成，字面意義是「使完整、填滿之物」。16 世紀時衍生出「客套讚美」的用法，該義項後來拼法獨立成 compliment，complement 則專指「補足、使完整之物」，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），僅能靠拼法與語境分辨。",
+    "derivatives": [
+      {
+        "word": "complementary",
+        "pos": "a.",
+        "zh": "互補的"
+      }
+    ],
+    "example": "Day and night are complements.",
+    "example_zh": "白天與黑夜是互補的。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/complement",
+      "ipa": "/ˈkɑmpləmənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The extroverted man and the introverted woman complement each other."
+      ]
+    }
+  },
+  {
+    "word": "compliment",
+    "prefixId": "plet",
+    "pos": "n., v.",
+    "phonetic": "ˈkɑmpləmənt",
+    "zh": "恭維，致意；讚美，贈送…以表達敬意",
+    "parts": [
+      {
+        "text": "com",
+        "gloss": "完全（加強語氣）"
+      },
+      {
+        "text": "pli",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "與 complement 同源，皆出自拉丁文 complementum（com- 完全 + plere 填滿），但 compliment 是經義大利文 complimento、法文 compliment 才轉入英文，17 世紀中葉起專指「使人愉悅的客套話、讚美」（原意「用來完成禮貌義務之物」），與保留「補足、使完整」本義的 complement 從此分道揚鑣，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），只能靠拼法與語境分辨。",
+    "derivatives": [
+      {
+        "word": "complimentary",
+        "pos": "a.",
+        "zh": "恭維的，贈送的"
+      }
+    ],
+    "example": "I take it as a compliment when people say that I look like my mother.",
+    "example_zh": "別人說我長得像我媽媽時，我把這當成一種讚美。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/compliment",
+      "ipa": "/ˈkɑmpləmənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "I must compliment you on your handling of a very difficult situation."
+      ]
+    }
+  },
+  {
+    "word": "supplement",
+    "prefixId": "plet",
+    "pos": "n., v.",
+    "phonetic": "ˈsʌpləmənt",
+    "zh": "補充物，副刊，附錄；補充，添加",
+    "parts": [
+      {
+        "text": "sup",
+        "gloss": "由下而上、補足"
+      },
+      {
+        "text": "ple",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "源自拉丁文 supplementum，來自動詞 supplere（sub- 由下而上、補足 + plere 填滿），字面意義是「由下方填補使滿之物」，14 世紀末指「為補足缺漏而添加之物」，1560 年代起特指為文獻補充內容而加的「補篇」。",
+    "derivatives": [
+      {
+        "word": "supplementary",
+        "pos": "a.",
+        "zh": "補充的"
+      }
+    ],
+    "example": "Children and old people need nutritional supplements.",
+    "example_zh": "孩童與老人需要營養補充品。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/supplement",
+      "ipa": "/ˈsʌpləmənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The man supplements his income by selling collectibles on the internet."
+      ]
+    }
+  },
+  {
+    "word": "implement",
+    "prefixId": "plet",
+    "pos": "v., n.",
+    "phonetic": "ˈɪmpləmənt",
+    "zh": "實施，實行；工具",
+    "parts": [
+      {
+        "text": "im",
+        "gloss": "進入"
+      },
+      {
+        "text": "ple",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "源自晚期拉丁文 implementem（「填滿之事」），來自拉丁文 implere（in- 進入 + plere 填滿），本義是「填補需求之物」。名詞 15 世紀中先指「補足償還的款項」，1530 年代轉指「工作所需的工具」，18 世紀初蘇格蘭法律用語中另生出動詞「履行、實行」之意。",
+    "derivatives": [
+      {
+        "word": "implementation",
+        "pos": "n.",
+        "zh": "實施，實行"
+      }
+    ],
+    "example": "The reform program needs to be implemented immediately.",
+    "example_zh": "這項改革方案必須立刻實施。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/implement",
+      "ipa": "/ˈɪmpləmənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The work will start as soon as we've got all the implements."
+      ]
+    }
+  },
+  {
+    "word": "deplete",
+    "prefixId": "plet",
+    "pos": "v.",
+    "phonetic": "dɪˈplit",
+    "zh": "耗盡，枯竭",
+    "parts": [
+      {
+        "text": "de",
+        "gloss": "離開、去除"
+      },
+      {
+        "text": "plete",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "1807 年由 depletion 反構而來，源自拉丁文 deplere（de- 離開、去除 + plere 填滿），字面意義是「使不再填滿、抽空」，最初是醫學用語指以放血、瀉下等方式「抽乾」體液，1859 年後才泛用於「耗盡資源」。",
+    "derivatives": [
+      {
+        "word": "depletion",
+        "pos": "n.",
+        "zh": "耗盡，枯竭"
+      }
+    ],
+    "example": "Experts say that our oil reserves will soon be depleted.",
+    "example_zh": "專家表示我們的石油存量很快就會耗盡。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/deplete",
+      "ipa": "/dɪˈplit/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "plenteous",
+    "prefixId": "plet",
+    "pos": "a.",
+    "phonetic": "ˈplɛntiəs",
+    "zh": "大量的，豐富的",
+    "parts": [
+      {
+        "text": "plente",
+        "gloss": "充滿、豐盛"
+      }
+    ],
+    "etymology": "約 1300 年進入英文，源自古法文 plenteivous，其源頭是拉丁文 plenitas／plenitatem（豐滿、豐盛），本身即來自 plenus（充滿的）。plenteous 與 plenty 同源，但語感較典雅，多見於詩文而非日常口語。",
+    "derivatives": [
+      {
+        "word": "plenty",
+        "pos": "n.",
+        "zh": "大量"
+      },
+      {
+        "word": "plentiful",
+        "pos": "a.",
+        "zh": "大量的，豐富的"
+      }
+    ],
+    "example": "The host made sure there was a plenteous supply of food and drink at the party.",
+    "example_zh": "主人確保派對上有充足的食物與飲料。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/plenteous",
+      "ipa": "/ˈplɛntiəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "plethora",
+    "prefixId": "plet",
+    "pos": "n.",
+    "phonetic": "ˈplɛθərə",
+    "zh": "大量，過多",
+    "parts": [
+      {
+        "text": "pleth",
+        "gloss": "充滿、過多"
+      }
+    ],
+    "etymology": "源自希臘文 plēthōrē（豐滿、過多），來自動詞 plēthein（充滿），經晚期拉丁文 plethora 進入英文，1540 年代原為醫學用語指「體液過多」，約 1700 年才泛指任何「過剩、過多」。",
+    "derivatives": [],
+    "example": "Around the Taroko Gorge you can see a plethora of hotels, restaurants and gift shops.",
+    "example_zh": "太魯閣峽谷一帶可以看到大量的旅館、餐廳與紀念品店。",
+    "sources": {
+      "page": "IMG_1692",
+      "etymonline": "https://www.etymonline.com/word/plethora",
+      "ipa": "/ˈplɛθərə/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此字字根是希臘文（plēthōrē／plēthein），並非直接源自拉丁文 plere/plenus。不過 Etymonline 指出 plēthein 與拉丁文 plenus、plere 同源於原始印歐語根 *pele-（填滿），所以雖然語言路徑不同（希臘文而非拉丁文），仍與本組其他字同屬一個詞源家族。"
+    }
+  },
+  {
+    "word": "replenish",
+    "prefixId": "plet",
+    "pos": "v.",
+    "phonetic": "rɪˈplɛnɪʃ",
+    "zh": "補充，添加",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再次（加強語氣）"
+      },
+      {
+        "text": "plen",
+        "gloss": "充滿"
+      }
+    ],
+    "etymology": "14 世紀中葉源自古法文 replenir（「填滿」），本身來自拉丁文 plenus（充滿的），前綴 re- 原意「回到原處、再次」，在此作加強語氣（「反覆填滿」）。最初泛指「以食物、財富等填滿」，1610 年代起專指「補充恢復到原本的量」。",
+    "derivatives": [],
+    "example": "The plane will be landing at Hawaii to replenish fuel.",
+    "example_zh": "這架飛機將降落夏威夷補充燃料。",
+    "sources": {
+      "page": "IMG_1693",
+      "etymonline": "https://www.etymonline.com/word/replenish",
+      "ipa": "/rɪˈplɛnɪʃ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "replete",
+    "prefixId": "plet",
+    "pos": "a.",
+    "phonetic": "rɪˈplit",
+    "zh": "充足，不缺",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再次、完全地（加強語氣）"
+      },
+      {
+        "text": "plete",
+        "gloss": "填滿"
+      }
+    ],
+    "etymology": "14 世紀末源自古法文 replet 與拉丁文 repletus（replere 的過去分詞），由 re-（加強語氣，「反覆填滿」）加 plere（填滿）構成，本義是「完全填滿、裝滿」，即形容「（被）填得滿滿的、飽足的」。",
+    "derivatives": [],
+    "example": "The car has an engine replete with the latest technology.",
+    "example_zh": "這輛車的引擎配備了滿滿的最新科技。",
+    "sources": {
+      "page": "IMG_1693",
+      "etymonline": "https://www.etymonline.com/word/replete",
+      "ipa": "/rɪˈplit/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

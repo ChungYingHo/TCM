@@ -1,0 +1,148 @@
+[
+  {
+    "word": "median",
+    "prefixId": "medi",
+    "pos": "a.",
+    "phonetic": "ˈmidiən",
+    "zh": "中等的，中間值的",
+    "parts": [
+      {
+        "text": "medi",
+        "gloss": "中間"
+      }
+    ],
+    "etymology": "源自拉丁文 medianus「中間的」，由 medius「中間」而來（同源 PIE 詞根 *medhyo-「中間」），十六世紀末進入英文表示「位於中間、居中的」。統計學上「一系列數值的中間值」之用法晚至 1883 年才出現。",
+    "derivatives": [],
+    "example": "Median household income has increased, but not as fast as inflation.",
+    "example_zh": "家戶所得中位數雖然上升，但漲得沒有通膨快。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/median",
+      "ipa": "/ˈmi.di.ən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "intermediate",
+    "prefixId": "medi",
+    "pos": "a.",
+    "phonetic": "ˌɪntɚˈmidiət",
+    "zh": "中間的，中等程度的",
+    "parts": [
+      {
+        "text": "inter",
+        "gloss": "在…之間"
+      },
+      {
+        "text": "medi",
+        "gloss": "中間"
+      }
+    ],
+    "etymology": "源自中古拉丁文 intermediatus「介於其間的」，由拉丁文 inter「在…之間」＋medius「中間的」組成，十五世紀初以形容詞之姿進入英文，表示「存在或發生於兩者之間」。",
+    "derivatives": [],
+    "example": "This class is at the intermediate level, which means it's neither too hard nor too easy.",
+    "example_zh": "這門課屬於中級程度，也就是不會太難也不會太簡單。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/intermediate",
+      "ipa": "/ˌɪn.tɚˈmi.di.ət/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "intermediary",
+    "prefixId": "medi",
+    "pos": "n.",
+    "phonetic": "ˌɪntɚˈmidiˌɛrɪ",
+    "zh": "中間人，仲裁者",
+    "parts": [
+      {
+        "text": "inter",
+        "gloss": "在…之間"
+      },
+      {
+        "text": "medi",
+        "gloss": "中間"
+      }
+    ],
+    "etymology": "源自法文 intermédiaire（十七世紀），法文又源自拉丁文 intermedius「介於中間的」（inter「之間」＋medius「中間」）。英文 1757 年先作形容詞用，表示「位於兩者之間」，1818 年衍生出「擔任調解者」之意，1791 年起也作名詞，指居中調停、傳話的人。",
+    "derivatives": [],
+    "example": "The government official volunteered to serve as an intermediary between labor leaders and factory managers.",
+    "example_zh": "這位政府官員自願擔任勞方領袖與廠方經理之間的中間人。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/intermediary",
+      "ipa": "/ˌɪn(t)ɚˈmidiˌɛɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "mediation",
+    "prefixId": "medi",
+    "pos": "n.",
+    "phonetic": "ˌmidiˈeʃən",
+    "zh": "調停，調解",
+    "parts": [
+      {
+        "text": "medi",
+        "gloss": "中間"
+      }
+    ],
+    "etymology": "源自中古拉丁文 mediationem（主格 mediatio）「從中一分為二」，是拉丁動詞 mediare「使成一半。居中」的動作名詞，mediare 又源自 medius「中間」。英文十四世紀末以 mediacioun 的拼法進入，指「作為調解者介入、行動」。",
+    "derivatives": [
+      {
+        "word": "mediate",
+        "pos": "v.",
+        "zh": "調停，調解"
+      }
+    ],
+    "example": "The mediation successfully averted disaster.",
+    "example_zh": "這次調解成功避免了一場災難。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/mediation",
+      "ipa": "/ˌmidiˈeɪʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The UN mediated between the warring parties and brought about a ceasefire."
+      ]
+    }
+  },
+  {
+    "word": "medieval",
+    "prefixId": "medi",
+    "pos": "a.",
+    "phonetic": "ˌmidiˈivəl",
+    "zh": "中古時代的",
+    "parts": [
+      {
+        "text": "medi",
+        "gloss": "中間"
+      },
+      {
+        "text": "ev",
+        "gloss": "時代、年代"
+      }
+    ],
+    "etymology": "1825 年（原拼作 mediaeval）由英文直接組字而成，結合拉丁文 medium「中間」（源自 medius）與 aevum「時代、年代」（PIE 詞根 *aiw-「生命力。長壽、永恆」），字面意為「中間的那個時代」，指介於古代與現代之間的中世紀。",
+    "derivatives": [],
+    "example": "This cathedral is a medieval building.",
+    "example_zh": "這座大教堂是一棟中古時代的建築。",
+    "sources": {
+      "page": "IMG_1688",
+      "etymonline": "https://www.etymonline.com/word/medieval",
+      "ipa": "/ˌmi.diˈi.vəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

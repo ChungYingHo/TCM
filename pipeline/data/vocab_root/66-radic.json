@@ -1,0 +1,133 @@
+[
+  {
+    "word": "radical",
+    "prefixId": "radic",
+    "pos": "a.",
+    "phonetic": "ˈrædɪkəl",
+    "zh": "根本的，激烈的，激進的",
+    "parts": [
+      {
+        "text": "radic",
+        "gloss": "根"
+      }
+    ],
+    "etymology": "源自拉丁文 radix（所有格 radicis）「根」派生出的 radicalis「有根的」，14 世紀晚期進入英文表示「源自根部的」，字面「從根本而來」後引申為「徹底的、極端的」，1817 年起也用於政治立場，取「從根本改變」之意。",
+    "derivatives": [],
+    "example": "We need to make some radical changes to survive.",
+    "example_zh": "我們得做一些根本上的改變才能生存。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/radical",
+      "ipa": "/ˈrædɪkəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "These terrorists belong to a radical wing of extremists."
+      ]
+    }
+  },
+  {
+    "word": "eradicate",
+    "prefixId": "radic",
+    "pos": "v.",
+    "phonetic": "əˈrædəˌket",
+    "zh": "根除，消滅",
+    "parts": [
+      {
+        "text": "e",
+        "gloss": "出、向外"
+      },
+      {
+        "text": "radic",
+        "gloss": "根"
+      }
+    ],
+    "etymology": "由拉丁文字首 ex-「向外」與 radix「根」組成動詞 eradicare「連根拔除」，字面義是「把根整個拔出」，因而引申為「徹底根除、消滅殆盡」。",
+    "derivatives": [
+      {
+        "word": "eradication",
+        "pos": "n.",
+        "zh": "根除，消滅"
+      }
+    ],
+    "example": "Polio has now been completely eradicated.",
+    "example_zh": "小兒麻痺症現在已經被完全根除了。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/eradicate",
+      "ipa": "/əˈrædəˌkeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "rudimentary",
+    "prefixId": "radic",
+    "pos": "a.",
+    "phonetic": "ˌrudɪˈmɛntərɪ",
+    "zh": "基本的，初步的",
+    "parts": [
+      {
+        "text": "rudi",
+        "gloss": "粗糙、未成形"
+      }
+    ],
+    "etymology": "源自拉丁文 rudis「粗糙、未經訓練」衍生出的 rudimentum「最初的訓練、入門知識」，16 世紀成為英文 rudiment，1819 年加上 -ary 構成 rudimentary，指「尚處初步階段、未發展完全的」。",
+    "derivatives": [
+      {
+        "word": "rudiment",
+        "pos": "n.",
+        "zh": "基礎，初步"
+      }
+    ],
+    "example": "When an infant is born, it possesses only rudimentary eyesight and cannot see very well.",
+    "example_zh": "嬰兒剛出生時只有最初步的視力，看不太清楚。",
+    "sources": {
+      "page": "IMG_1684",
+      "etymonline": "https://www.etymonline.com/word/rudimentary",
+      "ipa": "/ˌruːdɪˈmɛntəri/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此字字根 rudi 其實來自拉丁文 rudis「粗糙、未受訓練」，Etymonline 標示 rudis 字源不確定（或與 rudus「瓦礫」有關），並未提到與 radix「根」有關聯。radic 與 rudi 是兩個不同的拉丁字根，教科書應是因形近（rad-/rud-）且語意都偏「基礎、未成熟」而歸為同一組方便記憶，並非真正同源。"
+    }
+  },
+  {
+    "word": "erudite",
+    "prefixId": "radic",
+    "pos": "a.",
+    "phonetic": "ˈɛrjʊdaɪt",
+    "zh": "飽學的，博學的",
+    "parts": [
+      {
+        "text": "e",
+        "gloss": "出、向外"
+      },
+      {
+        "text": "rud",
+        "gloss": "粗糙、未琢磨"
+      }
+    ],
+    "etymology": "由拉丁文字首 ex-「向外」與 rudis「粗糙、未受教」組成動詞 erudire，字面是「使脫離粗糙無知的狀態」，其過去分詞 eruditus 進入英文後表示「博學的、有學問的」。",
+    "derivatives": [
+      {
+        "word": "erudition",
+        "pos": "n.",
+        "zh": "博學"
+      }
+    ],
+    "example": "The most erudite people in medical research attended the conference.",
+    "example_zh": "醫學研究領域最博學的人都出席了這場會議。",
+    "sources": {
+      "page": "IMG_1685",
+      "etymonline": "https://www.etymonline.com/word/erudite",
+      "ipa": "/ˈɛr(j)ʊdaɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此字字根 rud 同樣來自拉丁文 rudis「粗糙、未受教」，而非 radical/eradicate 所用的 radix「根」。Etymonline 對 rudis 的字源標示為不確定（或與 rudus「瓦礫」有關），與 radix 並無關聯。radic 與 rudi/rud 是教科書為教學方便而歸在同一組的兩個不同拉丁字根，並非真正同源。"
+    }
+  }
+]

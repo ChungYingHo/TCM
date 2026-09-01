@@ -1,0 +1,211 @@
+[
+  {
+    "word": "modify",
+    "prefixId": "mod",
+    "pos": "v.",
+    "phonetic": "ˈmɑdɪˌfaɪ",
+    "zh": "修改，修正",
+    "parts": [
+      {
+        "text": "mod",
+        "gloss": "測量、方式"
+      },
+      {
+        "text": "-fy",
+        "gloss": "使…、做成"
+      }
+    ],
+    "etymology": "源自拉丁文 modificare，由 modus（測量、方式）＋facere（做，來自 PIE *dhe-「放置、設立」）組成，字面是「照分寸做、加以限制」，14 世紀晚期經古法文 modifier 進入英文，指「調整、改變某物的形式或性質，使其保持在合理範圍內」。",
+    "derivatives": [
+      {
+        "word": "modification",
+        "pos": "n.",
+        "zh": "修改，修正"
+      }
+    ],
+    "example": "We need to modify our strategy for the new market.",
+    "example_zh": "我們得為新市場修改策略。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/modify",
+      "ipa": "/ˈmɑdɪˌfaɪ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "accommodate",
+    "prefixId": "mod",
+    "pos": "v.",
+    "phonetic": "əˈkɑməˌdet",
+    "zh": "安排住宿，容納，配合，包容",
+    "parts": [
+      {
+        "text": "ac",
+        "gloss": "朝向（ad-）"
+      },
+      {
+        "text": "com",
+        "gloss": "加強語氣"
+      },
+      {
+        "text": "mod",
+        "gloss": "測量、方式"
+      }
+    ],
+    "etymology": "源自拉丁文 accommodare（ad-「朝向」+ commodare「使合適」，commodare 又來自 commodus＝com-〔加強語氣〕+ modus〔測量、方式〕），1530 年代進入英文時指「使一物與另一物相合」，之後詞義擴大為「使適合」，約 1712 年再發展出「提供住宿、容納」的現代常見用法。",
+    "derivatives": [
+      {
+        "word": "accommodation",
+        "pos": "n.",
+        "zh": "住宿，配合"
+      }
+    ],
+    "example": "The cottage accommodates up to four people.",
+    "example_zh": "這間小屋最多可以容納四個人。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/accommodate",
+      "ipa": "/əˈkɑməˌdeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The company altered the schedule in order to accommodate a major customer."
+      ]
+    }
+  },
+  {
+    "word": "commodious",
+    "prefixId": "mod",
+    "pos": "a.",
+    "phonetic": "kəˈmodiəs",
+    "zh": "寬敞的",
+    "parts": [
+      {
+        "text": "com",
+        "gloss": "加強語氣"
+      },
+      {
+        "text": "mod",
+        "gloss": "測量、方式"
+      }
+    ],
+    "etymology": "源自拉丁文 commodus（com-〔加強語氣〕+ modus〔測量、方式〕），字面本義是「合乎尺度、恰如其分」，15 世紀初進入英文時指「有益的、方便的」，到 1550 年代「合乎尺度」的抽象概念延伸到具體空間大小，於是產生「寬敞舒適」的現代意思。",
+    "derivatives": [],
+    "example": "The cabin is commodious enough for the whole family.",
+    "example_zh": "這間小木屋寬敞到足以容納全家人。",
+    "sources": {
+      "page": "IMG_1691",
+      "etymonline": "https://www.etymonline.com/word/commodious",
+      "ipa": "/kəˈmoʊdiəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "commodity",
+    "prefixId": "mod",
+    "pos": "n.",
+    "phonetic": "kəˈmɑdətɪ",
+    "zh": "日用品，大宗商品",
+    "parts": [
+      {
+        "text": "com",
+        "gloss": "加強語氣"
+      },
+      {
+        "text": "mod",
+        "gloss": "測量、方式"
+      }
+    ],
+    "etymology": "源自拉丁文 commoditatem（commodus 的名詞形，com-〔加強語氣〕+ modus〔測量、方式〕），字面本義同樣是「合乎尺度」，引申為「適切、方便、利益」，15 世紀初進入英文先指「利益、有用之物」，隨即擴大為「可買賣的商品、貨物」，約 1500 年再泛化為「財產、所有物」，於是從抽象的「恰如其分」一路演變成具體可交易的「商品」。",
+    "derivatives": [],
+    "example": "The country's most valuable commodities include iron and timber.",
+    "example_zh": "這個國家最有價值的大宗商品包括鐵與木材。",
+    "sources": {
+      "page": "IMG_1691",
+      "etymonline": "https://www.etymonline.com/word/commodity",
+      "ipa": "/kəˈmɑdəti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "module",
+    "prefixId": "mod",
+    "pos": "n.",
+    "phonetic": "ˈmɑdʒul",
+    "zh": "模組，預製件",
+    "parts": [
+      {
+        "text": "mod",
+        "gloss": "測量"
+      },
+      {
+        "text": "-ule",
+        "gloss": "小"
+      }
+    ],
+    "etymology": "源自拉丁文 modulus，是 modus（測量、方式）加上表示「小」的指小詞尾 -ulus 而成，本義是「小尺度、小測量單位」，1580 年代進入英文原指「分配到的量」（今已罕用），1620 年代轉為「用來規範比例的標準尺度」，之後陸續衍生出建築學「基本模距單位」（1936）、「可互換組件」（1955）、太空船「艙段」（1961）等現代意義。",
+    "derivatives": [],
+    "example": "The prefabricated building is composed of six modules.",
+    "example_zh": "這棟預鑄建築是由六個模組組成的。",
+    "sources": {
+      "page": "IMG_1691",
+      "etymonline": "https://www.etymonline.com/word/module",
+      "ipa": "/ˈmɑdʒul/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "moderate",
+    "prefixId": "mod",
+    "pos": "a., v.",
+    "phonetic": "ˈmɑdərət",
+    "zh": "溫和的，適度的；調節，主持（討論等）",
+    "parts": [
+      {
+        "text": "mod",
+        "gloss": "測量、方式"
+      }
+    ],
+    "etymology": "源自拉丁文 moderatus，是 moderari（意為「節制、使合度、保持在限度內」）的過去分詞，而 moderari 是從 PIE 字根 *med-（「採取適當措施」）直接衍生的動詞，14 世紀晚期進入英文原用於天氣等物理狀態指「不過度、適中」，15 世紀初擴及形容人，1640 年代擴及意見，1670 年代擴及價格。",
+    "derivatives": [
+      {
+        "word": "moderate",
+        "pos": "n.",
+        "zh": "溫和派"
+      },
+      {
+        "word": "moderation",
+        "pos": "n.",
+        "zh": "節制，適度"
+      },
+      {
+        "word": "moderator",
+        "pos": "n.",
+        "zh": "（討論、會議的）主持人"
+      }
+    ],
+    "example": "He's a moderate drinker.",
+    "example_zh": "他喝酒很有節制。",
+    "sources": {
+      "page": "IMG_1691",
+      "etymonline": "https://www.etymonline.com/word/moderate",
+      "ipa": "/ˈmɑdərət/（形容詞／名詞）；/ˈmɑdəreɪt/（動詞）",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教材將 moderate 拆為 mod + -ate，但嚴格來說 moderate 源自拉丁文 moderatus（moderari 的過去分詞），moderari 是由 PIE 字根 *med- 直接衍生的獨立動詞，並非「名詞 modus 加後綴」的直接複合詞。modus 同樣源自 *med-，兩者是同一字根下的『兄弟詞』，中間還多了 moderari 帶來的 -er-，不是單純 mod+ate。Etymonline 在 modus 詞條的同源字列表中仍收錄 moderate，故仍可歸入本組，但字源鏈與 modify／module／commodity 等『直接以 modus 複合』的字略有不同，屬同源而非直接衍生。",
+      "extraExamples": [
+        "The manager always moderates at our office meetings."
+      ]
+    }
+  }
+]

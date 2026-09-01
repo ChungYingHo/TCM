@@ -1,0 +1,177 @@
+[
+  {
+    "word": "location",
+    "prefixId": "loc",
+    "pos": "n.",
+    "phonetic": "loˈkeʃən",
+    "zh": "地點，位置",
+    "parts": [
+      {
+        "text": "loc",
+        "gloss": "地方"
+      }
+    ],
+    "etymology": "源自拉丁文 locus「地方」衍生的動詞 locare「放置」，其動作名詞 locatio 演變成英文 location，1590 年代進入英文，本義是「位置、所在之處」，1620 年代擴大指「放置、安置的動作」，18 世紀再發展出測量地界、電影外景等引申義。",
+    "derivatives": [
+      {
+        "word": "locate",
+        "pos": "v.",
+        "zh": "找到，座落"
+      }
+    ],
+    "example": "This house has a convenient location.",
+    "example_zh": "這棟房子的位置很方便。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/location",
+      "ipa": "/loʊˈkeɪʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The dentist is still trying to locate the nerve.",
+        "The house is located near a river."
+      ]
+    }
+  },
+  {
+    "word": "allocate",
+    "prefixId": "loc",
+    "pos": "v.",
+    "phonetic": "ˈæləˌket",
+    "zh": "分配，分派",
+    "parts": [
+      {
+        "text": "al",
+        "gloss": "向、朝（ad- 同化）"
+      },
+      {
+        "text": "loc",
+        "gloss": "地方"
+      }
+    ],
+    "etymology": "由拉丁文字首 ad-「向、朝」加上 locare「放置」（源自 locus「地方」）構成中世紀拉丁文 allocare，原是法律文書中核准撥款公文的起首套語，1630 年代進入英文轉為動詞「撥出、分配」，與 allow 同源（互為孿生詞），但 allow 因與古法文 aloer「稱讚」混淆而另外發展出其他詞義。",
+    "derivatives": [
+      {
+        "word": "allocation",
+        "pos": "n.",
+        "zh": "分配，分派"
+      }
+    ],
+    "example": "As General Manager, you must see to it that company resources are allocated equally.",
+    "example_zh": "身為總經理，你必須確保公司資源分配得公平。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/allocate",
+      "ipa": "/ˈæləˌkeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "字首 ad- 因後接 l 開頭的 locare 而同化為 al-，拼字因此是 allocate（al+loc+ate）而非 adlocate，屬正常同化現象非錯字。"
+    }
+  },
+  {
+    "word": "locomotion",
+    "prefixId": "loc",
+    "pos": "n.",
+    "phonetic": "ˌlokəˈmoʃən",
+    "zh": "位移，移動",
+    "parts": [
+      {
+        "text": "loco",
+        "gloss": "地方"
+      },
+      {
+        "text": "mot",
+        "gloss": "移動"
+      }
+    ],
+    "etymology": "結合拉丁文 locus 的奪格形式 loco「從某地」與 motio「移動」（源自動詞 movere「推動、移動」），1640 年代進入英文，原指「移動的動作或能力」，1788 年詞義縮小為專指「由一地移動到另一地」。",
+    "derivatives": [
+      {
+        "word": "motion",
+        "pos": "n.",
+        "zh": "動作"
+      }
+    ],
+    "example": "Some animals achieve locomotion by changing body shape.",
+    "example_zh": "有些動物靠改變身體形狀來移動。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/locomotion",
+      "ipa": "/ˌloʊkəˈmoʊʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "loc 在字中以拉丁文奪格形式 loco（意為「從某地」）呈現，並非直接以字根原形拼接。本字另含第二字根 mot（移動，源自 movere），與 loc 共同構成。"
+    }
+  },
+  {
+    "word": "locomotive",
+    "prefixId": "loc",
+    "pos": "n.",
+    "phonetic": "ˌlokəˈmotɪv",
+    "zh": "火車頭",
+    "parts": [
+      {
+        "text": "loco",
+        "gloss": "地方"
+      },
+      {
+        "text": "mot",
+        "gloss": "移動"
+      }
+    ],
+    "etymology": "同樣結合 loco（locus「地方」的奪格，意為「從某處」）與拉丁文 movere「移動」過去分詞詞幹衍生出的 motivus「移動的」，經法文 locomotif 進入英文。1650 年代作形容詞指「由一地移動到另一地的」，1814 年起發展出「能自行移動」之義，後轉為名詞專指火車頭。",
+    "derivatives": [],
+    "example": "The stock market and the real-estate market are the twin locomotives of a nation's economy.",
+    "example_zh": "股市與房地產市場是一國經濟的兩具火車頭。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/locomotive",
+      "ipa": "/ˌloʊkəˈmoʊtɪv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Etymonline /word/locomotive 頁面直接開啟兩次皆回傳 503（已依規定重試一次仍失敗），改以搜尋引擎顯示的該頁摘要交叉核對，並以已成功開啟的 Etymonline /word/locus 頁（該頁明確列出 locomotion、locomotive 皆為 locus/loc- 字根衍生詞）與同構詞 locomotion 頁面佐證，內容仍源自 Etymonline，但非直接開啟該頁本身，特此註明。"
+    }
+  },
+  {
+    "word": "relocate",
+    "prefixId": "loc",
+    "pos": "v.",
+    "phonetic": "ˌriˈloket",
+    "zh": "重新安置，搬遷",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再、重新"
+      },
+      {
+        "text": "loc",
+        "gloss": "地方"
+      }
+    ],
+    "etymology": "由字首 re-「再、回」加上 locate（源自拉丁文 locare「放置」，來自 locus「地方」）構成，1822 年作及物動詞進入英文，本義是把（原指道路）「移到另一處」，1841 年起發展出不及物用法「重新安頓」。晚期拉丁文 relocare 原意是「把東西帶回原處」，也有「再度出租」之意。",
+    "derivatives": [
+      {
+        "word": "relocation",
+        "pos": "n.",
+        "zh": "重新安置，搬遷"
+      }
+    ],
+    "example": "He went to see a doctor to relocate his dislocated shoulder.",
+    "example_zh": "他去看醫生，把脫臼的肩膀接回原位。",
+    "sources": {
+      "page": "IMG_1682",
+      "etymonline": "https://www.etymonline.com/word/relocate",
+      "ipa": "/ˌriˈloʊkeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The company has relocated to Shanghai."
+      ]
+    }
+  }
+]

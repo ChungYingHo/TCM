@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-01",
-  "count": 471,
-  "withExamples": 471,
+  "count": 566,
+  "withExamples": 566,
   "words": [
     {
       "id": "apathetic",
@@ -15760,6 +15760,2891 @@
         }
       ],
       "etymology": "1982年由1947年訂定、任意取自希臘 gigas（巨人）的公制字首 giga-（十億）與電腦術語 byte 組成，指十億位元組。",
+      "derivatives": []
+    },
+    {
+      "id": "location",
+      "word": "location",
+      "phonetic": "loˈkeʃən",
+      "zh": "地點，位置",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This house has a convenient location.",
+      "example_zh": "這棟房子的位置很方便。",
+      "draft": false,
+      "prefixId": "loc",
+      "parts": [
+        {
+          "text": "loc",
+          "gloss": "地方"
+        }
+      ],
+      "etymology": "源自拉丁文 locus「地方」衍生的動詞 locare「放置」，其動作名詞 locatio 演變成英文 location，1590 年代進入英文，本義是「位置、所在之處」，1620 年代擴大指「放置、安置的動作」，18 世紀再發展出測量地界、電影外景等引申義。",
+      "derivatives": [
+        {
+          "word": "locate",
+          "pos": "v.",
+          "zh": "找到，座落"
+        }
+      ]
+    },
+    {
+      "id": "allocate",
+      "word": "allocate",
+      "phonetic": "ˈæləˌket",
+      "zh": "分配，分派",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "As General Manager, you must see to it that company resources are allocated equally.",
+      "example_zh": "身為總經理，你必須確保公司資源分配得公平。",
+      "draft": false,
+      "prefixId": "loc",
+      "parts": [
+        {
+          "text": "al",
+          "gloss": "向、朝（ad- 同化）"
+        },
+        {
+          "text": "loc",
+          "gloss": "地方"
+        }
+      ],
+      "etymology": "由拉丁文字首 ad-「向、朝」加上 locare「放置」（源自 locus「地方」）構成中世紀拉丁文 allocare，原是法律文書中核准撥款公文的起首套語，1630 年代進入英文轉為動詞「撥出、分配」，與 allow 同源（互為孿生詞），但 allow 因與古法文 aloer「稱讚」混淆而另外發展出其他詞義。",
+      "derivatives": [
+        {
+          "word": "allocation",
+          "pos": "n.",
+          "zh": "分配，分派"
+        }
+      ]
+    },
+    {
+      "id": "locomotion",
+      "word": "locomotion",
+      "phonetic": "ˌlokəˈmoʃən",
+      "zh": "位移，移動",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some animals achieve locomotion by changing body shape.",
+      "example_zh": "有些動物靠改變身體形狀來移動。",
+      "draft": false,
+      "prefixId": "loc",
+      "parts": [
+        {
+          "text": "loco",
+          "gloss": "地方"
+        },
+        {
+          "text": "mot",
+          "gloss": "移動"
+        }
+      ],
+      "etymology": "結合拉丁文 locus 的奪格形式 loco「從某地」與 motio「移動」（源自動詞 movere「推動、移動」），1640 年代進入英文，原指「移動的動作或能力」，1788 年詞義縮小為專指「由一地移動到另一地」。",
+      "derivatives": [
+        {
+          "word": "motion",
+          "pos": "n.",
+          "zh": "動作"
+        }
+      ]
+    },
+    {
+      "id": "locomotive",
+      "word": "locomotive",
+      "phonetic": "ˌlokəˈmotɪv",
+      "zh": "火車頭",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The stock market and the real-estate market are the twin locomotives of a nation's economy.",
+      "example_zh": "股市與房地產市場是一國經濟的兩具火車頭。",
+      "draft": false,
+      "prefixId": "loc",
+      "parts": [
+        {
+          "text": "loco",
+          "gloss": "地方"
+        },
+        {
+          "text": "mot",
+          "gloss": "移動"
+        }
+      ],
+      "etymology": "同樣結合 loco（locus「地方」的奪格，意為「從某處」）與拉丁文 movere「移動」過去分詞詞幹衍生出的 motivus「移動的」，經法文 locomotif 進入英文。1650 年代作形容詞指「由一地移動到另一地的」，1814 年起發展出「能自行移動」之義，後轉為名詞專指火車頭。",
+      "derivatives": []
+    },
+    {
+      "id": "relocate",
+      "word": "relocate",
+      "phonetic": "ˌriˈloket",
+      "zh": "重新安置，搬遷",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He went to see a doctor to relocate his dislocated shoulder.",
+      "example_zh": "他去看醫生，把脫臼的肩膀接回原位。",
+      "draft": false,
+      "prefixId": "loc",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再、重新"
+        },
+        {
+          "text": "loc",
+          "gloss": "地方"
+        }
+      ],
+      "etymology": "由字首 re-「再、回」加上 locate（源自拉丁文 locare「放置」，來自 locus「地方」）構成，1822 年作及物動詞進入英文，本義是把（原指道路）「移到另一處」，1841 年起發展出不及物用法「重新安頓」。晚期拉丁文 relocare 原意是「把東西帶回原處」，也有「再度出租」之意。",
+      "derivatives": [
+        {
+          "word": "relocation",
+          "pos": "n.",
+          "zh": "重新安置，搬遷"
+        }
+      ]
+    },
+    {
+      "id": "concentrate",
+      "word": "concentrate",
+      "phonetic": "ˈkɑnsəntret",
+      "zh": "集中；濃縮液",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It's difficult to concentrate on the reading, with so much noise around.",
+      "example_zh": "周圍這麼吵，很難專心讀這篇文章。",
+      "draft": false,
+      "prefixId": "centr",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起、共同"
+        },
+        {
+          "text": "centr",
+          "gloss": "中心"
+        }
+      ],
+      "etymology": "動詞 concentrate 於 1630 年代出現，經義大利文 concentrare，由拉丁文 com-（一起）＋centrum（中心）組成，本義是「聚集到同一個中心點」，17–18 世紀引申為「濃縮」「加強作用」，直到 1860 年代才發展出「精神集中」的現代用法。",
+      "derivatives": [
+        {
+          "word": "concentration",
+          "pos": "n.",
+          "zh": "集中，濃度"
+        }
+      ]
+    },
+    {
+      "id": "concentric",
+      "word": "concentric",
+      "phonetic": "kənˈsɛntrɪk",
+      "zh": "同圓心的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The shooting target is composed of a series of concentric circles.",
+      "example_zh": "射擊靶是由一系列同心圓組成的。",
+      "draft": false,
+      "prefixId": "centr",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起、共同"
+        },
+        {
+          "text": "centr",
+          "gloss": "中心"
+        }
+      ],
+      "etymology": "concentric 約 1400 年出現，經古法文 concentrique、中世紀拉丁文 concentricus，由同化形式的 com-（一起）＋拉丁文 centrum（圓心、中心）組成，字面即「共有一個中心」，指幾何上共用圓心的圖形。",
+      "derivatives": []
+    },
+    {
+      "id": "decentralize",
+      "word": "decentralize",
+      "phonetic": "diˈsɛntrəˌlaɪz",
+      "zh": "分散",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company decentralized operations by setting up eight branch offices.",
+      "example_zh": "公司設立八個分公司，把營運分散出去。",
+      "draft": false,
+      "prefixId": "centr",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "脫離、去除"
+        },
+        {
+          "text": "centr",
+          "gloss": "中心"
+        }
+      ],
+      "etymology": "decentralize 於 1840 年出現（先以 decentralized 的形式使用），很可能是從名詞 decentralization（1839 年，由 de- ＋ centralization 組成）反向構詞而來，字面是「把（權力等）從中心分散出去」，即脫離中央控制。",
+      "derivatives": [
+        {
+          "word": "decentralization",
+          "pos": "n.",
+          "zh": "分散"
+        },
+        {
+          "word": "centralize",
+          "pos": "v.",
+          "zh": "集中"
+        }
+      ]
+    },
+    {
+      "id": "eccentric",
+      "word": "eccentric",
+      "phonetic": "ɪkˈsɛntrɪk",
+      "zh": "古怪的（人），我行我素的（人）",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Howard Hughes became an eccentric billionaire who had an abnormal fear of germs.",
+      "example_zh": "霍華・休斯後來成了一個古怪的億萬富翁，對細菌有異常的恐懼。",
+      "draft": false,
+      "prefixId": "centr",
+      "parts": [
+        {
+          "text": "ec",
+          "gloss": "出、離開"
+        },
+        {
+          "text": "centr",
+          "gloss": "中心"
+        }
+      ],
+      "etymology": "eccentric 名詞最早見於 15 世紀初，原是托勒密天文學（Ptolemaic astronomy）的術語，指「偏心圓、偏心軌道」。形容詞於 1550 年代出現，經法文 eccentrique、中世紀拉丁文 eccentricus，源自希臘文 ekkentros（ek「出」＋kentron「中心」），直到 1620 年代才引申出「古怪、異於常人」的譬喻義，指人的「怪人」則遲至 1817 年才出現。",
+      "derivatives": [
+        {
+          "word": "eccentricity",
+          "pos": "n.",
+          "zh": "怪異，怪癖"
+        }
+      ]
+    },
+    {
+      "id": "circumference",
+      "word": "circumference",
+      "phonetic": "sɚˈkʌmfrəns",
+      "zh": "圓周，周邊",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Ancient Egyptians calculated the circumference of the globe by measuring shadows.",
+      "example_zh": "古埃及人用測量影子的方式算出了地球的圓周。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "circum",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "fer",
+          "gloss": "搬運、攜帶"
+        }
+      ],
+      "etymology": "源自拉丁文 circumferentia（circumferre 的中性複數分詞形），由 circum「環繞」+ ferre「搬運」組成，字面是「繞著搬、繞行一圈」。14 世紀晚期借入英文，原指「圈住圓形的那條線」即圓周，也是希臘文 periphereia 的意譯詞。",
+      "derivatives": []
+    },
+    {
+      "id": "circuit",
+      "word": "circuit",
+      "phonetic": "ˈsɝkɪt",
+      "zh": "迴路",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The management consultant is a familiar figure on the lecture circuit.",
+      "example_zh": "這位管理顧問是巡迴演講圈裡的常客。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "circu",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "it",
+          "gloss": "走、去"
+        }
+      ],
+      "etymology": "源自拉丁文 circuitus「繞行一圈」，由 circum「環繞」的變體 circu- + ire（過去分詞 itum）「走、去」組成。14 世紀晚期經古法文進入英文，原指「繞一圈的路線或範圍」，1570 年代衍生出法官巡迴轄區之意，1746 年再引申為電流繞行迴路的「電路」。",
+      "derivatives": [
+        {
+          "word": "circuitous",
+          "pos": "a.",
+          "zh": "迂迴的，曲折的"
+        }
+      ]
+    },
+    {
+      "id": "circulation",
+      "word": "circulation",
+      "phonetic": "ˌsɝkjʊˈleʃən",
+      "zh": "循環，流通，發行量",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "High cholesterol tends to impede blood circulation.",
+      "example_zh": "膽固醇過高容易阻礙血液循環。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "circul",
+          "gloss": "小圓圈、小環"
+        }
+      ],
+      "etymology": "源自拉丁文 circulationem，是動詞 circulare「形成圓圈」的動作名詞化，而 circulare 又源自 circulus「小圓圈」，即 circus「圓、環」的指小詞。15 世紀中葉先用於煉金術的循環蒸餾程序，1620 年代哈維用它描述血液「流回原點、周而復始」的循環，1680 年代再泛化為「流通、分布」之意。",
+      "derivatives": [
+        {
+          "word": "circulate",
+          "pos": "v.",
+          "zh": "循環，流通"
+        }
+      ]
+    },
+    {
+      "id": "circumspect",
+      "word": "circumspect",
+      "phonetic": "ˈsɝkəmspɛkt",
+      "zh": "謹慎的，小心的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man has been successful because he is always circumspect in his dealings.",
+      "example_zh": "這個人之所以成功，是因為他做事一向謹慎。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "circum",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "spect",
+          "gloss": "看"
+        }
+      ],
+      "etymology": "源自拉丁文 circumspectus「謹慎的、面面俱到的」，是動詞 circumspicere 的過去分詞，由 circum「環繞」+ specere「看」組成，字面是「向四面八方看」。15 世紀初借入英文後，由「四處張望」引申為做事「謹慎、周全」。",
+      "derivatives": [
+        {
+          "word": "circumspection",
+          "pos": "n.",
+          "zh": "謹慎，小心"
+        }
+      ]
+    },
+    {
+      "id": "circumvent",
+      "word": "circumvent",
+      "phonetic": "ˌsɝkəmˈvɛnt",
+      "zh": "規避",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The businessman circumvented government regulations by registering his company with a foreign country.",
+      "example_zh": "這名商人把公司登記在外國，藉此規避政府法規。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "circum",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "vent",
+          "gloss": "來"
+        }
+      ],
+      "etymology": "源自拉丁文 circumventus，是動詞 circumvenire 的過去分詞，由 circum「環繞」+ venire「來」組成，字面是「繞到四周來、包圍」。15 世紀中葉英文先取其比喻義「用計謀包圍、欺瞞」，直到 1840 年才發展出「繞過障礙」的現代常見用法。",
+      "derivatives": [
+        {
+          "word": "circumvention",
+          "pos": "n.",
+          "zh": "規避"
+        }
+      ]
+    },
+    {
+      "id": "recycle",
+      "word": "recycle",
+      "phonetic": "rəˈsaɪkəl",
+      "zh": "回收",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Recycled paper may look grayish, but is safe to use.",
+      "example_zh": "再生紙看起來可能偏灰，但用起來很安全。",
+      "draft": false,
+      "prefixId": "circum",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再、重新"
+        },
+        {
+          "text": "cycl",
+          "gloss": "圓、輪"
+        }
+      ],
+      "etymology": "1922 年由 re-「再、重新」+ cycle 組成的英文新造詞，最初用於工業製程指「材料重新利用」，1960 年詞義擴大為「廢棄物回收再製」，1969 年起再擴大出一般比喻用法。cycle 本身源自希臘文 kyklos「圓、輪」，經由古法文 cicle、晚期拉丁文 cyclus 於 14 世紀晚期進入英文。",
+      "derivatives": []
+    },
+    {
+      "id": "profound",
+      "word": "profound",
+      "phonetic": "prəˈfaʊnd",
+      "zh": "深遠的，深刻的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The invention of the contraceptive pill brought about profound changes in the lives of women.",
+      "example_zh": "避孕藥的發明為女性的生活帶來了深遠的改變。",
+      "draft": false,
+      "prefixId": "found",
+      "parts": [
+        {
+          "text": "pro",
+          "gloss": "向前、在前"
+        },
+        {
+          "text": "found",
+          "gloss": "底部、深"
+        }
+      ],
+      "etymology": "拉丁文 profundus 由 pro-（向前、向下）加 fundus（底部）組成，原意為「深不見底」，中世紀英文約於 14 世紀經古法文 profont/profund 引入後，保留其比喻義，發展出「學識淵博、意義深奧」及「感受深刻」之意。",
+      "derivatives": [
+        {
+          "word": "profundity",
+          "pos": "n.",
+          "zh": "深遠，深刻"
+        }
+      ]
+    },
+    {
+      "id": "fundamental",
+      "word": "fundamental",
+      "phonetic": "ˌfʌndəˈmɛntəl",
+      "zh": "根本的，基本的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There's a fundamental difference between these two political parties.",
+      "example_zh": "這兩個政黨之間有根本上的差異。",
+      "draft": false,
+      "prefixId": "found",
+      "parts": [
+        {
+          "text": "fund",
+          "gloss": "底部、基礎"
+        }
+      ],
+      "etymology": "fundamental 仿中世紀晚期拉丁文 fundamentalis（『屬於根基的』）而造，其名詞 fundamentum（『根基、基礎』）源自拉丁文 fundare（『建立』），而 fundare 又源自 fundus（『底部』），約 15 世紀中期進入英文，原意為『屬於根基的、主要的』。",
+      "derivatives": []
+    },
+    {
+      "id": "found",
+      "word": "found",
+      "phonetic": "faʊnd",
+      "zh": "創立，創設",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The university was founded by a Christian sect.",
+      "example_zh": "這所大學是由一個基督教教派創立的。",
+      "draft": false,
+      "prefixId": "found",
+      "parts": [
+        {
+          "text": "found",
+          "gloss": "建立、奠基"
+        }
+      ],
+      "etymology": "此為 found 的其中一個同形詞，意為『建立、創立』：源自古法文 fonder，溯自拉丁文 fundare（『打地基、奠基』），而 fundare 又源自 fundus（『底部』），字面義為『打下底部』，約 13 世紀晚期進入英文。",
+      "derivatives": [
+        {
+          "word": "founder",
+          "pos": "n.",
+          "zh": "創立者，創辦人"
+        }
+      ]
+    },
+    {
+      "id": "foundation",
+      "word": "foundation",
+      "phonetic": "ˌfaʊnˈdeʃən",
+      "zh": "創立，地基，基金會，根據",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The foundations will have to be reinforced to keep the house from sinking further into the ground.",
+      "example_zh": "地基必須加固，房子才不會繼續往下陷。",
+      "draft": false,
+      "prefixId": "found",
+      "parts": [
+        {
+          "text": "found",
+          "gloss": "底部、基礎"
+        }
+      ],
+      "etymology": "foundation 源自古法文 fondacion 或晚期拉丁文 fundationem，其字根為拉丁文 fundare（『打地基』），再溯源至 fundus（『底部』）。14 世紀晚期原指『建立的行為』，15 世紀初期起也用來指建築物『地基、根基』的實體意義。",
+      "derivatives": []
+    },
+    {
+      "id": "radical",
+      "word": "radical",
+      "phonetic": "ˈrædɪkəl",
+      "zh": "根本的，激烈的，激進的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We need to make some radical changes to survive.",
+      "example_zh": "我們得做一些根本上的改變才能生存。",
+      "draft": false,
+      "prefixId": "radic",
+      "parts": [
+        {
+          "text": "radic",
+          "gloss": "根"
+        }
+      ],
+      "etymology": "源自拉丁文 radix（所有格 radicis）「根」派生出的 radicalis「有根的」，14 世紀晚期進入英文表示「源自根部的」，字面「從根本而來」後引申為「徹底的、極端的」，1817 年起也用於政治立場，取「從根本改變」之意。",
+      "derivatives": []
+    },
+    {
+      "id": "eradicate",
+      "word": "eradicate",
+      "phonetic": "əˈrædəˌket",
+      "zh": "根除，消滅",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Polio has now been completely eradicated.",
+      "example_zh": "小兒麻痺症現在已經被完全根除了。",
+      "draft": false,
+      "prefixId": "radic",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "出、向外"
+        },
+        {
+          "text": "radic",
+          "gloss": "根"
+        }
+      ],
+      "etymology": "由拉丁文字首 ex-「向外」與 radix「根」組成動詞 eradicare「連根拔除」，字面義是「把根整個拔出」，因而引申為「徹底根除、消滅殆盡」。",
+      "derivatives": [
+        {
+          "word": "eradication",
+          "pos": "n.",
+          "zh": "根除，消滅"
+        }
+      ]
+    },
+    {
+      "id": "rudimentary",
+      "word": "rudimentary",
+      "phonetic": "ˌrudɪˈmɛntərɪ",
+      "zh": "基本的，初步的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "When an infant is born, it possesses only rudimentary eyesight and cannot see very well.",
+      "example_zh": "嬰兒剛出生時只有最初步的視力，看不太清楚。",
+      "draft": false,
+      "prefixId": "radic",
+      "parts": [
+        {
+          "text": "rudi",
+          "gloss": "粗糙、未成形"
+        }
+      ],
+      "etymology": "源自拉丁文 rudis「粗糙、未經訓練」衍生出的 rudimentum「最初的訓練、入門知識」，16 世紀成為英文 rudiment，1819 年加上 -ary 構成 rudimentary，指「尚處初步階段、未發展完全的」。",
+      "derivatives": [
+        {
+          "word": "rudiment",
+          "pos": "n.",
+          "zh": "基礎，初步"
+        }
+      ]
+    },
+    {
+      "id": "erudite",
+      "word": "erudite",
+      "phonetic": "ˈɛrjʊdaɪt",
+      "zh": "飽學的，博學的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The most erudite people in medical research attended the conference.",
+      "example_zh": "醫學研究領域最博學的人都出席了這場會議。",
+      "draft": false,
+      "prefixId": "radic",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "出、向外"
+        },
+        {
+          "text": "rud",
+          "gloss": "粗糙、未琢磨"
+        }
+      ],
+      "etymology": "由拉丁文字首 ex-「向外」與 rudis「粗糙、未受教」組成動詞 erudire，字面是「使脫離粗糙無知的狀態」，其過去分詞 eruditus 進入英文後表示「博學的、有學問的」。",
+      "derivatives": [
+        {
+          "word": "erudition",
+          "pos": "n.",
+          "zh": "博學"
+        }
+      ]
+    },
+    {
+      "id": "magnify",
+      "word": "magnify",
+      "phonetic": "ˈmægnɪfaɪ",
+      "zh": "放大，擴大",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A microscope is much more powerful than a magnifying glass.",
+      "example_zh": "顯微鏡的放大能力遠比放大鏡強。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "magn",
+          "gloss": "大。偉大"
+        },
+        {
+          "text": "-fy",
+          "gloss": "做。使成"
+        }
+      ],
+      "etymology": "這個字源自古法文 magnefiier、上承拉丁文 magnificare（由 magnus「大」加 facere「做」的組合形構成，字面義是「做出偉大的事」），14 世紀晚期英文最初的意思是「為了榮耀某人某事而言行讚頌」，直到 1660 年代才發展出「用透鏡把物體的外觀放大」這個英文特有的現代用法。",
+      "derivatives": [
+        {
+          "word": "magnification",
+          "pos": "n.",
+          "zh": "放大，擴大"
+        }
+      ]
+    },
+    {
+      "id": "maximum",
+      "word": "maximum",
+      "phonetic": "ˈmæksɪməm",
+      "zh": "最大限度（的）",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Two hundred dollars is the maximum I am willing to spend on dinner.",
+      "example_zh": "兩百美元是我願意花在一頓晚餐上的上限。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "maxim",
+          "gloss": "最大的"
+        }
+      ],
+      "etymology": "這個字在 1740 年直接借自拉丁文 maximum（複數 maxima），是 magnus「大」的不規則最高級 maximus「最大的」的中性形，最初在英文中指「最大的量、數目或程度」，形容詞用法（意為「最大的」）則要到 1834 年才出現。",
+      "derivatives": [
+        {
+          "word": "maximal",
+          "pos": "a.",
+          "zh": "最大限度的"
+        }
+      ]
+    },
+    {
+      "id": "magnanimous",
+      "word": "magnanimous",
+      "phonetic": "mægˈnænɪməs",
+      "zh": "寬宏大量的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "At the end of the game, the winner was magnanimous as the loser was gracious.",
+      "example_zh": "比賽結束時，贏的一方很有風度，輸的一方也很大方。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "magn",
+          "gloss": "大。偉大"
+        },
+        {
+          "text": "anim",
+          "gloss": "心智。精神"
+        }
+      ],
+      "etymology": "這個字約在 1580 年代出現，由拉丁文 magnanimus（或先出現的 magnanimity 加上 -ous）構成，magnus「大」加 animus「心智、精神」，字面是「心靈偉大」，最初指「英勇無畏」，到 1590 年代才轉為「胸襟高尚、不計較瑣碎怨恨」的現代意義。",
+      "derivatives": [
+        {
+          "word": "magnanimity",
+          "pos": "n.",
+          "zh": "寬宏大量"
+        }
+      ]
+    },
+    {
+      "id": "majority",
+      "word": "majority",
+      "phonetic": "məˈdʒɑrɪtɪ",
+      "zh": "大多數",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A large majority of people support the tax cut.",
+      "example_zh": "絕大多數的人支持減稅。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "major",
+          "gloss": "較大的"
+        }
+      ],
+      "etymology": "這個字在 1550 年代借自中世紀拉丁文 majoritatem，本義是「較大、優越的狀態」。其中 major 是拉丁文 magnus「大」的不規則比較級 maior（更早形態為 magios）演變而來，意思是「較大的」，因此 majority 字面就是「較大的狀態」，後來才發展出「多數」的意思。",
+      "derivatives": []
+    },
+    {
+      "id": "magnificent",
+      "word": "magnificent",
+      "phonetic": "mægˈnɪfəsənt",
+      "zh": "壯麗的，宏偉的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "From this window you have a magnificent view of the valley below.",
+      "example_zh": "從這扇窗戶望出去，可以看到下方山谷的壯麗景色。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "magn",
+          "gloss": "大。偉大"
+        },
+        {
+          "text": "fic",
+          "gloss": "做。製造"
+        }
+      ],
+      "etymology": "這個字源自古法文 magnificent，是拉丁文 magnificentior（magnificus 的比較級，由 magnus「大」加 facere「做」構成，字面「做出偉大之事」）的逆構詞，15 世紀中原本指「行為偉大顯赫、光榮」，到 1520 年代才擴大為「富麗堂皇、極盡奢華」的現代意義。",
+      "derivatives": [
+        {
+          "word": "magnificence",
+          "pos": "n.",
+          "zh": "壯麗，宏偉"
+        }
+      ]
+    },
+    {
+      "id": "magnitude",
+      "word": "magnitude",
+      "phonetic": "ˈmægnɪtud",
+      "zh": "大小，幅度",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I hope you realize the magnitude of the problem.",
+      "example_zh": "我希望你明白這個問題有多嚴重。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "magn",
+          "gloss": "大。偉大"
+        }
+      ],
+      "etymology": "這個字約在 1400 年借自拉丁文 magnitudo，由 magnus「大」加上構成抽象名詞的字尾 -tudo 而成，最初指「卓越、宏偉」，15 世紀初轉為「體積或範圍的大小」，到 1640 年代又發展出翻譯托勒密的希臘文 megethos 而來的天文學「星等」義。",
+      "derivatives": []
+    },
+    {
+      "id": "majestic",
+      "word": "majestic",
+      "phonetic": "məˈdʒɛstɪk",
+      "zh": "壯麗的，威嚴的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The majestic tree is fully 100 feet tall.",
+      "example_zh": "那棵雄偉的樹足足有一百英尺高。",
+      "draft": false,
+      "prefixId": "maxi",
+      "parts": [
+        {
+          "text": "majest",
+          "gloss": "偉大。尊貴"
+        }
+      ],
+      "etymology": "這個字約在 1600 年由 majesty 加上字尾 -ic 構成。majesty 源自古法文 majeste，再往上溯至拉丁文主格 maiestas（字根 maiestatem），意思是「偉大、尊嚴、崇高」，而 maiestas 本身是從 maior（magnus 的比較級，中性作 maius）衍生出的抽象名詞，原本用於形容神祇的莊嚴崇高，14 世紀晚期才擴大用於稱呼君王的尊號。",
+      "derivatives": [
+        {
+          "word": "majesty",
+          "pos": "n.",
+          "zh": "威嚴，雄偉"
+        }
+      ]
+    },
+    {
+      "id": "august",
+      "word": "august",
+      "phonetic": "ɔˈgʌst",
+      "zh": "崇高的，偉大的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The family claims an august lineage.",
+      "example_zh": "這個家族自稱有著崇高的血統。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "aug",
+          "gloss": "增加、偉大"
+        }
+      ],
+      "etymology": "1660 年代源自拉丁文 augustus「莊嚴的、崇高的、宏偉的」，Etymonline 註明字源有兩種說法：一說原意是「經占卜官認可、帶有吉兆而顯神聖」（與 augur 有關），另一說（語言學者 de Vaan）認為是「被增大之物」，直接連結 augere「增加」，兩說皆指向「因某種增益而顯尊貴莊嚴」之意。",
+      "derivatives": []
+    },
+    {
+      "id": "auction",
+      "word": "auction",
+      "phonetic": "ˈɔkʃən",
+      "zh": "拍賣",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I bought this couch at a furniture auction.",
+      "example_zh": "這張沙發是我在一場家具拍賣會上買的。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "auct",
+          "gloss": "增加"
+        }
+      ],
+      "etymology": "源自拉丁文 auctio（屬格 auctionem），意為「以喊價遞增方式進行的公開拍賣」，是動詞 augere「增加」過去分詞詞幹所形成的動作名詞，字面就是「（喊價）不斷增加的過程」，後成為英文「拍賣」一詞，並可回溯至原始印歐字根 *aug-「增加」。",
+      "derivatives": []
+    },
+    {
+      "id": "authorize",
+      "word": "authorize",
+      "phonetic": "ˈɔθəraɪz",
+      "zh": "授權",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I have been authorized by the manager to handle the deal.",
+      "example_zh": "我已獲得經理授權來處理這筆交易。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "author",
+          "gloss": "創始者、締造者"
+        }
+      ],
+      "etymology": "源自古法文 autoriser／auctoriser 與中世紀拉丁文 auctorizare「授予權威」，其字根 auctor「創始者、締造者」是 augere「增加」的過去分詞 auctus 所形成的施事名詞，字面義為「使…成長茁壯之人」，因此「authorize」本義即「賦予（如創始者般的）權威」。",
+      "derivatives": [
+        {
+          "word": "authorization",
+          "pos": "n.",
+          "zh": "授權"
+        }
+      ]
+    },
+    {
+      "id": "augment",
+      "word": "augment",
+      "phonetic": "ɔgˈmɛnt",
+      "zh": "擴大，增加",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He augmented his income by taking a second job.",
+      "example_zh": "他靠兼第二份工作來增加收入。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "aug",
+          "gloss": "增加"
+        }
+      ],
+      "etymology": "源自古法文 augmenter，來自晚期拉丁文 augmentare「使增加」，其名詞 augmentum「增長」直接源於動詞 augere「增加、擴大、使壯大」（可回溯至原始印歐字根 *aug-「增加」），字面意思就是「使變大、增添」。",
+      "derivatives": [
+        {
+          "word": "augmentation",
+          "pos": "n.",
+          "zh": "擴大，增加"
+        }
+      ]
+    },
+    {
+      "id": "augury",
+      "word": "augury",
+      "phonetic": "ˈɔgjʊrɪ",
+      "zh": "占卜，預兆",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Watching the birds fly was the classical Greek method of augury.",
+      "example_zh": "觀察鳥的飛行是古希臘的占卜方法。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "augur",
+          "gloss": "占卜官、預言者"
+        }
+      ],
+      "etymology": "源自拉丁文 augurium「占卜、對徵兆的觀察與解釋」，直接字根是 augur「占卜官」。Etymonline 對 augur 本身的語源特別註明不確定——一說（perhaps，引語言學者 de Vaan）原意與「祭儀中使農作物增產」有關而連結 augere「增加」，但「更普遍的說法」其實是 augur 源自拉丁文 avis「鳥」＋garrire「說話」，因觀察鳥的飛行、鳴叫、覓食是占卜的重要依據，與「增加」字根無關。",
+      "derivatives": []
+    },
+    {
+      "id": "inaugurate",
+      "word": "inaugurate",
+      "phonetic": "ɪˈnɔgjəˌret",
+      "zh": "就職，開幕，開始",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "American Presidents are always inaugurated on Jan. 20.",
+      "example_zh": "美國總統一律在一月二十日就職。",
+      "draft": false,
+      "prefixId": "aug",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "在…之上、進入"
+        },
+        {
+          "text": "augur",
+          "gloss": "占卜官、預言者"
+        }
+      ],
+      "etymology": "源自拉丁文 inauguratus（inaugurare 的過去分詞），意為「觀察飛鳥占卜、於吉兆下舉行祝聖或就職儀式」，由 in-「在…之上」＋augurare「擔任占卜官、預言」組成（augurare 又源於 augur），字面義是「在占卜吉兆的儀式中正式就職」，這也是古羅馬就職典禮必含占卜儀式的由來。",
+      "derivatives": [
+        {
+          "word": "inauguration",
+          "pos": "n.",
+          "zh": "就職，開幕，開始"
+        }
+      ]
+    },
+    {
+      "id": "grandiose",
+      "word": "grandiose",
+      "phonetic": "ˈgrændios",
+      "zh": "宏偉的，浮誇的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The grandiose town hall cost a fortune to build.",
+      "example_zh": "那座宏偉的市政廳花了大筆錢才蓋起來。",
+      "draft": false,
+      "prefixId": "grand",
+      "parts": [
+        {
+          "text": "grand",
+          "gloss": "偉大、宏大"
+        }
+      ],
+      "etymology": "源自拉丁文 grandis（偉大、龐大），先派生出義大利文 grandioso，再經法文 grandiose（意為氣派逼人）於 1828 年借入英文，形容事物宏偉壯觀。",
+      "derivatives": []
+    },
+    {
+      "id": "grandiloquent",
+      "word": "grandiloquent",
+      "phonetic": "grænˈdɪləkwənt",
+      "zh": "誇張的，言辭浮誇的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The speech was full of grandiloquent language but devoid of new ideas.",
+      "example_zh": "這場演講滿是浮誇的辭藻，卻沒有新的想法。",
+      "draft": false,
+      "prefixId": "grand",
+      "parts": [
+        {
+          "text": "grand",
+          "gloss": "偉大、宏大"
+        },
+        {
+          "text": "loqu",
+          "gloss": "說話"
+        }
+      ],
+      "etymology": "由拉丁文 grandis（偉大）與 loqui（說話）合成 grandiloquus／grandiloquentia，指「用誇大詞藻說話」。英文先於 1580 年代出現 grandiloquence，1590 年代再回頭派生（back-formation）出形容詞 grandiloquent，形容言辭誇張浮誇、大言不慚。",
+      "derivatives": [
+        {
+          "word": "grandiloquence",
+          "pos": "n.",
+          "zh": "誇張，浮誇的言辭"
+        }
+      ]
+    },
+    {
+      "id": "grandeur",
+      "word": "grandeur",
+      "phonetic": "ˈgrændʒɚ",
+      "zh": "宏偉，壯麗",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The grandeur of Wagner's music can only be conveyed through a full orchestra.",
+      "example_zh": "華格納音樂的宏偉，只有完整的管弦樂團才表現得出來。",
+      "draft": false,
+      "prefixId": "grand",
+      "parts": [
+        {
+          "text": "grand",
+          "gloss": "偉大、宏大"
+        }
+      ],
+      "etymology": "法文 grandeur 源自古法文 grandor（12 世紀），本於 grand（偉大，源自拉丁文 grandis），約 1500 年借入英文，原指「高聳、高度」，到 1660 年代詞義擴大為「莊嚴、宏偉」。",
+      "derivatives": [
+        {
+          "word": "grand",
+          "pos": "a.",
+          "zh": "宏偉的，壯麗的"
+        }
+      ]
+    },
+    {
+      "id": "median",
+      "word": "median",
+      "phonetic": "ˈmidiən",
+      "zh": "中等的，中間值的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Median household income has increased, but not as fast as inflation.",
+      "example_zh": "家戶所得中位數雖然上升，但漲得沒有通膨快。",
+      "draft": false,
+      "prefixId": "medi",
+      "parts": [
+        {
+          "text": "medi",
+          "gloss": "中間"
+        }
+      ],
+      "etymology": "源自拉丁文 medianus「中間的」，由 medius「中間」而來（同源 PIE 詞根 *medhyo-「中間」），十六世紀末進入英文表示「位於中間、居中的」。統計學上「一系列數值的中間值」之用法晚至 1883 年才出現。",
+      "derivatives": []
+    },
+    {
+      "id": "intermediate",
+      "word": "intermediate",
+      "phonetic": "ˌɪntɚˈmidiət",
+      "zh": "中間的，中等程度的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This class is at the intermediate level, which means it's neither too hard nor too easy.",
+      "example_zh": "這門課屬於中級程度，也就是不會太難也不會太簡單。",
+      "draft": false,
+      "prefixId": "medi",
+      "parts": [
+        {
+          "text": "inter",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "medi",
+          "gloss": "中間"
+        }
+      ],
+      "etymology": "源自中古拉丁文 intermediatus「介於其間的」，由拉丁文 inter「在…之間」＋medius「中間的」組成，十五世紀初以形容詞之姿進入英文，表示「存在或發生於兩者之間」。",
+      "derivatives": []
+    },
+    {
+      "id": "intermediary",
+      "word": "intermediary",
+      "phonetic": "ˌɪntɚˈmidiˌɛrɪ",
+      "zh": "中間人，仲裁者",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The government official volunteered to serve as an intermediary between labor leaders and factory managers.",
+      "example_zh": "這位政府官員自願擔任勞方領袖與廠方經理之間的中間人。",
+      "draft": false,
+      "prefixId": "medi",
+      "parts": [
+        {
+          "text": "inter",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "medi",
+          "gloss": "中間"
+        }
+      ],
+      "etymology": "源自法文 intermédiaire（十七世紀），法文又源自拉丁文 intermedius「介於中間的」（inter「之間」＋medius「中間」）。英文 1757 年先作形容詞用，表示「位於兩者之間」，1818 年衍生出「擔任調解者」之意，1791 年起也作名詞，指居中調停、傳話的人。",
+      "derivatives": []
+    },
+    {
+      "id": "mediation",
+      "word": "mediation",
+      "phonetic": "ˌmidiˈeʃən",
+      "zh": "調停，調解",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The mediation successfully averted disaster.",
+      "example_zh": "這次調解成功避免了一場災難。",
+      "draft": false,
+      "prefixId": "medi",
+      "parts": [
+        {
+          "text": "medi",
+          "gloss": "中間"
+        }
+      ],
+      "etymology": "源自中古拉丁文 mediationem（主格 mediatio）「從中一分為二」，是拉丁動詞 mediare「使成一半。居中」的動作名詞，mediare 又源自 medius「中間」。英文十四世紀末以 mediacioun 的拼法進入，指「作為調解者介入、行動」。",
+      "derivatives": [
+        {
+          "word": "mediate",
+          "pos": "v.",
+          "zh": "調停，調解"
+        }
+      ]
+    },
+    {
+      "id": "medieval",
+      "word": "medieval",
+      "phonetic": "ˌmidiˈivəl",
+      "zh": "中古時代的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This cathedral is a medieval building.",
+      "example_zh": "這座大教堂是一棟中古時代的建築。",
+      "draft": false,
+      "prefixId": "medi",
+      "parts": [
+        {
+          "text": "medi",
+          "gloss": "中間"
+        },
+        {
+          "text": "ev",
+          "gloss": "時代、年代"
+        }
+      ],
+      "etymology": "1825 年（原拼作 mediaeval）由英文直接組字而成，結合拉丁文 medium「中間」（源自 medius）與 aevum「時代、年代」（PIE 詞根 *aiw-「生命力。長壽、永恆」），字面意為「中間的那個時代」，指介於古代與現代之間的中世紀。",
+      "derivatives": []
+    },
+    {
+      "id": "minus",
+      "word": "minus",
+      "phonetic": "ˈmaɪnəs",
+      "zh": "減；負數，缺點",
+      "pos": "prep., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Profit is revenue minus cost.",
+      "example_zh": "利潤等於營收減去成本。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minus",
+          "gloss": "較少、減去"
+        }
+      ],
+      "etymology": "拉丁文 minus「較少」，是 minor「較小的」的中性格形式，源自原始印歐字根 *mei-「小」。15 世紀晚期因中世紀北海地區商業上以拉丁文 plus/minus 標示重量盈虧，進入英文成為表示「減去」的介系詞。",
+      "derivatives": []
+    },
+    {
+      "id": "minuscule",
+      "word": "minuscule",
+      "phonetic": "ˈmɪnəˌskjul",
+      "zh": "微小的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The cactus only requires a minuscule amount of water to survive.",
+      "example_zh": "仙人掌只需要極少量的水就能活。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minus",
+          "gloss": "較少、小"
+        },
+        {
+          "text": "-cule",
+          "gloss": "表「小」的指小詞尾"
+        }
+      ],
+      "etymology": "源自拉丁文 minuscula （littera）「稍小的（字母）」，minusculus 是 minus「較少」的指小詞形式。1705 年借自法文 minuscule 進入英文，原指（印刷用的）小寫字母，1727 年起也作形容詞，1893 年起才有「極微小」的泛用語意。",
+      "derivatives": []
+    },
+    {
+      "id": "administration",
+      "word": "administration",
+      "phonetic": "ədˌmɪnəˈstreʃən",
+      "zh": "行政，政府",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I like teaching, but don't like administration.",
+      "example_zh": "我喜歡教書，但不喜歡做行政。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "ad",
+          "gloss": "向、對"
+        },
+        {
+          "text": "minister",
+          "gloss": "僕人、次要者"
+        }
+      ],
+      "etymology": "由 ad-「向」+ minister「僕人、次要者」組成。minister 本身源自 minus/minor「較少」加比較級字尾 -teros，字面義「地位較低下者」。administration 源自拉丁文 administrationem「協助、管理」，語意從「給予、分配」（14 世紀）逐漸演變為「管理莊園」（15 世紀初）、「管理公共事務」（1680 年代），1796 年起也指（總統的）執政期或行政部門。",
+      "derivatives": [
+        {
+          "word": "minister",
+          "pos": "n.",
+          "zh": "部長，牧師"
+        },
+        {
+          "word": "administer",
+          "pos": "v.",
+          "zh": "行使，用藥"
+        }
+      ]
+    },
+    {
+      "id": "diminish",
+      "word": "diminish",
+      "phonetic": "dɪˈmɪnɪʃ",
+      "zh": "減少，變小",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The sound of the parade diminished in the distance.",
+      "example_zh": "遊行的聲音在遠處逐漸減弱。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "完全、加強語氣"
+        },
+        {
+          "text": "-min",
+          "gloss": "使變小"
+        }
+      ],
+      "etymology": "15 世紀初由兩個同義的古字 diminue 與 minish 合流而成。diminue 源自古法文 diminuer、拉丁文 diminuere（deminuere 的變體，de-「完全」+ minuere「使變小」），minish 則源自古法文 menuisier（同樣來自 minuere）。字面義為「弄成細小碎片」，引申為「減少、使變小」。",
+      "derivatives": []
+    },
+    {
+      "id": "diminutive",
+      "word": "diminutive",
+      "phonetic": "dɪˈmɪnjətɪv",
+      "zh": "極小的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The six-foot-tall man looks diminutive among those NBA players.",
+      "example_zh": "那位身高六英尺的男子站在那些 NBA 球員之中顯得格外嬌小。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "完全、加強語氣"
+        },
+        {
+          "text": "-minut",
+          "gloss": "使變小的、已變小的"
+        }
+      ],
+      "etymology": "源自古法文 diminutif 與拉丁文 diminutivus（deminutivus 的變體），來自 deminuere「減少、使變小」（de-「完全」+ minuere「使變小」）。14 世紀晚期原為文法用語，指「表示微小」的衍生詞（如指小詞），約 1600 年起也作一般形容詞用，指「微小的、狹隘的」。",
+      "derivatives": [
+        {
+          "word": "diminution",
+          "pos": "n.",
+          "zh": "縮小，減低"
+        }
+      ]
+    },
+    {
+      "id": "minute",
+      "word": "minute",
+      "phonetic": "maɪˈnjut",
+      "zh": "微小的；會議記錄（複數）",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The picture captures everything in minute detail.",
+      "example_zh": "這張照片把每一個微小的細節都拍了下來。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minute",
+          "gloss": "變小的、細小的"
+        }
+      ],
+      "etymology": "皆源自拉丁文 minutus「被弄小的」，是 minuere「使變小」的過去分詞。形容詞義約於 15 世紀中出現，原指「被切細的」，15 世紀晚期起指「體積或程度上微小的」。名詞義則源自中世紀拉丁文 minuta「一小部分」，指圓或鐘面的六十分之一，即「分鐘」。同一名詞另外發展出「（草擬的）摘要、備忘」之意（約 1450 年），其複數 minutes 約 1710 年起專指「會議記錄」，因早期記錄常先寫成簡略草稿。",
+      "derivatives": []
+    },
+    {
+      "id": "minutia",
+      "word": "minutia",
+      "phonetic": "məˈnuʃiə",
+      "zh": "細節，小事（複數 minutiae）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The committee wasted too much time on the minutiae of the report.",
+      "example_zh": "委員會在這份報告的枝微末節上浪費了太多時間。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minut",
+          "gloss": "變小的、細小的"
+        }
+      ],
+      "etymology": "源自拉丁文 minutia「微小、瑣細」，來自 minutus「小的」。1751 年進入英文，指「微小的細節、瑣事」，現代英文多用複數 minutiae（晚期拉丁文，意為「瑣事」）。",
+      "derivatives": []
+    },
+    {
+      "id": "miniature",
+      "word": "miniature",
+      "phonetic": "ˈmɪniətʃər",
+      "zh": "縮小的；縮小版（圖、像等）",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My kid sister made some miniature clothing for her doll.",
+      "example_zh": "我妹妹幫她的娃娃做了一些迷你的衣服。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "miniat",
+          "gloss": "塗紅（紅丹）"
+        }
+      ],
+      "etymology": "不屬於「小」字根家族。1580 年代源自義大利文 miniatura（手抄本裝飾畫），來自動詞 miniare「塗成紅色」，其字根是拉丁文 minium「紅丹」（一種鉛丹顏料，用於手抄本裝飾與紅色書寫）。Etymonline 明確指出「小」的語意是後來附加的：一因中世紀手抄本插畫本身尺寸小，二因與 minor、minimus、minutus 等表「小」的形似字產生語音聯想，而非真正詞源。",
+      "derivatives": []
+    },
+    {
+      "id": "minimum",
+      "word": "minimum",
+      "phonetic": "ˈmɪnəməm",
+      "zh": "最低限度（的）",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I need a minimum of three days to finish the report.",
+      "example_zh": "我至少需要三天才能寫完這份報告。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minim",
+          "gloss": "最小的（拉丁文最高級）"
+        }
+      ],
+      "etymology": "源自拉丁文 minimus「最小的」，是 minor「較小的」的最高級形式，源自原始印歐字根 *mei-「小」。名詞義 1660 年代進入英文，原指「物質可分割的最小部分」（今已不用），1670 年代起指「最小量、最低限度」。形容詞義則遲至 1810 年才出現。",
+      "derivatives": [
+        {
+          "word": "minimal",
+          "pos": "a.",
+          "zh": "最低限度的"
+        }
+      ]
+    },
+    {
+      "id": "minor",
+      "word": "minor",
+      "phonetic": "ˈmaɪnər",
+      "zh": "小幅度的；未成年人，副修科目",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The book was published after some minor changes.",
+      "example_zh": "這本書在做了一些小幅度的修改之後才出版。",
+      "draft": false,
+      "prefixId": "mini",
+      "parts": [
+        {
+          "text": "minor",
+          "gloss": "較小的、較次要的"
+        }
+      ],
+      "etymology": "源自拉丁文 minor「較少的、較小的、較次要的」，與 minus 同源，源自原始印歐字根 *mei-「小」。英文最早於 13 世紀初以 frere menour（「小兄弟」，方濟會修士自稱謙卑之意）之姿進入英文，14 世紀初也作名詞指方濟會修士。1570 年代起有「未成年」之意，15 世紀初起有「較小、較次要」的一般比較義，1620 年代起有「相對不重要」之意。",
+      "derivatives": [
+        {
+          "word": "minority",
+          "pos": "n.",
+          "zh": "少數，少數民族"
+        }
+      ]
+    },
+    {
+      "id": "brief",
+      "word": "brief",
+      "phonetic": "ˈbrif",
+      "zh": "簡短的；做簡報",
+      "pos": "a., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Let me give you a brief survey of company history.",
+      "example_zh": "我來簡短介紹一下公司的歷史。",
+      "draft": false,
+      "prefixId": "brev",
+      "parts": [
+        {
+          "text": "brief",
+          "gloss": "短的"
+        }
+      ],
+      "etymology": "brief 約 1300 年（拼作 bref）經古法語借入英文，源自拉丁文 brevis「短、低、小、淺」，可上溯原始印歐語字根 *mregh-u-「短」。名詞用法於 14 世紀初出現，原指官方發出的文書，因篇幅簡短而衍生出「摘要」之義，1630 年代起定型為法律上「案件事實摘要」的意思。",
+      "derivatives": [
+        {
+          "word": "brevity",
+          "pos": "n.",
+          "zh": "簡短"
+        }
+      ]
+    },
+    {
+      "id": "abridge",
+      "word": "abridge",
+      "phonetic": "əˈbrɪdʒ",
+      "zh": "刪節，縮短",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The 500-page novel was abridged to half its length.",
+      "example_zh": "這本五百頁的小說被刪節成原本的一半長度。",
+      "draft": false,
+      "prefixId": "brev",
+      "parts": [
+        {
+          "text": "a",
+          "gloss": "朝向（ad-）"
+        },
+        {
+          "text": "bridge",
+          "gloss": "使短"
+        }
+      ],
+      "etymology": "abridge 約 1300 年經古法語 abregier 借入英文，源自晚期拉丁文 abbreviare（ad-「向」+breviare「使短」，breviare 又源自 brevis「短」）。拉丁文 -vi- 到古法語 -dg- 是規律音變（同見 assuage<assuavidare、deluge<diluvium），brevis 因此一路變成 bridge，和「橋」純屬拼法巧合。abridge 與 abbreviate 系出同源、皆源自拉丁 abbreviare，屬於同一詞根的雙生詞（doublet）：abridge 經古法語轉道進入英文（約 1300 年），abbreviate 則約 15 世紀中直接借自拉丁文，因此兩者拼法讀音才會分歧。",
+      "derivatives": [
+        {
+          "word": "abridgment",
+          "pos": "n.",
+          "zh": "刪節版，摘要"
+        }
+      ]
+    },
+    {
+      "id": "unabridged",
+      "word": "unabridged",
+      "phonetic": "ˌʌnəˈbrɪdʒd",
+      "zh": "未刪節的，足本的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The unabridged audiobook In Search of Lost Time takes several full days to listen to.",
+      "example_zh": "《追憶似水年華》的足本有聲書要花上好幾整天才聽得完。",
+      "draft": false,
+      "prefixId": "brev",
+      "parts": [
+        {
+          "text": "un",
+          "gloss": "不、未"
+        },
+        {
+          "text": "abridged",
+          "gloss": "刪節的"
+        }
+      ],
+      "etymology": "unabridged 最早見於 1590 年代，由否定字首 un-「不」加上動詞 abridge 的過去分詞構成，字面即「未被刪節、未縮短」，19 世紀以來主要用於形容辭典、書籍等未經刪節的完整版本。",
+      "derivatives": []
+    },
+    {
+      "id": "symmetry",
+      "word": "symmetry",
+      "phonetic": "ˈsɪmɪtrɪ",
+      "zh": "平衡，對稱",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The human body has symmetry, as the left half is the mirror image of the right half.",
+      "example_zh": "人體是對稱的，左半邊就是右半邊的鏡像。",
+      "draft": false,
+      "prefixId": "meter",
+      "parts": [
+        {
+          "text": "sym",
+          "gloss": "共同、一起"
+        },
+        {
+          "text": "metr",
+          "gloss": "測量"
+        }
+      ],
+      "etymology": "symmetry 源自希臘文 symmetros（syn-「共同」+ metron「測量」），16 世紀經法文 symmétrie、拉丁文 symmetria 傳入英文，本義是「各部分成比例」，後來發展成「勻稱、對稱」之意，19 世紀再衍生出「以中線為準的鏡像對稱」這種科學用法。",
+      "derivatives": [
+        {
+          "word": "symmetrical",
+          "pos": "a.",
+          "zh": "平衡的，對稱的"
+        },
+        {
+          "word": "asymmetrical",
+          "pos": "a.",
+          "zh": "不對稱的"
+        }
+      ]
+    },
+    {
+      "id": "perimeter",
+      "word": "perimeter",
+      "phonetic": "pəˈrɪmɪtər",
+      "zh": "周圍，外圍，周長",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There are soldiers guarding the perimeter of the camp.",
+      "example_zh": "有士兵守衛著營區的外圍。",
+      "draft": false,
+      "prefixId": "meter",
+      "parts": [
+        {
+          "text": "peri",
+          "gloss": "環繞、周圍"
+        },
+        {
+          "text": "meter",
+          "gloss": "測量"
+        }
+      ],
+      "etymology": "perimeter 源自希臘文 perimetron「周長」（peri-「環繞」+ metron「測量」），15 世紀經拉丁文 perimetros 傳入英文，本義是「圖形外圍的周長、邊界」，20 世紀中期才衍生出「防禦陣地外圍界線」的軍事用法。",
+      "derivatives": []
+    },
+    {
+      "id": "thermometer",
+      "word": "thermometer",
+      "phonetic": "θɚˈmɑmɪtɚ",
+      "zh": "溫度計，體溫計",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "This thermometer can be used without contact to your skin.",
+      "example_zh": "這支溫度計不必接觸皮膚就能使用。",
+      "draft": false,
+      "prefixId": "meter",
+      "parts": [
+        {
+          "text": "thermo",
+          "gloss": "熱"
+        },
+        {
+          "text": "meter",
+          "gloss": "測量"
+        }
+      ],
+      "etymology": "thermometer 是耶穌會神父 Jean Leurechon 於 1620 年代用希臘文 thermos「熱」+ metron「測量」造出的法文 thermomètre，1630 年代進入英文，字面意思是「量熱的工具」，即測量溫度的儀器。",
+      "derivatives": []
+    },
+    {
+      "id": "immensely",
+      "word": "immensely",
+      "phonetic": "ɪˈmɛnslɪ",
+      "zh": "極大地",
+      "pos": "adv.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I was immensely relieved to test negative for the virus.",
+      "example_zh": "病毒檢驗結果是陰性，這讓我大大鬆了一口氣。",
+      "draft": false,
+      "prefixId": "meter",
+      "parts": [
+        {
+          "text": "im",
+          "gloss": "不、無"
+        },
+        {
+          "text": "mens",
+          "gloss": "已測量的"
+        }
+      ],
+      "etymology": "immensely 由 immense 加副詞字尾 -ly 於 1650 年代構成。immense 源自拉丁文 immensus（in-「不」+ mensus，動詞 metiri「測量」的過去分詞，同一個 PIE 字根 *me-「測量」，與希臘文 metron 同源），字面是「無法測量的」，引申為「巨大、極大」，immensely 即「極度地、非常」之意。",
+      "derivatives": [
+        {
+          "word": "immense",
+          "pos": "a.",
+          "zh": "龐大"
+        },
+        {
+          "word": "immensity",
+          "pos": "n.",
+          "zh": "龐大，無限"
+        }
+      ]
+    },
+    {
+      "id": "meticulous",
+      "word": "meticulous",
+      "phonetic": "mɪˈtɪkjuləs",
+      "zh": "仔細的，一絲不苟的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Many hours of meticulous preparation have gone into writing the book.",
+      "example_zh": "這本書的寫作背後有著數小時一絲不苟的準備工作。",
+      "draft": false,
+      "prefixId": "meter",
+      "parts": [
+        {
+          "text": "meticul",
+          "gloss": "恐懼、懼怕"
+        }
+      ],
+      "etymology": "meticulous 源自拉丁文 meticulosus／metuculosus「充滿恐懼的」，來自 metus「恐懼」（字源不明），1530 年代進入英文時本義是「膽怯易驚」（此義現已過時），19 世紀受法文 méticuleux 影響詞義轉為「拘謹講究」，到 19 世紀末才固定成現在「一絲不苟、極端仔細」的意思。",
+      "derivatives": [
+        {
+          "word": "meticulously",
+          "pos": "adv.",
+          "zh": "仔細地，一絲不苟地"
+        }
+      ]
+    },
+    {
+      "id": "modify",
+      "word": "modify",
+      "phonetic": "ˈmɑdɪˌfaɪ",
+      "zh": "修改，修正",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We need to modify our strategy for the new market.",
+      "example_zh": "我們得為新市場修改策略。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "mod",
+          "gloss": "測量、方式"
+        },
+        {
+          "text": "-fy",
+          "gloss": "使…、做成"
+        }
+      ],
+      "etymology": "源自拉丁文 modificare，由 modus（測量、方式）＋facere（做，來自 PIE *dhe-「放置、設立」）組成，字面是「照分寸做、加以限制」，14 世紀晚期經古法文 modifier 進入英文，指「調整、改變某物的形式或性質，使其保持在合理範圍內」。",
+      "derivatives": [
+        {
+          "word": "modification",
+          "pos": "n.",
+          "zh": "修改，修正"
+        }
+      ]
+    },
+    {
+      "id": "accommodate",
+      "word": "accommodate",
+      "phonetic": "əˈkɑməˌdet",
+      "zh": "安排住宿，容納，配合，包容",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The cottage accommodates up to four people.",
+      "example_zh": "這間小屋最多可以容納四個人。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "ac",
+          "gloss": "朝向（ad-）"
+        },
+        {
+          "text": "com",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "mod",
+          "gloss": "測量、方式"
+        }
+      ],
+      "etymology": "源自拉丁文 accommodare（ad-「朝向」+ commodare「使合適」，commodare 又來自 commodus＝com-〔加強語氣〕+ modus〔測量、方式〕），1530 年代進入英文時指「使一物與另一物相合」，之後詞義擴大為「使適合」，約 1712 年再發展出「提供住宿、容納」的現代常見用法。",
+      "derivatives": [
+        {
+          "word": "accommodation",
+          "pos": "n.",
+          "zh": "住宿，配合"
+        }
+      ]
+    },
+    {
+      "id": "commodious",
+      "word": "commodious",
+      "phonetic": "kəˈmodiəs",
+      "zh": "寬敞的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The cabin is commodious enough for the whole family.",
+      "example_zh": "這間小木屋寬敞到足以容納全家人。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "com",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "mod",
+          "gloss": "測量、方式"
+        }
+      ],
+      "etymology": "源自拉丁文 commodus（com-〔加強語氣〕+ modus〔測量、方式〕），字面本義是「合乎尺度、恰如其分」，15 世紀初進入英文時指「有益的、方便的」，到 1550 年代「合乎尺度」的抽象概念延伸到具體空間大小，於是產生「寬敞舒適」的現代意思。",
+      "derivatives": []
+    },
+    {
+      "id": "commodity",
+      "word": "commodity",
+      "phonetic": "kəˈmɑdətɪ",
+      "zh": "日用品，大宗商品",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The country's most valuable commodities include iron and timber.",
+      "example_zh": "這個國家最有價值的大宗商品包括鐵與木材。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "com",
+          "gloss": "加強語氣"
+        },
+        {
+          "text": "mod",
+          "gloss": "測量、方式"
+        }
+      ],
+      "etymology": "源自拉丁文 commoditatem（commodus 的名詞形，com-〔加強語氣〕+ modus〔測量、方式〕），字面本義同樣是「合乎尺度」，引申為「適切、方便、利益」，15 世紀初進入英文先指「利益、有用之物」，隨即擴大為「可買賣的商品、貨物」，約 1500 年再泛化為「財產、所有物」，於是從抽象的「恰如其分」一路演變成具體可交易的「商品」。",
+      "derivatives": []
+    },
+    {
+      "id": "module",
+      "word": "module",
+      "phonetic": "ˈmɑdʒul",
+      "zh": "模組，預製件",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The prefabricated building is composed of six modules.",
+      "example_zh": "這棟預鑄建築是由六個模組組成的。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "mod",
+          "gloss": "測量"
+        },
+        {
+          "text": "-ule",
+          "gloss": "小"
+        }
+      ],
+      "etymology": "源自拉丁文 modulus，是 modus（測量、方式）加上表示「小」的指小詞尾 -ulus 而成，本義是「小尺度、小測量單位」，1580 年代進入英文原指「分配到的量」（今已罕用），1620 年代轉為「用來規範比例的標準尺度」，之後陸續衍生出建築學「基本模距單位」（1936）、「可互換組件」（1955）、太空船「艙段」（1961）等現代意義。",
+      "derivatives": []
+    },
+    {
+      "id": "moderate",
+      "word": "moderate",
+      "phonetic": "ˈmɑdərət",
+      "zh": "溫和的，適度的；調節，主持（討論等）",
+      "pos": "a., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He's a moderate drinker.",
+      "example_zh": "他喝酒很有節制。",
+      "draft": false,
+      "prefixId": "mod",
+      "parts": [
+        {
+          "text": "mod",
+          "gloss": "測量、方式"
+        }
+      ],
+      "etymology": "源自拉丁文 moderatus，是 moderari（意為「節制、使合度、保持在限度內」）的過去分詞，而 moderari 是從 PIE 字根 *med-（「採取適當措施」）直接衍生的動詞，14 世紀晚期進入英文原用於天氣等物理狀態指「不過度、適中」，15 世紀初擴及形容人，1640 年代擴及意見，1670 年代擴及價格。",
+      "derivatives": [
+        {
+          "word": "moderate",
+          "pos": "n.",
+          "zh": "溫和派"
+        },
+        {
+          "word": "moderation",
+          "pos": "n.",
+          "zh": "節制，適度"
+        },
+        {
+          "word": "moderator",
+          "pos": "n.",
+          "zh": "（討論、會議的）主持人"
+        }
+      ]
+    },
+    {
+      "id": "complement",
+      "word": "complement",
+      "phonetic": "ˈkɑmpləmənt",
+      "zh": "互補物；補充，補足",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Day and night are complements.",
+      "example_zh": "白天與黑夜是互補的。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "com",
+          "gloss": "完全（加強語氣）"
+        },
+        {
+          "text": "ple",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "源自拉丁文 complementum，由 com-（完全，加強語氣）加 plere（填滿）構成，字面意義是「使完整、填滿之物」。16 世紀時衍生出「客套讚美」的用法，該義項後來拼法獨立成 compliment，complement 則專指「補足、使完整之物」，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），僅能靠拼法與語境分辨。",
+      "derivatives": [
+        {
+          "word": "complementary",
+          "pos": "a.",
+          "zh": "互補的"
+        }
+      ]
+    },
+    {
+      "id": "compliment",
+      "word": "compliment",
+      "phonetic": "ˈkɑmpləmənt",
+      "zh": "恭維，致意；讚美，贈送…以表達敬意",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I take it as a compliment when people say that I look like my mother.",
+      "example_zh": "別人說我長得像我媽媽時，我把這當成一種讚美。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "com",
+          "gloss": "完全（加強語氣）"
+        },
+        {
+          "text": "pli",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "與 complement 同源，皆出自拉丁文 complementum（com- 完全 + plere 填滿），但 compliment 是經義大利文 complimento、法文 compliment 才轉入英文，17 世紀中葉起專指「使人愉悅的客套話、讚美」（原意「用來完成禮貌義務之物」），與保留「補足、使完整」本義的 complement 從此分道揚鑣，兩字在美式英文中發音完全相同（/ˈkɑmpləmənt/），只能靠拼法與語境分辨。",
+      "derivatives": [
+        {
+          "word": "complimentary",
+          "pos": "a.",
+          "zh": "恭維的，贈送的"
+        }
+      ]
+    },
+    {
+      "id": "supplement",
+      "word": "supplement",
+      "phonetic": "ˈsʌpləmənt",
+      "zh": "補充物，副刊，附錄；補充，添加",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Children and old people need nutritional supplements.",
+      "example_zh": "孩童與老人需要營養補充品。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "sup",
+          "gloss": "由下而上、補足"
+        },
+        {
+          "text": "ple",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "源自拉丁文 supplementum，來自動詞 supplere（sub- 由下而上、補足 + plere 填滿），字面意義是「由下方填補使滿之物」，14 世紀末指「為補足缺漏而添加之物」，1560 年代起特指為文獻補充內容而加的「補篇」。",
+      "derivatives": [
+        {
+          "word": "supplementary",
+          "pos": "a.",
+          "zh": "補充的"
+        }
+      ]
+    },
+    {
+      "id": "implement",
+      "word": "implement",
+      "phonetic": "ˈɪmpləmənt",
+      "zh": "實施，實行；工具",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The reform program needs to be implemented immediately.",
+      "example_zh": "這項改革方案必須立刻實施。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "im",
+          "gloss": "進入"
+        },
+        {
+          "text": "ple",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "源自晚期拉丁文 implementem（「填滿之事」），來自拉丁文 implere（in- 進入 + plere 填滿），本義是「填補需求之物」。名詞 15 世紀中先指「補足償還的款項」，1530 年代轉指「工作所需的工具」，18 世紀初蘇格蘭法律用語中另生出動詞「履行、實行」之意。",
+      "derivatives": [
+        {
+          "word": "implementation",
+          "pos": "n.",
+          "zh": "實施，實行"
+        }
+      ]
+    },
+    {
+      "id": "deplete",
+      "word": "deplete",
+      "phonetic": "dɪˈplit",
+      "zh": "耗盡，枯竭",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Experts say that our oil reserves will soon be depleted.",
+      "example_zh": "專家表示我們的石油存量很快就會耗盡。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "離開、去除"
+        },
+        {
+          "text": "plete",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "1807 年由 depletion 反構而來，源自拉丁文 deplere（de- 離開、去除 + plere 填滿），字面意義是「使不再填滿、抽空」，最初是醫學用語指以放血、瀉下等方式「抽乾」體液，1859 年後才泛用於「耗盡資源」。",
+      "derivatives": [
+        {
+          "word": "depletion",
+          "pos": "n.",
+          "zh": "耗盡，枯竭"
+        }
+      ]
+    },
+    {
+      "id": "plenteous",
+      "word": "plenteous",
+      "phonetic": "ˈplɛntiəs",
+      "zh": "大量的，豐富的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The host made sure there was a plenteous supply of food and drink at the party.",
+      "example_zh": "主人確保派對上有充足的食物與飲料。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "plente",
+          "gloss": "充滿、豐盛"
+        }
+      ],
+      "etymology": "約 1300 年進入英文，源自古法文 plenteivous，其源頭是拉丁文 plenitas／plenitatem（豐滿、豐盛），本身即來自 plenus（充滿的）。plenteous 與 plenty 同源，但語感較典雅，多見於詩文而非日常口語。",
+      "derivatives": [
+        {
+          "word": "plenty",
+          "pos": "n.",
+          "zh": "大量"
+        },
+        {
+          "word": "plentiful",
+          "pos": "a.",
+          "zh": "大量的，豐富的"
+        }
+      ]
+    },
+    {
+      "id": "plethora",
+      "word": "plethora",
+      "phonetic": "ˈplɛθərə",
+      "zh": "大量，過多",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Around the Taroko Gorge you can see a plethora of hotels, restaurants and gift shops.",
+      "example_zh": "太魯閣峽谷一帶可以看到大量的旅館、餐廳與紀念品店。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "pleth",
+          "gloss": "充滿、過多"
+        }
+      ],
+      "etymology": "源自希臘文 plēthōrē（豐滿、過多），來自動詞 plēthein（充滿），經晚期拉丁文 plethora 進入英文，1540 年代原為醫學用語指「體液過多」，約 1700 年才泛指任何「過剩、過多」。",
+      "derivatives": []
+    },
+    {
+      "id": "replenish",
+      "word": "replenish",
+      "phonetic": "rɪˈplɛnɪʃ",
+      "zh": "補充，添加",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The plane will be landing at Hawaii to replenish fuel.",
+      "example_zh": "這架飛機將降落夏威夷補充燃料。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再次（加強語氣）"
+        },
+        {
+          "text": "plen",
+          "gloss": "充滿"
+        }
+      ],
+      "etymology": "14 世紀中葉源自古法文 replenir（「填滿」），本身來自拉丁文 plenus（充滿的），前綴 re- 原意「回到原處、再次」，在此作加強語氣（「反覆填滿」）。最初泛指「以食物、財富等填滿」，1610 年代起專指「補充恢復到原本的量」。",
+      "derivatives": []
+    },
+    {
+      "id": "replete",
+      "word": "replete",
+      "phonetic": "rɪˈplit",
+      "zh": "充足，不缺",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The car has an engine replete with the latest technology.",
+      "example_zh": "這輛車的引擎配備了滿滿的最新科技。",
+      "draft": false,
+      "prefixId": "plet",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再次、完全地（加強語氣）"
+        },
+        {
+          "text": "plete",
+          "gloss": "填滿"
+        }
+      ],
+      "etymology": "14 世紀末源自古法文 replet 與拉丁文 repletus（replere 的過去分詞），由 re-（加強語氣，「反覆填滿」）加 plere（填滿）構成，本義是「完全填滿、裝滿」，即形容「（被）填得滿滿的、飽足的」。",
+      "derivatives": []
+    },
+    {
+      "id": "avoid",
+      "word": "avoid",
+      "phonetic": "əˈvɔɪd",
+      "zh": "避免，避開",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The driver narrowly avoided disaster.",
+      "example_zh": "駕駛人驚險地避開了一場車禍。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "a",
+          "gloss": "出、離"
+        },
+        {
+          "text": "void",
+          "gloss": "空的"
+        }
+      ],
+      "etymology": "avoid 源自古法文 esvuidier（清空、掏空），由 es-（出）+ vuidier（使空）組成，vuidier 又來自 voide（空的），可追溯至拉丁文 vocivus（空著的、未被佔用的），與 vacare（空著）同源。字義由「清空、騰空」逐漸演變成「設法避開、迴避」。",
+      "derivatives": [
+        {
+          "word": "avoidance",
+          "pos": "n.",
+          "zh": "躲避，避免"
+        }
+      ]
+    },
+    {
+      "id": "vanish",
+      "word": "vanish",
+      "phonetic": "ˈvænɪʃ",
+      "zh": "消失，失蹤",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "When the magician opened the closet, the girl in it had vanished.",
+      "example_zh": "魔術師打開衣櫃時，裡面的女孩已經消失了。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "van",
+          "gloss": "空、消失"
+        }
+      ],
+      "etymology": "vanish 源自古法文 esvanir，來自通俗拉丁文 *exvanire，本於拉丁文 evanescere（消失、逝去），由 ex-（出）+ vanescere（漸漸變空、消失）組成，而 vanescere 又源自形容詞 vanus（空的、空虛的）。字義由「變空」引申為「消失不見」。",
+      "derivatives": []
+    },
+    {
+      "id": "vacancy",
+      "word": "vacancy",
+      "phonetic": "ˈvekənsɪ",
+      "zh": "空缺，空位",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I learned on the internet that your company has vacancies for computer programmers, and I would like to give it a try.",
+      "example_zh": "我在網路上得知貴公司有電腦程式設計師的職缺，想爭取這個機會。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "vac",
+          "gloss": "空"
+        }
+      ],
+      "etymology": "vacancy 源自晚期拉丁文 vacantia，來自拉丁文 vacans（vacare 的現在分詞，意為「空著、未被佔用」）。字義由「空著的狀態」發展出「（職位、房間等）空缺、空房」之意。",
+      "derivatives": [
+        {
+          "word": "vacant",
+          "pos": "a.",
+          "zh": "空出來的"
+        }
+      ]
+    },
+    {
+      "id": "evacuate",
+      "word": "evacuate",
+      "phonetic": "ɪˈvækjuet",
+      "zh": "淨空，疏散",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The seaside village has been evacuated for the typhoon.",
+      "example_zh": "這座海邊村莊已經因為颱風而疏散。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "出"
+        },
+        {
+          "text": "vacu",
+          "gloss": "空"
+        }
+      ],
+      "etymology": "evacuate 源自拉丁文 evacuare（清空、使無效）的過去分詞 evacuatus，由 ex-（出）+ vacuus（空的）組成。原本用於醫學上指排空體液，後延伸出軍事上「撤離」、以及現代「疏散（居民）」之意。",
+      "derivatives": [
+        {
+          "word": "evacuation",
+          "pos": "n.",
+          "zh": "淨空，疏散"
+        }
+      ]
+    },
+    {
+      "id": "evanescent",
+      "word": "evanescent",
+      "phonetic": "ˌɛvəˈnɛsənt",
+      "zh": "短暫的，稍縱即逝的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I like to watch the evanescent rays of the setting sun.",
+      "example_zh": "我喜歡看夕陽那稍縱即逝的餘暉。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "出"
+        },
+        {
+          "text": "van",
+          "gloss": "消失"
+        }
+      ],
+      "etymology": "evanescent 源自拉丁文 evanescens（evanescere 的現在分詞），由 ex-（出，此處同化為 e-）+ vanescere（漸漸消失，本於 vanus「空的」的起始動詞）組成。字義為「逐漸變得難以察覺、逐漸消逝」。",
+      "derivatives": [
+        {
+          "word": "evanescence",
+          "pos": "n.",
+          "zh": "短暫"
+        }
+      ]
+    },
+    {
+      "id": "vacate",
+      "word": "vacate",
+      "phonetic": "veˈket",
+      "zh": "空出",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The retiring Congressman will vacate a post for interested candidates.",
+      "example_zh": "這位即將退休的國會議員將空出一個職位給有意者。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "vac",
+          "gloss": "空"
+        }
+      ],
+      "etymology": "vacate 源自拉丁文 vacatus（vacare「空著」的過去分詞），原意為「使在法律上失效、宣告無效」，於 18 世紀末發展出「（人）離開、騰出某地」的現代用法。",
+      "derivatives": []
+    },
+    {
+      "id": "vain",
+      "word": "vain",
+      "phonetic": "ven",
+      "zh": "虛榮的，空虛的；徒勞無功",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "My ex-girlfriend was as vain as a peacock.",
+      "example_zh": "我的前女友像孔雀一樣虛榮。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "vain",
+          "gloss": "空、虛"
+        }
+      ],
+      "etymology": "vain 源自古法文 vain / vein（無價值的、空的、無效的，後亦有「自負的」之意），來自拉丁文 vanus（空的、空虛的，引申為「徒然的、無實質的」）。字義由「空洞、不實」演變出「徒然（in vain）」與「自負、虛榮」兩條意義路線。",
+      "derivatives": [
+        {
+          "word": "vanity",
+          "pos": "n.",
+          "zh": "虛榮"
+        }
+      ]
+    },
+    {
+      "id": "vacuum",
+      "word": "vacuum",
+      "phonetic": "ˈvækjum",
+      "zh": "真空",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You need a vacuum cleaner to clean that rug.",
+      "example_zh": "你需要一台吸塵器來清理那塊地毯。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "vacu",
+          "gloss": "空"
+        }
+      ],
+      "etymology": "vacuum 直接借自拉丁文 vacuum（空的空間、真空），是形容詞 vacuus（空的、未被佔用的，與 vacare「空著」同源）的中性名詞用法。原指「不含物質的空間」，17 世紀中期後專指「排除空氣後的空間」。",
+      "derivatives": []
+    },
+    {
+      "id": "vaccine",
+      "word": "vaccine",
+      "phonetic": "vækˈsin",
+      "zh": "疫苗",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Some people distrust the vaccines for COVID-19.",
+      "example_zh": "有些人不信任新冠肺炎的疫苗。",
+      "draft": false,
+      "prefixId": "vac",
+      "parts": [
+        {
+          "text": "vacc",
+          "gloss": "牛"
+        }
+      ],
+      "etymology": "vaccine 源自拉丁文 vaccinus（牛的、與牛有關），由 vacca（母牛）+ -inus（表「屬於／與……有關」的形容詞字尾）組成。因英國醫師 Edward Jenner 以牛痘（cowpox）為人接種以預防天花而得名，字源與「空」完全無關。",
+      "derivatives": [
+        {
+          "word": "vaccinate",
+          "pos": "v.",
+          "zh": "接種"
+        },
+        {
+          "word": "vaccination",
+          "pos": "n.",
+          "zh": "接種"
+        }
+      ]
+    },
+    {
+      "id": "negative",
+      "word": "negative",
+      "phonetic": "ˈnɛgətɪv",
+      "zh": "否定的，陰性的，負面的；否定",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "About your request for help, the answer is negative.",
+      "example_zh": "關於你請求協助這件事，答案是否定的。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "neg",
+          "gloss": "否定、說不"
+        }
+      ],
+      "etymology": "源自拉丁文 negare「拒絕、說不」（可溯至原始印歐語 *ne-「不」），經古法文 negatif 演變出「表示否定」之意，17 世紀後才擴及代數與電學的「負」義。",
+      "derivatives": [
+        {
+          "word": "negate",
+          "pos": "v.",
+          "zh": "否定"
+        }
+      ]
+    },
+    {
+      "id": "negligible",
+      "word": "negligible",
+      "phonetic": "ˈnɛglɪdʒɪbəl",
+      "zh": "可以忽略的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In weighing the product, the weight of the plastic bag is negligible.",
+      "example_zh": "秤這件商品的時候，塑膠袋的重量可以忽略不計。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "neg",
+          "gloss": "不"
+        },
+        {
+          "text": "lig",
+          "gloss": "拿取、挑選"
+        }
+      ],
+      "etymology": "源自拉丁文 neglegere（nec「不」＋legere「拿取、挑選」）「不去理會、不去挑起」之意，1819 年加上 -ible 定型為「可被忽略、無關緊要」。",
+      "derivatives": []
+    },
+    {
+      "id": "negligent",
+      "word": "negligent",
+      "phonetic": "ˈnɛglɪdʒənt",
+      "zh": "疏忽的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The fire was caused by a negligent smoker.",
+      "example_zh": "這場火災是一名疏忽的吸菸者造成的。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "neg",
+          "gloss": "不"
+        },
+        {
+          "text": "lig",
+          "gloss": "拿取、挑選"
+        }
+      ],
+      "etymology": "與 negligible 同源於拉丁文 neglegere（nec「不」＋legere「拿取、挑選」），其分詞 neglegens 原指「粗心、不上心」的人，14 世紀晚期進入英文後仍作「疏忽、玩忽職守」解。",
+      "derivatives": [
+        {
+          "word": "negligence",
+          "pos": "n.",
+          "zh": "疏忽"
+        }
+      ]
+    },
+    {
+      "id": "annihilate",
+      "word": "annihilate",
+      "phonetic": "əˈnaɪəlet",
+      "zh": "消滅",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Pompeii was completely annihilated by an eruption of Mt. Vesuvius.",
+      "example_zh": "龐貝城被維蘇威火山的一次噴發徹底摧毀。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "an",
+          "gloss": "朝向（ad- 同化）"
+        },
+        {
+          "text": "nihil",
+          "gloss": "無、什麼都沒有"
+        }
+      ],
+      "etymology": "源自中古拉丁文 annihilare，由 ad-（同化為 an-，「朝向」）＋nihil「無、什麼都沒有」組成，字面義「化為烏有」，即「徹底消滅」。",
+      "derivatives": [
+        {
+          "word": "annihilation",
+          "pos": "n.",
+          "zh": "消滅"
+        }
+      ]
+    },
+    {
+      "id": "nihilistic",
+      "word": "nihilistic",
+      "phonetic": "ˈnaɪhɪlɪstɪk",
+      "zh": "虛無主義的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The film was criticized as being too bleak and nihilistic.",
+      "example_zh": "這部電影被批評過於陰鬱且虛無。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "nihil",
+          "gloss": "無、什麼都沒有"
+        }
+      ],
+      "etymology": "詞根 nihil「無」先於 19 世紀初由德國哲學家雅可比造出 Nihilismus（否定一切的學說），nihilistic 即由此衍生的 nihilism/nihilist 家族形容詞。",
+      "derivatives": [
+        {
+          "word": "nihilist",
+          "pos": "n.",
+          "zh": "虛無主義者"
+        },
+        {
+          "word": "nihilism",
+          "pos": "n.",
+          "zh": "虛無主義"
+        }
+      ]
+    },
+    {
+      "id": "nil",
+      "word": "nil",
+      "phonetic": "nɪl",
+      "zh": "零，無；沒有的，不存在的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "They lost the game seven to nil.",
+      "example_zh": "他們以零比七輸掉了那場比賽。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "nil",
+          "gloss": "無、零"
+        }
+      ],
+      "etymology": "1833 年進入英文，是拉丁文 nihil（更早作 nihilum）的縮寫，nihilum 本身由 ne-「不」＋hilum「瑣屑之物」組成。",
+      "derivatives": []
+    },
+    {
+      "id": "nullify",
+      "word": "nullify",
+      "phonetic": "ˈnʌlɪfaɪ",
+      "zh": "使無效",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The contract was nullified because one party failed to meet requirements.",
+      "example_zh": "這份合約因為其中一方未達成要求而失效。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "null",
+          "gloss": "無、一個都沒有"
+        },
+        {
+          "text": "fy",
+          "gloss": "使成為、做成"
+        }
+      ],
+      "etymology": "源自後期拉丁文 nullificare，由 nullus「一個都沒有」（ne-「不」＋ullus「任一個」）＋facere「做」組成，字面「使成無」，1590 年代起專指法律上「使無效」。",
+      "derivatives": [
+        {
+          "word": "nullification",
+          "pos": "n.",
+          "zh": "取消，廢除"
+        }
+      ]
+    },
+    {
+      "id": "renegade",
+      "word": "renegade",
+      "phonetic": "ˈrɛnɪˌged",
+      "zh": "叛徒；變節的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Henry VIII was a renegade who broke away from Catholicism.",
+      "example_zh": "亨利八世是一個脫離天主教的叛徒。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再、回頭"
+        },
+        {
+          "text": "neg",
+          "gloss": "否認、拒絕"
+        }
+      ],
+      "etymology": "約 1580 年代經西班牙文 renegado 進入英文，源自中古拉丁文 renegare（re- 加強語氣＋negare「拒絕、否認」），原指「背棄信仰改宗之人」，17 世紀後泛指「叛徒、變節者」。",
+      "derivatives": []
+    },
+    {
+      "id": "renege",
+      "word": "renege",
+      "phonetic": "rɪˈnɛg",
+      "zh": "食言，違約",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can't renege on the deal once you have signed the contract.",
+      "example_zh": "合約一旦簽了，你就不能食言。",
+      "draft": false,
+      "prefixId": "neg",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再、回頭"
+        },
+        {
+          "text": "neg",
+          "gloss": "否認、拒絕"
+        }
+      ],
+      "etymology": "1540 年代源自中古拉丁文 renegare（re-＋negare「拒絕、否認」），原意「否認、背棄」，18 世紀後語意窄化為美式常用的「反悔、食言」。",
       "derivatives": []
     }
   ]

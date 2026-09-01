@@ -1,0 +1,175 @@
+[
+  {
+    "word": "symmetry",
+    "prefixId": "meter",
+    "pos": "n.",
+    "phonetic": "ˈsɪmɪtrɪ",
+    "zh": "平衡，對稱",
+    "parts": [
+      {
+        "text": "sym",
+        "gloss": "共同、一起"
+      },
+      {
+        "text": "metr",
+        "gloss": "測量"
+      }
+    ],
+    "etymology": "symmetry 源自希臘文 symmetros（syn-「共同」+ metron「測量」），16 世紀經法文 symmétrie、拉丁文 symmetria 傳入英文，本義是「各部分成比例」，後來發展成「勻稱、對稱」之意，19 世紀再衍生出「以中線為準的鏡像對稱」這種科學用法。",
+    "derivatives": [
+      {
+        "word": "symmetrical",
+        "pos": "a.",
+        "zh": "平衡的，對稱的"
+      },
+      {
+        "word": "asymmetrical",
+        "pos": "a.",
+        "zh": "不對稱的"
+      }
+    ],
+    "example": "The human body has symmetry, as the left half is the mirror image of the right half.",
+    "example_zh": "人體是對稱的，左半邊就是右半邊的鏡像。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/symmetry",
+      "ipa": "/ˈsɪm.ɪ.tɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "perimeter",
+    "prefixId": "meter",
+    "pos": "n.",
+    "phonetic": "pəˈrɪmɪtər",
+    "zh": "周圍，外圍，周長",
+    "parts": [
+      {
+        "text": "peri",
+        "gloss": "環繞、周圍"
+      },
+      {
+        "text": "meter",
+        "gloss": "測量"
+      }
+    ],
+    "etymology": "perimeter 源自希臘文 perimetron「周長」（peri-「環繞」+ metron「測量」），15 世紀經拉丁文 perimetros 傳入英文，本義是「圖形外圍的周長、邊界」，20 世紀中期才衍生出「防禦陣地外圍界線」的軍事用法。",
+    "derivatives": [],
+    "example": "There are soldiers guarding the perimeter of the camp.",
+    "example_zh": "有士兵守衛著營區的外圍。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/perimeter",
+      "ipa": "/pəˈɹɪm.ɪ.təɹ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "How do you calculate the perimeter of a triangle?"
+      ]
+    }
+  },
+  {
+    "word": "thermometer",
+    "prefixId": "meter",
+    "pos": "n.",
+    "phonetic": "θɚˈmɑmɪtɚ",
+    "zh": "溫度計，體溫計",
+    "parts": [
+      {
+        "text": "thermo",
+        "gloss": "熱"
+      },
+      {
+        "text": "meter",
+        "gloss": "測量"
+      }
+    ],
+    "etymology": "thermometer 是耶穌會神父 Jean Leurechon 於 1620 年代用希臘文 thermos「熱」+ metron「測量」造出的法文 thermomètre，1630 年代進入英文，字面意思是「量熱的工具」，即測量溫度的儀器。",
+    "derivatives": [],
+    "example": "This thermometer can be used without contact to your skin.",
+    "example_zh": "這支溫度計不必接觸皮膚就能使用。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/thermometer",
+      "ipa": "/θɚˈmɑ.mɪ.tɚ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "immensely",
+    "prefixId": "meter",
+    "pos": "adv.",
+    "phonetic": "ɪˈmɛnslɪ",
+    "zh": "極大地",
+    "parts": [
+      {
+        "text": "im",
+        "gloss": "不、無"
+      },
+      {
+        "text": "mens",
+        "gloss": "已測量的"
+      }
+    ],
+    "etymology": "immensely 由 immense 加副詞字尾 -ly 於 1650 年代構成。immense 源自拉丁文 immensus（in-「不」+ mensus，動詞 metiri「測量」的過去分詞，同一個 PIE 字根 *me-「測量」，與希臘文 metron 同源），字面是「無法測量的」，引申為「巨大、極大」，immensely 即「極度地、非常」之意。",
+    "derivatives": [
+      {
+        "word": "immense",
+        "pos": "a.",
+        "zh": "龐大"
+      },
+      {
+        "word": "immensity",
+        "pos": "n.",
+        "zh": "龐大，無限"
+      }
+    ],
+    "example": "I was immensely relieved to test negative for the virus.",
+    "example_zh": "病毒檢驗結果是陰性，這讓我大大鬆了一口氣。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/immensely",
+      "ipa": "/ɪˈmɛnsli/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "meticulous",
+    "prefixId": "meter",
+    "pos": "a.",
+    "phonetic": "mɪˈtɪkjuləs",
+    "zh": "仔細的，一絲不苟的",
+    "parts": [
+      {
+        "text": "meticul",
+        "gloss": "恐懼、懼怕"
+      }
+    ],
+    "etymology": "meticulous 源自拉丁文 meticulosus／metuculosus「充滿恐懼的」，來自 metus「恐懼」（字源不明），1530 年代進入英文時本義是「膽怯易驚」（此義現已過時），19 世紀受法文 méticuleux 影響詞義轉為「拘謹講究」，到 19 世紀末才固定成現在「一絲不苟、極端仔細」的意思。",
+    "derivatives": [
+      {
+        "word": "meticulously",
+        "pos": "adv.",
+        "zh": "仔細地，一絲不苟地"
+      }
+    ],
+    "example": "Many hours of meticulous preparation have gone into writing the book.",
+    "example_zh": "這本書的寫作背後有著數小時一絲不苟的準備工作。",
+    "sources": {
+      "page": "IMG_1690",
+      "etymonline": "https://www.etymonline.com/word/meticulous",
+      "ipa": "/mɪˈtɪkjuləs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "陷阱字：meticulous 與「測量」字根其實沒有關係，它源自拉丁文 metus「恐懼」（meticulosus 意為「充滿恐懼的」），課本可能因外形與 metr/meter 相近而誤將它歸入「測量」字群。正確的字根意義是「恐懼」，不是「測量」，與 symmetry／perimeter／thermometer／immensely 所屬的測量字群無關。"
+    }
+  }
+]
