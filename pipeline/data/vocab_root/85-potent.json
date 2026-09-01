@@ -1,0 +1,112 @@
+[
+  {
+    "word": "potent",
+    "prefixId": "potent",
+    "pos": "a.",
+    "phonetic": "ˈpotənt",
+    "zh": "強效的，強大的",
+    "parts": [
+      {
+        "text": "potent",
+        "gloss": "強而有力的、有能力的"
+      }
+    ],
+    "etymology": "15 世紀初源自拉丁文 potentem（主格 potens）「有力量的」，是動詞 posse「能夠」的現在分詞，posse 又是 potis esse（有能力＋是）的縮合，最終上溯至原始印歐語詞根 *poti-「有力量的。主人」。",
+    "derivatives": [
+      {
+        "word": "potency",
+        "pos": "n.",
+        "zh": "效力，力量"
+      },
+      {
+        "word": "impotent",
+        "pos": "a.",
+        "zh": "無能的"
+      },
+      {
+        "word": "impotence",
+        "pos": "n.",
+        "zh": "無能；陽萎"
+      }
+    ],
+    "example": "The party could be a potent political force in the future.",
+    "example_zh": "這個政黨未來可能成為一股強大的政治力量。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/potent",
+      "ipa": "/ˈpoʊt(ə)nt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "potential",
+    "prefixId": "potent",
+    "pos": "a., n.",
+    "phonetic": "pəˈtɛnʃəl",
+    "zh": "有潛力的，潛在的；潛力",
+    "parts": [
+      {
+        "text": "potent",
+        "gloss": "強而有力、有能力"
+      }
+    ],
+    "etymology": "14 世紀晚期源自古法語 potenciel 及中世紀拉丁文 potentialis，兩者皆源於拉丁文 potentia「力量、權力、能力」，與 potent 同源，最終同樣上溯至原始印歐語詞根 *poti-「有力量的。主人」。",
+    "derivatives": [],
+    "example": "The nuclear power plant is a potential threat to the environment.",
+    "example_zh": "這座核電廠對環境是個潛在的威脅。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/potential",
+      "ipa": "/pəˈtɛnʃəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The proposed cure has shown real potential."
+      ]
+    }
+  },
+  {
+    "word": "despot",
+    "prefixId": "potent",
+    "pos": "n.",
+    "phonetic": "ˈdɛspət",
+    "zh": "暴君",
+    "parts": [
+      {
+        "text": "des",
+        "gloss": "房屋、家戶"
+      },
+      {
+        "text": "pot",
+        "gloss": "有力量的、主人"
+      }
+    ],
+    "etymology": "1560 年代以義大利文形式 dispotto 進入英文（1580 年代定型為 despot），經中世紀拉丁文 despota，源自希臘文 despotēs「一家之主、絕對統治者」，由原始印歐語 *dems-pota-「屋主」構成：*dem-「房屋、家戶」的屬格＋詞根 *poti-「有力量的。主人」。",
+    "derivatives": [
+      {
+        "word": "despotic",
+        "pos": "a.",
+        "zh": "暴君的，專制的"
+      },
+      {
+        "word": "despotism",
+        "pos": "n.",
+        "zh": "暴政，獨裁"
+      }
+    ],
+    "example": "The despot does not tolerate any opposition.",
+    "example_zh": "這名暴君不容許任何反對聲音。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/despot",
+      "ipa": "/ˈdɛs.pət/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "陷阱字：despot 的直接語源是希臘文 despotēs（des-「房屋」+ pot-「有力量的、主人」），走的是希臘線，並非教材所屬的拉丁 potens/posse 這條線，該拉丁根不直接適用。不過「power」字素 -pot- 與 potent 系出同一個原始印歐語詞根 *poti-「有力量的。主人」，兩者最終仍是同源（遠親），只是中間路徑一為希臘、一為拉丁。此處已改用真正的希臘字根 des-/pot-，未強行套用拉丁 potent-。"
+    }
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "word": "elucidate",
+    "parts": [
+      { "text": "e-", "gloss": "出、向外" },
+      { "text": "luc", "gloss": "光、明亮" }
+    ],
+    "etymology": "elucidate 1560年代源自晚期拉丁文 elucidatus（elucidare 的過去分詞），由 ex-（出、向外，此處弱化為 e-）＋ lucidus（明亮、清楚，源自 lucere「發光」，PIE 字根 *leuk-「光」）組成，字面義為「徹底照亮」，引申為「講清楚、闡明」。",
+    "us_ipa": "/əˈlusəˌdeɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/elucidate",
+    "notes": ""
+  },
+  {
+    "word": "illuminate",
+    "parts": [
+      { "text": "il-", "gloss": "進、入" },
+      { "text": "lumin", "gloss": "光" }
+    ],
+    "etymology": "illuminate 約1500年源自拉丁文 illuminatus（illuminare 的過去分詞，或視為 illumination 的逆構詞），由同化自 in-「進、入」的 il- ＋ lumen（屬格 luminis，「光」，PIE 字根 *leuk-）組成，本義「照亮、發光」，1560年代起衍生出「啟發、使明白」之義。",
+    "us_ipa": "/ɪˈlumɪneɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/illuminate",
+    "notes": ""
+  },
+  {
+    "word": "illustration",
+    "parts": [
+      { "text": "il-", "gloss": "進、入" },
+      { "text": "lustr", "gloss": "使明亮、發光" }
+    ],
+    "etymology": "illustration 約1400年源自古法語 illustration／拉丁文 illustrationem，其動詞 illustrare 由同化自 in-「進、入」的 il- ＋ lustrare（Etymonline 此條目稱其為 PIE *leuk-「光」的字尾變化形，意為使明亮、照亮）組成，本義「照亮、發光」，1580年代引申為「使思路清楚」，1816年再衍生出「插圖」之義。",
+    "us_ipa": "/ˌɪləˈstreɪʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/illustration",
+    "notes": "教材要求查核 lustr 是否真屬「光」字族：Etymonline 的 illustration／illustrious 條目都把 lustrare 直接歸給 PIE *leuk-（光），但其 lustrum 條目坦承該詞字源「uncertain」，*leuk- 只是三個競爭理論之一（OED 傾向 luere「洗滌、淨化」；de Vaan 傾向 *luH-「使自由」）；lustr- 併入 luc/lumin 光字族，在 Etymonline 內部並非完全一致的定論，提示宜保留存疑。"
+  },
+  {
+    "word": "illustrious",
+    "parts": [
+      { "text": "il-", "gloss": "進、入" },
+      { "text": "lustr", "gloss": "明亮、發光" }
+    ],
+    "etymology": "illustrious 1560年代源自拉丁文 illustris（明亮的、顯赫的），為動詞 illustrare（同化自 in- 的 il- ＋ lustrare「使明亮」）的逆構詞，取代中古英文的 illustre（15世紀中，源自法語 illustre），字義由字面的「發光的」引申為「顯赫、卓越的」。",
+    "us_ipa": "/ɪˈlʌstriəs/",
+    "etymonline_url": "https://www.etymonline.com/word/illustrious",
+    "notes": "與 illustration 同源自 lustrare，其「光」字族歸屬同樣有爭議，詳見 illustration 條目 notes（Etymonline 的 lustrum 條目稱字源 uncertain，*leuk- 僅為競爭理論之一）。"
+  },
+  {
+    "word": "lackluster",
+    "parts": [
+      { "text": "lack", "gloss": "缺乏、沒有" },
+      { "text": "luster", "gloss": "光澤、光彩" }
+    ],
+    "etymology": "lackluster 約1600年由 lack（缺乏、匱乏）＋ luster（光澤、光彩，源自拉丁文 lustrare「使明亮、散發光芒」）複合而成，字面義「缺乏光澤」，最早見於莎士比亞《皆大歡喜》，原形容眼神黯淡無神。",
+    "us_ipa": "/ˈlæklʌstɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/lackluster",
+    "notes": "luster 同樣源自 lustrare，其「光」字族歸屬的爭議與 illustration 條目相同（Etymonline 的 lustrum 條目稱字源 uncertain）；教材提示「luster(shine)」在通俗詞義上成立，但嚴謹字源上與 luc/lumin 是否同根仍有討論空間。"
+  },
+  {
+    "word": "luminous",
+    "parts": [
+      { "text": "lumin", "gloss": "光" }
+    ],
+    "etymology": "luminous 15世紀初源自拉丁文 luminosus（發光的、充滿光的、顯著的），由 lumen（屬格 luminis，「光」）衍生，最終上溯 PIE 字根 *leuk-「光、明亮」。",
+    "us_ipa": "/ˈlumɪnəs/",
+    "etymonline_url": "https://www.etymonline.com/word/luminous",
+    "notes": ""
+  },
+  {
+    "word": "pellucid",
+    "parts": [
+      { "text": "per-", "gloss": "穿、貫穿" },
+      { "text": "luc", "gloss": "光、發光" }
+    ],
+    "etymology": "pellucid 1610年代源自拉丁文 pellucidus（透明的），由 per-（穿、貫穿，PIE 字根 *per-(1)「向前」引申為「穿過」）＋ lucere（發光，PIE 字根 *leuk-「光」）組成，字面義「光穿透而過」，引申指清澈透明、不扭曲影像（如水、文筆）。",
+    "us_ipa": "/pəˈlusɪd/",
+    "etymonline_url": "https://www.etymonline.com/word/pellucid",
+    "notes": ""
+  }
+]

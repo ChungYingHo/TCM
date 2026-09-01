@@ -128,11 +128,14 @@ CJK = r'一-鿿'  # 漢字本身，用來決定中英之間要不要空格
 CJKP = r'一-鿿　-〿＀-￯'
 
 
-def normalize_zh(text: str) -> str:
+def normalize_zh(text: str, gloss: bool = False) -> str:
+    """gloss=True 用於 chip 上的詞素字義。那是並列的短詞不是句子，分號要收成頓號；
+    收成句號會變成「有力量的。主人」這種在小標籤裡很突兀的寫法。"""
     if not text:
         return ''
     s = text
-    s = s.replace(';', '。').replace('；', '。')  # 零分號：拆成兩句
+    sep = '、' if gloss else '。'  # 零分號：字義並列用頓號，散文拆成兩句
+    s = s.replace(';', sep).replace('；', sep)
     s = re.sub(rf'(?<=[{CJKP}]),\s*', '，', s)  # 中文之間的半形逗號
     s = re.sub(rf',(?=[{CJKP}])', '，', s)
     s = re.sub(rf'(?<=[{CJKP}])\s*:\s*', '：', s)
@@ -251,7 +254,7 @@ def main() -> None:
             'parts': [
                 {
                     'text': (t := p['text'].strip().rstrip('-')),
-                    'gloss': gloss_fix.get(f"{w['word']}/{t}", normalize_zh(p['gloss'])),
+                    'gloss': gloss_fix.get(f"{w['word']}/{t}", normalize_zh(p['gloss'], gloss=True)),
                 }
                 for p in v.get('parts', [])
             ],

@@ -1,0 +1,184 @@
+[
+  {
+    "word": "salute",
+    "prefixId": "salut",
+    "pos": "n., v.",
+    "phonetic": "səˈlut",
+    "zh": "行禮，致敬",
+    "parts": [
+      {
+        "text": "salut",
+        "gloss": "健康、問候"
+      }
+    ],
+    "etymology": "salute 源自古法文 saluer（約 1300 年），再上溯拉丁文 salutare「問候、致敬」，字面是「祝人健康」，其字根 salus／salutis 意為「健康、問候」，最終來自原始印歐語 *sol-「完整、無恙」。1580 年代起也用於軍事／航海場合舉旗鳴炮的鳴禮致敬，1844 年定型為「舉手至帽緣向長官致意」的動作。",
+    "derivatives": [
+      {
+        "word": "salutation",
+        "pos": "n.",
+        "zh": "稱呼，招呼語"
+      }
+    ],
+    "example": "The soldier gave a salute and the officer returned it.",
+    "example_zh": "士兵行了個禮，軍官也回了禮。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/salute",
+      "ipa": "/səˈlut/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "We salute you for your courage and determination."
+      ]
+    }
+  },
+  {
+    "word": "salutary",
+    "prefixId": "salut",
+    "pos": "a.",
+    "phonetic": "ˈsæljətɛrɪ",
+    "zh": "有益的，有幫助的，有益健康的",
+    "parts": [
+      {
+        "text": "salut",
+        "gloss": "健康、有益"
+      }
+    ],
+    "etymology": "salutary 源自古法文 salutaire 或直接源自拉丁文 salutaris「有益健康的」，同樣來自字根 salus／salutis「健康」。15 世紀晚期進入英文時指「有益健康、能治病」，到 19 世紀才擴大泛指「對任何事有益」。",
+    "derivatives": [],
+    "example": "The low interest rates should have a salutary effect on business.",
+    "example_zh": "低利率應該會對商業產生有益的效果。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/salutary",
+      "ipa": "/ˈsæljətɛɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "sanitary",
+    "prefixId": "salut",
+    "pos": "a.",
+    "phonetic": "ˈsænɪˌtɛrɪ",
+    "zh": "衛生的，清潔的",
+    "parts": [
+      {
+        "text": "san",
+        "gloss": "健康（衛生）"
+      }
+    ],
+    "etymology": "sanitary 於 1823 年經法文 sanitaire（1812 年）源自拉丁文 sanitas「健康」，其形容詞 sanus 意為「健康的、神智清楚的」。sanus 更早的字源不確定，Etymonline 僅列出可能與原始印歐語 *seh₂-no-「就位、安穩」或拉丁文 satis「足夠」有關，並未提及 salus／salutare。",
+    "derivatives": [
+      {
+        "word": "sanitation",
+        "pos": "n.",
+        "zh": "公共衛生"
+      }
+    ],
+    "example": "To prevent a pandemic, sanitary living conditions are essential.",
+    "example_zh": "要預防大流行，衛生的居住環境是不可或缺的。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/sanitary",
+      "ipa": "/ˈsænɪˌtɛɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教材把 salut（拉丁 salus，源自原始印歐語 *sol-「完整」）與 san（拉丁 sanus，字源不確定，Etymonline 未將其連結至 salus）合併成同一字根「健康」，但兩者在 Etymonline 上是各自獨立的拉丁字，並非同一詞源的變體。宜視為兩個語意相近（皆表「健康」）但系出不同拉丁字的字群——salute／salutary／salubrious 屬 salus 一系，sanitary／sanity／insane 屬 sanus 一系。"
+    }
+  },
+  {
+    "word": "sanity",
+    "prefixId": "salut",
+    "pos": "n.",
+    "phonetic": "ˈsænətɪ",
+    "zh": "精神健全，頭腦清楚",
+    "parts": [
+      {
+        "text": "san",
+        "gloss": "健康、神智健全"
+      }
+    ],
+    "etymology": "sanity 源自拉丁文 sanitas（主格），源自 sanus，本義「健康」。15 世紀初以 sanite 之形進入英文，原指「健康狀態」（此義今已罕用），約 1600 年起因與 insane 對舉，詞義才限縮為「神智健全、理性」。",
+    "derivatives": [
+      {
+        "word": "sane",
+        "pos": "a.",
+        "zh": "精神健全的，頭腦清楚的"
+      }
+    ],
+    "example": "The old man is gradually losing sanity.",
+    "example_zh": "這位老先生的神智正逐漸喪失。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/sanity",
+      "ipa": "/ˈsænəti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "insane",
+    "prefixId": "salut",
+    "pos": "a.",
+    "phonetic": "ɪnˈsen",
+    "zh": "精神不健全的，瘋狂的",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "不、非"
+      },
+      {
+        "text": "san",
+        "gloss": "健康、神智健全"
+      }
+    ],
+    "etymology": "insane 源自拉丁文 insanus，由否定字首 in-「不」加上 sanus「健康的、神智清楚的」組成，字面即「不健康、神智不清」。1550 年代起用於描述人「精神失常」，到 1842 年也擴及形容「瘋狂的」行為。",
+    "derivatives": [
+      {
+        "word": "insanity",
+        "pos": "n.",
+        "zh": "神經錯亂，瘋狂"
+      }
+    ],
+    "example": "It would be insane not to take advantage of this opportunity.",
+    "example_zh": "不好好利用這個機會實在太瘋狂了。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/insane",
+      "ipa": "/ɪnˈseɪn/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "salubrious",
+    "prefixId": "salut",
+    "pos": "a.",
+    "phonetic": "səˈlubriəs",
+    "zh": "有益健康的",
+    "parts": [
+      {
+        "text": "salubr",
+        "gloss": "有益健康"
+      }
+    ],
+    "etymology": "salubrious 源自拉丁文 salubris「有益健康的」，同樣來自 salus／salutis「健康」，最終上溯原始印歐語 *sol-「完整、無恙」，與 salute、salutary 同一字根。約 1540 年進入英文，先用於形容食物、藥物「有益健康」，1610 年代起也用於形容氣候、空氣宜人。",
+    "derivatives": [],
+    "example": "The fresh mountain air has a salubrious effect on health.",
+    "example_zh": "清新的山間空氣對健康有益。",
+    "sources": {
+      "page": "IMG_1702",
+      "etymonline": "https://www.etymonline.com/word/salubrious",
+      "ipa": "/səˈlubɹiəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

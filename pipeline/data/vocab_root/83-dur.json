@@ -1,0 +1,158 @@
+[
+  {
+    "word": "endure",
+    "prefixId": "dur",
+    "pos": "v.",
+    "phonetic": "ɪnˈdʊr",
+    "zh": "持續，忍耐",
+    "parts": [
+      {
+        "text": "en",
+        "gloss": "使、入內"
+      },
+      {
+        "text": "dur",
+        "gloss": "硬，引申忍受"
+      }
+    ],
+    "etymology": "源自古法語 endurer，上溯拉丁文 indurare「使變硬」，由 in「使」+ durare「使變硬」組成（durare 源自 durus「硬」）。14 世紀晚期借入英文作 enduren，字義由「使變硬」引申為「承受苦難、不潰散」及「持續存在」。",
+    "derivatives": [
+      {
+        "word": "endurance",
+        "pos": "n.",
+        "zh": "持續，忍耐"
+      }
+    ],
+    "example": "Chinese writing has endured for thousands of years.",
+    "example_zh": "中國文字已經延續了數千年。",
+    "sources": {
+      "page": "IMG_1700",
+      "etymonline": "https://www.etymonline.com/word/endure",
+      "ipa": "/ɪnˈdʊɹ/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "課本提示「en-（in）+dur（last）」與 Etymonline 語源不符：此字經拉丁 indurare「使變硬」而來（durus「硬」），字面本義是「使變硬」，『忍受、持續』是由「使心變硬以承受」引申出的語意，並非字根直接表示 last。",
+      "extraExamples": [
+        "A good agent must be able to endure hunger and pain."
+      ]
+    }
+  },
+  {
+    "word": "duration",
+    "prefixId": "dur",
+    "pos": "n.",
+    "phonetic": "dəˈreʃən",
+    "zh": "持續期間",
+    "parts": [
+      {
+        "text": "dur",
+        "gloss": "硬，引申持續"
+      }
+    ],
+    "etymology": "源自古法語 duration、中世紀拉丁文 durationem，皆上溯拉丁文 durare「使變硬」（其根源 durus「硬」可再上溯原始印歐語 *deru-「堅固、穩固」），語意由「堅硬」延伸為「持續、歷時」。",
+    "derivatives": [],
+    "example": "We had to stay home for the duration of the quarantine.",
+    "example_zh": "隔離期間我們都必須待在家裡。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/duration",
+      "ipa": "/dəˈɹeɪʃən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Etymonline 將「硬」與「持續、耐久」視為同一拉丁字根 durus/durare 的單一語意演變脈絡（硬→使變硬→堅固穩固→歷時持續），並未分成兩個獨立字根。"
+    }
+  },
+  {
+    "word": "duress",
+    "prefixId": "dur",
+    "pos": "n.",
+    "phonetic": "duˈrɛs",
+    "zh": "強制，強迫",
+    "parts": [
+      {
+        "text": "dur",
+        "gloss": "硬"
+      }
+    ],
+    "etymology": "源自古法語 duresse／durece，上溯拉丁文 duritia「硬度」（由 durus「硬」構成）。14 世紀初原指「嚴酷對待」，15 世紀起轉指「脅迫、強制」，法律用語專指足以構成脅迫的實際或可預期身體強制。",
+    "derivatives": [],
+    "example": "Contracts signed under duress are null and void.",
+    "example_zh": "在脅迫之下簽的合約是無效的。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/duress",
+      "ipa": "/duˈɹɛs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "durable",
+    "prefixId": "dur",
+    "pos": "a.",
+    "phonetic": "ˈdʊrəbəl",
+    "zh": "耐久的",
+    "parts": [
+      {
+        "text": "dur",
+        "gloss": "硬，引申持久"
+      }
+    ],
+    "etymology": "14 世紀晚期經古法語 durable，並直接源自拉丁文 durabilis「持久的、耐久的」，其字根為 durare「使變硬」，再源自 durus「硬」。",
+    "derivatives": [
+      {
+        "word": "durability",
+        "pos": "n.",
+        "zh": "耐久性"
+      }
+    ],
+    "example": "The machine has to be made of durable materials.",
+    "example_zh": "這台機器必須用耐久的材料製造。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/durable",
+      "ipa": "/ˈdʊɹəbəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "obdurate",
+    "prefixId": "dur",
+    "pos": "a.",
+    "phonetic": "ˈɑbdʊrɪt",
+    "zh": "頑固",
+    "parts": [
+      {
+        "text": "ob",
+        "gloss": "對抗、逆"
+      },
+      {
+        "text": "dur",
+        "gloss": "硬"
+      }
+    ],
+    "etymology": "源自拉丁文 obduratus（obdurare 的過去分詞），由 ob「對抗」+ durare「使變硬」（源自 durus「硬」）組成，教會拉丁文中引申為「使心對神剛硬」。15 世紀中葉進入英文，指頑固不化、不為所動。",
+    "derivatives": [
+      {
+        "word": "obduracy",
+        "pos": "n.",
+        "zh": "頑固"
+      }
+    ],
+    "example": "His obdurate refusal to cooperate may doom the deal.",
+    "example_zh": "他頑固地拒絕合作，可能會讓這筆交易告吹。",
+    "sources": {
+      "page": "IMG_1701",
+      "etymonline": "https://www.etymonline.com/word/obdurate",
+      "ipa": "/ˈɑbdʊɹɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

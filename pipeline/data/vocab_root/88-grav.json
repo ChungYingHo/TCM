@@ -1,0 +1,104 @@
+[
+  {
+    "word": "grievous",
+    "prefixId": "grav",
+    "pos": "a.",
+    "phonetic": "ˈgrivəs",
+    "zh": "嚴重的，令人悲痛的",
+    "parts": [
+      {
+        "text": "griev",
+        "gloss": "重、引申為悲傷"
+      }
+    ],
+    "etymology": "grievous 約 1300 年源自盎格魯法語 grevous／古法語 grevos（沉重的、艱難的），此詞出自 grief，grief 承自古法語 grief，上溯拉丁文 gravare（使沉重。致使悲傷）及其字根 gravis（沉重的），字義由具體的「沉重」引申為「嚴重、痛苦的」，如 grievous bodily harm 一詞自 1803 年見於文獻。",
+    "derivatives": [
+      {
+        "word": "grieve",
+        "pos": "v.",
+        "zh": "悲痛，哀悼"
+      },
+      {
+        "word": "grief",
+        "pos": "n.",
+        "zh": "悲傷"
+      }
+    ],
+    "example": "The death of the scientist was a grievous loss.",
+    "example_zh": "這位科學家的過世是一項令人悲痛的損失。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/grievous",
+      "ipa": "/ˈɡɹiː.vəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "griev 是 grav 經古法語音變後的拼法（gravis→grever→grief），字形未直接保留 grav，教材以「griev/grav」並列成立但屬音變關係。"
+    }
+  },
+  {
+    "word": "gravity",
+    "prefixId": "grav",
+    "pos": "n.",
+    "phonetic": "ˈgrævɪtɪ",
+    "zh": "重力，嚴重性",
+    "parts": [
+      {
+        "text": "grav",
+        "gloss": "重"
+      }
+    ],
+    "etymology": "gravity 約 1500 年源自古法語 gravité，並直接借自拉丁文 gravitatem（主格 gravitas，意為重量、沉重、壓力），根源是 gravis（重的）。英文最早字義即涵蓋「重量、莊重、嚴肅、重要性」，物理學上「地球重力造成的向下加速度」一義遲至 1620 年代才出現，故此字自始便同時承載物理「重力」與嚴重性／莊重的雙重意涵。",
+    "derivatives": [
+      {
+        "word": "grave",
+        "pos": "a.",
+        "zh": "嚴肅的，嚴重的"
+      }
+    ],
+    "example": "The moon's gravity is much smaller than the earth's.",
+    "example_zh": "月球的重力比地球小得多。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/gravity",
+      "ipa": "/ˈɡɹævɪti/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "You fail to understand the gravity of the situation."
+      ]
+    }
+  },
+  {
+    "word": "gravitate",
+    "prefixId": "grav",
+    "pos": "v.",
+    "phonetic": "ˈgrævɪtet",
+    "zh": "被吸引到…，向…移動",
+    "parts": [
+      {
+        "text": "gravit",
+        "gloss": "重、重力"
+      }
+    ],
+    "etymology": "gravitate 1640 年代源自近代拉丁文 gravitare，其詞幹上溯拉丁文 gravitas（重量、沉重）及更早的 gravis（重的）。最初指「施加重量、向下移動」（此義今已罕用），1670 年代衍生出比喻義「強烈受吸引、自然傾向於」，1690 年代再發展出「受重力作用」之義。",
+    "derivatives": [
+      {
+        "word": "gravitation",
+        "pos": "n.",
+        "zh": "重力，吸引，向…移動"
+      }
+    ],
+    "example": "People tend to gravitate to the beaches in summer.",
+    "example_zh": "夏天時人們往往會被海灘吸引過去。",
+    "sources": {
+      "page": "IMG_1704",
+      "etymonline": "https://www.etymonline.com/word/gravitate",
+      "ipa": "/ˈɡrævɪteɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]

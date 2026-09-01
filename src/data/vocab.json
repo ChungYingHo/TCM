@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-01",
-  "count": 604,
-  "withExamples": 604,
+  "count": 628,
+  "withExamples": 628,
   "words": [
     {
       "id": "apathetic",
@@ -16497,11 +16497,11 @@
       "parts": [
         {
           "text": "magn",
-          "gloss": "大。偉大"
+          "gloss": "大、偉大"
         },
         {
           "text": "-fy",
-          "gloss": "做。使成"
+          "gloss": "做、使成"
         }
       ],
       "etymology": "這個字源自古法文 magnefiier、上承拉丁文 magnificare（由 magnus「大」加 facere「做」的組合形構成，字面義是「做出偉大的事」），14 世紀晚期英文最初的意思是「為了榮耀某人某事而言行讚頌」，直到 1660 年代才發展出「用透鏡把物體的外觀放大」這個英文特有的現代用法。",
@@ -16561,11 +16561,11 @@
       "parts": [
         {
           "text": "magn",
-          "gloss": "大。偉大"
+          "gloss": "大、偉大"
         },
         {
           "text": "anim",
-          "gloss": "心智。精神"
+          "gloss": "心智、精神"
         }
       ],
       "etymology": "這個字約在 1580 年代出現，由拉丁文 magnanimus（或先出現的 magnanimity 加上 -ous）構成，magnus「大」加 animus「心智、精神」，字面是「心靈偉大」，最初指「英勇無畏」，到 1590 年代才轉為「胸襟高尚、不計較瑣碎怨恨」的現代意義。",
@@ -16619,11 +16619,11 @@
       "parts": [
         {
           "text": "magn",
-          "gloss": "大。偉大"
+          "gloss": "大、偉大"
         },
         {
           "text": "fic",
-          "gloss": "做。製造"
+          "gloss": "做、製造"
         }
       ],
       "etymology": "這個字源自古法文 magnificent，是拉丁文 magnificentior（magnificus 的比較級，由 magnus「大」加 facere「做」構成，字面「做出偉大之事」）的逆構詞，15 世紀中原本指「行為偉大顯赫、光榮」，到 1520 年代才擴大為「富麗堂皇、極盡奢華」的現代意義。",
@@ -16653,7 +16653,7 @@
       "parts": [
         {
           "text": "magn",
-          "gloss": "大。偉大"
+          "gloss": "大、偉大"
         }
       ],
       "etymology": "這個字約在 1400 年借自拉丁文 magnitudo，由 magnus「大」加上構成抽象名詞的字尾 -tudo 而成，最初指「卓越、宏偉」，15 世紀初轉為「體積或範圍的大小」，到 1640 年代又發展出翻譯托勒密的希臘文 megethos 而來的天文學「星等」義。",
@@ -16677,7 +16677,7 @@
       "parts": [
         {
           "text": "majest",
-          "gloss": "偉大。尊貴"
+          "gloss": "偉大、尊貴"
         }
       ],
       "etymology": "這個字約在 1600 年由 majesty 加上字尾 -ic 構成。majesty 源自古法文 majeste，再往上溯至拉丁文主格 maiestas（字根 maiestatem），意思是「偉大、尊嚴、崇高」，而 maiestas 本身是從 maior（magnus 的比較級，中性作 maius）衍生出的抽象名詞，原本用於形容神祇的莊嚴崇高，14 世紀晚期才擴大用於稱呼君王的尊號。",
@@ -19602,7 +19602,7 @@
       "parts": [
         {
           "text": "forte",
-          "gloss": "強。強項"
+          "gloss": "強、強項"
         }
       ],
       "etymology": "「強項」義於 1640 年代源自法語 fort「（劍刃）最堅硬處。強項」，18 世紀加上字尾 -e 仿義大利文拼法。音樂術語「強、大聲」則是直接借自義大利文 forte「強」。兩義最終都承自拉丁文 fortis「強」。",
@@ -19701,6 +19701,152 @@
       ]
     },
     {
+      "id": "endure",
+      "word": "endure",
+      "phonetic": "ɪnˈdʊr",
+      "zh": "持續，忍耐",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Chinese writing has endured for thousands of years.",
+      "example_zh": "中國文字已經延續了數千年。",
+      "draft": false,
+      "prefixId": "dur",
+      "parts": [
+        {
+          "text": "en",
+          "gloss": "使、入內"
+        },
+        {
+          "text": "dur",
+          "gloss": "硬，引申忍受"
+        }
+      ],
+      "etymology": "源自古法語 endurer，上溯拉丁文 indurare「使變硬」，由 in「使」+ durare「使變硬」組成（durare 源自 durus「硬」）。14 世紀晚期借入英文作 enduren，字義由「使變硬」引申為「承受苦難、不潰散」及「持續存在」。",
+      "derivatives": [
+        {
+          "word": "endurance",
+          "pos": "n.",
+          "zh": "持續，忍耐"
+        }
+      ]
+    },
+    {
+      "id": "duration",
+      "word": "duration",
+      "phonetic": "dəˈreʃən",
+      "zh": "持續期間",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We had to stay home for the duration of the quarantine.",
+      "example_zh": "隔離期間我們都必須待在家裡。",
+      "draft": false,
+      "prefixId": "dur",
+      "parts": [
+        {
+          "text": "dur",
+          "gloss": "硬，引申持續"
+        }
+      ],
+      "etymology": "源自古法語 duration、中世紀拉丁文 durationem，皆上溯拉丁文 durare「使變硬」（其根源 durus「硬」可再上溯原始印歐語 *deru-「堅固、穩固」），語意由「堅硬」延伸為「持續、歷時」。",
+      "derivatives": []
+    },
+    {
+      "id": "duress",
+      "word": "duress",
+      "phonetic": "duˈrɛs",
+      "zh": "強制，強迫",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Contracts signed under duress are null and void.",
+      "example_zh": "在脅迫之下簽的合約是無效的。",
+      "draft": false,
+      "prefixId": "dur",
+      "parts": [
+        {
+          "text": "dur",
+          "gloss": "硬"
+        }
+      ],
+      "etymology": "源自古法語 duresse／durece，上溯拉丁文 duritia「硬度」（由 durus「硬」構成）。14 世紀初原指「嚴酷對待」，15 世紀起轉指「脅迫、強制」，法律用語專指足以構成脅迫的實際或可預期身體強制。",
+      "derivatives": []
+    },
+    {
+      "id": "durable",
+      "word": "durable",
+      "phonetic": "ˈdʊrəbəl",
+      "zh": "耐久的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The machine has to be made of durable materials.",
+      "example_zh": "這台機器必須用耐久的材料製造。",
+      "draft": false,
+      "prefixId": "dur",
+      "parts": [
+        {
+          "text": "dur",
+          "gloss": "硬，引申持久"
+        }
+      ],
+      "etymology": "14 世紀晚期經古法語 durable，並直接源自拉丁文 durabilis「持久的、耐久的」，其字根為 durare「使變硬」，再源自 durus「硬」。",
+      "derivatives": [
+        {
+          "word": "durability",
+          "pos": "n.",
+          "zh": "耐久性"
+        }
+      ]
+    },
+    {
+      "id": "obdurate",
+      "word": "obdurate",
+      "phonetic": "ˈɑbdʊrɪt",
+      "zh": "頑固",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His obdurate refusal to cooperate may doom the deal.",
+      "example_zh": "他頑固地拒絕合作，可能會讓這筆交易告吹。",
+      "draft": false,
+      "prefixId": "dur",
+      "parts": [
+        {
+          "text": "ob",
+          "gloss": "對抗、逆"
+        },
+        {
+          "text": "dur",
+          "gloss": "硬"
+        }
+      ],
+      "etymology": "源自拉丁文 obduratus（obdurare 的過去分詞），由 ob「對抗」+ durare「使變硬」（源自 durus「硬」）組成，教會拉丁文中引申為「使心對神剛硬」。15 世紀中葉進入英文，指頑固不化、不為所動。",
+      "derivatives": [
+        {
+          "word": "obduracy",
+          "pos": "n.",
+          "zh": "頑固"
+        }
+      ]
+    },
+    {
       "id": "dynamic",
       "word": "dynamic",
       "phonetic": "daɪˈnæmɪk",
@@ -19786,6 +19932,603 @@
           "word": "dynastic",
           "pos": "a.",
           "zh": "朝代的"
+        }
+      ]
+    },
+    {
+      "id": "potent",
+      "word": "potent",
+      "phonetic": "ˈpotənt",
+      "zh": "強效的，強大的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The party could be a potent political force in the future.",
+      "example_zh": "這個政黨未來可能成為一股強大的政治力量。",
+      "draft": false,
+      "prefixId": "potent",
+      "parts": [
+        {
+          "text": "potent",
+          "gloss": "強而有力的、有能力的"
+        }
+      ],
+      "etymology": "15 世紀初源自拉丁文 potentem（主格 potens）「有力量的」，是動詞 posse「能夠」的現在分詞，posse 又是 potis esse（有能力＋是）的縮合，最終上溯至原始印歐語詞根 *poti-「有力量的。主人」。",
+      "derivatives": [
+        {
+          "word": "potency",
+          "pos": "n.",
+          "zh": "效力，力量"
+        },
+        {
+          "word": "impotent",
+          "pos": "a.",
+          "zh": "無能的"
+        },
+        {
+          "word": "impotence",
+          "pos": "n.",
+          "zh": "無能；陽萎"
+        }
+      ]
+    },
+    {
+      "id": "potential",
+      "word": "potential",
+      "phonetic": "pəˈtɛnʃəl",
+      "zh": "有潛力的，潛在的；潛力",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The nuclear power plant is a potential threat to the environment.",
+      "example_zh": "這座核電廠對環境是個潛在的威脅。",
+      "draft": false,
+      "prefixId": "potent",
+      "parts": [
+        {
+          "text": "potent",
+          "gloss": "強而有力、有能力"
+        }
+      ],
+      "etymology": "14 世紀晚期源自古法語 potenciel 及中世紀拉丁文 potentialis，兩者皆源於拉丁文 potentia「力量、權力、能力」，與 potent 同源，最終同樣上溯至原始印歐語詞根 *poti-「有力量的。主人」。",
+      "derivatives": []
+    },
+    {
+      "id": "despot",
+      "word": "despot",
+      "phonetic": "ˈdɛspət",
+      "zh": "暴君",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The despot does not tolerate any opposition.",
+      "example_zh": "這名暴君不容許任何反對聲音。",
+      "draft": false,
+      "prefixId": "potent",
+      "parts": [
+        {
+          "text": "des",
+          "gloss": "房屋、家戶"
+        },
+        {
+          "text": "pot",
+          "gloss": "有力量的、主人"
+        }
+      ],
+      "etymology": "1560 年代以義大利文形式 dispotto 進入英文（1580 年代定型為 despot），經中世紀拉丁文 despota，源自希臘文 despotēs「一家之主、絕對統治者」，由原始印歐語 *dems-pota-「屋主」構成：*dem-「房屋、家戶」的屬格＋詞根 *poti-「有力量的。主人」。",
+      "derivatives": [
+        {
+          "word": "despotic",
+          "pos": "a.",
+          "zh": "暴君的，專制的"
+        },
+        {
+          "word": "despotism",
+          "pos": "n.",
+          "zh": "暴政，獨裁"
+        }
+      ]
+    },
+    {
+      "id": "salute",
+      "word": "salute",
+      "phonetic": "səˈlut",
+      "zh": "行禮，致敬",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The soldier gave a salute and the officer returned it.",
+      "example_zh": "士兵行了個禮，軍官也回了禮。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "salut",
+          "gloss": "健康、問候"
+        }
+      ],
+      "etymology": "salute 源自古法文 saluer（約 1300 年），再上溯拉丁文 salutare「問候、致敬」，字面是「祝人健康」，其字根 salus／salutis 意為「健康、問候」，最終來自原始印歐語 *sol-「完整、無恙」。1580 年代起也用於軍事／航海場合舉旗鳴炮的鳴禮致敬，1844 年定型為「舉手至帽緣向長官致意」的動作。",
+      "derivatives": [
+        {
+          "word": "salutation",
+          "pos": "n.",
+          "zh": "稱呼，招呼語"
+        }
+      ]
+    },
+    {
+      "id": "salutary",
+      "word": "salutary",
+      "phonetic": "ˈsæljətɛrɪ",
+      "zh": "有益的，有幫助的，有益健康的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The low interest rates should have a salutary effect on business.",
+      "example_zh": "低利率應該會對商業產生有益的效果。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "salut",
+          "gloss": "健康、有益"
+        }
+      ],
+      "etymology": "salutary 源自古法文 salutaire 或直接源自拉丁文 salutaris「有益健康的」，同樣來自字根 salus／salutis「健康」。15 世紀晚期進入英文時指「有益健康、能治病」，到 19 世紀才擴大泛指「對任何事有益」。",
+      "derivatives": []
+    },
+    {
+      "id": "sanitary",
+      "word": "sanitary",
+      "phonetic": "ˈsænɪˌtɛrɪ",
+      "zh": "衛生的，清潔的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "To prevent a pandemic, sanitary living conditions are essential.",
+      "example_zh": "要預防大流行，衛生的居住環境是不可或缺的。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "san",
+          "gloss": "健康（衛生）"
+        }
+      ],
+      "etymology": "sanitary 於 1823 年經法文 sanitaire（1812 年）源自拉丁文 sanitas「健康」，其形容詞 sanus 意為「健康的、神智清楚的」。sanus 更早的字源不確定，Etymonline 僅列出可能與原始印歐語 *seh₂-no-「就位、安穩」或拉丁文 satis「足夠」有關，並未提及 salus／salutare。",
+      "derivatives": [
+        {
+          "word": "sanitation",
+          "pos": "n.",
+          "zh": "公共衛生"
+        }
+      ]
+    },
+    {
+      "id": "sanity",
+      "word": "sanity",
+      "phonetic": "ˈsænətɪ",
+      "zh": "精神健全，頭腦清楚",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The old man is gradually losing sanity.",
+      "example_zh": "這位老先生的神智正逐漸喪失。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "san",
+          "gloss": "健康、神智健全"
+        }
+      ],
+      "etymology": "sanity 源自拉丁文 sanitas（主格），源自 sanus，本義「健康」。15 世紀初以 sanite 之形進入英文，原指「健康狀態」（此義今已罕用），約 1600 年起因與 insane 對舉，詞義才限縮為「神智健全、理性」。",
+      "derivatives": [
+        {
+          "word": "sane",
+          "pos": "a.",
+          "zh": "精神健全的，頭腦清楚的"
+        }
+      ]
+    },
+    {
+      "id": "insane",
+      "word": "insane",
+      "phonetic": "ɪnˈsen",
+      "zh": "精神不健全的，瘋狂的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It would be insane not to take advantage of this opportunity.",
+      "example_zh": "不好好利用這個機會實在太瘋狂了。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "不、非"
+        },
+        {
+          "text": "san",
+          "gloss": "健康、神智健全"
+        }
+      ],
+      "etymology": "insane 源自拉丁文 insanus，由否定字首 in-「不」加上 sanus「健康的、神智清楚的」組成，字面即「不健康、神智不清」。1550 年代起用於描述人「精神失常」，到 1842 年也擴及形容「瘋狂的」行為。",
+      "derivatives": [
+        {
+          "word": "insanity",
+          "pos": "n.",
+          "zh": "神經錯亂，瘋狂"
+        }
+      ]
+    },
+    {
+      "id": "salubrious",
+      "word": "salubrious",
+      "phonetic": "səˈlubriəs",
+      "zh": "有益健康的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The fresh mountain air has a salubrious effect on health.",
+      "example_zh": "清新的山間空氣對健康有益。",
+      "draft": false,
+      "prefixId": "salut",
+      "parts": [
+        {
+          "text": "salubr",
+          "gloss": "有益健康"
+        }
+      ],
+      "etymology": "salubrious 源自拉丁文 salubris「有益健康的」，同樣來自 salus／salutis「健康」，最終上溯原始印歐語 *sol-「完整、無恙」，與 salute、salutary 同一字根。約 1540 年進入英文，先用於形容食物、藥物「有益健康」，1610 年代起也用於形容氣候、空氣宜人。",
+      "derivatives": []
+    },
+    {
+      "id": "elucidate",
+      "word": "elucidate",
+      "phonetic": "əˈlusəˌdet",
+      "zh": "說明清楚，解釋",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Colored charts really help to elucidate the points made in the text.",
+      "example_zh": "彩色圖表確實有助於把文中的重點說明清楚。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "e",
+          "gloss": "出、向外"
+        },
+        {
+          "text": "luc",
+          "gloss": "光、明亮"
+        }
+      ],
+      "etymology": "elucidate 1560 年代源自晚期拉丁文 elucidatus（elucidare 的過去分詞），由 ex-（出、向外，此處弱化為 e-）＋ lucidus（明亮、清楚，源自 lucere「發光」，PIE 字根 *leuk-「光」）組成，字面義為「徹底照亮」，引申為「講清楚、闡明」。",
+      "derivatives": [
+        {
+          "word": "elucidation",
+          "pos": "n.",
+          "zh": "解釋，說明"
+        },
+        {
+          "word": "lucid",
+          "pos": "a.",
+          "zh": "清澈的，清楚易懂的"
+        }
+      ]
+    },
+    {
+      "id": "illuminate",
+      "word": "illuminate",
+      "phonetic": "ɪˈlumɪnet",
+      "zh": "照亮，說明",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "City streets were once illuminated with gaslights.",
+      "example_zh": "城市的街道曾經是用瓦斯燈照明的。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "il",
+          "gloss": "進、入"
+        },
+        {
+          "text": "lumin",
+          "gloss": "光"
+        }
+      ],
+      "etymology": "illuminate 約 1500 年源自拉丁文 illuminatus（illuminare 的過去分詞，或視為 illumination 的逆構詞），由同化自 in-「進、入」的 il- ＋ lumen（屬格 luminis，「光」，PIE 字根 *leuk-）組成，本義「照亮、發光」，1560 年代起衍生出「啟發、使明白」之義。",
+      "derivatives": [
+        {
+          "word": "illumination",
+          "pos": "n.",
+          "zh": "照亮，說明"
+        }
+      ]
+    },
+    {
+      "id": "illustration",
+      "word": "illustration",
+      "phonetic": "ˌɪləˈstreʃən",
+      "zh": "說明，例子，插圖",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I like books with many photographs and illustrations.",
+      "example_zh": "我喜歡有很多照片與插圖的書。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "il",
+          "gloss": "進、入"
+        },
+        {
+          "text": "lustr",
+          "gloss": "使明亮、發光"
+        }
+      ],
+      "etymology": "illustration 約 1400 年源自古法語 illustration／拉丁文 illustrationem，其動詞 illustrare 由同化自 in-「進、入」的 il- ＋ lustrare（Etymonline 此條目稱其為 PIE *leuk-「光」的字尾變化形，意為使明亮、照亮）組成，本義「照亮、發光」，1580 年代引申為「使思路清楚」，1816 年再衍生出「插圖」之義。",
+      "derivatives": [
+        {
+          "word": "illustrate",
+          "pos": "v.",
+          "zh": "舉例說明，以插圖說明"
+        }
+      ]
+    },
+    {
+      "id": "illustrious",
+      "word": "illustrious",
+      "phonetic": "ɪˈlʌstriəs",
+      "zh": "傑出的，顯赫的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The general has had an illustrious military career.",
+      "example_zh": "那位將軍有著顯赫的軍旅生涯。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "il",
+          "gloss": "進、入"
+        },
+        {
+          "text": "lustr",
+          "gloss": "明亮、發光"
+        }
+      ],
+      "etymology": "illustrious 1560 年代源自拉丁文 illustris（明亮的、顯赫的），為動詞 illustrare（同化自 in- 的 il- ＋ lustrare「使明亮」）的逆構詞，取代中古英文的 illustre（15 世紀中，源自法語 illustre），字義由字面的「發光的」引申為「顯赫、卓越的」。",
+      "derivatives": []
+    },
+    {
+      "id": "lackluster",
+      "word": "lackluster",
+      "phonetic": "ˈlæklʌstɚ",
+      "zh": "無光澤的，不出色的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Critics say that the pianist gave a lackluster performance.",
+      "example_zh": "樂評說這位鋼琴家的演出並不出色。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "lack",
+          "gloss": "缺乏、沒有"
+        },
+        {
+          "text": "luster",
+          "gloss": "光澤、光彩"
+        }
+      ],
+      "etymology": "lackluster 約 1600 年由 lack（缺乏、匱乏）＋ luster（光澤、光彩，源自拉丁文 lustrare「使明亮、散發光芒」）複合而成，字面義「缺乏光澤」，最早見於莎士比亞《皆大歡喜》，原形容眼神黯淡無神。",
+      "derivatives": [
+        {
+          "word": "luster",
+          "pos": "n.",
+          "zh": "光澤，光亮"
+        }
+      ]
+    },
+    {
+      "id": "luminous",
+      "word": "luminous",
+      "phonetic": "ˈlumɪnəs",
+      "zh": "發光的，明亮的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I had a glimpse of the cat's luminous eyes in my car's headlights.",
+      "example_zh": "我在車頭燈下瞥見了那隻貓發亮的眼睛。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "lumin",
+          "gloss": "光"
+        }
+      ],
+      "etymology": "luminous 15 世紀初源自拉丁文 luminosus（發光的、充滿光的、顯著的），由 lumen（屬格 luminis，「光」）衍生，最終上溯 PIE 字根 *leuk-「光、明亮」。",
+      "derivatives": [
+        {
+          "word": "luminosity",
+          "pos": "n.",
+          "zh": "光亮，亮度，發光體"
+        }
+      ]
+    },
+    {
+      "id": "pellucid",
+      "word": "pellucid",
+      "phonetic": "pəˈlusɪd",
+      "zh": "清澈的，清楚易懂的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The path meanders along a pellucid stream.",
+      "example_zh": "這條小徑沿著一條清澈的溪流蜿蜒而行。",
+      "draft": false,
+      "prefixId": "luc",
+      "parts": [
+        {
+          "text": "per",
+          "gloss": "穿、貫穿"
+        },
+        {
+          "text": "luc",
+          "gloss": "光、發光"
+        }
+      ],
+      "etymology": "pellucid 1610 年代源自拉丁文 pellucidus（透明的），由 per-（穿、貫穿，PIE 字根 *per-（1）「向前」引申為「穿過」）＋ lucere（發光，PIE 字根 *leuk-「光」）組成，字面義「光穿透而過」，引申指清澈透明、不扭曲影像（如水、文筆）。",
+      "derivatives": []
+    },
+    {
+      "id": "grievous",
+      "word": "grievous",
+      "phonetic": "ˈgrivəs",
+      "zh": "嚴重的，令人悲痛的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The death of the scientist was a grievous loss.",
+      "example_zh": "這位科學家的過世是一項令人悲痛的損失。",
+      "draft": false,
+      "prefixId": "grav",
+      "parts": [
+        {
+          "text": "griev",
+          "gloss": "重、引申為悲傷"
+        }
+      ],
+      "etymology": "grievous 約 1300 年源自盎格魯法語 grevous／古法語 grevos（沉重的、艱難的），此詞出自 grief，grief 承自古法語 grief，上溯拉丁文 gravare（使沉重。致使悲傷）及其字根 gravis（沉重的），字義由具體的「沉重」引申為「嚴重、痛苦的」，如 grievous bodily harm 一詞自 1803 年見於文獻。",
+      "derivatives": [
+        {
+          "word": "grieve",
+          "pos": "v.",
+          "zh": "悲痛，哀悼"
+        },
+        {
+          "word": "grief",
+          "pos": "n.",
+          "zh": "悲傷"
+        }
+      ]
+    },
+    {
+      "id": "gravity",
+      "word": "gravity",
+      "phonetic": "ˈgrævɪtɪ",
+      "zh": "重力，嚴重性",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The moon's gravity is much smaller than the earth's.",
+      "example_zh": "月球的重力比地球小得多。",
+      "draft": false,
+      "prefixId": "grav",
+      "parts": [
+        {
+          "text": "grav",
+          "gloss": "重"
+        }
+      ],
+      "etymology": "gravity 約 1500 年源自古法語 gravité，並直接借自拉丁文 gravitatem（主格 gravitas，意為重量、沉重、壓力），根源是 gravis（重的）。英文最早字義即涵蓋「重量、莊重、嚴肅、重要性」，物理學上「地球重力造成的向下加速度」一義遲至 1620 年代才出現，故此字自始便同時承載物理「重力」與嚴重性／莊重的雙重意涵。",
+      "derivatives": [
+        {
+          "word": "grave",
+          "pos": "a.",
+          "zh": "嚴肅的，嚴重的"
+        }
+      ]
+    },
+    {
+      "id": "gravitate",
+      "word": "gravitate",
+      "phonetic": "ˈgrævɪtet",
+      "zh": "被吸引到…，向…移動",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "People tend to gravitate to the beaches in summer.",
+      "example_zh": "夏天時人們往往會被海灘吸引過去。",
+      "draft": false,
+      "prefixId": "grav",
+      "parts": [
+        {
+          "text": "gravit",
+          "gloss": "重、重力"
+        }
+      ],
+      "etymology": "gravitate 1640 年代源自近代拉丁文 gravitare，其詞幹上溯拉丁文 gravitas（重量、沉重）及更早的 gravis（重的）。最初指「施加重量、向下移動」（此義今已罕用），1670 年代衍生出比喻義「強烈受吸引、自然傾向於」，1690 年代再發展出「受重力作用」之義。",
+      "derivatives": [
+        {
+          "word": "gravitation",
+          "pos": "n.",
+          "zh": "重力，吸引，向…移動"
         }
       ]
     }

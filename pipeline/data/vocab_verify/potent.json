@@ -1,0 +1,33 @@
+[
+  {
+    "word": "potent",
+    "parts": [
+      {"text": "potent", "gloss": "強而有力的；有能力的"}
+    ],
+    "etymology": "15世紀初源自拉丁文 potentem（主格 potens）「有力量的」，是動詞 posse「能夠」的現在分詞，posse 又是 potis esse（有能力＋是）的縮合，最終上溯至原始印歐語詞根 *poti-「有力量的；主人」。",
+    "us_ipa": "/ˈpoʊt(ə)nt/",
+    "etymonline_url": "https://www.etymonline.com/word/potent",
+    "notes": ""
+  },
+  {
+    "word": "potential",
+    "parts": [
+      {"text": "potent", "gloss": "強而有力；有能力"}
+    ],
+    "etymology": "14世紀晚期源自古法語 potenciel 及中世紀拉丁文 potentialis，兩者皆源於拉丁文 potentia「力量、權力、能力」，與 potent 同源，最終同樣上溯至原始印歐語詞根 *poti-「有力量的；主人」。",
+    "us_ipa": "/pəˈtɛnʃəl/",
+    "etymonline_url": "https://www.etymonline.com/word/potential",
+    "notes": ""
+  },
+  {
+    "word": "despot",
+    "parts": [
+      {"text": "des-", "gloss": "房屋、家戶"},
+      {"text": "pot", "gloss": "有力量的；主人"}
+    ],
+    "etymology": "1560年代以義大利文形式 dispotto 進入英文（1580年代定型為 despot），經中世紀拉丁文 despota，源自希臘文 despotēs「一家之主、絕對統治者」，由原始印歐語 *dems-pota-「屋主」構成：*dem-「房屋、家戶」的屬格＋詞根 *poti-「有力量的；主人」。",
+    "us_ipa": "/ˈdɛs.pət/",
+    "etymonline_url": "https://www.etymonline.com/word/despot",
+    "notes": "陷阱字：despot 的直接語源是希臘文 despotēs（des-「房屋」+ pot-「有力量的、主人」），走的是希臘線，並非教材所屬的拉丁 potens/posse 這條線，該拉丁根不直接適用。不過「power」字素 -pot- 與 potent 系出同一個原始印歐語詞根 *poti-「有力量的；主人」，兩者最終仍是同源（遠親），只是中間路徑一為希臘、一為拉丁。此處已改用真正的希臘字根 des-/pot-，未強行套用拉丁 potent-。"
+  }
+]
