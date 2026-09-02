@@ -28,6 +28,20 @@ describe('字根字彙 corpus (src/data/vocab.json)', () => {
     }
   })
 
+  // id 就是 word 本身、也是 SRS 的 key。課本兩大部分會收到同一個字（disclose 既在
+  // 字首 dis- 也在字根 clud），若兩筆都出貨，兩張卡的複習紀錄會撞在一起。
+  // build_vocab_prefix.py 會去重並印出捨棄了哪一筆，這條測試確保它真的有做。
+  it('沒有重複的字（SRS key 必須唯一）', () => {
+    const seen = new Map<string, string>()
+    const dup: string[] = []
+    for (const w of vocab.words) {
+      const prev = seen.get(w.word)
+      if (prev) dup.push(`${w.word}（${prev} 與 ${w.prefixId}）`)
+      else seen.set(w.word, w.prefixId ?? '')
+    }
+    expect(dup, `重複字：${dup.join('、')}`).toEqual([])
+  })
+
   it('PREFIX_GROUPS 的 id 不重複、order 為 1..N', () => {
     const ids = PREFIX_GROUPS.map((g) => g.id)
     expect(new Set(ids).size).toBe(ids.length)

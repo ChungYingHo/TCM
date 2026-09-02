@@ -1,0 +1,75 @@
+[
+  {
+    "word": "anniversary",
+    "prefixId": "enni",
+    "pos": "n., a.",
+    "phonetic": "ˌænɪˈvɝsərɪ",
+    "zh": "週年紀念；週年的",
+    "parts": [
+      {
+        "text": "anni",
+        "gloss": "年"
+      },
+      {
+        "text": "vers",
+        "gloss": "轉"
+      }
+    ],
+    "etymology": "anniversary 源自中世紀拉丁文 anniversarium，由拉丁文 annus（年，屬格為 anni）與 versus（動詞 vertere「轉」的過去分詞）組成，字面意思是「年年轉回」，教會拉丁文以 anniversaria dies 稱聖徒忌日，英文約於十五世紀中期借入此字。",
+    "derivatives": [],
+    "example": "The old couple will soon be celebrating their 50th wedding anniversary.",
+    "example_zh": "這對老夫妻很快就要慶祝結婚五十週年了。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/anniversary",
+      "ipa": "/ˌænɪˈvɝs(ə)ɹi/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師字根表把這組標為「enni （annu）」，但 anniversary 本身拼作 anni-（來自拉丁文 annus 的屬格 anni），並未出現弱化後的 -enni- 拼法，這種弱化形式只出現在 biennial、perennial、centennial 等字中，屬於同一個「年」字根家族在不同構詞位置的變體。教材中文「週年紀念。週年的」無誤，惟現代英文中 anniversary 幾乎都作名詞使用，「週年的」多半是名詞當形容詞修飾語（如 anniversary gift），單獨作形容詞的用法較少見。",
+      "extraExamples": [
+        "The department store is mounting anniversary sales soon."
+      ]
+    }
+  },
+  {
+    "word": "annual",
+    "prefixId": "enni",
+    "pos": "a., n.",
+    "phonetic": "ˈænjuəl",
+    "zh": "年度的，一年生的；一年生植物",
+    "parts": [
+      {
+        "text": "annu",
+        "gloss": "年"
+      }
+    ],
+    "etymology": "annual 約十四世紀末經古法文 annuel 或直接借自中世紀拉丁文 annualis「按年的」，源頭是拉丁文 annus「年」的形容詞化形式 annalis，而 annus 可上溯至原始義大利語 *atno-「年」與原始印歐語詞根 *at-「行走」，本義近似「循環行走一圈」。",
+    "derivatives": [
+      {
+        "word": "annualize",
+        "pos": "v.",
+        "zh": "換算為全年"
+      },
+      {
+        "word": "annuity",
+        "pos": "n.",
+        "zh": "年金"
+      }
+    ],
+    "example": "Welcome to our annual conference.",
+    "example_zh": "歡迎參加我們的年度大會。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/annual",
+      "ipa": "/ˈæn.ju.əl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "老師字根表把這組標為「enni （annu）」，但 annual 本身保留 annus 的原形 annu-，同樣沒有弱化成 -enni-。-enni- 是 annus 出現在 biennial、perennial、centennial 等複合詞中，因落在非重音的封閉音節，依拉丁語音變規律由 -a- 弱化為 -e- 才產生的拼法（Etymonline 引 Klein 字典之說明），annual 與 anniversary 都不含這個弱化形式。annus 更早可上溯至原始義大利語 *atno-、原始印歐語詞根 *at-（意為「行走」，引申指「循環一圈」）。教材中文「年度的，一年生的。一年生植物」無誤，Etymonline 亦記載 annual 作名詞於 1680 年代起可指「一年生植物」及「年刊」。",
+      "extraExamples": [
+        "This plant is an annual."
+      ]
+    }
+  }
+]

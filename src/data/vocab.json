@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-02",
-  "count": 682,
-  "withExamples": 682,
+  "count": 700,
+  "withExamples": 700,
   "words": [
     {
       "id": "apathetic",
@@ -15763,6 +15763,69 @@
       "derivatives": []
     },
     {
+      "id": "anniversary",
+      "word": "anniversary",
+      "phonetic": "ˌænɪˈvɝsərɪ",
+      "zh": "週年紀念；週年的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The old couple will soon be celebrating their 50th wedding anniversary.",
+      "example_zh": "這對老夫妻很快就要慶祝結婚五十週年了。",
+      "draft": false,
+      "prefixId": "enni",
+      "parts": [
+        {
+          "text": "anni",
+          "gloss": "年"
+        },
+        {
+          "text": "vers",
+          "gloss": "轉"
+        }
+      ],
+      "etymology": "anniversary 源自中世紀拉丁文 anniversarium，由拉丁文 annus（年，屬格為 anni）與 versus（動詞 vertere「轉」的過去分詞）組成，字面意思是「年年轉回」，教會拉丁文以 anniversaria dies 稱聖徒忌日，英文約於十五世紀中期借入此字。",
+      "derivatives": []
+    },
+    {
+      "id": "annual",
+      "word": "annual",
+      "phonetic": "ˈænjuəl",
+      "zh": "年度的，一年生的；一年生植物",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Welcome to our annual conference.",
+      "example_zh": "歡迎參加我們的年度大會。",
+      "draft": false,
+      "prefixId": "enni",
+      "parts": [
+        {
+          "text": "annu",
+          "gloss": "年"
+        }
+      ],
+      "etymology": "annual 約十四世紀末經古法文 annuel 或直接借自中世紀拉丁文 annualis「按年的」，源頭是拉丁文 annus「年」的形容詞化形式 annalis，而 annus 可上溯至原始義大利語 *atno-「年」與原始印歐語詞根 *at-「行走」，本義近似「循環行走一圈」。",
+      "derivatives": [
+        {
+          "word": "annualize",
+          "pos": "v.",
+          "zh": "換算為全年"
+        },
+        {
+          "word": "annuity",
+          "pos": "n.",
+          "zh": "年金"
+        }
+      ]
+    },
+    {
       "id": "location",
       "word": "location",
       "phonetic": "loˈkeʃən",
@@ -22117,6 +22180,486 @@
         }
       ],
       "etymology": "十四世紀末經古法文 interminable 或直接借自晚期拉丁文 interminabilis，由 in-（不）加 terminabilis（來自 terminare「設限、劃界、結束」）構成，字面是「無法被劃出界線的」，因此表示沒有盡頭。",
+      "derivatives": []
+    },
+    {
+      "id": "conclusive",
+      "word": "conclusive",
+      "phonetic": "kənˈklusɪv",
+      "zh": "決定性的，確切無疑的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "There is conclusive evidence that the man is guilty.",
+      "example_zh": "有決定性的證據顯示這名男子有罪。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "clus",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "1610 年代借自法語 conclusif 與晚期拉丁語 conclusivus，建立在拉丁語 concludere（com「一起」＋ claudere「關閉」）的過去分詞詞幹 conclus- 之上，本義「把話收攏關起來」，1640 年代起引申為「決定性的、無可辯駁的」。",
+      "derivatives": [
+        {
+          "word": "conclude",
+          "pos": "v.",
+          "zh": "結束，下結論"
+        },
+        {
+          "word": "conclusion",
+          "pos": "n.",
+          "zh": "結束，結論"
+        },
+        {
+          "word": "inconclusive",
+          "pos": "a.",
+          "zh": "沒有定論"
+        }
+      ]
+    },
+    {
+      "id": "exclude",
+      "word": "exclude",
+      "phonetic": "ɪksˈklud",
+      "zh": "排除",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It's illegal for clubs to exclude members based on skin color.",
+      "example_zh": "俱樂部因膚色而排除會員是違法的。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "clud",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "14 世紀中期借自拉丁語 excludere，由 ex「向外」加 claudere「關閉」構成，字面就是「把人關在門外」，即拒絕其進入或參與。",
+      "derivatives": [
+        {
+          "word": "exclusion",
+          "pos": "n.",
+          "zh": "排除"
+        }
+      ]
+    },
+    {
+      "id": "exclusive",
+      "word": "exclusive",
+      "phonetic": "ɪkˈsklusɪv",
+      "zh": "獨家的，高檔的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "That nobleman is a member of an exclusive country club.",
+      "example_zh": "那位貴族是一家高檔鄉村俱樂部的會員。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "clus",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "15 世紀中期借自中世紀拉丁語 exclusivus，建立在 excludere（ex「向外」＋ claudere「關閉」）的過去分詞詞幹 exclus- 之上，1760 年代起用於專利與特許權，1822 年起指社交圈「不讓外人進來」。",
+      "derivatives": []
+    },
+    {
+      "id": "preclude",
+      "word": "preclude",
+      "phonetic": "prɪˈklud",
+      "zh": "事先排除",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The rain precluded any chance of a game tonight.",
+      "example_zh": "這場雨排除了今晚比賽的任何可能。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "pre",
+          "gloss": "在前"
+        },
+        {
+          "text": "clud",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "1610 年代借自拉丁語 praecludere，由 prae「在前」加 claudere「關閉」構成，字面是「事先把門關上」，即以先發動作阻止某事發生。",
+      "derivatives": []
+    },
+    {
+      "id": "closet",
+      "word": "closet",
+      "phonetic": "ˈklɑzɪt",
+      "zh": "櫃子，小隔間",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The kid opened the closet to make sure nothing was hiding there.",
+      "example_zh": "那個孩子打開櫃子，確認裡面沒有東西躲著。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "clos",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "14 世紀晚期借自古法語 closet「小封閉空間、私室」，是 clos「圍起來的地方」的指小詞，clos 又源自拉丁語 clausum「封閉空間」，即 claudere「關閉」的過去分詞 clausus，原指讀書祈禱的小密室，1610 年代起指儲物小間。",
+      "derivatives": []
+    },
+    {
+      "id": "recluse",
+      "word": "recluse",
+      "phonetic": "ˈrɛklus",
+      "zh": "隱士，離群索居者",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In his old age, the billionaire lived as a recluse.",
+      "example_zh": "晚年時，這位億萬富翁過著隱士般的生活。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "加強"
+        },
+        {
+          "text": "clus",
+          "gloss": "關閉"
+        }
+      ],
+      "etymology": "約 1200 年借自古法語 reclus「隱修者」，源自晚期拉丁語 reclusus，即 recludere（re- 在此作加強語氣＋ claudere「關閉」）的過去分詞，原指為宗教默想而把自己關起來、與世隔絕的人。",
+      "derivatives": [
+        {
+          "word": "reclusive",
+          "pos": "a.",
+          "zh": "隱匿的"
+        }
+      ]
+    },
+    {
+      "id": "claustrophobia",
+      "word": "claustrophobia",
+      "phonetic": "ˌklɔstrəˈfobiə",
+      "zh": "禁閉恐懼症",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man suffers from claustrophobia and refuses to use the elevator.",
+      "example_zh": "這名男子有禁閉恐懼症，拒絕搭電梯。",
+      "draft": false,
+      "prefixId": "clud",
+      "parts": [
+        {
+          "text": "claustr",
+          "gloss": "封閉處"
+        },
+        {
+          "text": "phobia",
+          "gloss": "恐懼"
+        }
+      ],
+      "etymology": "1879 年由瑞士裔英籍醫師 Benjamin Ball 造出，前段取拉丁語 claustrum「門閂、封閉之處」（源自 claudere「關閉」的過去分詞幹），後段接希臘語 -phobia「恐懼」，指「被關在密閉空間的病態恐懼」。",
+      "derivatives": [
+        {
+          "word": "claustrophobic",
+          "pos": "a.",
+          "zh": "患有禁閉恐懼症的"
+        }
+      ]
+    },
+    {
+      "id": "fluent",
+      "word": "fluent",
+      "phonetic": "ˈfluənt",
+      "zh": "流利的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I am fluent in oral and written English.",
+      "example_zh": "我的英文口說與書寫都很流利。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "1580 年代進入英語，源自拉丁文 fluere（流動、奔流）的現在分詞 fluentem，本義是「流動的、不僵硬的」，用在說話上就是像水流一樣順暢不卡的「流利」。",
+      "derivatives": [
+        {
+          "word": "fluency",
+          "pos": "n.",
+          "zh": "流利"
+        }
+      ]
+    },
+    {
+      "id": "fluctuation",
+      "word": "fluctuation",
+      "phonetic": "flʌktʃuˈeʃən",
+      "zh": "波動，起伏",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Don't worry too much about the normal fluctuations on the stock market.",
+      "example_zh": "不必太擔心股市正常的波動。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "fluct",
+          "gloss": "波浪、流"
+        }
+      ],
+      "etymology": "15 世紀中經古法文 fluctuacion 借自拉丁文 fluctuationem，來自 fluctuare（起浪、如波浪般起伏），而 fluctuare 又出自 fluctus（波浪、湧流），也就是 fluere（流動）的過去分詞，所以字面畫面就是水面一波一波的起落。",
+      "derivatives": [
+        {
+          "word": "fluctuate",
+          "pos": "v.",
+          "zh": "波動，起伏"
+        }
+      ]
+    },
+    {
+      "id": "affluent",
+      "word": "affluent",
+      "phonetic": "ˈæfluənt",
+      "zh": "富裕的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Waste is a sign of an affluent society.",
+      "example_zh": "浪費是富裕社會的一種象徵。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "af",
+          "gloss": "往、向"
+        },
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "15 世紀初經古法文 afluent 借自拉丁文 affluentem（豐盛的、富足的），是 affluere 的現在分詞，由 ad-（往、向）同化成 af- 再加 fluere（流動）組成，字面就是「往這邊流過來」，早期指神恩「豐沛湧來」，1753 年起因為財富像水一樣源源流進而定型為「富裕的」。",
+      "derivatives": [
+        {
+          "word": "affluence",
+          "pos": "n.",
+          "zh": "富裕"
+        }
+      ]
+    },
+    {
+      "id": "confluence",
+      "word": "confluence",
+      "phonetic": "ˈkɑnˌfluəns",
+      "zh": "會流，匯聚",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A city developed at the confluence of the two rivers.",
+      "example_zh": "一座城市在兩條河的匯流處發展了起來。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "15 世紀初借自晚期拉丁文 confluentia，源頭是拉丁文 confluere（一起流），由 com（共同、一起）同化成 con- 加 fluere（流動）組成，本義就是兩條以上河流匯合、以及它們匯合的那個地點。",
+      "derivatives": []
+    },
+    {
+      "id": "influx",
+      "word": "influx",
+      "phonetic": "ˈɪnˌflʌks",
+      "zh": "流入，湧入",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The influx of hot money boosted stock prices.",
+      "example_zh": "熱錢的湧入推升了股價。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "進入"
+        },
+        {
+          "text": "flux",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "1620 年代經法文 influx 或直接借自晚期拉丁文 influxus（流入），取自拉丁文 influere（流入）的過去分詞詞幹，influere 由 in-（進入、往上）加 fluere（流動）組成，起初用於河水、空氣與光線，1650 年代才開始用來講人潮湧入。",
+      "derivatives": []
+    },
+    {
+      "id": "fluid",
+      "word": "fluid",
+      "phonetic": "ˈfluɪd",
+      "zh": "流體，液體；流質的，流暢的",
+      "pos": "n., a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I drink a lot of fluids when I have a cold.",
+      "example_zh": "我感冒的時候會喝很多液體。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "15 世紀初經古法文 fluide 借自拉丁文 fluidus（會流的、濕潤的），直接來自 fluere（流動），1640 年代起有「不固定、不僵硬」的比喻義，1660 年代由波以耳（Boyle）用作名詞，指「粒子可自由移動的物質」，也就是液體或氣體。",
+      "derivatives": []
+    },
+    {
+      "id": "flush",
+      "word": "flush",
+      "phonetic": "flʌʃ",
+      "zh": "一陣；臉紅，沖水",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In a flush of anger, he left the room.",
+      "example_zh": "他在一陣怒氣之下離開了房間。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "flush",
+          "gloss": "猛衝、湧出"
+        }
+      ],
+      "etymology": "最早是中古英語 flusshen（13 世紀中，「急速或猛烈地移動、衝、竄」），Etymonline 給的來源是「可能模擬鳥翅拍動的聲音」的擬聲詞，15 世紀末衍生出「驚起（鳥）使其飛竄」，1540 年代的「水猛然噴湧」被認為是同一個字，形容詞「充盈的、齊平的」則是它的比喻用法，只有撲克牌「同花」那個 flush 可能仿自古法文 flux。",
+      "derivatives": []
+    },
+    {
+      "id": "superfluous",
+      "word": "superfluous",
+      "phonetic": "suˈpɝfluəs",
+      "zh": "多餘的，不必要的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "While you're running in a race, all superfluous movements should be eliminated.",
+      "example_zh": "賽跑的時候，所有多餘的動作都該去掉。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "super",
+          "gloss": "超過、在上"
+        },
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "15 世紀初借自拉丁文 superfluus（不必要的），字面義是「滿出來、溢流」，由 super（在上、超過）加 fluere（流動）組成，水多到溢出容器就是超過所需的量，因此引申成「多餘的、不必要的」，更早的英語形式 superflue 在 14 世紀末經古法文借入。",
+      "derivatives": []
+    },
+    {
+      "id": "effluent",
+      "word": "effluent",
+      "phonetic": "ˈɛfluənt",
+      "zh": "流出物，廢水，排水",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Effluents from local factories are finding their way into the river.",
+      "example_zh": "當地工廠排出的廢水正流進河裡。",
+      "draft": false,
+      "prefixId": "flu",
+      "parts": [
+        {
+          "text": "ef",
+          "gloss": "向外"
+        },
+        {
+          "text": "flu",
+          "gloss": "流"
+        }
+      ],
+      "etymology": "15 世紀中借自拉丁文 effluentem（流出的），是 effluere（流出）的現在分詞，由 ex（向外、出）同化成 ef- 再加 fluere（流動）組成，1859 年起當名詞指「流出之物」，1930 年起專指工業廢液、廢水。",
       "derivatives": []
     },
     {

@@ -91,21 +91,21 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 20/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 23/29 組**
 
 照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 20 組。
+卡在 Etymonline／IPA 查證，29 組做完 23 組。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **20/29 組**（116 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 116 字（`vocab.json` 共 682 字） |
+| Etymonline／IPA 查證 | **23/29 組**（135 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 134 字（`vocab.json` 共 700 字，disclose 與第一部分重複已去重） |
 
-**查證完成的 20 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
-lev、stig、acr、punct、sign、cas、fin、term、und
+**查證完成的 23 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni
 
 **還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
 （組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
@@ -116,8 +116,8 @@ lev、stig、acr、punct、sign、cas、fin、term、und
 | R1 | lev 5、stig 10、acr 3 | 18 | **完成** |
 | R2 | punct 6、sign 4、cas 7 | 17 | **完成** |
 | R3 | fin 9、term 6、und 4 | 19 | **完成** |
-| R4 | clud 8、flu 9、enni 2 | 19 | 進行中 |
-| R5 | cur 14、spars 3、lav 5 | 22 | 未開始 |
+| R4 | clud 8、flu 9、enni 2 | 19 | **完成** |
+| R5 | cur 14、spars 3、lav 5 | 22 | 進行中 |
 | R6 | fund 7、chron 4、journ 4 | 15 | 未開始 |
 
 ### 接手怎麼做
@@ -148,6 +148,18 @@ lev、stig、acr、punct、sign、cas、fin、term、und
 | finality | 確定性 | 易與 certainty（心裡篤定）混。這個字指結果已成定局、不可逆 |
 | affinity | 相像，喜好 | 「喜好」太弱。指天生的投緣、親近傾向，不等於一般的 like |
 | finalist | 入圍者 | 專指進入最後一輪決賽者，不是任何階段的入選者 |
+| exclusive | 獨家的，高檔的 | 只給了兩個引申義。核心義「排他的、互不相容的」（mutually exclusive）沒收進來，那才是常考的 |
+
+### 兩部分重複收錄的字
+
+課本第一部分（字首）與第二部分（字根）會收到同一個字。`id` 就是 word 本身、
+也是 SRS 的 key，兩筆都出貨會讓同一張卡的複習紀錄撞在一起。
+`build_vocab_prefix.py` 會**保留先出現的那筆**（＝第一部分，通常已經有複習紀錄）、
+把後者捨棄並印出來，`vocab.test.ts` 有一條測試守著，重複就紅燈。
+
+| 字 | 保留在 | 捨棄 | 說明 |
+| :--- | :--- | :--- | :--- |
+| disclose | dis-（第一部分，IMG_1129） | clud（第二部分，IMG_1713） | 兩處都是課本原有，字沒有漏掉，只是不重複發卡 |
 
 ### 完整性怎麼保證（不必人工比對）
 

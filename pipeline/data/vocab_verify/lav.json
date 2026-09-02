@@ -1,0 +1,55 @@
+[
+  {
+    "word": "dilute",
+    "parts": [
+      { "text": "di-", "gloss": "分開" },
+      { "text": "lut", "gloss": "洗" }
+    ],
+    "etymology": "源自拉丁文 dilutus（動詞 diluere「沖走、溶解、稀釋」的過去分詞），由 dis-「分開」加上 lavere「洗」的複合形 -luere 構成，1550 年代先有「削弱、沖淡力量」的比喻義，1660 年代才出現「使變稀薄」的字面義。",
+    "us_ipa": "/daɪˈlut/",
+    "etymonline_url": "https://www.etymonline.com/word/dilute",
+    "notes": "老師標的 di- 其實是 dis-「分開」在 l 前縮成 dī-，不是另一個字首。字根走的是 luere（-luere 複合形）這一支而非 lavare，所以拼作 lu 不是 lav，兩者同源於 PIE *leue-「洗」。中文釋義正確。"
+  },
+  {
+    "word": "deluge",
+    "parts": [
+      { "text": "de-", "gloss": "離開" },
+      { "text": "lug", "gloss": "洗" }
+    ],
+    "etymology": "源自古法文 deluge（更早的形式為 deluve），來自拉丁文 diluvium「洪水、氾濫」，即 dis-「離開」加上 lavere「洗」的複合形 -luere，本義是「大水把東西沖走」，1590 年代才由名詞轉出動詞義「淹沒、如洪水般湧來」。",
+    "us_ipa": "/ˈdɛljudʒ/",
+    "etymonline_url": "https://www.etymonline.com/word/deluge",
+    "notes": "與老師的拆法不符：Etymonline 的字首是 dis-「離開」（拉丁 diluvium），不是 de-「向下」，拼成 de- 是古法文把 di- 改寫的結果，所以本字其實和 dilute 同一個字首同一個字根。字根同樣走 luere 支，不是 lavare。中文釋義正確。"
+  },
+  {
+    "word": "lavish",
+    "parts": [
+      { "text": "lav", "gloss": "洗" }
+    ],
+    "etymology": "中古英語借自古法文 lavasse、lavache「傾盆大雨、豪雨」，其字根為 laver「洗」，再上溯拉丁文 lavare「洗」，15 世紀中葉由「大雨如注」的意象引申為「像水傾瀉一樣揮霍、豐厚給予」，1540 年代再由形容詞轉作動詞。",
+    "us_ipa": "/ˈlævɪʃ/",
+    "etymonline_url": "https://www.etymonline.com/word/lavish",
+    "notes": "陷阱字：字尾 -ish 不是英文形容詞字尾（如 childish），而是法文 lavasse 詞尾被英語化的殘留，不可拆成 lave + -ish。語意鏈是「洗→傾盆大雨→傾瀉→大量給予／揮霍」，屬 lavare 直系，與 dilute／deluge／ablution 的 luere 支分屬同源的兩形。中文釋義正確。"
+  },
+  {
+    "word": "lavatory",
+    "parts": [
+      { "text": "lav", "gloss": "洗" }
+    ],
+    "etymology": "源自晚期拉丁文 lavatorium「洗滌之處」（形容詞 lavatorius「與洗滌有關的」的名詞化），字根為 lavare「洗」的過去分詞語幹 lavat-，14 世紀末原指「洗臉盆」，1650 年代擴為「盥洗室」，1864 年起成為「廁所」的委婉語。",
+    "us_ipa": "/ˈlævətɔɹi/",
+    "etymonline_url": "https://www.etymonline.com/word/lavatory",
+    "notes": ""
+  },
+  {
+    "word": "ablution",
+    "parts": [
+      { "text": "ab-", "gloss": "離開" },
+      { "text": "lut", "gloss": "洗" }
+    ],
+    "etymology": "14 世紀末經拉丁文 ablutionem（主格 ablutio）「洗滌、潔淨」而來，源自動詞 abluere「洗掉、洗去、以水滌淨」，由 ab-「離開」加 luere「洗」構成，最初專指宗教儀式性的淨身洗禮。",
+    "us_ipa": "/əˈbluʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/ablution",
+    "notes": "課本中文「盥洗，沐浴」略失焦：Etymonline 的首義是「儀式性的洗滌（ritual washing）」，指宗教淨身禮，日常義多用複數 ablutions 才作「梳洗」。字根是 luere 支，故拼作 lut 不是 lav，與 lavare 同源但形式不同。"
+  }
+]

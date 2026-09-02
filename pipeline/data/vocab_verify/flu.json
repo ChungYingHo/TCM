@@ -1,0 +1,97 @@
+[
+  {
+    "word": "fluent",
+    "parts": [
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "1580 年代進入英語，源自拉丁文 fluere（流動、奔流）的現在分詞 fluentem，本義是「流動的、不僵硬的」，用在說話上就是像水流一樣順暢不卡的「流利」。",
+    "us_ipa": "/ˈfluənt/",
+    "etymonline_url": "https://www.etymonline.com/word/fluent",
+    "notes": ""
+  },
+  {
+    "word": "fluctuation",
+    "parts": [
+      { "text": "fluct", "gloss": "波浪、流" }
+    ],
+    "etymology": "15 世紀中經古法文 fluctuacion 借自拉丁文 fluctuationem，來自 fluctuare（起浪、如波浪般起伏），而 fluctuare 又出自 fluctus（波浪、湧流），也就是 fluere（流動）的過去分詞，所以字面畫面就是水面一波一波的起落。",
+    "us_ipa": "/flʌkt͡ʃuːˈeɪʃən/",
+    "etymonline_url": "https://www.etymonline.com/word/fluctuation",
+    "notes": "老師標的 fluct(flow) 方向正確但不夠精確：fluct- 並非直接取自 fluere，而是繞經名詞 fluctus（波浪），所以它精確的意思是「波浪」而不只是「流」，這也是本組唯一走 fluct- 這條詞幹的字。"
+  },
+  {
+    "word": "affluent",
+    "parts": [
+      { "text": "af-", "gloss": "往、向" },
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "15 世紀初經古法文 afluent 借自拉丁文 affluentem（豐盛的、富足的），是 affluere 的現在分詞，由 ad-（往、向）同化成 af- 再加 fluere（流動）組成，字面就是「往這邊流過來」，早期指神恩「豐沛湧來」，1753 年起因為財富像水一樣源源流進而定型為「富裕的」。",
+    "us_ipa": "/ˈæfluːənt/",
+    "etymonline_url": "https://www.etymonline.com/word/affluent",
+    "notes": ""
+  },
+  {
+    "word": "confluence",
+    "parts": [
+      { "text": "con-", "gloss": "一起" },
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "15 世紀初借自晚期拉丁文 confluentia，源頭是拉丁文 confluere（一起流），由 com（共同、一起）同化成 con- 加 fluere（流動）組成，本義就是兩條以上河流匯合、以及它們匯合的那個地點。",
+    "us_ipa": "/ˈkɑnˌfluəns/",
+    "etymonline_url": "https://www.etymonline.com/word/confluence",
+    "notes": ""
+  },
+  {
+    "word": "influx",
+    "parts": [
+      { "text": "in-", "gloss": "進入" },
+      { "text": "flux", "gloss": "流" }
+    ],
+    "etymology": "1620 年代經法文 influx 或直接借自晚期拉丁文 influxus（流入），取自拉丁文 influere（流入）的過去分詞詞幹，influere 由 in-（進入、往上）加 fluere（流動）組成，起初用於河水、空氣與光線，1650 年代才開始用來講人潮湧入。",
+    "us_ipa": "/ˈɪnˌflʌks/",
+    "etymonline_url": "https://www.etymonline.com/word/influx",
+    "notes": "拼法差異的原因：拉丁文 fluere 的現在分詞詞幹是 flu-（fluens／fluentem），過去分詞詞幹則是 flux-（fluxus）。本組凡走現在分詞或形容詞路線的字都拼 flu-（fluent、affluent、confluence、effluent、superfluous、fluid），只有 influx 這個名詞取自過去分詞詞幹，所以拼成 flux-，同源的還有 flux、influence 的親戚 influenza 等。"
+  },
+  {
+    "word": "fluid",
+    "parts": [
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "15 世紀初經古法文 fluide 借自拉丁文 fluidus（會流的、濕潤的），直接來自 fluere（流動），1640 年代起有「不固定、不僵硬」的比喻義，1660 年代由波以耳（Boyle）用作名詞，指「粒子可自由移動的物質」，也就是液體或氣體。",
+    "us_ipa": "/ˈfluɪd/",
+    "etymonline_url": "https://www.etymonline.com/word/fluid",
+    "notes": ""
+  },
+  {
+    "word": "flush",
+    "parts": [
+      { "text": "flush", "gloss": "猛衝、湧出" }
+    ],
+    "etymology": "最早是中古英語 flusshen（13 世紀中，「急速或猛烈地移動、衝、竄」），Etymonline 給的來源是「可能模擬鳥翅拍動的聲音」的擬聲詞，15 世紀末衍生出「驚起（鳥）使其飛竄」，1540 年代的「水猛然噴湧」被認為是同一個字，形容詞「充盈的、齊平的」則是它的比喻用法，只有撲克牌「同花」那個 flush 可能仿自古法文 flux。",
+    "us_ipa": "/flʌʃ/",
+    "etymonline_url": "https://www.etymonline.com/word/flush",
+    "notes": "⚠️ 陷阱字，老師把 flush 歸進 flu(flow) 這組並不成立。Etymonline 的 flush 條目從頭到尾沒有把任何義項接到拉丁文 fluere：動詞 flush 出自中古英語 flusshen，來源標為「可能是擬聲（模擬鳥翅拍動聲）」；「一陣水湧出」「臉紅」「充盈／齊平」都是從這個擬聲動詞內部發展或比喻出來的。唯一沾到 flu- 家族的是牌戲「同花」的 flush，Etymonline 說它「來源不確定，或許仿造法文 flus／古法文 flux」，但緊接著註明 OED（1989）認為「大概與古法文 flux 無關」，而英文的拼法「多半是受 flush (v.1) 影響」。Etymonline 引用的 Century Dictionary 也說各個 flush 條目「多屬方言、口語或行業用語」、「現在已無法完全理清」，Weekley 更直接稱它是「非常令人困惑的字」。結論：flush 語意上像「流」純屬巧合（擬聲＋同音異源義項混同），建議在字卡上標為「易混淆／假同源」，不要當 fluere 的同源字背。（英文釋義「一陣；臉紅，沖水」本身沒問題。）"
+  },
+  {
+    "word": "superfluous",
+    "parts": [
+      { "text": "super-", "gloss": "超過、在上" },
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "15 世紀初借自拉丁文 superfluus（不必要的），字面義是「滿出來、溢流」，由 super（在上、超過）加 fluere（流動）組成，水多到溢出容器就是超過所需的量，因此引申成「多餘的、不必要的」，更早的英語形式 superflue 在 14 世紀末經古法文借入。",
+    "us_ipa": "/suˈpɝfluəs/",
+    "etymonline_url": "https://www.etymonline.com/word/superfluous",
+    "notes": ""
+  },
+  {
+    "word": "effluent",
+    "parts": [
+      { "text": "ef-", "gloss": "向外" },
+      { "text": "flu", "gloss": "流" }
+    ],
+    "etymology": "15 世紀中借自拉丁文 effluentem（流出的），是 effluere（流出）的現在分詞，由 ex（向外、出）同化成 ef- 再加 fluere（流動）組成，1859 年起當名詞指「流出之物」，1930 年起專指工業廢液、廢水。",
+    "us_ipa": "/ˈɛfluənt/",
+    "etymonline_url": "https://www.etymonline.com/word/effluent",
+    "notes": ""
+  }
+]

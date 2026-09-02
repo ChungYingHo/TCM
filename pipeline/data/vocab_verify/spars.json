@@ -1,0 +1,34 @@
+[
+  {
+    "word": "sparse",
+    "parts": [
+      { "text": "spars", "gloss": "散布" }
+    ],
+    "etymology": "sparse 源自拉丁文 sparsus（動詞 spargere「灑、散布」的過去分詞），1727 年進入英文，表示「稀疏散布、間隔頗大」。",
+    "us_ipa": "/spɑːɹs/",
+    "etymonline_url": "https://www.etymonline.com/word/sparse",
+    "notes": "sparse、disperse、intersperse 三字同源，皆來自拉丁文 spargere／sparsus。sparse 直接源自未加詞綴的形式，保留字根母音 -a-。disperse、intersperse 因前綴 dis-、inter- 使該音節落入字中位置，依拉丁文複合詞常見的母音弱化規律轉為 -e-（同一現象也見於 ad+spargere 構成的 aspergere），因此拼成 -spers-。三者詞根其實相同，只是複合與否造成拼法不同。"
+  },
+  {
+    "word": "disperse",
+    "parts": [
+      { "text": "dis", "gloss": "向四方" },
+      { "text": "spers", "gloss": "散布" }
+    ],
+    "etymology": "disperse 源自拉丁文 dispersus，是由 dis「向四方」與 spargere「散布」複合而成的動詞 dispergere 之過去分詞，14世紀晚期經古法語 disperser 進入英文，原意為「向四方驅散」。",
+    "us_ipa": "/dɪˈspɝs/",
+    "etymonline_url": "https://www.etymonline.com/word/disperse",
+    "notes": "字根 spers 與 sparse 的 spars 同源，皆出自 spargere，因 dis- 前綴觸發拉丁文複合詞常見的母音弱化（-a- 轉為 -e-）才拼成 -spers-，並非另一個字根。教科書釋義「傳播」對應的是「散布、傳布」一類引申用法（如 disperse information「傳布資訊」），核心語意仍是「使四散、驅散」，與「驅散」「四散」相符，並無錯誤。"
+  },
+  {
+    "word": "intersperse",
+    "parts": [
+      { "text": "inter", "gloss": "在…之間" },
+      { "text": "spers", "gloss": "散布" }
+    ],
+    "etymology": "intersperse 源自拉丁文 interspersus，是 inter「在…之間」與 spargere「散布」複合而成之過去分詞，1560 年代進入英文，字面義為「散布於其間」。",
+    "us_ipa": "/ˌɪntɚˈspɝs/",
+    "etymonline_url": "https://www.etymonline.com/word/intersperse",
+    "notes": "字根 spers 與 disperse 的 spers、sparse 的 spars 同源，皆來自 spargere，因 inter- 前綴使母音 -a- 弱化為 -e-。教科書釋義「散布，穿插」與字面「散布於…之間」相符，並無錯誤。"
+  }
+]

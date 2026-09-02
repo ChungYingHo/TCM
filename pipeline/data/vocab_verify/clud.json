@@ -1,0 +1,89 @@
+[
+  {
+    "word": "conclusive",
+    "parts": [
+      { "text": "con-", "gloss": "一起" },
+      { "text": "clus", "gloss": "關閉" }
+    ],
+    "etymology": "1610 年代借自法語 conclusif 與晚期拉丁語 conclusivus，建立在拉丁語 concludere（com「一起」＋ claudere「關閉」）的過去分詞詞幹 conclus- 之上，本義「把話收攏關起來」，1640 年代起引申為「決定性的、無可辯駁的」。",
+    "us_ipa": "/kənˈkluːsɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/conclusive",
+    "notes": "用的是過去分詞詞幹 -clus-（拉丁 clausus），動詞 conclude 才用現在詞幹 -clud-，兩者拼字不可互換。"
+  },
+  {
+    "word": "exclude",
+    "parts": [
+      { "text": "ex-", "gloss": "向外" },
+      { "text": "clud", "gloss": "關閉" }
+    ],
+    "etymology": "14 世紀中期借自拉丁語 excludere，由 ex「向外」加 claudere「關閉」構成，字面就是「把人關在門外」，即拒絕其進入或參與。",
+    "us_ipa": "/ɪksˈkluːd/",
+    "etymonline_url": "https://www.etymonline.com/word/exclude",
+    "notes": "動詞用現在詞幹 -clud-，衍生的 exclusion／exclusive 一律換成過去分詞詞幹 -clus-，這組 clud／clus 交替是本組字根的核心規則。"
+  },
+  {
+    "word": "exclusive",
+    "parts": [
+      { "text": "ex-", "gloss": "向外" },
+      { "text": "clus", "gloss": "關閉" }
+    ],
+    "etymology": "15 世紀中期借自中世紀拉丁語 exclusivus，建立在 excludere（ex「向外」＋ claudere「關閉」）的過去分詞詞幹 exclus- 之上，1760 年代起用於專利與特許權，1822 年起指社交圈「不讓外人進來」。",
+    "us_ipa": "/ɪkˈskluːsɪv/",
+    "etymonline_url": "https://www.etymonline.com/word/exclusive",
+    "notes": "用過去分詞詞幹 -clus-，與動詞 exclude 的 -clud- 成對。另外課本中文只給「獨家的、高檔的」兩個引申義，核心義「排他的、互不相容的」（mutually exclusive 互斥）沒收進來，考試常考的是核心義。"
+  },
+  {
+    "word": "preclude",
+    "parts": [
+      { "text": "pre-", "gloss": "在前" },
+      { "text": "clud", "gloss": "關閉" }
+    ],
+    "etymology": "1610 年代借自拉丁語 praecludere，由 prae「在前」加 claudere「關閉」構成，字面是「事先把門關上」，即以先發動作阻止某事發生。",
+    "us_ipa": "/pɹɪˈkluːd/",
+    "etymonline_url": "https://www.etymonline.com/word/preclude",
+    "notes": "用現在詞幹 -clud-，名詞形換成過去分詞詞幹 preclusion。1620 年代曾有「關閉、阻擋通路」的字面義，現已近乎廢棄。"
+  },
+  {
+    "word": "closet",
+    "parts": [
+      { "text": "clos", "gloss": "關閉" }
+    ],
+    "etymology": "14 世紀晚期借自古法語 closet「小封閉空間、私室」，是 clos「圍起來的地方」的指小詞，clos 又源自拉丁語 clausum「封閉空間」，即 claudere「關閉」的過去分詞 clausus，原指讀書祈禱的小密室，1610 年代起指儲物小間。",
+    "us_ipa": "/ˈklɑzɪt/",
+    "etymonline_url": "https://www.etymonline.com/word/closet",
+    "notes": "與 clud／clus 同一字根，但走的是法語路線（拉丁 clausum → 古法語 clos ＋指小詞尾 -et），所以拼字上完全看不出 clud，別誤當成另一個字根。1952 年起衍生出「藏起來不說」之義，1963 年出現 come out of the closet。"
+  },
+  {
+    "word": "disclose",
+    "parts": [
+      { "text": "dis-", "gloss": "相反" },
+      { "text": "clos", "gloss": "關閉" }
+    ],
+    "etymology": "14 世紀晚期借自古法語 desclos，是 desclore 的過去分詞，由 des-「相反、去除」加 clore「關閉」構成，字面是「解除關閉」，也就是打開來讓別人看見。",
+    "us_ipa": "/dɪsˈkloʊz/",
+    "etymonline_url": "https://www.etymonline.com/word/disclose",
+    "notes": "此處 dis- 是「相反、還原」而非課本標的「not」，disclose ＝ un-close ＝ 把關著的打開，若照「否定」理解反而會想成「關起來」，是本組最好用的教學點。字根同樣走法語 clore 路線，故拼作 clos。"
+  },
+  {
+    "word": "recluse",
+    "parts": [
+      { "text": "re-", "gloss": "加強" },
+      { "text": "clus", "gloss": "關閉" }
+    ],
+    "etymology": "約 1200 年借自古法語 reclus「隱修者」，源自晚期拉丁語 reclusus，即 recludere（re- 在此作加強語氣＋ claudere「關閉」）的過去分詞，原指為宗教默想而把自己關起來、與世隔絕的人。",
+    "us_ipa": "/ˈɹɛkluːs/",
+    "etymonline_url": "https://www.etymonline.com/word/recluse",
+    "notes": "Etymonline 指出此處 re- 是加強語氣，不是課本標的「back」。且古典拉丁語 recludere 本義相反，是「打開」，到晚期拉丁語才轉成「關起來」，這個反轉是本字最大的陷阱。美式重音兩讀皆通，/ɹɪˈkluːs/ 亦常見。用過去分詞詞幹 -clus-。"
+  },
+  {
+    "word": "claustrophobia",
+    "parts": [
+      { "text": "claustr", "gloss": "封閉處" },
+      { "text": "phobia", "gloss": "恐懼" }
+    ],
+    "etymology": "1879 年由瑞士裔英籍醫師 Benjamin Ball 造出，前段取拉丁語 claustrum「門閂、封閉之處」（源自 claudere「關閉」的過去分詞幹），後段接希臘語 -phobia「恐懼」，指「被關在密閉空間的病態恐懼」。",
+    "us_ipa": "/ˌklɔːstrəˈfoʊbiə/",
+    "etymonline_url": "https://www.etymonline.com/word/claustrophobia",
+    "notes": "拉丁字根＋希臘字尾的混血造字，年代很晚（1879）。claustr- 是過去分詞幹 claus- 加名詞尾 -trum，與 cloister（修道院迴廊）同源，因此屬 clus 一系而非 clud 一系。"
+  }
+]

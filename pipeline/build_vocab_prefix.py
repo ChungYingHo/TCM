@@ -27,6 +27,23 @@ def main() -> None:
     for d in SRC_DIRS:  # 目錄順序＝課本兩大部分的順序
         for f in sorted(d.glob("*.json")):  # 檔名前綴數字＝組內顯示順序
             src.extend(json.loads(f.read_text(encoding="utf-8")))
+
+    # 課本兩大部分會收到同一個字（例如 disclose 既在字首 dis- 也在字根 clud），
+    # 但 id 就是 word 本身、也是 SRS 的 key，重複會讓兩張卡的複習紀錄撞在一起。
+    # 保留先出現的那筆（＝第一部分字首，通常已經在 Aira 的 SRS 裡有紀錄），
+    # 並把捨棄的印出來——不可以靜默丟字。
+    seen, unique, dropped = {}, [], []
+    for e in src:
+        if e["word"] in seen:
+            dropped.append(f'   {e["word"]}: 保留 {seen[e["word"]]} 組，捨棄 {e["prefixId"]} 組的重複條目')
+        else:
+            seen[e["word"]] = e["prefixId"]
+            unique.append(e)
+    if dropped:
+        print(f"兩部分重複、已保留先出現者（{len(dropped)}）：")
+        print("\n".join(dropped))
+    src = unique
+
     words = []
     for e in src:
         words.append(
