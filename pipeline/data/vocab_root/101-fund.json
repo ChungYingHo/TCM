@@ -1,0 +1,245 @@
+[
+  {
+    "word": "confusion",
+    "prefixId": "fund",
+    "pos": "n.",
+    "phonetic": "kənˈfjuʒən",
+    "zh": "混亂，混淆",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "一起"
+      },
+      {
+        "text": "fus",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "約 1300 年經古法文 confusion 借自拉丁文 confusionem（混合、攙雜、失序），源頭是拉丁文 confundere（倒在一起、攪混），由 com-（一起）加 fundere（倒、熔）組成，字面就是把東西倒成一團分不出彼此，最初在英文指「毀滅、傾覆」，14 世紀中轉為「兩種以上東西混在一起」，1590 年代才定型為心智上的「思緒不清、困惑」。",
+    "derivatives": [
+      {
+        "word": "confuse",
+        "pos": "v.",
+        "zh": "搞混，使困惑"
+      }
+    ],
+    "example": "To avoid confusion, the twins never wore the same clothes.",
+    "example_zh": "為了避免混淆，這對雙胞胎從不穿同樣的衣服。",
+    "sources": {
+      "page": "IMG_1717",
+      "etymonline": "https://www.etymonline.com/word/confusion",
+      "ipa": "/kənˈfjuːʒən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "拼法說明：英文寫 fus- 而不是 fund-，是因為它承接拉丁文 confundere 的過去分詞 confusus，本組凡走過去分詞路線的字（confusion／infuse／effusive／profuse／perfusion）都拼 fus-，只有 confound 走鼻音化的現在式詞幹 fund-。另 confusion 與同組的 confound 出自同一個拉丁動詞 confundere，只是入英文的路線不同。"
+    }
+  },
+  {
+    "word": "infuse",
+    "prefixId": "fund",
+    "pos": "v.",
+    "phonetic": "ɪnˈfjuz",
+    "zh": "注入，浸泡",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "進入"
+      },
+      {
+        "text": "fus",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "15 世紀初以 infusen 的形式進入英文，意為「倒進去、把東西浸泡在液體裡」，借自拉丁文 infusus，也就是 infundere（倒入、灌入、混和）的過去分詞，由 in-（進入）加 fundere（倒、熔）組成，所以「注入」和泡茶那種「浸泡」本來就是同一個把液體倒進去的畫面。",
+    "derivatives": [
+      {
+        "word": "infusion",
+        "pos": "n.",
+        "zh": "注入，浸泡"
+      }
+    ],
+    "example": "His arrival infused new life and energy into the group.",
+    "example_zh": "他的到來為這個團隊注入了新的生命與活力。",
+    "sources": {
+      "page": "IMG_1717",
+      "etymonline": "https://www.etymonline.com/word/infuse",
+      "ipa": "/ɪnˈfjuːz/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "extraExamples": [
+        "The tea should be allowed to infuse for a few minutes."
+      ]
+    }
+  },
+  {
+    "word": "effusive",
+    "prefixId": "fund",
+    "pos": "a.",
+    "phonetic": "ɪˈfjusɪv",
+    "zh": "熱情洋溢的",
+    "parts": [
+      {
+        "text": "ef",
+        "gloss": "向外"
+      },
+      {
+        "text": "fus",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "1660 年代造出，用 -ive 接上拉丁文 effundere（傾瀉而出、揮霍、浪費）的詞幹 effus-，而 effundere 由 ex（向外）同化成 ef- 再加 fundere（倒）組成，起初形容言詞「滔滔不絕地流瀉出來」，1863 年起才專指感情大量外露的「熱情洋溢」。",
+    "derivatives": [
+      {
+        "word": "effusiveness",
+        "pos": "n.",
+        "zh": "熱情洋溢"
+      }
+    ],
+    "example": "She blushed at her supervisor's effusive praise.",
+    "example_zh": "她因為主管熱情洋溢的稱讚而臉紅了。",
+    "sources": {
+      "page": "IMG_1717",
+      "etymonline": "https://www.etymonline.com/word/effusive",
+      "ipa": "/ɪˈfjuːsɪv/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  },
+  {
+    "word": "futile",
+    "prefixId": "fund",
+    "pos": "a.",
+    "phonetic": "ˈfjutəl",
+    "zh": "徒勞的，無效的",
+    "parts": [
+      {
+        "text": "fut",
+        "gloss": "倒出"
+      }
+    ],
+    "etymology": "1550 年代經法文 futile 或直接借自拉丁文 futilis／futtilis（無用的、白費的），Etymonline 說這是比喻用法，字面義為「容易倒出來的、一下就空掉的」，該拉丁形容詞當名詞時指「上寬下尖的水器」，因而引申出「會漏的、靠不住的」，字源明白標為出自 fundere（倒、熔），再溯至鼻音化的 PIE 字根 *gheu-（倒）。",
+    "derivatives": [
+      {
+        "word": "futility",
+        "pos": "n.",
+        "zh": "徒勞"
+      }
+    ],
+    "example": "All our efforts proved futile.",
+    "example_zh": "我們所有的努力都證明是徒勞的。",
+    "sources": {
+      "page": "IMG_1717",
+      "etymonline": "https://www.etymonline.com/word/futile",
+      "ipa": "/ˈfjuːtəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "查證結果：這個字**不是**假同源字，可以安心歸進本組。Etymonline 的 futile 條目原文直接寫「from fundere『to pour, melt』，from nasalized form of PIE root *gheu-『to pour』」，整條**沒有出現 perhaps／probably／uncertain 之類的保留字眼**，而且 *gheu- 的字根頁把 futile、futility 都列進衍生字清單裡，與 confound、infuse、effusive、profuse、perfusion 同列。唯一要提醒學生的是拼法：本組其他字看得到 fus-／found-，只有這個字縮成 fut-，Etymonline 也沒有把 futilis 正式切成「fut- ＋ -ilis」，老師標的 fut（pour） 是方向正確的教學簡化。另發音要注意美英不同，美式多唸 /ˈfjuːtəl/（第二音節輕讀），英式則是 /ˈfjuːtaɪl/。教材中文「徒勞的、無效的」正確。"
+    }
+  },
+  {
+    "word": "confound",
+    "prefixId": "fund",
+    "pos": "v.",
+    "phonetic": "kənˈfaʊnd",
+    "zh": "使困惑",
+    "parts": [
+      {
+        "text": "con",
+        "gloss": "一起"
+      },
+      {
+        "text": "found",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "約 1300 年經盎格魯法文 confoundre 與古法文 confondre（12 世紀，壓垮、毀掉、使蒙羞、弄得亂七八糟）進入英文，最初意為「詛咒、徹底毀滅」，源頭是拉丁文 confundere（攪混、混雜成一團、弄亂），由 com（一起）同化後加 fundere（倒）組成，字面同樣是「倒在一起」，14 世紀晚期才轉出今天主要的比喻義「使人心智混亂、困惑」。",
+    "derivatives": [],
+    "example": "The strategy confounded our opponents.",
+    "example_zh": "這個策略讓我們的對手困惑不已。",
+    "sources": {
+      "page": "IMG_1717",
+      "etymonline": "https://www.etymonline.com/word/confound",
+      "ipa": "/kənˈfaʊnd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "⚠️ 拼法陷阱，務必和本專案先前的 `found/fund（底部）` 那組切開。①本字的 -found 來自拉丁文 fundere（倒、熔）＞古法文 confondre，**與 fund（資金）、foundation（地基）、found（建立）無關**——後者出自完全不同的拉丁文 fundus（底部）與 PIE 字根 *bhudh-，Etymonline 的 fund 條目通篇沒提到 fundere，*gheu- 的衍生字清單也**沒有** fund。②英文 found 剛好有一個同形詞屬於本組：found （v.2）「熔煉、鑄造金屬」（＞ foundry 鑄造廠），出自古法文 fondre、拉丁文 fundere（過去分詞 fusus），這才是和 confound 同源的那個 found。③confound 與 confuse 是 doublet（同源雙式字）：兩者同出拉丁文 confundere，confound 走古法文的現在式詞幹 fund-／found-，confuse 則是從過去分詞 confusus 來的 confused 在 16 世紀中逆構出來的，所以本組只有 confound 拼 found-，其餘一律拼 fus-。教材中文「使困惑」正確。"
+    }
+  },
+  {
+    "word": "profuse",
+    "prefixId": "fund",
+    "pos": "a.",
+    "phonetic": "prəˈfjus",
+    "zh": "豐富的，大量的",
+    "parts": [
+      {
+        "text": "pro",
+        "gloss": "向前、外"
+      },
+      {
+        "text": "fus",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "15 世紀初借自拉丁文 profusus（鋪張的、揮霍的、浪費的），字面義是「傾瀉而出」，取自 profundere（往前倒出去）的過去分詞，由 pro（向前、往外）加 fundere（倒）組成，最初在英文指「揮霍無度、給得過了頭」，約 1600 年起才有「豐沛、大量、源源不絕」這種中性偏正面的用法。",
+    "derivatives": [
+      {
+        "word": "profusion",
+        "pos": "n.",
+        "zh": "豐富，大量"
+      }
+    ],
+    "example": "The victims were profuse in their thanks to the donors.",
+    "example_zh": "受災者對捐助者表達了滿滿的謝意。",
+    "sources": {
+      "page": "IMG_1718",
+      "etymonline": "https://www.etymonline.com/word/profuse",
+      "ipa": "/prəˈfjuːs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教材中文「豐富的、大量的」不算錯（對應 1600 年起的 bountiful、abundant、copious），但漏掉了這個字更早、也更常用的「多到滿出來、近乎過量」語感——profuse apologies（一再道歉）、profuse sweating（大汗淋漓）都是「像水傾瀉出來」那種過剩的多，不是單純的「豐富」。"
+    }
+  },
+  {
+    "word": "perfusion",
+    "prefixId": "fund",
+    "pos": "n.",
+    "phonetic": "pɚˈfjuʒən",
+    "zh": "布滿，灌注",
+    "parts": [
+      {
+        "text": "per",
+        "gloss": "穿透、遍"
+      },
+      {
+        "text": "fus",
+        "gloss": "倒、熔"
+      }
+    ],
+    "etymology": "1570 年代經法文 perfusion 或直接借自拉丁文 perfusionem（澆灌其上），是 perfundere（從頭澆下、澆遍）的過去分詞詞幹構成的動作名詞，由 per（穿透、遍及）加 fundere（倒）組成，Etymonline 給的字義是「a pouring through, a causing to permeate」，字面就是液體「澆透、貫流而過」，也正是 Wiktionary 所收醫學義「血液或藥液灌流通過組織器官」的由來。",
+    "derivatives": [
+      {
+        "word": "perfuse",
+        "pos": "v.",
+        "zh": "使充滿，灌注"
+      }
+    ],
+    "example": "Perfusion of an organ during transplant can improve the outcome of the operation.",
+    "example_zh": "移植過程中對器官進行灌注，可以改善手術的結果。",
+    "sources": {
+      "page": "IMG_1718",
+      "etymonline": "https://www.etymonline.com/word/perfusion",
+      "ipa": "/pɚˈfjuːʒən/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教材中文「布滿，灌注」方向沒錯（對得上 Etymonline 的「a causing to permeate」），但語感要補一句：現代英文的 perfusion 幾乎專用於醫學／生理的「灌流、灌注」（Wiktionary 釋為體液通過循環系統、或藥物營養經血流送達器官組織），中醫考科遇到的多半是這個義項，「布滿」是較偏字面的舊義，別當主要意思背。"
+    }
+  }
+]

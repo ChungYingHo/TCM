@@ -1,0 +1,45 @@
+[
+  {
+    "word": "journal",
+    "parts": [
+      { "text": "journ", "gloss": "日" }
+    ],
+    "etymology": "14世紀中葉借自盎格魯法語 jurnal 與古法語 jornal「一日、一天的行程或工作」，本是形容詞「每日的」的名詞化，上溯晚期拉丁文 diurnalis「每日的」與拉丁文 dies「日」（古典拉丁文 diurnus「白天的、逐日的」），拉丁文的 d 在 -iu- 前使 i 子音化為 j 並終致 d 脫落而成 journ-，字義則由「教會日課書」（14世紀中葉）走向「逐日記帳的簿冊」（15世紀晚期）、「私人日記」（約1600年，法語先有此義）與「每日刊物」（1728年）。",
+    "us_ipa": "/ˈdʒɝnəl/",
+    "etymonline_url": "https://www.etymonline.com/word/journal",
+    "notes": "課本中文只給「學術期刊」，那是 journal 最窄的一個現代義。依 Etymonline，本字的核心是「日、每日」，語意鏈為日課書→逐日帳簿→日記→每日刊物→泛指定期刊物，因此「日記、日誌、航海／交易流水帳」同樣是常考義，複習時不要把 journal 只記成期刊。"
+  },
+  {
+    "word": "diurnal",
+    "parts": [
+      { "text": "di", "gloss": "日" },
+      { "text": "urn", "gloss": "表時間" }
+    ],
+    "etymology": "14世紀晚期借自晚期拉丁文 diurnalis「每日的」，其源為拉丁文 dies「日」與形容詞 diurnus「白天的、逐日的」（再上溯原始印歐語詞根 *dyeu-「發光」），本義「每日發生的」，15世紀初增出「在一日之內完成的」，到1620年代才專指「屬於白晝的」，並以此與 nocturnal 相對。",
+    "us_ipa": "/daɪˈɝnəl/",
+    "etymonline_url": "https://www.etymonline.com/word/diurnal",
+    "notes": "課本把字根拆成 di(day)+urn(day)，等於把「日」算了兩次。依 Etymonline，只有 di-（拉丁文 dies「日」）表「日」，-urn- 是拉丁文用來構成「時間形容詞」的後綴 -urnus，本身不表「日」，同一個後綴也出現在 nocturnal。課本中文「白天的，每日的」正確，兩義都真實存在（每日的為本義，白天的為1620年代後起義）。另注意讀音為 /daɪˈɝnəl/，字首 di- 讀作「dye」而非「dee」。"
+  },
+  {
+    "word": "nocturnal",
+    "parts": [
+      { "text": "noct", "gloss": "夜" },
+      { "text": "urn", "gloss": "表時間" }
+    ],
+    "etymology": "15世紀晚期經古法語 nocturnal 或直接借自晚期拉丁文 nocturnalis，來自拉丁文 nocturnus「屬於夜的」，其核心是拉丁文 nox（屬格 noctis）「夜」，可再上溯原始印歐語詞根 *nekwt-「夜」（同源於希臘文 nyx、梵文 naktam、古英語 neaht），而 -urnus 只是拉丁文構成時間形容詞的後綴，與 dies「日」毫無關係。",
+    "us_ipa": "/nɑkˈtɝnəl/",
+    "etymonline_url": "https://www.etymonline.com/word/nocturnal",
+    "notes": "★字根陷阱：nocturnal 在語源上不屬於本組。Etymonline 明載其字根為拉丁文 nox／noct-「夜」，正好是本組 dies／diurnus「日」的相反詞，兩者只是共用拉丁文的時間形容詞後綴 -urnus，才拼出同樣的 -urnal 字尾。課本把它排進 journ／urn 組是刻意放的對照組（diurnal 白天的 vs nocturnal 夜間的），不是同字根字，記憶時要當成反義對照，絕不可套用老師提示的「urn = day」。課本中文「夜晚的，夜間活動的」正確。"
+  },
+  {
+    "word": "sojourn",
+    "parts": [
+      { "text": "so", "gloss": "稍微、一陣" },
+      { "text": "journ", "gloss": "日" }
+    ],
+    "etymology": "約1300年借自古法語 sojorner「暫住、逗留一段時間」，上溯通俗拉丁文 subdiurnare 字面義「消磨一天」，由 sub-「在下、直到」加 diurnare「持續、久留」構成（diurnare 源自 diurnus「一日的」、dies「日」），名詞「短暫停留、造訪」義在13世紀中葉已見於盎格魯法語，1804年另生出「靈魂在世間暫居」的宗教比喻用法。",
+    "us_ipa": "/ˈsoʊdʒɚn/",
+    "etymonline_url": "https://www.etymonline.com/word/sojourn",
+    "notes": "拼寫注意：字首寫作 so-，是拉丁文 sub- 經法語弱化後的形式，不可拼成 sub-。語意上這個 sub- 不是空間的「在…之下」，Etymonline 在 sojourn 條把它註為 sub-「under, until」，並在 sub- 條另列「a little, somewhat（稍微、些許）」一義，合起來 subdiurnare 是時間義的「待上一天、消磨一小段時間」，課本提示的 so-(under) 只對了字面、沒說中用法。課本中文「逗留，旅居；旅居期間」正確。美式重音有兩讀，名詞與動詞多讀 /ˈsoʊdʒɚn/，動詞另有 /soʊˈdʒɝn/。"
+  }
+]

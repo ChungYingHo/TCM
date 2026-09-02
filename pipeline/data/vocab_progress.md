@@ -48,7 +48,7 @@
 
 ---
 
-## 第二部分 依字根排列 — 進行中
+## 第二部分 依字根排列 — 兩批都已完成
 
 照片 IMG_1682 起，一張照片一個書頁。書頁 67 是這一部分的第一頁。
 來源檔 `pipeline/data/vocab_root/NN-<root>.json`，group 的 `kind` 為 `root`。
@@ -91,25 +91,24 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 26/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**已完成**
 
-照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 26 組。
+照片轉錄、例句中譯、字根組表、Etymonline／IPA 查證**全部完成**（`vocab.ts` order 78–106）。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **26/29 組**（157 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 156 字（`vocab.json` 共 722 字，disclose 與第一部分重複已去重） |
+| Etymonline／IPA 查證 | **29/29 組**（172 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 171 字（`vocab.json` 共 **737 字**，disclose 與第一部分重複已去重） |
 
-**查證完成的 26 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
-lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、cur、spars、lav
+**29 組全部完成**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、cur、spars、lav、
+fund、chron、journ
 
-**還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
-（組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
-每輪 3 個 worker，排程如下，做完一輪就把該列改成「完成」：
+2026-09-02 依 Aira 指示採「**一輪約 20 字、查證完就入庫**」的節奏（組裝＋build＋綠燈＋
+commit 走完一輪再開下一輪），每輪 3 個 worker，六輪全部完成：
 
 | 輪 | 組（字數） | 小計 | 狀態 |
 | :--- | :--- | --: | :--- |
@@ -118,7 +117,7 @@ lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、c
 | R3 | fin 9、term 6、und 4 | 19 | **完成** |
 | R4 | clud 8、flu 9、enni 2 | 19 | **完成** |
 | R5 | cur 14、spars 3、lav 5 | 22 | **完成** |
-| R6 | fund 7、chron 4、journ 4 | 15 | 進行中 |
+| R6 | fund 7、chron 4、journ 4 | 15 | **完成** |
 
 ### 接手怎麼做
 
@@ -152,6 +151,10 @@ lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、c
 | incur | 招致，蒙受，產生 | 「產生」誤導。incur 一定是主體自己招來、自己承受（後果、責任、費用），不能泛指產生某物 |
 | curriculum | 課程，課業 | 指整套修業課程規劃，單獨一門課要用 course。複數是 curricula |
 | ablution | 盥洗，沐浴 | 首義是宗教儀式性的淨身，日常「梳洗」義多用複數 ablutions |
+| journal | 學術期刊 | 只給了最窄的現代義。核心是「日」，日記／日誌／流水帳同樣常考 |
+| profuse | 豐富的，大量的 | 漏掉「多到滿出來、近乎過量」的語感（profuse apologies／sweating）|
+| perfusion | 布滿，灌注 | 現代英文幾乎專用於醫學的「灌流」，「布滿」是偏字面的舊義 |
+| chronic | 慢性的，長期的，習慣性的 | 核心是「長期」不是「嚴重」。「習慣性的」是引申的次要義 |
 
 ### 課本詞素標示可訂正（第二批，各字 `sources.rootNote` 都記了）
 
@@ -168,6 +171,9 @@ lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、c
 | corridor | cor（字首） | 沒有字首，cor 就是字根本身（義大利 correre） |
 | current／currency | cur | 拼寫是雙寫 r 的 curr- |
 | dilute | di-（分開） | dis- 在 l 前縮成 dī-，不是另一個字首 |
+| diurnal | di(day)＋urn(day) | 把「日」算了兩次。只有 di- 是 dies「日」，-urn- 是構成時間形容詞的後綴，本身不表日 |
+| sojourn | so-（under） | 字面對但用法不對。此處 sub- 取「稍微、一小段」的時間義，subdiurnare 是「消磨一天」|
+| nocturnal | noct(night)＋urn | 不屬本組。字根是 nox／noct「夜」，與本組 dies「日」相反，只共用 -urnus 後綴，課本是刻意放的對照 |
 
 ### 兩部分重複收錄的字
 

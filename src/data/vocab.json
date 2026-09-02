@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-02",
-  "count": 722,
-  "withExamples": 722,
+  "count": 737,
+  "withExamples": 737,
   "words": [
     {
       "id": "apathetic",
@@ -16167,6 +16167,234 @@
       "derivatives": []
     },
     {
+      "id": "confusion",
+      "word": "confusion",
+      "phonetic": "kənˈfjuʒən",
+      "zh": "混亂，混淆",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "To avoid confusion, the twins never wore the same clothes.",
+      "example_zh": "為了避免混淆，這對雙胞胎從不穿同樣的衣服。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "fus",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "約 1300 年經古法文 confusion 借自拉丁文 confusionem（混合、攙雜、失序），源頭是拉丁文 confundere（倒在一起、攪混），由 com-（一起）加 fundere（倒、熔）組成，字面就是把東西倒成一團分不出彼此，最初在英文指「毀滅、傾覆」，14 世紀中轉為「兩種以上東西混在一起」，1590 年代才定型為心智上的「思緒不清、困惑」。",
+      "derivatives": [
+        {
+          "word": "confuse",
+          "pos": "v.",
+          "zh": "搞混，使困惑"
+        }
+      ]
+    },
+    {
+      "id": "infuse",
+      "word": "infuse",
+      "phonetic": "ɪnˈfjuz",
+      "zh": "注入，浸泡",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His arrival infused new life and energy into the group.",
+      "example_zh": "他的到來為這個團隊注入了新的生命與活力。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "進入"
+        },
+        {
+          "text": "fus",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "15 世紀初以 infusen 的形式進入英文，意為「倒進去、把東西浸泡在液體裡」，借自拉丁文 infusus，也就是 infundere（倒入、灌入、混和）的過去分詞，由 in-（進入）加 fundere（倒、熔）組成，所以「注入」和泡茶那種「浸泡」本來就是同一個把液體倒進去的畫面。",
+      "derivatives": [
+        {
+          "word": "infusion",
+          "pos": "n.",
+          "zh": "注入，浸泡"
+        }
+      ]
+    },
+    {
+      "id": "effusive",
+      "word": "effusive",
+      "phonetic": "ɪˈfjusɪv",
+      "zh": "熱情洋溢的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "She blushed at her supervisor's effusive praise.",
+      "example_zh": "她因為主管熱情洋溢的稱讚而臉紅了。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "ef",
+          "gloss": "向外"
+        },
+        {
+          "text": "fus",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "1660 年代造出，用 -ive 接上拉丁文 effundere（傾瀉而出、揮霍、浪費）的詞幹 effus-，而 effundere 由 ex（向外）同化成 ef- 再加 fundere（倒）組成，起初形容言詞「滔滔不絕地流瀉出來」，1863 年起才專指感情大量外露的「熱情洋溢」。",
+      "derivatives": [
+        {
+          "word": "effusiveness",
+          "pos": "n.",
+          "zh": "熱情洋溢"
+        }
+      ]
+    },
+    {
+      "id": "futile",
+      "word": "futile",
+      "phonetic": "ˈfjutəl",
+      "zh": "徒勞的，無效的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "All our efforts proved futile.",
+      "example_zh": "我們所有的努力都證明是徒勞的。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "fut",
+          "gloss": "倒出"
+        }
+      ],
+      "etymology": "1550 年代經法文 futile 或直接借自拉丁文 futilis／futtilis（無用的、白費的），Etymonline 說這是比喻用法，字面義為「容易倒出來的、一下就空掉的」，該拉丁形容詞當名詞時指「上寬下尖的水器」，因而引申出「會漏的、靠不住的」，字源明白標為出自 fundere（倒、熔），再溯至鼻音化的 PIE 字根 *gheu-（倒）。",
+      "derivatives": [
+        {
+          "word": "futility",
+          "pos": "n.",
+          "zh": "徒勞"
+        }
+      ]
+    },
+    {
+      "id": "confound",
+      "word": "confound",
+      "phonetic": "kənˈfaʊnd",
+      "zh": "使困惑",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The strategy confounded our opponents.",
+      "example_zh": "這個策略讓我們的對手困惑不已。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "found",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "約 1300 年經盎格魯法文 confoundre 與古法文 confondre（12 世紀，壓垮、毀掉、使蒙羞、弄得亂七八糟）進入英文，最初意為「詛咒、徹底毀滅」，源頭是拉丁文 confundere（攪混、混雜成一團、弄亂），由 com（一起）同化後加 fundere（倒）組成，字面同樣是「倒在一起」，14 世紀晚期才轉出今天主要的比喻義「使人心智混亂、困惑」。",
+      "derivatives": []
+    },
+    {
+      "id": "profuse",
+      "word": "profuse",
+      "phonetic": "prəˈfjus",
+      "zh": "豐富的，大量的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The victims were profuse in their thanks to the donors.",
+      "example_zh": "受災者對捐助者表達了滿滿的謝意。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "pro",
+          "gloss": "向前、外"
+        },
+        {
+          "text": "fus",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "15 世紀初借自拉丁文 profusus（鋪張的、揮霍的、浪費的），字面義是「傾瀉而出」，取自 profundere（往前倒出去）的過去分詞，由 pro（向前、往外）加 fundere（倒）組成，最初在英文指「揮霍無度、給得過了頭」，約 1600 年起才有「豐沛、大量、源源不絕」這種中性偏正面的用法。",
+      "derivatives": [
+        {
+          "word": "profusion",
+          "pos": "n.",
+          "zh": "豐富，大量"
+        }
+      ]
+    },
+    {
+      "id": "perfusion",
+      "word": "perfusion",
+      "phonetic": "pɚˈfjuʒən",
+      "zh": "布滿，灌注",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Perfusion of an organ during transplant can improve the outcome of the operation.",
+      "example_zh": "移植過程中對器官進行灌注，可以改善手術的結果。",
+      "draft": false,
+      "prefixId": "fund",
+      "parts": [
+        {
+          "text": "per",
+          "gloss": "穿透、遍"
+        },
+        {
+          "text": "fus",
+          "gloss": "倒、熔"
+        }
+      ],
+      "etymology": "1570 年代經法文 perfusion 或直接借自拉丁文 perfusionem（澆灌其上），是 perfundere（從頭澆下、澆遍）的過去分詞詞幹構成的動作名詞，由 per（穿透、遍及）加 fundere（倒）組成，Etymonline 給的字義是「a pouring through, a causing to permeate」，字面就是液體「澆透、貫流而過」，也正是 Wiktionary 所收醫學義「血液或藥液灌流通過組織器官」的由來。",
+      "derivatives": [
+        {
+          "word": "perfuse",
+          "pos": "v.",
+          "zh": "使充滿，灌注"
+        }
+      ]
+    },
+    {
       "id": "dilute",
       "word": "dilute",
       "phonetic": "daɪˈlut",
@@ -16463,6 +16691,241 @@
           "zh": "年金"
         }
       ]
+    },
+    {
+      "id": "chronological",
+      "word": "chronological",
+      "phonetic": "ˌkrɑnəˈlɑdʒɪkəl",
+      "zh": "按時間順序的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Events in the narrative are arranged in chronological order.",
+      "example_zh": "這則敘事裡的事件是按時間順序排列的。",
+      "draft": false,
+      "prefixId": "chron",
+      "parts": [
+        {
+          "text": "chrono",
+          "gloss": "時間"
+        },
+        {
+          "text": "log",
+          "gloss": "學科、研究"
+        }
+      ],
+      "etymology": "源自 chronology（由希臘文 khronos「時間」與 -logia「學科、研究」組成），再加上形容詞字尾 -ical 構成，原意為依時間先後排列的。",
+      "derivatives": [
+        {
+          "word": "chronology",
+          "pos": "n.",
+          "zh": "年表"
+        }
+      ]
+    },
+    {
+      "id": "chronic",
+      "word": "chronic",
+      "phonetic": "ˈkrɑnɪk",
+      "zh": "慢性的，長期的，習慣性的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Arthritis is a chronic disease.",
+      "example_zh": "關節炎是一種慢性病。",
+      "draft": false,
+      "prefixId": "chron",
+      "parts": [
+        {
+          "text": "chron",
+          "gloss": "時間"
+        }
+      ],
+      "etymology": "源自希臘文 khronos「時間」衍生的形容詞 khronikos，經拉丁文 chronicus、古法文 chronique 於十五世紀初傳入英文，原意是疾病「病程長、持續很久」，並非「嚴重」的意思。",
+      "derivatives": []
+    },
+    {
+      "id": "chronicle",
+      "word": "chronicle",
+      "phonetic": "ˈkrɑnɪkəl",
+      "zh": "編年史，記事；（依時間順序）記錄",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The book is a chronicle of the American Civil War.",
+      "example_zh": "這本書是一部美國南北戰爭的編年史。",
+      "draft": false,
+      "prefixId": "chron",
+      "parts": [
+        {
+          "text": "chron",
+          "gloss": "時間"
+        }
+      ],
+      "etymology": "源自希臘文 khronos「時間」的形容詞 khronikos，經片語 ta khronika（時間之書）轉入拉丁文 chronica，再經古法文 cronique 進入英文，字面「依時間順序記載之書」演變成「編年史、依時間先後記錄事件」的意思。",
+      "derivatives": [
+        {
+          "word": "chronicler",
+          "pos": "n.",
+          "zh": "編年史家，記錄者"
+        }
+      ]
+    },
+    {
+      "id": "synchronous",
+      "word": "synchronous",
+      "phonetic": "ˈsɪŋkrənəs",
+      "zh": "同時的，同步的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The synchronous arrival of a baby sister and loss of a beloved grandmother strongly affected the child.",
+      "example_zh": "妹妹的出生與摯愛祖母的過世同時發生，深深影響了這個孩子。",
+      "draft": false,
+      "prefixId": "chron",
+      "parts": [
+        {
+          "text": "syn",
+          "gloss": "一起"
+        },
+        {
+          "text": "chron",
+          "gloss": "時間"
+        }
+      ],
+      "etymology": "由希臘文字首 syn-「一起」與 khronos「時間」組成的 synkhronos，經晚期拉丁文 synchronus 於 1660 年代進入英文，全程皆源自希臘文，意為同時發生的、同步的。",
+      "derivatives": [
+        {
+          "word": "synchronize",
+          "pos": "v.",
+          "zh": "同步，對時"
+        },
+        {
+          "word": "synchronization",
+          "pos": "n.",
+          "zh": "同步，對時"
+        }
+      ]
+    },
+    {
+      "id": "journal",
+      "word": "journal",
+      "phonetic": "ˈdʒɝnəl",
+      "zh": "學術期刊",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The paper was published in a leading journal in the field.",
+      "example_zh": "這篇論文發表在該領域一份頂尖的學術期刊上。",
+      "draft": false,
+      "prefixId": "journ",
+      "parts": [
+        {
+          "text": "journ",
+          "gloss": "日"
+        }
+      ],
+      "etymology": "14 世紀中葉借自盎格魯法語 jurnal 與古法語 jornal「一日、一天的行程或工作」，本是形容詞「每日的」的名詞化，上溯晚期拉丁文 diurnalis「每日的」與拉丁文 dies「日」（古典拉丁文 diurnus「白天的、逐日的」），拉丁文的 d 在 -iu- 前使 i 子音化為 j 並終致 d 脫落而成 journ-，字義則由「教會日課書」（14 世紀中葉）走向「逐日記帳的簿冊」（15 世紀晚期）、「私人日記」（約 1600 年，法語先有此義）與「每日刊物」（1728 年）。",
+      "derivatives": []
+    },
+    {
+      "id": "diurnal",
+      "word": "diurnal",
+      "phonetic": "daɪˈɝnəl",
+      "zh": "白天的，每日的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The diurnal tides occur at a cycle slightly longer than 12 hours.",
+      "example_zh": "白天的潮汐週期比十二小時稍長一些。",
+      "draft": false,
+      "prefixId": "journ",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "日"
+        },
+        {
+          "text": "urn",
+          "gloss": "表時間"
+        }
+      ],
+      "etymology": "14 世紀晚期借自晚期拉丁文 diurnalis「每日的」，其源為拉丁文 dies「日」與形容詞 diurnus「白天的、逐日的」（再上溯原始印歐語詞根 *dyeu-「發光」），本義「每日發生的」，15 世紀初增出「在一日之內完成的」，到 1620 年代才專指「屬於白晝的」，並以此與 nocturnal 相對。",
+      "derivatives": []
+    },
+    {
+      "id": "nocturnal",
+      "word": "nocturnal",
+      "phonetic": "nɑkˈtɝnəl",
+      "zh": "夜晚的，夜間活動的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The owl is a nocturnal predator.",
+      "example_zh": "貓頭鷹是夜間活動的掠食者。",
+      "draft": false,
+      "prefixId": "journ",
+      "parts": [
+        {
+          "text": "noct",
+          "gloss": "夜"
+        },
+        {
+          "text": "urn",
+          "gloss": "表時間"
+        }
+      ],
+      "etymology": "15 世紀晚期經古法語 nocturnal 或直接借自晚期拉丁文 nocturnalis，來自拉丁文 nocturnus「屬於夜的」，其核心是拉丁文 nox（屬格 noctis）「夜」，可再上溯原始印歐語詞根 *nekwt-「夜」（同源於希臘文 nyx、梵文 naktam、古英語 neaht），而 -urnus 只是拉丁文構成時間形容詞的後綴，與 dies「日」毫無關係。",
+      "derivatives": []
+    },
+    {
+      "id": "sojourn",
+      "word": "sojourn",
+      "phonetic": "ˈsodʒɚn",
+      "zh": "逗留，旅居；旅居期間",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The retired couple leisurely sojourned with friends and relatives scattered across the country.",
+      "example_zh": "這對退休夫妻悠閒地旅居各地，拜訪散居全國的親友。",
+      "draft": false,
+      "prefixId": "journ",
+      "parts": [
+        {
+          "text": "so",
+          "gloss": "稍微、一陣"
+        },
+        {
+          "text": "journ",
+          "gloss": "日"
+        }
+      ],
+      "etymology": "約 1300 年借自古法語 sojorner「暫住、逗留一段時間」，上溯通俗拉丁文 subdiurnare 字面義「消磨一天」，由 sub-「在下、直到」加 diurnare「持續、久留」構成（diurnare 源自 diurnus「一日的」、dies「日」），名詞「短暫停留、造訪」義在 13 世紀中葉已見於盎格魯法語，1804 年另生出「靈魂在世間暫居」的宗教比喻用法。",
+      "derivatives": []
     },
     {
       "id": "location",

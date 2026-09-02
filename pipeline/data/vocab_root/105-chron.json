@@ -1,0 +1,136 @@
+[
+  {
+    "word": "chronological",
+    "prefixId": "chron",
+    "pos": "a.",
+    "phonetic": "ˌkrɑnəˈlɑdʒɪkəl",
+    "zh": "按時間順序的",
+    "parts": [
+      {
+        "text": "chrono",
+        "gloss": "時間"
+      },
+      {
+        "text": "log",
+        "gloss": "學科、研究"
+      }
+    ],
+    "etymology": "源自 chronology（由希臘文 khronos「時間」與 -logia「學科、研究」組成），再加上形容詞字尾 -ical 構成，原意為依時間先後排列的。",
+    "derivatives": [
+      {
+        "word": "chronology",
+        "pos": "n.",
+        "zh": "年表"
+      }
+    ],
+    "example": "Events in the narrative are arranged in chronological order.",
+    "example_zh": "這則敘事裡的事件是按時間順序排列的。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/chronological",
+      "ipa": "/ˌkɹɑnəˈlɑd͡ʒɪkəl/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "這個字根 khronos 是希臘文，不是拉丁文（本教材多數字根源自拉丁文，這組屬例外）。課本提示「log（word/study）」在此字是取「學科、研究」之意（-logy），並非「詞語」的意思。"
+    }
+  },
+  {
+    "word": "chronic",
+    "prefixId": "chron",
+    "pos": "a.",
+    "phonetic": "ˈkrɑnɪk",
+    "zh": "慢性的，長期的，習慣性的",
+    "parts": [
+      {
+        "text": "chron",
+        "gloss": "時間"
+      }
+    ],
+    "etymology": "源自希臘文 khronos「時間」衍生的形容詞 khronikos，經拉丁文 chronicus、古法文 chronique 於十五世紀初傳入英文，原意是疾病「病程長、持續很久」，並非「嚴重」的意思。",
+    "derivatives": [],
+    "example": "Arthritis is a chronic disease.",
+    "example_zh": "關節炎是一種慢性病。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/chronic",
+      "ipa": "/ˈkɹɑ.nɪk/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "chronic 的核心語意是「長期、慢性」，不是「嚴重」。課本釋義中的「習慣性的」是由「長期反覆發生」引申出的次要用法（如 chronic liar 積習難改的說謊者），並非字根本義，提醒不要把 chronic 誤解為「嚴重的」。"
+    }
+  },
+  {
+    "word": "chronicle",
+    "prefixId": "chron",
+    "pos": "n., v.",
+    "phonetic": "ˈkrɑnɪkəl",
+    "zh": "編年史，記事；（依時間順序）記錄",
+    "parts": [
+      {
+        "text": "chron",
+        "gloss": "時間"
+      }
+    ],
+    "etymology": "源自希臘文 khronos「時間」的形容詞 khronikos，經片語 ta khronika（時間之書）轉入拉丁文 chronica，再經古法文 cronique 進入英文，字面「依時間順序記載之書」演變成「編年史、依時間先後記錄事件」的意思。",
+    "derivatives": [
+      {
+        "word": "chronicler",
+        "pos": "n.",
+        "zh": "編年史家，記錄者"
+      }
+    ],
+    "example": "The book is a chronicle of the American Civil War.",
+    "example_zh": "這本書是一部美國南北戰爭的編年史。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/chronicle",
+      "ipa": "/ˈkɹɑnɪkl̩/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "chronicle 拼字上雖像是「chronic + le」，但其實是直接源自拉丁文 chronica（時間之書），與 chronic 是各自從 khronikos 分開演變而來，並非詞綴組合關係。"
+    }
+  },
+  {
+    "word": "synchronous",
+    "prefixId": "chron",
+    "pos": "a.",
+    "phonetic": "ˈsɪŋkrənəs",
+    "zh": "同時的，同步的",
+    "parts": [
+      {
+        "text": "syn",
+        "gloss": "一起"
+      },
+      {
+        "text": "chron",
+        "gloss": "時間"
+      }
+    ],
+    "etymology": "由希臘文字首 syn-「一起」與 khronos「時間」組成的 synkhronos，經晚期拉丁文 synchronus 於 1660 年代進入英文，全程皆源自希臘文，意為同時發生的、同步的。",
+    "derivatives": [
+      {
+        "word": "synchronize",
+        "pos": "v.",
+        "zh": "同步，對時"
+      },
+      {
+        "word": "synchronization",
+        "pos": "n.",
+        "zh": "同步，對時"
+      }
+    ],
+    "example": "The synchronous arrival of a baby sister and loss of a beloved grandmother strongly affected the child.",
+    "example_zh": "妹妹的出生與摯愛祖母的過世同時發生，深深影響了這個孩子。",
+    "sources": {
+      "page": "IMG_1720",
+      "etymonline": "https://www.etymonline.com/word/synchronous",
+      "ipa": "/ˈsɪŋkɹənəs/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo"
+    }
+  }
+]
