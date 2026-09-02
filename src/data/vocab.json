@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-02",
-  "count": 700,
-  "withExamples": 700,
+  "count": 722,
+  "withExamples": 722,
   "words": [
     {
       "id": "apathetic",
@@ -15760,6 +15760,645 @@
         }
       ],
       "etymology": "1982年由1947年訂定、任意取自希臘 gigas（巨人）的公制字首 giga-（十億）與電腦術語 byte 組成，指十億位元組。",
+      "derivatives": []
+    },
+    {
+      "id": "occur",
+      "word": "occur",
+      "phonetic": "əˈkɝ",
+      "zh": "產生，發生",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The accident occurred in the middle of the night.",
+      "example_zh": "那場意外發生在半夜。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "oc",
+          "gloss": "朝向"
+        },
+        {
+          "text": "cur",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "1520 年代來自法語 occurrer 或直接取自拉丁語 occurrere「迎面跑來、撞上、自行呈現」，由 ob-「朝向」加 currere「跑」構成，語意由「相遇」轉為「呈現」再到「發生」，1620 年代起也指「浮現在腦中」。",
+      "derivatives": [
+        {
+          "word": "occurrence",
+          "pos": "n.",
+          "zh": "產生，發生"
+        },
+        {
+          "word": "recur",
+          "pos": "v.",
+          "zh": "重複發生"
+        }
+      ]
+    },
+    {
+      "id": "corridor",
+      "word": "corridor",
+      "phonetic": "ˈkɔrəˌdɔr",
+      "zh": "走廊",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I heard footsteps in the corridor.",
+      "example_zh": "我聽到走廊上有腳步聲。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "corr",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "1590 年代原指「堡壘外圍的連續通道」，來自法語 corridor，再上溯義大利語 corridore「建築物內或兩棟建築間的長廊」，字面義是「跑者、供奔跑之處」，源自義大利語 correre「跑」即拉丁語 currere「跑」，1814 年前後才定為今天「兩側開門的長走廊」。",
+      "derivatives": []
+    },
+    {
+      "id": "current",
+      "word": "current",
+      "phonetic": "ˈkɝənt",
+      "zh": "當前的；流",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I read newspapers to keep abreast of current situations.",
+      "example_zh": "我讀報紙以掌握當前的局勢。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "curr",
+          "gloss": "跑、流"
+        }
+      ],
+      "etymology": "約 1300 年來自古法語 corant「奔跑的、迅捷的」，為古法語 corre「跑」的現在分詞，源自拉丁語 currere「跑、快速移動」，本義「流動的」後轉為「現正通行的、當下的」，名詞「水流」見於 1550 年代，電流義始於 1747 年。",
+      "derivatives": []
+    },
+    {
+      "id": "currency",
+      "word": "currency",
+      "phonetic": "ˈkɝənsɪ",
+      "zh": "通貨，貨幣，流通性",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can exchange foreign currency at the bank.",
+      "example_zh": "你可以在銀行兌換外幣。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "curr",
+          "gloss": "跑、流"
+        }
+      ],
+      "etymology": "1650 年代原指「流動的狀態」，來自拉丁語 currens（currere「跑」的現在分詞），先引申為「人手相傳的流通狀態」與 1722 年的「在大眾間通行」，1729 年才指「作為交易媒介而流通之物、貨幣」。",
+      "derivatives": []
+    },
+    {
+      "id": "concourse",
+      "word": "concourse",
+      "phonetic": "ˈkɑnkɔrs",
+      "zh": "人群，站前廣場，旅客大廳",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "A concourse of people gathered in front of the Presidential Hall.",
+      "example_zh": "一群人聚集在總統府前面。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "cours",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "14 世紀末來自古法語 concours 與拉丁語 concursus「一起跑攏」，由 com-「一起」加 currere「跑」構成，先指「匯流、聚積」與 15 世紀初的「人群、群集」，1862 年美式英語才用來指車站等處供人聚集的開闊大廳與廣場。",
+      "derivatives": []
+    },
+    {
+      "id": "concur",
+      "word": "concur",
+      "phonetic": "kənˈkɝ",
+      "zh": "同時發生，同意",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "His wedding concurred with his birthday.",
+      "example_zh": "他的婚禮與他的生日同一天。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "一起"
+        },
+        {
+          "text": "cur",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "15 世紀初來自拉丁語 concurrere「一起跑、匆匆聚攏、交鋒衝突」，由 com-「一起」加 currere「跑」構成，英語初義是「衝突、敵對相撞」，後來才轉出「同時發生」與「意見一致」兩個今義。",
+      "derivatives": [
+        {
+          "word": "concurrence",
+          "pos": "n.",
+          "zh": "同時發生，同意"
+        },
+        {
+          "word": "concurrent",
+          "pos": "a.",
+          "zh": "同時發生的"
+        }
+      ]
+    },
+    {
+      "id": "cursor",
+      "word": "cursor",
+      "phonetic": "ˈkɝsər",
+      "zh": "游標",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Move the cursor to the icon and double-click.",
+      "example_zh": "把游標移到圖示上然後點兩下。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "curs",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "約 1300 年作為姓氏指「奔走的信使」，來自拉丁語 cursor「跑者、跑腿小廝」，是 currere「跑」的過去分詞幹 curs- 所構成的施事名詞，1590 年代指計算尺上可前後滑動的部件，1967 年才轉指電腦螢幕上的游標。",
+      "derivatives": []
+    },
+    {
+      "id": "courier",
+      "word": "courier",
+      "phonetic": "ˈkʊriɚ",
+      "zh": "信差；遞送",
+      "pos": "n., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man served as a diplomatic courier at the Foreign Ministry.",
+      "example_zh": "這名男子曾在外交部擔任外交信差。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "cour",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "約 1300 年作 corour 指「快馬」，14 世紀中葉指「攜帶信件公文的使者」，來自盎格魯法語 courrier 與古法語 coreor「快馬、信使、斥候」，最終是拉丁語 currere「跑」的施事名詞，1770 年起另指替雇主打點旅途與旅館的隨行僕役。",
+      "derivatives": []
+    },
+    {
+      "id": "curriculum",
+      "word": "curriculum",
+      "phonetic": "kəˈrɪkjələm",
+      "zh": "課程，課業（複數 curricula）",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I have a heavy curriculum this year.",
+      "example_zh": "我今年的課業很重。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "curr",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "1824 年進入英語指「學校或大學固定的修業課程」，借自拉丁語 curriculum，字面義是「奔跑、路程、生涯」也指「快車、賽車戰車」，源自 currere「跑」，1630 年代蘇格蘭各大學已把它當拉丁語詞使用，1902 年出現 curriculum vitae「一生的歷程」。",
+      "derivatives": [
+        {
+          "word": "extracurricular",
+          "pos": "a.",
+          "zh": "課外的"
+        }
+      ]
+    },
+    {
+      "id": "cursory",
+      "word": "cursory",
+      "phonetic": "ˈkɝsərɪ",
+      "zh": "匆匆的，草率的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The teacher took a cursory look at the composition and gave an F.",
+      "example_zh": "老師草率地看了一眼這篇作文，就給了不及格。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "curs",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "約 1600 年指「倉促的、浮面的、草率的」，來自法語 cursoire「快速的」與晚期拉丁語 cursorius「匆忙的、屬於奔跑的」，源自 currere「跑」的過去分詞幹 curs-，字面「跑著看過去」的意象即今義來源，而「奔跑中、非靜止的」本義已廢。",
+      "derivatives": [
+        {
+          "word": "cursoriness",
+          "pos": "n.",
+          "zh": "匆忙，草率"
+        }
+      ]
+    },
+    {
+      "id": "excursion",
+      "word": "excursion",
+      "phonetic": "ɛkˈskɝʒən",
+      "zh": "出遊",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "On such a hot summer day, I like to take an excursion into the mountains.",
+      "example_zh": "在這麼熱的夏日，我喜歡到山裡出遊。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "curs",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "1570 年代來自拉丁語 excursionem「向外跑出、突擊、遠征」，是由 ex-「向外」加 currere「跑」構成、取自過去分詞 excursus 的動作名詞，英語初指「論題離題」與「軍事出擊」，1660 年代起指「旅程」，後來才專指遊玩性質的短程出遊。",
+      "derivatives": []
+    },
+    {
+      "id": "incur",
+      "word": "incur",
+      "phonetic": "ɪnˈkɝ",
+      "zh": "招致，蒙受，產生",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The man incurred a large debt after playing the stock market on borrowed money.",
+      "example_zh": "這名男子借錢玩股票之後，招致了一大筆債務。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "進入、加諸"
+        },
+        {
+          "text": "cur",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "約 1400 年指「把不好的後果招到自己身上」，15 世紀中葉起指「負擔起款項或費用」，來自盎格魯法語 encurir 與古法語 encorir，上溯拉丁語 incurrere「跑進、朝著衝去、發動攻擊」，引申義為「降臨、發生在某人身上」，由 in-「在其上」加 currere「跑」構成。",
+      "derivatives": [
+        {
+          "word": "incursion",
+          "pos": "n.",
+          "zh": "侵入，襲擊"
+        }
+      ]
+    },
+    {
+      "id": "precursor",
+      "word": "precursor",
+      "phonetic": "prɪˈkɝsər",
+      "zh": "前身，先導",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "SO₂ is a precursor of acid rain.",
+      "example_zh": "二氧化硫是酸雨的前驅物。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "pre",
+          "gloss": "在前"
+        },
+        {
+          "text": "curs",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "15 世紀初來自古法語 precurseur 與拉丁語 praecursor「先行者、預示某事將至者」，是 praecurrere（prae-「在前」加 currere「跑」）的過去分詞幹所構成的施事名詞，字面是「跑在前面的人」，英語最初專指施洗者約翰。",
+      "derivatives": []
+    },
+    {
+      "id": "recourse",
+      "word": "recourse",
+      "phonetic": "ˈrikɔrs",
+      "zh": "依靠，退路，手段",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "It is best to resolve the case without recourse to law.",
+      "example_zh": "這件案子最好不要訴諸法律來解決。",
+      "draft": false,
+      "prefixId": "cur",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "回、再"
+        },
+        {
+          "text": "cours",
+          "gloss": "跑"
+        }
+      ],
+      "etymology": "14 世紀末來自古法語 recours 與拉丁語 recursus「跑回來、折返、退回」，是 recurrere（re-「回、再」加 currere「跑」）的過去分詞幹，英語主要活在 have recourse to「求助於、倚靠」這個說法裡，15 世紀末起也指所求助的對象本身。",
+      "derivatives": []
+    },
+    {
+      "id": "dilute",
+      "word": "dilute",
+      "phonetic": "daɪˈlut",
+      "zh": "稀釋，沖淡",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can still drive after drinking a little diluted wine.",
+      "example_zh": "喝一點稀釋過的酒之後還是可以開車。",
+      "draft": false,
+      "prefixId": "lav",
+      "parts": [
+        {
+          "text": "di",
+          "gloss": "分開"
+        },
+        {
+          "text": "lut",
+          "gloss": "洗"
+        }
+      ],
+      "etymology": "源自拉丁文 dilutus（動詞 diluere「沖走、溶解、稀釋」的過去分詞），由 dis-「分開」加上 lavere「洗」的複合形 -luere 構成，1550 年代先有「削弱、沖淡力量」的比喻義，1660 年代才出現「使變稀薄」的字面義。",
+      "derivatives": [
+        {
+          "word": "dilution",
+          "pos": "n.",
+          "zh": "稀釋，沖淡"
+        }
+      ]
+    },
+    {
+      "id": "deluge",
+      "word": "deluge",
+      "phonetic": "ˈdɛljudʒ",
+      "zh": "洪水，暴雨，大量泛濫",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The deluge caused severe mudslides.",
+      "example_zh": "這場暴雨造成了嚴重的土石流。",
+      "draft": false,
+      "prefixId": "lav",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "離開"
+        },
+        {
+          "text": "lug",
+          "gloss": "洗"
+        }
+      ],
+      "etymology": "源自古法文 deluge（更早的形式為 deluve），來自拉丁文 diluvium「洪水、氾濫」，即 dis-「離開」加上 lavere「洗」的複合形 -luere，本義是「大水把東西沖走」，1590 年代才由名詞轉出動詞義「淹沒、如洪水般湧來」。",
+      "derivatives": []
+    },
+    {
+      "id": "lavish",
+      "word": "lavish",
+      "phonetic": "ˈlævɪʃ",
+      "zh": "慷慨的，大量的；浪費，大量給予",
+      "pos": "a., v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "In the hotel room there was a lavish display of flowers.",
+      "example_zh": "飯店房間裡有一大片豐盛的花藝擺設。",
+      "draft": false,
+      "prefixId": "lav",
+      "parts": [
+        {
+          "text": "lav",
+          "gloss": "洗"
+        }
+      ],
+      "etymology": "中古英語借自古法文 lavasse、lavache「傾盆大雨、豪雨」，其字根為 laver「洗」，再上溯拉丁文 lavare「洗」，15 世紀中葉由「大雨如注」的意象引申為「像水傾瀉一樣揮霍、豐厚給予」，1540 年代再由形容詞轉作動詞。",
+      "derivatives": []
+    },
+    {
+      "id": "lavatory",
+      "word": "lavatory",
+      "phonetic": "ˈlævətɔrɪ",
+      "zh": "盥洗室，洗手間",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Can you direct me to the lavatory?",
+      "example_zh": "可以告訴我洗手間怎麼走嗎？",
+      "draft": false,
+      "prefixId": "lav",
+      "parts": [
+        {
+          "text": "lav",
+          "gloss": "洗"
+        }
+      ],
+      "etymology": "源自晚期拉丁文 lavatorium「洗滌之處」（形容詞 lavatorius「與洗滌有關的」的名詞化），字根為 lavare「洗」的過去分詞語幹 lavat-，14 世紀末原指「洗臉盆」，1650 年代擴為「盥洗室」，1864 年起成為「廁所」的委婉語。",
+      "derivatives": []
+    },
+    {
+      "id": "ablution",
+      "word": "ablution",
+      "phonetic": "əˈbluʃən",
+      "zh": "盥洗，沐浴",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He accompanies his daily ablutions with songs.",
+      "example_zh": "他每天盥洗時都會配著歌。",
+      "draft": false,
+      "prefixId": "lav",
+      "parts": [
+        {
+          "text": "ab",
+          "gloss": "離開"
+        },
+        {
+          "text": "lut",
+          "gloss": "洗"
+        }
+      ],
+      "etymology": "14 世紀末經拉丁文 ablutionem（主格 ablutio）「洗滌、潔淨」而來，源自動詞 abluere「洗掉、洗去、以水滌淨」，由 ab-「離開」加 luere「洗」構成，最初專指宗教儀式性的淨身洗禮。",
+      "derivatives": []
+    },
+    {
+      "id": "sparse",
+      "word": "sparse",
+      "phonetic": "spɑrs",
+      "zh": "稀疏的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Alaska has a sparse population.",
+      "example_zh": "阿拉斯加的人口稀疏。",
+      "draft": false,
+      "prefixId": "spars",
+      "parts": [
+        {
+          "text": "spars",
+          "gloss": "散布"
+        }
+      ],
+      "etymology": "sparse 源自拉丁文 sparsus（動詞 spargere「灑、散布」的過去分詞），1727 年進入英文，表示「稀疏散布、間隔頗大」。",
+      "derivatives": [
+        {
+          "word": "sparsity",
+          "pos": "n.",
+          "zh": "稀疏"
+        },
+        {
+          "word": "sparsely",
+          "pos": "adv.",
+          "zh": "稀疏地"
+        }
+      ]
+    },
+    {
+      "id": "disperse",
+      "word": "disperse",
+      "phonetic": "dɪˈspɝs",
+      "zh": "驅散，傳播，四散",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The crowd dispersed once the show ended.",
+      "example_zh": "表演一結束，人群就散去了。",
+      "draft": false,
+      "prefixId": "spars",
+      "parts": [
+        {
+          "text": "dis",
+          "gloss": "向四方"
+        },
+        {
+          "text": "spers",
+          "gloss": "散布"
+        }
+      ],
+      "etymology": "disperse 源自拉丁文 dispersus，是由 dis「向四方」與 spargere「散布」複合而成的動詞 dispergere 之過去分詞，14 世紀晚期經古法語 disperser 進入英文，原意為「向四方驅散」。",
+      "derivatives": [
+        {
+          "word": "dispersal",
+          "pos": "n.",
+          "zh": "驅散，分散"
+        }
+      ]
+    },
+    {
+      "id": "intersperse",
+      "word": "intersperse",
+      "phonetic": "ˌɪntɚˈspɝs",
+      "zh": "散布，穿插",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The book is interspersed with rare pictures.",
+      "example_zh": "這本書裡穿插著許多罕見的照片。",
+      "draft": false,
+      "prefixId": "spars",
+      "parts": [
+        {
+          "text": "inter",
+          "gloss": "在…之間"
+        },
+        {
+          "text": "spers",
+          "gloss": "散布"
+        }
+      ],
+      "etymology": "intersperse 源自拉丁文 interspersus，是 inter「在…之間」與 spargere「散布」複合而成之過去分詞，1560 年代進入英文，字面義為「散布於其間」。",
       "derivatives": []
     },
     {

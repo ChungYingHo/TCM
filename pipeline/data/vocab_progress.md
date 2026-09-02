@@ -91,21 +91,21 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 23/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 26/29 組**
 
 照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 23 組。
+卡在 Etymonline／IPA 查證，29 組做完 26 組。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **23/29 組**（135 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 134 字（`vocab.json` 共 700 字，disclose 與第一部分重複已去重） |
+| Etymonline／IPA 查證 | **26/29 組**（157 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 156 字（`vocab.json` 共 722 字，disclose 與第一部分重複已去重） |
 
-**查證完成的 23 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
-lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni
+**查證完成的 26 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni、cur、spars、lav
 
 **還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
 （組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
@@ -117,8 +117,8 @@ lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni
 | R2 | punct 6、sign 4、cas 7 | 17 | **完成** |
 | R3 | fin 9、term 6、und 4 | 19 | **完成** |
 | R4 | clud 8、flu 9、enni 2 | 19 | **完成** |
-| R5 | cur 14、spars 3、lav 5 | 22 | 進行中 |
-| R6 | fund 7、chron 4、journ 4 | 15 | 未開始 |
+| R5 | cur 14、spars 3、lav 5 | 22 | **完成** |
+| R6 | fund 7、chron 4、journ 4 | 15 | 進行中 |
 
 ### 接手怎麼做
 
@@ -149,6 +149,25 @@ lev、stig、acr、punct、sign、cas、fin、term、und、clud、flu、enni
 | affinity | 相像，喜好 | 「喜好」太弱。指天生的投緣、親近傾向，不等於一般的 like |
 | finalist | 入圍者 | 專指進入最後一輪決賽者，不是任何階段的入選者 |
 | exclusive | 獨家的，高檔的 | 只給了兩個引申義。核心義「排他的、互不相容的」（mutually exclusive）沒收進來，那才是常考的 |
+| incur | 招致，蒙受，產生 | 「產生」誤導。incur 一定是主體自己招來、自己承受（後果、責任、費用），不能泛指產生某物 |
+| curriculum | 課程，課業 | 指整套修業課程規劃，單獨一門課要用 course。複數是 curricula |
+| ablution | 盥洗，沐浴 | 首義是宗教儀式性的淨身，日常「梳洗」義多用複數 ablutions |
+
+### 課本詞素標示可訂正（第二批，各字 `sources.rootNote` 都記了）
+
+| 字 | 課本標 | Etymonline |
+| :--- | :--- | :--- |
+| deluge | de-（向下） | dis-（離開）。拉丁 diluvium，拼成 de- 只是古法文改寫 di-，所以 deluge 與 dilute 同字首同字根 |
+| designate | de-（向下） | out（向外）。designare 本義是「把記號做到外面來」 |
+| determine | de-（向下） | off |
+| definition／definite／definitive | de-（向下） | 完全、徹底（加強語氣） |
+| compunction | com-（一起） | 加強語氣。意思是「狠狠刺一下良心」 |
+| recluse | re-（回） | 加強語氣。且古典拉丁 recludere 本義是「打開」，晚期拉丁才反轉 |
+| disclose | dis-（not） | 相反、還原。disclose ＝ un-close ＝ 把關著的打開 |
+| occasionally | oc-（朝向） | ob- 在此釋為「向下、離開」 |
+| corridor | cor（字首） | 沒有字首，cor 就是字根本身（義大利 correre） |
+| current／currency | cur | 拼寫是雙寫 r 的 curr- |
+| dilute | di-（分開） | dis- 在 l 前縮成 dī-，不是另一個字首 |
 
 ### 兩部分重複收錄的字
 

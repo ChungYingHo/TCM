@@ -1,0 +1,149 @@
+[
+  {
+    "word": "occur",
+    "parts": [
+      { "text": "oc", "gloss": "朝向" },
+      { "text": "cur", "gloss": "跑" }
+    ],
+    "etymology": "1520 年代來自法語 occurrer 或直接取自拉丁語 occurrere「迎面跑來、撞上、自行呈現」，由 ob-「朝向」加 currere「跑」構成，語意由「相遇」轉為「呈現」再到「發生」，1620 年代起也指「浮現在腦中」。",
+    "us_ipa": "/əˈkɝ/",
+    "etymonline_url": "https://www.etymonline.com/word/occur",
+    "notes": "用現在幹 cur-（拉丁 currere）。拼寫上 ob- 同化成 oc-，變化形 occurred／occurring 必須雙寫 r。"
+  },
+  {
+    "word": "corridor",
+    "parts": [
+      { "text": "corr", "gloss": "跑" }
+    ],
+    "etymology": "1590 年代原指「堡壘外圍的連續通道」，來自法語 corridor，再上溯義大利語 corridore「建築物內或兩棟建築間的長廊」，字面義是「跑者、供奔跑之處」，源自義大利語 correre「跑」即拉丁語 currere「跑」，1814 年前後才定為今天「兩側開門的長走廊」。",
+    "us_ipa": "/ˈkɔɹəˌdɔɹ/",
+    "etymonline_url": "https://www.etymonline.com/word/corridor",
+    "notes": "老師標的 cor 不是 con-／com- 那個字首，而是字根本身在義大利語的形態（correre），全字只有字根沒有字首。走的是義大利語路線而非直接承自拉丁語，且原義確實是「供奔跑的地方」（軍事上沿堡壘奔走的通道），室內走廊是後起義。"
+  },
+  {
+    "word": "current",
+    "parts": [
+      { "text": "curr", "gloss": "跑、流" }
+    ],
+    "etymology": "約 1300 年來自古法語 corant「奔跑的、迅捷的」，為古法語 corre「跑」的現在分詞，源自拉丁語 currere「跑、快速移動」，本義「流動的」後轉為「現正通行的、當下的」，名詞「水流」見於 1550 年代，電流義始於 1747 年。",
+    "us_ipa": "/ˈkɝənt/",
+    "etymonline_url": "https://www.etymonline.com/word/current",
+    "notes": "用現在幹 curr-（拉丁 currere 的現在分詞 currens）。拼寫是雙寫 r 的 curr-，老師字根提示寫成 cur 少一個 r。"
+  },
+  {
+    "word": "currency",
+    "parts": [
+      { "text": "curr", "gloss": "跑、流" }
+    ],
+    "etymology": "1650 年代原指「流動的狀態」，來自拉丁語 currens（currere「跑」的現在分詞），先引申為「人手相傳的流通狀態」與 1722 年的「在大眾間通行」，1729 年才指「作為交易媒介而流通之物、貨幣」。",
+    "us_ipa": "/ˈkɝənsi/",
+    "etymonline_url": "https://www.etymonline.com/word/currency",
+    "notes": "用現在幹 curr-。拼寫是雙寫 r 的 curr-，老師字根提示寫成 cur 少一個 r。核心意象是「流通」，貨幣義是 18 世紀才長出來的引申。"
+  },
+  {
+    "word": "concourse",
+    "parts": [
+      { "text": "con", "gloss": "一起" },
+      { "text": "cours", "gloss": "跑" }
+    ],
+    "etymology": "14 世紀末來自古法語 concours 與拉丁語 concursus「一起跑攏」，由 com-「一起」加 currere「跑」構成，先指「匯流、聚積」與 15 世紀初的「人群、群集」，1862 年美式英語才用來指車站等處供人聚集的開闊大廳與廣場。",
+    "us_ipa": "/ˈkɑnkɔɹs/",
+    "etymonline_url": "https://www.etymonline.com/word/concourse",
+    "notes": "用過去分詞幹 cours-（拉丁 cursus 經古法語 cours），與 recourse 同一路。Wiktionary 只列出英式 /ˈkɒŋkɔː(ɹ)s/ 未給美式音標，此處填一般美式讀音。"
+  },
+  {
+    "word": "concur",
+    "parts": [
+      { "text": "con", "gloss": "一起" },
+      { "text": "cur", "gloss": "跑" }
+    ],
+    "etymology": "15 世紀初來自拉丁語 concurrere「一起跑、匆匆聚攏、交鋒衝突」，由 com-「一起」加 currere「跑」構成，英語初義是「衝突、敵對相撞」，後來才轉出「同時發生」與「意見一致」兩個今義。",
+    "us_ipa": "/kənˈkɝ/",
+    "etymonline_url": "https://www.etymonline.com/word/concur",
+    "notes": "用現在幹 cur-。變化形 concurred／concurring 必須雙寫 r。今天最常用的是「同意」（concur with somebody），「同時發生」義多改由 concurrent 承擔。"
+  },
+  {
+    "word": "cursor",
+    "parts": [
+      { "text": "curs", "gloss": "跑" }
+    ],
+    "etymology": "約 1300 年作為姓氏指「奔走的信使」，來自拉丁語 cursor「跑者、跑腿小廝」，是 currere「跑」的過去分詞幹 curs- 所構成的施事名詞，1590 年代指計算尺上可前後滑動的部件，1967 年才轉指電腦螢幕上的游標。",
+    "us_ipa": "/ˈkɝsəɹ/",
+    "etymonline_url": "https://www.etymonline.com/word/cursor",
+    "notes": "用過去分詞幹 curs-（拉丁過去分詞 cursus），Etymonline 原文明寫 from curs-, past-participle stem of currere。"
+  },
+  {
+    "word": "courier",
+    "parts": [
+      { "text": "cour", "gloss": "跑" }
+    ],
+    "etymology": "約 1300 年作 corour 指「快馬」，14 世紀中葉指「攜帶信件公文的使者」，來自盎格魯法語 courrier 與古法語 coreor「快馬、信使、斥候」，最終是拉丁語 currere「跑」的施事名詞，1770 年起另指替雇主打點旅途與旅館的隨行僕役。",
+    "us_ipa": "/ˈkʊɹiɚ/",
+    "etymonline_url": "https://www.etymonline.com/word/courier",
+    "notes": "拼寫的 cour- 是法語對拉丁 curr- 的音變（古法語 corre／courir「跑」），屬現在幹，並不是 concourse／recourse 那個由拉丁 cursus 來的過去分詞幹 cours-，這兩組長得像但來源不同。Etymonline 只記盎格魯法語／古法語路線、未提義大利語，義大利語 corriere 經中古法語 courrier 匯入的說法見 Wiktionary。"
+  },
+  {
+    "word": "curriculum",
+    "parts": [
+      { "text": "curr", "gloss": "跑" }
+    ],
+    "etymology": "1824 年進入英語指「學校或大學固定的修業課程」，借自拉丁語 curriculum，字面義是「奔跑、路程、生涯」也指「快車、賽車戰車」，源自 currere「跑」，1630 年代蘇格蘭各大學已把它當拉丁語詞使用，1902 年出現 curriculum vitae「一生的歷程」。",
+    "us_ipa": "/kəˈɹɪkjələm/",
+    "etymonline_url": "https://www.etymonline.com/word/curriculum",
+    "notes": "用現在幹 curr-。拉丁原義就是「一段跑程、賽道上跑的一圈」，所以整套修業「課程」才叫這個字，這是理解本字的關鍵。課本「課程，課業」指的是整體課程規劃，單獨一門課要用 course，別互換。複數是 curricula。"
+  },
+  {
+    "word": "cursory",
+    "parts": [
+      { "text": "curs", "gloss": "跑" }
+    ],
+    "etymology": "約 1600 年指「倉促的、浮面的、草率的」，來自法語 cursoire「快速的」與晚期拉丁語 cursorius「匆忙的、屬於奔跑的」，源自 currere「跑」的過去分詞幹 curs-，字面「跑著看過去」的意象即今義來源，而「奔跑中、非靜止的」本義已廢。",
+    "us_ipa": "/ˈkɝsəɹi/",
+    "etymonline_url": "https://www.etymonline.com/word/cursory",
+    "notes": "用過去分詞幹 curs-。"
+  },
+  {
+    "word": "excursion",
+    "parts": [
+      { "text": "ex", "gloss": "向外" },
+      { "text": "curs", "gloss": "跑" }
+    ],
+    "etymology": "1570 年代來自拉丁語 excursionem「向外跑出、突擊、遠征」，是由 ex-「向外」加 currere「跑」構成、取自過去分詞 excursus 的動作名詞，英語初指「論題離題」與「軍事出擊」，1660 年代起指「旅程」，後來才專指遊玩性質的短程出遊。",
+    "us_ipa": "/ɛkˈskɝʒən/",
+    "etymonline_url": "https://www.etymonline.com/word/excursion",
+    "notes": "用過去分詞幹 curs-（拉丁過去分詞 excursus）。"
+  },
+  {
+    "word": "incur",
+    "parts": [
+      { "text": "in", "gloss": "進入、加諸" },
+      { "text": "cur", "gloss": "跑" }
+    ],
+    "etymology": "約 1400 年指「把不好的後果招到自己身上」，15 世紀中葉起指「負擔起款項或費用」，來自盎格魯法語 encurir 與古法語 encorir，上溯拉丁語 incurrere「跑進、朝著衝去、發動攻擊」，引申義為「降臨、發生在某人身上」，由 in-「在其上」加 currere「跑」構成。",
+    "us_ipa": "/ɪnˈkɝ/",
+    "etymonline_url": "https://www.etymonline.com/word/incur",
+    "notes": "用現在幹 cur-。變化形 incurred／incurring 必須雙寫 r。課本義項的「產生」易誤導——incur 一定是主體自己招來、自己承受（後果、責任、費用、損失），不能拿來泛指「產生某物」，該用 occur／produce 的場合別代換。"
+  },
+  {
+    "word": "precursor",
+    "parts": [
+      { "text": "pre", "gloss": "在前" },
+      { "text": "curs", "gloss": "跑" }
+    ],
+    "etymology": "15 世紀初來自古法語 precurseur 與拉丁語 praecursor「先行者、預示某事將至者」，是 praecurrere（prae-「在前」加 currere「跑」）的過去分詞幹所構成的施事名詞，字面是「跑在前面的人」，英語最初專指施洗者約翰。",
+    "us_ipa": "/pɹɪˈkɝsəɹ/",
+    "etymonline_url": "https://www.etymonline.com/word/precursor",
+    "notes": "用過去分詞幹 curs-。"
+  },
+  {
+    "word": "recourse",
+    "parts": [
+      { "text": "re", "gloss": "回、再" },
+      { "text": "cours", "gloss": "跑" }
+    ],
+    "etymology": "14 世紀末來自古法語 recours 與拉丁語 recursus「跑回來、折返、退回」，是 recurrere（re-「回、再」加 currere「跑」）的過去分詞幹，英語主要活在 have recourse to「求助於、倚靠」這個說法裡，15 世紀末起也指所求助的對象本身。",
+    "us_ipa": "/ˈɹiːkɔɹs/",
+    "etymonline_url": "https://www.etymonline.com/word/recourse",
+    "notes": "用過去分詞幹 cours-（拉丁 cursus 經古法語 cours），與 concourse 同一路。Wiktionary 標的美式音重音在第一音節 /ˈɹiːkɔɹs/，另有重音在後的 /ɹɪˈkɔɹs/ 說法。"
+  }
+]
