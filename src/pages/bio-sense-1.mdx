@@ -135,11 +135,13 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 |---|---|
 | 1 | 光線使視黃醛由順式（cis）異構化為反式（trans），導致視紫質活化 |
 | 2 | 活化的視紫質致活一種稱為**傳導蛋白（transducin）**的 G 蛋白 |
-| 3 | 傳導蛋白致活**磷酸二酯酶（phosphodiesterase，PDE）** |
-| 4 | PDE 把 **cGMP 水解成 GMP**，cGMP 因此從細胞膜上的鈉離子通道脫離 |
-| 5 | 鈉離子通道**關閉**，膜對鈉離子的通透性下降，視桿細胞**過極化** |
+| 3 | 傳導蛋白致活**磷酸二酯酶第六型（phosphodiesterase 6，PDE6）** |
+| 4 | PDE6 把 **cGMP 水解成 GMP**，cGMP 因此從細胞膜上的通道脫離 |
+| 5 | **CNG 通道關閉**，Na⁺ 與 Ca²⁺ 停止內流，視桿細胞**過極化** |
 
 </div>
+
+那個通道的全名是**環核苷酸閘控通道（cyclic nucleotide-gated channel，CNG channel）**，由 cGMP 直接打開，是一種**非選擇性陽離子通道**，同時讓 Na⁺ 與 Ca²⁺ 流進來。
 
 <Figure src="/notes/bio-sense/phototransduction.webp" alt="視桿細胞受器電位產生的五個步驟：光線活化視紫質、視紫質致活傳導蛋白、傳導蛋白致活磷酸二酯酶、磷酸二酯酶把 cGMP 水解成 GMP、鈉離子通道關閉使細胞過極化，右上角附膜電位隨時間由負四十毫伏往負七十毫伏變化的曲線" caption="光轉導的五個步驟。右上角的膜電位圖是關鍵：光撞擊視網膜前細胞停在約 −40 mV，光照後才往負向過極化。" source="Campbell 生物學・下冊" />
 
@@ -153,7 +155,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 |---|---|---|
 | 視紫質 | 去活化 | 活化 |
 | cGMP | 多 | 被 PDE 分解掉 |
-| 鈉離子通道 | **開啟**，Na⁺ 持續內流 | **關閉** |
+| CNG 通道 | **開啟**，Na⁺ 與 Ca²⁺ 持續內流 | **關閉** |
 | 視桿細胞膜電位 | **去極化**，約 −40 mV | **過極化**，往 −70 mV 方向 |
 | 麩胺酸（glutamate） | **持續釋出** | **停止釋出** |
 
@@ -161,7 +163,30 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 
 一般神經元受到刺激會去極化，視桿與視錐**受到刺激（光）反而過極化**，這點必須單獨記住。
 
-下游的雙極細胞可能被麩胺酸去極化，也可能被過極化，**取決於它帶的是哪一種麩胺酸受器**。這就是 ON 型與 OFF 型雙極細胞的由來。
+### ON 型與 OFF 型雙極細胞
+
+**雙極細胞（bipolar cell）**接在感光細胞下游。同樣一份麩胺酸，會讓兩種雙極細胞往相反方向變化，差別在它們帶的受器不同。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| | ON 型雙極細胞 | OFF 型雙極細胞 |
+|---|---|---|
+| 帶的受器 | **mGluR6**，代謝型 | **AMPA 或 kainate 受器**，離子通道型 |
+| 麩胺酸對它的作用 | **抑制** | **興奮** |
+| 黑暗中（麩胺酸多） | 過極化 | 去極化 |
+| **光照下（麩胺酸少）** | **去極化** | **過極化** |
+
+</div>
+
+**代謝型受器（metabotropic receptor）**是要透過 G 蛋白與第二傳訊者才影響離子通道的受器，**離子通道型受器（ionotropic receptor）**則是受器本身就是離子通道，配體一結合就直接開關。
+
+關鍵在 ON 型這條路上麩胺酸是**抑制性**的。光照讓麩胺酸減少，等於解除抑制，所以 ON 型反而去極化。麩胺酸在垂直路徑上是興奮性傳遞物，唯獨對 ON 型雙極細胞是例外，這是最容易記反的一點。
+
+<Supplement>
+
+上面這組 ON 與 OFF 的分工是**視錐**的線路。**視桿只有 ON 型雙極細胞，沒有 OFF 型**。視桿雙極細胞也不直接接神經節細胞，而是先把訊息交給 **AII 無軸突細胞**，再併入視錐既有的 ON 與 OFF 兩條通道。所以暗視覺是借用明視覺的線路送出去的。
+
+</Supplement>
 
 ## 六、視網膜內的兩條路徑
 
@@ -274,6 +299,10 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 走 SCN 那條的既不是視桿也不是視錐，而是一種**自己就會感光的神經節細胞**，稱為 **ipRGC**（intrinsically photosensitive retinal ganglion cell，內在光敏感視網膜神經節細胞）。它體內帶的感光色素叫**黑視素（melanopsin）**，最敏感的波長約 **480 nm**，正好落在藍光範圍。睡前看螢幕會延後入睡，就是藍光經 ipRGC 打到 SCN 把生理時鐘往後撥的結果。
 
 **瞳孔光反射**走的是頂蓋前區那一條：進去的是 **CN II（2）視神經**，出來的是 **CN III（3）動眼神經**。光照一隻眼睛時**兩隻眼睛**都會縮瞳，因為頂蓋前區會同時投射到左右兩側的動眼神經副核（Edinger-Westphal nucleus）。
+
+### 整條路徑一次看完
+
+<Figure src="/notes/bio-sense/phototransduction-overview.webp" alt="視覺光反應與視網膜訊息傳遞總覽流程圖。上排由光刺激經 11-cis 視黃醛、all-trans 視黃醛、活化的視紫質或視錐色素（GPCR）、傳導蛋白 Gt、PDE6、cGMP 下降、CNG 通道關閉（通透鈉離子與鈣離子）、感光細胞過極化，到麩胺酸釋放下降。麩胺酸分出兩支，一支到雙極細胞（ON 型去極化、OFF 型過極化），再依序到神經節細胞、神經纖維層、視盤、視神經、視交叉、外側膝狀核、視放線、初級視覺皮質，途中註明鼻側纖維交叉、顳側纖維不交叉。另一支到水平細胞，產生側向抑制與對比增強。雙極細胞另分支到無軸突細胞，調節神經節細胞在時間與運動面向的輸出" caption="上排是光轉導的分子鏈，下方左邊是訊息往腦的垂直路徑，右邊綠色是水平細胞的側向抑制。圖上視交叉直接接到外側膝狀核，中間其實還有一段視束，本節前面那張表有列。" source="自製整理圖" />
 
 <RelatedNote title="視覺在腦裡的下一站" href="/bio-brain-1" to="腦的構造與功能">
 
@@ -396,6 +425,17 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 />
 
 <ExampleQuestion client:visible n={3}
+  q="光照射視網膜時，關於雙極細胞的反應，下列敘述何者正確？"
+  options={["ON 型與 OFF 型都去極化，因為麩胺酸是興奮性傳遞物", "ON 型去極化，OFF 型過極化", "ON 型過極化，OFF 型去極化", "兩者都不變，雙極細胞不接收感光細胞的訊息"]}
+  answer="(B) ON 型去極化，OFF 型過極化"
+  steps={[
+    "光照使感光細胞過極化，麩胺酸釋放減少。",
+    "ON 型帶的是代謝型受器 mGluR6，麩胺酸對它是抑制性，麩胺酸一少等於解除抑制，所以 ON 型去極化。",
+    "OFF 型帶的是離子通道型受器，麩胺酸對它是興奮性，麩胺酸一少就少了興奮輸入，所以 OFF 型過極化。"
+  ]}
+/>
+
+<ExampleQuestion client:visible n={4}
   q="視覺色素視紫質的組成為何？"
   options={["視黃醛加視紫蛋白", "視黃醛加傳導蛋白", "視紫蛋白加磷酸二酯酶", "維生素 C 加膜蛋白"]}
   answer="(A) 視黃醛加視紫蛋白"
@@ -406,7 +446,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={4}
+<ExampleQuestion client:visible n={5}
   q="視盤（optic disk）形成盲點的原因為何？"
   options={["該處只有視桿沒有視錐", "該處不含光感受器", "該處被血管完全遮蔽", "該處的色素上皮過厚"]}
   answer="(B) 該處不含光感受器"
@@ -417,7 +457,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={5}
+<ExampleQuestion client:visible n={6}
   q="關於視網膜的側抑制，下列何者正確？"
   options={["由雙極細胞以麩胺酸執行", "由水平細胞與無軸突細胞以 GABA 執行", "只發生在視網膜，不發生在腦", "會使明暗邊界變模糊"]}
   answer="(B) 由水平細胞與無軸突細胞以 GABA 執行"
@@ -428,7 +468,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={6}
+<ExampleQuestion client:visible n={7}
   q="夜間觀察暗淡的星星時，稍微偏開視線反而看得更清楚，原因為何？"
   options={["視凹的視錐對弱光不敏感，偏開後改用視桿", "視凹沒有血液供應", "偏開後光線不必穿過神經元層", "視錐在夜間會脫落"]}
   answer="(A) 視凹的視錐對弱光不敏感，偏開後改用視桿"
@@ -439,7 +479,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={7}
+<ExampleQuestion client:visible n={8}
   q="視覺訊息離開視網膜後，正確的傳導順序為何？"
   options={[
     "視神經 → 視徑 → 視交叉 → 外側膝狀核 → 枕葉",
@@ -455,7 +495,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={8}
+<ExampleQuestion client:visible n={9}
   q="腦下垂體腫瘤由下往上壓迫視交叉，最典型的視野缺損為何？"
   options={["單眼全盲", "雙顳側偏盲", "對側同名偏盲", "中央盲點擴大"]}
   answer="(B) 雙顳側偏盲"
@@ -466,7 +506,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={9}
+<ExampleQuestion client:visible n={10}
   q="觀看近物時，眼球內部的變化為何？"
   options={[
     "睫狀肌舒張，懸韌帶拉緊，水晶體變扁",
@@ -482,7 +522,7 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   ]}
 />
 
-<ExampleQuestion client:visible n={10}
+<ExampleQuestion client:visible n={11}
   q="某病人出現右側眼皮下垂、右眼球偏向外下方、右側瞳孔放大且對光無反應，最可能受損的是哪一條腦神經？"
   options={["CN II（2）", "CN III（3）", "CN IV（4）", "CN VI（6）"]}
   answer="(B) CN III（3）"
@@ -506,7 +546,8 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
   "視桿：敏感度高、無色覺、負責夜視、視凹處為零。",
   "視錐：敏感度低、有色覺、人類三種分別對紅綠藍敏感、集中在視凹。",
   "視紫質組成：視黃醛（維生素 A 衍生物）加視紫蛋白（七次跨膜，屬 GPCR）。",
-  "光轉導五步：<ul><li>光使視黃醛順式轉反式</li><li>視紫質活化</li><li>致活傳導蛋白</li><li>致活磷酸二酯酶</li><li>cGMP 水解成 GMP，鈉通道關閉</li></ul>",
+  "光轉導五步：<ul><li>光使視黃醛順式轉反式</li><li>視紫質活化</li><li>致活傳導蛋白 Gt</li><li>致活 PDE6</li><li>cGMP 水解成 GMP，CNG 通道關閉，Na⁺ 與 Ca²⁺ 停止內流</li></ul>",
+  "ON 型與 OFF 型雙極細胞：<ul><li>ON 型帶 mGluR6，代謝型，麩胺酸對它是抑制性</li><li>OFF 型帶 AMPA 或 kainate 受器，離子通道型，麩胺酸對它是興奮性</li><li>光照下麩胺酸減少，ON 型去極化、OFF 型過極化</li><li>視桿只有 ON 型，要經 AII 無軸突細胞併入視錐通道</li></ul>",
   "黑暗中：鈉通道開、細胞去極化約 −40 mV、持續釋出麩胺酸。",
   "光照下：鈉通道關、細胞過極化、停止釋出麩胺酸。",
   "感光細胞的反直覺：受到光刺激反而過極化，與一般神經元相反。",
@@ -562,8 +603,15 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 | retinal | 視黃醛 | 吸光的色素分子，維生素 A 衍生物 |
 | opsin | 視紫蛋白 | 與視黃醛結合的七次跨膜膜蛋白，屬 GPCR |
 | transducin | 傳導蛋白 | 視覺專用的 G 蛋白 |
-| phosphodiesterase (PDE) | 磷酸二酯酶 | 把 cGMP 水解成 GMP |
+| phosphodiesterase 6 (PDE6) | 磷酸二酯酶第六型 | 光轉導的效應酶，把 cGMP 水解成 GMP |
+| metarhodopsin II | 活化態視紫質 | 視紫質吸光後的活化形式，由它去活化傳導蛋白 |
+| cGMP | 環鳥苷單磷酸 | 讓 CNG 通道保持開啟的第二傳訊者 |
+| CNG channel | 環核苷酸閘控通道 | 由 cGMP 打開的非選擇性陽離子通道，讓 Na⁺ 與 Ca²⁺ 內流 |
 | bipolar cell | 雙極細胞 | 承接光感受器訊息，分 ON 型與 OFF 型 |
+| ON bipolar cell | ON 型雙極細胞 | 光照下去極化，帶 mGluR6 |
+| OFF bipolar cell | OFF 型雙極細胞 | 光照下過極化，帶離子通道型受器 |
+| mGluR6 | 第六型代謝型麩胺酸受器 | ON 型雙極細胞的受器，麩胺酸對它是抑制性 |
+| AII amacrine cell | AII 無軸突細胞 | 把視桿雙極細胞的訊息轉接進視錐的 ON 與 OFF 通道 |
 | horizontal cell | 水平細胞 | 在外叢層做側抑制，走 GABA |
 | amacrine cell | 無軸突細胞 | 在內叢層做側抑制，走 GABA |
 | ganglion cell | 神經節細胞 | 軸突會合成視神經 |
@@ -573,6 +621,8 @@ import RelatedNote from '@/components/notes/RelatedNote.astro'
 | primary visual cortex | 初級視覺皮質 | 位於枕葉，形成視覺 |
 | photopsin | 視錐色素 | 視錐的視覺色素，視錐視蛋白加視黃醛 |
 | optic tract | 視徑 | 視交叉之後到外側膝狀核那一段軸突 |
+| optic radiation | 視放線 | 外側膝狀核到初級視覺皮質的纖維束 |
+| center-surround | 中心周邊拮抗 | 接受域中心與周邊反應相反的組織方式 |
 | lateral geniculate nucleus (LGN) | 外側膝狀核 | 視丘裡的視覺中繼站 |
 | bitemporal hemianopia | 雙顳側偏盲 | 視交叉中央受損造成兩眼外側視野缺損 |
 | superior colliculus | 上丘 | 負責掃視性眼球運動 |
