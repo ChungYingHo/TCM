@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-09-02",
-  "count": 663,
-  "withExamples": 663,
+  "count": 682,
+  "withExamples": 682,
   "words": [
     {
       "id": "apathetic",
@@ -21644,6 +21644,617 @@
       ],
       "etymology": "1680 年代借自拉丁文 deciduus「會掉落下來的」，來自動詞 decidere（de-「向下」＋ cadere 在前綴後弱化成的 -cidere「落下」），本指「到了某階段就脫落」，1778 年起用於植物學，專指每年落葉的落葉樹，與常綠樹相對。",
       "derivatives": []
+    },
+    {
+      "id": "finale",
+      "word": "finale",
+      "phonetic": "fəˈnɑlɪ",
+      "zh": "終曲，尾聲，大結局",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "All the instruments participated in the grand finale of the symphony.",
+      "example_zh": "所有的樂器都參與了這首交響曲的壯闊終曲。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "fin",
+          "gloss": "結束"
+        }
+      ],
+      "etymology": "1783 年借自義大利文 finale（形容詞「最後的」轉作名詞），上溯拉丁文 finalis「屬於結尾的」與字根 finis「結束」，本指樂曲或戲劇的終樂章，1810 年起有比喻用法。",
+      "derivatives": []
+    },
+    {
+      "id": "confine",
+      "word": "confine",
+      "phonetic": "kənˈfaɪn",
+      "zh": "限制；範圍",
+      "pos": "v., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Please confine your discussions to the issues on the agenda.",
+      "example_zh": "請把討論限制在議程上的議題。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "共同"
+        },
+        {
+          "text": "fin",
+          "gloss": "界線"
+        }
+      ],
+      "etymology": "1520 年代自法文 confiner，源自拉丁文 confinis「相鄰的、共有邊界的」，由 com「共同」加 finis「邊界」構成，本義是兩地共用一條界線，1590 年代才轉為把人事物關在界內的「限制」。",
+      "derivatives": [
+        {
+          "word": "confinement",
+          "pos": "n.",
+          "zh": "限制"
+        }
+      ]
+    },
+    {
+      "id": "definition",
+      "word": "definition",
+      "phonetic": "ˌdɛfəˈnɪʃən",
+      "zh": "定義",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "You can check up the definition of any word in a dictionary.",
+      "example_zh": "你可以在字典裡查任何一個字的定義。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "徹底"
+        },
+        {
+          "text": "fin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "14 世紀晚期經古法文 definicion 借自拉丁文 definitionem「劃界、設限、說明」，來自動詞 definire（de「徹底」加 finire「劃定界線」），所以「定義」的本義是把一個概念的邊界完整框出來。",
+      "derivatives": [
+        {
+          "word": "define",
+          "pos": "v.",
+          "zh": "界定"
+        }
+      ]
+    },
+    {
+      "id": "definite",
+      "word": "definite",
+      "phonetic": "ˈdɛfənɪt",
+      "zh": "確定的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We need a definite answer by tomorrow.",
+      "example_zh": "我們明天以前需要一個確定的答覆。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "徹底"
+        },
+        {
+          "text": "fin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "約 1500 年借自拉丁文 definitus（definire「劃定界線、界定、說明」的過去分詞），字面是「已被劃定邊界的」，1550 年代起有「有固定界限」義，引申為界線清楚、精確無疑的「明確的」。",
+      "derivatives": [
+        {
+          "word": "definitely",
+          "pos": "adv.",
+          "zh": "確定地"
+        },
+        {
+          "word": "indefinite",
+          "pos": "a.",
+          "zh": "不確定"
+        }
+      ]
+    },
+    {
+      "id": "definitive",
+      "word": "definitive",
+      "phonetic": "dɪˈfɪnətɪv",
+      "zh": "權威的，決定性的，最後的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "He's written the definitive guide to Thailand.",
+      "example_zh": "他寫了那本泰國旅遊的權威指南。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "徹底"
+        },
+        {
+          "text": "fin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "14 世紀晚期經古法文 definitif 借自拉丁文 definitivus「界定性的」，同樣來自 definire「劃定界線、界定、說明」，語意落在劃下最後一道界線，因而指再無爭議的定論。",
+      "derivatives": []
+    },
+    {
+      "id": "finalist",
+      "word": "finalist",
+      "phonetic": "ˈfaɪnəlɪst",
+      "zh": "入圍者，晉級決賽圈隊伍",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "I was a finalist at the national beauty contest.",
+      "example_zh": "我曾經是全國選美比賽的入圍者。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "fin",
+          "gloss": "最終"
+        }
+      ],
+      "etymology": "1896 年由 final 加 -ist 造出，final 經古法文承自晚期拉丁文 finalis「屬於結尾的」，源頭是 finis「結束」，指層層淘汰後留到最後一場決賽的人。",
+      "derivatives": []
+    },
+    {
+      "id": "finality",
+      "word": "finality",
+      "phonetic": "faɪˈnælətɪ",
+      "zh": "確定性",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The bank turned down the loan with finality.",
+      "example_zh": "銀行斬釘截鐵地拒絕了這筆貸款。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "fin",
+          "gloss": "結束"
+        }
+      ],
+      "etymology": "1540 年代自法文 finalité，源自晚期拉丁文 finalitas「處於最終狀態」，再上溯 finalis「最後的」與 finis「結束」，1833 年起指事情已成定局、不會再變動的性質。",
+      "derivatives": [
+        {
+          "word": "finalize",
+          "pos": "v.",
+          "zh": "確定"
+        }
+      ]
+    },
+    {
+      "id": "finite",
+      "word": "finite",
+      "phonetic": "ˈfaɪnaɪt",
+      "zh": "有限的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "We have only a finite number of days to live, so we should make good use of every one of them.",
+      "example_zh": "我們能活的日子是有限的，所以每一天都該好好利用。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "fin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "15 世紀初借自拉丁文 finitum（finire「劃定界線、設限、告終」的過去分詞），字根 finis 本義是「劃分之物、邊界」，故 finite 指有邊界可及、非無窮的。",
+      "derivatives": [
+        {
+          "word": "infinite",
+          "pos": "a.",
+          "zh": "無限"
+        },
+        {
+          "word": "nonfinite",
+          "pos": "a.",
+          "zh": "非限定"
+        }
+      ]
+    },
+    {
+      "id": "affinity",
+      "word": "affinity",
+      "phonetic": "əˈfɪnɪtɪ",
+      "zh": "相像，喜好",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Many people really feel an affinity for dolphins.",
+      "example_zh": "很多人真的對海豚有一種親近感。",
+      "draft": false,
+      "prefixId": "fin",
+      "parts": [
+        {
+          "text": "af",
+          "gloss": "朝向"
+        },
+        {
+          "text": "fin",
+          "gloss": "邊界"
+        }
+      ],
+      "etymology": "約 1300 年經古法文 afinite 借自拉丁文 affinitatem，來自 affinis「毗鄰的、接壤的」（ad「向」加 finis「邊界」），字面是「與之接壤」，先指姻親關係，約 1600 年用於化學等領域的結構親緣，1610 年代才引申為人與人之間的自然投緣。",
+      "derivatives": []
+    },
+    {
+      "id": "determine",
+      "word": "determine",
+      "phonetic": "dɪˈtɝmɪn",
+      "zh": "決定，判定",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "How do you determine the age of this antique desk?",
+      "example_zh": "你怎麼判定這張古董書桌的年代？",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "de",
+          "gloss": "離、去"
+        },
+        {
+          "text": "termin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "拉丁文 determinare 意為「圍住、劃定界限」，由 de-（Etymonline 記作 off，離、去）加上 terminare（標出終點或界線）構成，十四世紀末進入英語時的義項正是「定下範圍、限定時間或程度」，之後才引申為今天的判定與決定。",
+      "derivatives": [
+        {
+          "word": "determination",
+          "pos": "n.",
+          "zh": "決定，決心"
+        },
+        {
+          "word": "indeterminate",
+          "pos": "a.",
+          "zh": "不確定的"
+        },
+        {
+          "word": "predetermined",
+          "pos": "a.",
+          "zh": "事先確定的，業已注定的"
+        }
+      ]
+    },
+    {
+      "id": "term",
+      "word": "term",
+      "phonetic": "tɜrm",
+      "zh": "條件，術語，學期，任期",
+      "pos": "n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company has agreed to bail us out, but what are its terms?",
+      "example_zh": "公司同意出手相救，但它開的條件是什麼？",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "term",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "約 1200 年經古法文 terme 借自拉丁文 terminus「終點、界線」，最早指時間上的界限（期限、任期，1300 年前後再生出開庭期與學期），中世紀拉丁文在邏輯與數學中用 terminus 指「被界定的語詞」而生出十四世紀末的術語義，複數 terms 則於十四世紀初引申為劃定雙方範圍的條件。",
+      "derivatives": []
+    },
+    {
+      "id": "conterminous",
+      "word": "conterminous",
+      "phonetic": "kənˈtɝmɪnəs",
+      "zh": "有交界的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The two countries are conterminous for over 1,000 miles.",
+      "example_zh": "這兩個國家有超過一千英里的交界。",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "con",
+          "gloss": "共同"
+        },
+        {
+          "text": "termin",
+          "gloss": "界線"
+        }
+      ],
+      "etymology": "1670 年代借自拉丁文 conterminus「相鄰、有共同邊界」，由 com-（一起）加 terminus（界石、界線）構成，字面就是兩塊地共用同一條界線，因此意為「有相同界限、在邊界上相接」。",
+      "derivatives": []
+    },
+    {
+      "id": "exterminate",
+      "word": "exterminate",
+      "phonetic": "ɪkˈstɝmɪnet",
+      "zh": "消滅，終結",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The company promises to exterminate cockroaches in any home.",
+      "example_zh": "這家公司保證能消滅任何住家裡的蟑螂。",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "ex",
+          "gloss": "向外"
+        },
+        {
+          "text": "termin",
+          "gloss": "界線"
+        }
+      ],
+      "etymology": "1540 年代進入英語時的意思是「驅逐、趕走」，源自拉丁文 exterminare「趕出去、驅出界外」，由 ex-（out of）加 termen（界線、界限）的奪格 termine 而來，字面是把人趕到邊界之外，「徹底消滅」的今義要到 1640 年代才出現。",
+      "derivatives": [
+        {
+          "word": "extermination",
+          "pos": "n.",
+          "zh": "消滅，終結"
+        },
+        {
+          "word": "terminate",
+          "pos": "v.",
+          "zh": "終止，結束"
+        },
+        {
+          "word": "termination",
+          "pos": "n.",
+          "zh": "終止，結束"
+        }
+      ]
+    },
+    {
+      "id": "terminal",
+      "word": "terminal",
+      "phonetic": "ˈtɝmɪnəl",
+      "zh": "末期的；終點站，終端機",
+      "pos": "a., n.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The terminal patient has decided to check out of the hospital.",
+      "example_zh": "這位末期病患決定辦理出院。",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "termin",
+          "gloss": "界線、終點"
+        }
+      ],
+      "etymology": "十五世紀中葉借自拉丁文 terminalis「屬於界線或終點的、最後的」，源頭是 terminus（界石、界線），名詞用法先指字尾（1831）與電池末端的接線螺絲（1838），1870 年起指鐵路終點站、1921 年擴及航空、1954 年起指電腦終端機，而「致命的、末期的」一義見於 1862 年。",
+      "derivatives": [
+        {
+          "word": "terminus",
+          "pos": "n.",
+          "zh": "終點站，終端機"
+        }
+      ]
+    },
+    {
+      "id": "interminable",
+      "word": "interminable",
+      "phonetic": "ɪnˈtɝmənəbəl",
+      "zh": "沒完沒了的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Contract negotiations seem interminable.",
+      "example_zh": "合約談判看起來沒完沒了。",
+      "draft": false,
+      "prefixId": "term",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "不"
+        },
+        {
+          "text": "termin",
+          "gloss": "界限"
+        }
+      ],
+      "etymology": "十四世紀末經古法文 interminable 或直接借自晚期拉丁文 interminabilis，由 in-（不）加 terminabilis（來自 terminare「設限、劃界、結束」）構成，字面是「無法被劃出界線的」，因此表示沒有盡頭。",
+      "derivatives": []
+    },
+    {
+      "id": "abound",
+      "word": "abound",
+      "phonetic": "əˈbaʊnd",
+      "zh": "大量存在",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Fish of high economic value abound in these waters.",
+      "example_zh": "這片水域裡有大量具經濟價值的魚。",
+      "draft": false,
+      "prefixId": "und",
+      "parts": [
+        {
+          "text": "ab",
+          "gloss": "離開、向外"
+        },
+        {
+          "text": "ound",
+          "gloss": "波浪"
+        }
+      ],
+      "etymology": "英文 abound 約於 14 世紀初經古法文 abonder「大量存在、聚集」借入，源頭是拉丁文 abundare「溢出、漫流」，由 ab-（離開、向外）加上 undare「掀起波浪」組成，undare 又源自名詞 unda「波浪」，字面「向外溢出」因而在英文裡發展出「大量存在、充裕」之意。",
+      "derivatives": [
+        {
+          "word": "abundant",
+          "pos": "a.",
+          "zh": "大量的，豐富的"
+        },
+        {
+          "word": "abundance",
+          "pos": "n.",
+          "zh": "豐富，大量"
+        }
+      ]
+    },
+    {
+      "id": "inundate",
+      "word": "inundate",
+      "phonetic": "ˈɪnənˌdet",
+      "zh": "淹沒，泛濫",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The information desk has been inundated with requests for help.",
+      "example_zh": "服務台被求助的要求淹沒了。",
+      "draft": false,
+      "prefixId": "und",
+      "parts": [
+        {
+          "text": "in",
+          "gloss": "在…之上"
+        },
+        {
+          "text": "und",
+          "gloss": "波浪"
+        }
+      ],
+      "etymology": "英文 inundate 於 1620 年代由名詞 inundation 逆構而成，或直接借自拉丁文過去分詞 inundatus，其動詞原形 inundare 由 in-（到…之上）加上 undare「流動」組成，undare 源自 unda「波浪」，字面義是「流到…之上」，因而衍生出「淹沒、氾濫」之意。",
+      "derivatives": [
+        {
+          "word": "inundation",
+          "pos": "n.",
+          "zh": "淹沒，泛濫"
+        }
+      ]
+    },
+    {
+      "id": "redundant",
+      "word": "redundant",
+      "phonetic": "rɪˈdʌndənt",
+      "zh": "重複的，多餘的",
+      "pos": "a.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "Humans are equipped with redundant organs: we have two eyes, two ears, etc.",
+      "example_zh": "人體配備了重複的器官：我們有兩隻眼睛、兩隻耳朵等等。",
+      "draft": false,
+      "prefixId": "und",
+      "parts": [
+        {
+          "text": "re",
+          "gloss": "再次"
+        },
+        {
+          "text": "und",
+          "gloss": "波浪"
+        }
+      ],
+      "etymology": "英文 redundant 約於 1600 年借自拉丁文現在分詞 redundantem，其動詞原形 redundare 由 re-（再、又）加上 undare「掀起波浪」組成，undare 源自 unda「波浪」，字面義是「一再湧起、滿溢而出」，因而由「水滿溢出」的意象引申出「過剩、多餘」之意。",
+      "derivatives": [
+        {
+          "word": "redundancy",
+          "pos": "n.",
+          "zh": "重複，多餘"
+        }
+      ]
+    },
+    {
+      "id": "undulate",
+      "word": "undulate",
+      "phonetic": "ˈʌndʒəˌlet",
+      "zh": "波動，起伏",
+      "pos": "v.",
+      "tags": [],
+      "frq": 0,
+      "examCount": 0,
+      "examCorrect": 0,
+      "examIds": [],
+      "example": "The window affords a view of undulating wheat fields.",
+      "example_zh": "從這扇窗望出去，可以看到起伏的麥田。",
+      "draft": false,
+      "prefixId": "und",
+      "parts": [
+        {
+          "text": "und",
+          "gloss": "波浪"
+        }
+      ],
+      "etymology": "英文動詞 undulate 於 1660 年代由名詞 undulation 逆構而成，或源自形容詞 undulate「呈波浪狀」（1650 年代），undulation 則經中古拉丁文 undulatio、晚期拉丁文 undulatus「呈波浪狀的」，上溯至 unda 的指小詞 undula「小波浪」，故 undulate 字面就是「像小波浪一樣起伏」。",
+      "derivatives": [
+        {
+          "word": "undulation",
+          "pos": "n.",
+          "zh": "波動，起伏"
+        }
+      ]
     }
   ]
 }

@@ -91,21 +91,21 @@
 | 76 vac／van／vain（空） | 9 | 78–79 |
 | 77 neg／nil／nul（無、否定） | 9 | 79–80 |
 
-### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 17/29 組**
+### 第二批：書頁 81–106（IMG_1696–1721）　29 組、172 字　**查證做到 20/29 組**
 
 照片**轉錄全部完成**，例句中譯**全部完成**，字根組也都進了 `vocab.ts`（order 78–106）。
-卡在 Etymonline／IPA 查證，29 組做完 17 組。
+卡在 Etymonline／IPA 查證，29 組做完 20 組。
 
 | 部分 | 狀態 |
 | :--- | :--- |
 | 照片轉錄（26 頁、172 字） | **完成** → `pipeline/data/vocab_root_wordlist_b2.md` |
 | 例句中譯（172 句） | **完成** → `pipeline/data/vocab_root_example_zh_b2.json` |
 | 字根組表（29 組，order 78–106） | **完成** → `src/models/vocab.ts` |
-| Etymonline／IPA 查證 | **17/29 組**（97 字）→ `pipeline/data/vocab_verify/` |
-| 已上架 | 97 字（`vocab.json` 共 663 字） |
+| Etymonline／IPA 查證 | **20/29 組**（116 字）→ `pipeline/data/vocab_verify/` |
+| 已上架 | 116 字（`vocab.json` 共 682 字） |
 
-**查證完成的 17 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
-lev、stig、acr、punct、sign、cas
+**查證完成的 20 組**：neo、prim、val、dign、forc、dur、dynam、potent、salut、luc、grav、
+lev、stig、acr、punct、sign、cas、fin、term、und
 
 **還沒查證的 18 組，共 110 字**。Aira 2026-09-02：**一輪約 20 字、查證完就入庫**
 （組裝＋build＋綠燈＋commit 走完一輪再開下一輪），這樣 5 小時的 token 額度才控得住。
@@ -115,8 +115,8 @@ lev、stig、acr、punct、sign、cas
 | :--- | :--- | --: | :--- |
 | R1 | lev 5、stig 10、acr 3 | 18 | **完成** |
 | R2 | punct 6、sign 4、cas 7 | 17 | **完成** |
-| R3 | fin 9、term 6、und 4 | 19 | 進行中 |
-| R4 | clud 8、flu 9、enni 2 | 19 | 未開始 |
+| R3 | fin 9、term 6、und 4 | 19 | **完成** |
+| R4 | clud 8、flu 9、enni 2 | 19 | 進行中 |
 | R5 | cur 14、spars 3、lav 5 | 22 | 未開始 |
 | R6 | fund 7、chron 4、journ 4 | 15 | 未開始 |
 
@@ -132,8 +132,9 @@ lev、stig、acr、punct、sign、cas
 
 ### 課本中文「不算錯但會背歪」的字（2026-09-02 全表逐字複查 172 字的結果）
 
-`zh` 一律保留課本原文（那是老師上課用的版本），但下列 6 個字若照字面背會在考題上判斷錯，
+`zh` 一律保留課本原文（那是老師上課用的版本），但下列這些字若照字面背會在考題上判斷錯，
 複習時要知道差別。這是**通讀全部中文**的結論，不是抽查。
+（前 6 條來自 2026-09-02 通讀，後 4 條由 R3 起 worker 查證時順帶抓到。）
 
 | 字 | 課本中文 | 實際上 |
 | :--- | :--- | :--- |
@@ -143,6 +144,10 @@ lev、stig、acr、punct、sign、cas
 | forte | 強音，強項 | 兩義**讀音不同**：音樂「強音」/ˈfɔrteɪ/，「強項」/fɔrt/ |
 | condign | 恰當的，合適的 | 幾乎只用於刑罰，指「罪有應得的」 |
 | claustrophobia | 禁閉恐懼症 | 台灣醫學通用譯名是「幽閉恐懼症」 |
+| exterminate | 消滅，終結 | 「終結」誤導。這個字是把整群生物殺光、根除，「使某事結束」是 terminate |
+| finality | 確定性 | 易與 certainty（心裡篤定）混。這個字指結果已成定局、不可逆 |
+| affinity | 相像，喜好 | 「喜好」太弱。指天生的投緣、親近傾向，不等於一般的 like |
+| finalist | 入圍者 | 專指進入最後一輪決賽者，不是任何階段的入選者 |
 
 ### 完整性怎麼保證（不必人工比對）
 

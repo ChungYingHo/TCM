@@ -1,0 +1,147 @@
+[
+  {
+    "word": "abound",
+    "prefixId": "und",
+    "pos": "v.",
+    "phonetic": "əˈbaʊnd",
+    "zh": "大量存在",
+    "parts": [
+      {
+        "text": "ab",
+        "gloss": "離開、向外"
+      },
+      {
+        "text": "ound",
+        "gloss": "波浪"
+      }
+    ],
+    "etymology": "英文 abound 約於 14 世紀初經古法文 abonder「大量存在、聚集」借入，源頭是拉丁文 abundare「溢出、漫流」，由 ab-（離開、向外）加上 undare「掀起波浪」組成，undare 又源自名詞 unda「波浪」，字面「向外溢出」因而在英文裡發展出「大量存在、充裕」之意。",
+    "derivatives": [
+      {
+        "word": "abundant",
+        "pos": "a.",
+        "zh": "大量的，豐富的"
+      },
+      {
+        "word": "abundance",
+        "pos": "n.",
+        "zh": "豐富，大量"
+      }
+    ],
+    "example": "Fish of high economic value abound in these waters.",
+    "example_zh": "這片水域裡有大量具經濟價值的魚。",
+    "sources": {
+      "page": "IMG_1715",
+      "etymonline": "https://www.etymonline.com/word/abound",
+      "ipa": "/əˈbaʊnd/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "abound 拼成 -ound（而非 -und）是因為它經由古法文 abonder 的口語音變路徑進入英文（拉丁 u 到古法文 ou 的母音音變，如 turris 變 tour）。同源詞 abundant 是後來直接借自拉丁文 abundantem 的「文讀」形式，所以仍保留看得見的 und 拼法，兩者是拼法不同的同源詞對，Etymonline 的 abound 詞條也特別註明英文自古以來都用 -ou- 拼法。"
+    }
+  },
+  {
+    "word": "inundate",
+    "prefixId": "und",
+    "pos": "v.",
+    "phonetic": "ˈɪnənˌdet",
+    "zh": "淹沒，泛濫",
+    "parts": [
+      {
+        "text": "in",
+        "gloss": "在…之上"
+      },
+      {
+        "text": "und",
+        "gloss": "波浪"
+      }
+    ],
+    "etymology": "英文 inundate 於 1620 年代由名詞 inundation 逆構而成，或直接借自拉丁文過去分詞 inundatus，其動詞原形 inundare 由 in-（到…之上）加上 undare「流動」組成，undare 源自 unda「波浪」，字面義是「流到…之上」，因而衍生出「淹沒、氾濫」之意。",
+    "derivatives": [
+      {
+        "word": "inundation",
+        "pos": "n.",
+        "zh": "淹沒，泛濫"
+      }
+    ],
+    "example": "The information desk has been inundated with requests for help.",
+    "example_zh": "服務台被求助的要求淹沒了。",
+    "sources": {
+      "page": "IMG_1715",
+      "etymonline": "https://www.etymonline.com/word/inundate",
+      "ipa": "/ˈɪnənˌdeɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "此處的 in- 是表示「向、到…之上」的方向性字首（Etymonline 標為 in-（2）），和表示否定「不」的另一個 in-（如 inactive、indecent 裡的 in-）是完全不同的字首，容易被學生誤以為同一個，需留意區分。教科書中譯「淹沒，泛濫」與字義相符。"
+    }
+  },
+  {
+    "word": "redundant",
+    "prefixId": "und",
+    "pos": "a.",
+    "phonetic": "rɪˈdʌndənt",
+    "zh": "重複的，多餘的",
+    "parts": [
+      {
+        "text": "re",
+        "gloss": "再次"
+      },
+      {
+        "text": "und",
+        "gloss": "波浪"
+      }
+    ],
+    "etymology": "英文 redundant 約於 1600 年借自拉丁文現在分詞 redundantem，其動詞原形 redundare 由 re-（再、又）加上 undare「掀起波浪」組成，undare 源自 unda「波浪」，字面義是「一再湧起、滿溢而出」，因而由「水滿溢出」的意象引申出「過剩、多餘」之意。",
+    "derivatives": [
+      {
+        "word": "redundancy",
+        "pos": "n.",
+        "zh": "重複，多餘"
+      }
+    ],
+    "example": "Humans are equipped with redundant organs: we have two eyes, two ears, etc.",
+    "example_zh": "人體配備了重複的器官：我們有兩隻眼睛、兩隻耳朵等等。",
+    "sources": {
+      "page": "IMG_1715",
+      "etymonline": "https://www.etymonline.com/word/redundant",
+      "ipa": "/rɪˈdʌndənt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "教科書把 re- 標為「again（再次）」本身沒錯，但 redundant 的「多餘、過剩」語感是源自 re- + undare「一再湧起、滿溢而出」的水滿意象，不是直接來自「重複說一遍」，學習時不宜把 re- 直接套成中文「重複的」去理解這個字，以免倒果為因（Etymonline 甚至記載此字 17 世紀一度帶正面的「豐沛、充盈」語感，1928 年才另外發展出英式「裁員」的用法）。"
+    }
+  },
+  {
+    "word": "undulate",
+    "prefixId": "und",
+    "pos": "v.",
+    "phonetic": "ˈʌndʒəˌlet",
+    "zh": "波動，起伏",
+    "parts": [
+      {
+        "text": "und",
+        "gloss": "波浪"
+      }
+    ],
+    "etymology": "英文動詞 undulate 於 1660 年代由名詞 undulation 逆構而成，或源自形容詞 undulate「呈波浪狀」（1650 年代），undulation 則經中古拉丁文 undulatio、晚期拉丁文 undulatus「呈波浪狀的」，上溯至 unda 的指小詞 undula「小波浪」，故 undulate 字面就是「像小波浪一樣起伏」。",
+    "derivatives": [
+      {
+        "word": "undulation",
+        "pos": "n.",
+        "zh": "波動，起伏"
+      }
+    ],
+    "example": "The window affords a view of undulating wheat fields.",
+    "example_zh": "從這扇窗望出去，可以看到起伏的麥田。",
+    "sources": {
+      "page": "IMG_1715",
+      "etymonline": "https://www.etymonline.com/word/undulate",
+      "ipa": "/ˈʌndʒəˌleɪt/",
+      "ipaSource": "Wiktionary",
+      "phoneticNote": "KK 自 US IPA 轉寫（skill 附錄 B 對照）",
+      "example": "photo",
+      "rootNote": "Wiktionary 這個字沒有像另外三個字一樣明確標出 US 專屬音標，只列出多組不分英美的變體（/ʌndjəleɪt/、/ʌndʒəleɪt/、/ʌndəleɪt/ 等），僅附一則南英格蘭語音檔。本表採用的 /ˈʌndʒəˌleɪt/ 是另外查證 dictionary.com（Random House）後確認的美式首選唸法，-du- 在美式唸法中顎化成 dʒ（如 graduate、individual），英式則較常維持 /ʌndjʊleɪt/ 不顎化。教科書中譯「波動，起伏」與字義相符。"
+    }
+  }
+]
