@@ -1,0 +1,200 @@
+---
+// 四種有機反應中間物的幾何。碳陽離子、碳自由基、碳陰離子這三個只差在「未混成 p 軌域裡
+// 有幾個電子」，並排畫才看得出為什麼前兩個是平面、第三個卻是三角錐。卡賓另外一張。
+// 純靜態、無 hydration：SSR 直出，列印 PDF 也完整呈現。
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-4 font-display font-bold text-base-content">
+    四種反應中間物的幾何
+  </figcaption>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <!-- 碳陽離子：sp² 三角平面，p 軌域全空（虛線＝沒有電子） -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-primary">碳陽離子 CH₃⁺</p>
+      <svg
+        viewBox="0 0 170 172"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="碳陽離子的三角平面幾何與全空的 p 軌域"
+      >
+        <ellipse
+          cx="85"
+          cy="86"
+          rx="64"
+          ry="15"
+          fill="none"
+          class="stroke-base-content"
+          stroke-width="1"
+          stroke-dasharray="4 4"
+          opacity="0.35"></ellipse>
+        <ellipse
+          cx="85"
+          cy="53"
+          rx="14"
+          ry="29"
+          class="fill-primary stroke-primary"
+          fill-opacity="0.08"
+          stroke-width="1.5"
+          stroke-dasharray="4 3"></ellipse>
+        <ellipse
+          cx="85"
+          cy="119"
+          rx="14"
+          ry="29"
+          class="fill-primary stroke-primary"
+          fill-opacity="0.08"
+          stroke-width="1.5"
+          stroke-dasharray="4 3"></ellipse>
+        <line x1="72" y1="86" x2="28" y2="86" class="stroke-base-content" stroke-width="2"></line>
+        <line x1="94" y1="83" x2="116" y2="73" class="stroke-base-content" stroke-width="2"></line>
+        <line x1="94" y1="89" x2="116" y2="99" class="stroke-base-content" stroke-width="2"></line>
+        <circle cx="85" cy="86" r="12" class="fill-base-100"></circle>
+        <text x="85" y="92" text-anchor="middle" class="fill-base-content text-[17px] font-bold"
+          >C</text
+        >
+        <text x="16" y="91" class="fill-base-content text-[14px]">H</text>
+        <text x="122" y="71" class="fill-base-content text-[14px]">H</text>
+        <text x="122" y="105" class="fill-base-content text-[14px]">H</text>
+      </svg>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">
+        sp² 三角平面，鍵角 120°。p 軌域完全沒有電子，正電荷就落在這個空軌域上。
+      </p>
+    </div>
+
+    <!-- 碳自由基：接近平面的 sp²，p 軌域一個電子 -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-primary">碳自由基 CH₃·</p>
+      <svg
+        viewBox="0 0 170 172"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="碳自由基的接近平面幾何與帶一個電子的 p 軌域"
+      >
+        <ellipse
+          cx="85"
+          cy="86"
+          rx="64"
+          ry="15"
+          fill="none"
+          class="stroke-base-content"
+          stroke-width="1"
+          stroke-dasharray="4 4"
+          opacity="0.35"></ellipse>
+        <ellipse
+          cx="85"
+          cy="53"
+          rx="14"
+          ry="29"
+          class="fill-primary stroke-primary"
+          fill-opacity="0.14"
+          stroke-width="1.5"></ellipse>
+        <ellipse
+          cx="85"
+          cy="119"
+          rx="14"
+          ry="29"
+          class="fill-primary stroke-primary"
+          fill-opacity="0.14"
+          stroke-width="1.5"></ellipse>
+        <circle cx="85" cy="47" r="4" class="fill-primary"></circle>
+        <line x1="72" y1="86" x2="28" y2="86" class="stroke-base-content" stroke-width="2"></line>
+        <line x1="94" y1="83" x2="116" y2="73" class="stroke-base-content" stroke-width="2"></line>
+        <line x1="94" y1="89" x2="116" y2="99" class="stroke-base-content" stroke-width="2"></line>
+        <circle cx="85" cy="86" r="12" class="fill-base-100"></circle>
+        <text x="85" y="92" text-anchor="middle" class="fill-base-content text-[17px] font-bold"
+          >C</text
+        >
+        <text x="16" y="91" class="fill-base-content text-[14px]">H</text>
+        <text x="122" y="71" class="fill-base-content text-[14px]">H</text>
+        <text x="122" y="105" class="fill-base-content text-[14px]">H</text>
+      </svg>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">
+        sp²，接近三角平面。p 軌域裡有一個未成對電子，就是圖中那一點。
+      </p>
+    </div>
+
+    <!-- 碳陰離子：sp³ 三角錐，孤對電子佔一個 sp³ 軌域 -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-secondary">碳陰離子 CH₃⁻</p>
+      <svg
+        viewBox="0 0 170 172"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="碳陰離子的三角錐幾何與位於 sp3 軌域的孤對電子"
+      >
+        <ellipse
+          cx="85"
+          cy="48"
+          rx="15"
+          ry="28"
+          class="fill-secondary stroke-secondary"
+          fill-opacity="0.14"
+          stroke-width="1.5"></ellipse>
+        <circle cx="78" cy="44" r="3.5" class="fill-secondary"></circle>
+        <circle cx="92" cy="44" r="3.5" class="fill-secondary"></circle>
+        <line x1="74" y1="103" x2="28" y2="130" class="stroke-base-content" stroke-width="2"></line>
+        <polygon points="95,102 142,126 138,134" class="fill-base-content"></polygon>
+        <line x1="81" y1="115" x2="89" y2="115" class="stroke-base-content" stroke-width="1.6"
+        ></line>
+        <line x1="79" y1="124" x2="91" y2="124" class="stroke-base-content" stroke-width="1.6"
+        ></line>
+        <line x1="77" y1="133" x2="93" y2="133" class="stroke-base-content" stroke-width="1.6"
+        ></line>
+        <line x1="75" y1="142" x2="95" y2="142" class="stroke-base-content" stroke-width="1.6"
+        ></line>
+        <circle cx="85" cy="96" r="12" class="fill-base-100"></circle>
+        <text x="85" y="102" text-anchor="middle" class="fill-base-content text-[17px] font-bold"
+          >C</text
+        >
+        <text x="12" y="140" class="fill-base-content text-[14px]">H</text>
+        <text x="148" y="136" class="fill-base-content text-[14px]">H</text>
+        <text x="85" y="163" text-anchor="middle" class="fill-base-content text-[14px]">H</text>
+      </svg>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">
+        sp³ 三角錐，鍵角接近 109.5°。孤對電子佔掉第四個 sp³ 軌域，把三個 C—H 壓成錐形。
+      </p>
+    </div>
+
+    <!-- 卡賓：角形，單重態與三重態的電子配置不同 -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-accent">卡賓 CH₂</p>
+      <svg
+        viewBox="0 0 170 172"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="卡賓的角形幾何"
+      >
+        <line x1="77" y1="65" x2="34" y2="111" class="stroke-base-content" stroke-width="2"></line>
+        <line x1="93" y1="65" x2="136" y2="111" class="stroke-base-content" stroke-width="2"></line>
+        <path
+          d="M 62 81 Q 85 93 108 81"
+          fill="none"
+          class="stroke-accent"
+          stroke-width="1.6"
+          stroke-dasharray="4 3"></path>
+        <circle cx="85" cy="56" r="12" class="fill-base-100"></circle>
+        <text x="85" y="62" text-anchor="middle" class="fill-base-content text-[17px] font-bold"
+          >C</text
+        >
+        <text x="18" y="122" class="fill-base-content text-[14px]">H</text>
+        <text x="142" y="122" class="fill-base-content text-[14px]">H</text>
+        <text x="85" y="112" text-anchor="middle" class="fill-accent text-[13px] font-semibold"
+          >角形</text
+        >
+        <text x="85" y="140" text-anchor="middle" class="fill-base-content text-[12px]"
+          >單重態 102°</text
+        >
+        <text x="85" y="158" text-anchor="middle" class="fill-base-content text-[12px]"
+          >三重態 125～140°</text
+        >
+      </svg>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">
+        兩個非鍵結電子成對放在同一個 sp² 軌域，p 軌域空著，是單重態。兩個電子自旋相同、各佔一個軌域，是三重態。
+      </p>
+    </div>
+  </div>
+</figure>

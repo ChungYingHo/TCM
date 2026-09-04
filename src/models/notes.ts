@@ -163,6 +163,15 @@ export const NOTES: NoteEntry[] = [
     desc: '離子化合物、多原子離子、Lewis 結構、形式電荷、共振、混成、VSEPR、分子偶極與分子間作用力',
   },
   {
+    id: 'chem-org-structure',
+    href: '/chem-org-structure',
+    title: '有機分子的結構與反應中間物',
+    subject: '化學',
+    tags: ['有機基礎'],
+    group: '有機化學基礎',
+    desc: '碳的混成與鍵參數、丙二烯與共平面判斷、碳陽離子／碳陰離子／自由基／卡賓、骨架式與不飽和度',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '概論、顯微鏡與原核／真核',

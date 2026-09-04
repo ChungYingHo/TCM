@@ -31,6 +31,6 @@
   <p class="mt-2 text-sm text-base-content/70">{CATS[sel].name}：{CATS[sel].note}。</p>
 
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    穩定性 <b>苯甲/烯丙型 &gt; 3° &gt; 2° &gt; 1° &gt; CH₃⁺</b>（越多烷基推電子、或有共振分散正電荷越穩定）。越穩定越容易生成——這決定了 <b>Markovnikov 方向</b>（H⁺ 加成後形成較穩定的碳正離子）與 <b>SN1／E1 的速率</b>（3° 最快）。
+    穩定性 <b>苯甲/烯丙型 &gt; 3° &gt; 2° &gt; 1° &gt; CH₃⁺</b>（越多烷基推電子、或有共振分散正電荷越穩定）。越穩定越容易生成。這決定了 <b>加成反應加在哪一個碳上</b>（H⁺ 先加成，讓另一個碳成為較穩定的碳正離子，稱為 Markovnikov 方向），以及<b>必須先解離出碳正離子才能往下走的路徑</b>（SN1 與 E1）跑得多快，3° 最快。
   </p>
 </div>
