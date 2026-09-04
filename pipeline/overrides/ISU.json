@@ -1648,5 +1648,15 @@
     ],
     "needs_review": true,
     "explanation": "本年參考答案為掃描公告，由人工轉謄、尚待核對。"
+  },
+  "ISU-112-chemistry-36": {
+    "correct_answer": [
+      "B"
+    ],
+    "original_answer": [
+      "C"
+    ],
+    "explanation": "站方修正：官方答案卡為 (C)，但 N₂ 有 10 個價電子、電子全部成對，是反磁性。以分子軌域理論判斷：N₂⁺（9 個價電子）σ2p 只剩 1 個未成對電子，N₂⁻（11 個）多出的 1 個電子進入 π*2p，兩者順磁，N₂ 反磁，正解為 (B) N₂⁺ 和 N₂⁻。詳見筆記〈分子軌域理論與鍵的性質〉第四節。",
+    "errata_applied": true
   }
 }

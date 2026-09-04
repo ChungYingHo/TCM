@@ -34,7 +34,11 @@
     <span class="font-semibold">正確答案：</span>
     <span class="badge badge-success badge-lg font-bold">{answerLabel(question)}</span>
     {#if question.errata_applied}
-      <span class="badge badge-warning" title="此題答案經釋疑更正">釋疑更正</span>
+      {#if question.explanation?.startsWith('站方修正')}
+        <span class="badge badge-warning" title="官方答案卡有誤，本站依筆記推導修正，理由見下">站方修正</span>
+      {:else}
+        <span class="badge badge-warning" title="此題答案經釋疑更正">釋疑更正</span>
+      {/if}
       {#if question.original_answer.length}
         <span class="text-xs opacity-70">（原答案：{question.original_answer.join('、')}）</span>
       {/if}
