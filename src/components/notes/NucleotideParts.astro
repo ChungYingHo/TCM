@@ -1,0 +1,136 @@
+---
+// 核苷、核苷酸與磷酸二酯鍵。
+// 上半：三個零件怎麼拼（少了磷酸就只是核苷）。下半：兩個核苷酸接起來之後，
+// 磷酸夾在上一個醣的 C3′ 與下一個醣的 C5′ 之間，整條鏈因此有 5′ 與 3′ 兩個不同的端。
+// 純靜態、無 hydration：SSR 直出。
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-4 font-display font-bold text-base-content">
+    核苷、核苷酸與磷酸二酯鍵
+  </figcaption>
+
+  <p class="mb-2 text-sm font-bold text-base-content/80">三個零件</p>
+  <div class="grid grid-cols-3 gap-2 text-center">
+    <div class="rounded-box border border-base-300 bg-base-200/50 px-1.5 py-2">
+      <div class="text-sm font-bold">磷酸</div>
+      <div class="text-xs text-base-content/55">phosphate</div>
+    </div>
+    <div class="rounded-box border border-base-300 bg-base-200/50 px-1.5 py-2">
+      <div class="text-sm font-bold">五碳醣</div>
+      <div class="text-xs text-base-content/55">核醣</div>
+      <div class="text-xs text-base-content/55">去氧核醣</div>
+    </div>
+    <div class="rounded-box border border-base-300 bg-base-200/50 px-1.5 py-2">
+      <div class="text-sm font-bold">含氮鹼基</div>
+      <div class="text-xs text-base-content/55">A G C T U</div>
+    </div>
+
+    <div></div>
+    <div class="col-span-2 rounded-box bg-primary/10 px-2 py-1.5 text-xs font-bold text-primary">
+      核苷 nucleoside ＝ 醣的 C1′ 接鹼基的 N
+    </div>
+
+    <div class="col-span-3 rounded-box bg-accent/10 px-2 py-1.5 text-xs font-bold text-accent">
+      核苷酸 nucleotide ＝ 核苷 ＋ 接在醣 C5′–OH 上的磷酸，這才是核酸的單體
+    </div>
+  </div>
+
+  <p class="mt-4 mb-2 text-sm font-bold text-base-content/80">兩個核苷酸接起來</p>
+  <svg
+    viewBox="0 0 366 186"
+    class="mx-auto block w-full"
+    role="img"
+    aria-label="兩個核苷酸以磷酸二酯鍵相連，磷酸接在上一個醣的三撇碳與下一個醣的五撇碳之間"
+  >
+    <line x1="41" y1="58" x2="64" y2="58" class="stroke-base-content" stroke-width="2"></line>
+    <line x1="140" y1="58" x2="183" y2="58" class="stroke-base-content" stroke-width="2"></line>
+    <line x1="213" y1="58" x2="256" y2="58" class="stroke-base-content" stroke-width="2"></line>
+    <line x1="332" y1="58" x2="344" y2="58" class="stroke-base-content" stroke-width="2"></line>
+
+    <line x1="102" y1="80" x2="102" y2="116" class="stroke-base-content" stroke-width="2"></line>
+    <line x1="294" y1="80" x2="294" y2="116" class="stroke-base-content" stroke-width="2"></line>
+
+    <circle cx="26" cy="58" r="15" class="fill-base-200 stroke-base-content" stroke-width="1.5"
+    ></circle>
+    <text x="26" y="63" text-anchor="middle" class="fill-base-content text-[14px] font-bold">P</text>
+
+    <circle cx="198" cy="58" r="15" class="fill-accent stroke-accent" fill-opacity="0.2"
+      stroke-width="2"></circle>
+    <text x="198" y="63" text-anchor="middle" class="fill-base-content text-[14px] font-bold">P</text>
+
+    <rect
+      x="64"
+      y="38"
+      width="76"
+      height="42"
+      rx="8"
+      class="fill-base-200 stroke-base-content"
+      stroke-width="1.5"></rect>
+    <text x="102" y="64" text-anchor="middle" class="fill-base-content text-[15px] font-bold"
+      >五碳醣</text
+    >
+    <rect
+      x="256"
+      y="38"
+      width="76"
+      height="42"
+      rx="8"
+      class="fill-base-200 stroke-base-content"
+      stroke-width="1.5"></rect>
+    <text x="294" y="64" text-anchor="middle" class="fill-base-content text-[15px] font-bold"
+      >五碳醣</text
+    >
+
+    <rect
+      x="64"
+      y="116"
+      width="76"
+      height="34"
+      rx="8"
+      class="fill-primary stroke-primary"
+      fill-opacity="0.14"
+      stroke-width="1.5"></rect>
+    <text x="102" y="138" text-anchor="middle" class="fill-base-content text-[15px]">鹼基</text>
+    <rect
+      x="256"
+      y="116"
+      width="76"
+      height="34"
+      rx="8"
+      class="fill-primary stroke-primary"
+      fill-opacity="0.14"
+      stroke-width="1.5"></rect>
+    <text x="294" y="138" text-anchor="middle" class="fill-base-content text-[15px]">鹼基</text>
+
+    <text x="52" y="46" text-anchor="middle" class="fill-base-content text-[14px] font-bold"
+      >5′</text
+    >
+    <text x="161" y="46" text-anchor="middle" class="fill-base-content text-[14px] font-bold"
+      >3′</text
+    >
+    <text x="234" y="46" text-anchor="middle" class="fill-base-content text-[14px] font-bold"
+      >5′</text
+    >
+    <text x="348" y="63" class="fill-base-content text-[14px] font-bold">OH</text>
+
+    <text x="26" y="100" text-anchor="middle" class="fill-base-content text-[13px]" opacity="0.6"
+      >5′ 端</text
+    >
+    <text x="198" y="100" text-anchor="middle" class="fill-accent text-[13px] font-bold"
+      >磷酸二酯鍵</text
+    >
+    <text x="330" y="100" text-anchor="middle" class="fill-base-content text-[13px]" opacity="0.6"
+      >3′ 端</text
+    >
+    <text x="108" y="102" class="fill-base-content text-[13px]" opacity="0.6">C1′</text>
+    <text x="300" y="102" class="fill-base-content text-[13px]" opacity="0.6">C1′</text>
+  </svg>
+
+  <p class="mt-3 text-xs leading-relaxed text-base-content/65">
+    骨架是「醣–磷酸–醣–磷酸」，鹼基掛在旁邊。醣上的碳號加一撇，用來與鹼基上的碳號區分。RNA 用核醣、DNA
+    用 2′-去氧核醣，差別只在 C2′ 上是 –OH 還是 –H。
+  </p>
+</figure>
