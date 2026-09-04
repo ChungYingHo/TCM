@@ -1,0 +1,371 @@
+---
+// 芳香性圖庫：把要分辨的環一次排出來，每格標 π 電子數、屬 4n+2 還是 4n、以及判定結果。
+// 幾何由正多邊形公式算出來，不手刻座標。離域的畫內圈，定域的畫實體雙鍵。
+// 純靜態 SVG，不 hydrate。
+
+type Hetero = { at: number, label: string, h?: boolean }
+
+interface Ring {
+  name: string
+  en: string
+  n: number
+  pi: number
+  rule: string
+  verdict: '芳香' | '反芳香' | '非芳香'
+  why: string
+  doubles?: number[] // 要畫成定域雙鍵的邊，省略代表整圈離域
+  mark?: string // 標在某個頂點外側的符號，如 +、−、sp³
+  markAt?: number
+  center?: string // 標在離域圈中央的電荷
+  hetero?: Hetero[]
+  rot?: number // 起始頂點角度，−90 頂點朝上、90 頂點朝下
+  tub?: boolean // 畫成浴盆形（非平面），單數頂點往下壓
+}
+
+const R = 28
+const CX = 50
+const CY = 50
+
+function verts(n: number, rot: number) {
+  return Array.from({ length: n }, (_, k) => {
+    const a = ((rot + (k * 360) / n) * Math.PI) / 180
+    return { x: CX + R * Math.cos(a), y: CY + R * Math.sin(a) }
+  })
+}
+
+type Pt = { x: number, y: number }
+
+// 雙鍵的第二條線：沿邊縮短兩端，再整條往環心方向平移。
+function innerBond(p1: Pt, p2: Pt) {
+  const mx = (p1.x + p2.x) / 2
+  const my = (p1.y + p2.y) / 2
+  const dx = CX - mx
+  const dy = CY - my
+  const len = Math.hypot(dx, dy) || 1
+  const ox = (dx / len) * 5.5
+  const oy = (dy / len) * 5.5
+  return {
+    x1: p1.x + (p2.x - p1.x) * 0.22 + ox,
+    y1: p1.y + (p2.y - p1.y) * 0.22 + oy,
+    x2: p1.x + (p2.x - p1.x) * 0.78 + ox,
+    y2: p1.y + (p2.y - p1.y) * 0.78 + oy,
+  }
+}
+
+// 頂點往環外推一段，用來擺電荷或 sp³ 標記。
+function outward(p: Pt, d: number) {
+  const dx = p.x - CX
+  const dy = p.y - CY
+  const len = Math.hypot(dx, dy) || 1
+  return { x: p.x + (dx / len) * d, y: p.y + (dy / len) * d }
+}
+
+const carbocycles: Ring[] = [
+  {
+    name: '環丙烯正離子',
+    en: 'cyclopropenyl cation',
+    n: 3,
+    pi: 2,
+    rule: '4n＋2，n＝0',
+    verdict: '芳香',
+    why: '三個碳都是 sp²，正電荷落在空的 p 軌域上',
+    center: '+',
+  },
+  {
+    name: '環丁二烯',
+    en: 'cyclobutadiene',
+    n: 4,
+    pi: 4,
+    rule: '4n，n＝1',
+    verdict: '反芳香',
+    why: '平面時最高一組簡併軌域只有半滿，比一般烯還不穩',
+    doubles: [0, 2],
+  },
+  {
+    name: '環戊二烯',
+    en: 'cyclopentadiene',
+    n: 5,
+    pi: 4,
+    rule: '不適用',
+    verdict: '非芳香',
+    why: 'CH₂ 是 sp³，沒有 p 軌域，π 系統在這裡斷掉',
+    doubles: [1, 3],
+    mark: 'sp³',
+    markAt: 0,
+  },
+  {
+    name: '環戊二烯負離子',
+    en: 'cyclopentadienyl anion',
+    n: 5,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '拔掉一個 H 後那個碳變 sp²，孤對進 p 軌域湊足 6',
+    center: '−',
+  },
+  {
+    name: '環戊二烯正離子',
+    en: 'cyclopentadienyl cation',
+    n: 5,
+    pi: 4,
+    rule: '4n，n＝1',
+    verdict: '反芳香',
+    why: '4 個電子填不滿三個鍵結軌域，最高一組半滿',
+    doubles: [1, 3],
+    mark: '+',
+    markAt: 0,
+  },
+  {
+    name: '苯',
+    en: 'benzene',
+    n: 6,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '六條 C—C 全部等長 139 pm，鍵角 120°',
+  },
+  {
+    name: '環庚三烯正離子',
+    en: 'tropylium',
+    n: 7,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '七個碳共用 6 個 π 電子，正電荷攤在整圈上',
+    center: '+',
+  },
+  {
+    name: '環庚三烯負離子',
+    en: 'cycloheptatrienyl anion',
+    n: 7,
+    pi: 8,
+    rule: '4n，n＝2',
+    verdict: '反芳香',
+    why: '維持平面則是反芳香，實際上分子扭曲脫離平面，通常歸非芳香，兩種說法都不芳香',
+    doubles: [1, 3, 5],
+    mark: '−',
+    markAt: 0,
+  },
+  {
+    name: '環辛四烯',
+    en: 'cyclooctatetraene',
+    n: 8,
+    pi: 8,
+    rule: '4n，n＝2',
+    verdict: '非芳香',
+    why: '實際扭成浴盆形，p 軌域接不起來，回到一般烯的性質',
+    doubles: [0, 2, 4, 6],
+    tub: true,
+  },
+]
+
+const heterocycles: Ring[] = [
+  {
+    name: '吡咯',
+    en: 'pyrrole',
+    n: 5,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '2 個雙鍵給 4，N 的孤對進 p 軌域再給 2',
+    rot: 90,
+    hetero: [{ at: 0, label: 'N', h: true }],
+  },
+  {
+    name: '呋喃',
+    en: 'furan',
+    n: 5,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: 'O 有兩對孤對，只有一對進 p 軌域',
+    rot: 90,
+    hetero: [{ at: 0, label: 'O' }],
+  },
+  {
+    name: '噻吩',
+    en: 'thiophene',
+    n: 5,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '與呋喃同型，S 出一對孤對進 p 軌域',
+    rot: 90,
+    hetero: [{ at: 0, label: 'S' }],
+  },
+  {
+    name: '吡啶',
+    en: 'pyridine',
+    n: 6,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '3 個雙鍵就給滿 6，N 的孤對留在環平面上不參與',
+    rot: 90,
+    hetero: [{ at: 0, label: 'N' }],
+  },
+  {
+    name: '咪唑',
+    en: 'imidazole',
+    n: 5,
+    pi: 6,
+    rule: '4n＋2，n＝1',
+    verdict: '芳香',
+    why: '接 H 的 N 出孤對，另一個 N 只出雙鍵的 1 個電子',
+    rot: 90,
+    hetero: [
+      { at: 0, label: 'N', h: true },
+      { at: 2, label: 'N' },
+    ],
+  },
+]
+
+const badge: Record<Ring['verdict'], string> = {
+  芳香: 'badge-success',
+  反芳香: 'badge-error',
+  非芳香: 'badge-ghost',
+}
+
+function build(r: Ring) {
+  const v = verts(r.n, r.rot ?? -90)
+  // 浴盆形：把單數編號的頂點往下壓，圖上就看得出這個環不是平面的。
+  if (r.tub) {
+    for (let i = 1; i < v.length; i += 2) v[i].y += 9
+  }
+  const points = v.map((p) => `${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' ')
+  const bonds = (r.doubles ?? []).map((i) => innerBond(v[i], v[(i + 1) % r.n]))
+  const markPos = r.markAt === undefined ? null : outward(v[r.markAt], 13)
+  const het = (r.hetero ?? []).map((h) => ({
+    ...h,
+    p: v[h.at],
+    hp: outward(v[h.at], 15),
+  }))
+  // 離域圈不可以超過多邊形的內切半徑，否則會從邊上穿出去（正三角形只有 14）。
+  const ringR = Math.min(15, R * Math.cos(Math.PI / r.n) - 4)
+  return { points, bonds, markPos, het, ringR, delocal: !r.doubles }
+}
+
+const groups = [
+  { label: '碳環', rings: carbocycles.map((r) => ({ r, g: build(r) })) },
+  { label: '含雜原子的環', rings: heterocycles.map((r) => ({ r, g: build(r) })) },
+]
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-1 font-display font-bold text-base-content">
+    芳香性圖庫：三類環一次分清
+  </figcaption>
+  <p class="mb-4 text-xs leading-relaxed text-base-content/70">
+    環中央畫圈代表 π 電子在整圈上離域，畫成一根一根的雙鍵代表電子定域在原處。
+  </p>
+
+  {
+    groups.map((group) => (
+      <section class="mb-4 last:mb-0">
+        <p class="mb-2 text-sm font-bold text-base-content/70">{group.label}</p>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+          {group.rings.map(({ r, g }) => (
+            <div class="rounded-box border border-base-300 bg-base-200/40 p-2.5">
+              <svg
+                viewBox="0 0 100 104"
+                class="mx-auto block w-full max-w-[7.5rem]"
+                role="img"
+                aria-label={`${r.name}，${r.pi} 個 π 電子，${r.verdict}`}
+              >
+                <polygon
+                  points={g.points}
+                  fill="none"
+                  class="stroke-base-content"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+                {g.delocal && (
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r={g.ringR.toFixed(1)}
+                    fill="none"
+                    class="stroke-primary"
+                    stroke-width="2"
+                  />
+                )}
+                {g.bonds.map((b) => (
+                  <line
+                    x1={b.x1.toFixed(1)}
+                    y1={b.y1.toFixed(1)}
+                    x2={b.x2.toFixed(1)}
+                    y2={b.y2.toFixed(1)}
+                    class="stroke-base-content"
+                    stroke-width="2"
+                  />
+                ))}
+                {r.center && (
+                  <text
+                    x="50"
+                    y="56"
+                    text-anchor="middle"
+                    class="fill-primary text-[16px] font-bold"
+                  >
+                    {r.center}
+                  </text>
+                )}
+                {g.markPos && (
+                  <text
+                    x={g.markPos.x.toFixed(1)}
+                    y={(g.markPos.y + 4).toFixed(1)}
+                    text-anchor="middle"
+                    class="fill-secondary text-[13px] font-bold"
+                  >
+                    {r.mark}
+                  </text>
+                )}
+                {g.het.map((h) => (
+                  <>
+                    <circle
+                      cx={h.p.x.toFixed(1)}
+                      cy={h.p.y.toFixed(1)}
+                      r="9"
+                      class="fill-base-200"
+                    />
+                    <text
+                      x={h.p.x.toFixed(1)}
+                      y={(h.p.y + 5).toFixed(1)}
+                      text-anchor="middle"
+                      class="fill-secondary text-[14px] font-bold"
+                    >
+                      {h.label}
+                    </text>
+                    {h.h && (
+                      <text
+                        x={h.hp.x.toFixed(1)}
+                        y={(h.hp.y + 5).toFixed(1)}
+                        text-anchor="middle"
+                        class="fill-base-content text-[12px]"
+                      >
+                        H
+                      </text>
+                    )}
+                  </>
+                ))}
+              </svg>
+
+              <p class="mt-1 text-center text-[0.8125rem] font-bold text-base-content">{r.name}</p>
+              <p class="text-center text-[0.6875rem] text-base-content/55">{r.en}</p>
+              <p class="mt-1.5 text-center">
+                <span class={`badge badge-sm border-none font-bold ${badge[r.verdict]}`}>
+                  {r.verdict}
+                </span>
+              </p>
+              <p class="mt-1 text-center text-[0.6875rem] text-base-content/70">
+                π 電子 {r.pi}・{r.rule}
+              </p>
+              <p class="mt-1 text-[0.6875rem] leading-relaxed text-base-content/70">{r.why}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</figure>

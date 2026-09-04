@@ -1,0 +1,299 @@
+---
+// 三組有機共振式，每一式都把彎箭頭畫出來：箭尾＝電子從哪來，箭頭＝電子往哪去。
+// 純靜態 SVG，不 hydrate，SSR 直出。彎箭頭用 arc() 由端點算控制點，避免手刻 path 算錯弧度。
+
+// 由兩端點畫一段弧線：bulge 為正往法線方向鼓、為負往反方向鼓。
+function arc(x1: number, y1: number, x2: number, y2: number, bulge: number) {
+  const mx = (x1 + x2) / 2
+  const my = (y1 + y2) / 2
+  const dx = x2 - x1
+  const dy = y2 - y1
+  const len = Math.hypot(dx, dy) || 1
+  const cx = mx + (-dy / len) * bulge
+  const cy = my + (dx / len) * bulge
+  return `M ${x1} ${y1} Q ${cx.toFixed(1)} ${cy.toFixed(1)} ${x2} ${y2}`
+}
+
+const panels = [
+  {
+    id: 'allyl',
+    title: '烯丙基陽離子',
+    caption:
+      '正電荷與 π 鍵一起攤在三個碳上。兩式完全等價，所以兩端的 CH₂ 各帶一半正電、兩條 C—C 鍵等長。',
+  },
+  {
+    id: 'enolate',
+    title: '烯醇負離子',
+    caption:
+      '羰基旁邊的碳被拔掉一個 H 之後，負電荷可以跑到氧上。氧的電負度較大，右式貢獻較大。',
+  },
+  {
+    id: 'amide',
+    title: '醯胺',
+    caption:
+      'N 的孤對電子推向羰基，C—N 因此帶部分雙鍵性質而不能旋轉，N 也不再隨時能去接質子。',
+  },
+]
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-4 font-display font-bold text-base-content">
+    三組必會的有機共振式與彎箭頭
+  </figcaption>
+
+  <div class="space-y-4">
+    <!-- 烯丙基陽離子：π 電子往鄰邊的單鍵移，正電荷跟著換一端 -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-primary">{panels[0].title}</p>
+      <div class="overflow-x-auto">
+        <svg
+          viewBox="0 0 392 92"
+          class="mx-auto block w-full min-w-[19rem] max-w-[26rem]"
+          role="img"
+          aria-label="烯丙基陽離子的兩個等價共振式，彎箭頭由雙鍵指向相鄰單鍵"
+        >
+          <defs>
+            <marker
+              id="resHeadAllyl"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="5"
+              markerHeight="5"
+              orient="auto"
+            >
+              <path d="M 0 0 L 10 5 L 0 10 z" class="fill-primary"></path>
+            </marker>
+          </defs>
+
+          <text x="42" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >H₂C</text
+          >
+          <line x1="62" y1="60" x2="88" y2="60" class="stroke-base-content" stroke-width="2"></line>
+          <line x1="62" y1="68" x2="88" y2="68" class="stroke-base-content" stroke-width="2"></line>
+          <text x="102" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH</text
+          >
+          <line x1="116" y1="64" x2="140" y2="64" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="160" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH₂</text
+          >
+          <text x="183" y="60" text-anchor="middle" class="fill-primary text-[13px] font-bold"
+            >+</text
+          >
+          <path
+            d={arc(75, 54, 128, 56, -16)}
+            fill="none"
+            class="stroke-primary"
+            stroke-width="1.8"
+            marker-end="url(#resHeadAllyl)"></path>
+
+          <text x="204" y="70" text-anchor="middle" class="fill-base-content/70 text-[20px]"
+            >↔</text
+          >
+
+          <text x="248" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >H₂C</text
+          >
+          <text x="222" y="60" text-anchor="middle" class="fill-primary text-[13px] font-bold"
+            >+</text
+          >
+          <line x1="266" y1="64" x2="294" y2="64" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="308" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH</text
+          >
+          <line x1="322" y1="60" x2="346" y2="60" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <line x1="322" y1="68" x2="346" y2="68" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="366" y="70" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH₂</text
+          >
+        </svg>
+      </div>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">{panels[0].caption}</p>
+    </div>
+
+    <!-- 烯醇負離子：碳上的孤對推進 C—C，羰基的 π 被擠到氧上 -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-secondary">{panels[1].title}</p>
+      <div class="overflow-x-auto">
+        <svg
+          viewBox="0 0 400 108"
+          class="mx-auto block w-full min-w-[19rem] max-w-[26rem]"
+          role="img"
+          aria-label="烯醇負離子的兩個共振式，負電荷在碳與氧之間移動"
+        >
+          <defs>
+            <marker
+              id="resHeadEnolate"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="5"
+              markerHeight="5"
+              orient="auto"
+            >
+              <path d="M 0 0 L 10 5 L 0 10 z" class="fill-secondary"></path>
+            </marker>
+          </defs>
+
+          <text x="44" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >H₃C</text
+          >
+          <line x1="64" y1="76" x2="100" y2="76" class="stroke-base-content" stroke-width="2"></line>
+          <text x="108" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >C</text
+          >
+          <line x1="104" y1="42" x2="104" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <line x1="112" y1="42" x2="112" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="108" y="34" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >O</text
+          >
+          <line x1="116" y1="76" x2="150" y2="76" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="170" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH₂</text
+          >
+          <text x="193" y="72" text-anchor="middle" class="fill-secondary text-[13px] font-bold"
+            >−</text
+          >
+          <path
+            d={arc(182, 92, 134, 88, -14)}
+            fill="none"
+            class="stroke-secondary"
+            stroke-width="1.8"
+            marker-end="url(#resHeadEnolate)"></path>
+          <path
+            d={arc(100, 58, 98, 40, -12)}
+            fill="none"
+            class="stroke-secondary"
+            stroke-width="1.8"
+            marker-end="url(#resHeadEnolate)"></path>
+
+          <text x="218" y="82" text-anchor="middle" class="fill-base-content/70 text-[20px]"
+            >↔</text
+          >
+
+          <text x="252" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >H₃C</text
+          >
+          <line x1="272" y1="76" x2="308" y2="76" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="316" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >C</text
+          >
+          <line x1="316" y1="42" x2="316" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="316" y="34" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >O</text
+          >
+          <text x="334" y="32" text-anchor="middle" class="fill-secondary text-[13px] font-bold"
+            >−</text
+          >
+          <line x1="324" y1="72" x2="350" y2="72" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <line x1="324" y1="80" x2="350" y2="80" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="370" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >CH₂</text
+          >
+        </svg>
+      </div>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">{panels[1].caption}</p>
+    </div>
+
+    <!-- 醯胺：N 的孤對推向羰基，換來 C＝N 與帶負電的 O -->
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-accent">{panels[2].title}</p>
+      <div class="overflow-x-auto">
+        <svg
+          viewBox="0 0 404 108"
+          class="mx-auto block w-full min-w-[19rem] max-w-[26rem]"
+          role="img"
+          aria-label="醯胺的兩個共振式，氮的孤對電子推向羰基後產生帶電荷分離的一式"
+        >
+          <defs>
+            <marker
+              id="resHeadAmide"
+              viewBox="0 0 10 10"
+              refX="9"
+              refY="5"
+              markerWidth="5"
+              markerHeight="5"
+              orient="auto"
+            >
+              <path d="M 0 0 L 10 5 L 0 10 z" class="fill-accent"></path>
+            </marker>
+          </defs>
+
+          <text x="48" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >R</text
+          >
+          <line x1="58" y1="76" x2="100" y2="76" class="stroke-base-content" stroke-width="2"></line>
+          <text x="108" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >C</text
+          >
+          <line x1="104" y1="42" x2="104" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <line x1="112" y1="42" x2="112" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="108" y="34" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >O</text
+          >
+          <line x1="116" y1="76" x2="146" y2="76" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="170" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >NH₂</text
+          >
+          <path
+            d={arc(168, 64, 133, 68, 16)}
+            fill="none"
+            class="stroke-accent"
+            stroke-width="1.8"
+            marker-end="url(#resHeadAmide)"></path>
+          <path
+            d={arc(100, 58, 98, 40, -12)}
+            fill="none"
+            class="stroke-accent"
+            stroke-width="1.8"
+            marker-end="url(#resHeadAmide)"></path>
+
+          <text x="216" y="82" text-anchor="middle" class="fill-base-content/70 text-[20px]"
+            >↔</text
+          >
+
+          <text x="252" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >R</text
+          >
+          <line x1="262" y1="76" x2="308" y2="76" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="316" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >C</text
+          >
+          <line x1="316" y1="42" x2="316" y2="66" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="316" y="34" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >O</text
+          >
+          <text x="334" y="32" text-anchor="middle" class="fill-accent text-[13px] font-bold">−</text>
+          <line x1="324" y1="72" x2="346" y2="72" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <line x1="324" y1="80" x2="346" y2="80" class="stroke-base-content" stroke-width="2"
+          ></line>
+          <text x="368" y="82" text-anchor="middle" class="fill-base-content text-[16px] font-bold"
+            >NH₂</text
+          >
+          <text x="392" y="72" text-anchor="middle" class="fill-accent text-[13px] font-bold">+</text>
+        </svg>
+      </div>
+      <p class="mt-1 text-xs leading-relaxed text-base-content/70">{panels[2].caption}</p>
+    </div>
+  </div>
+</figure>

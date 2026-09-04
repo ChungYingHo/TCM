@@ -190,6 +190,15 @@ export const NOTES: NoteEntry[] = [
     desc: '碳的混成與鍵參數、丙二烯與共平面判斷、碳陽離子／碳陰離子／自由基／卡賓、骨架式與不飽和度',
   },
   {
+    id: 'chem-org-resonance',
+    href: '/chem-org-resonance',
+    title: '共振、超共軛與芳香性',
+    subject: '化學',
+    tags: ['有機基礎'],
+    group: '有機化學基礎',
+    desc: '共振式與彎箭頭、貢獻度判準、共振對鍵長／穩定度／酸鹼性的影響、超共軛、Hückel 規則與芳香三分法、雜環的 π 電子計數',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '概論、顯微鏡與原核／真核',
