@@ -172,6 +172,15 @@ export const NOTES: NoteEntry[] = [
     desc: '成鍵與反鍵軌域、鍵級、第二週期兩套能階順序、順磁反磁與離子系列、異核與等電子、共軛 π 能階、鍵能鍵長鍵角',
   },
   {
+    id: 'chem-coordination',
+    href: '/chem-coordination',
+    title: '配位化學',
+    subject: '化學',
+    tags: ['配位化合物'],
+    group: '化學鍵與分子結構',
+    desc: '配位基與螯合、命名、幾何與異構、氨水先沉澱後溶解、形成常數、價鍵理論、晶場分裂與高低自旋、顏色、生物體內的配位',
+  },
+  {
     id: 'chem-org-structure',
     href: '/chem-org-structure',
     title: '有機分子的結構與反應中間物',

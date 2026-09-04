@@ -1,0 +1,790 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 配位化學
+summary: 配位化合物的組成與內外界、配位基齒數與螯合、命名規則、配位數與幾何、結構與立體異構、價鍵理論的內外軌型、晶場理論的分裂與高低自旋、顏色與吸收波長，以及生物體內的金屬中心。
+---
+import Memorize from '@/components/notes/Memorize.astro'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import RelatedNote from '@/components/notes/RelatedNote.astro'
+import CrystalFieldGeometries from '@/components/notes/CrystalFieldGeometries.astro'
+import CrystalField from '@/components/notes/CrystalField.svelte'
+import SpectrochemSeries from '@/components/notes/SpectrochemSeries.svelte'
+import ComplementaryColor from '@/components/notes/ComplementaryColor.svelte'
+
+## 一、配位化合物的組成
+
+配位化合物 (coordination compound) 又稱錯合物，是一個中心金屬離子或原子，與數個提供孤對電子的分子或離子結合而成的化合物。把它們接起來的是配位鍵，配位鍵與一般共價鍵的差別只有一點：成鍵的兩個電子全部由同一方提供。給出這對電子的一方稱為 Lewis 鹼，收下的一方稱為 Lewis 酸。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 名稱 | 定義 | 角色 |
+|---|---|---|
+| 中心金屬 (central metal) | 接受孤對電子的金屬離子或原子，多為過渡金屬陽離子 | Lewis 酸 |
+| 配位基 (ligand) | 提供孤對電子給中心金屬的分子或離子 | Lewis 鹼 |
+| 配位原子 (donor atom) | 配位基上真正拿出孤對電子的那個原子 | 決定配位數 |
+| 配位鍵 (coordination bond) | 兩個電子都由配位基提供的共價鍵 | 內界內的鍵 |
+| 配位數 (coordination number，C.N.) | 直接鍵結到中心金屬的配位原子總數 | 決定幾何形狀 |
+
+</div>
+
+配位數算的是配位原子個數，不是配位基個數。$\ce{[Cr(C2O4)2(H2O)2]-}$ 只有 4 個配位基，但草酸根 $\ce{C2O4^2-}$ 各拿出 2 個 O 配位，配位數是 $2\times2+2\times1=6$。
+
+### 內界與外界
+
+- **內界 (coordination sphere)**：寫在中括號內，含中心金屬與所有配位基，整體是一個離子或中性分子，溶於水時不再拆開。
+- **外界 (outer sphere)**：寫在中括號外的抗衡離子 (counter ion)，溶於水時完全解離成自由離子。
+
+這條界線有兩個直接的檢驗方式：
+
+1. 加入 $\ce{AgNO3(aq)}$ 時，只有外界的 $\ce{Cl-}$ 會生成 $\ce{AgCl(s)}$ 白色沉澱，內界的不會。
+2. 溶液的導電度與依數性質（凝固點下降、沸點上升這類只看粒子數的性質）只認總離子數，也就是「1 個錯離子加上外界離子數」。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 化學式 | 內界 | 外界 | 每 1 mol 可得的 $\ce{AgCl}$ |
+|---|---|---|---:|
+| $\ce{[Cr(NH3)6]Cl3}$ | $\ce{[Cr(NH3)6]^3+}$ | $\ce{3Cl-}$ | 3 mol |
+| $\ce{[Cr(NH3)5Cl]Cl2}$ | $\ce{[Cr(NH3)5Cl]^2+}$ | $\ce{2Cl-}$ | 2 mol |
+| $\ce{[Cr(NH3)4Cl2]Cl}$ | $\ce{[Cr(NH3)4Cl2]+}$ | $\ce{Cl-}$ | 1 mol |
+| $\ce{[Cr(NH3)3Cl3]}$ | $\ce{[Cr(NH3)3Cl3]}$ | 無 | 0 |
+| $\ce{Na3[CrCl6]}$ | $\ce{[CrCl6]^3-}$ | $\ce{3Na+}$ | 0 |
+
+</div>
+
+$\ce{Na3[CrCl6]}$ 的 6 個 $\ce{Cl-}$ 全在內界，解離出來的是 $\ce{Na+}$，加銀離子不會有沉澱。
+
+### 氨水滴入金屬離子溶液：先沉澱、後溶解
+
+把氨水緩慢滴進 $\ce{Cu^2+}$ 水溶液，會看到兩段現象。氨水是弱鹼，一開始量少時先扮演鹼、提供 $\ce{OH-}$：
+
+$$
+\ce{Cu^2+ + 2OH- -> Cu(OH)2(s) v}
+$$
+
+得到藍色沉澱。繼續加到氨水過量後，$\ce{NH3}$ 改扮演配位基，把沉澱拉回溶液：
+
+$$
+\ce{Cu(OH)2(s) + 4NH3 -> [Cu(NH3)4]^2+ + 2OH-}
+$$
+
+溶液轉成深藍色。先沉澱後溶解這個順序，$\ce{Zn^2+}$、$\ce{Ag+}$ 也有，關鍵是量少時看鹼性、過量時看配位能力。
+
+<WorkedExample source="義守 112・化學 43" answer="x＝4、y＝2、z＝2，錯合物為 [Pt(NH<sub>3</sub>)<sub>4</sub>Br<sub>2</sub>]Br<sub>2</sub>" tags={['內界外界', '依數性質']}>
+
+**題目**　5.83 g 的錯合物 [Pt(NH<sub>3</sub>)<sub>x</sub>Br<sub>y</sub>]Br<sub>z</sub> 完全分解可得 1.95 g Pt。另取 11.66 g 同一錯合物溶於 200.0 g 水，測得凝固點為 $-0.558\ ^\circ\mathrm{C}$。求 x、y、z。已知 $K_f=1.86\ \mathrm{^\circ C\,kg\,mol^{-1}}$，Pt 原子量 195。
+
+先由 Pt 的質量比求錯合物的莫耳質量：
+
+$$
+M=\dfrac{5.83\ \mathrm{g}}{1.95\ \mathrm{g\ Pt}}\times\dfrac{195\ \mathrm{g\ Pt}}{1\ \mathrm{mol}}=583\ \mathrm{g\,mol^{-1}}
+$$
+
+再求質量莫耳濃度：
+
+$$
+m=11.66\ \mathrm{g}\times\dfrac{1\ \mathrm{mol}}{583\ \mathrm{g}}\times\dfrac{1}{0.2000\ \mathrm{kg}}=0.1000\ \mathrm{mol\,kg^{-1}}
+$$
+
+由凝固點下降 $\Delta T_f=K_f\,m\,i$ 反推每個式子解離出的總離子數 $i$：
+
+$$
+i=0.558\ ^\circ\mathrm{C}\times\dfrac{1\ \mathrm{mol}}{1.86\ \mathrm{^\circ C\,kg}}\times\dfrac{1\ \mathrm{kg}}{0.1000\ \mathrm{mol}}=3.00
+$$
+
+$i=3$ 代表解離成 1 個錯離子加 2 個自由 $\ce{Br-}$，所以 $z=2$。最後用莫耳質量做質量平衡：
+
+$$
+195+17x+80(y+z)=583
+$$
+
+代入 $z=2$ 得 $17x+80y=228$，唯一的整數解是 $x=4$、$y=2$。
+
+</WorkedExample>
+
+### 中心金屬的氧化數與 d 電子數
+
+$$
+\text{中心金屬氧化數}=\text{整個內界的電荷}-\sum(\text{各配位基的電荷})
+$$
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 電荷 | 常見配位基 |
+|---:|---|
+| $0$ | $\ce{H2O}$、$\ce{NH3}$、$\ce{CO}$、$\ce{NO}$、en |
+| $-1$ | $\ce{Cl-}$、$\ce{Br-}$、$\ce{F-}$、$\ce{CN-}$、$\ce{OH-}$、$\ce{NO2-}$、$\ce{SCN-}$、acac |
+| $-2$ | $\ce{C2O4^2-}$ (ox) |
+| $-4$ | EDTA |
+
+</div>
+
+中心金屬剩下幾個 d 電子，決定了後面電子怎麼填、以及錯合物會不會被磁鐵吸引。過渡金屬陽離子一律先失去最外層的 ns 電子，剩下的全部留在 $(n-1)\mathrm{d}$，所以：
+
+$$
+\mathrm{d}\text{ 電子數}=\text{該金屬的價電子總數}-\text{氧化數}
+$$
+
+價電子總數就是它在 d 區的位置序數，第一列由 Sc 的 3 數到 Zn 的 12。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 金屬 | 價電子總數 | 常見離子與 d 電子數 |
+|---|---:|---|
+| Ti | 4 | $\ce{Ti^2+}$ 為 d²、$\ce{Ti^4+}$ 為 d⁰ |
+| Cr | 6 | $\ce{Cr^2+}$ 為 d⁴、$\ce{Cr^3+}$ 為 d³ |
+| Mn | 7 | $\ce{Mn^2+}$ 為 d⁵、$\ce{Mn^3+}$ 為 d⁴ |
+| Fe | 8 | $\ce{Fe^2+}$ 為 d⁶、$\ce{Fe^3+}$ 為 d⁵ |
+| Co | 9 | $\ce{Co^2+}$ 為 d⁷、$\ce{Co^3+}$ 為 d⁶ |
+| Ni、Pd、Pt | 10 | $\ce{Ni^2+}$、$\ce{Pd^2+}$、$\ce{Pt^2+}$ 皆為 d⁸ |
+| Cu | 11 | $\ce{Cu+}$ 為 d¹⁰、$\ce{Cu^2+}$ 為 d⁹ |
+| Zn | 12 | $\ce{Zn^2+}$ 為 d¹⁰ |
+
+</div>
+
+<RelatedNote title="陽離子電子組態怎麼寫、順磁與反磁怎麼判" href="/chem-ions-magnetism" to="帶電離子的電子組態與磁光行為">
+  過渡金屬陽離子為什麼先失 4s 再失 3d、以及 Gouy 磁天平怎麼量順磁性，在那一篇。
+</RelatedNote>
+
+### 18 電子規則
+
+中心金屬的總價電子數等於它自己的 d 電子數，加上各配位基提供的電子數（單齒配位基各給一對，也就是 2 個）。這個總數是 18 時錯合物特別安定，因為金屬的 $(n-1)\mathrm{d}$、$n\mathrm{s}$、$n\mathrm{p}$ 共九個軌域剛好填滿，達到惰性氣體的電子組態。$\ce{[Fe(CN)6]^4-}$ 的鐵是 $6+6\times2=18$，$\ce{Ni(CO)4}$ 的鎳是 $10+4\times2=18$。
+
+## 二、配位基的齒數與螯合
+
+齒數 (denticity) 是一個配位基能同時伸出幾個配位原子咬住金屬。單齒 (monodentate) 只給一個，多齒 (polydentate) 給兩個以上。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 齒數 | 配位基 | 化學式 | 配位原子 |
+|---|---|---|---|
+| 單齒 | 水 water | $\ce{H2O}$ | O |
+| 單齒 | 氨 ammonia | $\ce{NH3}$ | N |
+| 單齒 | 氯離子 chloride | $\ce{Cl-}$ | Cl |
+| 單齒 | 氰離子 cyanide | $\ce{CN-}$ | C |
+| 單齒 | 氫氧根 hydroxide | $\ce{OH-}$ | O |
+| 單齒 | 一氧化碳 carbon monoxide | $\ce{CO}$ | C |
+| 雙齒 | 乙二胺 ethylenediamine (en) | $\ce{H2NCH2CH2NH2}$ | 2 個 N |
+| 雙齒 | 草酸根 oxalato (ox) | $\ce{C2O4^2-}$ | 2 個 O |
+| 雙齒 | 乙醯丙酮根 acetylacetonato (acac) | $\ce{(CH3COCHCOCH3)-}$ | 2 個 O |
+| 三齒 | 二伸乙三胺 diethylenetriamine (dien) | $\ce{H2NCH2CH2NHCH2CH2NH2}$ | 3 個 N |
+| 六齒 | 乙二胺四乙酸根 EDTA | $\ce{EDTA^4-}$ | 2 個 N 加 4 個羧酸根 O |
+
+</div>
+
+<WorkedExample source="中國醫 104・化學 19" answer="3 個" tags={['齒數', '配位鍵']}>
+
+**題目**　$\ce{H2NCH2CH2NHCH2CH2NH2}$ 作為配位基，最多能與一個金屬離子形成幾個配位鍵？
+
+數配位原子，不是數原子總數。這條鏈上有三個 N，兩端各是一個 NH₂ 基、中間是一個 NH 基，三個 N 都還留著一對孤對電子，所以是三齒配位基，最多形成 3 個配位鍵。
+
+</WorkedExample>
+
+### 螯合效應
+
+多齒配位基咬住同一個金屬時會形成環，這種錯合物叫螯合物 (chelate)，配位基叫螯合劑 (chelating agent)。同樣的配位原子數下，螯合物遠比單齒配位基的錯合物安定，這叫螯合效應 (chelate effect)。
+
+原因是一個多齒配位基會擠掉好幾個單齒配位基，自由粒子數變多、熵增加，形成常數 $K_f$ 因此更大。齒數越多效應越強，這也是六齒的 $\ce{EDTA^4-}$ 幾乎抓得住所有 $+2$、$+3$、$+4$ 價金屬離子的原因。
+
+### 形成常數與配位基的競爭
+
+錯離子生成反應的平衡常數叫形成常數 (formation constant) $K_f$，數值越大代表那個錯離子越安定。兩種配位基搶同一個金屬時，把兩個生成反應相減就得到交換反應，平衡常數相除：
+
+$$
+K=\dfrac{K_f(\text{生成物錯離子})}{K_f(\text{反應物錯離子})}
+$$
+
+$K_f$ 大的那一方會把金屬搶過去。
+
+<WorkedExample source="中國醫 113・化學 27" answer="約 6.7×10¹³" tags={['形成常數', '配位基競爭']}>
+
+**題目**　$\ce{Ag+ + 2NH3 <=> [Ag(NH3)2]+}$ 的 $K_f=1.5\times10^{7}$，$\ce{Ag+ + 2CN- <=> [Ag(CN)2]-}$ 的 $K_f=1.0\times10^{21}$。求 $\ce{[Ag(NH3)2]+ + 2CN- <=> [Ag(CN)2]- + 2NH3}$ 的平衡常數。
+
+目標反應等於第二式減第一式，平衡常數相除：
+
+$$
+K=\dfrac{1.0\times10^{21}}{1.5\times10^{7}}=6.7\times10^{13}
+$$
+
+$K$ 遠大於 1，代表 $\ce{CN-}$ 會把 $\ce{NH3}$ 從銀離子上換掉。
+
+</WorkedExample>
+
+### 配位基的場強
+
+配位基除了齒數，還有一個性質貫串後面所有判斷：它把中心金屬的 d 軌域推開的能力，稱為場強 (field strength)。配位基帶著孤對電子靠近金屬，會排斥指著它的那些 d 軌域上的電子，靠得越近、電子雲給得越大方，就把那些軌域推得越高。推得多的叫強場配位基 (strong field ligand)，推得少的叫弱場配位基 (weak field ligand)。
+
+- 強場：$\ce{CN-}$、$\ce{CO}$、$\ce{NO2-}$、en、$\ce{NH3}$
+- 弱場：$\ce{H2O}$、$\ce{C2O4^2-}$、$\ce{OH-}$ 與 $\ce{F-}$、$\ce{Cl-}$、$\ce{Br-}$、$\ce{I-}$ 等鹵素離子
+
+完整順序與這個順序背後的原因，放在晶場理論那一節。
+
+## 三、配位化合物的命名
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 步驟 | 規則 |
+|---:|---|
+| 1 | 先寫陽離子、後寫陰離子，與一般離子化合物相同 |
+| 2 | 內界之中先念配位基、後念金屬，全部連寫成一個字 |
+| 3 | 配位基依英文字母序排列，數目字首不列入排序 |
+| 4 | 單齒配位基的數目用 mono、di、tri、tetra、penta、hexa |
+| 5 | 配位基名稱本身已含數字字首時改用 bis、tris、tetrakis，並把配位基名放進括號 |
+| 6 | 金屬名之後用括號加羅馬數字表示氧化數 |
+| 7 | 整個內界帶負電時，金屬字尾加 -ate，部分金屬改用拉丁字根 |
+
+</div>
+
+陰離子配位基改字尾：-ide 變 -o、-ite 變 -ito、-ate 變 -ato。中性配位基用原名，只有四個例外要背。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 配位基 | 名稱 | 配位基 | 名稱 |
+|---|---|---|---|
+| $\ce{H2O}$ | aqua | $\ce{Cl-}$ | chloro |
+| $\ce{NH3}$ | ammine（兩個 m） | $\ce{CN-}$ | cyano |
+| $\ce{CO}$ | carbonyl | $\ce{OH-}$ | hydroxo |
+| $\ce{NO}$ | nitrosyl | $\ce{C2O4^2-}$ | oxalato |
+
+</div>
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 金屬 | 內界帶負電時的字根 | 金屬 | 內界帶負電時的字根 |
+|---|---|---|---|
+| Fe | ferrate | Pb | plumbate |
+| Cu | cuprate | Sn | stannate |
+| Ag | argentate | Au | aurate |
+
+</div>
+
+<WorkedExample source="義守 106・化學 13" answer="potassium hexacyanoferrate(III)" tags={['命名', '氧化數']}>
+
+**題目**　$\ce{K3[Fe(CN)6]}$ 的英文名稱為何？
+
+- 先陽離子後陰離子，開頭是 potassium。外界的數目不加字首，不寫成 tripotassium。
+- 內界有 6 個 $\ce{CN-}$，寫成 hexacyano。
+- 內界總電荷是 $-3$，$\ce{Fe}$ 的氧化數為 $-3-6\times(-1)=+3$。
+- 內界帶負電，金屬用拉丁字根加 -ate，寫成 ferrate(III)。
+
+</WorkedExample>
+
+<WorkedExample source="慈濟 113・化學 17" answer="hexaaquacobalt(III) bromide" tags={['命名']}>
+
+**題目**　$\ce{[Co(H2O)6]Br3}$ 的英文名稱為何？
+
+- 水作配位基叫 aqua，不是 hydro，6 個寫成 hexaaqua。
+- 內界總電荷 $+3$，故 Co 為 $+3$，寫成 cobalt(III)。內界不帶負電，金屬不加 -ate。
+- 外界是溴離子，寫 bromide 就好，不寫 tribromide。
+
+</WorkedExample>
+
+## 四、配位數與幾何構型
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 配位數 | 幾何 | 鍵角 | 例子 |
+|---:|---|---|---|
+| 2 | 直線 (linear) | $180^\circ$ | $\ce{[Ag(NH3)2]+}$、$\ce{[CuCl2]-}$ |
+| 4 | 四面體 (tetrahedral) | $109.5^\circ$ | $\ce{[NiCl4]^2-}$、$\ce{[CoCl4]^2-}$、$\ce{[Zn(NH3)4]^2+}$、$\ce{Ni(CO)4}$ |
+| 4 | 平面四方 (square planar) | $90^\circ$ | $\ce{[Ni(CN)4]^2-}$、$\ce{[PdCl4]^2-}$、$\ce{[Pt(NH3)4]^2+}$ |
+| 6 | 八面體 (octahedral) | $90^\circ$ | $\ce{[Fe(CN)6]^3-}$、$\ce{[Co(NH3)6]^3+}$、$\ce{[Cr(en)3]^3+}$ |
+
+</div>
+
+配位數 6 幾乎一定是八面體。真正需要判斷的是配位數 4：
+
+- 中心金屬是 d⁸ 且配位基是強場（$\ce{Ni^2+}$、$\ce{Pd^2+}$、$\ce{Pt^2+}$、$\ce{Au^3+}$ 配 $\ce{CN-}$、$\ce{NH3}$ 等）時是平面四方。
+- 第二、三列的 $\ce{Pd^2+}$ 與 $\ce{Pt^2+}$ 幾乎一律平面四方，連弱場配位基也是。
+- 其餘情況是四面體，包含 d¹⁰ 的 $\ce{Zn^2+}$、$\ce{Cu+}$，d⁹ 的 $\ce{Cu^2+}$，以及配弱場的 d⁸，例如 $\ce{[NiCl4]^2-}$。
+
+同樣是 $\ce{Ni^2+}$，配 $\ce{CN-}$ 的 $\ce{[Ni(CN)4]^2-}$ 是平面四方而且沒有未成對電子，配 $\ce{Cl-}$ 的 $\ce{[NiCl4]^2-}$ 是四面體而且有 2 個未成對電子。中心金屬與配位基一起決定形狀，所以錯合物不能直接套主族分子那套價殼層電子對排斥理論 (VSEPR) 來判斷。
+
+## 五、異構現象
+
+異構物 (isomer) 是分子式相同但排列方式不同的化合物，分成兩大類。
+
+### 立體異構
+
+原子的連接方式相同，只有空間位置不同。
+
+- **幾何異構 (geometric isomerism)**：兩個相同配位基相鄰是順式 (cis)，相對是反式 (trans)。八面體上三個相同配位基佔同一個面是面式 (fac)，繞成一圈是經式 (mer)。
+- **光學異構 (optical isomerism)**：分子與其鏡像不能重疊，稱為手性 (chiral)，這一對互為鏡像異構物 (enantiomer)。判斷方式是找對稱面，找得到就不具光學活性。
+
+四面體的四個位置彼此都相鄰，沒有「相對」可言，所以四面體錯合物沒有幾何異構物。平面四方的 $\ce{Ma2b2}$ 則有順式與反式兩種。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 八面體組成 | 幾何異構物 | 具光學活性者 | 立體異構物總數 |
+|---|---:|---:|---:|
+| $\ce{Ma5b}$ | 1 | 0 | 1 |
+| $\ce{Ma4b2}$（cis、trans） | 2 | 0 | 2 |
+| $\ce{Ma3b3}$（fac、mer） | 2 | 0 | 2 |
+| $\ce{Ma2b2c2}$ | 5 | 1（全順式那個） | 6 |
+| $\ce{M(AA)2b2}$（AA 為雙齒） | 2 | 1（順式） | 3 |
+
+</div>
+
+$\ce{[Co(en)2Cl2]+}$ 就是最後一列：反式的兩個 $\ce{Cl-}$ 在軸向，整個分子有對稱面，不具光學活性。順式的兩個 $\ce{Cl-}$ 相鄰，找不到對稱面，因此有一對鏡像異構物。合起來是 2 個幾何異構物與 2 個光學異構物（相異的立體異構物共 3 個，就是上表最後一列的數字）。
+
+### 順式與反式的生成比例
+
+取代反應生成順式或反式的機率，由「有幾個位置會生出那一種」決定。以 $\ce{[Co(NH3)5Cl]^2+}$ 被一個 $\ce{Cl-}$ 取代掉一個 $\ce{NH3}$ 為例：留下的 $\ce{Cl-}$ 固定在一個頂點，剩下 5 個 $\ce{NH3}$ 之中，與它相鄰的有 4 個、與它相對的只有 1 個。
+
+- 被換掉的若是那 4 個相鄰的其中之一，兩個 $\ce{Cl-}$ 相鄰，得到順式。
+- 被換掉的若是那 1 個相對的，兩個 $\ce{Cl-}$ 相對，得到反式。
+
+$$
+\text{順式}:\text{反式}=4:1
+$$
+
+<WorkedExample source="中國醫 109・化學 16、中國醫 111・化學 26" answer="幾何異構物 5 個，立體異構物共 6 個" tags={['立體異構', '八面體']}>
+
+**題目**　八面體錯合物 $\ce{M(NH3)2Br2Cl2}$ 有幾種異構物？
+
+這是 $\ce{Ma2b2c2}$ 型，三對配位基各自可以是順式或反式。八面體有三條軸，一對配位基取反式就佔滿一條軸，因此「恰有兩對反式」不存在，剩下那一對只能落在第三條軸上而同樣是反式。依「有幾對反式」分類：
+
+- 三對都反式：1 個。
+- 恰有一對反式，另兩對必為順式：3 個，看是哪一對。
+- 三對全順式：1 個。
+
+合計 5 個幾何異構物。再看手性：前四個都找得到對稱面，只有全順式那一個找不到，它多出一對鏡像異構物。
+
+$$
+5+1=6
+$$
+
+</WorkedExample>
+
+## 六、價鍵理論
+
+價鍵理論 (valence bond theory，VBT) 把配位鍵看成「中心金屬空出一組混成軌域，接收配位基送來的孤對電子」。混成軌域是由能量相近的原子軌域重新組合、指向特定方向的新軌域，混成方式決定幾何形狀。
+
+<RelatedNote title="混成軌域怎麼數、sp 到 sp³d² 的形狀" href="/chem-chemical-bonding" to="化學鍵與分子結構">
+  主族分子的混成與 VSEPR 判形，以及 σ 與 π 鍵怎麼組成單、雙、三鍵，在那一篇。
+</RelatedNote>
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 配位數 | 混成軌域 | 幾何 | 用到的 d 軌域 |
+|---:|---|---|---|
+| 2 | sp | 直線 | 無 |
+| 4 | sp³ | 四面體 | 無 |
+| 4 | dsp² | 平面四方 | $(n-1)$d |
+| 6 | d²sp³ | 八面體（內軌型） | $(n-1)$d |
+| 6 | sp³d² | 八面體（外軌型） | $n$d |
+
+</div>
+
+八面體有兩種混成，差別在借哪一層的 d 軌域：
+
+- **內軌型 (inner orbital)**：借 $(n-1)\mathrm{d}$，也就是本來就有電子的 3d。要空出兩個 3d 軌域，原有的 d 電子必須先擠在一起配對，結果未成對電子變少，對應低自旋。強場配位基造成。
+- **外軌型 (outer orbital)**：借更高的 $n\mathrm{d}$，也就是 4d。3d 的電子完全不必挪動，未成對電子維持原樣，對應高自旋。弱場配位基造成。
+
+因此量到磁性就能反推混成：$\ce{[Fe(CN)6]^3-}$ 只有 1 個未成對電子，是內軌型 d²sp³。$\ce{[FeF6]^3-}$ 有 5 個，是外軌型 sp³d²。
+
+價鍵理論答得出幾何與磁性，但說不出錯合物為什麼有顏色，也無法預先判斷哪個配位基是強場。這兩件事要交給晶場理論。
+
+## 七、晶場理論
+
+晶場理論 (crystal field theory，CFT) 把配位基單純當成靠近的負電荷，只計算它們對中心金屬 d 電子的靜電排斥。核心機制只有一句：**哪個 d 軌域指向配位基，它上面的電子就被排斥得最厲害，能量被推得最高**。
+
+<CrystalFieldGeometries />
+
+以八面體為例，6 個配位基沿 $\pm x$、$\pm y$、$\pm z$ 靠近：
+
+- $d_{z^2}$ 與 $d_{x^2-y^2}$ 的電子雲正對著軸，被推高，這一組記作 $e_g$。
+- $d_{xy}$、$d_{xz}$、$d_{yz}$ 的電子雲落在軸與軸之間，被推得少，這一組記作 $t_{2g}$。
+- 兩組的能量差叫晶場分裂能 (crystal field splitting energy)，記作 $\Delta_o$，下標 o 代表 octahedral。
+
+分裂不改變五個軌域的能量總和，這叫重心不變。設 $e_g$ 的每個軌域升高 $a$、$t_{2g}$ 的每個軌域降低 $b$，升上去的總量要等於降下來的總量：
+
+$$
+2a=3b
+$$
+
+配合 $a+b=\Delta_o$ 解得 $a=0.6\Delta_o$、$b=0.4\Delta_o$。所以 $e_g$ 每個軌域是 $+0.6\Delta_o$，$t_{2g}$ 每個軌域是 $-0.4\Delta_o$。
+
+四面體的 4 個配位基指向立方體相間的頂角，沒有任何 d 軌域正對它們，分裂因此小很多：
+
+$$
+\Delta_t=\dfrac{4}{9}\Delta_o
+$$
+
+$\Delta_t$ 小到永遠贏不過配對能（把兩個電子塞進同一個軌域所要付出的排斥能量），所以四面體錯合物一律是高自旋。
+
+直線錯合物則是另一個極端：兩個配位基沿 z 軸靠近，只有帶 z 的 $d_{z^2}$、$d_{xz}$、$d_{yz}$ 被推高，留在 xy 平面內的 $d_{xy}$ 與 $d_{x^2-y^2}$ 能量最低而且相同。
+
+### 光譜化學序列
+
+配位基造成的分裂能大小可以排成一個順序，稱為光譜化學序列 (spectrochemical series)。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 場強 | 配位基（由弱到強） |
+|---|---|
+| 弱場（$\Delta$ 小） | $\ce{I-}$、$\ce{Br-}$、$\ce{Cl-}$、$\ce{F-}$、$\ce{OH-}$、$\ce{C2O4^2-}$、$\ce{H2O}$ |
+| 強場（$\Delta$ 大） | $\ce{NH3}$、en、$\ce{NO2-}$、$\ce{CN-}$、$\ce{CO}$ |
+
+</div>
+
+<SpectrochemSeries client:visible />
+
+除了配位基以外，還有兩件事會加大 $\Delta_o$：
+
+- 中心金屬氧化數越高，把配位基拉得越近，$+3$ 價約比 $+2$ 價大 50%。
+- 同一族由上往下，$\Delta_o$ 依 3d、4d、5d 遞增。第二、三列金屬因此幾乎都是低自旋。
+
+### 高自旋與低自旋
+
+電子填進分裂後的軌域時，有兩條路可走，選哪一條要比較兩個能量：
+
+- $\Delta_o$：把電子送上 $e_g$ 要付的能量。
+- 配對能 (pairing energy) $P$：把兩個電子塞進同一個軌域要付的排斥能量。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 條件 | 電子怎麼走 | 結果 |
+|---|---|---|
+| $\Delta_o \gt P$（強場） | 寧可在 $t_{2g}$ 配對，也不上 $e_g$ | 低自旋 (low spin)，未成對電子少 |
+| $\Delta_o \lt P$（弱場） | 先讓五個軌域各佔一個，再回頭配對 | 高自旋 (high spin)，未成對電子多 |
+
+</div>
+
+只有 d⁴ 到 d⁷ 兩條路才會分岔。d¹ 到 d³ 的電子在 $t_{2g}$ 的三個軌域裡各佔一個就放得下，d⁸ 到 d¹⁰ 則不論如何都得動用 $e_g$，兩端的填法都唯一，未成對電子數與配位基強弱無關。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| d 電子數 | 高自旋填法 | 未成對電子 | 低自旋填法 | 未成對電子 |
+|---|---|---:|---|---:|
+| d¹ | $t_{2g}^1$ | 1 | 同左 | 1 |
+| d² | $t_{2g}^2$ | 2 | 同左 | 2 |
+| d³ | $t_{2g}^3$ | 3 | 同左 | 3 |
+| d⁴ | $t_{2g}^3e_g^1$ | 4 | $t_{2g}^4$ | 2 |
+| d⁵ | $t_{2g}^3e_g^2$ | 5 | $t_{2g}^5$ | 1 |
+| d⁶ | $t_{2g}^4e_g^2$ | 4 | $t_{2g}^6$ | 0 |
+| d⁷ | $t_{2g}^5e_g^2$ | 3 | $t_{2g}^6e_g^1$ | 1 |
+| d⁸ | $t_{2g}^6e_g^2$ | 2 | 同左 | 2 |
+| d⁹ | $t_{2g}^6e_g^3$ | 1 | 同左 | 1 |
+| d¹⁰ | $t_{2g}^6e_g^4$ | 0 | 同左 | 0 |
+
+</div>
+
+<CrystalField client:visible />
+
+平面四方是特例。$d_{x^2-y^2}$ 正對四個配位基，能量被拉得遠高於其他四個軌域，d⁸ 金屬的 8 個電子剛好把下面四個軌域填滿並全部成對，最高的 $d_{x^2-y^2}$ 空著。因此平面四方的 d⁸ 錯合物一律沒有未成對電子，$\ce{[Ni(CN)4]^2-}$、$\ce{[PdCl4]^2-}$、$\ce{[Pt(NH3)4]^2+}$ 都是反磁性。
+
+### 磁性
+
+- **順磁性 (paramagnetic)**：有未成對電子，會被磁場吸引。
+- **反磁性 (diamagnetic)**：電子全部成對，被磁場輕微排斥。也譯成逆磁性或抗磁性。
+
+判斷順序固定：先由氧化數算 d 電子數，再由配位基場強決定高或低自旋，最後數還剩幾個未成對電子。只要數出 0 個就是反磁性，否則是順磁性。
+
+<WorkedExample source="慈濟 108・化學 7" answer="1 個" tags={['低自旋', '未成對電子']}>
+
+**題目**　$\ce{CN-}$ 是強場配位基。$\ce{[Fe(CN)6]^3-}$ 在最安定狀態時，鐵的 d 軌域有幾個未成對電子？
+
+- 內界總電荷 $-3$，6 個 $\ce{CN-}$ 共 $-6$，故 Fe 為 $+3$。
+- Fe 的價電子總數 8，$8-3=5$，所以是 d⁵。
+- $\ce{CN-}$ 是強場，$\Delta_o \gt P$，走低自旋，5 個電子全擠進 $t_{2g}$，填成 $t_{2g}^5$。
+- $t_{2g}$ 的三個軌域裡有兩個各配成一對、一個單獨留一個電子。
+
+</WorkedExample>
+
+## 八、d 軌域躍遷與顏色
+
+過渡金屬錯合物有顏色，是因為可見光把 $t_{2g}$ 上的電子激發到 $e_g$。這種在 d 軌域之間的躍遷吸收掉白光中的一段波長，剩下的透射光就是我們看到的顏色，也就是吸收色的互補色。
+
+$$
+\Delta_o=h\nu=\dfrac{hc}{\lambda}
+$$
+
+$h$ 是普朗克常數，$\nu$ 是頻率，$c$ 是光速，$\lambda$ 是吸收波長。$\Delta_o$ 與 $\lambda$ 成反比，於是：
+
+- 強場配位基使 $\Delta_o$ 變大，吸收的光子能量高，吸收波長短。
+- 弱場配位基使 $\Delta_o$ 變小，吸收波長長。
+
+兩種情況必定無色：d⁰ 的 $\ce{Ti^4+}$、$\ce{Sc^3+}$ 沒有可被激發的 d 電子，d¹⁰ 的 $\ce{Zn^2+}$、$\ce{Cu+}$、$\ce{Ag+}$ 則沒有空位可以接住電子。
+
+<ComplementaryColor client:visible />
+
+<WorkedExample source="義守 109・化學 9" answer="0.5 倍" tags={['分裂能', '吸收波長']}>
+
+**題目**　$\ce{[Ni(NH3)6]^2+}$ 與 $\ce{[Cr(NH3)6]^3+}$ 的吸收波長分別為 926 nm 與 463 nm。前者的 $\Delta_o$ 是後者的幾倍？
+
+兩個錯合物的 $h$ 與 $c$ 相同，直接把兩個 $\dfrac{hc}{\lambda}$ 相除，$hc$ 上下相消：
+
+$$
+\dfrac{\Delta_o(\ce{Ni})}{\Delta_o(\ce{Cr})}
+=\dfrac{hc}{926\ \mathrm{nm}}\times\dfrac{463\ \mathrm{nm}}{hc}
+=\dfrac{463}{926}
+=0.5
+$$
+
+兩者的配位基同樣是 $\ce{NH3}$，差別在中心金屬。$\ce{Cr^3+}$ 的氧化數比 $\ce{Ni^2+}$ 高，把配位基拉得更近，分裂能更大，吸收波長因此更短。
+
+</WorkedExample>
+
+## 九、生物體內的配位化學
+
+生物體用金屬錯合物搬運氧氣、傳遞電子、捕捉光線。下面這些分子的骨架長得很像，都是四個 N 圍成一圈把金屬夾在中央，差別在中心金屬與上下兩個軸向配位基。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 分子 | 中心金屬 | 功能與要點 |
+|---|---|---|
+| 血紅蛋白 hemoglobin (Hb) | $\ce{Fe^2+}$ | 血液中運送 $\ce{O2}$。環的 4 個 N 加蛋白質提供的 1 個 N 佔掉 5 個配位位置，第 6 個留給 $\ce{O2}$，接上後成 6 配位八面體 |
+| 肌紅蛋白 myoglobin (Mb) | $\ce{Fe^2+}$ | 肌肉中儲存 $\ce{O2}$，配位環境與血紅蛋白相同 |
+| 細胞色素 cytochrome | Fe | 電子傳遞鏈中傳遞電子，主要靠 $\ce{Fe^2+}$ 與 $\ce{Fe^3+}$ 來回變換氧化態 |
+| 葉綠素 chlorophyll | $\ce{Mg^2+}$ | 光合作用中吸收光能。中心是鎂，不是鐵 |
+| 維生素 B₁₂ cobalamin | $\ce{Co^3+}$ | 甲基轉移、紅血球生成。中心金屬是鈷 |
+
+</div>
+
+一氧化碳中毒的化學原因就在這張表上。$\ce{CO}$ 在光譜化學序列的最強場端，與血紅蛋白的 $\ce{Fe^2+}$ 形成比 $\ce{O2}$ 安定得多的錯合物，佔住第 6 個配位位置後 $\ce{O2}$ 就接不上去，血液失去載氧能力。
+
+<WorkedExample source="慈濟 110・化學 42" answer="約 60" tags={['CO 中毒', '平衡常數']}>
+
+**題目**　已知 $\ce{Hb + O2 -> HbO2}$ 的 $\Delta G^\circ=-70\ \mathrm{kJ\,mol^{-1}}$，$\ce{Hb + CO -> HbCO}$ 的 $\Delta G^\circ=-80\ \mathrm{kJ\,mol^{-1}}$。求 298 K 時 $\ce{HbO2 + CO <=> HbCO + O2}$ 的平衡常數。已知 $\ln 60=4.09$。
+
+目標反應等於第二式減第一式，自由能同樣相減：
+
+$$
+\Delta G^\circ=-80\ \mathrm{kJ\,mol^{-1}}-(-70\ \mathrm{kJ\,mol^{-1}})=-10\ \mathrm{kJ\,mol^{-1}}
+$$
+
+代入 $\Delta G^\circ=-RT\ln K$：
+
+$$
+\ln K=10\ \mathrm{kJ\,mol^{-1}}\times\dfrac{1000\ \mathrm{J}}{1\ \mathrm{kJ}}\times\dfrac{1}{8.314\ \mathrm{J\,mol^{-1}\,K^{-1}}\times298\ \mathrm{K}}=4.04
+$$
+
+$\ln 60=4.09$ 最接近，故 $K\approx60$。平衡大幅偏向 $\ce{HbCO}$，這就是 $\ce{CO}$ 能把 $\ce{O2}$ 從血紅素上擠掉的量化依據。
+
+</WorkedExample>
+
+## 例題
+
+<ExampleQuestion client:load n={1}
+  q="配位化合物 $\\ce{[Cr(NH3)2(en)2]Cl3}$ 中，鉻的配位數與氧化數分別為何？"
+  options={['配位數 4，氧化數 $+3$', '配位數 6，氧化數 $+3$', '配位數 6，氧化數 $+2$', '配位數 4，氧化數 $+2$']}
+  answer="(B) 配位數 6，氧化數 $+3$"
+  steps={[
+    '配位數數的是配位原子。$\\ce{NH3}$ 是單齒給 2 個 N，en 是雙齒、兩個 en 給 4 個 N，合計 6。',
+    '外界有 3 個 $\\ce{Cl-}$，內界總電荷為 $+3$。',
+    '$\\ce{NH3}$ 與 en 都是中性配位基，所以鉻的氧化數就是 $+3$。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={2}
+  q="各取 1 mol 下列化合物溶於水，加入過量 $\\ce{AgNO3(aq)}$，何者生成的 $\\ce{AgCl}$ 沉澱最多？"
+  options={['$\\ce{[Cr(NH3)6]Cl3}$', '$\\ce{[Cr(NH3)5Cl]Cl2}$', '$\\ce{[Cr(NH3)4Cl2]Cl}$', '$\\ce{Na3[CrCl6]}$']}
+  answer="(A) $\\ce{[Cr(NH3)6]Cl3}$"
+  steps={[
+    '只有中括號外的 $\\ce{Cl-}$ 會解離成自由離子並沉澱。',
+    '四者的外界 $\\ce{Cl-}$ 依序是 3、2、1、0 個。',
+    '$\\ce{Na3[CrCl6]}$ 的氯全在內界，解離出來的是 $\\ce{Na+}$，完全沒有沉澱。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={3}
+  q="$\\ce{EDTA^4-}$ 與金屬離子形成螯合物時，屬於幾齒配位基？"
+  options={['雙齒', '四齒', '六齒', '八齒']}
+  answer="(C) 六齒"
+  steps={[
+    '數的是能配位的原子，不是原子總數。',
+    '$\\ce{EDTA^4-}$ 有兩個胺基的 N，加上四個羧酸根各出一個 O。',
+    '$2+4=6$，是六齒配位基，可以單獨把一個金屬離子整個包住。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={4}
+  q="$\\ce{K4[Fe(CN)6]}$ 的英文名稱為何？"
+  options={['potassium hexacyanoiron(II)', 'tetrapotassium hexacyanoferrate(II)', 'potassium hexacyanoferrate(II)', 'potassium hexacyanoferrate(III)']}
+  answer="(C) potassium hexacyanoferrate(II)"
+  steps={[
+    '先陽離子後陰離子，外界的鉀不加數目字首，寫 potassium。',
+    '內界總電荷 $-4$，六個 $\\ce{CN-}$ 共 $-6$，故鐵為 $+2$，寫成 (II)。',
+    '內界帶負電，金屬要加 -ate 並改拉丁字根，寫 ferrate 而非 iron。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={5}
+  q="下列四配位錯合物中，何者最可能為平面四方形？"
+  options={['$\\ce{[NiCl4]^2-}$', '$\\ce{[Pt(NH3)4]^2+}$', '$\\ce{[Zn(NH3)4]^2+}$', '$\\ce{[CoCl4]^2-}$']}
+  answer="(B) $\\ce{[Pt(NH3)4]^2+}$"
+  steps={[
+    '先算 d 電子數：$\\ce{Ni^2+}$ 與 $\\ce{Pt^2+}$ 為 d⁸、$\\ce{Zn^2+}$ 為 d¹⁰、$\\ce{Co^2+}$ 為 d⁷。',
+    'd⁸ 配強場才走平面四方。$\\ce{Cl-}$ 是弱場，所以 $\\ce{[NiCl4]^2-}$ 仍是四面體。',
+    '$\\ce{Pt^2+}$ 是第三列金屬，分裂能大，配 $\\ce{NH3}$ 一定是平面四方。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={6}
+  q="八面體錯合物 $\\ce{[MA2B2C2]}$（A、B、C 皆為單齒配位基）的幾何異構物與立體異構物總數分別為何？"
+  options={['4 與 5', '5 與 6', '6 與 6', '3 與 4']}
+  answer="(B) 5 與 6"
+  steps={[
+    '依「幾對反式」分類：三對全反式 1 個、恰一對反式 3 個、三對全順式 1 個，共 5 個幾何異構物。',
+    '再檢查對稱面。前四個都找得到，只有全順式那一個找不到。',
+    '全順式多出一對鏡像異構物，所以立體異構物總數是 $5+1=6$。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={7}
+  q="關於錯離子 $\\ce{[Co(en)2Cl2]+}$，下列敘述何者正確？"
+  options={['只有一種結構，不具任何異構物', '有順式與反式兩個幾何異構物，兩者皆具光學活性', '有順式與反式兩個幾何異構物，只有順式具光學活性', '沒有幾何異構物，但具光學活性']}
+  answer="(C) 有順式與反式兩個幾何異構物，只有順式具光學活性"
+  steps={[
+    '兩個 $\\ce{Cl-}$ 可以相鄰（順式）或相對（反式），先得到 2 個幾何異構物。',
+    '反式的兩個 $\\ce{Cl-}$ 在軸向，分子有對稱面，鏡像可以重疊，不具光學活性。',
+    '順式找不到對稱面，因此有一對鏡像異構物，全部合計 3 個立體異構物。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={8}
+  q="八面體錯離子 $\\ce{[Co(NH3)6]^3+}$ 為低自旋。依價鍵理論，中心 $\\ce{Co^3+}$ 採用的混成軌域為何？"
+  options={['sp³', 'dsp²', 'd²sp³', 'sp³d²']}
+  answer="(C) d²sp³"
+  steps={[
+    '配位數 6，混成必定用到六個軌域，只可能是 d²sp³ 或 sp³d²。',
+    '低自旋代表電子先在 3d 配對、空出兩個 3d 軌域來混成，屬於內軌型。',
+    '內軌型借的是 $(n-1)$d，寫成 d²sp³。外軌型 sp³d² 借 4d，對應高自旋。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={9}
+  q="弱場八面體錯離子 $\\ce{[Mn(H2O)6]^2+}$ 中，錳的未成對電子數為何？"
+  options={['1', '3', '4', '5']}
+  answer="(D) 5"
+  steps={[
+    'Mn 的價電子總數是 7，$7-2=5$，所以 $\\ce{Mn^2+}$ 是 d⁵。',
+    '$\\ce{H2O}$ 是弱場，$\\Delta_o \\lt P$，走高自旋，五個電子先各佔一個軌域。',
+    '填成 $t_{2g}^3e_g^2$，五個電子全部未成對。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={10}
+  q="下列錯離子何者為反磁性？"
+  options={['$\\ce{[Fe(CN)6]^4-}$', '$\\ce{[Cr(CN)6]^3-}$', '$\\ce{[Mn(CN)6]^4-}$', '$\\ce{[V(CN)6]^3-}$']}
+  answer="(A) $\\ce{[Fe(CN)6]^4-}$"
+  steps={[
+    '$\\ce{CN-}$ 一律強場，四者都走低自旋，只要比 d 電子數。',
+    '$\\ce{Fe^2+}$ 為 d⁶，低自旋填成 $t_{2g}^6$，未成對電子 0，是反磁性。',
+    '$\\ce{Cr^3+}$ 為 d³ 有 3 個、$\\ce{Mn^2+}$ 為 d⁵ 低自旋有 1 個、$\\ce{V^3+}$ 為 d² 有 2 個，都是順磁性。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={11}
+  q="下列八面體錯離子 $\\ce{[ML6]^{n+}}$ 中，何者的未成對電子數不會因配位基強弱而改變？"
+  options={['$\\ce{Cr^3+}$', '$\\ce{Mn^3+}$', '$\\ce{Fe^2+}$', '$\\ce{Co^2+}$']}
+  answer="(A) $\\ce{Cr^3+}$"
+  steps={[
+    '只有 d⁴ 到 d⁷ 才有高低自旋兩種填法，其餘填法唯一。',
+    '$\\ce{Cr^3+}$ 是 d³，三個電子填進 $t_{2g}$ 各佔一個軌域，強場弱場都一樣。',
+    '$\\ce{Mn^3+}$ d⁴、$\\ce{Fe^2+}$ d⁶、$\\ce{Co^2+}$ d⁷ 全都落在會分岔的範圍內。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={12}
+  q="已知場強順序為 $\\ce{F-}$ 弱於 $\\ce{H2O}$ 弱於 $\\ce{NH3}$ 弱於 $\\ce{CN-}$。下列鈷錯離子中，何者吸收可見光的波長最長？"
+  options={['$\\ce{[CoF6]^3-}$', '$\\ce{[Co(H2O)6]^3+}$', '$\\ce{[Co(NH3)6]^3+}$', '$\\ce{[Co(CN)6]^3-}$']}
+  answer="(A) $\\ce{[CoF6]^3-}$"
+  steps={[
+    '$\\Delta_o=\\dfrac{hc}{\\lambda}$，分裂能與吸收波長成反比。',
+    '要波長最長，就要分裂能最小，也就是配位基場強最弱。',
+    '四者中 $\\ce{F-}$ 最弱場，所以 $\\ce{[CoF6]^3-}$ 吸收波長最長。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={13}
+  q="$\\ce{[Zn(NH3)4]^2+}$ 水溶液無色，最主要的原因為何？"
+  options={['Zn 不屬於過渡金屬', '$\\ce{Zn^2+}$ 為 d¹⁰，沒有空位可容納被激發的 d 電子', '$\\ce{NH3}$ 是弱場配位基', '$\\ce{Zn^2+}$ 具有順磁性']}
+  answer="(B) $\\ce{Zn^2+}$ 為 d¹⁰，沒有空位可容納被激發的 d 電子"
+  steps={[
+    '錯合物的顏色來自 d 軌域之間的電子躍遷。',
+    'Zn 的價電子總數 12，$12-2=10$，$\\ce{Zn^2+}$ 的五個 d 軌域全滿。',
+    '沒有空位可以接住被激發的電子，躍遷無法發生，因此不吸收可見光。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={14}
+  q="一氧化碳造成中毒的主要化學原因為何？"
+  options={['$\\ce{CO}$ 與血紅蛋白裡的 $\\ce{Fe^2+}$ 形成比 $\\ce{O2}$ 更安定的錯合物，佔住原本結合 $\\ce{O2}$ 的配位位置', '$\\ce{CO}$ 把血紅蛋白裡的 $\\ce{Fe^2+}$ 氧化成 $\\ce{Fe^3+}$', '$\\ce{CO}$ 溶於血液後生成酸使血液酸化', '$\\ce{CO}$ 破壞環系的共軛結構']}
+  answer="(A) $\\ce{CO}$ 與血紅蛋白裡的 $\\ce{Fe^2+}$ 形成比 $\\ce{O2}$ 更安定的錯合物，佔住原本結合 $\\ce{O2}$ 的配位位置"
+  steps={[
+    '$\\ce{CO}$ 位於光譜化學序列的最強場端，與 $\\ce{Fe^2+}$ 的鍵結遠比 $\\ce{O2}$ 牢固。',
+    '血紅蛋白裡 $\\ce{Fe^2+}$ 的第 6 個配位位置本來留給 $\\ce{O2}$，被 $\\ce{CO}$ 佔住後就載不了氧。',
+    '鐵的氧化態並未改變，中毒的關鍵是競爭同一個配位位置。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={15}
+  q="下列生物分子與其中心金屬的配對，何者錯誤？"
+  options={['血紅蛋白對應 $\\ce{Fe^2+}$', '葉綠素對應 $\\ce{Mg^2+}$', '維生素 B₁₂ 對應 $\\ce{Cu^2+}$', '細胞色素對應 Fe']}
+  answer="(C) 維生素 B₁₂ 對應 $\\ce{Cu^2+}$"
+  steps={[
+    '維生素 B₁₂ 的中心金屬是鈷，位於環系中央，氧化態為 $+3$。',
+    '血紅蛋白、肌紅蛋白與細胞色素都以鐵為中心，環的骨架相同。',
+    '葉綠素的環系與血紅蛋白相近，但中心是鎂。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={16}
+  q="將氨水緩慢滴入含 $\\ce{Cu^2+}$ 的水溶液，一開始觀察到的沉澱最可能是何者？"
+  options={['$\\ce{CuO}$', '$\\ce{Cu2O}$', '$\\ce{Cu(OH)2}$', '$\\ce{[Cu(NH3)4]^2+}$']}
+  answer="(C) $\\ce{Cu(OH)2}$"
+  steps={[
+    '氨水是弱鹼，量少時先提供 $\\ce{OH-}$。',
+    '$\\ce{Cu^2+}$ 與 $\\ce{OH-}$ 生成 $\\ce{Cu(OH)2}$ 藍色沉澱。',
+    '氨水過量後 $\\ce{NH3}$ 才改當配位基，把沉澱溶成深藍色的 $\\ce{[Cu(NH3)4]^2+}$，那是後半段而不是一開始的沉澱。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={17}
+  q="已知 $\\ce{Ag+ + 2NH3 <=> [Ag(NH3)2]+}$ 的 $K_f=1.5\\times10^{7}$，$\\ce{Ag+ + 2CN- <=> [Ag(CN)2]-}$ 的 $K_f=1.0\\times10^{21}$。則 $\\ce{[Ag(NH3)2]+ + 2CN- <=> [Ag(CN)2]- + 2NH3}$ 的平衡常數為何？"
+  options={['$1.5\\times10^{-14}$', '$1.5\\times10^{14}$', '$6.7\\times10^{-13}$', '$6.7\\times10^{13}$']}
+  answer="(D) $6.7\\times10^{13}$"
+  steps={[
+    '目標反應＝生成 $\\ce{[Ag(CN)2]-}$ 那式減去生成 $\\ce{[Ag(NH3)2]+}$ 那式。',
+    '反應相減，平衡常數相除：$K=\\dfrac{1.0\\times10^{21}}{1.5\\times10^{7}}$。',
+    '算得 $6.7\\times10^{13}$，遠大於 1，代表 $\\ce{CN-}$ 會把 $\\ce{NH3}$ 換掉。',
+  ]}
+/>
+
+<ExampleQuestion client:load n={18}
+  q="$\\ce{[Co(NH3)5Cl]^2+}$ 與 $\\ce{Cl-}$ 反應生成 $\\ce{[Co(NH3)4Cl2]+}$ 與 $\\ce{NH3}$，產物的順式與反式比例為何？"
+  options={['1:1', '1:4', '2:1', '4:1']}
+  answer="(D) 4:1"
+  steps={[
+    '原有的 $\\ce{Cl-}$ 固定在一個頂點，被取代掉的是 5 個 $\\ce{NH3}$ 的其中之一。',
+    '這 5 個之中，與 $\\ce{Cl-}$ 相鄰的有 4 個、與它相對的只有 1 個。',
+    '換掉相鄰的得順式、換掉相對的得反式，比例為 $4:1$。',
+  ]}
+/>
+
+<Memorize items={[
+  "配位數：<ul><li>算的是<b>配位原子</b>個數，不是配位基個數</li><li>en、ox、acac 各算 2，dien 算 3，EDTA 算 6</li><li>配位數 6 幾乎一定是八面體</li></ul>",
+  "內界與外界：<ul><li>中括號內＝內界，溶於水不解離</li><li>中括號外＝抗衡離子，完全解離</li><li>加 <code>AgNO₃</code> 只有外界 <code>Cl⁻</code> 會沉澱</li><li>導電度與依數性質看「1 個錯離子＋外界離子數」</li></ul>",
+  "氧化數與 d 電子數：<ul><li>金屬氧化數＝內界總電荷 − 各配位基電荷總和</li><li>d 電子數＝該金屬價電子總數 − 氧化數</li><li>價電子總數＝在 d 區的位置序數，Sc 是 3、Zn 是 12</li></ul>",
+  "命名順序：<ul><li>先陽離子後陰離子</li><li>內界先配位基後金屬，配位基照英文字母序，數目字首不列入排序</li><li>金屬後用羅馬數字寫氧化數</li><li>內界帶負電時金屬加 -ate</li><li>外界不加數目字首（寫 bromide 不寫 tribromide）</li></ul>",
+  "配位基名稱四例外：<ul><li><code>H₂O</code> aqua</li><li><code>NH₃</code> ammine（兩個 m）</li><li><code>CO</code> carbonyl</li><li><code>NO</code> nitrosyl</li></ul>",
+  "拉丁字根：<ul><li>Fe ferrate、Cu cuprate、Ag argentate</li><li>Pb plumbate、Sn stannate、Au aurate</li></ul>",
+  "四配位怎麼分：<ul><li>d⁸ ＋ 強場（<code>Ni²⁺ Pd²⁺ Pt²⁺ Au³⁺</code>）→ 平面四方</li><li><code>Pd²⁺ Pt²⁺</code> 幾乎一律平面四方</li><li>d¹⁰ 或 d⁸ 配弱場 → 四面體</li></ul>",
+  "八面體異構數：<ul><li><code>Ma₄b₂</code> 2 個（cis、trans）</li><li><code>Ma₃b₃</code> 2 個（fac、mer）</li><li><code>Ma₂b₂c₂</code> 幾何 5 個、立體共 6 個</li><li><code>M(AA)₂b₂</code> 幾何 2 個，只有 cis 具光學活性</li></ul>",
+  "價鍵理論混成：<ul><li>sp 直線</li><li>sp³ 四面體</li><li>dsp² 平面四方</li><li>d²sp³ 八面體內軌型，對應低自旋</li><li>sp³d² 八面體外軌型，對應高自旋</li></ul>",
+  "八面體晶場分裂：<ul><li>指向軸的 dz²、dx²−y² 升成 $e_g$，每個 $+0.6\\Delta_o$</li><li>軸間的 dxy、dxz、dyz 降成 $t_{2g}$，每個 $-0.4\\Delta_o$</li><li>重心不變：$2\\times0.6=3\\times0.4$</li></ul>",
+  "其他幾何的分裂：<ul><li>四面體 e 低、t₂ 高，$\\Delta_t=\\dfrac{4}{9}\\Delta_o$，恆為高自旋</li><li>平面四方 dx²−y² 最高，d⁸ 一律無未成對電子</li><li>直線（z 軸）dz² 最高，dxy 與 dx²−y² 最低且能量相同</li></ul>",
+  "光譜化學序列：<ul><li>弱場端 <code>I⁻ Br⁻ Cl⁻ F⁻ OH⁻ C₂O₄²⁻ H₂O</code></li><li>強場端 <code>NH₃ en NO₂⁻ CN⁻ CO</code></li></ul>",
+  "分裂能變大的三件事：<ul><li>配位基往光譜化學序列的強場端移</li><li>中心金屬氧化數變高</li><li>同族由 3d 往 4d、5d 走</li></ul>",
+  "高低自旋：<ul><li>只有 d⁴ 到 d⁷ 才分岔</li><li>$\\Delta_o \\gt P$（強場）→ 低自旋，未成對少</li><li>$\\Delta_o \\lt P$（弱場）→ 高自旋，未成對多</li></ul>",
+  "八面體未成對電子數：<ul><li>高自旋 d⁴ 4、d⁵ 5、d⁶ 4、d⁷ 3</li><li>低自旋 d⁴ 2、d⁵ 1、d⁶ 0、d⁷ 1</li><li>填法唯一者 d¹ 1、d² 2、d³ 3、d⁸ 2、d⁹ 1、d¹⁰ 0</li></ul>",
+  "磁性：<ul><li>有未成對電子＝順磁，全部成對＝反磁（逆磁、抗磁）</li><li>判斷順序：氧化數 → d 電子數 → 場強定高低自旋 → 數未成對電子</li></ul>",
+  "錯合物的顏色：<ul><li>顏色來自 d 軌域之間的電子躍遷</li><li>$\\Delta_o=\\dfrac{hc}{\\lambda}$，分裂能越大吸收波長越短</li><li>看到的是吸收色的互補色</li><li>d⁰ 與 d¹⁰ 必定無色</li></ul>",
+  "生物金屬中心：<ul><li>血紅蛋白、肌紅蛋白、細胞色素都是 Fe</li><li>葉綠素是 <code>Mg²⁺</code></li><li>維生素 B₁₂ 是 <code>Co³⁺</code></li></ul>",
+  "氨水滴入 Cu²⁺：<ul><li>先生成 <code>Cu(OH)₂</code> 藍色沉澱</li><li>氨水過量後沉澱溶解，變成深藍色的 <code>[Cu(NH₃)₄]²⁺</code></li></ul>",
+  "形成常數合併：<ul><li>錯離子交換配位基的 K ＝ 生成物的 $K_f$ 除以反應物的 $K_f$</li><li>$K_f$ 越大代表錯離子越安定，配位基搶得贏</li></ul>",
+  "順反產物比例：<ul><li>取代八面體上 5 個相同配位基之一時，4 個位置給出順式、1 個給出反式</li><li>順式比反式＝4:1</li></ul>",
+  "CO 中毒：<ul><li><code>CO</code> 在光譜化學序列的最強場端</li><li>與 <code>Fe²⁺</code> 形成比 <code>O₂</code> 更安定的錯合物</li><li>佔住第 6 個配位位置，血紅素無法載氧</li></ul>",
+]} />

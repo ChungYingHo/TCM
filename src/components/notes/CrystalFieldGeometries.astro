@@ -1,0 +1,214 @@
+---
+// 四種配位幾何的晶場分裂圖（八面體／四面體／平面四方／直線）並排。
+// 四張圖共用同一條重心高度，所以「誰被推高、誰被壓低」可以直接橫向比較。
+// 只有八面體與四面體這一組是照比例畫的：Δo 畫 60 單位、Δt 畫 27 單位，27/60≈4/9。
+// 平面四方與直線只表示能階的高低順序，間距不代表實際數值，標題旁已註明。
+//
+// 純靜態 Astro 元件：不送 JS 到瀏覽器，網頁與列印看到的完全一樣
+// （資訊不藏在互動後面，見 WorkedExample.astro 的同一個理由）。
+interface Level {
+  y: number // SVG 座標，數字越小＝能量越高
+  n: number // 這一階有幾個簡併軌域，決定畫幾條橫槓
+  sym?: string // 能階代號的主體，如 t、e
+  sub?: string // 能階代號的下標，如 2g、g
+  energy?: string // 相對重心的能量，如 +0.6Δo
+  orbitals: string[] // 這一階上的 d 軌域，只寫下標部分（前面的 d 由樣板補）
+}
+
+interface Panel {
+  name: string
+  cn: string
+  note?: string // 標題旁的補充，如「僅示意順序」
+  levels: Level[]
+  gap?: [number, number] // 要標分裂能的上下兩個 y
+  gapLabel?: string
+  bary?: boolean // 畫不畫重心虛線
+  baryLabel?: boolean // 只在第一張圖標「重心」兩個字，其餘靠對齊看懂
+  why: string
+}
+
+const BARY = 66
+
+const PANELS: Panel[] = [
+  {
+    name: '八面體',
+    cn: '配位數 6',
+    levels: [
+      { y: 30, n: 2, sym: 'e', sub: 'g', energy: '+0.6Δo', orbitals: ['z²', 'x²−y²'] },
+      { y: 90, n: 3, sym: 't', sub: '2g', energy: '−0.4Δo', orbitals: ['xy', 'xz', 'yz'] },
+    ],
+    gap: [30, 90],
+    gapLabel: 'Δo',
+    bary: true,
+    baryLabel: true,
+    why: '配位基沿 ±x、±y、±z 六個方向靠近，正對軸的 dz² 與 dx²−y² 被推最高。',
+  },
+  {
+    name: '四面體',
+    cn: '配位數 4',
+    levels: [
+      { y: 55, n: 3, sym: 't', sub: '2', energy: '+0.4Δt', orbitals: ['xy', 'xz', 'yz'] },
+      { y: 82, n: 2, sym: 'e', energy: '−0.6Δt', orbitals: ['z²', 'x²−y²'] },
+    ],
+    gap: [55, 82],
+    gapLabel: 'Δt',
+    bary: true,
+    why: '配位基指向立方體相間的四個頂角，沒有 d 軌域正對它們，分裂小到永遠是高自旋。',
+  },
+  {
+    name: '平面四方',
+    cn: '配位數 4',
+    note: '僅示意順序',
+    levels: [
+      { y: 14, n: 1, orbitals: ['x²−y²'] },
+      { y: 48, n: 1, orbitals: ['xy'] },
+      { y: 72, n: 1, orbitals: ['z²'] },
+      { y: 96, n: 2, orbitals: ['xz', 'yz'] },
+    ],
+    why: '四個配位基全在 xy 平面上、正對 dx²−y²，把它拉開得比其餘四個軌域高很多。',
+  },
+  {
+    name: '直線',
+    cn: '配位數 2',
+    note: '僅示意順序',
+    levels: [
+      { y: 22, n: 1, orbitals: ['z²'] },
+      { y: 60, n: 2, orbitals: ['xz', 'yz'] },
+      { y: 96, n: 2, orbitals: ['xy', 'x²−y²'] },
+    ],
+    why: '兩個配位基沿 z 軸靠近，只有帶 z 的軌域被推高，xy 平面內的兩個最低且能量相同。',
+  },
+]
+
+// 橫槓：寬 16、間隔 5，整組以 x=52 為中心。
+const barXs = (n: number) => {
+  const total = n * 16 + (n - 1) * 5
+  const start = 52 - total / 2
+  return Array.from({ length: n }, (_, i) => start + i * 21)
+}
+---
+
+<figure
+  class="not-prose my-6 overflow-hidden rounded-box border border-base-300 bg-base-100 print:break-inside-avoid"
+>
+  <figcaption
+    class="border-b border-base-300 bg-base-200/50 px-4 py-2.5 text-sm font-bold tracking-wide text-base-content/75"
+  >
+    配位基靠得越正，那個 d 軌域被推得越高
+  </figcaption>
+
+  <div class="grid gap-x-4 gap-y-5 p-4 sm:grid-cols-2 lg:grid-cols-4">
+    {
+      PANELS.map((p) => (
+        <div>
+          <div class="mb-1 flex flex-wrap items-baseline gap-x-2">
+            <span class="font-display text-sm font-bold text-primary">{p.name}</span>
+            <span class="text-xs text-base-content/55">{p.cn}</span>
+            {p.note && <span class="text-[0.65rem] text-base-content/45">{p.note}</span>}
+          </div>
+
+          {/* viewBox 左邊多留 6 單位：Δo 標籤靠 text-anchor="end" 收在 x=10，
+              比 Δt 寬，原本 "0 0 150 116" 會把 Δ 的左半邊裁掉。 */}
+          <svg
+            viewBox="-6 0 156 116"
+            class="block w-full"
+            role="img"
+            aria-label={`${p.name}錯合物的 d 軌域能階分裂圖`}
+          >
+            {p.bary && (
+              <line
+                x1="18"
+                y1={BARY}
+                x2="86"
+                y2={BARY}
+                class="stroke-base-content/30"
+                stroke-width="1"
+                stroke-dasharray="3 3"
+              />
+            )}
+
+            {p.gap && (
+              <g class="stroke-accent fill-accent" stroke-width="1.4">
+                <line x1="14" y1={p.gap[0]} x2="14" y2={p.gap[1]} />
+                <path d={`M11,${p.gap[0] + 4} L14,${p.gap[0]} L17,${p.gap[0] + 4} Z`} />
+                <path d={`M11,${p.gap[1] - 4} L14,${p.gap[1]} L17,${p.gap[1] - 4} Z`} />
+              </g>
+            )}
+            {p.gap && p.gapLabel && (
+              <text
+                x="10"
+                y={(p.gap[0] + p.gap[1]) / 2 + 3}
+                text-anchor="end"
+                font-size="9"
+                class="fill-accent"
+                style="font-weight:700"
+              >
+                {p.gapLabel}
+              </text>
+            )}
+
+            {p.levels.map((lv) => (
+              <>
+                {barXs(lv.n).map((x) => (
+                  <line
+                    x1={x}
+                    y1={lv.y}
+                    x2={x + 16}
+                    y2={lv.y}
+                    class="stroke-primary"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                  />
+                ))}
+                {lv.sym ? (
+                  <>
+                    <text x="88" y={lv.y - 1} font-size="8.5" class="fill-base-content/85" style="font-weight:700">
+                      {lv.sym}
+                      {lv.sub && (
+                        <tspan baseline-shift="sub" font-size="6">
+                          {lv.sub}
+                        </tspan>
+                      )}
+                      <tspan>　{lv.energy}</tspan>
+                    </text>
+                    <text x="88" y={lv.y + 10} font-size="8" class="fill-base-content/60">
+                      {lv.orbitals.map((o, i) => (
+                        <>
+                          {i > 0 && <tspan>、</tspan>}
+                          <tspan>d</tspan>
+                          <tspan baseline-shift="sub" font-size="6">
+                            {o}
+                          </tspan>
+                        </>
+                      ))}
+                    </text>
+                  </>
+                ) : (
+                  <text x="88" y={lv.y + 3} font-size="8.5" class="fill-base-content/75">
+                    {lv.orbitals.map((o, i) => (
+                      <>
+                        {i > 0 && <tspan>、</tspan>}
+                        <tspan>d</tspan>
+                        <tspan baseline-shift="sub" font-size="6.5">
+                          {o}
+                        </tspan>
+                      </>
+                    ))}
+                  </text>
+                )}
+              </>
+            ))}
+
+            {p.baryLabel && (
+              <text x="88" y={BARY + 3} font-size="7.5" class="fill-base-content/45">
+                重心
+              </text>
+            )}
+          </svg>
+
+          <p class="mt-1 text-xs leading-relaxed text-base-content/70">{p.why}</p>
+        </div>
+      ))
+    }
+  </div>
+</figure>
