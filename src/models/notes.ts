@@ -208,6 +208,15 @@ export const NOTES: NoteEntry[] = [
     desc: '加成／縮合／開環聚合的判別、常見聚合物與橡膠、單醣環化與醣苷鍵、肽鍵、核苷酸與磷酸二酯鍵、三種生物大分子都是縮合聚合',
   },
   {
+    id: 'chem-org-acid-base',
+    href: '/chem-org-acid-base',
+    title: '有機酸鹼',
+    subject: '化學',
+    tags: ['有機基礎'],
+    group: '有機化學基礎',
+    desc: 'pKa 這把尺、影響酸性的 ARIO 四因素與衝突順序、胺與雜環的鹼性、胺基酸的兩性離子與等電點、判斷反應方向、酸鹼萃取分離',
+  },
+  {
     id: 'bio-cell-1',
     href: '/bio-cell-1',
     title: '概論、顯微鏡與原核／真核',
