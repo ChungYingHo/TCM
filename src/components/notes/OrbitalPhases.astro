@@ -1,0 +1,169 @@
+---
+// 兩條 2p 原子軌域組出的四個分子軌域長什麼樣：波瓣位置、相位、節面。
+// 純靜態 SVG、無 hydration，列印也完整。
+//
+// 為什麼要畫：考題會直接給四張軌域圖問哪張是 HOMO／LUMO，只給能階橫線答不出來。
+// 判讀口訣就兩條，圖裡都標出來了：
+//   核與核之間沒有節面 ＝ 成鍵。核與核之間卡一個節面 ＝ 反鍵（符號加星號）。
+//   σ 的電子密度壓在鍵軸上，π 的電子密度在鍵軸的上下兩側、鍵軸本身就是節面。
+//
+// 相位＝波函數的正負號，用兩個顏色表示。相位本身沒有「哪個比較好」，
+// 重要的只有「相鄰兩瓣同號還是異號」。
+type Lobe = {
+  cx: number
+  cy: number
+  rx: number
+  ry: number
+  phase: 1 | -1
+}
+
+type Panel = {
+  label: string
+  kind: '成鍵' | '反鍵'
+  lobes: Lobe[]
+  /** 垂直節面的 x 座標（核與核之間那一個） */
+  vNode?: number
+  /** 水平節面（含鍵軸的那個平面） */
+  hNode?: boolean
+  caption: string
+}
+
+// viewBox 0 0 200 104，兩個核固定在 x=70 與 x=130、y=52
+const NUCLEI = [70, 130]
+const AXIS_Y = 52
+
+const PANELS: Panel[] = [
+  {
+    label: 'σ2p',
+    kind: '成鍵',
+    lobes: [
+      { cx: 44, cy: AXIS_Y, rx: 17, ry: 19, phase: -1 },
+      { cx: 100, cy: AXIS_Y, rx: 43, ry: 23, phase: 1 },
+      { cx: 156, cy: AXIS_Y, rx: 17, ry: 19, phase: -1 },
+    ],
+    caption: '兩條 p 沿鍵軸對頭、同號相接，核間併成一大瓣，沒有節面。',
+  },
+  {
+    label: 'σ*2p',
+    kind: '反鍵',
+    lobes: [
+      { cx: 44, cy: AXIS_Y, rx: 17, ry: 19, phase: -1 },
+      { cx: 86, cy: AXIS_Y, rx: 17, ry: 21, phase: 1 },
+      { cx: 114, cy: AXIS_Y, rx: 17, ry: 21, phase: -1 },
+      { cx: 156, cy: AXIS_Y, rx: 17, ry: 19, phase: 1 },
+    ],
+    vNode: 100,
+    caption: '對頭但異號，核間出現一個垂直鍵軸的節面，把兩核推開。',
+  },
+  {
+    label: 'π2p',
+    kind: '成鍵',
+    lobes: [
+      { cx: 100, cy: AXIS_Y - 24, rx: 46, ry: 17, phase: 1 },
+      { cx: 100, cy: AXIS_Y + 24, rx: 46, ry: 17, phase: -1 },
+    ],
+    hNode: true,
+    caption: '兩條 p 側向平行、同號相接。節面是含鍵軸的那個平面，核間沒有節面。',
+  },
+  {
+    label: 'π*2p',
+    kind: '反鍵',
+    lobes: [
+      { cx: 72, cy: AXIS_Y - 24, rx: 24, ry: 17, phase: 1 },
+      { cx: 128, cy: AXIS_Y - 24, rx: 24, ry: 17, phase: -1 },
+      { cx: 72, cy: AXIS_Y + 24, rx: 24, ry: 17, phase: -1 },
+      { cx: 128, cy: AXIS_Y + 24, rx: 24, ry: 17, phase: 1 },
+    ],
+    vNode: 100,
+    hNode: true,
+    caption: '側向但異號，除了含鍵軸的節面，核間再多一個垂直節面，共兩個。',
+  },
+]
+
+const fill = (p: 1 | -1) => (p === 1 ? 'fill-primary/35' : 'fill-secondary/35')
+const stroke = (p: 1 | -1) => (p === 1 ? 'stroke-primary/70' : 'stroke-secondary/70')
+---
+
+<div
+  class="not-prose my-6 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5 print:break-inside-avoid"
+>
+  <div class="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1">
+    <span class="flex items-center gap-2">
+      <span aria-hidden="true">🫧</span>
+      <span class="font-display font-bold">四個分子軌域的波瓣與節面</span>
+    </span>
+    <span class="flex items-center gap-2 text-[0.7rem] text-base-content/60">
+      <span class="inline-block h-3 w-3 rounded-full bg-primary/35 ring-1 ring-primary/70"></span>相位＋
+      <span class="inline-block h-3 w-3 rounded-full bg-secondary/35 ring-1 ring-secondary/70"></span>相位−
+    </span>
+  </div>
+
+  <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+    {
+      PANELS.map((p) => (
+        <figure class="rounded-lg bg-base-200/45 p-2.5">
+          <figcaption class="mb-1 flex items-center gap-2">
+            <span
+              class={`text-sm font-bold ${p.kind === '成鍵' ? 'text-primary' : 'text-error'}`}
+            >
+              {p.label}
+            </span>
+            <span
+              class={`rounded-full px-1.5 py-0.5 text-[0.65rem] font-bold ${p.kind === '成鍵' ? 'bg-primary/12 text-primary' : 'bg-error/12 text-error'}`}
+            >
+              {p.kind}
+            </span>
+          </figcaption>
+
+          <svg viewBox="0 0 200 104" class="w-full" role="img" aria-label={`${p.label} 的波瓣示意`}>
+            {p.lobes.map((l) => (
+              <ellipse
+                cx={l.cx}
+                cy={l.cy}
+                rx={l.rx}
+                ry={l.ry}
+                class={`${fill(l.phase)} ${stroke(l.phase)}`}
+                stroke-width="1.5"
+              />
+            ))}
+
+            {p.hNode && (
+              <line
+                x1="14"
+                y1={AXIS_Y}
+                x2="186"
+                y2={AXIS_Y}
+                class="stroke-base-content/45"
+                stroke-width="1.2"
+                stroke-dasharray="4 3"
+              />
+            )}
+            {p.vNode && (
+              <line
+                x1={p.vNode}
+                y1="8"
+                x2={p.vNode}
+                y2="96"
+                class="stroke-base-content/45"
+                stroke-width="1.2"
+                stroke-dasharray="4 3"
+              />
+            )}
+
+            {NUCLEI.map((x) => (
+              <circle cx={x} cy={AXIS_Y} r="3.2" class="fill-base-content/75" />
+            ))}
+          </svg>
+
+          <p class="mt-1 text-[0.7rem] leading-relaxed text-base-content/70">{p.caption}</p>
+        </figure>
+      ))
+    }
+  </div>
+
+  <p class="mt-3 text-xs leading-relaxed text-base-content/75">
+    黑點是原子核，虛線是<b>節面</b>。判圖只要兩步：先看<b>核與核之間有沒有節面</b>，有就是反鍵、沒有就是成鍵。再看電子密度<b
+      >壓在鍵軸上（σ）還是分在鍵軸上下（π）</b
+    >。同一條軌域裡，跨過一個節面相位就變號。
+  </p>
+</div>

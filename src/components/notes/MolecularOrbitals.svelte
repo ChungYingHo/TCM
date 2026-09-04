@@ -27,18 +27,32 @@
 
   type Mol = { id: string; name: string; valence: number; note?: string }
   const MOLS: Mol[] = [
+    { id: 'B2', name: 'B₂', valence: 6 },
+    { id: 'C2', name: 'C₂', valence: 8 },
     { id: 'N2', name: 'N₂', valence: 10 },
-    { id: 'O2', name: 'O₂', valence: 12 },
+    { id: 'N2+', name: 'N₂⁺', valence: 9 },
     { id: 'O2+', name: 'O₂⁺', valence: 11 },
+    { id: 'O2', name: 'O₂', valence: 12 },
     { id: 'O2-', name: 'O₂⁻', valence: 13 },
-    { id: 'NO', name: 'NO', valence: 11, note: '異核（N＋O），用 O₂ 型順序近似' },
+    { id: 'O2_2minus', name: 'O₂²⁻', valence: 14 },
     { id: 'F2', name: 'F₂', valence: 14 },
+    { id: 'CO', name: 'CO', valence: 10, note: '異核（C 4 個＋O 6 個價電子）' },
+    {
+      id: 'NO',
+      name: 'NO',
+      valence: 11,
+      note: '異核（N 5 個＋O 6 個價電子）。這裡用 O₂ 型順序近似，改用 N₂ 型順序畫也一樣得到鍵級 2.5、1 個未成對電子',
+    },
+    { id: 'NO+', name: 'NO⁺', valence: 10, note: '異核，比 NO 少一個電子' },
   ]
 
   let sel = $state('O2')
   const mol = $derived(MOLS.find((m) => m.id === sel)!)
   // ≤10 用低順序、≥11 用高順序
   const ladder = $derived(mol.valence <= 10 ? LADDER_LOW : LADDER_HIGH)
+  const orderLabel = $derived(
+    mol.valence <= 10 ? 'π2p 在 σ2p 之下（價電子 ≤ 10）' : 'σ2p 在 π2p 之下（價電子 ≥ 11）',
+  )
 
   // 依洪德規則把 e 個電子填入 g 條軌域，回傳每條軌域的箭頭陣列（['↑'] 或 ['↑','↓']）
   function fillOrbs(e: number, g: number): string[][] {
@@ -91,6 +105,11 @@
     {/each}
   </div>
 
+  <div class="mb-3 text-xs">
+    <span class="font-semibold text-base-content/55">價電子 {mol.valence} 個</span>
+    <span class="text-base-content/45">・能階順序取 {orderLabel}</span>
+  </div>
+
   <!-- MO 能階圖：高能量在上 -->
   <div class="rounded-lg bg-gradient-to-b from-error/[0.06] to-primary/[0.06] p-3 sm:p-4">
     <div class="mb-2 flex items-center justify-between text-[0.65rem] text-base-content/45">
@@ -135,7 +154,7 @@
     <div class="rounded-box bg-base-200/60 p-3 text-center">
       <div class="text-[0.7rem] text-base-content/55">鍵級 (bond order)</div>
       <div class="text-lg font-bold tabular-nums">{bondOrder}</div>
-      <div class="text-[0.65rem] text-base-content/45">(成鍵−反鍵)/2</div>
+      <div class="text-[0.65rem] text-base-content/45">成鍵減反鍵，再取一半</div>
     </div>
     <div class="rounded-box bg-base-200/60 p-3 text-center">
       <div class="text-[0.7rem] text-base-content/55">未配對電子</div>
@@ -156,7 +175,7 @@
   {/if}
   <p class="mt-2 text-xs leading-relaxed text-base-content/70">
     看圖就懂：把價電子由<b>低能量往上</b>填，<b class="text-primary">成鍵軌域（σ、π）</b>把分子拉緊、
-    <b class="text-error">反鍵軌域（σ*、π*）</b>把分子拆鬆。<b>鍵級＝(成鍵−反鍵)/2</b>；π* 那層若用洪德規則各占一個
-    →有未配對電子→<b>順磁</b>（O₂ 正是如此）。從反鍵層<b>抽走</b>電子鍵級升（O₂⁺＝2.5）、<b>加入</b>反鍵電子鍵級降（O₂⁻＝1.5）。
+    <b class="text-error">反鍵軌域（σ*、π*）</b>把分子拆鬆。<b>鍵級＝成鍵電子數減反鍵電子數，再取一半</b>。π* 那層若依罕德定則各佔一條，
+    就有未成對電子，分子<b>順磁</b>（O₂ 正是如此）。從反鍵層<b>抽走</b>電子鍵級升（O₂⁺ 是 2.5），<b>加入</b>反鍵電子鍵級降（O₂⁻ 是 1.5）。
   </p>
 </div>

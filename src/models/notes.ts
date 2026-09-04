@@ -163,6 +163,15 @@ export const NOTES: NoteEntry[] = [
     desc: '離子化合物、多原子離子、Lewis 結構、形式電荷、共振、混成、VSEPR、分子偶極與分子間作用力',
   },
   {
+    id: 'chem-mo-theory',
+    href: '/chem-mo-theory',
+    title: '分子軌域理論與鍵的性質',
+    subject: '化學',
+    tags: ['基礎-化學鍵'],
+    group: '化學鍵與分子結構',
+    desc: '成鍵與反鍵軌域、鍵級、第二週期兩套能階順序、順磁反磁與離子系列、異核與等電子、共軛 π 能階、鍵能鍵長鍵角',
+  },
+  {
     id: 'chem-org-structure',
     href: '/chem-org-structure',
     title: '有機分子的結構與反應中間物',
