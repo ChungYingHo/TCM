@@ -226,6 +226,15 @@ export const NOTES: NoteEntry[] = [
     desc: 'pKa 這把尺、影響酸性的 ARIO 四因素與衝突順序、胺與雜環的鹼性、胺基酸的兩性離子與等電點、判斷反應方向、酸鹼萃取分離',
   },
   {
+    id: 'chem-org-nomenclature',
+    href: '/chem-org-nomenclature',
+    title: '有機命名與官能基',
+    subject: '化學',
+    tags: ['有機命名與官能基'],
+    group: '有機化學基礎',
+    desc: '官能基總表與優先順序、IUPAC 主鏈與編號、取代基字母序與俗名、環烷與烯炔、苯環與雜環名稱、順反與 E/Z、構造異構物數目、官能基化學鑑別',
+  },
+  {
     id: 'bio-mock-1',
     href: '/bio-mock-1',
     title: '第一次模擬考範圍速攻（生物）',
@@ -289,6 +298,15 @@ export const NOTES: NoteEntry[] = [
     desc: '訊號傳遞三階段、四類受體（GPCR／RTK／離子通道／細胞內）、Gα 亞型分流、cAMP 與 IP₃／DAG／Ca²⁺、磷酸化級聯與訊號終止、細胞凋亡',
   },
   {
+    id: 'bio-energy-1',
+    href: '/bio-energy-1',
+    title: '酵素與代謝',
+    subject: '生物',
+    tags: ['酵素'],
+    group: '生物能量學',
+    desc: '異化與同化代謝、熱力學兩定律、ΔG 與自發性、ATP 水解與能量偶合、活化能與活性部位、溫度 pH 受質濃度、Km 與 Vmax、四種抑制、異位調控與回饋抑制、酶原',
+  },
+  {
     id: 'bio-tissue-1',
     href: '/bio-tissue-1',
     title: '組織與體內恆定',
@@ -296,6 +314,15 @@ export const NOTES: NoteEntry[] = [
     tags: ['組織與恆定'],
     group: '動物的形態與功能',
     desc: '四大組織（上皮／結締／肌肉／神經）、上皮的極性與分類、細胞骨架撐起的上皮特化、體內恆定的調控迴路與負回饋、正回饋',
+  },
+  {
+    id: 'bio-circ-1',
+    href: '/bio-circ-1',
+    title: '循環與呼吸',
+    subject: '生物',
+    tags: ['循環與呼吸'],
+    group: '比較動物生理學',
+    desc: '開放式與閉鎖式、單雙循環、鰓的逆流交換與鳥類單向氣流、心臟四腔與瓣膜、心動週期與傳導系統與心電圖、心輸出量與血壓公式、微血管交換與淋巴、血液與凝血、負壓呼吸與肺容積、氧解離曲線與波耳效應、二氧化碳運輸、延腦的調控',
   },
   {
     id: 'bio-sense-1',

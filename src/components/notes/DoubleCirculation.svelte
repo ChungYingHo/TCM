@@ -4,9 +4,9 @@
   const STOPS: Stop[] = [
     { name: '右心房', oxy: 'low', note: '接收全身回來的缺氧血。' },
     { name: '右心室', oxy: 'low', note: '把缺氧血打出去。' },
-    { name: '肺動脈', oxy: 'low', note: '⚠ 動脈卻流「缺氧血」——往肺去交換氣體。' },
+    { name: '肺動脈', oxy: 'low', note: '動脈卻流缺氧血，因為它是離心往肺去交換氣體。' },
     { name: '肺（肺泡）', oxy: 'exchange', note: '氣體交換：放出 CO₂、吸收 O₂。' },
-    { name: '肺靜脈', oxy: 'high', note: '⚠ 靜脈卻流「充氧血」——把充氧血帶回心臟。' },
+    { name: '肺靜脈', oxy: 'high', note: '靜脈卻流充氧血，因為它是回心把血帶回左心房。' },
     { name: '左心房', oxy: 'high', note: '接收肺來的充氧血。' },
     { name: '左心室', oxy: 'high', note: '壁最厚，把充氧血打向全身。' },
     { name: '主動脈', oxy: 'high', note: '充氧血出發，走體循環到全身。' },
@@ -40,6 +40,6 @@
     <p class="text-sm text-base-content/75">{s.note}</p>
   </div>
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    動脈／靜脈是依「離心／回心」方向定義，<b>與含氧量無關</b>。所以<b>肺動脈流缺氧血、肺靜脈流充氧血</b>（全身循環裡唯一的例外），這是必考陷阱。
+    動脈與靜脈是依離心或回心的方向定義，<b>與含氧量無關</b>。所以<b>肺動脈流缺氧血、肺靜脈流充氧血</b>，與含氧量的直覺相反。胎兒的臍動脈與臍靜脈也是同樣的情形。
   </p>
 </div>
