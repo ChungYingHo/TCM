@@ -1,0 +1,176 @@
+---
+// 正丁烷沿 C2—C3 鍵看過去的三個 Newman 投影：重疊式、鄰位交叉、反式。
+// 前面的碳畫成一個交點（三根鍵從中心射出），後面的碳畫成一個圓（三根鍵從圓周射出）。
+// 能量取 McMurry 系教科書的相互作用值：H/H 重疊 4.0、H/CH₃ 重疊 6.0、
+// CH₃/CH₃ 重疊 11.0、CH₃/CH₃ 鄰位交叉 3.8 kJ/mol。
+// 純靜態、無 hydration。
+
+const CX = 100
+const CY = 92
+const R_RING = 30
+const R_BOND = 52
+const R_LABEL = 66
+
+const pt = (deg: number, r: number): [number, number] => {
+  const rad = (deg * Math.PI) / 180
+  return [CX + r * Math.cos(rad), CY - r * Math.sin(rad)]
+}
+
+const label = (deg: number) => {
+  const [x, y] = pt(deg, R_LABEL)
+  if (x > CX + 10) return { x: x + 4, y: y + 5, anchor: 'start' }
+  if (x < CX - 10) return { x: x - 4, y: y + 5, anchor: 'end' }
+  return { x, y: y + 5, anchor: 'middle' }
+}
+
+interface Arm {
+  deg: number
+  text: string
+  big: boolean
+}
+
+const FRONT_STAGGERED: Arm[] = [
+  { deg: 90, text: 'CH₃', big: true },
+  { deg: 210, text: 'H', big: false },
+  { deg: 330, text: 'H', big: false },
+]
+
+const CONFORMERS = [
+  {
+    key: 'eclipsed',
+    title: '重疊式',
+    angle: '二面角 0°',
+    energy: '19.0 kJ/mol',
+    badge: 'badge-error',
+    front: FRONT_STAGGERED,
+    // 真正的重疊式後方鍵會被前方完全擋住，這裡刻意轉開 18° 才畫得出來。
+    back: [
+      { deg: 72, text: 'CH₃', big: true },
+      { deg: 192, text: 'H', big: false },
+      { deg: 312, text: 'H', big: false },
+    ] as Arm[],
+    note: '兩個甲基正對，另有兩組 H 與 H 正對。前後鍵全部撞在一起，能量最高。',
+  },
+  {
+    key: 'gauche',
+    title: '鄰位交叉式 gauche',
+    angle: '二面角 60°',
+    energy: '3.8 kJ/mol',
+    badge: 'badge-warning',
+    front: FRONT_STAGGERED,
+    back: [
+      { deg: 30, text: 'CH₃', big: true },
+      { deg: 150, text: 'H', big: false },
+      { deg: 270, text: 'H', big: false },
+    ] as Arm[],
+    note: '前後鍵已經錯開，但兩個甲基只隔 60°，還是互相推擠。',
+  },
+  {
+    key: 'anti',
+    title: '反式 anti',
+    angle: '二面角 180°',
+    energy: '0（基準）',
+    badge: 'badge-success',
+    front: FRONT_STAGGERED,
+    back: [
+      { deg: 270, text: 'CH₃', big: true },
+      { deg: 30, text: 'H', big: false },
+      { deg: 150, text: 'H', big: false },
+    ] as Arm[],
+    note: '兩個甲基隔得最遠，能量最低，正丁烷主要以這個構形存在。',
+  },
+]
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-1 font-display font-bold text-base-content">
+    正丁烷沿 C2—C3 鍵看過去的三個構形
+  </figcaption>
+  <p class="mb-4 text-xs text-base-content/60">
+    中心的交點是前面那個碳，圓圈是後面那個碳。能量以反式為 0 起算。
+  </p>
+
+  <div class="grid gap-3 sm:grid-cols-3">
+    {
+      CONFORMERS.map((c) => (
+        <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+          <p class="mb-0.5 text-sm font-bold text-base-content">{c.title}</p>
+          <p class="mb-2 text-xs text-base-content/55">{c.angle}</p>
+          <svg
+            viewBox="0 0 200 190"
+            class="mx-auto block w-full max-w-[13rem]"
+            role="img"
+            aria-label={`正丁烷的 ${c.title} Newman 投影`}
+          >
+            <circle
+              cx={CX}
+              cy={CY}
+              r={R_RING}
+              class="fill-base-100 stroke-base-content"
+              stroke-width="2.5"
+            />
+            {c.back.map((a) => (
+              <line
+                x1={pt(a.deg, R_RING)[0]}
+                y1={pt(a.deg, R_RING)[1]}
+                x2={pt(a.deg, R_BOND)[0]}
+                y2={pt(a.deg, R_BOND)[1]}
+                class={a.big ? 'stroke-secondary' : 'stroke-base-content/60'}
+                stroke-width={a.big ? 3 : 2.2}
+              />
+            ))}
+            {c.front.map((a) => (
+              <line
+                x1={CX}
+                y1={CY}
+                x2={pt(a.deg, R_BOND)[0]}
+                y2={pt(a.deg, R_BOND)[1]}
+                class={a.big ? 'stroke-primary' : 'stroke-base-content'}
+                stroke-width={a.big ? 3.4 : 2.6}
+              />
+            ))}
+            <circle cx={CX} cy={CY} r="4.5" class="fill-base-content" />
+            {c.front.map((a) => (
+              <text
+                x={label(a.deg).x}
+                y={label(a.deg).y}
+                text-anchor={label(a.deg).anchor}
+                class={
+                  a.big
+                    ? 'fill-primary text-[13px] font-bold'
+                    : 'fill-base-content text-[13px] font-semibold'
+                }
+              >
+                {a.text}
+              </text>
+            ))}
+            {c.back.map((a) => (
+              <text
+                x={label(a.deg).x}
+                y={label(a.deg).y}
+                text-anchor={label(a.deg).anchor}
+                class={
+                  a.big
+                    ? 'fill-secondary text-[13px] font-bold'
+                    : 'fill-base-content/60 text-[13px] font-semibold'
+                }
+              >
+                {a.text}
+              </text>
+            ))}
+          </svg>
+          <div class="mt-2 flex items-center gap-2">
+            <span class={`badge badge-sm border-none font-bold ${c.badge}`}>{c.energy}</span>
+          </div>
+          <p class="mt-2 text-xs leading-relaxed text-base-content/70">{c.note}</p>
+        </div>
+      ))
+    }
+  </div>
+
+  <p class="mt-3 text-xs leading-relaxed text-base-content/65">
+    藍色是前面那個碳上的甲基，紫色是後面那個碳上的甲基。重疊式那一格的後方三根鍵，實際上會被前方的鍵完全擋住，圖上刻意轉開一個小角度才畫得出來。
+  </p>
+</figure>

@@ -14,12 +14,12 @@
   const step = $derived(Math.max(safeTh / 4, 0.1))
   $effect(() => { if (t > maxT) t = maxT }) // t½ 調小時把 t 夾回範圍
 
-  const k = $derived(safeT / safeTh) // 經過幾個半衰期
-  const frac = $derived(Math.pow(0.5, k)) // 剩餘比例
+  const n = $derived(safeT / safeTh) // 經過幾個半衰期
+  const frac = $derived(Math.pow(0.5, n)) // 剩餘比例
   const remain = $derived(safeN0 * frac)
   const litCount = $derived(Math.round(64 * frac)) // 64 格代表整份樣本
   const cells = Array.from({ length: 64 }, (_, i) => i)
-  const kRound = $derived(Number.isInteger(k) ? `${k}` : k.toFixed(2))
+  const nRound = $derived(Number.isInteger(n) ? `${n}` : n.toFixed(2))
 </script>
 
 <div class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 sm:p-5">
@@ -40,15 +40,15 @@
     <div class="flex-1">
       <div class="grid grid-cols-2 gap-2 text-sm">
         <div class="rounded-lg bg-base-200/70 p-2.5 text-center">
-          <div class="text-xs text-base-content/55">經過幾個半衰期 k</div>
-          <div class="font-bold tabular-nums">{kRound}</div>
+          <div class="text-xs text-base-content/55">經過幾個半衰期 n</div>
+          <div class="font-bold tabular-nums">{nRound}</div>
         </div>
         <div class="rounded-lg bg-base-200/70 p-2.5 text-center">
-          <div class="text-xs text-base-content/55">剩餘比例 (½)<sup>k</sup></div>
+          <div class="text-xs text-base-content/55">剩餘比例 (½)<sup>n</sup></div>
           <div class="font-bold tabular-nums">{(frac * 100).toFixed(1)}%</div>
         </div>
         <div class="col-span-2 rounded-lg bg-primary/10 p-2.5 text-center">
-          <div class="text-xs text-base-content/55">剩餘量 N = N₀ × (½)<sup>k</sup></div>
+          <div class="text-xs text-base-content/55">剩餘量 N = N₀ × (½)<sup>n</sup></div>
           <div class="text-lg font-bold tabular-nums text-primary">{remain.toFixed(2)} g</div>
         </div>
       </div>
@@ -77,7 +77,7 @@
   </div>
 
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    解題就兩步：① 先算 <b>經過幾個半衰期</b> k = 經過時間 ÷ 半衰期；② 套 <b>N = N₀ × (½)<sup>k</sup></b>。
-    例：80 g、半衰期 10 天、過 30 天 → k=3 → 80 → 40 → 20 → <b class="text-primary">10 g</b>。
+    解題就兩步：① 先算 <b>經過幾個半衰期</b>（n＝經過時間除以半衰期）。② 套 <b>N = N₀ × (½)<sup>n</sup></b>。
+    例：80 g、半衰期 10 天、過 30 天 → n=3 → 80 → 40 → 20 → <b class="text-primary">10 g</b>。
   </p>
 </div>

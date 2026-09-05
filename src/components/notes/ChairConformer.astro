@@ -1,0 +1,208 @@
+---
+// 環己烷椅式：上圖認鍵（直立鍵一律垂直、繞環上下交替，平伏鍵斜斜向外，
+// 與隔一根的環鍵平行），下圖看翻轉（同一個取代基由直立換到平伏）。
+// 座標用標準椅式畫法：三對環鍵兩兩平行，六個頂點依序 C1 到 C6。
+// 純靜態、無 hydration。
+
+type Pt = [number, number]
+
+const RING: Pt[] = [
+  [60, 115], // C1
+  [120, 145], // C2
+  [190, 130], // C3
+  [260, 95], // C4
+  [200, 65], // C5
+  [130, 80], // C6
+]
+
+// 直立鍵：繞環上下交替。C1、C3、C5 朝上，C2、C4、C6 朝下。
+const AX_UP = [true, false, true, false, true, false]
+const AX_LEN = 34
+
+// 取代基掛在 C4（陣列第 4 個，索引 3）：它在畫面最右側，兩條鍵都落在環外，看得最清楚。
+const SUB = 3
+// C4 的平伏鍵與 C5—C6 環鍵平行，方向朝環外（向右上）。
+const EQ_D: Pt = [33, -7]
+
+const flip = (p: Pt): Pt => [p[0], 210 - p[1]]
+const bonds = (ring: Pt[]) => ring.map((p, i) => ({ a: p, b: ring[(i + 1) % 6] }))
+
+const axial = (ring: Pt[], i: number, up: boolean): { x: number, y1: number, y2: number } => ({
+  x: ring[i][0],
+  y1: ring[i][1],
+  y2: ring[i][1] + (up ? -AX_LEN : AX_LEN),
+})
+
+const RING_FLIP = RING.map(flip)
+// 翻轉後每個碳的直立鍵方向整個顛倒，C4 由朝下變成朝上。
+const AX_UP_FLIP = AX_UP.map((u) => !u)
+
+const CHAIRS = [
+  {
+    key: 'axial',
+    ring: RING,
+    axUp: AX_UP,
+    // 甲基接在直立鍵末端。
+    subEnd: [RING[SUB][0], RING[SUB][1] + AX_LEN] as Pt,
+    labelDx: 0,
+    labelDy: 19,
+    anchor: 'middle',
+    title: '甲基在直立鍵',
+    note: '和同一面的另外兩個直立鍵擠在一起，能量較高',
+    // 同一面的 1,3 直立鍵：C4 的 1,3 位是 C2 與 C6，三者的直立鍵都朝下。
+    crowd: [1, 5],
+  },
+  {
+    key: 'equatorial',
+    ring: RING_FLIP,
+    axUp: AX_UP_FLIP,
+    // 翻轉後甲基落在平伏鍵上，方向也跟著上下鏡射。
+    subEnd: [RING_FLIP[SUB][0] + EQ_D[0], RING_FLIP[SUB][1] - EQ_D[1]] as Pt,
+    labelDx: 7,
+    labelDy: 5,
+    anchor: 'start',
+    title: '甲基在平伏鍵',
+    note: '斜斜指向環外，沒有東西擋，能量較低',
+    crowd: [] as number[],
+  },
+]
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-4 font-display font-bold text-base-content">
+    環己烷椅式：直立鍵、平伏鍵與翻轉
+  </figcaption>
+
+  <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+    <p class="mb-2 text-sm font-bold text-primary">六個碳各有一條直立鍵與一條平伏鍵</p>
+    <svg
+      viewBox="0 0 400 215"
+      class="mx-auto block w-full max-w-[26rem]"
+      role="img"
+      aria-label="環己烷椅式，六條直立鍵垂直且上下交替，C4 的平伏鍵斜斜指向環外"
+    >
+      {
+        bonds(RING).map((b) => (
+          <line
+            x1={b.a[0]}
+            y1={b.a[1]}
+            x2={b.b[0]}
+            y2={b.b[1]}
+            class="stroke-base-content"
+            stroke-width="2.8"
+          />
+        ))
+      }
+      {
+        RING.map((_, i) =>
+          i === SUB ? null : (
+            <line
+              x1={axial(RING, i, AX_UP[i]).x}
+              y1={axial(RING, i, AX_UP[i]).y1}
+              x2={axial(RING, i, AX_UP[i]).x}
+              y2={axial(RING, i, AX_UP[i]).y2}
+              class="stroke-base-content/45"
+              stroke-width="2"
+            />
+          ),
+        )
+      }
+      <line
+        x1={RING[SUB][0]}
+        y1={RING[SUB][1]}
+        x2={RING[SUB][0]}
+        y2={RING[SUB][1] + AX_LEN}
+        class="stroke-accent"
+        stroke-width="3"></line>
+      <line
+        x1={RING[SUB][0]}
+        y1={RING[SUB][1]}
+        x2={RING[SUB][0] + EQ_D[0]}
+        y2={RING[SUB][1] + EQ_D[1]}
+        class="stroke-primary"
+        stroke-width="3"></line>
+
+      <text x="268" y="138" class="fill-accent text-[11px] font-bold">直立鍵 axial</text>
+      <text x="299" y="82" class="fill-primary text-[11px] font-bold">平伏鍵 equatorial</text>
+    </svg>
+    <p class="mt-2 text-xs leading-relaxed text-base-content/70">
+      直立鍵一律垂直，繞著環一個朝上、一個朝下交替。平伏鍵斜斜指向環外，畫的時候讓它與隔一根的那條環鍵平行。同一個碳上，直立鍵朝上時平伏鍵就略朝下。
+    </p>
+  </div>
+
+  <div class="mt-4 grid items-center gap-3 sm:grid-cols-[1fr_auto_1fr]">
+    {
+      CHAIRS.map((c, idx) => (
+        <>
+        {idx === 1 && (
+          <div class="text-center text-2xl font-bold text-base-content/45">⇌</div>
+        )}
+        <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+          <p class="mb-2 text-sm font-bold text-base-content">{c.title}</p>
+          <svg
+            viewBox="0 0 350 215"
+            class="mx-auto block w-full max-w-[22rem]"
+            role="img"
+            aria-label={`甲基環己烷的椅式，${c.title}`}
+          >
+            {bonds(c.ring).map((b) => (
+              <line
+                x1={b.a[0]}
+                y1={b.a[1]}
+                x2={b.b[0]}
+                y2={b.b[1]}
+                class="stroke-base-content"
+                stroke-width="2.8"
+              />
+            ))}
+            {c.crowd.map((i) => (
+              <line
+                x1={axial(c.ring, i, c.axUp[i]).x}
+                y1={axial(c.ring, i, c.axUp[i]).y1}
+                x2={axial(c.ring, i, c.axUp[i]).x}
+                y2={axial(c.ring, i, c.axUp[i]).y2}
+                class="stroke-warning"
+                stroke-width="2.4"
+              />
+            ))}
+            {c.crowd.map((i) => (
+              <text
+                x={axial(c.ring, i, c.axUp[i]).x}
+                y={axial(c.ring, i, c.axUp[i]).y2 + (c.axUp[i] ? -6 : 15)}
+                text-anchor="middle"
+                class="fill-warning text-[13px] font-bold"
+              >
+                H
+              </text>
+            ))}
+            <line
+              x1={c.ring[SUB][0]}
+              y1={c.ring[SUB][1]}
+              x2={c.subEnd[0]}
+              y2={c.subEnd[1]}
+              class="stroke-primary"
+              stroke-width="3.2"
+            />
+            <text
+              x={c.subEnd[0] + c.labelDx}
+              y={c.subEnd[1] + c.labelDy}
+              text-anchor={c.anchor}
+              class="fill-primary text-[14px] font-bold"
+            >
+              CH₃
+            </text>
+          </svg>
+          <p class="mt-2 text-xs leading-relaxed text-base-content/70">{c.note}</p>
+        </div>
+        </>
+      ))
+    }
+  </div>
+
+  <p class="mt-3 text-xs leading-relaxed text-base-content/65">
+    翻轉把整張椅子上下翻過來，原本的直立鍵全部變成平伏鍵、平伏鍵全部變成直立鍵，但取代基在環上的順反關係不變。甲基環己烷在 25
+    °C 的平衡約有 95% 的甲基待在平伏鍵那一邊。
+  </p>
+</figure>

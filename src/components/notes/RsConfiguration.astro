@@ -1,0 +1,167 @@
+---
+// R/S 判定的兩種畫法擺在一起：左邊是楔形式（最低順位畫在紙面後方，直接讀轉向），
+// 右邊是 Fischer 投影（最低順位落在橫線＝朝向讀者，讀完要把結論反轉）。
+// 兩個例子都是真實化合物：左＝(R)-2-丁醇、右＝(S)-乳酸，讀者可以自己驗算。
+// 純靜態、無 hydration：SSR 直出，列印也完整。
+
+// 楔形式：中心碳擺在正中，第 4 順位用虛楔畫向紙面後方（正下方），
+// 其餘三個基團排成朝向讀者的三腳架。1 在正上、2 在右下、3 在左下 → 順時針 → R。
+const WEDGE = {
+  c: [150, 118] as [number, number],
+  one: [150, 48] as [number, number],
+  two: [212, 156] as [number, number],
+  three: [88, 156] as [number, number],
+}
+
+// 第 4 順位那條虛楔：由中心往下逐漸變寬的一疊短橫線。
+const HASH = [0, 1, 2, 3, 4].map((i) => {
+  const y = WEDGE.c[1] + 16 + i * 12
+  const half = 3 + i * 1.8
+  return { x1: WEDGE.c[0] - half, x2: WEDGE.c[0] + half, y }
+})
+
+// Fischer：十字的交叉點就是掌性中心，橫線朝前、直線朝後。
+const F = { cx: 100, cy: 112, arm: 52 }
+---
+
+<figure
+  class="not-prose my-5 rounded-box border border-base-300 bg-base-100 p-4 print:break-inside-avoid sm:p-5"
+>
+  <figcaption class="mb-4 font-display font-bold text-base-content">
+    R/S 怎麼讀：楔形式與 Fischer 投影
+  </figcaption>
+
+  <div class="grid gap-4 sm:grid-cols-2">
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-primary">楔形式：最低順位在後方</p>
+      <p class="mb-2 text-xs text-base-content/55">(R)-2-丁醇</p>
+      <svg
+        viewBox="0 0 300 215"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="2-丁醇的掌性碳，氫以虛楔畫向紙面後方，羥基在上、乙基在右下、甲基在左下，一到三為順時針"
+      >
+        <line
+          x1={WEDGE.c[0]}
+          y1={WEDGE.c[1]}
+          x2={WEDGE.one[0]}
+          y2={WEDGE.one[1]}
+          class="stroke-base-content"
+          stroke-width="2.5"></line>
+        <line
+          x1={WEDGE.c[0]}
+          y1={WEDGE.c[1]}
+          x2={WEDGE.two[0]}
+          y2={WEDGE.two[1]}
+          class="stroke-base-content"
+          stroke-width="2.5"></line>
+        <line
+          x1={WEDGE.c[0]}
+          y1={WEDGE.c[1]}
+          x2={WEDGE.three[0]}
+          y2={WEDGE.three[1]}
+          class="stroke-base-content"
+          stroke-width="2.5"></line>
+        {
+          HASH.map((h) => (
+            <line
+              x1={h.x1}
+              y1={h.y}
+              x2={h.x2}
+              y2={h.y}
+              class="stroke-base-content"
+              stroke-width="2"
+            />
+          ))
+        }
+
+        <path
+          d="M 150 66 A 52 52 0 1 1 105 144"
+          class="stroke-primary"
+          stroke-width="2.5"
+          fill="none"
+          opacity="0.85"></path>
+        <polygon points="105,144 117,145 111,154" class="fill-primary" opacity="0.85"></polygon>
+
+        <circle cx={WEDGE.c[0]} cy={WEDGE.c[1]} r="11" class="fill-base-100"></circle>
+        <text
+          x={WEDGE.c[0]}
+          y={WEDGE.c[1] + 5}
+          text-anchor="middle"
+          class="fill-base-content text-[15px] font-bold">C</text
+        >
+
+        <text x="150" y="38" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >OH</text
+        >
+        <text x="150" y="22" text-anchor="middle" class="fill-primary text-[13px] font-bold">1</text>
+        <text x="228" y="166" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >C₂H₅</text
+        >
+        <text x="228" y="184" text-anchor="middle" class="fill-primary text-[13px] font-bold">2</text>
+        <text x="70" y="166" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >CH₃</text
+        >
+        <text x="70" y="184" text-anchor="middle" class="fill-primary text-[13px] font-bold">3</text>
+        <text x="150" y="204" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >H</text
+        >
+        <text x="176" y="204" text-anchor="middle" class="fill-base-content/50 text-[13px] font-bold"
+          >4</text
+        >
+      </svg>
+      <p class="mt-2 text-xs leading-relaxed text-base-content/70">
+        H 是第 4 順位，用虛楔畫向紙面後方，其餘三個基團朝向讀者。由 1 到 2 到 3 是順時針，直接判為 R。
+      </p>
+    </div>
+
+    <div class="rounded-box border border-base-300 bg-base-200/40 p-3">
+      <p class="mb-1 text-sm font-bold text-secondary">Fischer 投影：最低順位在橫線</p>
+      <p class="mb-2 text-xs text-base-content/55">(S)-乳酸</p>
+      <svg
+        viewBox="0 0 300 215"
+        class="mx-auto block w-full max-w-[15rem]"
+        role="img"
+        aria-label="乳酸的費雪投影，羧基在上、甲基在下、羥基在左、氫在右"
+      >
+        <line
+          x1={F.cx}
+          y1={F.cy - F.arm}
+          x2={F.cx}
+          y2={F.cy + F.arm}
+          class="stroke-base-content"
+          stroke-width="2.5"></line>
+        <line
+          x1={F.cx - F.arm}
+          y1={F.cy}
+          x2={F.cx + F.arm}
+          y2={F.cy}
+          class="stroke-secondary"
+          stroke-width="3.5"></line>
+
+        <text x="100" y="48" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >COOH</text
+        >
+        <text x="100" y="30" text-anchor="middle" class="fill-secondary text-[13px] font-bold">2</text>
+        <text x="100" y="186" text-anchor="middle" class="fill-base-content text-[14px] font-semibold"
+          >CH₃</text
+        >
+        <text x="100" y="204" text-anchor="middle" class="fill-secondary text-[13px] font-bold">3</text>
+        <text x="40" y="117" text-anchor="end" class="fill-base-content text-[14px] font-semibold"
+          >HO</text
+        >
+        <text x="40" y="97" text-anchor="end" class="fill-secondary text-[13px] font-bold">1</text>
+        <text x="160" y="117" class="fill-base-content text-[14px] font-semibold">H</text>
+        <text x="160" y="97" class="fill-base-content/50 text-[13px] font-bold">4</text>
+
+        <text x="222" y="140" class="fill-secondary text-[11px]">橫線朝前</text>
+        <text x="222" y="156" class="fill-secondary text-[11px]">（朝向讀者）</text>
+        <text x="222" y="76" class="fill-base-content/55 text-[11px]">直線朝後</text>
+        <text x="222" y="92" class="fill-base-content/55 text-[11px]">（遠離讀者）</text>
+      </svg>
+      <p class="mt-2 text-xs leading-relaxed text-base-content/70">
+        照畫面讀 1 到 2 到 3（左 → 上 → 下）是順時針。但第 4 順位的 H 落在橫線上、朝向讀者，所以把結論反轉，判為 S。
+      </p>
+    </div>
+  </div>
+</figure>
