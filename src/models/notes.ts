@@ -28,6 +28,15 @@ export function noteCategory(n: NoteEntry): NoteCategory {
 
 export const NOTES: NoteEntry[] = [
   {
+    id: 'chem-mock-1',
+    href: '/chem-mock-1',
+    title: '第一次模擬考範圍速攻（化學）',
+    subject: '化學',
+    tags: ['總表'],
+    group: '第一次模擬考',
+    desc: '模擬考化學範圍地圖：十一章對應哪幾篇筆記、三校 12 年各考幾題、9/6 到 9/26 每天讀哪一篇',
+  },
+  {
     id: 'periodic-table',
     href: '/periodic-table',
     title: '元素週期表',
@@ -215,6 +224,15 @@ export const NOTES: NoteEntry[] = [
     tags: ['有機基礎'],
     group: '有機化學基礎',
     desc: 'pKa 這把尺、影響酸性的 ARIO 四因素與衝突順序、胺與雜環的鹼性、胺基酸的兩性離子與等電點、判斷反應方向、酸鹼萃取分離',
+  },
+  {
+    id: 'bio-mock-1',
+    href: '/bio-mock-1',
+    title: '第一次模擬考範圍速攻（生物）',
+    subject: '生物',
+    tags: ['總表'],
+    group: '第一次模擬考',
+    desc: '模擬考生物範圍地圖：十一章對應哪幾篇筆記、三校 12 年各考幾題、9/6 到 9/26 每天讀哪一篇，外加第一章「生命的研究」速查',
   },
   {
     id: 'bio-cell-1',
