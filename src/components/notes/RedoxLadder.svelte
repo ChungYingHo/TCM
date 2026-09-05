@@ -1,16 +1,17 @@
 <script lang="ts">
-  // 標準還原電位 E° 階梯：E° 越大（上面）= 越強氧化劑（左側氧化態）；
+  // 標準還原電位 E° 階梯：E° 越大（上面）= 越強氧化劑（左側氧化態），
   // E° 越小（下面）= 越強還原劑（右側還原態）。切換看哪個是最強氧化劑/還原劑。
-  type HR = { ox: string; red: string; e: number }
+  // n = 該半反應轉移的電子數，畫面上要印出來，否則式子電子數不守恆。
+  type HR = { ox: string, red: string, e: number, n: number }
   const HR: HR[] = [
-    { ox: 'F₂', red: '2F⁻', e: 2.87 },
-    { ox: 'Cl₂', red: '2Cl⁻', e: 1.36 },
-    { ox: 'Ag⁺', red: 'Ag', e: 0.8 },
-    { ox: 'Cu²⁺', red: 'Cu', e: 0.34 },
-    { ox: '2H⁺', red: 'H₂', e: 0.0 },
-    { ox: 'Fe²⁺', red: 'Fe', e: -0.44 },
-    { ox: 'Zn²⁺', red: 'Zn', e: -0.76 },
-    { ox: 'Mg²⁺', red: 'Mg', e: -2.37 },
+    { ox: 'F₂', red: '2F⁻', e: 2.87, n: 2 },
+    { ox: 'Cl₂', red: '2Cl⁻', e: 1.36, n: 2 },
+    { ox: 'Ag⁺', red: 'Ag', e: 0.8, n: 1 },
+    { ox: 'Cu²⁺', red: 'Cu', e: 0.34, n: 2 },
+    { ox: '2H⁺', red: 'H₂', e: 0.0, n: 2 },
+    { ox: 'Fe²⁺', red: 'Fe', e: -0.44, n: 2 },
+    { ox: 'Zn²⁺', red: 'Zn', e: -0.76, n: 2 },
+    { ox: 'Mg²⁺', red: 'Mg', e: -2.37, n: 2 },
   ]
   let mode = $state<'ox' | 'red'>('ox')
   const top = HR[0], bottom = HR[HR.length - 1]
@@ -31,7 +32,7 @@
       {@const hot = (mode === 'ox' && k === 0) || (mode === 'red' && k === HR.length - 1)}
       <div class={`flex items-center justify-between rounded-lg px-3 py-1.5 text-sm transition-colors ${hot ? 'bg-primary/20 font-bold' : 'bg-base-200/50'}`}>
         <span class="font-mono">
-          {#if mode === 'ox'}<span class={k === 0 ? 'text-primary' : ''}>{h.ox}</span> + e⁻ → {h.red}{:else}{h.ox} + e⁻ → <span class={k === HR.length - 1 ? 'text-primary' : ''}>{h.red}</span>{/if}
+          {#if mode === 'ox'}<span class={k === 0 ? 'text-primary' : ''}>{h.ox}</span> + {h.n === 1 ? '' : h.n}e⁻ → {h.red}{:else}{h.ox} + {h.n === 1 ? '' : h.n}e⁻ → <span class={k === HR.length - 1 ? 'text-primary' : ''}>{h.red}</span>{/if}
         </span>
         <span class="tabular-nums {h.e >= 0 ? 'text-base-content/70' : 'text-base-content/50'}">{h.e > 0 ? '+' : ''}{h.e.toFixed(2)} V</span>
       </div>

@@ -1,10 +1,10 @@
 <script lang="ts">
-  // 氧化數判定：選化合物，看目標元素的氧化數與算法。特別標出 O、H 的常考特例。
-  type C = { f: string; el: string; ox: string; why: string; special: boolean }
+  // 氧化數判定：選化合物，看目標元素的氧化數與算法。特別標出 O、H 的特例。
+  type C = { f: string, el: string, ox: string, why: string, special: boolean }
   const CPDS: C[] = [
-    { f: 'K₂Cr₂O₇', el: 'Cr', ox: '+6', why: '2×K(+1)=+2、7×O(−2)=−14；2 個 Cr：2x + 2 − 14 = 0 → x = +6', special: false },
-    { f: 'KMnO₄', el: 'Mn', ox: '+7', why: 'K(+1)、4×O(−2)=−8；Mn：x + 1 − 8 = 0 → x = +7', special: false },
-    { f: 'H₂SO₄', el: 'S', ox: '+6', why: '2×H(+1)=+2、4×O(−2)=−8；S：x + 2 − 8 = 0 → x = +6', special: false },
+    { f: 'K₂Cr₂O₇', el: 'Cr', ox: '+6', why: '2×K(+1)=+2、7×O(−2)=−14，兩個 Cr：2x + 2 − 14 = 0 → x = +6', special: false },
+    { f: 'KMnO₄', el: 'Mn', ox: '+7', why: 'K(+1)、4×O(−2)=−8，Mn：x + 1 − 8 = 0 → x = +7', special: false },
+    { f: 'H₂SO₄', el: 'S', ox: '+6', why: '2×H(+1)=+2、4×O(−2)=−8，S：x + 2 − 8 = 0 → x = +6', special: false },
     { f: 'H₂O₂', el: 'O', ox: '−1', why: '過氧化物！O–O 單鍵，每個 O 是 −1（不是 −2）', special: true },
     { f: 'KO₂', el: 'O', ox: '−½', why: '超氧化物！整個 O₂⁻ 帶 −1，兩個 O 平分 → 每個 −½', special: true },
     { f: 'OF₂', el: 'O', ox: '+2', why: 'F 更電負、恆為 −1，O 反而被拉成 +2', special: true },
@@ -32,7 +32,7 @@
       <span class={`text-2xl font-bold tabular-nums ${c.special ? 'text-accent' : 'text-primary'}`}>{c.ox}</span>
     </div>
     <p class="mt-2 text-xs leading-relaxed text-base-content/70">{c.why}</p>
-    {#if c.special}<div class="mt-1 text-xs font-bold text-accent">⚠ 常考特例</div>{/if}
+    {#if c.special}<div class="mt-1 text-xs font-bold text-accent">⚠ 特例</div>{/if}
   </div>
 
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">

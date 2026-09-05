@@ -31,7 +31,14 @@
   </div>
 
   <div class="mt-3 rounded-box bg-primary/10 p-3 text-center">
-    <div class="text-xs text-base-content/55">稀釋後濃度 M₂ = M₁V₁ ÷ V₂</div>
+    <div class="flex items-center justify-center gap-1.5 text-xs text-base-content/55">
+      <span>稀釋後濃度 M₂ ＝</span>
+      <span class="inline-flex flex-col items-center leading-tight">
+        <span class="px-1">M₁V₁</span>
+        <span class="w-full border-t border-current"></span>
+        <span class="px-1">V₂</span>
+      </span>
+    </div>
     <div class="text-xl font-bold tabular-nums text-primary">{M2.toFixed(3)} M</div>
   </div>
 
