@@ -1,6 +1,6 @@
 <script lang="ts">
   // 電池電位：選兩個電極（各有 E°），E° 大的當陰極（還原）、小的當陽極（氧化）。
-  // E°cell = E°陰 − E°陽（原電池必 > 0）；再用 ΔG° = −nFE°cell 看自發。
+  // E°cell = E°陰 − E°陽（伽凡尼電池必 > 0），再用 ΔG° = −nFE°cell 看自發。
   const F = 96500
   type E = { name: string; e: number }
   const ELS: E[] = [
@@ -67,6 +67,6 @@
   {/if}
 
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    E° 大的半反應比較想得電子 → 當<b>陰極（還原）</b>；E° 小的當<b>陽極（氧化）</b>。<b>E°cell = E°陰 − E°陽</b> 永遠為正（原電池自發）。再由 <b>ΔG° = −nFE°cell</b>（負值＝自發）。三件套等價：E°cell &gt; 0 ↔ ΔG° &lt; 0 ↔ K &gt; 1。
+    E° 大的半反應比較想得電子 → 當<b>陰極（還原）</b>，E° 小的當<b>陽極（氧化）</b>。<b>E°cell = E°陰 − E°陽</b> 永遠為正（伽凡尼電池自發）。再由 <b>ΔG° = −nFE°cell</b>（負值代表自發）。三件套等價：E°cell &gt; 0 ↔ ΔG° &lt; 0 ↔ K &gt; 1。
   </p>
 </div>
