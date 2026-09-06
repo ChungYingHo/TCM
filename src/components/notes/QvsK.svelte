@@ -6,7 +6,7 @@
   const sK = $derived(Number.isFinite(K) && K > 0 ? K : 1)
   const dir = $derived.by(() => {
     const r = Q / sK
-    if (r > 0.92 && r < 1.08) return { t: '已達平衡（不移動）', arrow: '＝', cls: 'badge-warning' }
+    if (r > 0.92 && r < 1.08) return { t: '非常接近平衡（Q ≈ K）', arrow: '＝', cls: 'badge-warning' }
     return Q < sK ? { t: '正向（往右、生成產物）', arrow: '→', cls: 'badge-success' } : { t: '逆向（往左、分解產物）', arrow: '←', cls: 'badge-error' }
   })
   // 數線：0 … 2K，K 在中間，Q 為點
@@ -43,6 +43,6 @@
     <span class={`badge font-bold ${dir.cls}`}>{dir.t}</span>
   </div>
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    <b>Q</b> 和 K 的算式一樣，但用<b>當前（還沒平衡）的濃度</b>。比大小：<b>Q &lt; K</b> 表示產物還不夠 → 反應<b>往右</b>生成產物；<b>Q &gt; K</b> 表示產物太多 → <b>往左</b>分解；<b>Q = K</b> 已平衡。口訣「Q 小向右、Q 大向左」。
+    <b>Q</b> 和 K 的算式一樣，但用<b>當前（還沒平衡）的濃度</b>。比大小：<b>Q &lt; K</b> 表示產物還不夠，反應<b>往右</b>生成產物。<b>Q &gt; K</b> 表示產物太多，<b>往左</b>分解。<b>Q = K</b> 已平衡。口訣「Q 小向右、Q 大向左」。
   </p>
 </div>

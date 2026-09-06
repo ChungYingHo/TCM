@@ -57,7 +57,7 @@
   </div>
 
   <div class="mt-2 grid grid-cols-3 gap-2 text-sm">
-    <div class="rounded-lg bg-base-200/70 p-2 text-center"><div class="text-xs text-base-content/55">i 因子</div><div class="font-bold tabular-nums">{sol.i}</div></div>
+    <div class="rounded-lg bg-base-200/70 p-2 text-center"><div class="text-xs text-base-content/55">凡特荷夫因子 i</div><div class="font-bold tabular-nums">{sol.i}</div></div>
     <div class="rounded-lg bg-base-200/70 p-2 text-center"><div class="text-xs text-base-content/55">凝固點下降 ΔTf</div><div class="font-bold tabular-nums text-info">{dTf.toFixed(2)}°</div></div>
     <div class="rounded-lg bg-base-200/70 p-2 text-center"><div class="text-xs text-base-content/55">沸點上升 ΔTb</div><div class="font-bold tabular-nums text-error">{dTb.toFixed(2)}°</div></div>
   </div>

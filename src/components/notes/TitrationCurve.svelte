@@ -66,7 +66,7 @@
 
   <p class="mt-2 text-xs leading-relaxed text-base-content/70">
     {#if weak}
-      <b>弱酸</b>＋強鹼：前段有<b>緩衝平緩段</b>，<b>半當量點（50%）pH = pKa</b>（可由此讀出 pKa）；<b>當量點 pH &gt; 7</b>（生成的共軛鹼水解），宜用酚酞。
+      <b>弱酸</b>＋強鹼：前段有<b>緩衝平緩段</b>，<b>半當量點（50%）pH = pKa</b>（可由此讀出 pKa）。<b>當量點 pH &gt; 7</b>（生成的共軛鹼水解），宜用酚酞。
     {:else}
       <b>強酸</b>＋強鹼：起點 pH 低、當量點 pH = 7（中性），曲線在當量點附近垂直陡升。
     {/if}

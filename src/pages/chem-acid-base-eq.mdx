@@ -1,0 +1,555 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 酸鹼平衡：pH、緩衝液與滴定
+summary: 水的自解離與 Kw、pH 與 pOH 的計算、強酸強鹼與極稀溶液、弱酸弱鹼的 Ka 與解離度、共軛酸鹼對、鹽類水解、多質子酸、緩衝液與滴定曲線。
+---
+import Memorize from '@/components/notes/Memorize.astro'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import RelatedNote from '@/components/notes/RelatedNote.astro'
+import PhScale from '@/components/notes/PhScale.svelte'
+import AcidPhCalc from '@/components/notes/AcidPhCalc.svelte'
+import BufferPh from '@/components/notes/BufferPh.svelte'
+import TitrationCurve from '@/components/notes/TitrationCurve.svelte'
+
+## 一、水的自解離與 pH 標度
+
+純水裡的水分子會互相搶質子、極少量地拆成離子，這叫**水的自解離（autoionization of water）**。接了質子的水 $\ce{H3O+}$ 稱為**水合氫離子（hydronium ion）**，書寫時常簡化成 $\ce{H+}$，兩種寫法指同一件事。
+
+$$\ce{2H2O(l) <=> H3O+(aq) + OH^-(aq)}\qquad K_w=[\ce{H+}][\ce{OH^-}]=1.0\times10^{-14}$$
+
+這個平衡常數叫**水的離子積（ion-product constant，$K_w$）**，$25\ ^\circ\mathrm{C}$ 的值是 $1.0\times10^{-14}$。方括號 $[\ce{H+}]$ 讀作「$\ce{H+}$ 的體積莫耳濃度」，單位 M（＝mol/L）。純水裡兩種離子由同一個反應等量生出，所以各是 $1.0\times10^{-7}$ M。$K_w$ 在**任何水溶液**裡都成立，不管溶液偏酸偏鹼：加酸讓 $[\ce{H+}]$ 上升，$[\ce{OH^-}]$ 就必須同比例下降，乘積永遠釘在 $1.0\times10^{-14}$。濃度動輒跨十幾個數量級，取負對數壓成一把好讀的刻度就是 pH，把 $K_w$ 兩邊也取負對數，乘積便化為相加：
+
+$$\mathrm{pH}=-\log[\ce{H+}]\qquad \mathrm{pOH}=-\log[\ce{OH^-}]\qquad \mathrm{pH}+\mathrm{pOH}=14$$
+
+<PhScale client:visible />
+
+### 對數的心算
+
+考場沒有計算機，題目只給 $\log 2=0.301$、$\log 3=0.477$、$\log 7=0.845$。所有 pH 都靠同一條拆開：$-\log(a\times10^{-n})=n-\log a$。例如 $[\ce{H+}]=5\times10^{-2}$ M 時 $\log 5=\log\dfrac{10}{2}=1-0.301=0.699$，得 $\mathrm{pH}=2-0.699=1.301$。其餘的值由這三個湊出來：$\log 4=0.602$、$\log 6=0.778$、$\log 8=0.903$、$\log 9=0.954$。反過來由 pH 求濃度，就是把 pH 拆成整數減小數再指數化：$\mathrm{pH}=9.4$ 時 $[\ce{H+}]=10^{-9.4}=10^{0.6}\times10^{-10}$，$\log 4=0.602$ 最接近 0.6，所以 $[\ce{H+}]\approx4\times10^{-10}$ M。
+
+### 溫度會動 Kw
+
+自解離要把 O—H 鍵拆開，是**吸熱**反應（$\Delta H^\circ\approx+56\ \mathrm{kJ\cdot mol^{-1}}$），升溫使平衡右移、$K_w$ 變大。$100\ ^\circ\mathrm{C}$ 時 $K_w\approx5\times10^{-13}$，純水的 $[\ce{H+}]=[\ce{OH^-}]\approx7\times10^{-7}$ M，pH 約 6.1，而這杯水**仍然是中性**，因為兩種離子還是等量。「pH 7 ＝中性」只在 $25\ ^\circ\mathrm{C}$ 成立，真正的判準是比較 $[\ce{H+}]$ 與 $[\ce{OH^-}]$ 誰大。這個反應的 $\Delta S^\circ$ 是**負值**（約 $-81\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$），因為生成的離子會把周圍的水分子排列得更整齊，亂度反而下降。$K_w$ 隨溫度升高仍變大，代表這裡是 $\Delta H^\circ$ 的正值蓋過 $\Delta S^\circ$ 的負值。
+
+<WorkedExample source="中國醫 109・化學 3" answer="(B) 1.301" tags={["氣體溶解", "unit factor", "log 心算"]}>
+
+**題目**　將壓力 1.17 atm、體積 0.8 L 的氯化氫氣體加入 750 mL、$32\ ^\circ\mathrm{C}$ 的水中，假設溶液體積與溫度不變，其 pH 為多少？（$R=0.082\ \mathrm{atm\cdot L\cdot mol^{-1}\cdot K^{-1}}$，$\log 2=0.301$）
+
+**解**　① 由 $PV=nRT$ 求莫耳數，連乘讓單位相消（$T=32+273=305$ K）：
+
+$$n=1.17\ \cancel{\mathrm{atm}}\times0.8\ \cancel{\mathrm{L}}\times\frac{1\ \mathrm{mol}\cdot\cancel{\mathrm{K}}}{0.082\ \cancel{\mathrm{atm}}\cdot\cancel{\mathrm{L}}}\times\frac{1}{305\ \cancel{\mathrm{K}}}=0.0374\ \mathrm{mol}$$
+
+② $\ce{HCl}$ 是強酸、全部解離成 $\ce{H+}$，除以溶液體積後取負對數：
+
+$$[\ce{H+}]=\frac{0.0374\ \mathrm{mol}}{0.750\ \mathrm{L}}\approx5.0\times10^{-2}\ \mathrm{M}\qquad \mathrm{pH}=2-\log 5=1.301$$
+
+$32\ ^\circ\mathrm{C}$ 只用在氣體那一步的 $T$，pH 本身與溫度無關。
+
+</WorkedExample>
+
+<RelatedNote title="吸熱放熱怎麼決定 K 的大小" href="/chem-equilibrium" to="化學平衡">
+
+$\Delta G^\circ=\Delta H^\circ-T\Delta S^\circ$ 判斷反應在什麼溫度會自發、$\Delta G^\circ=-RT\ln K$ 把自由能與平衡常數接起來，都在那一篇的「溫度、K 與標準自由能」一節。自解離的 $\Delta H^\circ$ 為正、$\Delta S^\circ$ 為負，套進去就能直接判斷 $K_w$ 隨溫度變化的方向。
+
+</RelatedNote>
+
+## 二、強酸與強鹼的 pH
+
+**強酸（strong acid）**在水中視為完全解離，$[\ce{H+}]$ 等於酸的濃度乘上它放得出的質子數。**強鹼（strong base）**同理，先由化學式數出 $\ce{OH^-}$ 的個數得到 $[\ce{OH^-}]$，算出 pOH 再用 $\mathrm{pH}=14-\mathrm{pOH}$ 換回來。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 0.010 M 的溶液 | 解離後的濃度 | pH |
+|---|---|---|
+| $\ce{HCl}$ | $[\ce{H+}]=0.010$ M | 2.00 |
+| $\ce{H2SO4}$ | $[\ce{H+}]\approx0.020$ M | 1.70 |
+| $\ce{NaOH}$ | $[\ce{OH^-}]=0.010$ M | 12.00 |
+| $\ce{Ba(OH)2}$ | $[\ce{OH^-}]=0.020$ M | 12.30 |
+
+</div>
+
+$\ce{H2SO4}$ 只有第一階完全解離，第二階的 $K_{a2}=1.2\times10^{-2}$ 並不完全，但題目沒有另外給 $K_{a2}$ 時就當兩個質子都放出。反過來，要判斷未知物是強酸還是弱酸，就把濃度直接取負對數與實測 pH 比對：0.0035 M 若完全解離則 $\mathrm{pH}=-\log(3.5\times10^{-3})=2.46$，實測正好 2.46 代表它是強酸，實測值明顯偏大才是弱酸。
+
+<RelatedNote title="要背的強酸強鹼清單與中和計量" href="/chem-solution-reactions" to="溶液中的化學反應">
+
+阿瑞尼士、布忍斯特與路易士三套酸鹼定義、六個強酸與強鹼的名單、中和的淨離子方程式、滴定求未知濃度的計量步驟，都在那一篇。本篇從「已經知道誰強誰弱」開始，只處理平衡與 pH。
+
+</RelatedNote>
+
+### 混合強酸與強鹼
+
+先把兩邊各換成毫莫耳數相減，過量的一方決定酸鹼性，再除以**混合後的總體積**（分母忘了把鹼的體積加進去，是這類題最常見的失分點）。50.0 mL 的 0.50 M $\ce{HCl}$（25.0 mmol）加入 28.0 mL 的 0.50 M $\ce{NaOH}$（14.0 mmol）後，剩 11.0 mmol 的 $\ce{H+}$ 散在 78.0 mL 裡：
+
+$$[\ce{H+}]=\frac{11.0\ \mathrm{mmol}}{78.0\ \mathrm{mL}}=0.141\ \mathrm{M}\qquad \mathrm{pH}=1-\log 1.41=0.85$$
+
+### 極稀強酸的陷阱
+
+濃度低到與水自解離的 $10^{-7}$ M 同一個數量級時，水提供的 $\ce{H+}$ 不能再忽略，直接取負對數會得到 pH 大於 7 的荒謬結果，而酸的溶液不可能呈鹼性。正解用**電荷平衡**：溶液整體不帶電，正電荷總量等於負電荷總量。濃度 $C$ 的一元強酸 $\ce{HA}$ 為例，$[\ce{H+}]=[\ce{A^-}]+[\ce{OH^-}]=C+\dfrac{K_w}{[\ce{H+}]}$，整理成二次式再取正根：
+
+$$[\ce{H+}]=\frac{C+\sqrt{C^2+4K_w}}{2}$$
+
+$C=5\times10^{-8}$ M 代進去得 $[\ce{H+}]=1.28\times10^{-7}$ M，$\mathrm{pH}=6.9$。三種情況分清楚：
+
+- $C\ge10^{-6}$ M：水的貢獻可以忽略，$\mathrm{pH}=-\log C$。
+- $C$ 落在 $10^{-8}$ 到 $10^{-6}$ M：兩邊相當，要用上面那條式子。
+- 不管怎麼稀釋，酸的 pH 只會**逼近 7 而永遠不會超過 7**，鹼則永遠不會低於 7。
+
+## 三、弱酸與弱鹼：Ka、Kb 與解離度
+
+**弱酸（weak acid）**在水中只解離一小部分，程度由**酸解離常數（acid dissociation constant，$K_a$）**決定。液態水是溶劑、濃度幾乎不變，依慣例不寫進平衡常數式：
+
+$$\ce{HA(aq) + H2O(l) <=> H3O+(aq) + A^-(aq)}\qquad K_a=\frac{[\ce{H3O+}][\ce{A^-}]}{[\ce{HA}]}$$
+
+$\mathrm{p}K_a=-\log K_a$，$K_a$ 越大（$\mathrm{p}K_a$ 越小）酸越強。
+
+### 用 ICE 表算 pH
+
+ICE 表就是把初濃度（Initial）、變化量（Change）、平衡濃度（Equilibrium）三列排開。設 0.10 M 的 $\ce{HA}$（$K_a=1.0\times10^{-5}$）解離了 $x$ M：
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| | $\ce{HA}$ | $\ce{H+}$ | $\ce{A^-}$ |
+|---|---|---|---|
+| 初濃度 | 0.10 | 0 | 0 |
+| 變化量 | $-x$ | $+x$ | $+x$ |
+| 平衡濃度 | $0.10-x$ | $x$ | $x$ |
+
+</div>
+
+代進 $K_a$ 得 $K_a=\dfrac{x^2}{0.10-x}$。弱酸解離得很少，$0.10-x\approx0.10$，分母的 $x$ 可以丟掉：
+
+$$[\ce{H+}]\approx\sqrt{K_a\,C}$$
+
+$C$ 是酸的**初濃度**。代入得 $[\ce{H+}]=\sqrt{1.0\times10^{-5}\times0.10}=1.0\times10^{-3}$ M，$\mathrm{pH}=3.00$。**近似能不能用，靠 5% 規則檢查**：算出的 $x$ 若不到 $C$ 的 5%，近似成立，換算成常數的形式是 $\dfrac{C}{K_a}\ge400$ 時一定安全。不通過就得回頭解二次式 $x^2+K_ax-K_aC=0$，否則答案會偏大。
+
+### 解離度
+
+**解離百分比（percent dissociation，$\alpha$）**是已解離的比例：
+
+$$\alpha=\frac{[\ce{H+}]}{C}\times100\%=\frac{\sqrt{K_a C}}{C}\times100\%=\sqrt{\frac{K_a}{C}}\times100\%$$
+
+0.10 M、$K_a=4\times10^{-5}$ 的弱酸為例，$\sqrt{\dfrac{K_a}{C}}=\sqrt{\dfrac{4\times10^{-5}}{0.10}}=2\times10^{-2}$，乘上 $100\%$ 得 $\alpha=2\%$。最後那個形式把 $C$ 放在分母，直接看出**稀釋會讓解離度上升**，但 $[\ce{H+}]=\sqrt{K_aC}$ 仍隨稀釋下降、pH 還是往 7 走。兩件事不矛盾：解離的比例變高，解離出來的總量卻更少。
+
+反過來，題目給解離百分比就能求 $[\ce{H+}]$。0.10 M 的 $\ce{HCN}$ 解離 0.0070% 時 $[\ce{H+}]=0.10\times7.0\times10^{-5}=7.0\times10^{-6}$ M，$\mathrm{pH}=6-0.845=5.15$。因為比例這麼低，**弱酸溶液裡含量最多的永遠是沒解離的酸分子**。把兩種弱酸倒在一起也一樣，量最多的三種是水與兩種完整的酸分子，離子反而是少數。
+
+### 弱鹼
+
+**弱鹼（weak base）**從水搶質子，平衡常數叫**鹼解離常數（base dissociation constant，$K_b$）**：
+
+$$\ce{B(aq) + H2O(l) <=> BH+(aq) + OH^-(aq)}\qquad K_b=\frac{[\ce{BH+}][\ce{OH^-}]}{[\ce{B}]}$$
+
+算法與弱酸完全對稱：$[\ce{OH^-}]\approx\sqrt{K_b C}$，得 pOH 再用 $\mathrm{pH}=14-\mathrm{pOH}$。由實測 pH 反求常數則是 $K_b\approx\dfrac{[\ce{OH^-}]^2}{C}$。
+
+<AcidPhCalc client:visible />
+
+<WorkedExample source="中國醫 113・化學 21" answer="(D) 30 升" tags={["弱酸近似", "稀釋"]}>
+
+**題目**　10 毫升 12 M 的 $\ce{HCl}$ 需加水稀釋至多少體積，其 pH 才會與 0.90 M 的醋酸水溶液相近？（醋酸的 $K_a=1.8\times10^{-5}$）
+
+**解**　① 先算醋酸這一邊的 $[\ce{H+}]$，並確認近似可用（$\dfrac{0.90}{1.8\times10^{-5}}=5\times10^{4}$，遠大於 400）：
+
+$$[\ce{H+}]=\sqrt{1.8\times10^{-5}\times0.90}=\sqrt{1.62\times10^{-5}}=4.0\times10^{-3}\ \mathrm{M}$$
+
+② 鹽酸是強酸，稀釋不改變溶質的莫耳數，要讓它的 $[\ce{H+}]$ 也降到 $4.0\times10^{-3}$ M：
+
+$$V=0.010\ \cancel{\mathrm{L}}\times\frac{12\ \cancel{\mathrm{mol}}}{1\ \cancel{\mathrm{L}}}\times\frac{1\ \mathrm{L}}{4.0\times10^{-3}\ \cancel{\mathrm{mol}}}=30\ \mathrm{L}$$
+
+0.90 M 的醋酸只放出 $4.0\times10^{-3}$ M 的 $\ce{H+}$，解離度 0.44%，這就是「弱」的具體意思。
+
+</WorkedExample>
+
+## 四、共軛酸鹼對與 Ka·Kb＝Kw
+
+酸交出一個質子後剩下的是它的**共軛鹼（conjugate base）**，鹼接下一個質子後變成它的**共軛酸（conjugate acid）**。一對共軛酸鹼**只差一個 $\ce{H+}$**，其他原子的接法完全不動，這是判對錯最快的檢查：$\ce{CH3NH3+}$ 的共軛鹼是 $\ce{CH3NH2}$，不是 $\ce{CH2NH3}$，後者拔的是碳上的氫，換了位置就不是同一對。
+
+把同一對共軛酸鹼的兩條平衡常數式相乘，中間的濃度自己約掉：
+
+$$K_a\cdot K_b=\frac{[\ce{H+}]\,\cancel{[\ce{A^-}]}}{\cancel{[\ce{HA}]}}\times\frac{\cancel{[\ce{HA}]}\,[\ce{OH^-}]}{\cancel{[\ce{A^-}]}}=[\ce{H+}][\ce{OH^-}]=K_w=1.0\times10^{-14}$$
+
+於是 $\mathrm{p}K_a+\mathrm{p}K_b=14$。這條式子是後面幾節的共同入口：給酸的 $K_a$ 要算它的鹽水解，用 $K_b=\dfrac{K_w}{K_a}$。給鹼的 $K_b$ 要算它的銨鹽，用 $K_a=\dfrac{K_w}{K_b}$。同時它也說明**酸越強共軛鹼越弱**，兩串順序完全顛倒。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 酸 | $K_a$ | $\mathrm{p}K_a$ | 共軛鹼 | 共軛鹼的 $K_b$ |
+|---|---|---|---|---|
+| $\ce{HF}$ | $7.2\times10^{-4}$ | 3.14 | $\ce{F^-}$ | $1.4\times10^{-11}$ |
+| $\ce{CH3COOH}$ | $1.8\times10^{-5}$ | 4.74 | $\ce{CH3COO^-}$ | $5.6\times10^{-10}$ |
+| $\ce{H2CO3}$ 第一階 | $4.5\times10^{-7}$ | 6.35 | $\ce{HCO3^-}$ | $2.2\times10^{-8}$ |
+| $\ce{HCN}$ | $6.2\times10^{-10}$ | 9.21 | $\ce{CN^-}$ | $1.6\times10^{-5}$ |
+| $\ce{NH4+}$ | $5.6\times10^{-10}$ | 9.25 | $\ce{NH3}$ | $1.8\times10^{-5}$ |
+
+</div>
+
+數值題目都會給，這張表要記的是級距與最右欄的反向關係：$\ce{HCN}$ 比 $\ce{HF}$ 弱了六個數量級，所以 $\ce{CN^-}$ 就比 $\ce{F^-}$ 鹼了六個數量級。水也排得進這串，$\ce{H2O}$ 當鹼時共軛酸是 $\ce{H3O+}$，那是水溶液裡最強的酸，所以水是很弱的鹼。$\ce{Cl^-}$ 又更後面，因為 $\ce{HCl}$ 比 $\ce{H3O+}$ 還強，$\ce{Cl^-}$ 在水中幾乎沒有鹼性。完整順序是 $\ce{CH3COO^-} \gt \ce{F^-} \gt \ce{H2O} \gt \ce{Cl^-}$。
+
+<RelatedNote title="有機分子誰比較酸，以及 pKa 這把尺" href="/chem-org-acid-base" to="有機酸鹼">
+
+同一組原子換位置就改變酸性的四個因素（原子、共振、誘導、軌域）、胺的鹼性順序、常見有機酸從 $-10$ 到 50 的完整 pKa 尺，都在那一篇。本篇只用 $K_a$ 的數值大小，不比較結構。
+
+</RelatedNote>
+
+## 五、鹽類水解
+
+**鹽（salt）**是酸鹼中和的產物，溶到水裡**不一定是中性**。**水解（hydrolysis）**指鹽解離出的離子再與水反應、放出 $\ce{H+}$ 或 $\ce{OH^-}$。判準只有一句：**強的不水解，弱的才水解，誰水解就偏向誰那一邊的反面**。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 鹽的來源 | 例子 | 水溶液 | 為什麼 |
+|---|---|---|---|
+| 強酸＋強鹼 | $\ce{NaCl}$、$\ce{KBr}$、$\ce{NaNO3}$ | 中性 | 兩個離子都是強者剩下的殘骸，既抓不住質子也放不出質子 |
+| 弱酸＋強鹼 | $\ce{CH3COONa}$、$\ce{NaF}$、$\ce{NaCN}$ | 鹼性 | 弱酸的陰離子搶水的質子，留下 $\ce{OH^-}$ |
+| 強酸＋弱鹼 | $\ce{NH4Cl}$、$\ce{AlCl3}$ | 酸性 | 弱鹼的陽離子放出質子 |
+| 弱酸＋弱鹼 | $\ce{CH3COONH4}$ | 比 $K_a$ 與 $K_b$ | $K_a \gt K_b$ 偏酸，$K_a \lt K_b$ 偏鹼 |
+
+</div>
+
+陰離子水解就是共軛鹼在當鹼（$\ce{A^- + H2O <=> HA + OH^-}$），平衡常數用第四節那條式子換算成 $K_b=\dfrac{K_w}{K_a}$。陽離子水解有兩種來源。**銨型**是 $\ce{NH4+ <=> NH3 + H+}$，用 $K_a=\dfrac{K_w}{K_b}$ 算。**高電荷金屬離子**在水中是以水合離子的形式存在，中心離子把配位水的 O—H 電子拉走，質子就掉得出來：
+
+$$\ce{[Al(H2O)6]^3+ <=> [Al(H2O)5(OH)]^2+ + H+}$$
+
+**電荷越高、半徑越小的陽離子水解越強**，因為極化力就是電荷除以半徑。所以 $\ce{Al^3+}$ 的鹽明顯呈酸性，$\ce{Mg^2+}$ 微酸，$\ce{Na+}$ 與 $\ce{K+}$ 幾乎不水解。由此也可以反推母酸的強弱：同濃度的一系列鹽，pH 越高代表陰離子越會水解、鹼性越強，對應的母酸就越弱。$\ce{KX}$、$\ce{KY}$、$\ce{KZ}$ 的 pH 分別是 7.0、9.0、11.0 時，酸性順序就是 $\ce{HX} \gt \ce{HY} \gt \ce{HZ}$，其中 $\ce{KX}$ 呈中性代表 $\ce{HX}$ 是強酸。
+
+### 溶液裡誰多誰少
+
+弱酸鹽的物種排序反覆出現。以 0.10 M 醋酸鈉為例：
+
+$$[\ce{Na+}] \gt [\ce{CH3COO^-}] \gt [\ce{OH^-}] \gt [\ce{CH3COOH}] \gt [\ce{H+}]$$
+
+$\ce{Na+}$ 完全不參與反應，濃度就是配製濃度、最多。$\ce{CH3COO^-}$ 只水解掉一點點，僅次於它。每水解一次同時生出一個 $\ce{OH^-}$ 與一個 $\ce{CH3COOH}$，兩者本來相等，但水自己還會再貢獻一點 $\ce{OH^-}$，所以 $[\ce{OH^-}]$ 略多於 $[\ce{CH3COOH}]$。溶液呈鹼性，$[\ce{H+}]$ 最少。弱酸與強鹼**等莫耳**混合後得到的就是這種溶液，排序一模一樣，但前提是陰離子的鹼性不算太強。陰離子鹼性很強（水解程度大）時，$[\ce{OH^-}]$ 會擠到 $[\ce{CH3COO^-}]$ 前面，順序要重新排。
+
+## 六、多質子酸
+
+**多質子酸（polyprotic acid）**一次只脫一個質子，每一階有自己的 $K_a$。以磷酸為例，三個常數依序是 $K_{a1}=7.5\times10^{-3}$、$K_{a2}=6.2\times10^{-8}$、$K_{a3}=4.8\times10^{-13}$，箭頭上的 $-\ce{H+}$ 代表那一步放掉一個質子：
+
+$$\ce{H3PO4 <=>[-H+] H2PO4^- <=>[-H+] HPO4^2- <=>[-H+] PO4^3-}$$
+
+$K_{a1}\gg K_{a2}\gg K_{a3}$，每差一階小 $10^4$ 到 $10^5$ 倍，因為從中性分子拔第一個質子最容易，要從已經帶 $-1$ 電的離子上再拔一個，靜電上困難得多。**推論是溶液的 pH 只由第一階決定**：算多質子酸的 pH 時把它當成 $K_{a1}$ 的一元弱酸就好，後面兩階貢獻的 $\ce{H+}$ 少了好幾個數量級。
+
+### 可解離的質子不是數化學式裡有幾個 H
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 化學式 | 可解離質子 | 為什麼 |
+|---|---|---|
+| $\ce{H3PO4}$ 磷酸 | 3 | 三個 H 都接在 O 上 |
+| $\ce{H3PO3}$ 亞磷酸 | 2 | 其中一個 H 直接接在 P 上，P—H 不解離 |
+| $\ce{H3BO3}$ 硼酸 | 1 | 它不放自己的 H，而是搶水的 $\ce{OH^-}$ 生成 $\ce{[B(OH)4]^-}$、留下一個 $\ce{H+}$ |
+| $\ce{H2C2O4}$ 草酸 | 2 | 兩個羧基 |
+
+</div>
+
+### 哪個物種佔多數，看 pH 落在哪兩個 pKa 之間
+
+以磷酸的 $\mathrm{p}K_{a1}=2.12$、$\mathrm{p}K_{a2}=7.21$、$\mathrm{p}K_{a3}=12.32$ 為例，pH 低於 2.12 時主要是 $\ce{H3PO4}$，2.12 到 7.21 之間是 $\ce{H2PO4^-}$，7.21 到 12.32 之間是 $\ce{HPO4^2-}$，高於 12.32 才是 $\ce{PO4^3-}$。規則一句話：**pH 每越過一個 $\mathrm{p}K_a$，主要物種就往右換一個**，落在兩個 $\mathrm{p}K_a$ 正中間時中間那個物種佔壓倒性多數。
+
+要精確的比例，就把 $K_a=\dfrac{[\ce{H+}][\text{脫質子型}]}{[\text{帶質子型}]}$ 解出濃度比、再取對數：
+
+$$\frac{[\text{脫質子型}]}{[\text{帶質子型}]}=\frac{K_a}{[\ce{H+}]}=10^{\ \mathrm{pH}-\mathrm{p}K_a}$$
+
+pH 6.21、$\mathrm{p}K_{a2}=7.21$ 時 $\dfrac{[\ce{HPO4^2-}]}{[\ce{H2PO4^-}]}=10^{-1.00}=\dfrac{1}{10}$。恰好 $\mathrm{pH}=\mathrm{p}K_{a2}$ 時兩者相等，這就是滴定曲線上讀出 $\mathrm{p}K_{a2}$ 的位置。
+
+### 兩性中間物的 pH
+
+$\ce{H2PO4^-}$ 這種**既能再放出質子、又能收回質子**的物種叫兩性物種，它的溶液 pH 由夾住它的那兩個 $\mathrm{p}K_a$ 取平均：
+
+$$\mathrm{pH}\approx\frac{1}{2}\left(\mathrm{p}K_{a1}+\mathrm{p}K_{a2}\right)$$
+
+為什麼是平均：兩性物種同時在做兩件相反的事，往下丟質子受 $K_{a2}$ 控制，往上收質子是 $K_{a1}$ 那一步的逆反應。兩股趨勢拉平時得到 $[\ce{H+}]\approx\sqrt{K_{a1}K_{a2}}$，取負對數後乘積開根號就變成相加除以 2，這也是它幾乎與濃度無關的原因。
+
+<WorkedExample source="慈濟 108・化學 8" answer="(C) 4.66" tags={["兩性中間物", "夾住它的兩個 pKa"]}>
+
+**題目**　$\ce{H3PO4}$ 在 $25\ ^\circ\mathrm{C}$ 的 $\mathrm{p}K_{a1}=2.12$、$\mathrm{p}K_{a2}=7.20$、$\mathrm{p}K_{a3}=12.32$，0.10 M $\ce{NaH2PO4}$ 水溶液的 pH 是多少？
+
+**解**　$\ce{NaH2PO4}$ 溶解後給出 $\ce{H2PO4^-}$，它是被 $K_{a1}$ 與 $K_{a2}$ 夾住的兩性物種：
+
+$$\mathrm{pH}\approx\frac{2.12+7.20}{2}=4.66$$
+
+抓住「夾住它的那兩個」就不會拿錯：換成 $\ce{Na2HPO4}$ 時 $\ce{HPO4^2-}$ 被 $K_{a2}$ 與 $K_{a3}$ 夾住，$\mathrm{pH}\approx\dfrac{7.20+12.32}{2}=9.76$。濃度 0.10 M 在計算裡完全沒用到。本題的 $\mathrm{p}K_{a2}=7.20$ 由題目直接給定，與前面用 $K_a$ 換算出的 $7.21$ 差在小數點後兩位，兩者都通行。
+
+</WorkedExample>
+
+<RelatedNote title="胺基酸的等電點用的是同一條式子" href="/chem-org-acid-base" to="有機酸鹼">
+
+胺基酸同時帶羧基與胺基，本身就是兩性物種，等電點 pI 就是取夾住兩性離子的那兩個 $\mathrm{p}K_a$ 平均。側鏈也帶電時該挑哪兩個，寫在那一篇。
+
+</RelatedNote>
+
+## 七、緩衝溶液
+
+**緩衝溶液（buffer solution）**同時含有**一組共軛酸鹼對**，而且兩者的量都不算小，因此加入少量強酸或強鹼時 pH 幾乎不動。原理是兩個成員各擋一邊：加入強酸時共軛鹼把它吃掉（$\ce{A^- + H+ -> HA}$），加入強鹼時弱酸把它吃掉（$\ce{HA + OH^- -> A^- + H2O}$）。兩種情形都只是把共軛對的比例挪動一點，而 pH 由**比例**決定，所以變化很小。
+
+辨識緩衝溶液只要三步：① 是不是弱酸或弱鹼？② 有沒有配上它的共軛物？③ 兩者是不是都還剩著（沒有被完全中和）？
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 混合內容 | 是不是緩衝 |
+|---|---|
+| 弱酸＋它的鹽，如 $\ce{HCO2H}$＋$\ce{NaHCO2}$ | 是，酸性緩衝 |
+| 弱鹼＋它的鹽，如 $\ce{NH3}$＋$\ce{NH4Cl}$ | 是，鹼性緩衝 |
+| 多質子酸的相鄰兩階，如 $\ce{NaH2PO4}$＋$\ce{Na2HPO4}$ | 是，兩者本來就是一組共軛對 |
+| 弱酸過量＋強鹼，如 20 mL 0.10 M $\ce{CH3COOH}$＋15 mL 0.10 M $\ce{NaOH}$ | 是，鹼把一部分弱酸變成共軛鹼 |
+| 弱鹼過量＋強酸，如 $\ce{Na2CO3}$＋少量 $\ce{HCl}$ | 是，酸把一部分 $\ce{CO3^2-}$ 變成 $\ce{HCO3^-}$ |
+| 強酸＋它的鹽，如 $\ce{HCl}$＋$\ce{NaCl}$ | 不是，強酸完全解離，$\ce{Cl^-}$ 沒有鹼性 |
+| 強酸＋強鹼等莫耳 | 不是，只剩中性鹽 |
+| 弱酸＋強鹼等莫耳 | 不是，弱酸剛好耗盡，只剩共軛鹼 |
+| 弱酸＋不成對的另一種鹽，如 $\ce{CH3COOH}$＋丙酸鈉 | 不是，兩者不是同一組共軛對 |
+| 弱鹼＋強鹼，如 $\ce{Na2CO3}$＋$\ce{NaOH}$ | 不是，兩者都是鹼，沒有共軛酸 |
+
+</div>
+
+### Henderson-Hasselbalch 方程式
+
+把 $K_a$ 的定義解出 $[\ce{H+}]=K_a\dfrac{[\ce{HA}]}{[\ce{A^-}]}$，兩邊取負對數（分數會**上下顛倒**，這是最容易寫反的一步）：
+
+$$\mathrm{pH}=\mathrm{p}K_a+\log\frac{[\ce{A^-}]}{[\ce{HA}]}$$
+
+分子 $[\ce{A^-}]$ 是共軛鹼、分母 $[\ce{HA}]$ 是弱酸，**沒帶質子的那個放分子**。**酸性緩衝**裡（如醋酸與醋酸鈉）共軛鹼通常以鹽的形式加入。**鹼性緩衝則反過來**，鹽提供的是共軛酸：$\ce{NH3}/\ce{NH4Cl}$ 這組要用 $\ce{NH4+}$ 的 $\mathrm{p}K_a=9.25$，$\ce{NH3}$ 才是沒帶質子的那個，$\mathrm{pH}=9.25+\log\dfrac{[\ce{NH3}]}{[\ce{NH4+}]}$。因為兩者在同一杯溶液裡、體積相同，**莫耳數比可以直接代替濃度比**。也因為只看比值，加水稀釋時兩者同倍下降、比值不變，所以**稀釋不改變緩衝液的 pH**。$[\ce{A^-}]=[\ce{HA}]$ 時 $\log 1=0$，$\mathrm{pH}=\mathrm{p}K_a$。共軛鹼較多時 pH 高於 $\mathrm{p}K_a$，弱酸較多時低於 $\mathrm{p}K_a$。
+
+<BufferPh client:visible />
+
+### 緩衝範圍與緩衝容量
+
+**緩衝範圍（buffer range）**是 $\mathrm{p}K_a\pm1$，對應共軛對的比例從 $1:10$ 到 $10:1$。超出這個範圍其中一員就少到擋不住外加的酸鹼，緩衝失效。由此得到**挑酸的原則**：要配某個 pH 的緩衝液，就挑 $\mathrm{p}K_a$ 最接近它的弱酸。$K_a=2.6\times10^{-9}$ 的酸 $\mathrm{p}K_a=8.59$，配 pH 8.60 剛好。$K_a=1.3\times10^{-5}$ 的丙酸 $\mathrm{p}K_a=4.89$，配 pH 5.0 剛好。$\ce{NH4+}$ 的 $\mathrm{p}K_a=9.25$ 只配得出 pH 9 附近的鹼性緩衝。
+
+**緩衝容量（buffer capacity）**是「能吃掉多少強酸強鹼而 pH 不明顯改變」，取決於兩件事：**總濃度越大越好**（能吃的量正比於莫耳數，0.50 M／0.50 M 勝過 0.10 M／0.10 M），**比例越接近 $1:1$ 越好**（兩邊庫存都充足，最佳點就是 $\mathrm{pH}=\mathrm{p}K_a$）。要微調現成緩衝液的 pH，加入少量該弱酸使 pH 下降，加入少量它的鹽使 pH 上升，加水則不變。
+
+<WorkedExample source="中國醫 111・化學 15" answer="(D) 6.73" tags={["緩衝配製", "多質子酸"]}>
+
+**題目**　將 25.0 毫升的 0.200 M $\ce{HCl}$、75.0 毫升的 0.100 M $\ce{NaOH}$ 及 50.0 毫升的 0.200 M $\ce{NaH2PO4}$ 混合後，所得溶液的 pH 為何？（$\ce{H3PO4}$ 的 $K_{a1}=7.5\times10^{-3}$、$K_{a2}=6.2\times10^{-8}$、$K_{a3}=4.8\times10^{-13}$）
+
+**解**　① 強酸與強鹼先互相抵銷：$\ce{HCl}$ 有 $25.0\times0.200=5.00$ mmol，$\ce{NaOH}$ 有 $75.0\times0.100=7.50$ mmol，淨剩 2.50 mmol 的 $\ce{OH^-}$。
+
+② 這些 $\ce{OH^-}$ 去拔 $\ce{H2PO4^-}$ 的質子（$\ce{H2PO4^- + OH^- -> HPO4^2- + H2O}$）。原有 $\ce{H2PO4^-}$ 為 $50.0\times0.200=10.0$ mmol，反應掉 2.50 mmol 後剩 7.50 mmol，同時生成 $\ce{HPO4^2-}$ 2.50 mmol。
+
+③ 剩下的正好是一組共軛對，套 Henderson，其中 $\mathrm{p}K_{a2}=-\log(6.2\times10^{-8})=7.21$：
+
+$$\mathrm{pH}=7.21+\log\frac{2.50\ \mathrm{mmol}}{7.50\ \mathrm{mmol}}=7.21+\log\frac{1}{3}=7.21-0.48=6.73$$
+
+用的是 $K_{a2}$ 而不是 $K_{a1}$，因為這一對裡交出質子的是 $\ce{H2PO4^-}$。體積完全不必算，莫耳數比就夠。
+
+</WorkedExample>
+
+血液靠 $\ce{H2CO3}/\ce{HCO3^-}$ 這組共軛對把 pH 穩在 7.40。把 $\mathrm{p}K_{a1}=6.35$ 代進 Henderson 得 $\log\dfrac{[\ce{HCO3^-}]}{[\ce{H2CO3}]}=7.40-6.35=1.05$，比值約 11。緩衝容量可以分成兩個方向看：擋外來酸靠共軛鹼那一邊的庫存，共軛鹼越多擋酸能力越強，代價是擋鹼的能力隨之變差。血液的比值遠離 $1:1$、共軛鹼庫存特別厚，正好對應人體代謝持續產酸、隨時需要擋酸的需求。
+
+## 八、滴定曲線與指示劑
+
+**滴定（titration）**是把已知濃度的鹼（或酸）逐滴加入待測的酸（或鹼），**當量點（equivalence point）**是兩者恰好照係數比反應完的那一刻。滴定曲線就是 pH 對「滴入的體積」作的圖。以強鹼滴定弱酸為例，全程分成四段，每一段用的公式不同：
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 階段 | 溶液裡有什麼 | 怎麼算 pH |
+|---|---|---|
+| 起點，尚未加鹼 | 只有弱酸 | $[\ce{H+}]=\sqrt{K_aC}$ |
+| 當量點之前 | 弱酸＋已生成的共軛鹼 | Henderson，用兩者的毫莫耳數比 |
+| 當量點 | 只剩共軛鹼 | 共軛鹼水解，$K_b=\dfrac{K_w}{K_a}$ |
+| 當量點之後 | 過量的強鹼 | 直接算過量 $\ce{OH^-}$ 的濃度 |
+
+</div>
+
+**半當量點（half-equivalence point）**是加入一半當量鹼的那一點，此時恰好一半弱酸被中和成共軛鹼，$[\ce{A^-}]=[\ce{HA}]$，Henderson 的對數項為零，於是 $\mathrm{pH}=\mathrm{p}K_a$。這是實驗量 $\mathrm{p}K_a$ 的標準方法，也是多質子酸曲線上讀 $\mathrm{p}K_{a2}$ 的位置（$[\ce{H2PO4^-}]=[\ce{HPO4^2-}]$ 的那一點）。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 滴定組合 | 當量點 pH | 為什麼 | 指示劑 |
+|---|---|---|---|
+| 強酸＋強鹼 | 7 | 產物是不水解的中性鹽 | 酚酞或甲基橙都可以 |
+| 弱酸＋強鹼 | 大於 7 | 產物是弱酸的共軛鹼，水解放出 $\ce{OH^-}$ | 酚酞 |
+| 弱鹼＋強酸 | 小於 7 | 產物是弱鹼的共軛酸，水解放出 $\ce{H+}$ | 甲基橙 |
+
+</div>
+
+<TitrationCurve client:visible />
+
+弱酸的曲線與強酸的差在兩點：起點的 pH 較高（弱酸沒有完全解離），中段多了一塊平緩的緩衝區。酸越弱，緩衝區的位置越高、當量點附近的垂直落差越短，指示劑越難挑。多質子酸有幾個可解離的質子，曲線就有幾個轉折，用 $\ce{HCl}$ 滴定 $\ce{Na2X}$ 時第一個當量點把 $\ce{X^2-}$ 全變成 $\ce{HX^-}$，再繼續加酸才開始生成 $\ce{H2X}$，所以第一與第二個當量點**之間**的溶液同時含有 $\ce{HX^-}$ 與 $\ce{H2X}$。
+
+### 指示劑
+
+**指示劑（indicator）**本身就是一個弱酸，記作 $\ce{HIn}$，酸式與鹼式兩種形態顏色不同：
+
+$$\ce{HIn <=> H+ + In^-}\qquad \mathrm{pH}=\mathrm{p}K_a+\log\frac{[\ce{In^-}]}{[\ce{HIn}]}$$
+
+人眼大約在兩形態比例 $1:10$ 到 $10:1$ 之間才看得出變化，所以**變色範圍就是 $\mathrm{p}K_a\pm1$**。選指示劑的原則是**變色範圍要蓋住當量點的 pH**：用 $\ce{NaOH}$ 滴定醋酸的當量點在 pH 8 到 9，就挑 $\mathrm{p}K_a$ 接近 8 的，挑 $\mathrm{p}K_a$ 只有 1 到 4 的會在還沒到當量點時就變色。
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 指示劑 | 變色範圍 | 顏色變化 |
+|---|---|---|
+| 甲基橙（methyl orange） | 3.1 到 4.4 | 紅到黃 |
+| 溴瑞香草藍（bromothymol blue） | 6.0 到 7.6 | 黃到藍 |
+| 酚酞（phenolphthalein） | 8.3 到 10.0 | 無色到粉紅 |
+
+</div>
+
+酚酞遇鹼變粉紅是實驗室最常用的判讀法，電解中性鹽的水溶液時陰極生成 $\ce{OH^-}$，加了酚酞的話陰極附近會先變粉紅、陽極附近維持無色。由 pH 反推兩形態比例直接用 $\dfrac{[\ce{In^-}]}{[\ce{HIn}]}=10^{\ \mathrm{pH}-\mathrm{p}K_a}$，例如 $\mathrm{p}K_a=8$ 的指示劑在 pH 6.0 時比值是 $10^{-2}$，$\ce{HIn}$ 是 $\ce{In^-}$ 的 100 倍。要讓顏色從「80% 呈鹼式」翻到「80% 呈酸式」，比例得從 $\dfrac{4}{1}$ 變成 $\dfrac{1}{4}$，pH 必須下降 $2\log 4=1.2$。
+
+<WorkedExample source="義守 114・化學 29" answer="(A) 0.39 M" tags={["緩衝段", "反推原濃度"]}>
+
+**題目**　將 25.0 mL 未知濃度的氫氟酸溶液用 0.200 M $\ce{NaOH}$ 滴定，加入 20.0 mL 鹼溶液後，滴定瓶中的 pH 為 3.00，則原來氫氟酸溶液的濃度是多少？（$K_a(\ce{HF})=7.1\times10^{-4}$）
+
+**解**　① pH 3.00 代表 $[\ce{H+}]=1.0\times10^{-3}$ M。此時溶液裡同時有 $\ce{HF}$ 與 $\ce{F^-}$，屬緩衝段，由 $K_a$ 的定義解出比例：
+
+$$\frac{[\ce{F^-}]}{[\ce{HF}]}=\frac{K_a}{[\ce{H+}]}=\frac{7.1\times10^{-4}}{1.0\times10^{-3}}=0.71$$
+
+② $\ce{F^-}$ 全部來自被中和掉的 $\ce{HF}$，莫耳數等於加入的 $\ce{NaOH}$，即 $20.0\times0.200=4.00$ mmol。由比例回推還沒被中和的 $\ce{HF}$ 是 $\dfrac{4.00}{0.71}=5.63$ mmol。
+
+③ 原有的 $\ce{HF}$ 是「還剩的」加上「已被中和的」：
+
+$$C=\frac{(5.63+4.00)\ \mathrm{mmol}}{25.0\ \mathrm{mL}}=0.385\approx0.39\ \mathrm{M}$$
+
+漏掉第 ③ 步、只把剩下的 $\ce{HF}$ 當成原始量，會整整少算 4.00 mmol。
+
+</WorkedExample>
+
+<RelatedNote title="平衡常數本身怎麼用" href="/chem-equilibrium" to="化學平衡">
+
+$K$ 的寫法、反應商 $Q$ 與 $K$ 比大小判方向、勒沙特列原理下加東西或改溫度會往哪邊移，都在那一篇。本篇的 $K_a$、$K_b$、$K_w$ 全部是它的特例。
+
+</RelatedNote>
+
+<RelatedNote title="難溶鹽的溶解度為什麼會被 pH 改變" href="/chem-ksp" to="溶解度平衡與錯離子">
+
+$K_{sp}$、同離子效應、加酸讓 $\ce{CaCO3}$ 這類鹽溶得更多（酸把陰離子拉去變成弱酸）、加氨形成錯離子，都在那一篇。
+
+</RelatedNote>
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="25 °C 下，0.10 M 的弱酸 HA 水溶液測得 pH ＝ 3.00。下列何者正確？"
+  options={[
+    "Ka 約為 1.0×10⁻⁵，解離百分比為 1.0%",
+    "Ka 約為 1.0×10⁻³，解離百分比為 1.0%",
+    "Ka 約為 1.0×10⁻⁵，解離百分比為 10%",
+    "Ka 約為 1.0×10⁻⁶，解離百分比為 0.1%"
+  ]}
+  answer="(A) Ka 約為 1.0×10⁻⁵，解離百分比為 1.0%"
+  steps={[
+    "pH 3.00 代表 $[\\ce{H+}]=10^{-3.00}=1.0\\times10^{-3}$ M。",
+    "解離百分比 $\\alpha=\\dfrac{[\\ce{H+}]}{C}=\\dfrac{1.0\\times10^{-3}}{0.10}=1.0\\%$。",
+    "設解離掉的量為 $x$，則 $K_a=\\dfrac{x^2}{C-x}\\approx\\dfrac{(1.0\\times10^{-3})^2}{0.10}=1.0\\times10^{-5}$。",
+    "檢查近似：解離了 1.0%、遠小於 5%，把分母的 $x$ 丟掉沒有問題。(B) 把 $K_a$ 與 $[\\ce{H+}]$ 搞混，(C)(D) 的解離百分比與 pH 對不起來。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="25 °C 下，$1.0\\times10^{-8}$ M 的 HCl 水溶液，其 pH 最接近下列何者？"
+  options={["8.00", "7.00", "6.98", "6.00"]}
+  answer="(C) 6.98"
+  steps={[
+    "直接取負對數會得到 pH ＝ 8.00，但那代表鹼性，酸的溶液不可能鹼性 → (A) 錯。",
+    "濃度已經低於水自解離提供的 $10^{-7}$ M，水的貢獻不能忽略。",
+    "電荷平衡 $[\\ce{H+}]=C+\\dfrac{K_w}{[\\ce{H+}]}$，解得 $[\\ce{H+}]=\\dfrac{C+\\sqrt{C^2+4K_w}}{2}=1.05\\times10^{-7}$ M。",
+    "$\\mathrm{pH}=-\\log(1.05\\times10^{-7})=6.98$，比 7 略小，符合「仍是酸性」。通則是酸再怎麼稀釋，pH 只會逼近 7 而不會超過 7。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="已知 HF 的 Ka ＝ 7.2×10⁻⁴、HCN 的 Ka ＝ 6.2×10⁻¹⁰。下列四種 0.10 M 水溶液的 pH 由小到大排列，何者正確？"
+  options={[
+    "NaCl ＜ NH₄Cl ＜ NaF ＜ NaCN",
+    "NH₄Cl ＜ NaCl ＜ NaCN ＜ NaF",
+    "NaCN ＜ NaF ＜ NaCl ＜ NH₄Cl",
+    "NH₄Cl ＜ NaCl ＜ NaF ＜ NaCN"
+  ]}
+  answer="(D) NH₄Cl ＜ NaCl ＜ NaF ＜ NaCN"
+  steps={[
+    "$\\ce{NH4Cl}$ 是強酸弱鹼鹽，$\\ce{NH4+}$ 水解放出 $\\ce{H+}$ → 酸性，pH 最小。",
+    "$\\ce{NaCl}$ 是強酸強鹼鹽，兩個離子都不水解 → 中性 pH 7。",
+    "$\\ce{NaF}$ 與 $\\ce{NaCN}$ 都是弱酸強鹼鹽 → 陰離子水解，pH 大於 7。",
+    "母酸越弱共軛鹼越強：$\\ce{HCN}$ 比 $\\ce{HF}$ 弱六個數量級 → $\\ce{CN^-}$ 鹼性最強，$\\ce{NaCN}$ 的 pH 最大。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="下列各組水溶液以等體積混合後，何者為緩衝溶液？"
+  options={[
+    "0.10 M HCl 與 0.10 M NaCl",
+    "0.20 M CH₃COOH 與 0.10 M NaOH",
+    "0.10 M CH₃COOH 與 0.10 M NaOH",
+    "0.10 M Na₂CO₃ 與 0.10 M NaOH"
+  ]}
+  answer="(B) 0.20 M CH₃COOH 與 0.10 M NaOH"
+  steps={[
+    "(A) 錯：$\\ce{HCl}$ 是強酸、完全解離，$\\ce{Cl^-}$ 沒有鹼性，兩者不構成共軛對。",
+    "(B) 對：弱酸是鹼的 2 倍，一半被中和成 $\\ce{CH3COO^-}$、一半仍是 $\\ce{CH3COOH}$ → 1:1 的共軛對，pH ＝ pKa。",
+    "(C) 錯：等莫耳恰好到當量點，弱酸被吃光只剩共軛鹼，那是鹼性鹽溶液不是緩衝液。",
+    "(D) 錯：兩者都是鹼，沒有共軛酸可以擋強鹼。判準三步是弱的、有共軛物、兩者都還剩著。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="將 0.20 mol 的 CH₃COOH 與 0.10 mol 的 CH₃COONa 溶於水配成 1.0 L 溶液，其 pH 為何？（醋酸的 pKa ＝ 4.74，log 2 ＝ 0.30）"
+  options={["4.44", "4.74", "5.04", "5.34"]}
+  answer="(A) 4.44"
+  steps={[
+    "共軛鹼是 $\\ce{CH3COO^-}$（0.10 mol），弱酸是 $\\ce{CH3COOH}$（0.20 mol）。",
+    "$\\mathrm{pH}=\\mathrm{p}K_a+\\log\\dfrac{[\\ce{A^-}]}{[\\ce{HA}]}=4.74+\\log\\dfrac{0.10}{0.20}$。",
+    "$\\log\\dfrac{1}{2}=-\\log 2=-0.30$，所以 $\\mathrm{pH}=4.74-0.30=4.44$。共軛鹼比弱酸少，pH 必定低於 pKa，可先刷掉大於 4.74 的選項。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="已知 H₂CO₃ 的 pKa₁ ＝ 6.35、pKa₂ ＝ 10.33。0.10 M NaHCO₃ 水溶液的 pH 最接近下列何者？"
+  options={["6.35", "7.00", "8.34", "10.33"]}
+  answer="(C) 8.34"
+  steps={[
+    "$\\ce{NaHCO3}$ 給出 $\\ce{HCO3^-}$，它既能再放質子變 $\\ce{CO3^2-}$，也能收回質子變 $\\ce{H2CO3}$，是兩性物種。",
+    "兩性物種的 pH 取夾住它的兩個 pKa 平均：$\\mathrm{pH}\\approx\\dfrac{6.35+10.33}{2}=8.34$。",
+    "式子裡沒有濃度，所以 0.10 M 用不到，換成 0.50 M 答案一樣。選 6.35 或 10.33 是誤把它當成單一階的解離，選 7.00 是誤以為「鹽就中性」。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="以 0.100 M NaOH 滴定 25.0 mL 的 0.100 M 弱酸 HA，加入 12.5 mL NaOH 時測得 pH ＝ 4.80。下列敘述何者正確？"
+  options={[
+    "HA 的 Ka 約為 1.0×10⁻⁷",
+    "當量點的 pH 等於 7.00",
+    "此時溶液中 [A⁻] 是 [HA] 的 2 倍",
+    "HA 的 pKa 為 4.80，且當量點的 pH 大於 7"
+  ]}
+  answer="(D) HA 的 pKa 為 4.80，且當量點的 pH 大於 7"
+  steps={[
+    "當量點需要 $25.0\\ \\mathrm{mL}\\times0.100\\ \\mathrm{M}=2.50$ mmol 的鹼，即 25.0 mL。加入 12.5 mL 正是<b>半當量點</b>。",
+    "半當量點時一半 HA 變成 $\\ce{A^-}$，$[\\ce{A^-}]=[\\ce{HA}]$，Henderson 的對數項為 0 → $\\mathrm{pH}=\\mathrm{p}K_a=4.80$，(C) 的比值是 1:1 不是 2:1。",
+    "(A) 錯：$K_a=10^{-4.80}=1.6\\times10^{-5}$，不是 $10^{-7}$。",
+    "當量點只剩共軛鹼 $\\ce{A^-}$，水解放出 $\\ce{OH^-}$ → pH 大於 7，(B) 錯、(D) 對。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="某指示劑 HIn 的 Ka ＝ 1.0×10⁻⁵，酸式為紅色、鹼式為黃色。把它加入 pH ＝ 3.0 的溶液，觀察到的顏色與 [In⁻]/[HIn] 的比值為何？"
+  options={[
+    "黃色，比值 100",
+    "紅色，比值 0.01",
+    "紅色，比值 100",
+    "黃色，比值 0.01"
+  ]}
+  answer="(B) 紅色，比值 0.01"
+  steps={[
+    "$\\mathrm{p}K_a=-\\log(1.0\\times10^{-5})=5.0$。",
+    "$\\dfrac{[\\ce{In^-}]}{[\\ce{HIn}]}=10^{\\ \\mathrm{pH}-\\mathrm{p}K_a}=10^{3.0-5.0}=10^{-2}=0.01$。",
+    "比值小於 1 代表酸式 $\\ce{HIn}$ 佔多數，是鹼式的 100 倍 → 呈酸式的<b>紅色</b>。變色範圍 $\\mathrm{p}K_a\\pm1$ 即 pH 4 到 6，pH 3.0 已在範圍之外，顏色是純粹的酸式色。"
+  ]}
+/>
+
+<Memorize items={[
+  "水的自解離：<ul><li>$K_w=[\\ce{H+}][\\ce{OH^-}]=1.0\\times10^{-14}$（25 °C），任何水溶液都成立</li><li>$\\mathrm{pH}=-\\log[\\ce{H+}]$，$\\mathrm{pH}+\\mathrm{pOH}=14$（25 °C）</li><li>自解離吸熱，升溫 $K_w$ 變大、純水 pH 下降但仍是中性</li><li>$-\\log(a\\times10^{-n})=n-\\log a$，$\\log 2=0.301$、$\\log 3=0.477$、$\\log 7=0.845$</li></ul>",
+  "強酸強鹼與極稀溶液：<ul><li>完全解離，$[\\ce{H+}]$＝濃度 $\\times$ 可放出的質子數，強鹼先算 pOH 再用 $14-\\mathrm{pOH}$</li><li>混合先算過量毫莫耳數，再除以混合後的<b>總體積</b></li><li>濃度接近 $10^{-7}$ M 時 $[\\ce{H+}]=\\dfrac{C+\\sqrt{C^2+4K_w}}{2}$</li><li>$5\\times10^{-8}$ M 強酸的 pH 是 6.9，酸再稀也不會超過 7</li></ul>",
+  "弱酸弱鹼與解離度：<ul><li>$[\\ce{H+}]\\approx\\sqrt{K_a C}$，$[\\ce{OH^-}]\\approx\\sqrt{K_b C}$，$C$ 是初濃度</li><li>$\\alpha=\\dfrac{[\\ce{H+}]}{C}=\\sqrt{\\dfrac{K_a}{C}}$，稀釋使 $\\alpha$ 上升但 $[\\ce{H+}]$ 下降</li><li>近似要過 5% 規則，$\\dfrac{C}{K_a}\\ge400$ 才安全，否則解二次式</li><li>弱酸溶液裡含量最多的是沒解離的酸分子</li></ul>",
+  "共軛酸鹼對：<ul><li>只差一個 $\\ce{H+}$，其他原子的接法完全不動</li><li>$K_a\\cdot K_b=K_w$，$\\mathrm{p}K_a+\\mathrm{p}K_b=14$</li><li>酸越強共軛鹼越弱，兩串順序完全顛倒</li><li>鹼性 $\\ce{CH3COO^-} \\gt \\ce{F^-} \\gt \\ce{H2O} \\gt \\ce{Cl^-}$</li></ul>",
+  "鹽類水解：<ul><li>強酸強鹼鹽中性</li><li>弱酸強鹼鹽鹼性，陰離子水解，$K_b=\\dfrac{K_w}{K_a}$</li><li>強酸弱鹼鹽酸性，$\\ce{NH4+}$ 與 $\\ce{Al^3+}$ 水解</li><li>陽離子電荷越高、半徑越小，水解越強</li><li>同濃度的鹽 pH 越大，代表母酸越弱</li></ul>",
+  "多質子酸：<ul><li>$K_{a1}\\gg K_{a2}\\gg K_{a3}$，溶液 pH 只由第一階決定</li><li>$\\ce{H3PO3}$ 只有 2 個可解離質子，$\\ce{H3BO3}$ 只有 1 個</li><li>pH 每越過一個 $\\mathrm{p}K_a$，主要物種往右換一個</li><li>$\\dfrac{[\\text{脫質子型}]}{[\\text{帶質子型}]}=10^{\\ \\mathrm{pH}-\\mathrm{p}K_a}$</li><li>兩性中間物 $\\mathrm{pH}\\approx\\dfrac{1}{2}(\\mathrm{p}K_{a1}+\\mathrm{p}K_{a2})$，與濃度幾乎無關</li></ul>",
+  "緩衝液的 pH 公式：<ul><li>$\\mathrm{pH}=\\mathrm{p}K_a+\\log\\dfrac{[\\ce{A^-}]}{[\\ce{HA}]}$，分子是共軛鹼</li><li>取負對數會把分數上下顛倒，別寫反</li><li>同一杯溶液可直接用莫耳數比，稀釋不改變 pH</li><li>$[\\ce{A^-}]=[\\ce{HA}]$ 時 $\\mathrm{pH}=\\mathrm{p}K_a$</li></ul>",
+  "緩衝範圍與緩衝容量：<ul><li>有效範圍 $\\mathrm{p}K_a\\pm1$，對應比例 $1:10$ 到 $10:1$</li><li>配某個 pH 就挑 $\\mathrm{p}K_a$ 最接近它的弱酸</li><li>總濃度越大、比例越接近 $1:1$，緩衝容量越大</li><li>加弱酸 pH 降、加它的鹽 pH 升、加水不變</li></ul>",
+  "滴定的四個階段：<ul><li>起點用 $[\\ce{H+}]=\\sqrt{K_aC}$</li><li>當量點之前用 Henderson</li><li>當量點用共軛鹼水解，$K_b=\\dfrac{K_w}{K_a}$</li><li>當量點之後直接算過量 $\\ce{OH^-}$</li><li>半當量點 $\\mathrm{pH}=\\mathrm{p}K_a$，這是實驗量 $\\mathrm{p}K_a$ 的方法</li></ul>",
+  "當量點與指示劑：<ul><li>強酸強鹼當量點 pH＝7、弱酸強鹼大於 7、弱鹼強酸小於 7</li><li>指示劑本身是弱酸，變色範圍 $\\mathrm{p}K_a\\pm1$</li><li>選指示劑的原則是變色範圍蓋住當量點</li><li>甲基橙 3.1 到 4.4 紅轉黃，酚酞 8.3 到 10.0 無色轉粉紅</li></ul>",
+]} />

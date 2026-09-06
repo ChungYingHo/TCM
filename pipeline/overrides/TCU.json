@@ -20,5 +20,38 @@
     "explanation": "依慈濟 114 學年度釋疑：升支主動吸收 Na⁺，加強它會提高髓質滲透壓、促進集尿管再吸收水而使尿液更濃，(C) 不符題意；打開降支的水通道使更多水在降支被再吸收、稀釋髓質滲透壓，干擾整體濃縮機制而產生較稀的尿液，正解為 (B)。原答案卡誤植為 (C)。",
     "errata_applied": true,
     "needs_review": false
+  },
+  "TCU-113-biology-40": {
+    "correct_answer": [
+      "A",
+      "D"
+    ],
+    "original_answer": [
+      "D"
+    ],
+    "explanation": "依慈濟 113 學年度釋疑：草食動物的發酵部位因動物而異，牛等反芻動物在胃（瘤胃），無尾熊、兔等在盲腸，故 (A) 與 (D) 皆給分。原答案卡只列 (D)。",
+    "errata_applied": true,
+    "needs_review": false
+  },
+  "TCU-109-chemistry-30": {
+    "correct_answer": [
+      "C"
+    ],
+    "original_answer": [
+      "A"
+    ],
+    "explanation": "站方修正：官方答案卡為 (A)，但水的自解離 H₂O(l) → H⁺(aq) + OH⁻(aq) 的 ΔH° 約 +55.8 kJ/mol（吸熱，所以升溫 Kw 變大），ΔG° = −RT ln Kw = +79.9 kJ/mol，由 ΔS° = (ΔH° − ΔG°)/T 得約 −81 J/(mol·K)；用標準熵表算也一樣：S°(OH⁻,aq) = −10.8、S°(H⁺,aq) = 0、S°(H₂O,l) = 69.9 J/(mol·K)，ΔS° = −80.7。離子把周圍的水分子排整齊，亂度反而下降，所以 ΔS° 為負、ΔH° 為正，正解為 (C)。詳見筆記〈酸鹼平衡：pH、緩衝液與滴定〉第一節。",
+    "errata_applied": true
+  },
+  "TCU-113-chemistry-12": {
+    "correct_answer": [
+      "A"
+    ],
+    "original_answer": [
+      "D"
+    ],
+    "explanation": "依慈濟 113 學年度釋疑：反應 (1) 為 ½CO₂ + H₂ ⇌ ½CH₃OH（題目印刷時係數 ½ 脫落），反應 (2) 是 (1) 的 2 倍，平衡常數為 K²，正解為 (A)。原答案卡誤植為 (D)。",
+    "errata_applied": true,
+    "needs_review": false
   }
 }

@@ -1,0 +1,481 @@
+---
+layout: '@/layouts/NoteLayout.astro'
+title: 溶液與依數性質
+summary: 相似相溶與溶解熱、溶解度隨溫度與壓力的變化與亨利定律、濃度單位互換、拉午耳定律與蒸氣壓下降、沸點上升與凝固點下降、滲透壓與逆滲透、凡特荷夫因子與分子量測定。
+---
+import Memorize from '@/components/notes/Memorize.astro'
+import ExampleQuestion from '@/components/notes/ExampleQuestion.svelte'
+import WorkedExample from '@/components/notes/WorkedExample.astro'
+import RelatedNote from '@/components/notes/RelatedNote.astro'
+import Colligative from '@/components/notes/Colligative.svelte'
+
+## 一、溶液的形成：相似相溶與溶解熱
+
+**溶液（solution）**是兩種以上物質混成的均勻混合物，其中量多、決定物態的那一種叫**溶劑（solvent）**，被溶開的叫**溶質（solute）**。**溶解度（solubility）**是定溫下某量溶劑最多能溶進多少溶質，常寫成每 100 g 溶劑幾公克，或每公升溶液幾莫耳。溶質加到不能再溶、固體與溶液達成動態平衡時，叫**飽和溶液（saturated solution）**。
+
+### 相似相溶
+
+溶解要發生，溶質與溶劑之間新拉起的吸引力必須補得上原本各自被拆開的損失。兩者的**分子間作用力性質相近**時這筆帳才劃得來，這就是**相似相溶（like dissolves like）**：分子正負電荷中心不重合、一端偏正一端偏負，稱為**極性（polar）**。電荷中心重合、沒有偏正偏負一端則是**非極性（nonpolar）**。極性溶劑（水、醇）溶得動離子化合物與極性分子，非極性溶劑（己烷、苯、四氯化碳）溶得動非極性分子。
+
+<RelatedNote title="分子間作用力有哪幾種" href="/chem-chemical-bonding" to="化學鍵與分子結構">
+離子鍵、氫鍵、偶極與色散力的強弱順序，以及極性怎麼由分子形狀判斷，都在那一篇。
+</RelatedNote>
+
+有機物在水中的溶解度，看它**能形成氫鍵的位置數對碳數的比值**：
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 情況 | 對水溶解度 | 原因 |
+|---|---|---|
+| 只有碳氫（烷、苯） | 幾乎不溶 | 只有色散力，拉不動水的氫鍵網 |
+| 醚（$\ce{C-O-C}$） | 中等 | 氧是氫鍵受體，但自己沒有 $\ce{O-H}$，給不出氫鍵 |
+| 醇、酸、胺（有 $\ce{O-H}$、$\ce{N-H}$） | 高 | 氫鍵可給也可受 |
+
+</div>
+
+同一種**官能基（functional group，分子中決定化學性質的特定原子團，如醇的 $\ce{-OH}$）**之下，碳鏈越長溶解度越低（非極性的尾巴變長，親水的頭被稀釋），同碳數則含氧越多越高。依此排 $\ce{CH3CH2CH2CH3}$、$\ce{CH3CH2OCH2CH3}$、$\ce{CH3CH2OH}$、$\ce{CH3OH}$ 的水溶解度，順序是丁烷最低、乙醚次之、乙醇再次、甲醇最高。
+
+### 溶解熱
+
+把溶解拆成三步，各步的焓變化相加就是**溶解熱（enthalpy of solution，$\Delta H_\text{soln}$）**：
+
+$$\Delta H_\text{soln} = \underbrace{\Delta H_1}_{\text{拆開溶質，吸熱}} + \underbrace{\Delta H_2}_{\text{拆開溶劑，吸熱}} + \underbrace{\Delta H_3}_{\text{溶質與溶劑相吸，放熱}}$$
+
+前兩步一定吸熱（要花能量把粒子分開），第三步一定放熱，第三步補得越多就越容易溶。離子固體只要看兩個量：**晶格能（lattice energy，$U$）**是氣態離子結合成固體時放出的能量（負值），拆開固體要付出的就是 $-U$。有些教材把晶格能定成拆開離子晶體所需的正值，先看題目給的正負號。**水合能（hydration energy，$\Delta H_\text{hyd}$）**是氣態離子被水分子包住時放出的能量（負值），它把 $\Delta H_2$ 與 $\Delta H_3$ 合併算在一起。電荷越大、半徑越小，水合能越大：$\ce{Na+}$ 小於 $\ce{Mg^2+}$ 小於 $\ce{Al^3+}$。
+
+$$\Delta H_\text{soln} = -U + \Delta H_\text{hyd} \quad\Longrightarrow\quad \Delta H_\text{hyd} = \Delta H_\text{soln} + U$$
+
+$\Delta H_\text{soln}$ 為正的鹽（如 $\ce{NH4NO3}$）溶解時吸熱，水溫下降，這是冰敷袋的原理。為負的（如 $\ce{CaCl2}$）溶解時放熱、水溫上升。
+
+### 膠體
+
+**膠體（colloid）**是分散粒子直徑約 1 到 1000 nm 的混合物，粒子比真溶液的分子大、卻小到不會沉降。因為粒徑接近可見光波長，光束穿過膠體會被散射成一條看得見的亮路，叫**丁道爾效應（Tyndall effect）**。牛奶、豆漿、霧、雲都是膠體，而 $\ce{NaCl}$ 水溶液、葡萄糖水溶液、乙醇水溶液的粒子小於 1 nm，是真溶液，不散射光。
+
+## 二、溶解度隨溫度與壓力的變化：亨利定律
+
+- **固體與液體溶質**：升溫時多數溶解度上升，少數下降（如 $\ce{Li2SO4}$、$\ce{Ce2(SO4)3}$）。固體溶解度隨溫度的走向不能用溶解熱的正負去推：$\ce{NH4NO3}$ 溶解吸熱、$\ce{CaCl2}$ 溶解放熱，兩者的溶解度都隨溫度上升。加壓幾乎沒有影響，因為固體與液體難壓縮。
+- **氣體溶質**：升溫時溶解度一律下降，而溶解度與該氣體的分壓成正比。
+
+氣體溶解一律放熱（本來自由的氣體分子被溶劑圍住，是往下掉能量），加熱等於把能量還給它，已溶的氣體便逸出。燒水時水還沒沸就先冒小氣泡，那是原本溶解的空氣被趕出來。
+
+### 亨利定律
+
+**分壓（partial pressure）**是混合氣體中，某一種氣體單獨佔有整個容器時會產生的壓力。**亨利定律（Henry's law）**：定溫下，氣體在液體中的溶解度與該氣體在液面上的分壓成正比。
+
+$$C = k\,P$$
+
+- $C$ 是溶解達平衡時的濃度（$\mathrm{mol/L}$），$P$ 是該氣體的分壓（atm）而不是總壓。
+- $k$ 是**亨利定律常數**，單位 $\mathrm{mol\cdot L^{-1}\cdot atm^{-1}}$，每種氣體與溶劑的組合各有一個值，且**隨溫度改變**。
+
+用得上的地方：潛水夫上升太快時血中氮氣因壓力驟降而析出成氣泡（潛水夫病），以及吹氣酒測，因為肺泡氣中的酒精分壓正比於血中酒精濃度。呼吸時胸腔擴大讓肺內壓下降而吸入空氣，那是**波以耳定律**管的體積與壓力關係，與亨利定律無關。
+
+<WorkedExample source="義守 113・化學 5" answer="(D) 7.02 g" tags={["亨利定律", "unit factor"]}>
+
+**題目**　25 °C 時甲烷在苯中的亨利定律常數 $k = 9.88\times10^{-2}\ \mathrm{mol\cdot L^{-1}\cdot atm^{-1}}$。若甲烷的分壓為 1.48 atm，有多少公克的 $\ce{CH4}$ 溶在 3.00 L 的苯中？
+
+**解**　把 $k$ 當成 unit factor，接著乘體積換成莫耳數，再乘莫耳質量換成公克：
+
+$$9.88\times10^{-2}\ \frac{\mathrm{mol}}{\cancel{\mathrm{L}}\cdot\cancel{\mathrm{atm}}} \times 1.48\ \cancel{\mathrm{atm}} \times 3.00\ \cancel{\mathrm{L}} \times \frac{16.0\ \mathrm{g}}{1\ \cancel{\mathrm{mol}}} = 7.02\ \mathrm{g}$$
+
+</WorkedExample>
+
+兩個題目常設的關卡：
+
+- **開瓶後要換分壓**。汽水在瓶內是幾大氣壓的純 $\ce{CO2}$，開瓶後液面上換成大氣，$\ce{CO2}$ 分壓只剩約 $4\times10^{-4}$ atm，所以要用這個很小的分壓去乘 $k$，算出的平衡濃度也極小。氣泡冒出正是溶解度隨分壓下降的結果。
+- **題目給「1 體積水可溶 $x$ 體積氣體」時**，先用 $PV = nRT$ 把那 $x$ 體積在題目條件下換成莫耳數，再除以水的體積與分壓才得到 $k$。
+
+## 三、濃度單位與互換
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 濃度 | 符號 | 定義 | 分母是什麼 |
+|---|---|---|---|
+| 莫耳濃度 | $M$ | $\dfrac{n_\text{溶質}(\text{mol})}{V_\text{溶液}(\text{L})}$ | 溶液的體積 |
+| 重量莫耳濃度 | $m$ | $\dfrac{n_\text{溶質}(\text{mol})}{W_\text{溶劑}(\text{kg})}$ | 溶劑的質量 |
+| 莫耳分率 | $\chi$ | $\dfrac{n_\text{某成分}}{n_\text{全部成分之和}}$ | 全部成分的莫耳數 |
+| 重量百分率 | %(w/w) | $\dfrac{\text{溶質質量}}{\text{溶液總質量}}\times100\%$ | 溶液的質量 |
+| 百萬分濃度 | ppm | 百萬分之一，稀水溶液中 $1\ \text{ppm} = 1\ \mathrm{mg/L}$ | 溶液的質量或體積 |
+
+</div>
+
+**重量莫耳濃度（molality）**也叫質量莫耳濃度，分母只算**溶劑**、不算整杯溶液，兩者別混。莫耳分率 $\chi$ 沒有單位，一杯溶液所有成分的 $\chi$ 相加等於 1。
+
+$M$ 與 $m$ 的關鍵差別在**溫度**。$M$ 的分母是體積，液體受熱膨脹，體積變大就讓 $M$ 變小。$m$ 的分母是質量，質量不隨溫度改變，所以 $m$ 是定值。第六節的沸點與凝固點實驗橫跨一大段溫度，分母必須挑不會被溫度動到的量，因此那兩個公式一律用 $m$。
+
+換算只要選對「基準量」，剩下就是連乘：
+
+- 題目給 $M$ 或要算 $M$：鎖定 **1 L 溶液**。
+- 題目給 $m$ 或要算 $m$：鎖定 **1 kg 溶劑**。
+- 題目給 %(w/w) 或莫耳分率：鎖定 **100 g 溶液**。
+
+$M$ 與 $m$ 之間唯一的橋是**密度**：先用密度把 1 L 溶液換成溶液質量，扣掉溶質質量才得到溶劑質量。少了密度就換不過去。
+
+<WorkedExample source="義守 115・化學 2" answer="(B) 2.73 m" tags={["M 換 m", "密度"]}>
+
+**題目**　2.45 M 的甲醇水溶液密度為 0.976 g/mL，求其重量莫耳濃度。（$\ce{CH3OH}$ 莫耳質量 32.0 g/mol）
+
+**解**　① 鎖定 1.000 L 溶液，用密度換成溶液質量，再把其中的 2.45 mol 甲醇換成質量扣掉，剩下的才是溶劑：
+
+$$1.000\ \cancel{\text{L}} \times \frac{1000\ \cancel{\text{mL}}}{1\ \cancel{\text{L}}} \times \frac{0.976\ \text{g}}{1\ \cancel{\text{mL}}} = 976\ \text{g（溶液）}$$
+
+$$2.45\ \cancel{\text{mol}} \times \frac{32.0\ \text{g}}{1\ \cancel{\text{mol}}} = 78.4\ \text{g（甲醇）} \quad\Longrightarrow\quad 976\ \text{g} - 78.4\ \text{g} = 897.6\ \text{g} = 0.8976\ \text{kg（水）}$$
+
+② 依定義相除：
+
+$$m = \frac{2.45\ \text{mol}}{0.8976\ \text{kg}} = 2.73\ \frac{\text{mol}}{\text{kg}}$$
+
+$m$ 比 $M$ 大，因為分母從整杯溶液縮成只算水。
+
+</WorkedExample>
+
+<RelatedNote title="重量百分率與密度換莫耳濃度的通式" href="/chem-units" to="化學上重要的單位">
+$M = \dfrac{10\,d\,w}{M_w}$ 這條捷徑、體積百分率 (v/v) 的換法、ppm 與 ppb 的定義，以及 unit factor 的寫法規範都在那一篇。
+</RelatedNote>
+
+<RelatedNote title="稀釋與溶解度規則" href="/chem-solution-reactions" to="溶液中的化學反應">
+稀釋定律 $M_1V_1 = M_2V_2$、連續稀釋、兩溶液混合後的濃度，以及哪些鹽類不溶於水，都在那一篇。判斷「哪一杯溶液粒子最多」時常要先用溶解度規則篩掉根本溶不下去的那一個。
+</RelatedNote>
+
+## 四、依數性質與凡特荷夫因子 i
+
+**依數性質（colligative properties）**是只由溶液中**溶質粒子的數目**決定、與粒子是什麼完全無關的性質，共四個：蒸氣壓下降、沸點上升、凝固點下降、滲透壓。
+
+只看數目的原因是這四件事共用同一個機制：溶質粒子把溶劑稀釋了。溶劑分子要蒸發、要排進冰晶格、要穿過半透膜，能不能成行取決於液體裡溶劑佔的比例被壓低多少，而壓低多少只看**插進來幾顆粒子**，一顆 $\ce{Na+}$ 與一顆蔗糖分子的效果完全一樣。
+
+因此溶質是不是**電解質（electrolyte）**就成了關鍵。溶在水中會解離成離子的物質是電解質（如 $\ce{NaCl -> Na+ + Cl-}$，1 個變 2 個），不解離的是**非電解質（nonelectrolyte）**（如蔗糖、葡萄糖、乙醇、尿素）。一個溶質式量能變出幾顆粒子，就叫**凡特荷夫因子（van't Hoff factor，$i$）**：
+
+$$i = \frac{\text{溶液中實際的粒子莫耳數}}{\text{加進去的溶質莫耳數}}$$
+
+<div class="overflow-x-auto print:overflow-visible">
+
+| 溶質 | 解離方式 | 理想 $i$ |
+|---|---|---|
+| 蔗糖、葡萄糖、乙醇、尿素（非電解質） | 不解離 | 1 |
+| $\ce{NaCl}$、$\ce{KBr}$、$\ce{KI}$、$\ce{MgSO4}$ | 兩個離子 | 2 |
+| $\ce{CaCl2}$、$\ce{Na2SO4}$、$\ce{Ca(NO3)2}$ | 三個離子 | 3 |
+| $\ce{Li3PO4}$、$\ce{Na3PO4}$、$\ce{AlCl3}$ | 四個離子 | 4 |
+| 弱電解質（醋酸、氨） | 部分解離 | 介於 1 與 2 之間 |
+
+</div>
+
+弱電解質的 $i$ 由**解離度（degree of dissociation，$\alpha$）**決定，$\alpha$ 是實際解離掉的比例。一個式量完全解離時會給出 $\nu$ 顆粒子的話：
+
+$$i = 1 + (\nu - 1)\alpha$$
+
+醋酸 $\nu = 2$，所以 $i = 1 + \alpha$，$\alpha$ 通常只有百分之幾，$i$ 略大於 1。
+
+強電解質的**實測 $i$ 也會略小於理想值**，因為溶液裡有一部分正負離子短暫貼在一起成為**離子對（ion pair）**，兩顆算成一顆。濃度越高、離子電荷越大，偏離越明顯。例如 0.010 M 的 $\ce{KI}$ 實測 $i$ 約 1.9 而不是 2.0。題目只要沒特別說，一律用理想值計算。
+
+**排序題的統一做法**：把每個選項算出**粒子的總濃度** $i \times m$（滲透壓題則用 $i \times M$），比大小即可，四種依數性質的強弱順序完全一致。$0.5\ m$ 的 $\ce{Li3PO4}$ 算得 $0.5 \times 4 = 2.0$，大於 $0.5\ m$ 的 $\ce{CaCl2}$ 的 1.5。
+
+另有一個容易與 $i$ 混淆的量。**離子強度（ionic strength，$I$）**衡量溶液中電荷的總濃度，其中 $c_i$ 是各離子的莫耳濃度、$z_i$ 是它的電荷數，電荷要平方後再加權：
+
+$$I = \frac{1}{2}\sum_i c_i z_i^2$$
+
+同濃度下 $\ce{Na3PO4}$ 的 $I$ 大於 $\ce{MgSO4}$，因為 $\ce{PO4^3-}$ 的 $z^2 = 9$ 拉高了總和。$i$ 只數顆數，$I$ 還要看電荷。
+
+## 五、蒸氣壓下降與拉午耳定律
+
+**蒸氣壓（vapor pressure）**是液體與它自己的蒸氣在密閉容器中達平衡時，蒸氣所施加的壓力，反映這個液體有多容易蒸發。
+
+加入**非揮發性（本身蒸氣壓可忽略）**的溶質後，能站上液面起跳的只剩溶劑分子，而它們在液體中只佔 $\chi_\text{溶劑}$ 的比例，蒸氣壓就照這個比例打折。這就是**拉午耳定律（Raoult's law）**：
+
+$$P_\text{溶液} = \chi_\text{溶劑}\, P^{\circ}_\text{溶劑}$$
+
+$P^{\circ}$ 是純溶劑在同溫度下的蒸氣壓。因為 $\chi_\text{溶劑} + \chi_\text{溶質} = 1$，蒸氣壓**下降**了多少也可以直接寫成 $\Delta P = P^{\circ}_\text{溶劑} - P_\text{溶液} = \chi_\text{溶質}\, P^{\circ}_\text{溶劑}$。溶質是電解質時，$\chi_\text{溶質}$ 要用**解離後的粒子莫耳數**算，也就是先把溶質莫耳數乘上 $i$。
+
+<WorkedExample source="慈濟 114・化學 49" answer="(B) 49.96 torr" tags={["拉午耳定律", "莫耳分率"]}>
+
+**題目**　將 164 g 甘油（$\ce{C3H8O3}$）加入 338 mL 的水，求此溶液在 39.8 °C 的蒸氣壓。已知純水在 39.8 °C 的蒸氣壓為 54.74 torr，水的密度為 0.992 g/cm³。
+
+**解**　① 兩邊都換成莫耳數。甘油莫耳質量 $3(12)+8(1)+3(16)=92$ g/mol，水先用密度換成質量：
+
+$$164\ \cancel{\text{g}} \times \frac{1\ \text{mol}}{92\ \cancel{\text{g}}} = 1.78\ \text{mol（甘油）}$$
+
+$$338\ \cancel{\text{mL}} \times \frac{0.992\ \cancel{\text{g}}}{1\ \cancel{\text{mL}}} \times \frac{1\ \text{mol}}{18.0\ \cancel{\text{g}}} = 18.63\ \text{mol（水）}$$
+
+② 甘油不解離也不揮發，直接算水的莫耳分率再套拉午耳定律：
+
+$$P = \frac{18.63}{18.63 + 1.78} \times 54.74\ \text{torr} = 0.913 \times 54.74\ \text{torr} = 49.96\ \text{torr}$$
+
+比純水的 54.74 torr 低，方向正確。
+
+</WorkedExample>
+
+把兩杯濃度不同的溶液放進同一個密閉容器，蒸氣壓高的那杯會不斷蒸發、蒸氣壓低的那杯不斷凝結，直到**兩杯的溶劑莫耳分率相等**才停。水轉移的克數因此可以反推未知溶質的莫耳數。
+
+### 兩種都會揮發時
+
+兩種都會揮發的液體混成**理想溶液（ideal solution）**時，各自照拉午耳定律貢獻自己的分壓，總壓是兩者相加：
+
+$$P_\text{total} = P^{\circ}_A \chi_A + P^{\circ}_B \chi_B$$
+
+這裡的 $\chi$ 是**液相**的莫耳分率。**氣相**的組成則要先靠**道耳吞分壓定律（Dalton's law of partial pressures，混合氣體的總壓等於各成分分壓之和）**取得每個成分的分壓，除以總壓就是氣相的莫耳分率，習慣寫成 $y$：
+
+$$y_A = \frac{P_A}{P_\text{total}} = \frac{P^{\circ}_A \chi_A}{P^{\circ}_A \chi_A + P^{\circ}_B \chi_B}$$
+
+液相用 $\chi$、氣相用 $y$，兩者不相等。**揮發性高（$P^{\circ}$ 大）的成分，$y$ 一定大於它的 $\chi$**，也就是蒸氣中它的比例被拉高。反覆汽化再冷凝，每一輪都讓易揮發者更濃，就是**分餾（fractional distillation）**能分開兩種液體的原理。題目若給的是氣相的 $y$，要先回推液相的 $\chi$ 才能算總壓。
+
+**理想溶液**指 A 與 B 之間的作用力，強度與 A 對 A、B 對 B 大致相同，混合時不吸熱也不放熱，例如苯與甲苯、戊烷與己烷。實際溶液常有偏差：
+
+- **正偏差**：A 與 B 之間的作用力比純物質內部**弱**，分子更容易跑出液面，混合時吸熱，實測總蒸氣壓**高於**拉午耳預測值。例如乙醇與己烷。
+- **負偏差**：A 與 B 之間的作用力比純物質內部**強**（如丙酮與氯仿之間拉出氫鍵），分子被綁得更牢，混合時放熱，實測總蒸氣壓**低於**預測值。
+
+### 蒸氣壓與溫度
+
+純液體的蒸氣壓隨溫度上升而變大，兩者的關係是**克勞修斯-克拉佩龍方程式（Clausius-Clapeyron equation）**：
+
+$$\ln P = -\frac{\Delta H_\text{vap}}{R}\cdot\frac{1}{T} + C$$
+
+$\Delta H_\text{vap}$ 是**莫耳汽化熱（molar heat of vaporization）**。以 $\ln P$ 為縱軸、$\dfrac{1}{T}$ 為橫軸作圖得直線，**斜率 $= -\dfrac{\Delta H_\text{vap}}{R}$**。汽化一定吸熱、$\Delta H_\text{vap}$ 為正，所以這條線必定往下斜。給兩組數據時把式子相減，消掉常數 $C$：
+
+$$\ln\frac{P_2}{P_1} = -\frac{\Delta H_\text{vap}}{R}\left(\frac{1}{T_2} - \frac{1}{T_1}\right)$$
+
+$T$ 一律用 K，$R = 8.314\ \mathrm{J\cdot mol^{-1}\cdot K^{-1}}$，$P_1$ 與 $P_2$ 只要同單位即可（取的是比值）。**正常沸點（normal boiling point）**是蒸氣壓等於 1 atm（760 mmHg）時的溫度，所以題目說「1 atm 下沸點為 $T$」，等於給了一組 $(T,\ 760\ \text{mmHg})$。
+
+<RelatedNote title="由 ΔH 與 ΔS 求沸點" href="/chem-thermo" to="熱力學">
+題目改給汽化的 ΔH 與 ΔS 時，正常沸點就是宇宙熵恰為 0 的臨界溫度，算法在那一篇。
+</RelatedNote>
+
+<WorkedExample source="慈濟 108・化學 2" answer="(B) 22.9 kJ/mol" tags={["克勞修斯-克拉佩龍", "兩點式"]}>
+
+**題目**　某化合物在 27.0 °C 呈液態、蒸氣壓為 76.0 mmHg，在 1.00 atm 下沸點為 127 °C。求其莫耳汽化熱。（$\ln 10 = 2.30$，汽化熱與溫度無關）
+
+**解**　① 兩組數據是 $(300\ \mathrm{K},\ 76.0\ \mathrm{mmHg})$ 與 $(400\ \mathrm{K},\ 760\ \mathrm{mmHg})$，第二組來自「沸點時蒸氣壓等於 1 atm」。
+
+② 左邊 $\ln\dfrac{760}{76.0} = \ln 10 = 2.30$，右邊括號 $\dfrac{1}{400} - \dfrac{1}{300} = \dfrac{300-400}{120000} = -8.33\times10^{-4}\ \mathrm{K^{-1}}$。
+
+③ 移項，除以 $8.33\times10^{-4}\ \mathrm{K^{-1}}$ 就是乘以它的倒數：
+
+$$\Delta H_\text{vap} = 8.314\ \frac{\mathrm{J}}{\mathrm{mol}\cdot\cancel{\mathrm{K}}} \times 2.30 \times \frac{1\ \cancel{\mathrm{K}}}{8.33\times10^{-4}} \times \frac{1\ \mathrm{kJ}}{10^{3}\ \cancel{\mathrm{J}}} = 22.9\ \frac{\mathrm{kJ}}{\mathrm{mol}}$$
+
+</WorkedExample>
+
+## 六、沸點上升與凝固點下降
+
+這兩件事同源，都是上一節「溶質把溶劑的蒸氣壓壓低了」的後果，方向相反只因為比較的是溶劑的哪一端：
+
+- **沸騰**的條件是液體的蒸氣壓追上外界大氣壓。蒸氣壓被壓低後，得燒到**更高**的溫度才補得回 1 atm，所以沸點上升。
+- **結冰**的條件是液態的蒸氣壓等於固態的蒸氣壓。溶質只待在液相、不會進到冰晶格裡，被壓低的只有液態那一端，兩者要相等就得降到**更低**的溫度，所以凝固點下降。
+
+液體存在的溫度範圍因此被撐寬。道路撒鹽讓積雪的凝固點降到氣溫以下而融化、汽車水箱與低溫保存的製劑加甘油或乙二醇防止結冰，都是這一項的應用。兩個變化量都正比於粒子的重量莫耳濃度：
+
+$$\Delta T_b = i\,K_b\,m \qquad \Delta T_f = i\,K_f\,m$$
+
+- $\Delta T_b$ 與 $\Delta T_f$ 都是**變化的量、恆為正**，方向要自己加回去：溶液沸點 $= T_b^{\circ} + \Delta T_b$，溶液凝固點 $= T_f^{\circ} - \Delta T_f$，其中 $T_b^{\circ}$ 與 $T_f^{\circ}$ 是**純溶劑**的沸點與凝固點（水是 100 °C 與 0 °C）。
+- $K_b$ 是**沸點上升常數**、$K_f$ 是**凝固點下降常數**，單位都是 $\mathrm{^\circ C\cdot kg\cdot mol^{-1}}$。它們是**溶劑的性質，與溶質種類無關**。水的 $K_b = 0.512$、$K_f = 1.86$，其他溶劑（苯、乙醇、環己烷）的值由題目給。
+- $\Delta T_f$ 的係數比 $\Delta T_b$ 大三倍多，所以同一杯溶液的凝固點變化量一定比沸點明顯，實驗上也偏好用凝固點來測量。
+
+<Colligative client:visible />
+
+公式成立有兩個前提，題目常在這裡設陷阱：
+
+- **溶質必須是非揮發性的**。乙醇會揮發，加進水裡反而讓總蒸氣壓比純水高，溶液的沸點因此**低於** 100 °C，套 $\Delta T_b = i K_b m$ 會答錯方向。
+- **溶質必須真的溶得進去**。$\ce{Al(OH)3}$、$\ce{BaSO4}$ 這類不溶鹽即使加得再多，溶液裡的粒子仍趨近於零，各項依數性質幾乎與純水相同。
+
+<WorkedExample source="義守 111・化學 1" answer="(C) 0.56 m 與 −1.04 °C" tags={["重量百分率換 m", "凝固點下降"]}>
+
+**題目**　16% (w/w) 糖水的密度為 1.07 g/cm³，求其重量莫耳濃度與凝固點。（糖的分子量 342 g/mol，水的 $K_f = 1.86$）
+
+**解**　① 重量百分率題鎖定 **100 g 溶液**，其中糖 16 g、水 84 g：
+
+$$m = 16\ \cancel{\text{g}} \times \frac{1\ \text{mol}}{342\ \cancel{\text{g}}} \times \frac{1}{0.084\ \text{kg}} = 0.56\ \frac{\text{mol}}{\text{kg}}$$
+
+② 糖是非電解質，$i = 1$，凝固點 $= 0 - \Delta T_f$：
+
+$$\Delta T_f = 1 \times 1.86\ \frac{^\circ\mathrm{C}\cdot\cancel{\text{kg}}}{\cancel{\text{mol}}} \times 0.56\ \frac{\cancel{\text{mol}}}{\cancel{\text{kg}}} = 1.04\ ^\circ\mathrm{C}$$
+
+凝固點因此是 $-1.04$ °C。題目給的密度完全用不到，因為由 %(w/w) 換 $m$ 只需要質量，密度只在牽涉體積（也就是 $M$）時才派得上用場。
+
+</WorkedExample>
+
+## 七、滲透壓與逆滲透
+
+**半透膜（semipermeable membrane）**只讓溶劑分子通過、擋住溶質。純溶劑與溶液隔著半透膜時，溶劑會淨往溶液那一側跑，這個現象叫**滲透（osmosis）**。要擋住這股流動，必須在溶液側額外施加的壓力，就是**滲透壓（osmotic pressure，$\Pi$）**：
+
+$$\Pi = i\,M\,R\,T$$
+
+- 這裡用的是**莫耳濃度 $M$**，不是 $m$。把式子寫成 $\Pi V = i\,n\,R\,T$ 就看得出原因：它與理想氣體定律同一個形狀，溶質粒子像溶在溶劑裡的氣體，撞擊半透膜產生壓力，吃的自然是「每體積幾莫耳粒子」。滲透壓在定溫下量，也沒有沸點凝固點那種跨溫問題。
+- $R = 0.082\ \mathrm{L\cdot atm\cdot mol^{-1}\cdot K^{-1}}$，配出來的 $\Pi$ 單位是 atm，$T$ 一律用 K。
+- 題目問 torr 或 mmHg 時，算完的 atm 要再乘 $\dfrac{760\ \text{torr}}{1\ \text{atm}}$。漏掉這一步，算出的數字會剛好落在錯誤選項上。
+- 滲透壓對濃度極為敏感。0.01 M 這種稀到量不出凝固點變化的溶液，滲透壓仍有近兩百 torr（電解質因 $i>1$ 還能再高到數百 torr），所以它是四個依數性質裡最靈敏的一個。
+
+<WorkedExample source="慈濟 108・化學 18" answer="(C) x＝1，y＝3" tags={["滲透壓求 i", "化學式判斷"]}>
+
+**題目**　鹽類 $\mathrm{M}_x\mathrm{N}_y$ 在水中解離出 $\mathrm{M}^{y+}$ 與 $\mathrm{N}^{x-}$，25 °C 時溶解度為 $1.0\times10^{-2}$ mol/L，其飽和水溶液的滲透壓為 0.978 atm。求 $x$ 與 $y$。
+
+**解**　① 由滲透壓反推**粒子的總濃度**（也就是 $i\,M$）：
+
+$$iM = \frac{\Pi}{RT} = \frac{0.978\ \cancel{\mathrm{atm}}}{0.082\ \dfrac{\mathrm{L}\cdot\cancel{\mathrm{atm}}}{\mathrm{mol}\cdot\cancel{\mathrm{K}}} \times 298\ \cancel{\mathrm{K}}} = 0.040\ \frac{\mathrm{mol}}{\mathrm{L}}$$
+
+② 除以鹽本身的濃度得到 $i = \dfrac{0.040\ \mathrm{M}}{1.0\times10^{-2}\ \mathrm{M}} = 4$。一個式量解離出 4 顆離子，所以 $x + y = 4$，選項中只有 $x=1$、$y=3$ 符合。
+
+</WorkedExample>
+
+### 張力與逆滲透
+
+以細胞為基準比較兩邊的粒子濃度，得到三個常用詞：
+
+- **高張（hypertonic）**：溶液的粒子濃度高於細胞內，水往外跑，細胞皺縮。
+- **低張（hypotonic）**：低於細胞內，水往內跑，細胞膨脹甚至破裂。
+- **等張（isotonic）**：兩邊相等，淨流量為零。點滴與生理食鹽水就配成等張。
+
+<RelatedNote title="滲透在細胞裡怎麼運作" href="/bio-cell-5" to="跨膜運輸與囊泡運輸">
+水通道蛋白、被動與主動運輸，以及動植物細胞在高張與低張溶液中的實際形變，都在那一篇。
+</RelatedNote>
+
+在溶液側施加**大於滲透壓**的外加壓力，可以把水從溶液側反向擠回純溶劑側，這叫**逆滲透（reverse osmosis）**，海水淡化與家用純水機都靠它。要壓過海水約 27 atm 的滲透壓，所需壓力遠高於一般供水壓力，這是逆滲透耗能的原因。
+
+## 八、由依數性質反推分子量
+
+依數性質量的是**粒子的莫耳數**，而秤重量的是**公克數**，兩者相除就是莫耳質量。步驟固定不變：
+
+1. 由量到的 $\Delta T_f$、$\Delta T_b$ 或 $\Pi$ 反推**粒子的濃度**：$i\,m = \dfrac{\Delta T_f}{K_f}$ 或 $i\,M = \dfrac{\Pi}{RT}$。
+2. 除以 $i$ 得到溶質本身的濃度（非電解質 $i=1$，可直接跳過），再乘上溶劑質量（kg）或溶液體積（L），得到溶質的莫耳數 $n$。
+3. $M_w = \dfrac{\text{溶質質量}}{n}$。
+
+選哪一個性質來測，取決於溶質有多大：
+
+- **小分子（分子量數百）用凝固點下降**，$K_f$ 大、訊號明顯，也不必加熱破壞樣品。
+- **大分子（蛋白質、聚合物）用滲透壓**，因為它們的莫耳數極小，$\Delta T_f$ 小到量不出來，$\Pi$ 卻仍有數十 torr。
+
+同一條路也可以反過來走：**已知分子量、量出依數性質，就得到 $i$**，而 $i$ 說出這個化合物在水中解離成幾顆粒子。配位化合物的題目正是這樣判斷有幾個**配位基（ligand，直接鍵結在中心金屬上的分子或離子）**綁在中心金屬上、有幾個離子只留在外圍、不參與鍵結，稱為**抗衡離子（counter ion）**。
+
+<WorkedExample source="中國醫 113・化學 18" answer="(D) 6" tags={["凝固點下降求 i", "配位化合物"]}>
+
+**題目**　0.1 mol 的 $\ce{CoCl3}\cdot x\,\ce{NH3}$ 溶於 500 g 水中，所得溶液在 $-1.488$ °C 凝固。求 $x$。（水的 $K_f = 1.86$）
+
+**解**　① 由凝固點下降反推粒子的重量莫耳濃度：
+
+$$i\,m = \frac{\Delta T_f}{K_f} = \frac{1.488\ \cancel{^\circ\mathrm{C}}}{1.86\ \dfrac{\cancel{^\circ\mathrm{C}}\cdot\mathrm{kg}}{\mathrm{mol}}} = 0.8\ \frac{\mathrm{mol}}{\mathrm{kg}}$$
+
+② 乘上溶劑質量得到粒子的莫耳數，再除以加進去的 0.1 mol 就是 $i$：
+
+$$0.8\ \frac{\mathrm{mol}}{\cancel{\mathrm{kg}}} \times 0.500\ \cancel{\mathrm{kg}} = 0.4\ \mathrm{mol} \quad\Longrightarrow\quad i = \frac{0.4}{0.1} = 4$$
+
+③ 4 顆粒子的組成只有一種可能：1 個錯離子加 3 個 $\ce{Cl-}$。三個氯全都在**配位圈（coordination sphere，中心金屬與其配位基合起來的整體）**外，鈷的六個配位位置便全由 $\ce{NH3}$ 佔滿，所以 $x = 6$，化學式是 $\ce{[Co(NH3)6]Cl3}$。
+
+</WorkedExample>
+
+<RelatedNote title="配位數與配位圈內外怎麼分" href="/chem-coordination" to="配位化學">
+中心金屬的配位數、配位基的命名與螯合效應，以及哪些離子留在配位圈外當抗衡離子，都在那一篇。
+</RelatedNote>
+
+## 例題
+
+<ExampleQuestion client:visible
+  n={1}
+  q="25 °C 下某汽水瓶內 $\\ce{CO2}$ 的壓力為 4.0 atm，$\\ce{CO2}$ 的亨利定律常數為 $3.0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}atm^{-1}}$。已知大氣中 $\\ce{CO2}$ 的分壓為 $4.0\\times10^{-4}$ atm，開瓶後放置到平衡，飲料中 $\\ce{CO2}$ 的濃度為何？"
+  options={["1.2×10⁻⁵ M", "1.2×10⁻¹ M", "4.0×10⁻⁴ M", "3.0×10⁻² M"]}
+  answer="(A) 1.2×10⁻⁵ M"
+  steps={[
+    "亨利定律 $C=kP$ 裡的 $P$ 是液面上該氣體的<b>分壓</b>，開瓶後液面上已經換成大氣。",
+    "所以要用大氣中的 $4.0\\times10^{-4}$ atm，而不是瓶內的 4.0 atm。",
+    "$C = 3.0\\times10^{-2}\\ \\mathrm{mol\\,L^{-1}atm^{-1}} \\times 4.0\\times10^{-4}\\ \\mathrm{atm} = 1.2\\times10^{-5}$ M。",
+    "(B) 的 $1.2\\times10^{-1}$ M 是拿瓶內 4.0 atm 算出來的，那是<b>開瓶前</b>的濃度，兩者之差就是冒出來的氣體。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={2}
+  q="2.00 M 的乙醇水溶液密度為 0.970 g/mL，乙醇的莫耳質量為 46.0 g/mol。此溶液的重量莫耳濃度約為何？"
+  options={["1.94 m", "2.28 m", "2.06 m", "2.94 m"]}
+  answer="(B) 2.28 m"
+  steps={[
+    "題目給的是 $M$，就鎖定 1.000 L 溶液當基準。溶液質量 $=1000\\ \\mathrm{mL}\\times0.970\\ \\mathrm{g/mL}=970$ g。",
+    "這 1 L 裡有 2.00 mol 乙醇，質量 $=2.00\\ \\mathrm{mol}\\times46.0\\ \\mathrm{g/mol}=92.0$ g。",
+    "溶劑質量 $=970-92.0=878$ g $=0.878$ kg。<b>分母只算溶劑</b>，不算整杯溶液。",
+    "$m=\\dfrac{2.00\\ \\mathrm{mol}}{0.878\\ \\mathrm{kg}}=2.28$ mol/kg。分母縮小了，所以 $m$ 大於 $M$。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={3}
+  q="25 °C 時純水的蒸氣壓為 24.0 torr。將 0.50 mol 非揮發性且不解離的溶質溶於 90 g 水中，此溶液的蒸氣壓為何？（水的莫耳質量 18.0 g/mol）"
+  options={["20.0 torr", "21.0 torr", "21.8 torr", "22.4 torr"]}
+  answer="(C) 21.8 torr"
+  steps={[
+    "水的莫耳數 $=\\dfrac{90\\ \\mathrm{g}}{18.0\\ \\mathrm{g/mol}}=5.0$ mol。",
+    "溶質不解離，$i=1$，粒子就是 0.50 mol。",
+    "$\\chi_{\\text{水}}=\\dfrac{5.0}{5.0+0.50}=0.909$。",
+    "拉午耳定律：$P=\\chi_{\\text{水}}P^{\\circ}=0.909\\times24.0=21.8$ torr，比純水低，方向正確。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={4}
+  q="定溫下純 A 的蒸氣壓為 400 mmHg、純 B 為 100 mmHg。兩者混成理想溶液，液相中 A 的莫耳分率為 0.25。液面上蒸氣中 A 的莫耳分率為何？"
+  options={["0.25", "0.43", "0.50", "0.57"]}
+  answer="(D) 0.57"
+  steps={[
+    "各成分的分壓由<b>液相</b>莫耳分率決定：$P_A=400\\times0.25=100$ mmHg，$P_B=100\\times0.75=75$ mmHg。",
+    "總壓 $=100+75=175$ mmHg。",
+    "氣相莫耳分率 $y_A=\\dfrac{P_A}{P_{\\text{total}}}=\\dfrac{100}{175}=0.57$。",
+    "A 的揮發性較高，$y_A=0.57$ 因此大於液相的 $\\chi_A=0.25$。選 (A) 等於把液相當成氣相。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={5}
+  q="下列水溶液何者的凝固點最低？（電解質均視為完全解離）"
+  options={["0.30 m 葡萄糖", "0.20 m Na₃PO₄", "0.25 m NaCl", "0.15 m CaCl₂"]}
+  answer="(B) 0.20 m Na₃PO₄"
+  steps={[
+    "$\\Delta T_f=iK_fm$，同一杯水的 $K_f$ 相同，所以只要比 $i\\times m$ 誰最大。",
+    "葡萄糖 $i=1$ 得 0.30。Na₃PO₄ 解離成 3 個 Na⁺ 與 1 個 PO₄³⁻，$i=4$ 得 0.80。",
+    "NaCl $i=2$ 得 0.50。CaCl₂ $i=3$ 得 0.45。",
+    "0.80 最大，凝固點降得最多也就最低。四種依數性質的強弱一律用同一個 $i\\times m$ 判斷。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={6}
+  q="27 °C 下 0.020 M 的 $\\ce{CaCl2}$ 水溶液（視為完全解離）滲透壓約為多少 torr？（$R=0.082\\ \\mathrm{L\\,atm\\,mol^{-1}K^{-1}}$，1 atm 等於 760 torr）"
+  options={["1.48 torr", "374 torr", "1122 torr", "748 torr"]}
+  answer="(C) 1122 torr"
+  steps={[
+    "$T=27+273=300$ K。$\\ce{CaCl2}$ 解離成 1 個 Ca²⁺ 與 2 個 Cl⁻，$i=3$。",
+    "$\\Pi=iMRT=3\\times0.020\\times0.082\\times300=1.476$ atm。",
+    "題目要 torr：$1.476\\ \\mathrm{atm}\\times\\dfrac{760\\ \\mathrm{torr}}{1\\ \\mathrm{atm}}=1122$ torr。",
+    "(A) 是算完 atm 忘了換單位，(B) 是完全漏乘 $i$，(D) 是把 $i$ 誤當成 2，三個都是常犯的錯誤。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={7}
+  q="將 3.60 g 某非電解質溶於 100.0 g 水中，溶液在 $-0.372$ °C 凝固。此溶質的莫耳質量為何？（水的 $K_f=1.86\\ \\mathrm{^\\circ C\\,kg\\,mol^{-1}}$）"
+  options={["180 g/mol", "90 g/mol", "360 g/mol", "36 g/mol"]}
+  answer="(A) 180 g/mol"
+  steps={[
+    "非電解質 $i=1$，$m=\\dfrac{\\Delta T_f}{K_f}=\\dfrac{0.372}{1.86}=0.200$ mol/kg。",
+    "溶質莫耳數 $=0.200\\ \\mathrm{mol/kg}\\times0.1000\\ \\mathrm{kg}=0.0200$ mol。",
+    "$M_w=\\dfrac{3.60\\ \\mathrm{g}}{0.0200\\ \\mathrm{mol}}=180$ g/mol。",
+    "若溶質改成會解離的鹽，第一步得先除以 $i$ 才是溶質本身的莫耳數，否則算出的分子量會偏小。"
+  ]}
+/>
+
+<ExampleQuestion client:visible
+  n={8}
+  q="下列四者在 1 atm 下沸點最低者為何？"
+  options={["0.10 m 蔗糖水溶液", "0.10 m NaCl 水溶液", "純水", "0.10 m 乙醇水溶液"]}
+  answer="(D) 0.10 m 乙醇水溶液"
+  steps={[
+    "沸點上升公式只適用<b>非揮發性</b>溶質。蔗糖與 NaCl 都符合，沸點高於 100 °C。",
+    "NaCl 的 $i=2$ 又大於蔗糖的 $i=1$，所以 (B) 比 (A) 更高。",
+    "乙醇本身會揮發，它讓溶液的總蒸氣壓<b>高於</b>純水，追上 1 atm 所需的溫度因此更低。",
+    "沸點由低到高依序是乙醇水溶液、純水、蔗糖水溶液、NaCl 水溶液。"
+  ]}
+/>
+
+<Memorize items={[
+  "相似相溶與溶解熱：<ul><li>極性溶劑溶離子與極性溶質，非極性溶劑溶非極性溶質</li><li>有機物對水的溶解度看氫鍵位置數對碳數的比值，碳鏈越長越難溶</li><li>$\\Delta H_\\text{soln}$＝拆溶質（吸熱）＋拆溶劑（吸熱）＋兩者相吸（放熱）</li><li>離子固體 $\\Delta H_\\text{soln}=-U+\\Delta H_\\text{hyd}$，$U$ 為晶格能</li></ul>",
+  "膠體與丁道爾效應：<ul><li>分散粒子直徑約 1 到 1000 nm，不沉降</li><li>粒徑接近可見光波長，會散射光成一條亮路</li><li>牛奶、豆漿、霧是膠體，食鹽水與葡萄糖水是真溶液</li></ul>",
+  "溶解度隨溫度與壓力：<ul><li>固體多數隨溫度上升，氣體一律隨溫度下降</li><li>亨利定律 $C=kP$，$P$ 是該氣體的分壓，$k$ 的單位是 $\\mathrm{mol\\,L^{-1}atm^{-1}}$</li><li>汽水開瓶後改用大氣中的 $\\ce{CO2}$ 分壓計算</li></ul>",
+  "莫耳濃度 M 與重量莫耳濃度 m：<ul><li>$M=\\dfrac{n}{V_\\text{溶液}}$ 隨溫度變，$m=\\dfrac{n}{W_\\text{溶劑}}$ 不隨溫度變</li><li>$\\Delta T_b$ 與 $\\Delta T_f$ 用 $m$，滲透壓用 $M$</li><li>$M$ 與 $m$ 互換一定要用到密度</li></ul>",
+  "凡特荷夫因子 i 與排序法：<ul><li>非電解質 1、$\\ce{NaCl}$ 2、$\\ce{CaCl2}$ 與 $\\ce{Na2SO4}$ 3、$\\ce{Na3PO4}$ 與 $\\ce{Li3PO4}$ 4</li><li>弱電解質 $i=1+(\\nu-1)\\alpha$，介於 1 與 2 之間</li><li>強電解質實測 $i$ 略小於理想值，原因是離子對</li><li>四種依數性質的強弱一律比 $i\\times m$（滲透壓比 $i\\times M$）</li></ul>",
+  "拉午耳定律：<ul><li>非揮發性溶質 $P_\\text{溶液}=\\chi_\\text{溶劑}P^{\\circ}$，下降量 $\\Delta P=\\chi_\\text{溶質}P^{\\circ}$</li><li>兩者都揮發時 $P_\\text{total}=P^{\\circ}_A\\chi_A+P^{\\circ}_B\\chi_B$，其中 $\\chi$ 是液相</li><li>氣相 $y_A=\\dfrac{P_A}{P_\\text{total}}$，揮發性高者 $y$ 大於 $\\chi$</li></ul>",
+  "克勞修斯-克拉佩龍：<ul><li>$\\ln P$ 對 $\\dfrac{1}{T}$ 作圖為直線，斜率 $=-\\dfrac{\\Delta H_\\text{vap}}{R}$，必為負</li><li>兩點式 $\\ln\\dfrac{P_2}{P_1}=-\\dfrac{\\Delta H_\\text{vap}}{R}\\left(\\dfrac{1}{T_2}-\\dfrac{1}{T_1}\\right)$，$T$ 用 K</li><li>這裡的 $R=8.314\\ \\mathrm{J\\,mol^{-1}K^{-1}}$，與滲透壓用的 $0.082$ 不同</li><li>正常沸點＝蒸氣壓達 1 atm（760 mmHg）的溫度</li></ul>",
+  "沸點上升與凝固點下降：<ul><li>$\\Delta T_b=iK_bm$，溶液沸點＝$100+\\Delta T_b$（水）</li><li>$\\Delta T_f=iK_fm$，溶液凝固點＝$0-\\Delta T_f$（水）</li><li>水的 $K_b=0.512$、$K_f=1.86$，單位 $\\mathrm{^\\circ C\\,kg\\,mol^{-1}}$，是溶劑的性質</li><li>揮發性溶質（乙醇）反而讓沸點低於純水</li></ul>",
+  "滲透壓與逆滲透：<ul><li>$\\Pi=iMRT$，用莫耳濃度 $M$ 與 $R=0.082\\ \\mathrm{L\\,atm\\,mol^{-1}K^{-1}}$，$T$ 用 K</li><li>題目問 torr 要再乘 $\\dfrac{760\\ \\text{torr}}{1\\ \\text{atm}}$</li><li>高張使細胞皺縮、低張使細胞膨脹、等張淨流量為零</li><li>逆滲透＝外加壓力大於滲透壓，把水從溶液側擠回純溶劑側</li></ul>",
+  "由依數性質求分子量：<ul><li>先求粒子濃度 $im=\\dfrac{\\Delta T_f}{K_f}$ 或 $iM=\\dfrac{\\Pi}{RT}$</li><li>除以 $i$ 再乘溶劑質量或溶液體積得溶質莫耳數 $n$，$M_w=\\dfrac{\\text{溶質質量}}{n}$</li><li>小分子用凝固點下降，蛋白質與聚合物用滲透壓</li></ul>",
+]} />

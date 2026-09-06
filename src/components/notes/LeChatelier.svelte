@@ -5,11 +5,11 @@
   const DIST: D[] = [
     { label: '加入 N₂（反應物）', dir: '右', kChange: '不變', why: '增加反應物 → 往消耗反應物的正向移動。' },
     { label: '加入 NH₃（產物）', dir: '左', kChange: '不變', why: '增加產物 → 往消耗產物的逆向移動。' },
-    { label: '升高溫度', dir: '左', kChange: '減小', why: '放熱反應升溫 → 往吸熱（逆）方向；K 變小。' },
-    { label: '降低溫度', dir: '右', kChange: '增大', why: '往放熱（正）方向；K 變大。（只有溫度會改變 K）' },
+    { label: '升高溫度', dir: '左', kChange: '減小', why: '放熱反應升溫 → 往吸熱（逆）方向。K 變小。' },
+    { label: '降低溫度', dir: '右', kChange: '增大', why: '往放熱（正）方向，K 變大。（只有溫度會改變 K）' },
     { label: '加壓（縮小體積）', dir: '右', kChange: '不變', why: '往氣態莫耳數少的一側（產物 2 < 反應物 4）。' },
     { label: '減壓（增大體積）', dir: '左', kChange: '不變', why: '往氣態莫耳數多的一側（反應物 4）。' },
-    { label: '等容加入惰性氣體', dir: '不動', kChange: '不變', why: '各物質分壓不變 → Q 不變 → 不移動。' },
+    { label: '定容加入惰性氣體', dir: '不動', kChange: '不變', why: '各物質分壓不變 → Q 不變 → 不移動。' },
     { label: '加入催化劑', dir: '不動', kChange: '不變', why: '只加快到達平衡，不移動平衡、不改變 K。' },
   ]
   let i = $state(0)
@@ -22,7 +22,7 @@
     <span aria-hidden="true">⚖️</span>
     <span class="font-display font-bold">勒沙特列：平衡往哪移</span>
   </div>
-  <p class="mb-3 font-mono text-sm text-base-content/70">N₂ + 3H₂ ⇌ 2NH₃　（放熱；氣態 4 → 2 莫耳）</p>
+  <p class="mb-3 font-mono text-sm text-base-content/70">N₂ + 3H₂ ⇌ 2NH₃　（放熱，氣態 4 → 2 莫耳）</p>
 
   <div class="mb-3 grid grid-cols-2 gap-1.5">
     {#each DIST as dd, k (dd.label)}
@@ -37,6 +37,6 @@
   </div>
   <p class="mt-2 text-xs leading-relaxed text-base-content/70">{d.why}</p>
   <p class="mt-2 text-xs leading-relaxed text-base-content/60">
-    原則：系統會往<b>減弱該擾動</b>的方向移動。記住<b>只有改變溫度會改變 K</b>；改濃度、壓力、加催化劑都只改 Q、不改 K。
+    原則：系統會往<b>減弱該擾動</b>的方向移動。記住<b>只有改變溫度會改變 K</b>，改濃度、壓力、加催化劑都只改 Q、不改 K。
   </p>
 </div>

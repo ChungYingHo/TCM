@@ -10,7 +10,9 @@
   const isBase = $derived(kind === 'sb' || kind === 'wb')
   const isWeak = $derived(kind === 'wa' || kind === 'wb')
 
-  const conc = $derived(isWeak ? Math.sqrt(sKa * sC) : sC) // [H⁺] 或 [OH⁻]
+  const KW = 1.0e-14 // 水的離子積，強酸強鹼併入水的自解離，極稀時才不會算出鹼性的酸
+  const strongConc = $derived((sC + Math.sqrt(sC * sC + 4 * KW)) / 2)
+  const conc = $derived(isWeak ? Math.sqrt(sKa * sC) : strongConc) // [H⁺] 或 [OH⁻]
   const pX = $derived(-Math.log10(conc)) // pH 或 pOH
   const pH = $derived(Math.max(0, Math.min(14, isBase ? 14 - pX : pX)))
 

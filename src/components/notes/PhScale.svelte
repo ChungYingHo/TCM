@@ -17,7 +17,7 @@
   const kindCls = $derived(ph < 6.95 ? 'badge-error' : ph > 7.05 ? 'badge-info' : 'badge-success')
 </script>
 
-<div class="my-4 rounded-box border border-base-300 bg-base-100 p-4">
+<div class="not-prose my-4 rounded-box border border-base-300 bg-base-100 p-4">
   <div class="mb-2 flex items-center justify-between">
     <span class="font-display font-bold">pH ↔ [H⁺] 互動尺</span>
     <span class={`badge ${kindCls} font-bold`}>{kind}</span>
@@ -35,5 +35,5 @@
     <div class="rounded-lg bg-base-200 p-2 text-center"><div class="text-xs opacity-60">[H⁺] (M)</div><div class="font-bold tabular-nums">{h}</div></div>
     <div class="rounded-lg bg-base-200 p-2 text-center"><div class="text-xs opacity-60">[OH⁻] (M)</div><div class="font-bold tabular-nums">{oh}</div></div>
   </div>
-  <p class="mt-2 text-xs opacity-70">pH 每<b>降 1</b>，[H⁺] 就<b>變 10 倍</b>；pH 與 pOH 永遠相加為 14（25°C）。</p>
+  <p class="mt-2 text-xs opacity-70">pH 每<b>降 1</b>，[H⁺] 就<b>變 10 倍</b>。pH 與 pOH 永遠相加為 14（25°C）。</p>
 </div>
