@@ -223,12 +223,50 @@ export function plainText(html: string): string {
     .trim()
 }
 
+/** 找出每個自閉合的 `<Name …/>`，回傳各自的屬性字串。
+ *  結尾的 `/>` 用逐字掃描找，**跳過引號字串裡的 `/>`**：非貪婪正則遇到 `q="上句<br/>下句"`
+ *  會在 `<br/>` 就截斷，那一題的 options 與 answer 全部落在下一次比對之外、整題靜默消失
+ *  （2026-09-05 動力學篇與 bio-cell-6 實抓）。遇到裸 `>` 代表是 children 寫法（`<Memorize>…</Memorize>`），
+ *  不是自閉合標籤，跳過它繼續找下一個。 */
+export function selfClosingAttrs(raw: string, name: string): string[] {
+  const out: string[] = []
+  const open = new RegExp(`<${name}\\b`, 'g')
+  let m: RegExpExecArray | null
+  while ((m = open.exec(raw))) {
+    const start = m.index + m[0].length
+    let quote = ''
+    let end = -1
+    let i = start
+    for (; i < raw.length; i++) {
+      const ch = raw[i]
+      if (quote) {
+        if (ch === '\\') i++
+        else if (ch === quote) quote = ''
+      } else if (ch === '"' || ch === "'") {
+        quote = ch
+      } else if (ch === '/' && raw[i + 1] === '>') {
+        end = i
+        break
+      } else if (ch === '>') {
+        break
+      }
+    }
+    if (end >= 0) {
+      out.push(raw.slice(start, end))
+      open.lastIndex = end + 2
+    } else {
+      open.lastIndex = Math.max(open.lastIndex, i + 1)
+    }
+  }
+  return out
+}
+
 /** Parse every `<Memorize items={[…]}/>` in one note's raw MDX into recall cards.
  *  `<Memorize>` 用 children（非 items）的舊式寫法沒有可拆的項目，直接跳過。 */
 export function parseCards(raw: string, src: NoteReviewSource): NoteCard[] {
   const out: NoteCard[] = []
-  for (const m of raw.matchAll(/<Memorize\b([\s\S]*?)\/>/g)) {
-    for (const item of arrayProp(m[1], 'items')) {
+  for (const attrs of selfClosingAttrs(raw, 'Memorize')) {
+    for (const item of arrayProp(attrs, 'items')) {
       const [topic, body] = splitMemorizeItem(item)
       if (!body.trim()) continue
       out.push({
@@ -249,10 +287,7 @@ export function parseCards(raw: string, src: NoteReviewSource): NoteCard[] {
 /** Parse every `<ExampleQuestion .../>` in one note's raw MDX into structured examples. */
 export function parseExamples(raw: string, src: NoteReviewSource): NoteExample[] {
   const out: NoteExample[] = []
-  const re = /<ExampleQuestion\b([\s\S]*?)\/>/g
-  let m: RegExpExecArray | null
-  while ((m = re.exec(raw))) {
-    const attrs = m[1]
+  for (const attrs of selfClosingAttrs(raw, 'ExampleQuestion')) {
     const qMatch = attrs.match(/\bq=("(?:[^"\\]|\\.)*")/)
     const q = qMatch ? unquote(qMatch[1]) : ''
     if (!q) continue // reveal-only / malformed — skip rather than ship a blank stem

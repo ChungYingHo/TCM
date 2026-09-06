@@ -44,6 +44,19 @@ describe('parseExamples', () => {
   it('returns [] when there are no examples', () => {
     expect(parseExamples('## 一些散文\n沒有例題。', SRC)).toEqual([])
   })
+
+  it('does not end a tag at a "/>" inside an attribute string (e.g. <br/> in q) and still finds the next one', () => {
+    const raw = `
+<ExampleQuestion n={1} q="上句<br/>下句" options={["a","b"]} answer="(A) a" steps={["x <br/> y"]} />
+<ExampleQuestion n={2} q="第二題" options={["c","d"]} answer="(B) d" steps={["y"]} />
+`
+    const out = parseExamples(raw, SRC)
+    expect(out.map((e) => e.n)).toEqual([1, 2])
+    expect(out[0].q).toBe('上句<br/>下句')
+    expect(out[0].options).toEqual(['a', 'b'])
+    expect(out[0].answer).toBe('(A) a')
+    expect(out[1].answer).toBe('(B) d')
+  })
 })
 
 describe('splitMemorizeItem', () => {
@@ -153,6 +166,12 @@ describe('parseCards', () => {
   it('does not end an item array early on a literal "]" inside a string', () => {
     const raw = '<Memorize items={["組態：<code>[Ar]4s¹3d⁵</code>", "第二則：內容"]} />'
     expect(parseCards(raw, SRC).map((c) => c.topic)).toEqual(['組態', '第二則'])
+  })
+
+  it('does not end the tag at a "/>" inside an item string', () => {
+    const raw = '<Memorize items={["主題：上句<br/>下句", "二：丙"]} /><Memorize items={["三：丁"]} />'
+    expect(parseCards(raw, SRC).map((c) => c.topic)).toEqual(['主題', '二', '三'])
+    expect(parseCards(raw, SRC)[0].body).toBe('上句<br/>下句')
   })
 
   it('skips children-style Memorize and empty bodies', () => {

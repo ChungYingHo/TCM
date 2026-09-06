@@ -1,0 +1,24 @@
+{
+  "TCU-113-biology-13": {
+    "correct_answer": [
+      "C",
+      "D"
+    ],
+    "original_answer": [
+      "C"
+    ],
+    "explanation": "依慈濟 113 學年度釋疑：Campbell 列 G1/S、G2/M 與 M 三個主要檢查點，Life: The Science of Biology 另把 S 期檢查點算進去而為四個，故 (C) 與 (D) 皆給分。原答案卡只列 (C)。",
+    "errata_applied": true
+  },
+  "TCU-114-biology-29": {
+    "correct_answer": [
+      "B"
+    ],
+    "original_answer": [
+      "C"
+    ],
+    "explanation": "依慈濟 114 學年度釋疑：升支主動吸收 Na⁺，加強它會提高髓質滲透壓、促進集尿管再吸收水而使尿液更濃，(C) 不符題意；打開降支的水通道使更多水在降支被再吸收、稀釋髓質滲透壓，干擾整體濃縮機制而產生較稀的尿液，正解為 (B)。原答案卡誤植為 (C)。",
+    "errata_applied": true,
+    "needs_review": false
+  }
+}
