@@ -3,16 +3,16 @@
   type Cycle = { key: string; name: string; tag: string; steps: string[] }
   const CYCLES: Cycle[] = [
     {
-      key: 'lytic', name: '溶裂循環', tag: '殺死宿主',
+      key: 'lytic', name: '溶裂週期', tag: '殺死宿主',
       steps: ['吸附並注入核酸', '利用宿主機制合成病毒元件', '組裝成新病毒', '宿主細胞裂解、釋出大量新病毒'],
     },
     {
-      key: 'lyso', name: '溶原循環', tag: '潛伏整合',
-      steps: ['病毒核酸整合進宿主染色體 → 前噬菌體（prophage）', '宿主正常分裂，前噬菌體隨之複製（無病徵）', '受刺激（UV、化學物）時脫離，轉入溶裂循環'],
+      key: 'lyso', name: '溶源週期', tag: '潛伏整合',
+      steps: ['病毒核酸整合進宿主染色體 → 原噬菌體（prophage）', '宿主正常分裂，原噬菌體隨之複製（無病徵）', '受刺激（UV、化學物）時脫離，轉入溶裂週期'],
     },
     {
       key: 'retro', name: '反轉錄循環', tag: 'RNA→DNA',
-      steps: ['RNA 病毒（如 HIV）進入宿主細胞', '反轉錄酶把 RNA 反轉成 DNA', 'DNA 整合進宿主基因組（前病毒 provirus）', '宿主轉錄、轉譯出病毒蛋白，組裝新病毒'],
+      steps: ['RNA 病毒（如 HIV）進入宿主細胞', '反轉錄酶把 RNA 反轉成 DNA', 'DNA 整合進宿主基因體（原病毒 provirus）', '宿主轉錄、轉譯出病毒蛋白，組裝新病毒'],
     },
   ]
   let i = $state(0)
@@ -46,6 +46,6 @@
     </ol>
   </div>
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    <b>溶裂</b>快速複製、裂解宿主；<b>溶原</b>先把核酸藏進宿主染色體潛伏（前噬菌體）；<b>反轉錄</b>是 RNA 病毒先把 RNA 反轉成 DNA 再整合，方向與一般「DNA→RNA」相反。
+    <b>溶裂</b>快速複製、裂解宿主。<b>溶源</b>先把核酸藏進宿主染色體潛伏（原噬菌體）。<b>反轉錄</b>是 RNA 病毒先把 RNA 反轉成 DNA 再整合，方向與一般「DNA→RNA」相反。
   </p>
 </div>

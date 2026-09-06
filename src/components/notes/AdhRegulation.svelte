@@ -28,6 +28,6 @@
   <div class="mt-2 text-center"><span class={`badge font-bold ${cls}`}>{dehydrated ? '保水' : '排水'}</span></div>
 
   <p class="mt-3 text-xs leading-relaxed text-base-content/70">
-    <b>ADH（抗利尿激素）</b>由下視丘製造、腦垂體後葉釋放，作用於集尿管的<b>水通道蛋白（aquaporin）</b>。脫水時 <b>ADH↑ → 水回收↑ → 尿量↓</b>；喝大量水時 ADH↓ → 尿量↑。
+    <b>ADH（抗利尿激素）</b>由下視丘製造、腦垂體後葉釋放，作用於集尿管的<b>水通道蛋白（aquaporin）</b>。脫水時 <b>ADH↑ → 水回收↑ → 尿量↓</b>，喝大量水時 ADH↓ → 尿量↑。
   </p>
 </div>
