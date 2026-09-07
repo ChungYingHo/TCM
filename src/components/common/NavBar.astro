@@ -1,4 +1,5 @@
 ---
+import { EXAM_ENABLED } from '@/utils/examEnabled'
 import { isNavActive } from '@/utils/navActive'
 
 const path = Astro.url.pathname
@@ -9,7 +10,7 @@ const nav: NavItem[] = [
   { href: '/home', label: '練習' },
   { href: '/notes', label: '筆記' },
   { href: '/vocab', label: '字庫' },
-  { href: '/exam', label: '測驗' },
+  ...(EXAM_ENABLED ? [{ href: '/exam', label: '測驗' }] : []),
 ]
 
 const pill = (active: boolean) =>

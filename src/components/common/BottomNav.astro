@@ -1,4 +1,5 @@
 ---
+import { EXAM_ENABLED } from '@/utils/examEnabled'
 import { ICONS } from '@/utils/icons'
 import type { IconName } from '@/utils/icons'
 import { isNavActive } from '@/utils/navActive'
@@ -10,12 +11,14 @@ const tabs: Tab[] = [
   { href: '/home', label: '練習', icon: 'home' },
   { href: '/notes', label: '筆記', icon: 'notes' },
   { href: '/vocab', label: '字庫', icon: 'layers' },
-  { href: '/exam', label: '測驗', icon: 'pencil' },
+  ...(EXAM_ENABLED ? [{ href: '/exam', label: '測驗', icon: 'pencil' as const }] : []),
 ]
+// Tailwind 只掃描字面 class，欄數不能用模板字串拼
+const cols = tabs.length === 4 ? 'grid-cols-4' : 'grid-cols-3'
 ---
 
 <nav class="fixed bottom-0 left-0 right-0 z-40 border-t border-base-300/70 bg-base-100/95 backdrop-blur-xl pb-[env(safe-area-inset-bottom)] lg:hidden print:hidden" aria-label="主導覽列">
-  <div class="mx-auto grid max-w-lg grid-cols-4">
+  <div class={`mx-auto grid max-w-lg ${cols}`}>
     {tabs.map((t) => {
       const active = isNavActive(path, t.href)
       return (

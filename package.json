@@ -6,7 +6,7 @@
   "scripts": {
     "start": "astro dev",
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/strip-exam-assets.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "lint": "eslint .",

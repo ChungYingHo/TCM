@@ -1,10 +1,25 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import ExamTabs from '@/components/exam/ExamTabs.svelte'
+import { EXAM_ENABLED } from '@/utils/examEnabled'
 
 export const prerender = false
 ---
 
 <Layout title="線上測驗 · TCM 題庫">
-  <ExamTabs client:load />
+  {EXAM_ENABLED ? (
+    <ExamTabs client:load />
+  ) : (
+    <header class="mb-8 flex flex-col gap-1.5">
+      <p class="page-kicker">測驗</p>
+      <h1 class="page-title">考古題只在本機開放</h1>
+      <p class="page-desc max-w-2xl">
+        線上版沒有帶考古題截圖（七千多張圖會把每次部署撐到近 500 MB）。要刷考古題請在電腦上跑
+        <code>npm start</code>，用本機 dev server 開這一頁。
+      </p>
+      <p class="mt-2">
+        <a href="/home" class="link link-primary">回每日複習</a>
+      </p>
+    </header>
+  )}
 </Layout>

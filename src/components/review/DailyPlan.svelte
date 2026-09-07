@@ -15,6 +15,7 @@
   import { composeReview } from '@/utils/reviewSample'
   import { vocabProgress } from '@/utils/vocabProgress'
   import { todayKey } from '@/utils/date'
+  import { EXAM_ENABLED } from '@/utils/examEnabled'
   import VocabCard from '@/components/vocab/VocabCard.svelte'
   import PrefixMap from '@/components/vocab/PrefixMap.svelte'
   import VocabStudy from '@/components/vocab/VocabStudy.svelte'
@@ -258,7 +259,7 @@
   <!-- 5. 今日練習題（筆記例題，各科每天換一批） -->
   <section class="rounded-box border border-base-300 border-l-[3px] border-l-success bg-base-100 p-4 shadow-soft sm:p-5">
     <h2 class="section-heading mb-1">今日練習題</h2>
-    <p class="mb-3 text-sm text-base-content/55">各科從筆記例題隨機抽幾題，每天換一批，只考筆記教過的範圍。想寫整份考古題到<a class="link link-primary" href="/exam">線上測驗</a>。</p>
+    <p class="mb-3 text-sm text-base-content/55">各科從筆記例題隨機抽幾題，每天換一批，只考筆記教過的範圍。{#if EXAM_ENABLED}想寫整份考古題到<a class="link link-primary" href="/exam">線上測驗</a>。{/if}</p>
     <DailyDrill {examples} {today} />
   </section>
   {/if}
